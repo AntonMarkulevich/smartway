@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smartway — Онлайн-сервис для организации командировок</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/1style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__left">
+        <a href="/" aria-label="Smartway — на главную">
+          <img src="img/header-logo.svg" alt="Smartway" class="header__logo">
+        </a>
+        <div class="header__divider"></div>
+        <span class="header__descriptor">Стандарт управления<br>командировками</span>
+      </div>
+      <button type="button" class="header__burger" aria-label="Меню" aria-expanded="false">
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a href="#audience" class="header__link">Для кого <span class="header__chevron"></span></a></li>
+          <li><a href="#capabilities" class="header__link">Возможности <span class="header__chevron"></span></a></li>
+          <li><a href="#useful" class="header__link">Полезное <span class="header__chevron"></span></a></li>
+          <li><a href="#mice" class="header__link">MICE</a></li>
+          <li><a href="#tariffs" class="header__link">Тарифы</a></li>
+          <li><a href="#clients" class="header__link">Клиенты</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="mailto:" class="header__icon-btn" aria-label="Написать">
+          <img src="img/header-icon-phone.svg" alt="Mail" class="header__icon header__icon--mail">
+        </a>
+        <a href="tel:" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
+          <img src="img/phone.svg" alt="Phone">
+        </a>  
+        <a href="#login" class="header__login">
+          <img src="img/header-icon-email.svg" alt=""> Войти
+        </a>
+        <a href="#test" class="header__btn">Протестировать</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">Онлайн-сервис<br> для организации <br>командировок</h1>
+          <p class="hero__subtitle">Билеты, отели, закрывающие<br>и интеграция с 1С в одном окне</p>
+          <div class="hero__actions">
+            <a href="#try" class="btn btn--primary">Попробовать бесплатно &rarr;</a>
+            <a href="#consult" class="btn btn--outline">Получить консультацию</a>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <div class="hero__illustration">
+            <img src="img/hero-illustration.png" alt="Интерфейс сервиса" class="hero__image">
+          </div>
+          <div class="hero__trust">
+            <img src="img/partner-skolkovo.png" alt="Резиденты технопарка «Сколково»" class="hero__trust-icon" width="229" height="37">
+            <img src="img/partner-1c.svg" alt="Входим в группу компаний «1С»" class="hero__trust-icon" width="193" height="36">
+            <img src="img/rfcifra.svg" alt="Входим в реестр российского ПО «Минцифры»" class="hero__trust-icon" width="275" height="40">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="clients" aria-label="Нам доверяют">
+      <div class="clients__strip">
+        <div class="clients__track">
+          <div class="clients__group">
+            <img src="img/clients-logos.svg" alt="ОМК, SOKOLOV, ССК, СИТИДРАЙВ, Белая Дача, Sisley Paris, Сеченовский университет, REDWINGS, hh, Московский политехнический университет" width="1760" height="53" class="clients__logo" loading="lazy">
+          </div>
+          <div class="clients__group" aria-hidden="true">
+            <img src="img/clients-logos.svg" alt="" width="1760" height="53" class="clients__logo" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stats__inner">
+        <h2 class="stats__title">Smartway в цифрах</h2>
+        <div class="stats__grid">
+          <div class="stats-card">
+            <span class="stats-card__value">7&nbsp;500+</span>
+            <p class="stats-card__label">клиентов</p>
+          </div>
+          <div class="stats-card">
+            <span class="stats-card__value">500&nbsp;000+</span>
+            <p class="stats-card__label">билетов и отелей бронируют каждый месяц</p>
+          </div>
+          <div class="stats-card stats-card--accent">
+            <span class="stats-card__value">№1</span>
+            <p class="stats-card__label">на рынке бизнес-тревел</p>
+          </div>
+          <div class="stats-card">
+            <span class="stats-card__value">3&nbsp;млн+</span>
+            <p class="stats-card__label">отелей по всему миру</p>
+          </div>
+          <div class="stats-card">
+            <span class="stats-card__value">98,7%</span>
+            <p class="stats-card__label">довольных клиентов</p>
+          </div>
+        </div>
+        <p class="stats__footnote">
+          <span class="stats__footnote-item">*по данным РБК</span>
+          <span class="stats__footnote-item">**по результатам опроса CSAT</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div class="services__inner">
+        <h2 class="services__title" id="services-title">Все услуги для организации деловых поездок сотрудников</h2>
+        <div class="services__grid">
+          <div class="services__card services__card--avia">
+            <div class="services__card-head">
+              <h3 class="services__card-title">Авиа и Ж/Д билеты</h3>
+            </div>
+            <div class="services__media services__media--screen">
+              <img src="img/services/avia-plane.svg" alt="" class="services__img services__img--plane">
+              <img src="img/services/avia-main.png" alt="" class="services__img services__img--ticket-main">
+              <img src="img/services/avia-top.png" alt="" class="services__img services__img--ticket-top">
+            </div>
+          </div>
+          <div class="services__card services__card--avtobusy">
+            <div class="services__card-head">
+              <h3 class="services__card-title">Автобусы</h3>
+              <img src="img/services/buses.svg" alt="" class="services__badge-icon">
+            </div>
+          </div>
+          <div class="services__card services__card--taxi">
+            <div class="services__card-head">
+              <h3 class="services__card-title">Такси</h3>
+              <img src="img/services/taxi-go.svg" alt="" class="services__badge-icon services__badge-icon--taxi">
+            </div>
+          </div>
+          <div class="services__card services__card--gruppovye-zaezdy">
+            <div class="services__card-head">
+              <h3 class="services__card-title">Групповые заезды</h3>
+              <div class="services__avatars" aria-label="Участники группового заезда">
+                <img src="img/services/group-avatar-1.png" alt="" class="services__avatar" loading="lazy">
+                <img src="img/services/group-avatar-2.png" alt="" class="services__avatar" loading="lazy">
+                <img src="img/services/group-avatar-3.png" alt="" class="services__avatar" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="services__card services__card--aeroekspressy">
+            <div class="services__card-head">
+              <h3 class="services__card-title">Аэроэкспрессы</h3>
+              <img src="img/services/aero-ticket.svg" alt="" class="services__badge-icon">
+            </div>
+          </div>
+          <div class="services__card services__card--strahovanie">
+            <div class="services__card-head">
+              <h3 class="services__card-title">Страхование</h3>
+              <img src="img/services/insurance-heart.svg" alt="" class="services__badge-icon">
+            </div>
+          </div>
+          <div class="services__card services__card--vizovaya-podderzhka">
+            <div class="services__card-head">
+              <h3 class="services__card-title">Визовая поддержка</h3>
+              <img src="img/services/visa-check.svg" alt="" class="services__badge-icon">
+            </div>
+          </div>
+          <div class="services__card services__card--gostinicy">
+            <div class="services__card-head">
+              <h3 class="services__card-title">Гостиницы</h3>
+            </div>
+            <div class="services__media services__media--hotel">
+              <img src="img/services/hotel-shot.png" alt="" class="services__img services__img--hotel-shot">
+              <img src="img/services/hotel-icon-dark.svg" alt="" class="services__img services__img--hotel-icon">
+              <img src="img/services/hotel-badges.svg" alt="" class="services__img services__img--hotel-badges">
+            </div>
+          </div>
+          <div class="services__card services__card--transfery">
+            <div class="services__card-head">
+              <h3 class="services__card-title">Трансферы</h3>
+              <img src="img/services/transfer-arrows.svg" alt="" class="services__badge-icon">
+            </div>
+            <div class="services__media services__media--car">
+              <img src="img/services/transfer-car.png" alt="" class="services__img services__img--car">
+              <div class="services__transfer-vip">
+                <h3 class="services__card-title">VIP-залы</h3>
+              </div>
+            </div>
+          </div>
+          <div class="services__card services__card--mice">
+            <div class="services__card-head">
+              <h3 class="services__card-title">MICE</h3>
+            </div>
+            <div class="services__media services__media--brand">
+              <img src="img/services/mice-bg.svg" alt="" class="services__img services__img--mice">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps" id="steps" aria-labelledby="steps-title">
+      <div class="steps__inner">
+        <h2 class="steps__title" id="steps-title">Управляйте командировками <span class="steps__title-accent">от заявки до отчетности</span></h2>
+        <div class="steps__grid">
+          <article class="steps__card">
+            <span class="steps__number">1</span>
+            <h3 class="steps__card-title">Заявка</h3>
+            <img src="img/steps/step-1.webp" alt="Шаг 1 — Заявка" class="steps__img" loading="lazy">
+          </article>
+          <article class="steps__card">
+            <span class="steps__number">2</span>
+            <h3 class="steps__card-title">Согласование</h3>
+            <img src="img/steps/step-2.webp" alt="Шаг 2 — Согласование" class="steps__img" loading="lazy">
+          </article>
+          <article class="steps__card">
+            <span class="steps__number">3</span>
+            <h3 class="steps__card-title">Бронирование</h3>
+            <img src="img/steps/step-3.webp" alt="Шаг 3 — Бронирование" class="steps__img" loading="lazy">
+          </article>
+          <article class="steps__card">
+            <span class="steps__number">4</span>
+            <h3 class="steps__card-title">Отчётность</h3>
+            <img src="img/steps/step-4.webp" alt="Шаг 4 — Отчётность" class="steps__img" loading="lazy">
+          </article>
+        </div>
+        <div class="steps__actions">
+          <a href="#try" class="btn btn--primary">Попробовать бесплатно &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="cta" aria-labelledby="cta-title">
+      <div class="cta__inner">
+        <div class="cta__content">
+          <h2 class="cta__title" id="cta-title">Сократите расходы на командировки в 2 раза</h2>
+          <p class="cta__text"><strong>Оставьте заявку —</strong> разберем ваши процессы и покажем, где экономить уже сейчас</p>
+        </div>
+        <div class="cta__actions">
+          <div class="cta__avatars">
+            <img src="" alt="" class="cta__avatar">
+            <img src="" alt="" class="cta__avatar">
+            <img src="" alt="" class="cta__avatar">
+          </div>
+          <a href="#consult" class="btn btn--primary">Получить консультацию &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="team-roles" id="team-roles" aria-labelledby="team-roles-title">
+      <div class="team-roles__inner">
+        <h2 class="team-roles__title" id="team-roles-title">Сервис поможет всей команде</h2>
+        <div class="team-roles__grid">
+          <article class="team-card">
+            <div class="team-card__content">
+              <div class="team-card__role">
+                <img src="img/team/icon-organizer.svg" alt="" class="team-card__role-icon" width="24" height="24">
+                <span class="team-card__role-text">Организатору командировок</span>
+              </div>
+              <h3 class="team-card__title">Бронируйте деловые поездки в одном окне за 2 минуты</h3>
+              <p class="team-card__desc">Билеты, отели, трансферы и страховки — всё в одном интерфейсе. Не нужно переключаться между сервисами.</p>
+            </div>
+            <img src="img/team/person-1.svg" alt="" class="team-card__person" loading="lazy">
+          </article>
+          <article class="team-card">
+            <div class="team-card__content">
+              <div class="team-card__role">
+                <img src="img/team/icon-manager.svg" alt="" class="team-card__role-icon" width="24" height="24">
+                <span class="team-card__role-text">Руководителю</span>
+              </div>
+              <h3 class="team-card__title">Контролируйте командировки и экономьте бюджет компании</h3>
+              <p class="team-card__desc">Устанавливайте лимиты, утверждайте заявки и отслеживайте расходы в реальном времени.</p>
+            </div>
+            <img src="img/team/person-2.svg" alt="" class="team-card__person" loading="lazy">
+          </article>
+          <article class="team-card">
+            <div class="team-card__content">
+              <div class="team-card__role">
+                <img src="img/team/icon-accountant.svg" alt="" class="team-card__role-icon" width="24" height="24">
+                <span class="team-card__role-text">Бухгалтеру</span>
+              </div>
+              <h3 class="team-card__title">Учитывайте расходы по поездкам быстро и без ошибок</h3>
+              <p class="team-card__desc">Автоматическое формирование закрывающих документов и интеграция с 1С.</p>
+            </div>
+            <img src="img/team/person-3.svg" alt="" class="team-card__person" loading="lazy">
+          </article>
+          <article class="team-card">
+            <div class="team-card__content">
+              <div class="team-card__role">
+                <img src="img/team/icon-hr.svg" alt="" class="team-card__role-icon" width="24" height="24">
+                <span class="team-card__role-text">Кадровому специалисту и HR-менеджеру</span>
+              </div>
+              <h3 class="team-card__title">Держите все документы в порядке и обеспечьте комфорт сотрудников</h3>
+              <p class="team-card__desc">Тревел-политики, согласования и документооборот в одном месте.</p>
+            </div>
+            <img src="img/team/person-4.svg" alt="" class="team-card__person" loading="lazy">
+          </article>
+        </div>
+        <div class="team-roles__actions">
+          <a href="#try" class="team-roles__btn">Попробовать бесплатно &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="integrations" id="integrations" aria-labelledby="integrations-title">
+      <div class="integrations__inner">
+        <h2 class="integrations__title" id="integrations-title">Синхронизируйте сервис с системами <span class="text-red">автоматизации командировок</span></h2>
+        <div class="integrations__layout">
+          <div class="integrations__col">
+            <article class="integration-card">
+              <h3 class="integration-card__title">1С</h3>
+              <p class="integration-card__text">Синхронизация авансовых отчётов, загрузка данных о билетах и отелях в учётную систему.</p>
+              <img src="img/integrations/1c-ui.webp" alt="Интерфейс интеграции с 1С" class="integration-card__img" loading="lazy">
+            </article>
+            <article class="integration-card">
+              <h3 class="integration-card__title">ЭДО</h3>
+              <p class="integration-card__text">Электронный документооборот: акты, счета и закрывающие документы в цифровом виде.</p>
+            </article>
+          </div>
+          <div class="integrations__col">
+            <article class="integration-card">
+              <h3 class="integration-card__title">Открытый API</h3>
+              <p class="integration-card__text">Подключите Smartway к вашим внутренним системам через REST API и вебхуки.</p>
+            </article>
+            <article class="integration-card">
+              <h3 class="integration-card__title">Яндекс Go</h3>
+              <p class="integration-card__text">Интеграция с корпоративным такси для заказа поездок из одного окна.</p>
+              <img src="img/integrations/yandex-ui.webp" alt="Интерфейс интеграции с Яндекс Go" class="integration-card__img" loading="lazy">
+            </article>
+          </div>
+        </div>
+        <div class="integrations__actions">
+          <a href="#consult" class="btn btn--primary">Получить консультацию &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="app-block" id="app-block" aria-labelledby="app-block-title">
+      <div class="app-block__inner">
+        <div class="app-block__content">
+          <h2 class="app-block__title" id="app-block-title">Все возможности сервиса <span class="text-accent">в мобильном приложении</span></h2>
+          <ul class="app-block__list">
+            <li class="app-block__item">Бронирование билетов и отелей в один клик</li>
+            <li class="app-block__item">Согласование поездок и уведомления</li>
+            <li class="app-block__item">Доступ к закрывающим документам</li>
+            <li class="app-block__item">Интеграция с корпоративным такси</li>
+          </ul>
+          <div class="app-block__stores">
+            <a href="#" class="app-block__store" aria-label="Скачать в App Store">
+              <img src="img/app-store.svg" alt="" width="140" height="44">
+            </a>
+            <a href="#" class="app-block__store" aria-label="Скачать в Google Play">
+              <img src="img/google-play.svg" alt="" width="140" height="44">
+            </a>
+            <a href="#" class="app-block__store" aria-label="Скачать в RuStore">
+              <img src="img/rustore.svg" alt="" width="140" height="44">
+            </a>
+            <a href="#" class="app-block__store" aria-label="Скачать в AppGallery">
+              <img src="img/appgallery.svg" alt="" width="140" height="44">
+            </a>
+          </div>
+        </div>
+        <div class="app-block__visual">
+          <img src="img/app-phone.webp" alt="Мобильное приложение Smartway" class="app-block__phone" width="400" height="800" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="mice" id="mice" aria-labelledby="mice-title">
+      <div class="mice__inner">
+        <div class="mice__header">
+          <h2 class="mice__title" id="mice-title">Планируйте деловые поездки и мероприятия в одном месте</h2>
+          <div class="mice__intro">
+            <p class="mice__text">MICE — комплексное решение для организации корпоративных событий: конференции, тимбилдинги, incentive-поездки.</p>
+            <div class="mice__actions">
+              <a href="#consult" class="btn btn--primary">Получить консультацию</a>
+              <a href="#mice-details" class="mice__link">Подробнее о MICE в Smartway &rarr;</a>
+            </div>
+          </div>
+        </div>
+        <div class="mice__grid">
+          <article class="mice__card">
+            <div class="mice__card-icon">
+              <img src="img/icon-handshake.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="mice__card-title">События и конференции</h3>
+            <p class="mice__card-text">Организация деловых мероприятий под ключ</p>
+          </article>
+          <article class="mice__card">
+            <div class="mice__card-icon">
+              <img src="img/icon-briefcase.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="mice__card-title">Бизнес-поездки</h3>
+            <p class="mice__card-text">Бронирование и логистика для групп</p>
+          </article>
+          <article class="mice__card mice__card--photo">
+            <img src="img/mice-photo.png" alt="Участники мероприятия" class="mice__card-img" loading="lazy">
+          </article>
+          <article class="mice__card">
+            <div class="mice__card-icon">
+              <img src="img/icon-star.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="mice__card-title">Incentive-программы</h3>
+            <p class="mice__card-text">Мотивационные поездки для сотрудников</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cases" id="cases" aria-labelledby="cases-title">
+      <div class="cases__inner">
+        <div class="cases__left">
+          <span class="cases__number">7 500+</span>
+          <p class="cases__caption">компаний организуют командировки</p>
+        </div>
+        <div class="cases__right">
+          <article class="cases__card">
+            <div class="cases__logo-wrap">
+              <img src="img/cases-modulbank.svg" alt="Модульбанк" class="cases__logo" width="170" height="43">
+            </div>
+            <p class="cases__text">Ускорили согласование поездок <span class="text-accent">с 24 часов до 10 минут</span> благодаря схемам согласования</p>
+            <a href="#" class="cases__link">Читать кейс</a>
+            <div class="cases__author">
+              <img src="img/cases-avatar-1.svg" alt="" class="cases__avatar" width="47" height="47" loading="lazy">
+              <div class="cases__author-info">
+                <span class="cases__author-name">Анастасия Филимонова</span>
+                <span class="cases__author-role">Руководитель Центра оценки персонала</span>
+              </div>
+            </div>
+          </article>
+          <article class="cases__card">
+            <div class="cases__logo-wrap">
+              <img src="img/cases-dodo.svg" alt="Dodo Brands" class="cases__logo" width="170" height="43">
+            </div>
+            <p class="cases__text">Доверили сотрудникам оформление поездок <span class="text-accent">и освободили 50% времени</span> организатора командировок</p>
+            <a href="#" class="cases__link">Читать кейс</a>
+            <div class="cases__author">
+              <img src="img/cases-avatar-2.svg" alt="" class="cases__avatar" width="47" height="47" loading="lazy">
+              <div class="cases__author-info">
+                <span class="cases__author-name">Наталья Полугрудова</span>
+                <span class="cases__author-role">HR-менеджер Dodo Brands</span>
+              </div>
+            </div>
+          </article>
+          <article class="cases__card">
+            <div class="cases__logo-wrap">
+              <img src="img/cases-gelpic.svg" alt="Гелпик" class="cases__logo" width="170" height="43">
+            </div>
+            <p class="cases__text">Сэкономили на командировках <span class="text-accent">и сократили время отчётности</span> в 3 раза</p>
+            <a href="#" class="cases__link">Читать кейс</a>
+            <div class="cases__author">
+              <img src="img/cases-avatar-3.svg" alt="" class="cases__avatar" width="47" height="47" loading="lazy">
+              <div class="cases__author-info">
+                <span class="cases__author-name">Имя Фамилия</span>
+                <span class="cases__author-role">Должность</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-form" id="cta-form" aria-labelledby="cta-form-title">
+      <div class="cta-form__inner">
+        <div class="cta-form__content">
+          <h2 class="cta-form__title" id="cta-form-title">Выведите управление командировками на новый уровень</h2>
+          <p class="cta-form__text">Оставьте свои контакты — наш менеджер свяжется с вами в течение <strong>30 минут</strong> и откроет <strong>бесплатный доступ</strong> к сервису</p>
+          <div class="cta-form__avatars">
+            <img src="img/cases-avatar-1.svg" alt="Менеджер поддержки Smartway" class="cta-form__avatar" width="48" height="48" loading="lazy">
+            <img src="img/cases-avatar-2.svg" alt="Менеджер поддержки Smartway" class="cta-form__avatar" width="48" height="48" loading="lazy">
+            <img src="img/cases-avatar-3.svg" alt="Менеджер поддержки Smartway" class="cta-form__avatar" width="48" height="48" loading="lazy">
+          </div>
+        </div>
+        <div class="cta-form__card">
+          <form class="cta-form__form" action="#" method="post">
+            <div class="cta-form__field">
+              <label for="cta-name" class="cta-form__label">Ваше имя*</label>
+              <input type="text" id="cta-name" name="name" class="cta-form__input" required placeholder="Иван Иванов">
+            </div>
+            <div class="cta-form__field">
+              <label for="cta-company" class="cta-form__label">Название компании*</label>
+              <input type="text" id="cta-company" name="company" class="cta-form__input" required placeholder="ООО «Компания»">
+            </div>
+            <div class="cta-form__field">
+              <label for="cta-trips" class="cta-form__label">Сколько командировок и поездок в месяц?</label>
+              <select id="cta-trips" name="trips" class="cta-form__input cta-form__select">
+                <option value="">Выберите из списка</option>
+                <option value="1-10">1–10</option>
+                <option value="11-50">11–50</option>
+                <option value="51-200">51–200</option>
+                <option value="200+">Более 200</option>
+              </select>
+            </div>
+            <div class="cta-form__field">
+              <label for="cta-email" class="cta-form__label">Корпоративная почта*</label>
+              <input type="email" id="cta-email" name="email" class="cta-form__input" required placeholder="email@company.ru">
+            </div>
+            <div class="cta-form__field">
+              <label for="cta-phone" class="cta-form__label">Телефон*</label>
+              <div class="cta-form__phone-wrap">
+                <span class="cta-form__phone-prefix">🇷🇺 +7</span>
+                <input type="tel" id="cta-phone" name="phone" class="cta-form__input cta-form__phone" required placeholder="(000) 000-00-00">
+              </div>
+            </div>
+            <div class="cta-form__checkbox-wrap">
+              <input type="checkbox" id="cta-consent" name="consent" class="cta-form__checkbox" required>
+              <label for="cta-consent" class="cta-form__checkbox-label">Даю согласие на получение сообщений рекламного и информационного характера.</label>
+            </div>
+            <button type="submit" class="cta-form__submit">Попробовать бесплатно</button>
+            <p class="cta-form__footnote">Нажимая на эту кнопку, Вы даёте согласие на обработку персональных данных и принимаете условия Политики обработки персональных данных</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="accountant-form" id="accountant-form" aria-labelledby="accountant-form-title">
+      <div class="accountant-form__inner">
+        <div class="accountant-form__content">
+          <h2 class="accountant-form__title" id="accountant-form-title">Оставьте заявку на бесплатную консультацию</h2>
+          <p class="accountant-form__text">
+            За <strong>15 минут</strong> расскажем, как сократить расходы, ускорить бронирования и навести порядок в документах
+          </p>
+        </div>
+        <div class="cta-form__card accountant-form__card">
+          <form class="cta-form__form accountant-form__form" action="#" method="post">
+            <div class="cta-form__field">
+              <label for="af-name" class="cta-form__label">Введите ваше имя*</label>
+              <input type="text" id="af-name" name="name" class="cta-form__input" required placeholder="Имя и фамилия">
+            </div>
+            <div class="cta-form__field">
+              <label for="af-company" class="cta-form__label">Название компании</label>
+              <input type="text" id="af-company" name="company" class="cta-form__input" placeholder="ООО «Компания»">
+            </div>
+            <div class="cta-form__field">
+              <label for="af-trips" class="cta-form__label">Командировок в компании</label>
+              <select id="af-trips" name="trips" class="cta-form__input cta-form__select">
+                <option value="">Выберите вариант</option>
+                <option value="no-answers">затрудняюсь ответить</option>
+                <option value="none">нет командировок</option>
+                <option value="upto5">до 5 в месяц</option>
+                <option value="5to10">от 5 до 10 в месяц</option>
+                <option value="more10">больше 10 в месяц</option>
+              </select>
+            </div>
+            <div class="cta-form__field">
+              <label for="af-email" class="cta-form__label">Электронная почта*</label>
+              <input type="email" id="af-email" name="email" class="cta-form__input" required placeholder="email@company.ru">
+            </div>
+            <div class="cta-form__field">
+              <label for="af-phone" class="cta-form__label">Ваш телефон*</label>
+              <div class="cta-form__phone-wrap">
+                <span class="cta-form__phone-prefix">🇷🇺 +7</span>
+                <input type="tel" id="af-phone" name="phone" class="cta-form__input cta-form__phone" required placeholder="(000) 000-00-00">
+              </div>
+            </div>
+            <div class="cta-form__checkbox-wrap">
+              <input type="checkbox" id="af-consent" name="consent" class="cta-form__checkbox" required>
+              <label for="af-consent" class="cta-form__checkbox-label">
+                Даю согласие на получение сообщений рекламного и информационного характера
+              </label>
+            </div>
+            <button type="submit" class="cta-form__submit">Записаться бесплатно</button>
+            <p class="cta-form__footnote">
+              Нажимая на эту кнопку, Вы даете согласие на обработку своих персональных данных и соглашаетесь с Политикой обработки персональных данных
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="faq__inner">
+        <h2 class="faq__title" id="faq-title">Частые вопросы</h2>
+        <div class="faq__list">
+          <details class="faq__item">
+            <summary class="faq__question">Вопрос №1</summary>
+            <p class="faq__answer">Ответ: поможем подключить сервис, настроить роли и запустить командировки в удобном формате для вашей команды.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Вопрос №2</summary>
+            <p class="faq__answer">Ответ: интеграции с бухгалтерией и кадровым контуром сокращают ручную работу и ускоряют закрытие отчётности.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Вопрос №3</summary>
+            <p class="faq__answer">Ответ: доступно управление авиабилетами, отелями, такси и дополнительными сервисами в одном окне.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Вопрос №4</summary>
+            <p class="faq__answer">Ответ: менеджеры сопровождения помогут на каждом этапе — от запуска до масштабирования внутри компании.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Вопрос №5</summary>
+            <p class="faq__answer">Ответ: при необходимости подключим персональную демонстрацию и покажем сценарии под вашу структуру командировок.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="support-cta" id="support-cta" aria-labelledby="support-cta-title">
+      <div class="support-cta__inner">
+        <div class="support-cta__content">
+          <h2 class="support-cta__title" id="support-cta-title">Не нашли ответ на свой вопрос?</h2>
+          <p class="support-cta__text"><strong>Оставьте заявку —</strong> наш менеджер свяжется с вами и ответит на все вопросы</p>
+        </div>
+        <div class="support-cta__actions">
+          <div class="support-cta__avatars">
+            <div class="support-cta__avatar support-cta__avatar--1">
+              <img src="img/support-icon-chat.svg" alt="" width="28" height="28">
+            </div>
+            <div class="support-cta__avatar support-cta__avatar--2">
+              <img src="img/support-icon-person.svg" alt="" width="28" height="28">
+            </div>
+            <div class="support-cta__avatar support-cta__avatar--3">
+              <img src="img/support-icon-question.svg" alt="" width="28" height="28">
+            </div>
+          </div>
+          <a href="#consult" class="support-cta__btn btn btn--primary">Получить консультацию &rarr;</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__inner">
+      <div class="footer__col footer__col--info">
+        <img src="img/footer-logo-smartway.svg" alt="Smartway" class="footer__logo" width="170">
+        <div class="footer__contacts">
+          <p class="footer__contact"><a href="tel:+78001234567">8 800 123-45-67</a></p>
+          <p class="footer__contact"><a href="mailto:info@smartway.today">info@smartway.today</a></p>
+          <p class="footer__contact"><a href="mailto:press@smartway.today">Пресс-служба</a></p>
+        </div>
+        <div class="footer__legal">
+          <p>123456, г. Москва, ул. Примерная, д. 1</p>
+          <p>ОГРН 1234567890123</p>
+          <p>ИНН 7707123456</p>
+        </div>
+      </div>
+      <div class="footer__col footer__col--scenarios">
+        <div class="footer__logos">
+          <img src="img/footer-logo-tkp.svg" alt="ТКП" width="80" height="42">
+          <img src="img/footer-logo-sk.svg" alt="СК" width="60" height="42">
+        </div>
+        <h3 class="footer__heading">Сценарии</h3>
+        <ul class="footer__list">
+          <li><a href="#">Командировки</a></li>
+          <li><a href="#">МICE</a></li>
+          <li><a href="#">Корпоративный туризм</a></li>
+        </ul>
+      </div>
+      <div class="footer__col footer__col--capabilities">
+        <div class="footer__socials">
+          <a href="#" class="footer__social" aria-label="ВКонтакте"><img src="img/footer-icon-vk.svg" alt="" width="24" height="24"></a>
+          <a href="#" class="footer__social" aria-label="VC.ru"><img src="img/footer-icon-vc.svg" alt="" width="24" height="24"></a>
+          <a href="#" class="footer__social" aria-label="Telegram"><img src="img/footer-icon-tg.svg" alt="" width="24" height="24"></a>
+          <span class="footer__social-text">Канал «Командировки.Сегодня»</span>
+        </div>
+        <h3 class="footer__heading">Возможности</h3>
+        <ul class="footer__list">
+          <li><a href="#">Авиа и Ж/Д</a></li>
+          <li><a href="#">Отели</a></li>
+          <li><a href="#">Такси</a></li>
+          <li><a href="#">Интеграция с 1С</a></li>
+        </ul>
+      </div>
+      <div class="footer__col footer__col--useful">
+        <h3 class="footer__heading">Полезное</h3>
+        <ul class="footer__list">
+          <li><a href="#">Блог</a></li>
+          <li><a href="#">Кейсы</a></li>
+          <li><a href="#">Документация</a></li>
+          <li><a href="#">API</a></li>
+        </ul>
+      </div>
+      <div class="footer__col footer__col--about">
+        <button type="button" class="footer__btn">Записаться на консультацию</button>
+        <h3 class="footer__heading">О компании</h3>
+        <ul class="footer__list">
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">Вакансии</a></li>
+          <li><a href="#">Партнёрам</a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__bottom-inner">
+        <a href="#" class="footer__bottom-link">Защита персональных данных</a>
+        <a href="#" class="footer__bottom-link">Сертификат Транспортной Клиринговой Компании</a>
+        <a href="#" class="footer__bottom-link">Безопасное соединение SSL</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
