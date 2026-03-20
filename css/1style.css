@@ -3810,3 +3810,875 @@ a {
     --container-padding-x: 20px;
   }
 }
+
+/* ===== Accountant tools — бегущие строки (Инструменты для бухучёта) ===== */
+.accountant-tools {
+  width: 100%;
+  background-color: #E0E2EA;
+  padding: 28px 0 44px;
+}
+
+.accountant-tools__inner {
+  max-width: 1860px;
+  width: 100%;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 0;
+  padding: 24px 60px 18px;
+}
+
+.accountant-tools__title {
+  margin: 0 0 18px;
+  text-align: center;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.08;
+  letter-spacing: -2px;
+  color: #3A3A3A;
+}
+
+.accountant-tools__row {
+  overflow: hidden;
+  width: 100%;
+}
+
+.accountant-tools__row + .accountant-tools__row {
+  margin-top: 10px;
+}
+
+.accountant-tools__track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: accountant-tools-marquee 28s linear infinite;
+}
+
+.accountant-tools__track--right {
+  animation-direction: reverse;
+}
+
+.accountant-tools__group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 18px;
+}
+
+@keyframes accountant-tools-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.accountant-tools__plus {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid #DADDE6;
+  background: #F5F7F9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: #7B7D83;
+  flex-shrink: 0;
+}
+
+.accountant-tools__pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid #DADDE6;
+  background: #FFFFFF;
+  font-family: 'Golos Text', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #3A3A3A;
+  white-space: nowrap;
+}
+
+.accountant-tools__icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.accountant-tools__icon--gray {
+  background: #E0E2EA;
+  color: #7B7D83;
+}
+
+.accountant-tools__icon--gray::before {
+  content: '•';
+  font-size: 18px;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+
+.accountant-tools__icon--red {
+  background: #D44333;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: -0.5px;
+}
+
+.accountant-tools__pill-text {
+  transform: translateY(1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accountant-tools__track {
+    animation: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .accountant-tools__inner {
+    padding: 22px 40px 16px;
+  }
+
+  .accountant-tools__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .accountant-tools__inner {
+    padding: 18px 22px 14px;
+  }
+
+  .accountant-tools__title {
+    font-size: 26px;
+  }
+
+  .accountant-tools__group {
+    gap: 12px;
+  }
+
+  .accountant-tools__pill {
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+  .accountant-tools__icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .accountant-tools__plus {
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+  }
+
+  .accountant-tools__track {
+    animation-duration: 22s;
+  }
+}
+
+/* ===== Integration 1C block — Интеграция с продуктами «1С» ===== */
+.integration-1c-block {
+  width: 100%;
+  background-color: #E0E2EA;
+  padding: 70px var(--container-padding-x) 80px;
+}
+
+.integration-1c-block__inner {
+  max-width: 1860px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.integration-1c-block__title {
+  margin: 0 0 28px;
+  text-align: center;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 1.02;
+  letter-spacing: -2px;
+  color: #000000;
+}
+
+.integration-1c-block__card {
+  background: #3A3A3A;
+  border-radius: 40px;
+  padding: 52px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.integration-1c-block__content {
+  min-width: 0;
+  max-width: 560px;
+}
+
+.integration-1c-block__lead {
+  font-family: 'Golos Text', sans-serif;
+  font-size: 22px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0 0 16px;
+}
+
+.integration-1c-block__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 34px;
+}
+
+.integration-1c-block__list li {
+  position: relative;
+  padding-left: 22px;
+  font-family: 'Golos Text', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.integration-1c-block__list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  color: #D44333;
+  font-weight: 700;
+}
+
+.integration-1c-block__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 68px;
+  padding: 0 36px;
+  border-radius: 100px;
+  background: #FFFFFF;
+  color: #3A3A3A;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.integration-1c-block__media {
+  flex-shrink: 0;
+}
+
+.integration-1c-block__img {
+  width: 680px;
+  max-width: 46vw;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .integration-1c-block {
+    padding: 40px var(--container-padding-x) 50px;
+  }
+
+  .integration-1c-block__title {
+    font-size: 38px;
+    margin-bottom: 18px;
+  }
+
+  .integration-1c-block__card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 34px 30px;
+    gap: 24px;
+  }
+
+  .integration-1c-block__content {
+    max-width: 100%;
+  }
+
+  .integration-1c-block__img {
+    width: 100%;
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+  .integration-1c-block__title {
+    font-size: 28px;
+    letter-spacing: normal;
+  }
+
+  .integration-1c-block__card {
+    padding: 24px 18px;
+    border-radius: 30px;
+  }
+
+  .integration-1c-block__lead {
+    font-size: 18px;
+  }
+
+  .integration-1c-block__list li {
+    font-size: 14px;
+  }
+
+  .integration-1c-block__btn {
+    width: 100%;
+    max-width: 330px;
+  }
+}
+
+/* ===== Accountant avans report block — Заполните авансовый отчёт ===== */
+.accountant-avans-block {
+  width: 100%;
+  background-color: var(--color-bg);
+  padding: 74px var(--container-padding-x) 96px;
+}
+
+.accountant-avans-block__inner {
+  max-width: 1860px;
+  width: 100%;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 60px;
+  padding: 46px 70px 54px;
+}
+
+.accountant-avans-block__title {
+  margin: 0 auto 34px;
+  text-align: center;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 1.02;
+  letter-spacing: -1.6px;
+  color: #3A3A3A;
+}
+
+.accountant-avans-block__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: #D44333;
+  color: #ffffff;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.2px;
+  transform: translateY(-2px);
+  margin-left: 14px;
+}
+
+.accountant-avans-block__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.accountant-avans-card,
+.accountant-avans-phone {
+  background: #F3F4F6;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.accountant-avans-card {
+  padding: 30px 26px 26px;
+}
+
+.accountant-avans-card__title {
+  margin: 0 0 12px;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #3A3A3A;
+}
+
+.accountant-avans-card__text {
+  margin: 0;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #5F6168;
+}
+
+/* В макете верхние карточки (1-2 и телефон), нижние (4-6) чуть ниже */
+.accountant-avans-card:nth-child(1),
+.accountant-avans-card:nth-child(2) {
+  min-height: 206px;
+}
+
+.accountant-avans-phone {
+  min-height: 206px;
+}
+
+.accountant-avans-card:nth-child(4),
+.accountant-avans-card:nth-child(5),
+.accountant-avans-card:nth-child(6) {
+  min-height: 154px;
+}
+
+.accountant-avans-phone__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 84% 18%;
+  display: block;
+}
+
+.accountant-avans-bottom {
+  margin-top: 22px;
+  background: #F3F4F6;
+  border-radius: 22px;
+  padding: 34px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.accountant-avans-bottom__card {
+  min-width: 0;
+  max-width: 620px;
+}
+
+.accountant-avans-bottom__title {
+  margin: 0 0 12px;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.25;
+  color: #3A3A3A;
+}
+
+.accountant-avans-bottom__text {
+  margin: 0 0 22px;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #5F6168;
+}
+
+.accountant-avans-bottom__btn {
+  height: 58px;
+  padding: 0 34px;
+  border-radius: 999px;
+  background: #D44333;
+  color: #ffffff;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.accountant-avans-bottom__ui {
+  flex-shrink: 0;
+  width: 520px;
+  max-width: 44vw;
+  height: 190px;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.accountant-avans-bottom__ui-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 63% 88%;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .accountant-avans-block {
+    padding: 50px var(--container-padding-x) 70px;
+  }
+
+  .accountant-avans-block__inner {
+    padding: 36px 40px 44px;
+  }
+
+  .accountant-avans-block__title {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+
+  .accountant-avans-block__grid {
+    gap: 14px;
+  }
+
+  .accountant-avans-card {
+    padding: 24px 18px;
+  }
+
+  .accountant-avans-phone__img {
+    object-position: 84% 20%;
+  }
+
+  .accountant-avans-bottom {
+    padding: 26px 22px;
+  }
+
+  .accountant-avans-bottom__ui {
+    width: 420px;
+    height: 170px;
+  }
+}
+
+@media (max-width: 768px) {
+  .accountant-avans-block {
+    padding: 28px var(--container-padding-x) 40px;
+  }
+
+  .accountant-avans-block__inner {
+    padding: 26px 22px 30px;
+    border-radius: 40px;
+  }
+
+  .accountant-avans-block__title {
+    font-size: 26px;
+  }
+
+  .accountant-avans-block__badge {
+    margin-left: 8px;
+    height: 26px;
+    font-size: 12px;
+    padding: 0 12px;
+  }
+
+  .accountant-avans-block__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .accountant-avans-card:nth-child(1),
+  .accountant-avans-card:nth-child(2),
+  .accountant-avans-phone,
+  .accountant-avans-card:nth-child(4),
+  .accountant-avans-card:nth-child(5),
+  .accountant-avans-card:nth-child(6) {
+    min-height: auto;
+  }
+
+  .accountant-avans-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .accountant-avans-bottom__card {
+    max-width: 100%;
+  }
+
+  .accountant-avans-bottom__ui {
+    width: 100%;
+    max-width: 100%;
+    height: 180px;
+  }
+
+  .accountant-avans-bottom__ui-img {
+    object-position: 63% 90%;
+  }
+}
+
+/* ===== Integration top CTA — кнопка над блоком ===== */
+.integration-1c-topcta {
+  width: 100%;
+  background-color: #E0E2EA;
+  display: flex;
+  justify-content: center;
+  padding: 10px var(--container-padding-x) 0;
+}
+
+.integration-1c-topcta__btn {
+  height: 70px;
+  border-radius: 100px;
+  background: #D44333;
+  color: #fff;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 0 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.integration-1c-topcta__icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .integration-1c-topcta {
+    padding-top: 8px;
+  }
+
+  .integration-1c-topcta__btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 16px;
+    height: 62px;
+    gap: 14px;
+    padding: 0 18px;
+  }
+
+  .integration-1c-topcta__icon {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+/* ===== Docs & reporting block ===== */
+.docs-report-block {
+  width: 100%;
+  padding: 60px var(--container-padding-x) 70px;
+  background: #ffffff;
+}
+
+.docs-report-block__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.docs-report-block__title {
+  margin: 0 0 26px;
+  text-align: center;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 800;
+  font-size: 54px;
+  letter-spacing: -1.5px;
+  color: #2A2A2A;
+}
+
+.docs-report-block__top {
+  position: relative;
+  margin-bottom: 26px;
+}
+
+.docs-report-block__nodes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 210px;
+}
+
+.docs-report-node__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #3A3A3A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+
+.docs-report-node__label {
+  text-align: center;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #3A3A3A;
+}
+
+.docs-report-node__dots {
+  display: block;
+  text-align: center;
+  font-size: 28px;
+  line-height: 14px;
+  color: transparent;
+}
+
+.docs-report-block__dotted--top {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 55px;
+  margin: 0 auto;
+  pointer-events: none;
+}
+
+.docs-report-block__table-card {
+  width: 100%;
+  height: 330px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.06);
+}
+
+.docs-report-block__table-img {
+  width: 120%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  display: block;
+  transform: translateX(-10px);
+}
+
+.docs-report-block__dotted--bottom {
+  margin-top: 26px;
+}
+
+.docs-report-block__cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.docs-report-mini-card {
+  background: #F3F4F6;
+  border-radius: 14px;
+  padding: 18px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.docs-report-mini-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #D44333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.docs-report-mini-card__icon-inner {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.docs-report-mini-card__text {
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #3A3A3A;
+}
+
+.docs-report-block__btn {
+  display: flex;
+  justify-content: center;
+  margin: 26px auto 0;
+  text-decoration: none;
+}
+
+.docs-report-block__btn.btn--primary {
+  min-width: 420px;
+}
+
+@media (max-width: 1024px) {
+  .docs-report-block__inner {
+    max-width: 940px;
+  }
+
+  .docs-report-block__title {
+    font-size: 42px;
+  }
+
+  .docs-report-block__nodes {
+    gap: 120px;
+  }
+
+  .docs-report-block__table-card {
+    height: 280px;
+  }
+
+  .docs-report-mini-card__text {
+    font-size: 13px;
+  }
+
+  .docs-report-block__cards {
+    gap: 14px;
+  }
+
+  .docs-report-block__btn.btn--primary {
+    min-width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .docs-report-block {
+    padding: 34px var(--container-padding-x) 44px;
+  }
+
+  .docs-report-block__title {
+    font-size: 28px;
+    margin-bottom: 18px;
+  }
+
+  .docs-report-block__nodes {
+    gap: 40px;
+  }
+
+  .docs-report-node__icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .docs-report-block__table-card {
+    height: 220px;
+    border-radius: 18px;
+  }
+
+  .docs-report-block__table-img {
+    object-position: 50% 22%;
+  }
+
+  .docs-report-block__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .docs-report-mini-card {
+    padding: 14px 16px;
+  }
+
+  .docs-report-block__btn {
+    margin-top: 14px;
+  }
+
+  .docs-report-block__btn.btn--primary {
+    min-width: 100%;
+  }
+}
