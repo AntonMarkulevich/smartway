@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smartway — Интеграции с 1С</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/1style.css">
+</head>
+<body class="page-smartway-1c">
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__left">
+        <a href="/" aria-label="Smartway — на главную">
+          <img src="img/header-logo.svg" alt="Smartway" class="header__logo">
+        </a>
+        <div class="header__divider"></div>
+        <span class="header__descriptor">Стандарт управления<br>командировками</span>
+      </div>
+      <button type="button" class="header__burger" aria-label="Меню" aria-expanded="false">
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a href="#audience" class="header__link">Для кого <span class="header__chevron"></span></a></li>
+          <li><a href="#capabilities" class="header__link">Возможности <span class="header__chevron"></span></a></li>
+          <li><a href="#useful" class="header__link">Полезное <span class="header__chevron"></span></a></li>
+          <li><a href="#mice" class="header__link">MICE</a></li>
+          <li><a href="#tariffs" class="header__link">Тарифы</a></li>
+          <li><a href="#clients" class="header__link">Клиенты</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="mailto:" class="header__icon-btn" aria-label="Написать">
+          <img src="img/header-icon-phone.svg" alt="Mail" class="header__icon header__icon--mail">
+        </a>
+        <a href="tel:" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
+          <img src="img/phone.svg" alt="Phone">
+        </a>
+        <a href="#login" class="header__login">
+          <img src="img/header-icon-email.svg" alt=""> Войти
+        </a>
+        <a href="#test" class="header__btn">Протестировать</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="smartway-1c-hero" aria-labelledby="smartway-1c-hero-title">
+      <div class="smartway-1c-hero__inner">
+        <div class="smartway-1c-hero__content">
+          <h1 id="smartway-1c-hero-title" class="smartway-1c-hero__title">
+            Подключите автоматические интеграции с продуктами 1С.<br />
+            Экономьте время на ручном вводе данных
+          </h1>
+          <p class="smartway-1c-hero__subtitle">
+            Ничего настраивать не нужно. Подключение займет всего 5 минут
+          </p>
+          <a href="#access" class="smartway-1c-hero__btn">Получить доступ</a>
+        </div>
+
+        <div class="smartway-1c-hero__diagram" aria-hidden="true">
+          <svg class="smartway-1c-hero__rings" viewBox="0 0 520 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="200" cy="200" r="88" stroke="#e0e0e0" stroke-width="1.2" stroke-dasharray="5 7" />
+            <circle cx="200" cy="200" r="132" stroke="#e0e0e0" stroke-width="1.2" stroke-dasharray="5 7" />
+            <circle cx="200" cy="200" r="176" stroke="#e0e0e0" stroke-width="1.2" stroke-dasharray="5 7" />
+          </svg>
+
+          <div class="smartway-1c-hero__hub">
+            <span class="smartway-1c-hero__hub-text">1С</span>
+          </div>
+
+          <div class="smartway-1c-hero__node smartway-1c-hero__node--zup">
+            <div class="smartway-1c-hero__node-disc">
+              <svg class="smartway-1c-hero__doc" width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 1H13L17 5V21C17 22.1 16.1 23 15 23H4C2.9 23 2 22.1 2 21V3C2 1.9 2.9 1 4 1Z" stroke="#1a1a1a" stroke-width="1.4" stroke-linejoin="round"/>
+                <path d="M13 1V6H17" stroke="#1a1a1a" stroke-width="1.4" stroke-linejoin="round"/>
+                <path d="M5 12H14M5 16H11" stroke="#1a1a1a" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="smartway-1c-hero__node-label">1С:Зарплата и управление персоналом</span>
+          </div>
+
+          <div class="smartway-1c-hero__node smartway-1c-hero__node--erp">
+            <div class="smartway-1c-hero__node-disc">
+              <svg class="smartway-1c-hero__doc" width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 1H13L17 5V21C17 22.1 16.1 23 15 23H4C2.9 23 2 22.1 2 21V3C2 1.9 2.9 1 4 1Z" stroke="#1a1a1a" stroke-width="1.4" stroke-linejoin="round"/>
+                <path d="M13 1V6H17" stroke="#1a1a1a" stroke-width="1.4" stroke-linejoin="round"/>
+                <path d="M5 12H14M5 16H11" stroke="#1a1a1a" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="smartway-1c-hero__node-label">1С:ERP</span>
+          </div>
+
+          <div class="smartway-1c-hero__node smartway-1c-hero__node--buh">
+            <div class="smartway-1c-hero__node-disc">
+              <svg class="smartway-1c-hero__doc" width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 1H13L17 5V21C17 22.1 16.1 23 15 23H4C2.9 23 2 22.1 2 21V3C2 1.9 2.9 1 4 1Z" stroke="#1a1a1a" stroke-width="1.4" stroke-linejoin="round"/>
+                <path d="M13 1V6H17" stroke="#1a1a1a" stroke-width="1.4" stroke-linejoin="round"/>
+                <path d="M5 12H14M5 16H11" stroke="#1a1a1a" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="smartway-1c-hero__node-label">1С:Бухгалтерия</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <section class="smartway-1c-feature" aria-labelledby="smartway-1c-feature-buh-title">
+      <div class="smartway-1c-feature__inner">
+        <div class="smartway-1c-feature__content">
+          <h2 id="smartway-1c-feature-buh-title" class="smartway-1c-feature__title">Интеграция с 1С:Бухгалтерия</h2>
+          <p class="smartway-1c-feature__text">
+            Больше не нужно вносить данные о билетах вручную. Это экономит время и исключает ошибки, которые случаются при ручном вводе.
+            Операции по обмену и возврату автоматически отражаются в авансовом отчёте.
+          </p>
+        </div>
+        <div class="smartway-1c-feature__media">
+          <img
+            src="img/block1cpage.png"
+            alt="Раздел «Авансовые отчёты» в интерфейсе Smartway"
+            width="1200"
+            height="800"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </section>
+
+
+    <section class="smartway-1c-how" aria-labelledby="smartway-1c-how-title">
+      <div class="smartway-1c-how__inner">
+        <h2 id="smartway-1c-how-title" class="smartway-1c-how__title">
+          Как работает<br />
+          интеграция
+        </h2>
+        <ol class="smartway-1c-how__steps">
+          <li class="smartway-1c-how__step">
+            <span class="smartway-1c-how__num" aria-hidden="true">1</span>
+            <span class="smartway-1c-how__copy">
+              <span class="smartway-1c-how__line">Покупка билета</span>
+              <span class="smartway-1c-how__line smartway-1c-how__line--second">в сервисе Smartway</span>
+            </span>
+          </li>
+          <li class="smartway-1c-how__step">
+            <span class="smartway-1c-how__num" aria-hidden="true">2</span>
+            <span class="smartway-1c-how__copy">
+              <span class="smartway-1c-how__line">Загрузка билета</span>
+              <span class="smartway-1c-how__line smartway-1c-how__line--second">в «1С:Бухгалтерия»</span>
+            </span>
+          </li>
+          <li class="smartway-1c-how__step">
+            <span class="smartway-1c-how__num" aria-hidden="true">3</span>
+            <span class="smartway-1c-how__copy">
+              <span class="smartway-1c-how__line">Отражение билета</span>
+              <span class="smartway-1c-how__line smartway-1c-how__line--second">в авансовом отчёте</span>
+            </span>
+          </li>
+        </ol>
+      </div>
+    </section>
+    
+    <section class="smartway-1c-feature" aria-labelledby="smartway-1c-feature-zup-title">
+      <div class="smartway-1c-feature__inner">
+        <div class="smartway-1c-feature__content">
+          <h2 id="smartway-1c-feature-zup-title" class="smartway-1c-feature__title">
+            Интеграция с «1С:Зарплата» и управление персоналом
+          </h2>
+          <p class="smartway-1c-feature__text">
+            Позволяет автоматизировать обмен информацией о кадрах и их поездках и формировать документы
+          </p>
+        </div>
+        <div class="smartway-1c-feature__media">
+          <img
+            src="img/zarplata1c.png"
+            alt="Главная страница личного кабинета Smartway: актуальное, календарь поездок, согласования"
+            width="1200"
+            height="800"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="smartway-1c-pros" aria-labelledby="smartway-1c-pros-title">
+      <div class="smartway-1c-pros__inner">
+        <h2 id="smartway-1c-pros-title" class="smartway-1c-pros__title">
+          Плюсы<br />
+          интеграции
+        </h2>
+        <ol class="smartway-1c-pros__list">
+          <li class="smartway-1c-pros__item">
+            <span class="smartway-1c-pros__num" aria-hidden="true">1</span>
+            <p class="smartway-1c-pros__text">
+              Список сотрудников в сервисе актуализируется автоматически
+            </p>
+          </li>
+          <li class="smartway-1c-pros__item">
+            <span class="smartway-1c-pros__num" aria-hidden="true">2</span>
+            <p class="smartway-1c-pros__text">
+              Приказ на командировку, командировочное удостоверение, ФИО командируемых сотрудников и даты поездок формируются автоматически
+            </p>
+          </li>
+          <li class="smartway-1c-pros__item">
+            <span class="smartway-1c-pros__num" aria-hidden="true">3</span>
+            <p class="smartway-1c-pros__text">
+              Актуальные изменения отображаются в табеле учета рабочего времени
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="smartway-1c-feature" aria-labelledby="smartway-1c-feature-erp-title">
+      <div class="smartway-1c-feature__inner">
+        <div class="smartway-1c-feature__content">
+          <h2 id="smartway-1c-feature-erp-title" class="smartway-1c-feature__title">
+            Интеграция<br />
+            с 1С:ERP
+          </h2>
+          <p class="smartway-1c-feature__text">
+            Позволяет управлять согласованием и делать управленческую отчетность проще
+          </p>
+        </div>
+        <div class="smartway-1c-feature__media">
+          <img
+            src="img/erp1c.png"
+            alt="Раздел «Отчетность» в интерфейсе Smartway: таблица операций и документы"
+            width="1200"
+            height="800"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__inner">
+        <div class="footer__col footer__col--info">
+          <img src="img/footer-logo-smartway.svg" alt="Smartway" class="footer__logo" width="170" />
+          <div class="footer__contacts">
+            <p class="footer__contact"><a href="tel:+78001234567">8 800 123-45-67</a></p>
+            <p class="footer__contact"><a href="mailto:info@smartway.today">info@smartway.today</a></p>
+            <p class="footer__contact"><a href="mailto:press@smartway.today">Пресс-служба</a></p>
+          </div>
+          <div class="footer__legal">
+            <p>123456, г. Москва, ул. Примерная, д. 1</p>
+            <p>ОГРН 1234567890123</p>
+            <p>ИНН 7707123456</p>
+          </div>
+        </div>
+        <div class="footer__col footer__col--scenarios">
+          <div class="footer__logos">
+            <img src="img/footer-logo-tkp.svg" alt="ТКП" width="80" height="42" />
+            <img src="img/footer-logo-sk.svg" alt="СК" width="60" height="42" />
+          </div>
+          <h3 class="footer__heading">Сценарии</h3>
+          <ul class="footer__list">
+            <li><a href="#">Командировки</a></li>
+            <li><a href="#">MICE</a></li>
+            <li><a href="#">Корпоративный туризм</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col--capabilities">
+          <div class="footer__socials">
+            <a href="#" class="footer__social" aria-label="ВКонтакте">
+              <img src="img/footer-icon-vk.svg" alt="" width="24" height="24" />
+            </a>
+            <a href="#" class="footer__social" aria-label="VC.ru">
+              <img src="img/footer-icon-vc.svg" alt="" width="24" height="24" />
+            </a>
+            <a href="#" class="footer__social" aria-label="Telegram">
+              <img src="img/footer-icon-tg.svg" alt="" width="24" height="24" />
+            </a>
+            <span class="footer__social-text">Канал «Командировки.Сегодня»</span>
+          </div>
+          <h3 class="footer__heading">Возможности</h3>
+          <ul class="footer__list">
+            <li><a href="#">Авиа и Ж/Д</a></li>
+            <li><a href="#">Отели</a></li>
+            <li><a href="#">Такси</a></li>
+            <li><a href="#">Интеграция с 1С</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col--useful">
+          <h3 class="footer__heading">Полезное</h3>
+          <ul class="footer__list">
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Кейсы</a></li>
+            <li><a href="#">Документация</a></li>
+            <li><a href="#">API</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col--about">
+          <button type="button" class="footer__btn">Записаться на консультацию</button>
+          <h3 class="footer__heading">О компании</h3>
+          <ul class="footer__list">
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Вакансии</a></li>
+            <li><a href="#">Партнёрам</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__bottom-inner">
+        <a href="#" class="footer__bottom-link">Защита персональных данных</a>
+        <a href="#" class="footer__bottom-link">Сертификат Транспортной Клиринговой Компании</a>
+        <a href="#" class="footer__bottom-link">Безопасное соединение SSL</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
