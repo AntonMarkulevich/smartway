@@ -6,212 +6,417 @@
   <title>Как оформить командировку в 2026 году — Smartway</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Mont:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/komandirovka.css">
 </head>
-<body>
-  <header class="page-header">
-    <div class="page-header__inner">
-      <a href="/" class="page-header__logo">Smartway</a>
-      <nav class="page-header__nav">
-        <a href="https://smartway.today/blog" class="page-header__nav-link">Блог Smartway</a>
-        <a href="https://smartway.today/faq" class="page-header__nav-link">FAQ по командировкам</a>
-        <a href="https://smartway.today/clients" class="page-header__nav-link">Кейсы компаний</a>
+<body class="komand-page">
+  <div class="komand-layout">
+  <div class="komand-layout__segment komand-layout__segment--top">
+  <header class="komand-header">
+    <input type="checkbox" id="komand-nav" class="komand-nav-input" aria-hidden="true">
+    <div class="komand-header__bar">
+      <div class="komand-header__left">
+        <a href="https://smartway.today/" class="komand-header__logo" aria-label="Smartway — на главную">
+          <img src="img/header-logo.svg" alt="Smartway" width="120" height="20" />
+        </a>
+        <span class="komand-header__divider" aria-hidden="true"></span>
+        <span class="komand-header__descriptor">стандарт управления командировками</span>
+      </div>
+      <nav class="komand-header__nav" aria-label="Разделы сайта">
+        <a href="https://smartway.today/blog">Блог Smartway</a>
+        <a href="https://smartway.today/faq">FAQ по командировкам</a>
+        <a href="https://smartway.today/clients">Кейсы компаний</a>
       </nav>
+      <label for="komand-nav" class="komand-header__burger" aria-label="Открыть меню"></label>
     </div>
+    <label for="komand-nav" class="komand-header__backdrop" aria-hidden="true"></label>
+    <nav class="komand-header__drawer" aria-label="Меню">
+      <label for="komand-nav" class="komand-header__drawer-close" aria-label="Закрыть">×</label>
+      <ul>
+        <li><a href="https://smartway.today/blog">Блог Smartway</a></li>
+        <li><a href="https://smartway.today/faq">FAQ по командировкам</a></li>
+        <li><a href="https://smartway.today/clients">Кейсы компаний</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="page-main">
-    <section class="article-shell">
-      <div class="article-shell__breadcrumbs">
-        <a href="https://smartway.today/">Организация командировок</a>
-        <span>→</span>
-        <a href="https://smartway.today/blog">Блог</a>
-        <span>→</span>
-        <a href="https://smartway.today/blog/statji-o-buhuchyote-komandirovok">Бухучёт командировок и вахт</a>
+  <nav class="komand-breadcrumb" aria-label="Хлебные крошки">
+    <ul class="komand-breadcrumb__list">
+      <li><a href="https://smartway.today/">Организация командировок</a></li>
+      <li class="komand-breadcrumb__sep" aria-hidden="true">→</li>
+      <li><a href="https://smartway.today/blog">Блог</a></li>
+      <li class="komand-breadcrumb__sep" aria-hidden="true">→</li>
+      <li><a href="https://smartway.today/blog/statji-o-buhuchyote-komandirovok">Бухучёт командировок и вахт</a></li>
+      <li class="komand-breadcrumb__sep" aria-hidden="true">→</li>
+      <li><span class="komand-breadcrumb__current">Как оформить командировку в 2026 году</span></li>
+    </ul>
+  </nav>
+
+  <section class="komand-hero" aria-labelledby="komand-hero-title">
+    <div class="komand-hero__grid">
+      <div class="komand-hero__card komand-hero__card--text">
+        <h1 id="komand-hero-title" class="komand-hero__title">Как оформить командировку в&nbsp;2026 году</h1>
+        <p class="komand-hero__lead">
+          В&nbsp;этой статье разобрали, как оформить командировку сотруднику, согласовывать и&nbsp;оплатить, чтобы не&nbsp;было споров с&nbsp;налоговой, трудовой инспекцией и&nbsp;самим сотрудником.
+        </p>
       </div>
+      <div class="komand-hero__card komand-hero__card--media">
+        <img
+          src="https://optim.tildacdn.com/tild6534-3132-4936-a664-306165613436/-/resize/566x/-/format/webp/oformlenie-komandiro.png.webp"
+          alt=""
+          width="566"
+          height="400"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+    </div>
+  </section>
+  </div>
 
-      <article class="article">
-        <header class="article__header">
-          <p class="article__tagline">стандарт управления командировками</p>
-          <h1 class="article__title">Как оформить командировку в 2026 году</h1>
-          <p class="article__lead">
-            В этой статье разобрали, как оформить командировку сотруднику, согласовывать и оплатить,
-            чтобы не было споров с налоговой, трудовой инспекцией и самим сотрудником.
-          </p>
-          <div class="article__meta">
-            <div class="article__author">
-              <div class="article__avatar" aria-hidden="true"></div>
-              <div>
-                <div class="article__author-name">Ирина Титова</div>
-                <div class="article__author-role">Главный бухгалтер Smartway</div>
-              </div>
+  <aside class="komand-layout__sidebar" aria-label="Навигация по статьям о командировках">
+  <section class="komand-subnav" aria-label="Ещё об организации командировок">
+    <input type="checkbox" id="komand-t830m-open" class="komand-t830m-input" />
+    <div class="komand-subnav__inner">
+      <h2 id="komand-subnav-title" class="komand-subnav__title">Ещё об организации командировок</h2>
+      <label for="komand-t830m-open" class="komand-t830m__burger" aria-label="Навигационное меню">
+        <span style="background-color: #000"></span>
+        <span style="background-color: #000"></span>
+        <span style="background-color: #000"></span>
+        <span style="background-color: #000"></span>
+      </label>
+    </div>
+
+    <label for="komand-t830m-open" class="komand-t830m__overlay" aria-hidden="true"></label>
+
+    <div class="komand-t830m" role="dialog" aria-modal="true" aria-labelledby="komand-t830m-heading">
+      <div class="komand-t830m__container">
+        <label for="komand-t830m-open" class="komand-t830m__close" aria-label="Закрыть меню">
+          <span class="komand-t830m__close-icon">
+            <span style="background-color: #000"></span>
+            <span style="background-color: #000"></span>
+            <span style="background-color: #000"></span>
+            <span style="background-color: #000"></span>
+          </span>
+        </label>
+        <div class="komand-t830m__top">
+          <div class="komand-t830m__wrap">
+            <div class="komand-t830m__logo-block">
+              <div id="komand-t830m-heading" class="komand-t830m__logo-text">Ещё об организации командировок</div>
             </div>
+            <nav class="komand-t830m__menu" aria-label="Статьи о командировках">
+              <ul class="komand-t830m__list">
+                <li class="komand-t830m__list-item">
+                  <a class="komand-t830m__link" href="#">FAQ по командировкам</a>
+                </li>
+                <li class="komand-t830m__list-item">
+                  <a class="komand-t830m__link" href="#">План и цели командировки</a>
+                </li>
+                <li class="komand-t830m__list-item">
+                  <a class="komand-t830m__link" href="#">Как отправить в командировку руководителя</a>
+                </li>
+                <li class="komand-t830m__list-item">
+                  <a class="komand-t830m__link" href="#">Командировка на личном авто</a>
+                </li>
+                <li class="komand-t830m__list-item">
+                  <a class="komand-t830m__link" href="#">Командировка на служебном автомобиле</a>
+                </li>
+                <li class="komand-t830m__list-item">
+                  <a class="komand-t830m__link" href="#">Как продлить командировку</a>
+                </li>
+                <li class="komand-t830m__list-item">
+                  <a class="komand-t830m__link" href="#">Командировка во время отпуска</a>
+                </li>
+                <li class="komand-t830m__list-item">
+                  <a class="komand-t830m__link" href="#">Аренда жилья в командировке</a>
+                </li>
+                <li class="komand-t830m__list-item">
+                  <a class="komand-t830m__link" href="#">Служебная командировка по ТК РФ</a>
+                </li>
+                <li class="komand-t830m__list-item">
+                  <a class="komand-t830m__link" href="#">Как экономить на авиабилетах для командировок</a>
+                </li>
+                <li class="komand-t830m__list-item">
+                  <a class="komand-t830m__link" href="#">Командировка женщины</a>
+                </li>
+                <li class="komand-t830m__list-item">
+                  <a class="komand-t830m__link" href="#">Командировка из Москвы в Санкт-Петербург</a>
+                </li>
+                <li class="komand-t830m__list-item">
+                  <a class="komand-t830m__link" href="#">Как бронировать отель за границей</a>
+                </li>
+                <li class="komand-t830m__list-item">
+                  <a class="komand-t830m__link" href="#">Туристический налог в России</a>
+                </li>
+                <li class="komand-t830m__list-item">
+                  <a class="komand-t830m__link" href="#">Место командировки</a>
+                </li>
+                <li class="komand-t830m__list-item">
+                  <a class="komand-t830m__link" href="#">Командировка в область</a>
+                </li>
+              </ul>
+            </nav>
           </div>
-        </header>
+        </div>
+      </div>
+    </div>
+  </section>
+  </aside>
 
-        <aside class="article__sidebar">
-          <h2 class="article__sidebar-title">Ещё об организации командировок</h2>
-          <ul class="article__sidebar-list">
-            <li><a href="https://smartway.today/blog/komandirovka-sotrudnika-voprosy-i-otvety">FAQ по командировкам</a></li>
-            <li><a href="https://smartway.today/blog/plan-i-celi-komandirovki">План и цели командировки</a></li>
-            <li><a href="https://smartway.today/blog/komandirovka-rukovoditelya">Как отправить в командировку руководителя</a></li>
-            <li><a href="https://smartway.today/blog/komandirovka-na-lichnom-avtomobile">Командировка на личном авто</a></li>
-            <li><a href="https://smartway.today/blog/komandirovka-na-sluzhebnom-transporte">Командировка на служебном автомобиле</a></li>
-            <li><a href="https://smartway.today/blog/kak-prodlit-komandirovku">Как продлить командировку</a></li>
-            <li><a href="https://smartway.today/blog/otpusk-i-komandirovka-kak-sovmestit">Командировка во время отпуска</a></li>
-            <li><a href="https://smartway.today/blog/arenda_zhilya">Аренда жилья в командировке</a></li>
-            <li><a href="https://smartway.today/blog/sluzhebnaya-komandirovka-po-tk-rf">Служебная командировка по ТК РФ</a></li>
-            <li><a href="https://smartway.today/blog/korporativnye-programmy-lojalnosti">Как экономить на авиабилетах для командировок</a></li>
-            <li><a href="https://smartway.today/blog/komandirovka-zhenshchiny">Командировка женщины</a></li>
-            <li><a href="https://smartway.today/blog/komandirovka-moskva-sankt-peterburg">Командировка из Москвы в Санкт-Петербург</a></li>
-            <li><a href="https://smartway.today/blog/kak-bronirovat-otel-dlya-komandirovki-za-granicej">Как бронировать отель за границей</a></li>
-            <li><a href="https://smartway.today/blog/turisticheskij-nalog-v-rossii">Туристический налог в России</a></li>
-            <li><a href="https://smartway.today/blog/mesto-komandirovki">Место командировки</a></li>
-            <li><a href="https://smartway.today/blog/komandirovka-v-oblasti">Командировка в область</a></li>
-          </ul>
-        </aside>
+  <div class="komand-layout__segment komand-layout__segment--bottom">
+  <div class="komand-author">
+    <div class="komand-author__avatar" role="img" aria-label=""></div>
+    <div>
+      <a class="komand-author__name" href="https://smartway.today/expert/irina-titova" target="_blank" rel="noreferrer noopener">Ирина Титова</a>
+      <div class="komand-author__role">Главный бухгалтер Smartway</div>
+    </div>
+  </div>
 
-        <section class="article__content">
-          <nav class="article-toc" aria-label="Оглавление">
-            <h2 class="article-toc__title">Оглавление</h2>
-            <ol class="article-toc__list">
-              <li><a href="#what-is-trip">Что такое командировка</a></li>
-              <li><a href="#who-can-trip">Кого можно и нельзя отправлять в командировку</a></li>
-              <li><a href="#steps">Порядок оформления командировки</a></li>
-              <li><a href="#foreign">Командировки иностранных граждан</a></li>
-              <li><a href="#docs">Документы для командировки</a></li>
-              <li><a href="#checklist">Чек-лист по оформлению</a></li>
-            </ol>
-          </nav>
+  <main class="komand-main">
+    <article class="komand-article">
+      <details class="komand-toc">
+        <summary>
+          <span class="komand-toc__title">Оглавление</span>
+          <span class="komand-toc__hint" aria-hidden="true"></span>
+        </summary>
+        <div class="komand-toc__body">
+          <a href="#chto-takoe-komandirovka">Что такое командировка</a><br />
+          <a href="#kogo-mozhno-i-nelzya-otpravlyat-v-komandirovku">Кого можно и нельзя отправлять в командировку</a><br />
+          <a href="#poryadok-oformleniya-komandirovki">Порядок оформления командировки</a><br />
+          <a href="#komandirovki-inostrannyh-grazhdan">Командировки иностранных граждан</a><br />
+          <a href="#dokumenty">Документы для командировки</a><br />
+          <a href="#check-list">Чек-лист по оформлению</a>
+        </div>
+      </details>
 
-          <h2 id="what-is-trip">Что такое командировка</h2>
-          <p>
-            Командировка — деловая поездка сотрудника для выполнения рабочих задач вне места
-            его постоянной работы. Закон не устанавливает минимальный или максимальный срок
-            командировки, однако она не может быть бессрочной.
-          </p>
-          <p>
-            Простыми словами, оформление служебной командировки — это направление сотрудника
-            во временную поездку, которая не может стать постоянной.
-          </p>
+      <h2 id="chto-takoe-komandirovka">Что такое командировка</h2>
+      <p>
+        Командировка&nbsp;— деловая поездка сотрудника для выполнения рабочих задач вне места его постоянной работы. Закон не&nbsp;устанавливает минимальный или максимальный срок командировки, однако она не&nbsp;может быть бессрочной.
+      </p>
+      <p>
+        Простыми словами, <strong>оформление служебной командировки&nbsp;— это направление сотрудника во&nbsp;временную поездку, которая не&nbsp;может стать постоянной</strong>.
+      </p>
 
-          <h3>Что можно считать командировкой?</h3>
-          <p><strong>✅ Является командировкой</strong></p>
-          <ul>
-            <li>Поездка в другой город для заключения договора на 2–3 дня.</li>
-            <li>Направление сотрудника в другую страну для участия в международном форуме на неделю.</li>
-            <li>Поездка сотрудника в офис компании из другого города для повышения квалификации и аттестации.</li>
-          </ul>
-          <p><strong>❌ Не считается командировкой</strong></p>
-          <ul>
-            <li>Переезд сотрудника в другой город на несколько месяцев для работы в филиале — это перевод.</li>
-            <li>График «2 недели через 2» в другом городе или регионе — это вахта.</li>
-            <li>Поездки руководителя на курорты без рабочих целей — отпуск.</li>
-          </ul>
-          <p>
-            Чтобы не нарушать закон, необходимо оформлять командировки на определенный срок и
-            прописывать конкретные служебные задачи в приказе.
-          </p>
+      <h3>Что можно считать командировкой?</h3>
+      <div class="komand-table-wrap">
+        <table class="komand-table">
+          <thead>
+            <tr>
+              <th>✅ Является командировкой</th>
+              <th>❌ Не считается командировкой</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Поездка в другой город для заключения договора на 2–3 дня</td>
+              <td>Переезд сотрудника в другой город на несколько месяцев для работы в филиале компании. В таком случае нужно оформить перевод</td>
+            </tr>
+            <tr>
+              <td>Направление сотрудника в другую страну для участия в международном форуме на неделю</td>
+              <td>Оформление графика работы «2 недели через 2» в другом городе или регионе — необходимо оформить как вахту</td>
+            </tr>
+            <tr>
+              <td>Поездка сотрудника в офис компании из другого города для повышения квалификации и прохождения аттестации</td>
+              <td>Поездки руководителя на курорты, в том числе за границу, без рабочих целей — отпуск</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Чтобы не&nbsp;нарушать закон, необходимо оформлять командировки на&nbsp;определенный срок и&nbsp;прописывать конкретные служебные задачи в&nbsp;Приказе. В&nbsp;противном случае это может вызвать вопросы у&nbsp;трудовой инспекции и&nbsp;спровоцировать проверки.
+      </p>
+      <p>
+        Подробнее о&nbsp;<a class="komand-link" href="https://smartway.today/blog/sluzhebnaya-komandirovka-po-tk-rf" target="_blank" rel="noreferrer noopener">командировках по&nbsp;ТК РФ</a>.
+      </p>
 
-          <h2 id="who-can-trip">Кого можно и нельзя отправлять в командировку</h2>
-          <p>
-            Ограничения установлены Трудовым кодексом РФ (ст. 167, 203, 216.1, 259, 264 и 268).
-          </p>
-          <p>
-            Отдельные категории сотрудников нельзя направлять в командировки, а часть —
-            только с их письменного согласия. Перед направлением важно проверить статус
-            работника и зафиксировать согласие документально.
-          </p>
+      <h2 id="kogo-mozhno-i-nelzya-otpravlyat-v-komandirovku">Кого можно и&nbsp;нельзя отправлять в&nbsp;командировку</h2>
+      <p>
+        Эти ограничения установлены
+        <a class="komand-link" href="https://www.consultant.ru/document/cons_doc_LAW_34683/" target="_blank" rel="noreferrer noopener nofollow">Трудовым кодексом&nbsp;РФ</a>
+        (ст.&nbsp;167, 203, 216.1, 259, 264 и&nbsp;268):
+      </p>
+      <p>
+        Отдельные категории сотрудников нельзя направлять в командировки, а часть — только с их письменного согласия. Перед направлением важно проверить статус работника и зафиксировать согласие документально.
+      </p>
 
-          <h2 id="steps">Порядок оформления командировки: пошаговая инструкция</h2>
-          <p>
-            Просто сообщить сотруднику о служебной поездке нельзя, необходимо составить и
-            подписать несколько документов по командировке. Ниже — краткий план.
-          </p>
+      <a class="komand-readmore" href="https://smartway.today/blog/otkaz-ot-komandirovki" target="_blank" rel="noopener">
+        <span class="komand-readmore__icon">
+          <img src="https://static.tildacdn.com/tild6366-6466-4238-a464-636538373230/vector.svg" alt="" width="40" height="40" loading="lazy" />
+        </span>
+        <span class="komand-readmore__text">
+          Читайте также: <u>«Кто имеет право отказаться от&nbsp;служебной поездки»</u>
+        </span>
+      </a>
 
-          <h3>Шаг 1. Выберите сотрудника</h3>
-          <p>
-            В командировку направляют сотрудника, у которого достаточно квалификации и опыта
-            для выполнения поручения: системного администратора — для настройки сети,
-            руководителя отдела продаж — для подписания договора и т.п.
-          </p>
+      <h2 id="poryadok-oformleniya-komandirovki">Порядок оформления командировки: пошаговая инструкция</h2>
+      <p>
+        Просто сообщить сотруднику о&nbsp;служебной поездке нельзя, необходимо составить и&nbsp;подписать несколько документов по&nbsp;командировке. Делимся пошаговым планом оформления командировки.
+      </p>
 
-          <h3>Шаг 2. Оформите заявление на командировку</h3>
-          <p>
-            Заявление требуется, если инициатором поездки выступает сам сотрудник
-            (например, хочет участвовать в выставке или тренинге).
-          </p>
+      <h3>Шаг 1. Выберите сотрудника</h3>
+      <p>
+        В&nbsp;командировку направляется тот сотрудник, у&nbsp;которого достаточно квалификации и&nbsp;опыта для выполнения поручения. Например, если вам нужно настроить внутреннюю сеть в&nbsp;филиале компании, стоит направить системного администратора. А&nbsp;для подписания договора с&nbsp;крупным клиентом&nbsp;— руководителя отдела продаж, старшего менеджера или того специалиста, который вел переговоры.
+      </p>
 
-          <h3>Шаг 3. Издайте приказ о командировке</h3>
-          <p>
-            Приказ — основной документ, на основании которого сотрудник едет в поездку,
-            получает аванс и оплачивает билеты и проживание. Его можно оформить по унифицированной
-            форме Т‑9/Т‑9а или на собственном бланке.
-          </p>
+      <h3>Шаг 2. Оформите заявление на&nbsp;командировку</h3>
+      <p>
+        <a class="komand-link" href="https://smartway.today/blog/zayavlenie-na-komandirovku" target="_blank" rel="noreferrer noopener">Заявление на&nbsp;командировку</a>
+        оформляется только в&nbsp;том случае, если сотрудник сам выступает инициатором поездки.
+      </p>
 
-          <h3>Шаг 4. Оформите служебное задание</h3>
-          <p>
-            Служебное задание не является обязательным, но помогает зафиксировать цель командировки
-            и ожидаемый результат поездки.
-          </p>
+      <h3>Шаг 3. Издайте Приказ о&nbsp;командировке</h3>
+      <p>
+        Основной документ для оформления командировки&nbsp;— Приказ руководителя. Именно на&nbsp;его основании сотрудник направляется в&nbsp;рабочую поездку, получает аванс, оплачивает билеты и&nbsp;проживание. Оформить приказ можно по&nbsp;формам
+        <a class="komand-link" href="https://www.consultant.ru/document/cons_doc_LAW_47274/" target="_blank" rel="noreferrer noopener nofollow">Т-9</a>
+        /
+        <a class="komand-link" href="https://www.consultant.ru/document/cons_doc_LAW_32449/" target="_blank" rel="noreferrer noopener nofollow">Т-9а</a>
+        или на&nbsp;бланке компании.
+      </p>
 
-          <h3>Шаг 5. Рассчитайте и выдайте аванс</h3>
-          <ul>
-            <li>Выплатите суточные в размерах, установленных локальными актами.</li>
-            <li>Оплатите командировочные расходы: билеты, проживание, связь, транспорт и др.</li>
-          </ul>
+      <h3>Шаг 4. Оформите служебное задание</h3>
+      <p>
+        <a class="komand-link" href="https://smartway.today/blog/sluzhebnoe-zadanie-na-komandirovku" target="_blank" rel="noreferrer noopener">Служебное задание</a>&nbsp;— необязательный документ, но&nbsp;многие работодатели оформляют его для подтверждения цели поездки.
+      </p>
 
-          <h3>Шаг 6. Отразите командировку в учете и оплатите ее</h3>
-          <p>
-            Командировки отражаются в табеле учета рабочего времени отдельными кодами.
-            На основании табеля рассчитывается средний заработок и доплаты.
-          </p>
+      <h3>Шаг 5. Рассчитайте и выдайте аванс командированному</h3>
+      <p>
+        Перед поездкой необходимо выплатить суточные и покрыть командировочные расходы (жильё, билеты, связь, транспорт). Подробнее про
+        <a class="komand-link" href="https://smartway.today/blog/komandirovochnye-rashody-v-2025-godu" target="_blank" rel="noreferrer noopener">командировочные расходы</a>.
+      </p>
 
-          <h3>Шаг 7. Получите авансовый отчет и подтверждающие документы</h3>
-          <p>
-            В течение трёх рабочих дней после возвращения сотрудник должен сдать авансовый
-            отчет с подтверждающими документами по расходам.
-          </p>
+      <h3>Шаг 6. Отразите командировку в учете и оплатите ее</h3>
+      <p>
+        Работодатель ведёт учёт рабочего времени&nbsp;— командировки отражаются в&nbsp;табеле буквенными и&nbsp;цифровыми кодами (часто «К» или «06»). На&nbsp;основании табеля рассчитывается зарплата и средний заработок за&nbsp;время поездки.
+      </p>
 
-          <h3>Шаг 8. Произведите окончательный расчет</h3>
-          <p>
-            По авансовому отчету производится окончательный расчет: при перерасходе
-            работодатель доплачивает, при экономии сотрудник возвращает остаток в кассу или на счёт.
-          </p>
+      <a class="komand-readmore" href="https://smartway.today/blog/komandirovka-v-tabele-ucheta-rabochego-vremeni" target="_blank" rel="noopener">
+        <span class="komand-readmore__icon">
+          <img src="https://static.tildacdn.com/tild6366-6466-4238-a464-636538373230/vector.svg" alt="" width="40" height="40" loading="lazy" />
+        </span>
+        <span class="komand-readmore__text">
+          Читайте также: <u>«Как отразить командировку в табеле учета рабочего времени»</u>
+        </span>
+      </a>
 
-          <h2 id="foreign">Командировки иностранных граждан</h2>
-          <p>
-            Иностранного сотрудника можно отправить в командировку при наличии законных оснований
-            для пребывания в России и соблюдении миграционных требований (регистрация по месту
-            пребывания и т.п.).
-          </p>
+      <h3>Шаг 7. Получите от&nbsp;сотрудника авансовый отчет и&nbsp;подтверждающие документы</h3>
+      <p>
+        По&nbsp;возвращении из&nbsp;командировки сотрудник должен сдать авансовый отчёт в&nbsp;течение 3&nbsp;рабочих дней. Его можно оформить по&nbsp;унифицированной форме или разработать бланк самостоятельно.
+      </p>
 
-          <h2 id="docs">Документы для командировки</h2>
-          <p>К ключевым документам для подтверждения командировочных относятся:</p>
-          <ul>
-            <li>приказ о направлении в командировку;</li>
-            <li>проездные билеты и посадочные талоны;</li>
-            <li>договор и документы по проживанию (гостиница, аренда жилья);</li>
-            <li>чеки за транспорт и связь;</li>
-            <li>первичные документы по представительским расходам и закупкам.</li>
-          </ul>
-          <p>
-            Без этих документов налоговая может исключить расходы на командировки из налоговой базы.
-          </p>
+      <h3>Шаг 8. Произведите окончательный расчет</h3>
+      <p>
+        Проведите окончательный расчёт с&nbsp;сотрудником по&nbsp;авансовому отчёту: при перерасходе доплатите, при экономии сотрудник возвращает остаток в&nbsp;кассу или на&nbsp;счёт (удерживать из&nbsp;зарплаты без согласия нельзя).
+      </p>
 
-          <h2 id="checklist">Чек-лист по оформлению командировки</h2>
-          <ul class="article-checklist">
-            <li>Проверили, можно ли сотрудника направлять в командировку.</li>
-            <li>Издали приказ о служебной поездке.</li>
-            <li>Выдали аванс, включая суточные и командировочные расходы.</li>
-            <li>Получили авансовый отчет и подтверждающие документы.</li>
-            <li>Провели окончательный расчет с сотрудником.</li>
-          </ul>
-        </section>
-      </article>
-    </section>
+      <h2 id="komandirovki-inostrannyh-grazhdan">Командировки иностранных граждан</h2>
+      <p>
+        Для оформления командировки иностранных граждан необходимо учесть важные нюансы: вид на жительство, регистрация по месту пребывания, ограничения по должностям в нормативных актах.
+      </p>
+
+      <h2 id="dokumenty">Документы для командировки</h2>
+      <p>
+        Грамотно оформить документы&nbsp;— ключевой шаг. Без приказа и подтверждающих расходы документов возможны штрафы по
+        <a class="komand-link" href="https://www.consultant.ru/document/cons_doc_LAW_34661/" target="_blank" rel="nofollow noreferrer noopener">ст.&nbsp;5.27 КоАП РФ</a>.
+      </p>
+      <ul>
+        <li>Проездные билеты и посадочные талоны</li>
+        <li>Договор с гостиницой или арендодателем, чеки за проживание</li>
+        <li>Чеки за такси, транспорт, связь</li>
+        <li>Документы по представительским расходам при необходимости</li>
+      </ul>
+
+      <h2 id="check-list">Чек-лист по&nbsp;оформлению командировки</h2>
+      <p>Чтобы не&nbsp;допустить ошибок, проверьте пункты:</p>
+      <div class="komand-table-wrap">
+        <table class="komand-table komand-checklist-table">
+          <tbody>
+            <tr>
+              <td>Проверили сотрудника на «запрет по командировкам»</td>
+              <td>☐</td>
+            </tr>
+            <tr>
+              <td>Издали приказ на служебную поездку</td>
+              <td>☐</td>
+            </tr>
+            <tr>
+              <td>Выдали аванс, включая суточные и командировочные расходы</td>
+              <td>☐</td>
+            </tr>
+            <tr>
+              <td>Получили авансовый отчет и подтверждающие документы по возвращению сотрудника из командировки</td>
+              <td>☐</td>
+            </tr>
+            <tr>
+              <td>Провели окончательный расчет с сотрудником</td>
+              <td>☐</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
   </main>
+
+  <footer class="komand-footer">
+    <div class="komand-footer__inner">
+      <div>
+        <a href="https://smartway.today/" class="komand-footer__logo">
+          <img src="img/footer-logo-smartway.svg" alt="Smartway" width="170" height="36" />
+        </a>
+        <p class="komand-footer__muted">
+          <a href="tel:88007751428">8 800 775 14 28</a><br />
+          <a href="mailto:hello@smartway.today">hello@smartway.today</a>
+        </p>
+      </div>
+      <div>
+        <h3 class="komand-footer__heading"><strong>Полезное</strong></h3>
+        <ul class="komand-footer__list">
+          <li><a href="https://smartway.today/faq">Вопрос-ответ</a></li>
+          <li><a href="https://smartway.today/blog">Блог</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="komand-footer__heading">О компании</h3>
+        <ul class="komand-footer__list">
+          <li><a href="https://smartway.today/about">Общая информация</a></li>
+          <li><a href="https://smartway.today/hr">Работа в Smartway</a></li>
+        </ul>
+      </div>
+      <div class="komand-footer__legal">
+        ООО «Смартвэй» · ИНН 7714379242 · ОГРН 1167746277247
+      </div>
+    </div>
+  </footer>
+  </div>
+  </div>
+  <script>
+    document.querySelectorAll('.komand-header__drawer a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var cb = document.getElementById('komand-nav');
+        if (cb) cb.checked = false;
+      });
+    });
+    document.querySelectorAll('.komand-t830m__link').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var cb = document.getElementById('komand-t830m-open');
+        if (cb) cb.checked = false;
+      });
+    });
+    var t830cb = document.getElementById('komand-t830m-open');
+    if (t830cb) {
+      t830cb.addEventListener('change', function () {
+        var isMobile = window.matchMedia('(max-width: 767px)').matches;
+        document.body.style.overflow = this.checked && isMobile ? 'hidden' : '';
+      });
+    }
+    function komandT830mResetForDesktop() {
+      if (!window.matchMedia('(min-width: 768px)').matches) return;
+      document.body.style.overflow = '';
+      var cb = document.getElementById('komand-t830m-open');
+      if (cb) cb.checked = false;
+    }
+    window.addEventListener('resize', komandT830mResetForDesktop);
+    komandT830mResetForDesktop();
+  </script>
 </body>
 </html>
-

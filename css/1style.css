@@ -6551,7 +6551,7 @@ a {
   }
 }
 
-/* ===== Smartway 1C — плюсы интеграции (1С:ЗУП) ===== */
+/* ===== Smartway 1C — плюсы интеграции (ЗУП / ERP, макет) ===== */
 .smartway-1c-pros {
   padding: 48px var(--container-padding-x) 56px;
   background: #ffffff;
@@ -6577,7 +6577,7 @@ a {
   font-size: 34px;
   line-height: 1.08;
   letter-spacing: -0.02em;
-  color: #e54133;
+  color: #e34234;
 }
 
 .smartway-1c-pros__list {
@@ -6608,7 +6608,7 @@ a {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: #e54133;
+  background: #e34234;
   color: #ffffff;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
@@ -6681,5 +6681,333 @@ a {
     width: 46px;
     height: 46px;
     font-size: 20px;
+  }
+}
+
+/* ===== Smartway 1C — CTA: заголовок + сторы + заявка (макет) ===== */
+.smartway-1c-lead {
+  padding: 72px var(--container-padding-x) 88px;
+  background: #ffffff;
+}
+
+.smartway-1c-lead__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 48px 64px;
+  align-items: center;
+}
+
+.smartway-1c-lead__heading {
+  margin: 0 0 40px;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.smartway-1c-lead__heading-line {
+  display: block;
+}
+
+.smartway-1c-lead__heading-line--accent {
+  color: #d94636;
+}
+
+.smartway-1c-lead__heading-line--dark {
+  color: #333333;
+}
+
+.smartway-1c-lead__stores {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 14px;
+}
+
+.smartway-1c-lead__store {
+  display: inline-flex;
+  line-height: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: opacity 0.15s ease;
+}
+
+.smartway-1c-lead__store:hover {
+  opacity: 0.88;
+}
+
+.smartway-1c-lead__store img {
+  display: block;
+  height: 44px;
+  width: auto;
+}
+
+.smartway-1c-lead__card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 40px 36px;
+  box-sizing: border-box;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.smartway-1c-lead__form-title {
+  margin: 0 0 28px;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #333333;
+  text-align: center;
+}
+
+.smartway-1c-lead__form {
+  margin: 0;
+}
+
+.smartway-1c-lead__field {
+  margin-bottom: 22px;
+}
+
+.smartway-1c-lead__field:last-of-type {
+  margin-bottom: 18px;
+}
+
+.smartway-1c-lead__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.smartway-1c-lead__label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.35;
+  color: #555555;
+}
+
+.smartway-1c-lead__req {
+  color: #d94636;
+}
+
+.smartway-1c-lead__input,
+.smartway-1c-lead__select {
+  width: 100%;
+  height: 52px;
+  padding: 0 18px;
+  box-sizing: border-box;
+  border: 1px solid #dedede;
+  border-radius: 12px;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-size: 15px;
+  line-height: 1.2;
+  color: #333333;
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.smartway-1c-lead__input::placeholder {
+  color: #b0b0b0;
+}
+
+.smartway-1c-lead__input:focus,
+.smartway-1c-lead__select:focus {
+  border-color: #c4c4c4;
+}
+
+.smartway-1c-lead__select-wrap {
+  position: relative;
+}
+
+.smartway-1c-lead__select {
+  appearance: none;
+  padding-right: 44px;
+  cursor: pointer;
+  color: #333333;
+}
+
+.smartway-1c-lead__select:invalid {
+  color: #b0b0b0;
+}
+
+.smartway-1c-lead__select option {
+  color: #333333;
+}
+
+.smartway-1c-lead__select-wrap::after {
+  content: '';
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  margin-top: -6px;
+  border-right: 2px solid #888888;
+  border-bottom: 2px solid #888888;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.smartway-1c-lead__consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 4px 0 22px;
+  cursor: pointer;
+  position: relative;
+}
+
+.smartway-1c-lead__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.smartway-1c-lead__switch {
+  flex-shrink: 0;
+  width: 44px;
+  height: 24px;
+  border-radius: 999px;
+  background: #c4c4c4;
+  position: relative;
+  margin-top: 1px;
+  transition: background 0.2s ease;
+}
+
+.smartway-1c-lead__switch::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  top: 2px;
+  left: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease;
+}
+
+.smartway-1c-lead__checkbox:checked + .smartway-1c-lead__switch {
+  background: #9a9a9a;
+}
+
+.smartway-1c-lead__checkbox:checked + .smartway-1c-lead__switch::after {
+  transform: translateX(20px);
+}
+
+.smartway-1c-lead__checkbox:focus-visible + .smartway-1c-lead__switch {
+  outline: 2px solid #d94636;
+  outline-offset: 2px;
+}
+
+.smartway-1c-lead__consent-text {
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #777777;
+}
+
+.smartway-1c-lead__link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.smartway-1c-lead__link:hover {
+  opacity: 0.85;
+}
+
+.smartway-1c-lead__submit {
+  width: 100%;
+  min-height: 54px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 14px;
+  background: #d94636;
+  color: #ffffff;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.smartway-1c-lead__submit:hover {
+  background: #c73d2f;
+}
+
+.smartway-1c-lead__submit:active {
+  transform: scale(0.99);
+}
+
+.smartway-1c-lead__legal {
+  margin: 16px 0 0;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #a8a8a8;
+  text-align: center;
+}
+
+@media (max-width: 968px) {
+  .smartway-1c-lead {
+    padding: 56px var(--container-padding-x) 64px;
+  }
+
+  .smartway-1c-lead__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: stretch;
+  }
+
+  .smartway-1c-lead__heading {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+
+  .smartway-1c-lead__card {
+    padding: 32px 28px 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .smartway-1c-lead {
+    padding: 40px var(--container-padding-x) 48px;
+  }
+
+  .smartway-1c-lead__heading {
+    font-size: 30px;
+    margin-bottom: 24px;
+  }
+
+  .smartway-1c-lead__store img {
+    height: 40px;
+  }
+
+  .smartway-1c-lead__form-title {
+    font-size: 20px;
+    margin-bottom: 22px;
   }
 }

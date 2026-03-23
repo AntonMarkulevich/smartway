@@ -1,0 +1,220 @@
+/* Страница эксперта (T545 + T120 + T403) — дополнение к blog-vahty.css */
+
+/* ——— Профиль T545 (как скрин: серая карточка + фото 50/50) ——— */
+.ex-profile {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px 75px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+@media (max-width: 900px) {
+  .ex-profile {
+    grid-template-columns: 1fr;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    gap: 20px;
+  }
+}
+
+.ex-profile__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  min-height: 0;
+  min-height: 360px;
+}
+
+.ex-profile__box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #f2f2f2;
+  padding: 40px 40px 44px;
+  border-radius: 0;
+}
+
+.ex-profile__title {
+  margin: 0 0 10px;
+  font-size: clamp(26px, 3.6vw, 38px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.ex-profile__role {
+  margin: 0 0 18px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #666666;
+}
+
+/* Короткая красная полоса под должностью */
+.ex-profile__line {
+  width: 72px;
+  max-width: 100%;
+  height: 4px;
+  background: #d84b3b;
+  margin: 0 0 24px;
+  border: 0;
+  flex-shrink: 0;
+}
+
+.ex-profile__bio {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 400;
+  color: #333333;
+}
+
+.ex-profile__bio p {
+  margin: 0 0 1.1em;
+}
+
+.ex-profile__bio p:last-child {
+  margin-bottom: 0;
+}
+
+.ex-profile__photo {
+  border-radius: 36px;
+  min-height: clamp(360px, 52vw, 580px);
+  height: 100%;
+  background-color: #e8e8e8;
+  background-size: cover;
+  background-position: center top;
+}
+
+@media (max-width: 900px) {
+  .ex-profile__text {
+    min-height: 0;
+  }
+
+  .ex-profile__box {
+    padding: 28px 24px 32px;
+  }
+
+  .ex-profile__photo {
+    min-height: 380px;
+    border-radius: 28px;
+    order: -1;
+  }
+}
+
+/* ——— Заголовок блока «Публикации» T120 ——— */
+.ex-pubs-head {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 75px 20px 15px;
+}
+
+@media (max-width: 640px) {
+  .ex-pubs-head {
+    padding-top: 48px;
+  }
+}
+
+.ex-pubs-head__title {
+  margin: 0;
+  padding: 0 0 30px;
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 700;
+  line-height: 1.5;
+  color: #3a3a3a;
+}
+
+/* ——— Список публикаций T403 ——— */
+.ex-pubs {
+  padding: 60px 0 90px;
+}
+
+.ex-pub {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto 48px;
+  padding: 0 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+
+.ex-pub:hover {
+  opacity: 0.88;
+}
+
+.ex-pub:last-child {
+  margin-bottom: 0;
+}
+
+.ex-pub__img-wrap {
+  flex: 0 0 min(320px, 38%);
+  max-width: 380px;
+}
+
+.ex-pub__img {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  background-color: #eee;
+}
+
+.ex-pub__body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.ex-pub__separator {
+  display: none;
+}
+
+.ex-pub__title {
+  margin: 0 0 12px;
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+
+.ex-pub__descr {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #3a3a3a;
+}
+
+@media (max-width: 767px) {
+  .ex-pub {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .ex-pub__img-wrap {
+    flex: none;
+    max-width: none;
+    width: 100%;
+  }
+
+  .ex-pub__img {
+    aspect-ratio: 16 / 10;
+  }
+}
