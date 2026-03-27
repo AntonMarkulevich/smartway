@@ -1,0 +1,689 @@
+/* Одноколоночная страница на базе komandirovka (без сайдбара) */
+body.komand-page--no-sidebar .komand-layout {
+  display: block;
+}
+
+body.komand-page--no-sidebar .komand-layout__segment--top,
+body.komand-page--no-sidebar .komand-layout__segment--bottom {
+  min-width: 0;
+}
+
+.helpic-title {
+  margin: 0 0 20px;
+  font-size: 49px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+  color: var(--komand-text);
+}
+
+.helpic-lead {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.55;
+  font-weight: 400;
+  color: var(--komand-text);
+  max-width: 36em;
+}
+
+@media (max-width: 960px) {
+  .helpic-title {
+    font-size: 34px;
+  }
+
+  .helpic-lead {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .helpic-title {
+    font-size: 25px;
+    letter-spacing: -0.03em;
+  }
+}
+
+/* ——— Кейс: соответствие T396 artboard 446167568 (экраны 320–1200) ——— */
+.helpic-case--t396 {
+  width: 100%;
+  max-width: none;
+  margin: 48px 0 0;
+  padding: 52px 20px 56px 23px;
+  box-sizing: border-box;
+  background: #0e4d92;
+  color: #fff;
+  border-radius: 20px;
+  font-family: var(--komand-font);
+}
+
+.helpic-case--t396 h2.helpic-case__heading {
+  margin: 0 0 36px;
+  max-width: 56em;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.helpic-case--t396 h2.helpic-case__heading strong {
+  font-weight: 700;
+}
+
+/* Одна сетка 3×2: верх — карточки и профиль, низ — показатели в тех же колонках */
+.helpic-case__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 28px;
+  row-gap: 32px;
+  align-items: stretch;
+}
+
+.helpic-case__grid > * {
+  min-width: 0;
+}
+
+.helpic-case__box {
+  box-sizing: border-box;
+  min-height: 109px;
+  padding: 17px 16px 14px;
+  border-radius: 12px;
+  height: 100%;
+}
+
+.helpic-case__box--result,
+.helpic-case__box--task {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.helpic-case__box-label {
+  margin: 0 0 9px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #fff;
+}
+
+.helpic-case__box-text {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #fff;
+}
+
+.helpic-case__profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  align-self: center;
+}
+
+.helpic-case__photo {
+  flex-shrink: 0;
+  display: block;
+  width: 109px;
+  height: 109px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.helpic-case__profile-text {
+  min-width: 0;
+}
+
+.helpic-case__name {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #fff;
+}
+
+.helpic-case__role {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.helpic-case__stack {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.helpic-case__stat {
+  margin: 0;
+}
+
+.helpic-case__stat-label {
+  margin: 0 0 9px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #fff;
+}
+
+.helpic-case__stat-value {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #fff;
+}
+
+.helpic-case__tool-link {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+  box-shadow: none;
+}
+
+.helpic-case__tool-link:hover {
+  opacity: 0.88;
+}
+
+/* ——— Адаптив по брейкпоинтам T396 ——— */
+@media (max-width: 959px) {
+  .helpic-case--t396 {
+    padding: 40px 18px 44px;
+  }
+
+  .helpic-case--t396 h2.helpic-case__heading {
+    font-size: 40px;
+    line-height: 1.2;
+    max-width: none;
+  }
+
+  .helpic-case__grid {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+
+  .helpic-case__profile {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 639px) {
+  .helpic-case--t396 {
+    margin-top: 36px;
+    padding: 32px 16px 36px;
+    border-radius: 16px;
+  }
+
+  .helpic-case--t396 h2.helpic-case__heading {
+    font-size: 25px;
+    line-height: 1.28;
+    margin-bottom: 28px;
+  }
+
+  .helpic-case__grid {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  .helpic-case__box {
+    min-height: 0;
+  }
+
+  .helpic-case__stack {
+    gap: 28px;
+  }
+}
+
+/* ——— Лонгрид по макету Figma (node 1081:5804) ——— */
+.helpic-story {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 56px;
+  padding-bottom: 24px;
+  font-family: 'Golos Text', var(--komand-font), system-ui, sans-serif;
+  color: #3a3a3a;
+  background: #fff;
+}
+
+.helpic-story__block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 76px;
+  max-width: 791px;
+}
+
+.helpic-story__block:last-child {
+  margin-bottom: 0;
+}
+
+.helpic-story__h2 {
+  margin: 0;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  color: #3a3a3a;
+}
+
+.helpic-story__h3 {
+  margin: 0;
+  font-size: clamp(1.375rem, 2.5vw, 2rem);
+  font-weight: 700;
+  line-height: 1.375;
+  letter-spacing: -0.02em;
+  color: #3a3a3a;
+}
+
+.helpic-story__prose {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  max-width: 716px;
+}
+
+.helpic-story__prose p {
+  margin: 0 0 1em;
+}
+
+.helpic-story__prose p:last-child {
+  margin-bottom: 0;
+}
+
+.helpic-story__link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.helpic-story__link:hover {
+  opacity: 0.75;
+}
+
+.helpic-story__quote {
+  margin: 20px 0 0;
+  padding: 48px 40px 52px;
+  max-width: min(100%, 725px);
+  width: 100%;
+  box-sizing: border-box;
+  background: #eef5ff;
+  border-radius: 40px;
+  border: 0;
+}
+
+.helpic-story__quote-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 17px;
+}
+
+.helpic-story__quote-avatar {
+  flex-shrink: 0;
+  width: 79px;
+  height: 79px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.helpic-story__quote-cap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  min-width: 0;
+}
+
+.helpic-story__quote-name {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: #3a3a3a;
+}
+
+.helpic-story__quote-role {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #3a3a3a;
+  opacity: 0.45;
+}
+
+.helpic-story__quote-text {
+  margin: 24px 0 0;
+  padding: 0;
+  border: 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  font-style: italic;
+  color: #3a3a3a;
+}
+
+.helpic-story__quote-text p {
+  margin: 0;
+}
+
+.helpic-story__num-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 480px;
+}
+
+.helpic-story__num-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.helpic-story__num {
+  flex-shrink: 0;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: #d44333;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 19px;
+  text-align: center;
+}
+
+.helpic-story__accent-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 480px;
+}
+
+.helpic-story__accent-row--spaced {
+  margin-top: 40px;
+}
+
+.helpic-story__accent-lead {
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
+  color: #d44333;
+}
+
+@media (max-width: 639px) {
+  .helpic-story__block {
+    margin-bottom: 48px;
+  }
+
+  .helpic-story__h2 {
+    font-size: 2.25rem;
+    line-height: 1.05;
+  }
+
+  .helpic-story__prose,
+  .helpic-story__num-list li,
+  .helpic-story__accent-lead,
+  .helpic-story__quote-text,
+  .helpic-story__quote-name,
+  .helpic-story__quote-role {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  .helpic-story__quote {
+    padding: 32px 24px 36px;
+    border-radius: 24px;
+  }
+
+  .helpic-story__quote-avatar {
+    width: 64px;
+    height: 64px;
+  }
+
+  .helpic-story__cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    padding: 22px 20px;
+    margin-bottom: 48px;
+  }
+
+  .helpic-story__cta-title {
+    margin-right: 0;
+  }
+
+  .helpic-story__cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .helpic-story__byline {
+    margin-bottom: 40px;
+  }
+}
+
+/* CTA, подпись автора и карточки «другие истории» (продолжение лонгрида; узел Figma 1086:2618 — контент сверстан по странице smartway.today/clients/helpic) */
+.helpic-story__cta {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 76px;
+  padding: 22px clamp(16px, 5vw, 48px);
+  background: #d44333;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px 24px;
+}
+
+.helpic-story__cta-title {
+  margin: 0;
+  flex: 1 1 260px;
+  min-width: min(100%, 280px);
+  margin-right: 16px;
+  font-size: clamp(1.05rem, 2.1vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: #fff;
+  font-family: 'Golos Text', var(--komand-font), system-ui, sans-serif;
+}
+
+.helpic-story__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 14px 32px;
+  border-radius: 10px;
+  background: #fff;
+  color: #3a3a3a;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  font-family: 'Golos Text', var(--komand-font), system-ui, sans-serif;
+  border: none;
+  cursor: pointer;
+}
+
+.helpic-story__cta-btn:hover {
+  background: #f2f2f2;
+  color: #000;
+}
+
+.helpic-story__byline {
+  margin: 0 0 56px;
+  max-width: 791px;
+  padding: 0;
+  font-family: 'Golos Text', var(--komand-font), system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.helpic-story__byline-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #3a3a3a;
+}
+
+.helpic-story__byline-meta {
+  font-size: 16px;
+  font-weight: 400;
+  color: #3a3a3a;
+  opacity: 0.55;
+}
+
+.helpic-story__related {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding-top: 8px;
+  font-family: 'Golos Text', var(--komand-font), system-ui, sans-serif;
+}
+
+.helpic-story__related .helpic-story__h3 {
+  margin: 0 0 28px;
+  font-size: clamp(1.375rem, 2.5vw, 2rem);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+
+.helpic-story__related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 32px);
+  width: 100%;
+  align-items: stretch;
+}
+
+@media screen and (max-width: 959px) {
+  .helpic-story__related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .helpic-story__related-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.helpic-story__card {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  min-width: 0;
+}
+
+.helpic-story__card-logo {
+  width: 100%;
+  margin: 0 0 18px;
+  padding: 22px 20px;
+  box-sizing: border-box;
+  border-radius: 14px;
+  background: #f2f2f2;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 132px;
+}
+
+.helpic-story__card-logo img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(220px, 88%);
+  max-height: 72px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.helpic-story__card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin: 0 0 16px;
+}
+
+.helpic-story__card-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 500;
+  color: #d44333;
+  background: #fdecea;
+}
+
+.helpic-story__card-title {
+  margin: 0 0 14px;
+  font-size: clamp(18px, 1.35vw, 22px);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+
+.helpic-story__card-text {
+  margin: 0 0 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #777;
+  flex: 1;
+}
+
+.helpic-story__card-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.helpic-story__card-more:hover {
+  color: #000;
+  opacity: 0.75;
+}
+
+/* На макете стрелка красная (#d44333); исходный SVG может быть тёмным */
+.helpic-story__card-more-icon {
+  flex-shrink: 0;
+  display: block;
+  filter: brightness(0) saturate(100%) invert(37%) sepia(58%) saturate(3678%) hue-rotate(343deg) brightness(91%) contrast(87%);
+}

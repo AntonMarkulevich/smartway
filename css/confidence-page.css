@@ -1,0 +1,267 @@
+/* Политика конфиденциальности — layout без grid, без зазора шапка → контент */
+body.confidence-page .komand-layout {
+  display: block;
+  grid-template-columns: none;
+  grid-template-rows: none;
+  align-items: stretch;
+  min-height: unset;
+  max-height: none;
+}
+
+body.confidence-page .komand-layout__segment--top,
+body.confidence-page .komand-layout__segment--bottom {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-height: none;
+  grid-column: auto;
+  grid-row: auto;
+  margin: 0;
+  padding: 0;
+}
+
+body.confidence-page .komand-layout__segment--bottom {
+  margin-top: 0;
+}
+
+body.confidence-page .komand-main {
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0 0 80px;
+}
+
+body.confidence-page .komand-breadcrumb {
+  padding: 24px 20px 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  body.confidence-page .komand-breadcrumb {
+    padding: 20px 16px 0;
+  }
+}
+
+.confidence-page__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 24px;
+  box-sizing: border-box;
+}
+
+.confidence-intro {
+  max-width: 900px;
+}
+
+.confidence-intro__title {
+  margin: 0;
+  padding: 0 0 30px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: var(--komand-text-dark, #272727);
+}
+
+.confidence-intro__body {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--komand-text-dark, #272727);
+}
+
+.confidence-intro__body p {
+  margin: 0 0 1em;
+}
+
+.confidence-intro__body p:last-child {
+  margin-bottom: 0;
+}
+
+.confidence-intro__link {
+  color: #d44333;
+  text-decoration: none;
+  border-bottom: 1px solid #d44333;
+  box-shadow: none;
+}
+
+.confidence-intro__link:hover {
+  opacity: 0.85;
+}
+
+/* Разделы политики (после вводного блока) */
+.confidence-policy {
+  max-width: 900px;
+  margin-top: 48px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--komand-text-dark, #272727);
+}
+
+.confidence-policy__h2 {
+  margin: 48px 0 24px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.55;
+  color: var(--komand-text-dark, #272727);
+}
+
+.confidence-policy__h2:first-child {
+  margin-top: 0;
+}
+
+.confidence-policy__body {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.confidence-policy__body p {
+  margin: 0 0 1em;
+}
+
+.confidence-policy__body p:last-child {
+  margin-bottom: 0;
+}
+
+/* T396 → таблица целей обработки (#rec1123599831) */
+.confidence-t396 {
+  max-width: 900px;
+  margin-top: 24px;
+}
+
+#rec1123712641.confidence-t396 {
+  margin-top: 16px;
+  max-width: 640px;
+}
+
+.confidence-t396--narrow .confidence-purposes-table--two-cols {
+  min-width: 280px;
+}
+
+.confidence-purposes-table--two-cols th:first-child,
+.confidence-purposes-table--two-cols td:first-child {
+  width: 36%;
+}
+
+.confidence-t396__inner {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-left: -4px;
+  margin-right: -4px;
+  padding-bottom: 8px;
+}
+
+.confidence-purposes-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #000;
+  background: #fff;
+}
+
+.confidence-purposes-table th,
+.confidence-purposes-table td {
+  border: 1px solid #000;
+  padding: 16px 17px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.confidence-purposes-table thead th {
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.confidence-purposes-table tbody td {
+  line-height: 1.55;
+}
+
+.confidence-purposes-table ul,
+.confidence-purposes-table ol {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.confidence-purposes-table li {
+  margin-bottom: 0.35em;
+}
+
+.confidence-purposes-table li:last-child {
+  margin-bottom: 0;
+}
+
+/* T120 продолжение политики (#rec1123547201, #rec1123564846) */
+#rec1123547201 .t-container,
+#rec1123564846 .t-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+
+#rec1123547201 .t-col_9,
+#rec1123564846 .t-col_9 {
+  max-width: 900px;
+}
+
+#rec1123547201 .t120__descr,
+#rec1123547201 .confidence-t120__descr,
+#rec1123564846 .t120__descr,
+#rec1123564846 .confidence-t120__descr {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--komand-text-dark, #272727);
+}
+
+#rec1123547201 .confidence-t120__descr > p,
+#rec1123564846 .confidence-t120__descr > p {
+  margin: 0 0 1em;
+}
+
+#rec1123547201 .confidence-t120__descr > ul,
+#rec1123564846 .confidence-t120__descr > ul {
+  margin: 0 0 1em;
+  padding-left: 1.4em;
+}
+
+#rec1123547201 .confidence-t120__descr > ul:last-child,
+#rec1123564846 .confidence-t120__descr > ul:last-child {
+  margin-bottom: 0;
+}
+
+#rec1123547201 .confidence-t120__descr > p:last-child,
+#rec1123564846 .confidence-t120__descr > p:last-child {
+  margin-bottom: 0;
+}
+
+#rec1123547201 .confidence-t120__descr li,
+#rec1123564846 .confidence-t120__descr li {
+  margin-bottom: 0.35em;
+}
+
+#rec1123547201 .confidence-t120__descr .confidence-policy__h2,
+#rec1123564846 .confidence-t120__descr .confidence-policy__h2 {
+  margin: 48px 0 24px;
+}
+
+#rec1123547201 .confidence-t120__descr > h2.confidence-policy__h2:first-of-type {
+  margin-top: 32px;
+}
+
+#rec1123564846 .confidence-t120__descr > h2.confidence-policy__h2:first-of-type {
+  margin-top: 48px;
+}
+
+@media (max-width: 959px) {
+  .confidence-intro__title {
+    font-size: 22px;
+    padding-bottom: 24px;
+  }
+}
