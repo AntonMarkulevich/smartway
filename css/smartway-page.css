@@ -1,0 +1,78 @@
+/* Стили для отдельных лендингов Smartway (подключать после komandirovka / при необходимости helpic) */
+
+/* Оферта: встроенный блок Тильды на странице offer.html */
+/* Без сайдбара — отключаем grid лэйаута komandirovka (иначе пустая колонка слева на ≥768px) */
+body.komand-page--no-sidebar:has(.komand-main--smartway-offer) .komand-layout {
+  display: block;
+  grid-template-columns: none;
+  grid-template-rows: none;
+  align-items: stretch;
+  min-height: unset;
+  max-height: none;
+}
+
+body.komand-page--no-sidebar:has(.komand-main--smartway-offer) .komand-layout__segment--top,
+body.komand-page--no-sidebar:has(.komand-main--smartway-offer) .komand-layout__segment--bottom {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-height: none;
+  grid-column: auto;
+  grid-row: auto;
+  margin: 0;
+  padding: 0;
+}
+
+body.komand-page--no-sidebar:has(.komand-main--smartway-offer) .komand-layout__segment--bottom {
+  margin-top: 0;
+}
+
+.komand-main--smartway-offer {
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.smartway-page__embed {
+  width: 100%;
+  margin: 0;
+  padding: 0 0 24px;
+  box-sizing: border-box;
+}
+
+.smartway-page__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 48px;
+  box-sizing: border-box;
+}
+
+.smartway-page__title {
+  margin: 0 0 16px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--komand-text-dark, #272727);
+}
+
+.smartway-page__lead {
+  margin: 0;
+  max-width: 42em;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--komand-text-dark, #272727);
+}
+
+@media (max-width: 640px) {
+  .smartway-page__inner {
+    padding: 32px 16px 40px;
+  }
+
+  .smartway-page__title {
+    font-size: 22px;
+  }
+
+  .smartway-page__lead {
+    font-size: 16px;
+  }
+}
