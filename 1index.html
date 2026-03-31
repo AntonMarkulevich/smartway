@@ -7,44 +7,64 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site-header.css">
   <link rel="stylesheet" href="css/1style.css">
 </head>
 <body>
   <header class="header">
+    <input type="checkbox" id="site-nav" class="site-nav-input" aria-hidden="true">
     <div class="header__inner">
       <div class="header__left">
-        <a href="/" aria-label="Smartway — на главную">
+        <a href="1index.html" aria-label="Smartway — на главную">
           <img src="img/header-logo.svg" alt="Smartway" class="header__logo">
         </a>
         <div class="header__divider"></div>
         <span class="header__descriptor">Стандарт управления<br>командировками</span>
       </div>
-      <button type="button" class="header__burger" aria-label="Меню" aria-expanded="false">
+      <label for="site-nav" class="header__burger" aria-label="Открыть меню">
         <span class="header__burger-line"></span>
         <span class="header__burger-line"></span>
         <span class="header__burger-line"></span>
-      </button>
-      <nav class="header__nav">
+      </label>
+      <nav class="header__nav" aria-label="Основное меню">
         <ul class="header__menu">
-          <li><a href="#audience" class="header__link">Для кого <span class="header__chevron"></span></a></li>
-          <li><a href="#capabilities" class="header__link">Возможности <span class="header__chevron"></span></a></li>
-          <li><a href="#useful" class="header__link">Полезное <span class="header__chevron"></span></a></li>
-          <li><a href="#mice" class="header__link">MICE</a></li>
-          <li><a href="#tariffs" class="header__link">Тарифы</a></li>
-          <li><a href="#clients" class="header__link">Клиенты</a></li>
+          <li><a href="1index.html#audience" class="header__link">Для кого <span class="header__chevron"></span></a></li>
+          <li><a href="1index.html#capabilities" class="header__link">Возможности <span class="header__chevron"></span></a></li>
+          <li><a href="1index.html#useful" class="header__link">Полезное <span class="header__chevron"></span></a></li>
+          <li><a href="1index.html#mice" class="header__link">MICE</a></li>
+          <li><a href="1index.html#tariffs" class="header__link">Тарифы</a></li>
+          <li><a href="1index.html#clients" class="header__link">Клиенты</a></li>
         </ul>
       </nav>
       <div class="header__actions">
-        <a href="mailto:" class="header__icon-btn" aria-label="Написать">
-          <img src="img/header-icon-phone.svg" alt="Mail" class="header__icon header__icon--mail">
+        <a href="mailto:hello@smartway.today" class="header__icon-btn" aria-label="Написать">
+          <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail">
         </a>
-        <a href="tel:" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
-          <img src="img/phone.svg" alt="Phone">
-        </a>  
-        <a href="#login" class="header__login">
+        <a href="tel:+78007751428" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
+          <img src="img/phone.svg" alt="">
+        </a>
+        <a href="https://www.smartway.today" class="header__login">
           <img src="img/header-icon-email.svg" alt=""> Войти
         </a>
-        <a href="#test" class="header__btn">Протестировать</a>
+        <a href="https://smartway.today/" class="header__btn">Протестировать</a>
+      </div>
+    </div>
+    <label for="site-nav" class="header__backdrop" aria-hidden="true"></label>
+    <div class="header__drawer" aria-label="Меню">
+      <div class="header__drawer-inner">
+        <label for="site-nav" class="header__drawer-close" aria-label="Закрыть">×</label>
+        <ul class="header__drawer-menu">
+          <li><a href="1index.html#audience" class="header__drawer-link">Для кого</a></li>
+          <li><a href="1index.html#capabilities" class="header__drawer-link">Возможности</a></li>
+          <li><a href="1index.html#useful" class="header__drawer-link">Полезное</a></li>
+          <li><a href="1index.html#mice" class="header__drawer-link">MICE</a></li>
+          <li><a href="1index.html#tariffs" class="header__drawer-link">Тарифы</a></li>
+          <li><a href="1index.html#clients" class="header__drawer-link">Клиенты</a></li>
+        </ul>
+        <div class="header__drawer-cta">
+          <a href="https://www.smartway.today" class="header__drawer-login">Войти</a>
+          <a href="https://smartway.today/" class="header__btn header__drawer-btn">Протестировать</a>
+        </div>
       </div>
     </div>
   </header>
@@ -183,23 +203,25 @@
             </div>
           </div>
           <div class="services__card services__card--transfery">
-            <div class="services__card-head">
-              <h3 class="services__card-title">Трансферы</h3>
-              <img src="img/services/transfer-arrows.svg" alt="" class="services__badge-icon">
-            </div>
-            <div class="services__media services__media--car">
-              <img src="img/services/transfer-car.png" alt="" class="services__img services__img--car">
-              <div class="services__transfer-vip">
-                <h3 class="services__card-title">VIP-залы</h3>
+            <div class="services__transfer-top">
+              <div class="services__card-head">
+                <h3 class="services__card-title">Трансферы</h3>
+                <img src="img/services/transfer-arrows.svg" alt="" class="services__badge-icon">
               </div>
             </div>
+            <div class="services__transfer-vip">
+              <h3 class="services__card-title">VIP-залы</h3>
+            </div>
+            <div class="services__transfer-car">
+              <img src="img/services/transfer-car.png" alt="" class="services__img services__img--car">
+            </div>
           </div>
-          <div class="services__card services__card--mice">
-            <div class="services__card-head">
+          <div class="services__card services__card--mice" style="padding: 0;">
+            <div class="services__card-head" style="padding: 24px;">
               <h3 class="services__card-title">MICE</h3>
             </div>
-            <div class="services__media services__media--brand">
-              <img src="img/services/mice-bg.svg" alt="" class="services__img services__img--mice">
+            <div class="services__media services__media--mice">
+              <img src="img/mice.svg" alt="" class="services__img services__img--mice" width="235" height="164" decoding="async">
             </div>
           </div>
         </div>
@@ -210,25 +232,66 @@
       <div class="steps__inner">
         <h2 class="steps__title" id="steps-title">Управляйте командировками <span class="steps__title-accent">от заявки до отчетности</span></h2>
         <div class="steps__grid">
-          <article class="steps__card">
-            <span class="steps__number">1</span>
-            <h3 class="steps__card-title">Заявка</h3>
-            <img src="img/steps/step-1.webp" alt="Шаг 1 — Заявка" class="steps__img" loading="lazy">
+          <article class="steps__card steps__card--one-window">
+            <div class="steps__one-window-intro">
+              <span class="steps__number">1</span>
+              <h3 class="steps__card-title steps__card-title--one-window">Оформляйте услуги для командировок в одном окне</h3>
+            </div>
+            <div class="steps__one-window" aria-hidden="true">
+              <div class="steps__one-window-stage">
+                <div class="steps__one-window-scale">
+                  <img src="img/oneWindow/Rectangle%20376714326.png" alt="" class="steps__one-window-bg" width="560" height="200" decoding="async">
+                  <img src="img/oneWindow/Group%202085656548.png" alt="" class="steps__one-window-flight" width="320" height="auto" decoding="async">
+                  <img src="img/oneWindow/Group%202085656549.png" alt="" class="steps__one-window-hotel" width="280" height="auto" decoding="async">
+                  <img src="img/oneWindow/Tariff%20avia.png" alt="" class="steps__one-window-taxi" width="340" height="auto" decoding="async">
+                </div>
+              </div>
+            </div>
           </article>
-          <article class="steps__card">
+          <article class="steps__card steps__card--step-two">
             <span class="steps__number">2</span>
-            <h3 class="steps__card-title">Согласование</h3>
-            <img src="img/steps/step-2.webp" alt="Шаг 2 — Согласование" class="steps__img" loading="lazy">
+            <h3 class="steps__card-title steps__card-title--step-two">Согласовывайте и оплачивайте выбранные услуги</h3>
+            <div class="steps__step-two-visual" aria-hidden="true">
+              <div class="steps__step-two-stage">
+                <img src="img/secondStep/Rectangle%20376714327.png" alt="" class="steps__step-two-layer steps__step-two-layer--bg" width="400" height="180" decoding="async">
+                <img src="img/secondStep/Rectangle%20376714328.png" alt="" class="steps__step-two-layer steps__step-two-layer--bg-mid" width="380" height="160" decoding="async">
+                <img src="img/secondStep/Right%20section.png" alt="" class="steps__step-two-layer steps__step-two-layer--trip" width="280" height="200" decoding="async">
+                <img src="img/secondStep/Card%20bill%20payment.png" alt="" class="steps__step-two-layer steps__step-two-layer--bill" width="260" height="120" decoding="async">
+                <img src="img/secondStep/Group%202085656550.png" alt="" class="steps__step-two-layer steps__step-two-layer--policy" width="260" height="100" decoding="async">
+              </div>
+            </div>
           </article>
-          <article class="steps__card">
+          <article class="steps__card steps__card--step-three">
             <span class="steps__number">3</span>
-            <h3 class="steps__card-title">Бронирование</h3>
-            <img src="img/steps/step-3.webp" alt="Шаг 3 — Бронирование" class="steps__img" loading="lazy">
+            <h3 class="steps__card-title steps__card-title--step-three">Заполняйте авансовые и получайте закрывающие онлайн</h3>
+            <div class="steps__step-three-visual" aria-hidden="true">
+              <div class="steps__step-three-stage">
+                <img src="img/thirdStep/TextFilter.png" alt="" class="steps__step-three-layer steps__step-three-layer--sign" width="220" height="140" decoding="async">
+                <img src="img/thirdStep/Tab%20ticket.png" alt="" class="steps__step-three-layer steps__step-three-layer--download" width="220" height="100" decoding="async">
+                <img src="img/thirdStep/Group%202085656546.png" alt="" class="steps__step-three-layer steps__step-three-layer--integr" width="340" height="72" decoding="async">
+              </div>
+            </div>
           </article>
-          <article class="steps__card">
+          <article class="steps__card steps__card--step-four">
             <span class="steps__number">4</span>
-            <h3 class="steps__card-title">Отчётность</h3>
-            <img src="img/steps/step-4.webp" alt="Шаг 4 — Отчётность" class="steps__img" loading="lazy">
+            <h3 class="steps__card-title steps__card-title--step-four">Контролируйте расходы за счет детальной аналитики</h3>
+            <div class="steps__step-four-visual" aria-hidden="true">
+              <div class="steps__step-four-stage">
+                <div class="steps__step-four-panels">
+                  <img src="img/fourthStep/Rectangle%20376714329.png" alt="" class="steps__step-four-panel" decoding="async">
+                  <img src="img/fourthStep/Rectangle%20376714330.png" alt="" class="steps__step-four-panel" decoding="async">
+                  <img src="img/fourthStep/Rectangle%20376714331.png" alt="" class="steps__step-four-panel" decoding="async">
+                </div>
+                <div class="steps__step-four-bar">
+                  <span class="steps__step-four-bar-segment steps__step-four-bar-segment--red"></span>
+                  <span class="steps__step-four-bar-segment steps__step-four-bar-segment--yellow"></span>
+                  <span class="steps__step-four-bar-segment steps__step-four-bar-segment--green"></span>
+                </div>
+                <img src="img/fourthStep/x.png" alt="" class="steps__step-four-layer steps__step-four-layer--chart" width="200" height="160" decoding="async">
+                <img src="img/fourthStep/Analytics.png" alt="" class="steps__step-four-layer steps__step-four-layer--analytics" width="220" height="200" decoding="async">
+                <img src="img/fourthStep/Union.png" alt="" class="steps__step-four-layer steps__step-four-layer--pie" width="56" height="56" decoding="async">
+              </div>
+            </div>
           </article>
         </div>
         <div class="steps__actions">
@@ -244,10 +307,15 @@
           <p class="cta__text"><strong>Оставьте заявку —</strong> разберем ваши процессы и покажем, где экономить уже сейчас</p>
         </div>
         <div class="cta__actions">
-          <div class="cta__avatars">
-            <img src="" alt="" class="cta__avatar">
-            <img src="" alt="" class="cta__avatar">
-            <img src="" alt="" class="cta__avatar">
+          <div class="cta__icons" aria-hidden="true">
+            <img
+              src="img/expensesIcons/Container.png"
+              alt=""
+              class="cta__icons-img"
+              width="168"
+              height="56"
+              decoding="async"
+            >
           </div>
           <a href="#consult" class="btn btn--primary">Получить консультацию &rarr;</a>
         </div>
@@ -265,7 +333,7 @@
                 <span class="team-card__role-text">Организатору командировок</span>
               </div>
               <h3 class="team-card__title">Бронируйте деловые поездки в одном окне за 2 минуты</h3>
-              <p class="team-card__desc">Билеты, отели, трансферы и страховки — всё в одном интерфейсе. Не нужно переключаться между сервисами.</p>
+              <p class="team-card__desc">Создание и согласование поездок за пару кликов, с поддержкой 24/7. Сервис автоматически подставляет данные сотрудников, контролирует лимиты и снижает риск ошибок</p>
             </div>
             <img src="img/team/person-1.svg" alt="" class="team-card__person" loading="lazy">
           </article>
@@ -276,7 +344,7 @@
                 <span class="team-card__role-text">Руководителю</span>
               </div>
               <h3 class="team-card__title">Контролируйте командировки и экономьте бюджет компании</h3>
-              <p class="team-card__desc">Устанавливайте лимиты, утверждайте заявки и отслеживайте расходы в реальном времени.</p>
+              <p class="team-card__desc">Детализированная аналитика по расходам и контроль отклонений. При превышении установленных лимитов бронирование возможно только после согласования.</p>
             </div>
             <img src="img/team/person-2.svg" alt="" class="team-card__person" loading="lazy">
           </article>
@@ -287,7 +355,7 @@
                 <span class="team-card__role-text">Бухгалтеру</span>
               </div>
               <h3 class="team-card__title">Учитывайте расходы по поездкам быстро и без ошибок</h3>
-              <p class="team-card__desc">Автоматическое формирование закрывающих документов и интеграция с 1С.</p>
+              <p class="team-card__desc">Закрывающие формируются автоматически, соответствуют требованиям законодательства и хранятся в одном месте. Интеграция с «1С» и ЭДО упрощает подтверждение расходов</p>
             </div>
             <img src="img/team/person-3.svg" alt="" class="team-card__person" loading="lazy">
           </article>
@@ -298,7 +366,7 @@
                 <span class="team-card__role-text">Кадровому специалисту и HR-менеджеру</span>
               </div>
               <h3 class="team-card__title">Держите все документы в порядке и обеспечьте комфорт сотрудников</h3>
-              <p class="team-card__desc">Тревел-политики, согласования и документооборот в одном месте.</p>
+              <p class="team-card__desc">Гибкие схемы согласования ускоряют работу, формирование приказов и служебных заданий происходит в два клика. Данные о командировках и бронированиях передаются в «1С» по бесшовной интеграции</p>
             </div>
             <img src="img/team/person-4.svg" alt="" class="team-card__person" loading="lazy">
           </article>
@@ -311,30 +379,34 @@
 
     <section class="integrations" id="integrations" aria-labelledby="integrations-title">
       <div class="integrations__inner">
-        <h2 class="integrations__title" id="integrations-title">Синхронизируйте сервис с системами <span class="text-red">автоматизации командировок</span></h2>
+        <h2 class="integrations__title" id="integrations-title">Синхронизируйте сервис <span class="text-red">автоматизации командировок</span> с другими IT-системами</h2>
         <div class="integrations__layout">
-          <div class="integrations__col">
-            <article class="integration-card">
-              <h3 class="integration-card__title">1С</h3>
-              <p class="integration-card__text">Синхронизация авансовых отчётов, загрузка данных о билетах и отелях в учётную систему.</p>
-              <img src="img/integrations/1c-ui.webp" alt="Интерфейс интеграции с 1С" class="integration-card__img" loading="lazy">
-            </article>
-            <article class="integration-card">
-              <h3 class="integration-card__title">ЭДО</h3>
-              <p class="integration-card__text">Электронный документооборот: акты, счета и закрывающие документы в цифровом виде.</p>
-            </article>
-          </div>
-          <div class="integrations__col">
-            <article class="integration-card">
-              <h3 class="integration-card__title">Открытый API</h3>
-              <p class="integration-card__text">Подключите Smartway к вашим внутренним системам через REST API и вебхуки.</p>
-            </article>
-            <article class="integration-card">
-              <h3 class="integration-card__title">Яндекс Go</h3>
-              <p class="integration-card__text">Интеграция с корпоративным такси для заказа поездок из одного окна.</p>
-              <img src="img/integrations/yandex-ui.webp" alt="Интерфейс интеграции с Яндекс Go" class="integration-card__img" loading="lazy">
-            </article>
-          </div>
+          <article class="integration-card integration-card--large integration-card--1c">
+            <img src="img/oneSAuto/1simg.png" alt="1С" class="integration-card__logo" width="56" height="28" decoding="async">
+            <p class="integration-card__text">Настройте бесшовную интеграцию с «1С:Бухгалтерией», «1С:ERP» и «1С:ЗУП» в 2 клика, без переноса данных вручную и ошибок</p>
+            <div class="integration-card__visual">
+              <img src="img/oneSAuto/1sintegration.png" alt="Настройка интеграции с 1С:Бухгалтерией" class="integration-card__img" width="680" height="360" loading="lazy" decoding="async">
+            </div>
+          </article>
+          <article class="integration-card integration-card--compact integration-card--edo">
+            <h3 class="integration-card__title">ЭДО</h3>
+            <p class="integration-card__text">Формируйте все акты, счета и закрывающие автоматически и получайте их с удобной для вас частотой</p>
+          </article>
+          <article class="integration-card integration-card--compact integration-card--api">
+            <h3 class="integration-card__title">Открытый API</h3>
+            <p class="integration-card__text">Подключайте Smartway ко внутренним корпоративным сервисам, чтобы сохранить единую систему учёта</p>
+          </article>
+          <article class="integration-card integration-card--large integration-card--yandex">
+            <div class="integration-card__yandex-row">
+              <div class="integration-card__yandex-copy">
+                <img src="img/taxiBlock/Group%202085656711.png" alt="Яндекс Go" class="integration-card__logo" width="160" height="40" decoding="async">
+                <p class="integration-card__text">Вызывайте такси как обычно и оплачивайте их с корпоративного счета в Smartway — расходы сразу отобразятся в системе</p>
+              </div>
+              <div class="integration-card__visual integration-card__visual--yandex">
+                <img src="img/taxiBlock/Group%202085656710.png" alt="Интерфейс Яндекс Go в Smartway" class="integration-card__img integration-card__img--yandex" width="680" height="360" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </article>
         </div>
         <div class="integrations__actions">
           <a href="#consult" class="btn btn--primary">Получить консультацию &rarr;</a>
@@ -347,28 +419,31 @@
         <div class="app-block__content">
           <h2 class="app-block__title" id="app-block-title">Все возможности сервиса <span class="text-accent">в мобильном приложении</span></h2>
           <ul class="app-block__list">
-            <li class="app-block__item">Бронирование билетов и отелей в один клик</li>
-            <li class="app-block__item">Согласование поездок и уведомления</li>
-            <li class="app-block__item">Доступ к закрывающим документам</li>
-            <li class="app-block__item">Интеграция с корпоративным такси</li>
+            <li class="app-block__item">Выбирайте и покупайте любые услуги для командировок: от билетов и отелей до дополнительных услуг</li>
+            <li class="app-block__item">Контролируйте поездки, создавайте отчёты, отслеживайте статусы заявок и согласовывайте их</li>
+            <li class="app-block__item">Получайте уведомления, общайтесь с Travel-поддержкой 24/7</li>
           </ul>
           <div class="app-block__stores">
             <a href="#" class="app-block__store" aria-label="Скачать в App Store">
-              <img src="img/app-store.svg" alt="" width="140" height="44">
+              <img src="img/osLogo/photo.svg.png" alt="Загрузить в App Store" class="app-block__store-badge" width="180" height="52" decoding="async">
             </a>
             <a href="#" class="app-block__store" aria-label="Скачать в Google Play">
-              <img src="img/google-play.svg" alt="" width="140" height="44">
+              <img src="img/osLogo/Container.png" alt="Загрузить в Google Play" class="app-block__store-badge" width="200" height="52" decoding="async">
             </a>
             <a href="#" class="app-block__store" aria-label="Скачать в RuStore">
-              <img src="img/rustore.svg" alt="" width="140" height="44">
+              <img src="img/osLogo/Container-1.png" alt="Загрузить в RuStore" class="app-block__store-badge" width="180" height="52" decoding="async">
             </a>
-            <a href="#" class="app-block__store" aria-label="Скачать в AppGallery">
-              <img src="img/appgallery.svg" alt="" width="140" height="44">
+            <a href="#" class="app-block__store" aria-label="Скачать в App Gallery">
+              <img src="img/osLogo/Container-2.png" alt="Загрузить в AppGallery" class="app-block__store-badge" width="200" height="52" decoding="async">
             </a>
           </div>
         </div>
         <div class="app-block__visual">
-          <img src="img/app-phone.webp" alt="Мобильное приложение Smartway" class="app-block__phone" width="400" height="800" loading="lazy">
+          <div class="app-block__visual-inner">
+            <img src="img/possibilityPhone/Container.png" alt="Мобильное приложение Smartway" class="app-block__phone" width="440" height="900" loading="lazy" decoding="async">
+            <img src="img/possibilityPhone/Container-1.png" alt="" class="app-block__float app-block__float--card" width="320" height="200" loading="lazy" decoding="async" aria-hidden="true">
+            <img src="img/possibilityPhone/Container-2.png" alt="" class="app-block__float app-block__float--menu" width="280" height="160" loading="lazy" decoding="async" aria-hidden="true">
+          </div>
         </div>
       </div>
     </section>
@@ -378,37 +453,37 @@
         <div class="mice__header">
           <h2 class="mice__title" id="mice-title">Планируйте деловые поездки и мероприятия в одном месте</h2>
           <div class="mice__intro">
-            <p class="mice__text">MICE — комплексное решение для организации корпоративных событий: конференции, тимбилдинги, incentive-поездки.</p>
+            <p class="mice__text">Организуем корпоративы, конференции, тимбилдинг и другие форматы в России и за границей</p>
             <div class="mice__actions">
-              <a href="#consult" class="btn btn--primary">Получить консультацию</a>
-              <a href="#mice-details" class="mice__link">Подробнее о MICE в Smartway &rarr;</a>
+              <a href="#consult" class="btn btn--primary mice__btn">Получить консультацию</a>
+              <a href="#mice-details" class="mice__link">Подробнее о MICE в Smartway <span class="mice__link-arrow" aria-hidden="true">→</span></a>
             </div>
           </div>
         </div>
         <div class="mice__grid">
           <article class="mice__card">
-            <div class="mice__card-icon">
-              <img src="img/icon-handshake.svg" alt="" width="24" height="24">
+            <div class="mice__card-icon" aria-hidden="true">
+              <img src="img/icon-handshake.svg" alt="" width="22" height="22">
             </div>
-            <h3 class="mice__card-title">События и конференции</h3>
-            <p class="mice__card-text">Организация деловых мероприятий под ключ</p>
+            <h3 class="mice__card-title">Событие от и до</h3>
+            <p class="mice__card-text">Отвечаем за каждый этап: от концепции до закрывающих</p>
           </article>
           <article class="mice__card">
-            <div class="mice__card-icon">
-              <img src="img/icon-briefcase.svg" alt="" width="24" height="24">
+            <div class="mice__card-icon" aria-hidden="true">
+              <img src="img/icon-briefcase.svg" alt="" width="22" height="22">
             </div>
-            <h3 class="mice__card-title">Бизнес-поездки</h3>
-            <p class="mice__card-text">Бронирование и логистика для групп</p>
+            <h3 class="mice__card-title">Помогаем расти бизнесу</h3>
+            <p class="mice__card-text">Повышаем вовлечённость команды и лояльность партнеров</p>
           </article>
           <article class="mice__card mice__card--photo">
-            <img src="img/mice-photo.png" alt="Участники мероприятия" class="mice__card-img" loading="lazy">
+            <img src="img/mice-photo.png" alt="Участники корпоративного мероприятия" class="mice__card-img" width="400" height="480" loading="lazy" decoding="async">
           </article>
           <article class="mice__card">
-            <div class="mice__card-icon">
-              <img src="img/icon-star.svg" alt="" width="24" height="24">
+            <div class="mice__card-icon" aria-hidden="true">
+              <img src="img/icon-star.svg" alt="" width="22" height="22">
             </div>
-            <h3 class="mice__card-title">Incentive-программы</h3>
-            <p class="mice__card-text">Мотивационные поездки для сотрудников</p>
+            <h3 class="mice__card-title">800+ событий в год</h3>
+            <p class="mice__card-text">Организуем по 2 мероприятия ежедневно для разных клиентов</p>
           </article>
         </div>
       </div>

@@ -8,37 +8,68 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/komandirovka.css">
+  <link rel="stylesheet" href="css/site-header.css">
   <link rel="stylesheet" href="css/helpic.css">
 </head>
 <body class="komand-page komand-page--no-sidebar">
   <div class="komand-layout">
     <div class="komand-layout__segment komand-layout__segment--top">
-      <header class="komand-header">
-        <input type="checkbox" id="komand-nav" class="komand-nav-input" aria-hidden="true">
-        <div class="komand-header__bar">
-          <div class="komand-header__left">
-            <a href="https://smartway.today/" class="komand-header__logo" aria-label="Smartway — на главную">
-              <img src="img/header-logo.svg" alt="Smartway" width="120" height="20" />
+      <header class="header">
+        <input type="checkbox" id="site-nav" class="site-nav-input" aria-hidden="true">
+        <div class="header__inner">
+          <div class="header__left">
+            <a href="1index.html" aria-label="Smartway — на главную">
+              <img src="img/header-logo.svg" alt="Smartway" class="header__logo">
             </a>
-            <span class="komand-header__divider" aria-hidden="true"></span>
-            <span class="komand-header__descriptor">стандарт управления командировками</span>
+            <div class="header__divider"></div>
+            <span class="header__descriptor">Стандарт управления<br>командировками</span>
           </div>
-          <nav class="komand-header__nav" aria-label="Разделы сайта">
-            <a href="https://smartway.today/blog">Блог Smartway</a>
-            <a href="https://smartway.today/faq">FAQ по командировкам</a>
-            <a href="https://smartway.today/clients">Кейсы компаний</a>
+          <label for="site-nav" class="header__burger" aria-label="Открыть меню">
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+          </label>
+          <nav class="header__nav" aria-label="Основное меню">
+            <ul class="header__menu">
+              <li><a href="1index.html#audience" class="header__link">Для кого <span class="header__chevron"></span></a></li>
+              <li><a href="1index.html#capabilities" class="header__link">Возможности <span class="header__chevron"></span></a></li>
+              <li><a href="1index.html#useful" class="header__link">Полезное <span class="header__chevron"></span></a></li>
+              <li><a href="1index.html#mice" class="header__link">MICE</a></li>
+              <li><a href="1index.html#tariffs" class="header__link">Тарифы</a></li>
+              <li><a href="1index.html#clients" class="header__link">Клиенты</a></li>
+            </ul>
           </nav>
-          <label for="komand-nav" class="komand-header__burger" aria-label="Открыть меню"></label>
+          <div class="header__actions">
+            <a href="mailto:hello@smartway.today" class="header__icon-btn" aria-label="Написать">
+              <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail">
+            </a>
+            <a href="tel:+78007751428" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
+              <img src="img/phone.svg" alt="">
+            </a>
+            <a href="https://www.smartway.today" class="header__login">
+              <img src="img/header-icon-email.svg" alt=""> Войти
+            </a>
+            <a href="https://smartway.today/" class="header__btn">Протестировать</a>
+          </div>
         </div>
-        <label for="komand-nav" class="komand-header__backdrop" aria-hidden="true"></label>
-        <nav class="komand-header__drawer" aria-label="Меню">
-          <label for="komand-nav" class="komand-header__drawer-close" aria-label="Закрыть">×</label>
-          <ul>
-            <li><a href="https://smartway.today/blog">Блог Smartway</a></li>
-            <li><a href="https://smartway.today/faq">FAQ по командировкам</a></li>
-            <li><a href="https://smartway.today/clients">Кейсы компаний</a></li>
-          </ul>
-        </nav>
+        <label for="site-nav" class="header__backdrop" aria-hidden="true"></label>
+        <div class="header__drawer" aria-label="Меню">
+          <div class="header__drawer-inner">
+            <label for="site-nav" class="header__drawer-close" aria-label="Закрыть">×</label>
+            <ul class="header__drawer-menu">
+              <li><a href="1index.html#audience" class="header__drawer-link">Для кого</a></li>
+              <li><a href="1index.html#capabilities" class="header__drawer-link">Возможности</a></li>
+              <li><a href="1index.html#useful" class="header__drawer-link">Полезное</a></li>
+              <li><a href="1index.html#mice" class="header__drawer-link">MICE</a></li>
+              <li><a href="1index.html#tariffs" class="header__drawer-link">Тарифы</a></li>
+              <li><a href="1index.html#clients" class="header__drawer-link">Клиенты</a></li>
+            </ul>
+            <div class="header__drawer-cta">
+              <a href="https://www.smartway.today" class="header__drawer-login">Войти</a>
+              <a href="https://smartway.today/" class="header__btn header__drawer-btn">Протестировать</a>
+            </div>
+          </div>
+        </div>
       </header>
 
       <nav class="komand-breadcrumb" aria-label="Хлебные крошки">
@@ -405,9 +436,9 @@
     </div>
   </div>
   <script>
-    document.querySelectorAll('.komand-header__drawer a').forEach(function (a) {
+    document.querySelectorAll('.header__drawer a, .header__drawer-login, .header__drawer-btn').forEach(function (a) {
       a.addEventListener('click', function () {
-        var cb = document.getElementById('komand-nav');
+        var cb = document.getElementById('site-nav');
         if (cb) cb.checked = false;
       });
     });

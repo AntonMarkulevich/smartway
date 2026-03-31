@@ -7,55 +7,70 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site-header.css">
   <link rel="stylesheet" href="css/blog-vahty.css">
   <link rel="stylesheet" href="css/expert-terentjeva.css">
 </head>
 <body class="sw-blog-vahty">
   <div id="allrecords" class="t-records t-records__overflow-hidden">
-    <input type="checkbox" id="sw-nav" class="sw-nav-input" aria-hidden="true">
-
-    <header class="sw-header">
-      <div class="sw-header__bar">
-        <div class="sw-header__left">
-          <a href="#" class="sw-header__logo" aria-label="Smartway — на главную">
-            <img src="img/header-logo.svg" alt="Smartway" width="120" height="20" />
-          </a>
-          <span class="sw-header__divider" aria-hidden="true"></span>
-          <span class="sw-header__descriptor">стандарт управления командировками</span>
+    <header class="header">
+        <input type="checkbox" id="site-nav" class="site-nav-input" aria-hidden="true">
+        <div class="header__inner">
+          <div class="header__left">
+            <a href="1index.html" aria-label="Smartway — на главную">
+              <img src="img/header-logo.svg" alt="Smartway" class="header__logo">
+            </a>
+            <div class="header__divider"></div>
+            <span class="header__descriptor">Стандарт управления<br>командировками</span>
+          </div>
+          <label for="site-nav" class="header__burger" aria-label="Открыть меню">
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+          </label>
+          <nav class="header__nav" aria-label="Основное меню">
+            <ul class="header__menu">
+              <li><a href="1index.html#audience" class="header__link">Для кого <span class="header__chevron"></span></a></li>
+              <li><a href="1index.html#capabilities" class="header__link">Возможности <span class="header__chevron"></span></a></li>
+              <li><a href="1index.html#useful" class="header__link">Полезное <span class="header__chevron"></span></a></li>
+              <li><a href="1index.html#mice" class="header__link">MICE</a></li>
+              <li><a href="1index.html#tariffs" class="header__link">Тарифы</a></li>
+              <li><a href="1index.html#clients" class="header__link">Клиенты</a></li>
+            </ul>
+          </nav>
+          <div class="header__actions">
+            <a href="mailto:hello@smartway.today" class="header__icon-btn" aria-label="Написать">
+              <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail">
+            </a>
+            <a href="tel:+78007751428" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
+              <img src="img/phone.svg" alt="">
+            </a>
+            <a href="https://www.smartway.today" class="header__login">
+              <img src="img/header-icon-email.svg" alt=""> Войти
+            </a>
+            <a href="https://smartway.today/" class="header__btn">Протестировать</a>
+          </div>
         </div>
-        <nav class="sw-header__nav" aria-label="Разделы сайта">
-          <a href="#">Блог Smartway</a>
-          <a href="#">FAQ по командировкам</a>
-          <a href="#">Кейсы компаний</a>
-        </nav>
-        <div class="sw-header__actions">
-          <a class="sw-header__login-icon" href="#" aria-label="Войти">
-            <img src="https://static.tildacdn.com/tild3065-6436-4239-b266-636137653330/logout-box-r-line.svg" alt="" width="18" height="18" />
-          </a>
-          <a class="sw-header__login-text" href="#">Войти</a>
-          <label for="sw-nav" class="sw-header__burger" aria-label="Открыть меню"></label>
+        <label for="site-nav" class="header__backdrop" aria-hidden="true"></label>
+        <div class="header__drawer" aria-label="Меню">
+          <div class="header__drawer-inner">
+            <label for="site-nav" class="header__drawer-close" aria-label="Закрыть">×</label>
+            <ul class="header__drawer-menu">
+              <li><a href="1index.html#audience" class="header__drawer-link">Для кого</a></li>
+              <li><a href="1index.html#capabilities" class="header__drawer-link">Возможности</a></li>
+              <li><a href="1index.html#useful" class="header__drawer-link">Полезное</a></li>
+              <li><a href="1index.html#mice" class="header__drawer-link">MICE</a></li>
+              <li><a href="1index.html#tariffs" class="header__drawer-link">Тарифы</a></li>
+              <li><a href="1index.html#clients" class="header__drawer-link">Клиенты</a></li>
+            </ul>
+            <div class="header__drawer-cta">
+              <a href="https://www.smartway.today" class="header__drawer-login">Войти</a>
+              <a href="https://smartway.today/" class="header__btn header__drawer-btn">Протестировать</a>
+            </div>
+          </div>
         </div>
-      </div>
-    </header>
-
-    <label for="sw-nav" class="sw-header__backdrop" aria-hidden="true"></label>
-
-    <aside class="sw-drawer" aria-label="Мобильное меню">
-      <label for="sw-nav" class="sw-drawer__close" aria-label="Закрыть">×</label>
-      <div class="sw-drawer__inner">
-        <a href="#" class="sw-drawer__logo">
-          <img src="https://static.tildacdn.com/tild6630-3933-4832-b563-336265313930/noroot.png" alt="Smartway" width="160" height="40" loading="lazy" />
-        </a>
-        <ul class="sw-drawer__menu">
-          <li><a href="#">Блог Smartway</a></li>
-          <li><a href="#">FAQ по командировкам</a></li>
-          <li><a href="#">Кейсы компаний</a></li>
-        </ul>
-        <div class="sw-drawer__cta">
-          <a class="sw-btn sw-btn--primary" href="#">Вход</a>
-        </div>
-      </div>
-    </aside>
+      </header>
 
     <section class="ex-profile" aria-labelledby="ex-profile-title">
       <div class="ex-profile__text">
@@ -269,8 +284,8 @@
         var a = e.target.closest('a');
         if (a) {
           e.preventDefault();
-          if (a.closest('.sw-drawer')) {
-            var cb = document.getElementById('sw-nav');
+          if (a.closest('.header__drawer')) {
+            var cb = document.getElementById('site-nav');
             if (cb) cb.checked = false;
           }
         }
