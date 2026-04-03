@@ -1,0 +1,172 @@
+/* Страница «Правила использования ПЭП» — скачивание документов */
+body.download-docs-page {
+  background: #e0e2ea;
+  font-family: "Golos Text", system-ui, sans-serif;
+}
+
+body.download-docs-page .komand-layout {
+  display: block;
+  grid-template-columns: none;
+  grid-template-rows: none;
+  align-items: stretch;
+  min-height: unset;
+  max-height: none;
+}
+
+body.download-docs-page .komand-layout__segment--top,
+body.download-docs-page .komand-layout__segment--bottom {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-height: none;
+  grid-column: auto;
+  grid-row: auto;
+  margin: 0;
+  padding: 0;
+}
+
+body.download-docs-page .komand-layout__segment--top {
+  background: #fff;
+}
+
+body.download-docs-page .komand-layout__segment--bottom {
+  background: #e0e2ea;
+}
+
+body.download-docs-page .komand-main {
+  max-width: none;
+  margin: 0;
+  padding: 0 clamp(16px, 5vw, 80px) clamp(48px, 8vw, 80px);
+  box-sizing: border-box;
+}
+
+body.download-docs-page .komand-breadcrumb {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(20px, 4vw, 32px) clamp(16px, 5vw, 80px) 16px;
+  box-sizing: border-box;
+}
+
+body.download-docs-page .komand-breadcrumb a {
+  color: #3a3a3a;
+}
+
+.download-docs-page__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(28px, 6vw, 80px);
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: clamp(24px, 4vw, 40px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+}
+
+.download-docs {
+  color: #3a3a3a;
+}
+
+.download-docs__title {
+  margin: 0 0 clamp(32px, 5vw, 48px);
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 700;
+  line-height: 1.25;
+  color: #272727;
+}
+
+.download-docs__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(28px, 4vw, 40px) clamp(24px, 3vw, 40px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.download-docs__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  min-width: 0;
+}
+
+.download-docs__icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 44px;
+  color: #d44333;
+  margin-top: 2px;
+}
+
+.download-docs__icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.download-docs__body {
+  min-width: 0;
+}
+
+.download-docs__item-title {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.download-docs__item-title a {
+  color: #d44333;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(212, 67, 51, 0.45);
+}
+
+.download-docs__item-title a:hover {
+  opacity: 0.88;
+  border-bottom-color: #d44333;
+}
+
+.download-docs__meta {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #7a7a7a;
+}
+
+.download-docs__meta-link {
+  color: #7a7a7a;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.download-docs__meta-link:hover {
+  color: #5a5a5a;
+}
+
+.download-docs__meta-sep {
+  user-select: none;
+}
+
+.download-docs__meta-size {
+  color: #7a7a7a;
+}
+
+@media (max-width: 959px) {
+  .download-docs__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .download-docs__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .download-docs__item-title {
+    font-size: 17px;
+  }
+
+  .download-docs__meta {
+    font-size: 14px;
+  }
+}

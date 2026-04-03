@@ -36,9 +36,6 @@ body.komand-page {
   -webkit-font-smoothing: antialiased;
 }
 
-.komand-page a {
-  color: inherit;
-}
 
 /* ——— Сетка: на широком экране меню слева во всю высоту, контент справа ——— */
 .komand-layout {

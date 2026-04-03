@@ -1,0 +1,94 @@
+/* Текст оферты (верстка по макету Figma, без Tailwind) */
+
+.offer-legal {
+  font-family: 'Golos Text', sans-serif;
+  color: #202124;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 400;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.offer-legal__title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin: 0 0 12px;
+  color: #202124;
+}
+
+.offer-legal__meta {
+  margin: 0 0 28px;
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+.offer-legal__lead {
+  margin: 0 0 8px;
+}
+
+.offer-legal__h2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin: 40px 0 16px;
+  color: #202124;
+}
+
+.offer-legal__lead + .offer-legal__h2 {
+  margin-top: 36px;
+}
+
+.offer-legal__link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.offer-legal__link:hover {
+  color: #d44333;
+}
+
+.offer-legal__emphasis {
+  font-weight: 600;
+}
+
+.offer-legal .font-bold,
+.offer-legal .font-\[\'Golos_Text\:Bold\'\,sans-serif\] {
+  font-weight: 700;
+}
+
+/* Сброс фиксированных высот/ширин из экспорта макета */
+.offer-legal > div,
+.offer-legal > p {
+  height: auto !important;
+  min-height: 0 !important;
+  max-width: 100%;
+}
+
+.offer-legal ul.list-disc {
+  margin: 8px 0 16px;
+  padding-left: 1.25em;
+  list-style-type: disc;
+}
+
+.offer-legal ul.list-disc li {
+  margin-bottom: 6px;
+}
+
+.offer-legal p {
+  margin: 0 0 1em;
+}
+
+.offer-legal__lead p:last-child {
+  margin-bottom: 0;
+}
+
+.offer-legal .whitespace-pre-wrap {
+  white-space: normal;
+}
