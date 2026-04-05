@@ -199,6 +199,39 @@ body.faq-aeroport-page .faqzp-telegram {
   margin-top: 0.35em;
 }
 
+.faqap-block__body ol {
+  margin: 0;
+  padding-left: 1.5em;
+  list-style-type: decimal;
+}
+
+.faqap-block__body ol li + li {
+  margin-top: 0.35em;
+}
+
+.faqap-block__body h3 {
+  margin: 1.25em 0 0.75em;
+  font-size: clamp(20px, 2.4vw, 24px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #3a3a3a;
+}
+
+.faqap-block__body h3:first-child {
+  margin-top: 0;
+}
+
+.faqap-block__body ul ul {
+  margin-top: 0.35em;
+}
+
+.faqap-author {
+  margin: 0;
+  padding: 0 clamp(20px, 5vw, 80px);
+  box-sizing: border-box;
+}
+
 .faqap-feature {
   display: grid;
   grid-template-columns: minmax(260px, min(100%, 543px)) 1fr;

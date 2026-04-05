@@ -1,0 +1,271 @@
+/* Страница эксперта (Богачёва) — на базе expert-terentjeva */
+
+/* ——— Профиль: две карточки, серая слева + фото справа, radius ~58px ——— */
+.ex-profile {
+  margin: 0 auto;
+  padding: clamp(40px, 6vw, 80px) clamp(20px, 5vw, 80px) clamp(48px, 7vw, 96px);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 54px);
+  align-items: stretch;
+  background: #fff;
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+@media (max-width: 900px) {
+  .ex-profile {
+    grid-template-columns: 1fr;
+    gap: clamp(20px, 4vw, 32px);
+    padding-top: 32px;
+    padding-bottom: 48px;
+  }
+}
+
+.ex-profile__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  min-width: 0;
+  min-height: 0;
+}
+
+.ex-profile__box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #e9ebf0;
+  padding: clamp(40px, 10vw, 125px) clamp(28px, 8vw, 115px)
+    clamp(40px, 8vw, 100px);
+  border-radius: clamp(36px, 8vw, 58px);
+}
+
+.ex-profile__title {
+  margin: 0 0 clamp(12px, 2vw, 24px);
+  font-size: clamp(36px, 7.5vw, 72px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.014em;
+  color: #3a3a3a;
+}
+
+.ex-profile__role {
+  margin: 0 0 clamp(20px, 3vw, 36px);
+  font-size: clamp(17px, 2vw, 20px);
+  font-weight: 400;
+  line-height: 1.55;
+  color: #3a3a3a;
+}
+
+.ex-profile__bio {
+  margin: 0;
+  font-size: clamp(16px, 1.9vw, 20px);
+  line-height: 1.5;
+  font-weight: 400;
+  color: #3a3a3a;
+}
+
+@media (min-width: 960px) {
+  .ex-profile__bio {
+    line-height: 1.9;
+  }
+}
+
+.ex-profile__bio p {
+  margin: 0 0 1em;
+}
+
+.ex-profile__bio p:last-child {
+  margin-bottom: 0;
+}
+
+.ex-profile__photo {
+  border-radius: clamp(36px, 8vw, 58px);
+  min-height: clamp(320px, 52vw, 640px);
+  height: 100%;
+  background-color: #d93b2b;
+  background-size: cover;
+  background-position: center top;
+  overflow: hidden;
+}
+
+/* Фото: масштабируется вместе с колонкой, без смещения (object-fit + заполнение ячейки грида) */
+.ex-profile__photo--img {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background-color: #e9ebf0;
+  min-height: clamp(300px, 50vw, 640px);
+  min-width: 0;
+}
+
+.ex-profile__photo-img {
+  flex: 1 1 auto;
+  width: 100%;
+  min-width: 0;
+  min-height: clamp(300px, 50vw, 640px);
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: inherit;
+}
+
+@media (max-width: 900px) {
+  .ex-profile__box {
+    padding: clamp(28px, 6vw, 44px) clamp(24px, 5vw, 32px);
+  }
+
+  .ex-profile__photo {
+    min-height: clamp(300px, 65vw, 440px);
+    order: -1;
+  }
+
+  .ex-profile__photo--img {
+    min-height: clamp(300px, 65vw, 440px);
+  }
+
+  .ex-profile__photo-img {
+    min-height: clamp(300px, 65vw, 440px);
+  }
+}
+
+
+/* ——— Блок «Публикации» (Figma 1218:31527): заголовок 72px + карточки ——— */
+.ex-pubs-wrap {
+  margin: 0 auto;
+  padding: clamp(48px, 6vw, 80px) clamp(20px, 5vw, 80px)
+    clamp(64px, 10vw, 120px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background: #fff;
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.ex-pubs-head {
+  margin: 0;
+  padding: 0;
+}
+
+.ex-pubs-head__title {
+  margin: 0;
+  padding: 0;
+  min-height: 0;
+  font-size: clamp(36px, 7.5vw, 72px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.014em;
+  color: #3a3a3a;
+}
+
+/* ——— Список публикаций: сетка ~45% превью / текст, шаг 40px ——— */
+.ex-pubs {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.ex-pub {
+  display: grid;
+  grid-template-columns: minmax(0, 45.28%) minmax(0, 1fr);
+  column-gap: clamp(20px, 4.49vw, 64px);
+  align-items: start;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+
+.ex-pub:hover {
+  opacity: 0.88;
+}
+
+.ex-pub__img-wrap {
+  width: 100%;
+  max-width: none;
+}
+
+.ex-pub__img {
+  display: block;
+  width: 100%;
+  height: clamp(260px, 42vw, 398px);
+  border-radius: clamp(36px, 8vw, 58px);
+  background-size: cover;
+  background-position: center;
+  background-color: #e0e2ea;
+}
+
+/* Плейсхолдер без картинки: однотонный фон и пропорция ~3:2 как на макете */
+.ex-pub__img--placeholder {
+  background-image: none;
+  background-color: #e0e2e9;
+  height: auto;
+  aspect-ratio: 3 / 2;
+}
+
+.ex-pub__body {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 0;
+  align-self: start;
+}
+
+.ex-pub__separator {
+  display: none;
+}
+
+.ex-pub__title {
+  margin: 0;
+  font-size: clamp(22px, 3.5vw, 32px);
+  font-weight: 600;
+  line-height: 1.375;
+  letter-spacing: -0.03125em;
+  color: #3a3a3a;
+}
+
+.ex-pub__descr {
+  margin: clamp(16px, 2.5vw, 24px) 0 0;
+  max-width: 79.11%;
+  font-size: clamp(16px, 1.9vw, 20px);
+  font-weight: 400;
+  line-height: 1.9;
+  color: #6b6d72;
+}
+
+@media (max-width: 900px) {
+  .ex-pub {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: clamp(16px, 3vw, 24px);
+  }
+
+  .ex-pub__body {
+    padding-top: 0;
+  }
+
+  .ex-pub__descr {
+    max-width: 100%;
+  }
+
+  .ex-pub__img:not(.ex-pub__img--placeholder) {
+    height: auto;
+    min-height: 220px;
+    aspect-ratio: 16 / 10;
+  }
+
+  .ex-pub__img--placeholder {
+    aspect-ratio: 3 / 2;
+    min-height: 0;
+  }
+}

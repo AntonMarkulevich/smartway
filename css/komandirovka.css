@@ -305,7 +305,8 @@ body.komand-page {
   color: var(--komand-muted);
 }
 
-.komand-breadcrumb__list a {
+.komand-breadcrumb__list a,
+.komand-breadcrumb__list > li > span:not(.komand-breadcrumb__current) {
   color: var(--komand-muted);
   text-decoration: none;
 }
@@ -897,13 +898,15 @@ details[open] .komand-toc__hint::before {
   line-height: 1.85;
 }
 
-.komand-toc__body a {
+.komand-toc__body a,
+.komand-toc__body span {
   color: var(--komand-accent);
   text-decoration: none;
   border-bottom: 1px solid var(--komand-accent);
 }
 
-.komand-toc__body a:hover {
+.komand-toc__body a:hover,
+.komand-toc__body span:hover {
   opacity: 0.8;
 }
 

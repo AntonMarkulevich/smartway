@@ -1,0 +1,124 @@
+/* Главная блога (аналог smartway.today/blog) — хлебные крошки и лента статей */
+
+.blog-main-page .sw-hero {
+  padding-bottom: 16px;
+}
+
+.blog-main-page .sw-hero__eyebrow {
+  margin: 0 0 8px;
+  font-size: clamp(14px, 1.8vw, 17px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--sw-muted);
+}
+
+.blog-main-page .sw-hero__title {
+  padding-top: 0;
+}
+
+.blog-breadcrumb {
+  max-width: var(--sw-container);
+  margin: 0 auto;
+  padding: 0 20px 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--sw-text);
+}
+
+.blog-breadcrumb a {
+  color: var(--sw-text);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+.blog-breadcrumb a:hover {
+  color: var(--sw-accent);
+  opacity: 1;
+}
+
+.blog-breadcrumb__sep {
+  color: var(--sw-muted);
+  user-select: none;
+}
+
+.blog-breadcrumb__current {
+  font-weight: 600;
+  color: var(--sw-text);
+}
+
+/* Лента статей */
+.blog-feed {
+  max-width: var(--sw-container);
+  margin: 0 auto;
+  padding: 0 20px 56px;
+  box-sizing: border-box;
+}
+
+.blog-feed__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(58, 58, 58, 0.12);
+}
+
+.blog-feed__item {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid rgba(58, 58, 58, 0.12);
+}
+
+.blog-feed-card {
+  display: block;
+  padding: clamp(22px, 3vw, 28px) 0;
+}
+
+.blog-feed__date {
+  display: block;
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--sw-muted);
+  letter-spacing: -0.01em;
+}
+
+.blog-feed__heading {
+  margin: 0 0 10px;
+  font-size: clamp(18px, 2.4vw, 22px);
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: -0.03em;
+}
+
+.blog-feed__link {
+  color: var(--sw-text);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.blog-feed__link:hover {
+  color: var(--sw-accent);
+}
+
+.blog-feed__excerpt {
+  margin: 0;
+  font-size: clamp(15px, 1.7vw, 17px);
+  font-weight: 400;
+  line-height: 1.55;
+  color: #5c5c5c;
+  max-width: 62em;
+}
+
+.blog-feed__tagline {
+  max-width: var(--sw-container);
+  margin: 32px auto 0;
+  padding: 0 20px 48px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--sw-muted);
+}

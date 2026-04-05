@@ -77,7 +77,8 @@
   margin: 0 0 4px;
 }
 
-.footer__contact a {
+.footer__contact a,
+.footer__contact span {
   color: #A3A3A3;
 }
 
@@ -250,7 +251,8 @@
   margin-bottom: 8px;
 }
 
-.footer__list a {
+.footer__list a,
+.footer__list span {
   font-family: 'Golos Text', sans-serif;
   font-size: 14px;
   color: #A3A3A3;
@@ -284,7 +286,8 @@
   box-sizing: border-box;
 }
 
-a.footer__btn {
+a.footer__btn,
+span.footer__btn {
   text-decoration: none;
   color: #ffffff;
 }

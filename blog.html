@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Блог о командировках, вахтах, об их оформлении и учёте — Smartway</title>
+  <meta name="description" content="Блог компании «Смартвэй»: статьи о командировках, вахтах, бухучёте и деловом туризме.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site-header.css">
+  <link rel="stylesheet" href="css/blog-vahty.css">
+  <link rel="stylesheet" href="css/footer-unified.css">
+  <link rel="stylesheet" href="css/experts.css">
+</head>
+<body class="sw-blog-vahty experts-page blog-index-page">
+  <div id="allrecords" class="t-records t-records__overflow-hidden">
+    <header class="header">
+      <input type="checkbox" id="site-nav" class="site-nav-input" aria-hidden="true">
+      <div class="header__inner">
+        <div class="header__left">
+          <a href="1index.html" aria-label="Smartway — на главную">
+            <img src="img/header-logo.svg" alt="Smartway" class="header__logo">
+          </a>
+          <div class="header__divider"></div>
+          <span class="header__descriptor">Стандарт управления<br>командировками</span>
+        </div>
+        <label for="site-nav" class="header__burger" aria-label="Открыть меню">
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+        </label>
+        <nav class="header__nav" aria-label="Основное меню">
+          <ul class="header__menu">
+            <li><a href="1index.html#audience" class="header__link">Для кого <span class="header__chevron"></span></a></li>
+            <li><a href="1index.html#capabilities" class="header__link">Возможности <span class="header__chevron"></span></a></li>
+            <li><a href="1index.html#useful" class="header__link">Полезное <span class="header__chevron"></span></a></li>
+            <li><a href="1index.html#mice" class="header__link">MICE</a></li>
+            <li><a href="1index.html#tariffs" class="header__link">Тарифы</a></li>
+            <li><a href="1index.html#clients" class="header__link">Клиенты</a></li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <a href="mailto:hello@smartway.today" class="header__icon-btn" aria-label="Написать">
+            <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail">
+          </a>
+          <a href="tel:+78007751428" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
+            <img src="img/phone.svg" alt="">
+          </a>
+          <a href="https://www.smartway.today" class="header__login">
+            <img src="img/header-icon-email.svg" alt=""> Войти
+          </a>
+          <a href="https://smartway.today/" class="header__btn">Протестировать</a>
+        </div>
+      </div>
+      <label for="site-nav" class="header__backdrop" aria-hidden="true"></label>
+      <div class="header__drawer" aria-label="Меню">
+        <div class="header__drawer-inner">
+          <label for="site-nav" class="header__drawer-close" aria-label="Закрыть">×</label>
+          <ul class="header__drawer-menu">
+            <li><a href="1index.html#audience" class="header__drawer-link">Для кого</a></li>
+            <li><a href="1index.html#capabilities" class="header__drawer-link">Возможности</a></li>
+            <li><a href="1index.html#useful" class="header__drawer-link">Полезное</a></li>
+            <li><a href="1index.html#mice" class="header__drawer-link">MICE</a></li>
+            <li><a href="1index.html#tariffs" class="header__drawer-link">Тарифы</a></li>
+            <li><a href="1index.html#clients" class="header__drawer-link">Клиенты</a></li>
+          </ul>
+          <div class="header__drawer-cta">
+            <a href="https://www.smartway.today" class="header__drawer-login">Войти</a>
+            <a href="https://smartway.today/" class="header__btn header__drawer-btn">Протестировать</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="experts-main">
+      <section class="experts-hero" aria-labelledby="blog-main-title">
+        <div class="experts-hero__head">
+          <p class="experts-hero__eyebrow blog-index-page__eyebrow">Доступно о командировках</p>
+          <h1 id="blog-main-title" class="experts-hero__title">Блог компании «Смартвэй»</h1>
+          <p class="experts-hero__subtitle">
+            Наши эксперты рассказывают о командировках и деловом туризме
+          </p>
+        </div>
+
+        <nav class="experts-hero__crumbs" aria-label="Хлебные крошки">
+          <a class="experts-hero__crumb-link" href="1index.html">Автоматизация командировок</a>
+          <span class="experts-hero__crumb-sep" aria-hidden="true">→</span>
+          <span class="experts-hero__crumb-current">Блог</span>
+        </nav>
+
+        <form class="experts-hero__search" action="https://smartway.today/blog" method="get" role="search" aria-label="Поиск по блогу">
+          <div class="experts-hero__field">
+            <svg class="experts-hero__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 88" aria-hidden="true">
+              <path d="M85 31.1c-.5-8.7-4.4-16.6-10.9-22.3C67.6 3 59.3 0 50.6.6c-8.7.5-16.7 4.4-22.5 11-11.2 12.7-10.7 31.7.6 43.9l-5.3 6.1-2.5-2.2-17.8 20 9 8.1 17.8-20.2-2.1-1.8 5.3-6.1c5.8 4.2 12.6 6.3 19.3 6.3 9 0 18-3.7 24.4-10.9 5.9-6.6 8.8-15 8.2-23.7zM72.4 50.8c-9.7 10.9-26.5 11.9-37.6 2.3-10.9-9.8-11.9-26.6-2.3-37.6 4.7-5.4 11.3-8.5 18.4-8.9h1.6c6.5 0 12.7 2.4 17.6 6.8 5.3 4.7 8.5 11.1 8.9 18.2.5 7-1.9 13.8-6.6 19.2z" />
+            </svg>
+            <input
+              type="search"
+              name="q"
+              class="experts-hero__input"
+              placeholder="начните вводить запрос"
+              autocomplete="off"
+              enterkeyhint="search"
+            />
+          </div>
+          <button type="submit" class="experts-hero__submit">Искать</button>
+        </form>
+      </section>
+
+      <section class="experts-board" aria-label="Статьи блога">
+        <ul class="experts-grid">
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/trudovye-konflikty" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">20-03-2026</span>
+              <span class="experts-card__text">Трудовые конфликты и их разрешение: причины, виды и методы урегулирования</span>
+              <span class="experts-card__excerpt">Разбираем, что такое трудовой конфликт, чем он отличается от спора, какие бывают виды и причины. Практические методы разрешения и профилактики для HR и руководителей.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/komandirovki-gossluzhashchih" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">03-03-2026</span>
+              <span class="experts-card__text">Командировки госслужащих в 2026 году</span>
+              <span class="experts-card__excerpt">Всё о командировках государственных служащих: порядок оформления, суточные, проживание и оплата.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/komandirovka-zhenshchiny" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">09-02-2026</span>
+              <span class="experts-card__text">Командировка женщины: какие ограничения и особенности</span>
+              <span class="experts-card__excerpt">Командировка женщины — стандартная кадровая и бухгалтерская задача, но с рядом юридических ограничений. Ошибки здесь приводят не только к конфликтам с сотрудницей, но и к штрафам при проверках.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/korporativnye-programmy-lojalnosti" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">06-02-2026</span>
+              <span class="experts-card__text">Как экономить на авиабилетах с помощью корпоративных программ лояльности</span>
+              <span class="experts-card__excerpt">Один из самых эффективных способов тратить меньше, не меняя привычные маршруты и авиакомпании — корпоративные программы лояльности. Они позволяют получать бонусы, скидки и привилегии за перелеты.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/komandirovka-samoletom" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">05-02-2026</span>
+              <span class="experts-card__text">Командировка самолетом: правила, расходы, билеты и отчетность без ошибок</span>
+              <span class="experts-card__excerpt">Разбираем все ключевые этапы командировки самолетом: от выбора билета до закрывающих документов.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/mesto-komandirovki" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">19-01-2026</span>
+              <span class="experts-card__text">Место командировки: как определить и правильно оформить документы</span>
+              <span class="experts-card__excerpt">Что считается местом командировки, как его указывать в приказах и документах, как оформлять поездки в несколько городов и командировки дистанционных сотрудников.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/nadbavka-za-vahtovyj-metod" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">28-11-2025</span>
+              <span class="experts-card__text">Надбавка за вахтовый метод работы: основные принципы и примеры расчета</span>
+              <span class="experts-card__excerpt">Вахтовая надбавка компенсирует особые условия работы и начисляется сверх оклада. В статье разбираем, как установить размер вахтовой надбавки и правильно ее выплатить.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/komandirovka-v-kitaj" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">11-11-2025</span>
+              <span class="experts-card__text">Командировка в Китай в 2026 году</span>
+              <span class="experts-card__excerpt">Разбираемся, что нужно знать и какие документы подготовить для командировки в Китай в 2026 году.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/sluzhebnaya-komandirovka-sotrudnika-mvd" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">12-11-2025</span>
+              <span class="experts-card__text">Служебная командировка сотрудника МВД: как правильно оформить</span>
+              <span class="experts-card__excerpt">Рекомендации юриста, на что обратить внимание при оформлении командировки сотрудника МВД, сотрудников ОВД, полиции, следственных органов.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/komandirovochnoe-udostoverenie" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">10-11-2025</span>
+              <span class="experts-card__text">Командировочное удостоверение: оформление и применение в 2026 году</span>
+              <span class="experts-card__excerpt">С 2015 года командировочное удостоверение не входит в список обязательных отчетных документов. Однако некоторые компании продолжают его оформлять и в 2026 году. Рассказываем, зачем нужно это удостоверение, а также как его правильно составлять, чтобы избежать ошибок.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/komandirovki-udalyonnyh-sotrudnikov" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">05-11-2025</span>
+              <span class="experts-card__text">Командировки удаленных сотрудников</span>
+              <span class="experts-card__excerpt">Как оформить командировку удаленного сотрудника в офис работодателя по новым правилам 2025 года. Разбираем, когда поездка считается командировкой, как правильно оформить документы и компенсировать расходы.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/komandirovka-inostrannogo-sotrudnika" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">28-10-2025</span>
+              <span class="experts-card__text">Командировка иностранного работника в другой регион РФКак оформить командировку иностранному гражданину в другой регио…</span>
+              <span class="experts-card__excerpt">н РФ? Узнайте о правилах, ограничениях и необходимых документах для командировки иностранных граждан с патентом, РВП и ВКС, чтобы соблюсти миграционное законодательство.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/vahtovyj-metod-v-1s-zup" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">15-10-2025</span>
+              <span class="experts-card__text">Вахтовый метод в «1С:ЗУП»: пошаговая настройка с подробными инструкциями</span>
+              <span class="experts-card__excerpt">Подробное руководство по настройке вахтового метода работы в «1С:ЗУП». Узнайте, как правильно учесть рабочее время, рассчитать зарплату, чтобы избежать штрафов и типичных ошибок. Практические советы для бухгалтеров по настройке вахтового метода работы в «1С:ЗУП».</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/bleisure-turizm" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">13-10-2025</span>
+              <span class="experts-card__text">Bleisure в России: как превратить командировку в увлекательное путешествие</span>
+              <span class="experts-card__excerpt">Узнайте, что такое bleisure-туризм в России, какие города идеально подходят для совмещения работы и отдыха. Откройте для себя новые возможности баланса между карьерой и личной жизнью!</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/kak-oformit-bolnichnyj-v-komandirovke-za-granitsej" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">06-10-2025</span>
+              <span class="experts-card__text">Как оформить больничный после болезни за границей: пошаговая инструкцияО нотариальном переводе, легализации иностранны…</span>
+              <span class="experts-card__excerpt">х медицинских документов и обязанностях работодателя по оплате больничного в заграничной командировке.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/vidy-komandirovok" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">17-09-2025</span>
+              <span class="experts-card__text">Какие виды командировок бывают: классификация, особенности, гарантии</span>
+              <span class="experts-card__excerpt">Рассказываем, какие виды командировок бывают и в чем особенности некоторых форматов.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/sverhurochnaya-rabota" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">10-09-2025</span>
+              <span class="experts-card__text">Сверхурочные в командировке: оплата времени сверх норм Как оплачивать сверхурочные в командировке, какие суточные при…</span>
+              <span class="experts-card__excerpt">работе в командировках сверх нормы. Как отразить сверхурочные в командировке в 1С ЗУП 3.1.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/vidy-delovyh-meropriyatij" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">05-09-2025</span>
+              <span class="experts-card__text">Виды деловых мероприятий: форматы, примеры и идеи организации корпоративных событий</span>
+              <span class="experts-card__excerpt">Основные виды деловых мероприятий для бизнеса: форматы онлайн и офлайн, мероприятия для тимбилдинга, мотивационные мероприятия для сотрудников. Примеры деловых мероприятий и рекомендации по организации.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/igry-dlya-timbildinga" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">03-09-2025</span>
+              <span class="experts-card__text">Игры для тимбилдинга: конкурсы, задания и вопросы для сотрудников65 увлекательных игр для тимбилдинга, которые подойду…</span>
+              <span class="experts-card__excerpt">т для различных условий — на природе, в офисе, в помещении, в том числе online-игры и спортивные активности.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/komandirovka-moskva-sankt-peterburg" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">29-08-2025</span>
+              <span class="experts-card__text">Как выгодно и комфортно доехать из Москвы в Санкт-Петербург и обратно</span>
+              <span class="experts-card__excerpt">Обеспечьте выгодную и комфортную поездку в командировку из столицы в Санкт-Петербург или обратно.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/prikaz-o-vahtovom-metode-rabot" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">27-08-2025</span>
+              <span class="experts-card__text">Приказ об организации работ вахтовым методом: образец</span>
+              <span class="experts-card__excerpt">Перед переходом на вахтовый метод руководитель компании обязан издать приказ. В статье разберем, как правильно его оформить и какие пункты обязательно включить.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/komandirovka-sovmestitelya" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">22-08-2025</span>
+              <span class="experts-card__text">Совместитель направлен в командировку: как оформить в 2026 году его поездку</span>
+              <span class="experts-card__excerpt">Можно ли отправить в командировку внешнего совместителя, как оформить и правильно оплатить деловую поездку по новым нормам.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/razezdnoj-harakter-raboty-i-komandirovka-otlichiya" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">19-08-2025</span>
+              <span class="experts-card__text">Разъездной характер работы и командировка: в чём отличия</span>
+              <span class="experts-card__excerpt">Многие работодатели путают разъездной характер работы с командировками, и это часто приводит к ошибкам в оформлении документов и расчете компенсаций. Разбираемся, в чем разница и когда сотруднику положены командировочные выплаты.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/raschyot-srednego-zarabotka-v-komandirovke" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">13-08-2025</span>
+              <span class="experts-card__text">Расчет дней среднего заработка для командировки в 2026 году</span>
+              <span class="experts-card__excerpt">Как рассчитывается средний заработок для командировки в 2026 году – расчет дней среднего заработка в ЗУП. Подробно с примерами о том, как рассчитать командировку по среднему заработку.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/kak-bronirovat-otel-dlya-komandirovki-za-granicej" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">12-08-2025</span>
+              <span class="experts-card__text">Как бронировать отель для командировки за границейВ статье разберём, как бронировать отель за границей с учётом требов…</span>
+              <span class="experts-card__excerpt">аний российского законодательства и в условиях ограничений, какие риски учитывать при оплате.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/oplata-komandirovki" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">07-08-2025</span>
+              <span class="experts-card__text">Оплата командировки в 2026 году: изменения в законах, нюансы расчётов</span>
+              <span class="experts-card__excerpt">Как рассчитывается командировка, какой средний заработок для командировки в 2026 году. Подробно о том, как оплатить командировку.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/prodlenie-komandirovki-v-1c-zup" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">31-07-2025</span>
+              <span class="experts-card__text">Продление командировки сотруднику в 1С 8.3 ЗУПКак продлить командировку сотруднику в 1С ЗУП 8.3, как оформить продлени…</span>
+              <span class="experts-card__excerpt">е командировки - подробная инструкция и образец приказа о продлении командировки.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/komandirovka-v-oblasti" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">31-07-2025</span>
+              <span class="experts-card__text">Командировка в области: особенности и рекомендации экспертов</span>
+              <span class="experts-card__excerpt">Рекомендации и советы, какие нюансы нужно учитывать при организации командировки в области.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/bolnichnyj-na-vahte" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">30-07-2025</span>
+              <span class="experts-card__text">Как оплачивается больничный на вахте вахтовикам</span>
+              <span class="experts-card__excerpt">Как оплачивать больничный на вахте: нюансы оформления и оплаты больничных при работе вахтовым методом.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/komandirovka-v-podrazdelenie-organizatsii" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">29-07-2025</span>
+              <span class="experts-card__text">Командировка в филиал организации: как правильно оформить</span>
+              <span class="experts-card__excerpt">Какие особенности есть у командировок в другие подразделения компании и на что обратить внимание при оформлении.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/komandirovka-v-1-s-buhgalteriya" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">23-07-2025</span>
+              <span class="experts-card__text">Командировка в 1C: Бухгалтерия пошагово - как в 8.3 ЗУП оформить командировку Пошаговая инструкция по оформлению коман…</span>
+              <span class="experts-card__excerpt">дировки в 1С Бухгалтерия, 8.3 ЗУП. Как оформить авансовый отчет и приказ на командировку в 1С 8.3 Бухгалтерия.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/prikaz-o-provedenii-korporativnogo-meropriyatiya" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">23-07-2025</span>
+              <span class="experts-card__text">Приказ о проведении корпоративного мероприятия, образец 2026 года</span>
+              <span class="experts-card__excerpt">Как составить приказ о проведении корпоративного мероприятия, какие нюансы важно учесть. Даем образец приказа о корпоративе 2025 года</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/polozhenie-o-vahtovom-metode" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">18-07-2025</span>
+              <span class="experts-card__text">Как составить Положение о вахтовом методе работы, образец 2026 года</span>
+              <span class="experts-card__excerpt">Как правильно составить Положение о вахтовом методе организации работ, какие разделы должны в нем быть. Образец Положения о вахтовом методе 2026 года, рекомендации по составлению.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="blog-komandirovka-v-belarus-sutochnye.html">
+              <span class="experts-card__date">10-07-2025</span>
+              <span class="experts-card__text">Командировка в Беларусь: как считать суточные в 2026 году — нормы, примеры расчетов</span>
+              <span class="experts-card__excerpt">Является ли командировка в Беларусь загранкомандировкой, как правильно рассчитать и оплатить суточные в 2026 году. Актуальные нормы, примеры расчетов и документальное оформление командировочных расходов.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/otkaz-ot-komandirovki" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">09-07-2025</span>
+              <span class="experts-card__text">Отказ от командировки: последствия для сотрудника по ТК РФ и законные основания</span>
+              <span class="experts-card__excerpt">Кто может отказаться от командировки по ТК РФ, какие основания считаются уважительными и могут ли уволить за отказ ехать. Образец заявления и инструкция по оформлению отказа от деловой поездки для защиты своих прав.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/otpusk-i-komandirovka-kak-sovmestit" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">08-07-2025</span>
+              <span class="experts-card__text">Командировка во время отпуска: как правильно оформить и оплатить</span>
+              <span class="experts-card__excerpt">Можно ли сотрудника отправить в командировку, если он в отпуске, как прервать командировку для отпуска. Как оформлять и оплачивать командировку и отпуск в таких случаях.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/kak-otpravit-v-komandirovku-osobuyu-kategoriyu-sotrudnikov" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">19-06-2025</span>
+              <span class="experts-card__text">Как без нарушений отправить в командировку особую категорию сотрудников?</span>
+              <span class="experts-card__excerpt">Одинокие родители с несовершеннолетними детьми, люди с инвалидностью — как правильно оформлять их командировки?</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/posadochnye-talony-pravila-oformleniya" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">16-06-2025</span>
+              <span class="experts-card__text">Посадочные талоны: что нужно знать бухгалтеру</span>
+              <span class="experts-card__excerpt">Как избежать ошибок с бумажными, электронными и мобильными посадочными талонами в 2025 году.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/turisticheskij-nalog-v-rossii" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">29-05-2025</span>
+              <span class="experts-card__text">Туристический налог в России с 2025 года: в каких регионах, кто и сколько платит</span>
+              <span class="experts-card__excerpt">Что такое туристический налог, когда и где введён, как он влияет на сферу гостиничного бизнеса. Краткое руководство для владельцев отелей.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/uchyot-rabochego-vremeni-pri-vahtovom-metode" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">21-05-2025</span>
+              <span class="experts-card__text">Учет рабочего времени при вахтовом методе работы: оформление, налогообложение</span>
+              <span class="experts-card__excerpt">Исчерпывающее руководство по учету рабочего времени при вахтовом методе работы. Узнайте, как правильно настроить вахтовый метод в 1С, рассчитать надбавки, оформить документы и вести налоговый учет в соответствии с законодательством 2025 года.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/raschyot-komandirovki-v-1s-zup" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">12-05-2025</span>
+              <span class="experts-card__text">Расчёт командировки в 1С:Зарплата и управление персоналом</span>
+              <span class="experts-card__excerpt">Как рассчитывается командировка в 1С:ЗУП - рассмотрим основные этапы и особенности этого процесса.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/komandirovka-v-vyhodnye-i-prazdnichnye-dni" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">05-05-2025</span>
+              <span class="experts-card__text">Командировка в выходной день: как оплачивать в 2026 году</span>
+              <span class="experts-card__excerpt">Оплата служебной командировки в выходной день: оплачивается ли, какой средний заработок в командировке в выходные дни. Как указывать в табеле оплату командировки в выходные и праздничные дни.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/kak-sostavit-smetu-raskhodov-na-meropriyatiya" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">04-05-2025</span>
+              <span class="experts-card__text">Смета расходов на мероприятие: пошаговая инструкция + готовый шаблон 2026</span>
+              <span class="experts-card__excerpt">Узнайте, как профессионально составить смету расходов на мероприятие с подробным разбором статей затрат. Скачайте готовый шаблон и получите советы экспертов по оптимизации бюджета.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/uchyot-raskhodov-na-meropriyatiya" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">03-05-2025</span>
+              <span class="experts-card__text">Учет расходов на корпоративные мероприятия в компании</span>
+              <span class="experts-card__excerpt">Как правильно вести учет расходов на корпоративные мероприятия, чтобы сохранять строгий финансовый контроль - разбираем в статье.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/agentstvo-po-organizacii-delovyh-meropriyatij-kak-vybrat" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">22-04-2025</span>
+              <span class="experts-card__text">Агентство по организации деловых мероприятий — как выбрать надежное</span>
+              <span class="experts-card__excerpt">Как правильно выбирать агентство по организации деловых мероприятий, на какие показатели обращать внимание при выборе подрядчика.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/sutochnye-v-zagrankomandirovke" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">23-04-2025</span>
+              <span class="experts-card__text">Суточные за границей в командировке в 2026 году: нормы, как оформить Как оформить и оплатить суточные для заграничной…</span>
+              <span class="experts-card__excerpt">командировки в 2026 году. Как считать суточные в зарубежной командировке при пересечении границы. Какой размер суточных при загранкомандировках.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/arenda_zhilya" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">25-03-2025</span>
+              <span class="experts-card__text">Аренда жилья сотруднику в командировке: как выбрать отель или квартиру и как вести учет Отправляя сотрудника в деловую…</span>
+              <span class="experts-card__excerpt">поездку, нужно забронировать ему жилье. Разбираем в этой статье, какие бывают виды жилья, и на что обратить внимание при аренде.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/komandirovka-na-lichnom-avtomobile" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">12-03-2025</span>
+              <span class="experts-card__text">Командировка на личном автомобиле сотрудника: оформление, документы 2026 года</span>
+              <span class="experts-card__excerpt">Как оформить служебную командировку на личном автомобиле сотрудника в 2026 году. Оформление документов для командировки на личном транспорте. Нужно ли возмещать расходы на бензин в командировке сотрудника на его личном транспорте.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/komandirovka-sotrudnika-voprosy-i-otvety" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">28-02-2025</span>
+              <span class="experts-card__text">Командировка сотрудника: частые вопросы и ответы</span>
+              <span class="experts-card__excerpt">Этот перечень вопросов и ответов охватывает основные нюансы, связанные с направлением сотрудников в командировки в РФ.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/kak-provesti-perekhodyashchuyu-komandirovku-v-1c-zup" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">19-02-2025</span>
+              <span class="experts-card__text">Переходящая командировка в 1С ЗУП 8.3: как оформляется</span>
+              <span class="experts-card__excerpt">Подробно о том, как провести переходящую командировку в 1С ЗУП, в каком месяце начислять переходящую командировку, как провести расчет переходящей командировки в программе 1С Бухгалтерия 8.3 ЗУП.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/odnodnevnaya-komandirovka" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">31-01-2025</span>
+              <span class="experts-card__text">Как оплачивается однодневная командировка в 2025 году</span>
+              <span class="experts-card__excerpt">Оплачиваются ли суточные за 1 день командировки, каков их размер. Подробно о том, как оплачивается однодневная командировка в 2026 году.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/chem-otlichaetsya-komandirovka-ot-vahty" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">21-12-2024</span>
+              <span class="experts-card__text">Чем отличается командировка от вахты</span>
+              <span class="experts-card__excerpt">Командировка и вахта: в чем разница, как рассчитывать заработную плату, суточные и компенсацию. Все о корректной уплате налогов и других нюансах читайте в этой статье.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/sluzhebnaya-komandirovka-po-tk-rf" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">16-12-2024</span>
+              <span class="experts-card__text">Служебная поездка и служебная командировка по ТК РФЧем отличается служебная командировка от служебной поездки; как нап…</span>
+              <span class="experts-card__excerpt">равить сотрудника в командировку по ТК РФ.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/komandirovka-v-tabele-ucheta-rabochego-vremeni" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">25-11-2024</span>
+              <span class="experts-card__text">Как отмечается командировка в табеле учета рабочего времени, примеры</span>
+              <span class="experts-card__excerpt">Командировка в табеле учета рабочего времени: как обозначается, как считаются часы и дни командировки, как заполнить при командировке в выходной. Образец проставления командировки в табель учета рабочего времени в 2026 году.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/komandirovka-rukovoditelya" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">18-11-2024</span>
+              <span class="experts-card__text">Как отправить в командировку генерального директора, руководителя организации</span>
+              <span class="experts-card__excerpt">Как оформить командировку генерального директора в 2026 году: какие нужны документы, какие указать цели поездки в командировку руководителя организации.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/bolnichnyj-v-komandirovke" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">31-10-2024</span>
+              <span class="experts-card__text">Больничный в командировке: как оформить, как оплатить суточные</span>
+              <span class="experts-card__excerpt">Болезнь во время командировки: как оплачивается больничный лист, как указывать дни болезни в командировке в табеле, какие суточные начислять, если сотрудник взял больничный в период командировки.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/plan-i-celi-komandirovki" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">22-10-2024</span>
+              <span class="experts-card__text">Цель поездки в служебную командировку: примеры формулировок. План командировки Как составить план и сформулировать цел…</span>
+              <span class="experts-card__excerpt">и служебной командировки: примеры формулировок целей деловых поездок руководителя, бухгалтера, менеджера и других специалистов. Командировка с научной целью, с целью обмена опытом.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/otmena-komandirovki" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">12-01-2025</span>
+              <span class="experts-card__text">Приказ об отмене командировки, образец 2026 года</span>
+              <span class="experts-card__excerpt">Как составить приказ об отмене командировки – образец 2026 года. Какие могут быть причины отмены командировки. Как рассчитываются суточные при отмене командировки.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/kak-prodlit-komandirovku" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">09-10-2024</span>
+              <span class="experts-card__text">Как продлить командировку, правильно оформить продление срока командировки</span>
+              <span class="experts-card__excerpt">Как оформить продление командировки, образец приказа о продлении командировки.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/sluzhebnoe-zadanie-na-komandirovku" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">12-01-2025</span>
+              <span class="experts-card__text">Служебное задание на командировку, образец 2026 года</span>
+              <span class="experts-card__excerpt">Как заполнять служебное задание на командировку – подробная инструкция. Скачать бланк и образец 2026 года. Где в 1С найти служебное задание на командировку.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/sluzhebnaya-zapiska-na-komandirovku-obrazec" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">12-01-2025</span>
+              <span class="experts-card__text">Служебная записка на командировку: образец 2026 года</span>
+              <span class="experts-card__excerpt">Как написать служебную записку на командировку, какой срок хранения служебки. Образец служебной записки на командировку.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/prikaz-na-komandirovku-obrazec" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">10-01-2025</span>
+              <span class="experts-card__text">Приказ о направлении работника в командировку в 2026 году, образец</span>
+              <span class="experts-card__excerpt">Приказ на командировку: как оформить распоряжение о направлении работника в командировку в 2026 году. Скачать бланк и образец приказа о служебной командировке.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/zayavlenie-na-komandirovku" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">12-01-2025</span>
+              <span class="experts-card__text">Как написать заявление на командировку – образец 2026 года Нужно ли сотруднику писать заявление на командировку. Приме…</span>
+              <span class="experts-card__excerpt">р заявления о направлении в командировку – образец для 2026 года, составленный специалистами сервиса Smartway.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/kvr-i-kosgu-dlya-komandirovki" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">23-07-2024</span>
+              <span class="experts-card__text">Какой КОСГУ и вид расходов для командировки в 2026 году</span>
+              <span class="experts-card__excerpt">Командировка в 2026: какой КВР и КОСГУ для проезда, транспортных расходов и проживания в командировке.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/avansovyj-otchet-po-komandirovke" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">27-06-2024</span>
+              <span class="experts-card__text">Авансовый отчет по командировке: образец заполнения отчетности</span>
+              <span class="experts-card__excerpt">Авансовый отчет по командировке - всё, что нужно знать об отчетности по деловым поездкам. Пример заполнения авансового отчета по командировке.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/taxi_v_komandirovke" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">24-04-2023</span>
+              <span class="experts-card__text">Оплата такси в командировке: как учитывать расходы и рассчитать налоги</span>
+              <span class="experts-card__excerpt">Расходы на такси в командировке — нужно ли возмещать рабтонику и как учитывать их в бухгалтерии. Разница между учетом расходов при УСН и ОСНО. Какими документами подтверждаются расходы.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/delovoy-turizm" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">29-03-2023</span>
+              <span class="experts-card__text">Деловой туризм: что это и как организовать MICE-мероприятие с wow-эффектом</span>
+              <span class="experts-card__excerpt">Рассказываем о тенденциях в сфере делового туризма, о нюансах организации MICE-мероприятий, даем примеры мест их проведения.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/polozhenie-o-komandirovkah" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">06-01-2025</span>
+              <span class="experts-card__text">Положение о командировках в 2026 году: порядок, утверждение, ошибки</span>
+              <span class="experts-card__excerpt">Как оформить и утвердить положение о служебных командировках в 2026 году: структура документа, приказ, типичные ошибки и практические рекомендации.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/kak-oformit-komandirovku-poshagovaya-instruktsiya" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">06-01-2025</span>
+              <span class="experts-card__text">Как оформить командировку сотруднику в 2026 году</span>
+              <span class="experts-card__excerpt">Оформление командировки в 2026 году: пошаговая инструкция. Всё об оформлении командировок: какие нужны документы, как не нарушить права сотрудника, как избежать ошибок, штрафов и споров с контролирующими органами и сотрудниками.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/choice-business-travel" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">14-11-2022</span>
+              <span class="experts-card__text">Что выбрать: IT-платформа, агентство или самостоятельное бронирование</span>
+              <span class="experts-card__excerpt">Сколько командировок, столько и направлений. Однако основных способов их организации — всего три. Наши эксперты подробно расписали каждый из них и собрали все «за» и «против».</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/komandirovka-na-sluzhebnom-transporte" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">11-02-2025</span>
+              <span class="experts-card__text">Командировка водителя на служебном автомобиле: оформление в 2026 году</span>
+              <span class="experts-card__excerpt">Как оформить командировку сотрудника на служебном автомобиле. Оформление путевого листа на командировку на служебном транспорте и другие документы.</span>
+            </a>
+          </li>
+          <li class="experts-grid__item">
+            <a class="experts-card experts-card--blog" href="https://smartway.today/blog/komandirovochnye-rashody" target="_blank" rel="noreferrer noopener">
+              <span class="experts-card__date">25-04-2025</span>
+              <span class="experts-card__text">Командировочные расходы и суточные в 2026: возмещение, что входит, нормы, налог на прибыль Какие нормы расходов на слу…</span>
+              <span class="experts-card__excerpt">жебные командировки в 2026 году. Расчет и выплата суточных, НДФЛ, возмещение командировочных расходов, в том числе представительских и прочих (иных) расходов, связанных со служебной командировкой.</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <p class="blog-feed__tagline">#knowhow</p>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__main">
+        <div class="footer__inner">
+          <div class="footer__col footer__col--info">
+            <div class="footer__col-head">
+              <img src="img/footerImages/Container.png" alt="Smartway" class="footer__logo" width="170" height="40" loading="lazy" decoding="async">
+            </div>
+            <div class="footer__col-body">
+              <div class="footer__contacts">
+                <p class="footer__contact footer__contact--strong"><a href="tel:+78007751428">8&nbsp;800&nbsp;775&nbsp;14&nbsp;28</a></p>
+                <p class="footer__contact footer__contact--strong"><a href="mailto:hello@smartway.today">hello@smartway.today</a></p>
+                <div class="footer__press">
+                  <p class="footer__muted-label">Пресс-служба</p>
+                  <p class="footer__contact footer__contact--strong"><a href="mailto:pr@smartway.today">pr@smartway.today</a></p>
+                </div>
+                <p class="footer__contact">
+                  <a href="#" class="footer__link-external">Для отелей по вопросам контрактинга<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
+                </p>
+              </div>
+              <p class="footer__address">125124, г.&nbsp;Москва, 5-я&nbsp;ул.&nbsp;Ямского Поля, д.&nbsp;5, стр.&nbsp;1, пом.&nbsp;2/11</p>
+              <div class="footer__legal">
+                <p>ООО «Смартвэй», 2026</p>
+                <p>ИНН 7714379242</p>
+                <p>ОГРН 1167746277247</p>
+                <p>ОКВЭД 62.01</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer__col footer__col--scenarios">
+            <div class="footer__col-head">
+              <div class="footer__badges">
+                <span class="footer__badge-pill">
+                  <img src="img/footerImages/Container-1.png" alt="ТКП" class="footer__badge footer__badge--in-pill" width="80" height="42" loading="lazy" decoding="async">
+                </span>
+                <img src="img/footerImages/sk-uchastnik1.png.webp.png" alt="Участник Сколково" class="footer__badge" width="100" height="42" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <div class="footer__col-body">
+              <h3 class="footer__heading">Сценарии</h3>
+              <ul class="footer__list">
+                <li><a href="#">Для руководителя</a></li>
+                <li><a href="#">Для бухгалтера</a></li>
+                <li><a href="#">Для организатора командировок</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__col footer__col--capabilities">
+            <div class="footer__col-head">
+              <div class="footer__socials">
+                <a href="#" class="footer__social footer__social--round" aria-label="ВКонтакте"><img src="img/footer-icon-vk.svg" alt="" width="20" height="20"></a>
+                <a href="#" class="footer__social footer__social--round" aria-label="VC.ru"><img src="img/footer-icon-vc.svg" alt="" class="footer__social-img--vc" width="22" height="16"></a>
+                <a href="#" class="footer__channel-pill">
+                  <img src="img/footer-icon-tg.svg" alt="" class="footer__channel-icon" width="18" height="18">
+                  <span class="footer__channel-label">Канал «Командировки.Сегодня»</span>
+                </a>
+              </div>
+            </div>
+            <div class="footer__col-body">
+              <h3 class="footer__heading">Возможности</h3>
+              <ul class="footer__list">
+                <li><a href="#">Поиск авиабилетов</a></li>
+                <li><a href="#">Поиск ж/д билетов</a></li>
+                <li><a href="#">Поиск отелей</a></li>
+                <li><a href="#">Такси</a></li>
+                <li><a href="#">Интеграция с 1С</a></li>
+                <li><a href="#">Согласование</a></li>
+                <li><a href="#">Тревел-политики</a></li>
+                <li><a href="#" class="footer__list-link--accent">Smartway Отпуск</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__col footer__col--useful">
+            <div class="footer__col-head footer__col-head--spacer" aria-hidden="true"></div>
+            <div class="footer__col-body">
+              <h3 class="footer__heading">Полезное</h3>
+              <ul class="footer__list">
+                <li><a href="faq.html">Вопрос-ответ</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="#">Такси в командировке</a></li>
+                <li><a href="#">Бесплатная консультация</a></li>
+                <li><a href="#">Оформление командировок</a></li>
+                <li><a href="#">Реферальная программа Smartway</a></li>
+                <li><a href="#">Аудит командировок</a></li>
+                <li><a href="#">Партнерская программа для франчайзи «1С»</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__col footer__col--about">
+            <div class="footer__col-head">
+              <a href="1index.html#consult" class="footer__btn">Записаться на консультацию<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
+            </div>
+            <div class="footer__col-body">
+              <h3 class="footer__heading">О компании</h3>
+              <ul class="footer__list footer__list--compact">
+                <li><a href="#">Общая информация</a></li>
+                <li><a href="#">Работа в Smartway</a></li>
+                <li><a href="#">Реквизиты</a></li>
+                <li><a href="#">Оферта</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Условия доступа к личным поездкам</a></li>
+                <li><a href="#">Пользовательское соглашение</a></li>
+                <li><a href="confidence-page.html">Политика конфиденциальности</a></li>
+                <li><a href="#">Правила использования ПЭП</a></li>
+                <li><a href="#">Аккредитованная IT-компания</a></li>
+                <li><a href="#">Договор о страховании финансовых рисков</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-inner">
+          <a href="#" class="footer__bottom-link">Защита персональных данных</a>
+          <a href="#" class="footer__bottom-link">Сертификат Транспортной Клиринговой Компании</a>
+          <a href="#" class="footer__bottom-link">Безопасное соединение SSL</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('.header__drawer a, .header__drawer-login, .header__drawer-btn').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var cb = document.getElementById('site-nav');
+        if (cb) cb.checked = false;
+      });
+    });
+  </script>
+</body>
+</html>
