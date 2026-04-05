@@ -845,7 +845,6 @@ body.komand-page {
 
 /* ——— Main article column ——— */
 .komand-main {
-  max-width: var(--komand-container);
   margin: 0 auto;
   padding: 0 20px 80px;
 }

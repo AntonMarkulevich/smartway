@@ -28,7 +28,6 @@ body.komand-page--no-sidebar:has(.komand-main--smartway-offer) .komand-layout__s
 }
 
 .komand-main--smartway-offer {
-  max-width: none;
   padding-left: 0;
   padding-right: 0;
 }
