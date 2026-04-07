@@ -1,0 +1,23 @@
+/* Страница сертификата — одно изображение по ширине контейнера */
+
+.certificate-page .komand-layout__segment--bottom {
+  background: #fff;
+}
+
+.cert-main {
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 48px) clamp(16px, 4vw, 28px) clamp(48px, 8vw, 80px);
+  box-sizing: border-box;
+  max-width: 1200px;
+}
+
+.cert-figure {
+  margin: 0;
+  padding: 0;
+}
+
+.cert-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

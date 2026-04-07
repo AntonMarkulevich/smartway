@@ -4,7 +4,8 @@
   --site-header-offset: 132px;
 }
 
-@media (max-width: 768px) {
+/* До ~1600px меню и CTA не помещаются в одну строку с макетными отступами — показываем бургер */
+@media (max-width: 1600px) {
   :root {
     --site-header-offset: 118px;
   }
@@ -98,9 +99,8 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  row-gap: 10px;
 }
 
 .header__link {
@@ -244,105 +244,35 @@ body {
   background: #D44333;
   border-radius: 2px;
 }
-/* ===== Планшет — бургер и упрощённый хедер ===== */
-@media (max-width: 768px) {
-  .header__nav,
-  .header__actions {
-    display: none;
-  }
-
-  .header__burger {
-    display: flex;
-    flex-shrink: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .header {
-    padding: 21px 10px 0;
-    background-color: transparent;
-  }
-
+/* ===== Компактная шапка: бургер + выезжающее меню (одна строка в баре) ===== */
+@media (max-width: 1600px) {
+  /* Логотип слева; справа подряд: действия, бургер (крайний справа) */
   .header__inner {
-    width: 100%;
-    max-width: 365px;
-    height: 78px;
-    padding: 19px 29px;
-    margin: 0 auto;
-    border-radius: 40px;
-    background: #F2F3F6;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
+    justify-content: flex-start;
   }
 
   .header__left {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
+    order: 1;
+    margin-right: auto;
   }
 
-  .header__divider {
+  /* Только пункты меню уходят в drawer; почта, телефон, «Войти», «Протестировать» остаются в баре */
+  .header__nav {
+    order: 2;
     display: none;
   }
 
-  .header__descriptor {
-    font-size: 12px;
-    line-height: 15px;
-    color: #8C8C8C;
-    font-weight: 600;
-    opacity: 1;
-    width: auto;
-    max-width: 248px;
-  }
-
-  .header__descriptor br {
-    display: none;
-  }
-
-  .header__logo {
-    width: 166px;
-  }
-
-  .header__nav,
   .header__actions {
-    display: none;
+    order: 3;
   }
 
   .header__burger {
+    order: 4;
     display: flex;
     flex-shrink: 0;
+    margin-left: 12px;
   }
-}
 
-.site-nav-input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-.header .header__backdrop {
-  display: none;
-}
-
-.header .header__drawer {
-  display: none;
-}
-
-label.header__burger {
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-}
-
-@media (max-width: 768px) {
   .header .header__backdrop {
     display: block;
     position: fixed;
@@ -442,4 +372,103 @@ label.header__burger {
     text-align: center;
     box-sizing: border-box;
   }
+}
+
+/* Иконки почты/телефона в drawer скрыты на планшете (дублируют шапку); только мобильная ширина — см. блок 480px */
+.header__drawer-contacts {
+  display: none;
+}
+
+/* Планшет: дубли «Войти» / «Протестировать» в drawer не нужны — они уже в шапке */
+@media (max-width: 1600px) and (min-width: 481px) {
+  .header .header__drawer-cta {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 21px 10px 0;
+    background-color: transparent;
+  }
+
+  /* Мобильная шапка: в баре только логотип и бургер; действия — в drawer */
+  .header__actions {
+    display: none !important;
+  }
+
+  .header .header__drawer-contacts {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 4px 0 20px;
+  }
+
+  .header__inner {
+    width: 100%;
+    max-width: 365px;
+    height: 78px;
+    padding: 19px 29px;
+    margin: 0 auto;
+    border-radius: 40px;
+    background: #F2F3F6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .header__left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .header__divider {
+    display: none;
+  }
+
+  .header__descriptor {
+    font-size: 12px;
+    line-height: 15px;
+    color: #8C8C8C;
+    font-weight: 600;
+    opacity: 1;
+    width: auto;
+    max-width: 248px;
+  }
+
+  .header__descriptor br {
+    display: none;
+  }
+
+  .header__logo {
+    width: 166px;
+  }
+}
+
+.site-nav-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.header .header__backdrop {
+  display: none;
+}
+
+.header .header__drawer {
+  display: none;
+}
+
+label.header__burger {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }

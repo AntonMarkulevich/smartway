@@ -1,0 +1,1354 @@
+/* Страница «Ж/д билеты» */
+
+body.zhd-bileti-page.komand-page--no-sidebar .komand-layout {
+  display: block;
+}
+
+body.zhd-bileti-page.komand-page--no-sidebar .komand-layout__segment--top,
+body.zhd-bileti-page.komand-page--no-sidebar .komand-layout__segment--bottom {
+  min-width: 0;
+}
+
+body.zhd-bileti-page .komand-main {
+  margin: 0;
+  max-width: none;
+  width: 100%;
+  padding: clamp(24px, 4vw, 40px) clamp(16px, 4vw, 40px) clamp(56px, 10vw, 100px);
+  box-sizing: border-box;
+  background: #fff;
+}
+
+/* Герой-блок (тёмный баннер + zhdmain) */
+.zhd-hero {
+  margin: 0 0 clamp(40px, 6vw, 64px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.zhd-hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(24px, 4vw, 48px);
+  padding: clamp(32px, 5vw, 56px) clamp(24px, 4vw, 48px);
+  background: #2d2d2d;
+  border-radius: clamp(20px, 3vw, 28px);
+  box-sizing: border-box;
+}
+
+.zhd-hero__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.zhd-hero__title {
+  margin: 0 0 clamp(16px, 2vw, 24px);
+  font-size: clamp(26px, 3.8vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.zhd-hero__lead {
+  margin: 0 0 clamp(24px, 3vw, 32px);
+  font-size: clamp(15px, 1.9vw, 20px);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.zhd-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px 14px 24px;
+  font-family: inherit;
+  font-size: clamp(15px, 1.7vw, 18px);
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background: #d84f37;
+  border-radius: 999px;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.zhd-hero__btn:hover {
+  background: #c73a2b;
+  color: #fff;
+}
+
+.zhd-hero__btn:active {
+  transform: scale(0.99);
+}
+
+.zhd-hero__btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: #1a1a1a;
+}
+
+.zhd-hero__visual {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.zhd-hero__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Блок «Smartway в цифрах» */
+.zhd-stats {
+  margin: 0 0 clamp(48px, 7vw, 80px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.zhd-stats__title {
+  margin: 0 0 clamp(28px, 4vw, 40px);
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #222;
+}
+
+.zhd-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(12px, 1.8vw, 20px);
+}
+
+.zhd-stats__card {
+  margin: 0;
+  padding: clamp(20px, 2.8vw, 28px);
+  background: #f0f2f5;
+  border-radius: 24px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.zhd-stats__value {
+  margin: 0 0 clamp(10px, 1.4vw, 14px);
+  font-size: clamp(22px, 2.8vw, 32px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #222;
+}
+
+.zhd-stats__desc {
+  margin: 0;
+  font-size: clamp(13px, 1.35vw, 15px);
+  line-height: 1.45;
+  font-weight: 400;
+  color: #666;
+}
+
+.zhd-stats__note {
+  margin: clamp(14px, 2vw, 20px) 0 0;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #888;
+  text-align: center;
+}
+
+/* Двухколоночный блок: текст + tabletzhd */
+.zhd-split {
+  margin: 0 0 clamp(48px, 7vw, 80px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.zhd-split__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(28px, 5vw, 56px);
+}
+
+.zhd-split__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.zhd-split__title {
+  margin: 0 0 clamp(16px, 2vw, 22px);
+  font-size: clamp(26px, 3.4vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #222;
+}
+
+.zhd-split__text {
+  margin: 0 0 clamp(28px, 4vw, 40px);
+  font-size: clamp(16px, 1.8vw, 19px);
+  line-height: 1.55;
+  font-weight: 400;
+  color: #3a3a3a;
+}
+
+.zhd-split__badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: clamp(16px, 2.5vw, 28px) clamp(20px, 3vw, 40px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.zhd-split__badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 16rem;
+}
+
+.zhd-split__badge-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.zhd-split__badge-text {
+  font-size: clamp(13px, 1.4vw, 15px);
+  line-height: 1.35;
+  color: #555;
+}
+
+.zhd-split__visual {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zhd-split__img {
+  display: block;
+  width: 100%;
+  max-width: min(620px, 100%);
+  height: auto;
+}
+
+/* Блок «Поиск ж/д билетų» — светлый контейнер, текст и макет по центру */
+.zhd-search {
+  margin: 0 0 clamp(48px, 7vw, 80px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.zhd-search__inner {
+  margin: 0;
+  padding: clamp(28px, 4vw, 48px) clamp(20px, 3vw, 40px) clamp(32px, 5vw, 56px);
+  background: #eef0f4;
+  border-radius: clamp(20px, 3vw, 28px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.zhd-search__title {
+  margin: 0 0 clamp(14px, 2vw, 20px);
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #222;
+}
+
+.zhd-search__lead {
+  margin: 0 0 clamp(28px, 4vw, 40px);
+  font-size: clamp(15px, 1.75vw, 18px);
+  line-height: 1.55;
+  font-weight: 400;
+  color: #3a3a3a;
+}
+
+.zhd-search__visual {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zhd-search__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Удобная оплата: список + zhdpay */
+.zhd-pay {
+  margin: 0 0 clamp(48px, 7vw, 80px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.zhd-pay__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(28px, 5vw, 56px);
+}
+
+.zhd-pay__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.zhd-pay__title {
+  margin: 0 0 clamp(20px, 2.5vw, 28px);
+  font-size: clamp(26px, 3.4vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #222;
+}
+
+.zhd-pay__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.zhd-pay__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0 0 clamp(16px, 2vw, 22px);
+}
+
+.zhd-pay__item:last-child {
+  margin-bottom: 0;
+}
+
+.zhd-pay__arrow {
+  flex-shrink: 0;
+  margin-top: 0.15em;
+  font-size: 1.15em;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #d94636;
+}
+
+.zhd-pay__item-text {
+  font-size: clamp(16px, 1.8vw, 19px);
+  line-height: 1.55;
+  color: #3a3a3a;
+}
+
+.zhd-pay__item-text strong {
+  font-weight: 700;
+  color: #222;
+}
+
+.zhd-pay__visual {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zhd-pay__img {
+  display: block;
+  width: 100%;
+  max-width: min(620px, 100%);
+  height: auto;
+}
+
+/* Управление поездками — сетка карточек */
+.zhd-features {
+  margin: 0 0 clamp(48px, 7vw, 80px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.zhd-features__title {
+  margin: 0 0 clamp(32px, 4vw, 48px);
+  text-align: center;
+}
+
+.zhd-features__title-line {
+  display: block;
+  font-size: clamp(26px, 3.6vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.zhd-features__title-line--dark {
+  color: #222;
+}
+
+.zhd-features__title-line--accent {
+  margin-top: 0.12em;
+  color: #d84d3d;
+}
+
+.zhd-features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2.2vw, 24px);
+}
+
+.zhd-features__card {
+  margin: 0;
+  padding: clamp(20px, 2.8vw, 28px);
+  background: #f0f2f5;
+  border-radius: clamp(18px, 2.5vw, 24px);
+  box-sizing: border-box;
+}
+
+.zhd-features__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: clamp(14px, 2vw, 18px);
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  color: #d84d3d;
+}
+
+.zhd-features__icon {
+  display: block;
+  flex-shrink: 0;
+}
+
+.zhd-features__text {
+  margin: 0;
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 1.5;
+  font-weight: 400;
+  color: #3a3a3a;
+  text-align: left;
+}
+
+.zhd-features__cta {
+  margin: clamp(32px, 5vw, 48px) 0 0;
+  text-align: center;
+}
+
+.zhd-features__btn {
+  vertical-align: middle;
+}
+
+/* Поддержка 24/7: текст + макет чата и кнопка наушников */
+.zhd-support {
+  margin: 0 0 clamp(48px, 7vw, 80px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.zhd-support__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(24px, 4vw, 48px);
+  padding: clamp(28px, 4.5vw, 48px) clamp(20px, 3.5vw, 40px);
+  background: #f0f2f5;
+  border-radius: clamp(20px, 3vw, 28px);
+  box-sizing: border-box;
+}
+
+.zhd-support__content {
+  flex: 1;
+  min-width: 0;
+  max-width: 36rem;
+}
+
+.zhd-support__title {
+  margin: 0 0 clamp(14px, 2vw, 20px);
+}
+
+.zhd-support__title-line {
+  display: block;
+  font-size: clamp(26px, 3.6vw, 40px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.zhd-support__title-line--dark {
+  color: #222;
+}
+
+.zhd-support__title-line--accent {
+  margin-top: 0.1em;
+  color: #d84d3d;
+}
+
+.zhd-support__text {
+  margin: 0;
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 1.55;
+  font-weight: 400;
+  color: #3a3a3a;
+}
+
+.zhd-support__visual {
+  position: relative;
+  flex-shrink: 0;
+  align-self: center;
+  margin-right: clamp(8px, 2vw, 20px);
+}
+
+.zhd-support__chat {
+  display: block;
+  width: 100%;
+  max-width: min(540px, 100%);
+  height: auto;
+}
+
+.zhd-support__headset {
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  transform: translate(46%, -50%);
+  width: clamp(64px, 11vw, 96px);
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.12));
+}
+
+/* Автоматизированная отчётность по поездкам (интеграция «1С») */
+.zhd-report {
+  margin: 0 0 clamp(48px, 7vw, 80px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.zhd-report__header {
+  margin-bottom: clamp(28px, 4vw, 44px);
+  text-align: center;
+  max-width: 52rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.zhd-report__title {
+  margin: 0 0 clamp(14px, 2vw, 20px);
+}
+
+.zhd-report__title-line {
+  display: block;
+  font-size: clamp(26px, 3.6vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.zhd-report__title-line--accent {
+  color: #d84d3d;
+}
+
+.zhd-report__title-line--dark {
+  margin-top: 0.12em;
+  color: #222;
+}
+
+.zhd-report__lead {
+  margin: 0;
+  font-size: clamp(14px, 1.55vw, 17px);
+  line-height: 1.55;
+  font-weight: 400;
+  color: #5c5c5c;
+}
+
+.zhd-report__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+  align-items: stretch;
+}
+
+.zhd-report__card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(22px, 3vw, 32px) clamp(18px, 2.5vw, 28px) clamp(20px, 2.8vw, 28px);
+  background: #f2f4f7;
+  border-radius: clamp(22px, 3.5vw, 32px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.zhd-report__card-text {
+  margin: 0 0 clamp(18px, 2.5vw, 28px);
+  font-size: clamp(14px, 1.45vw, 16px);
+  line-height: 1.5;
+  font-weight: 400;
+  color: #3a3a3a;
+}
+
+.zhd-report__card-visual {
+  margin-top: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: clamp(160px, 22vw, 220px);
+}
+
+.zhd-report__card-img {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Все услуги в одном окне (как на главной: иконки из img/services) */
+.zhd-services-window {
+  margin: 0 0 clamp(40px, 6vw, 72px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.zhd-services-window__title {
+  margin: 0 0 clamp(28px, 4vw, 44px);
+  text-align: center;
+}
+
+.zhd-services-window__title-line {
+  display: block;
+  font-size: clamp(26px, 3.6vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.zhd-services-window__title-line--dark {
+  color: #222;
+}
+
+.zhd-services-window__title-line--accent {
+  margin-top: 0.12em;
+  color: #d84d3d;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: clamp(24px, 3.2vw, 36px);
+}
+
+.zhd-services-window__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(14px, 2vw, 20px);
+  align-items: stretch;
+}
+
+.zhd-services-window__card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(12px, 1.6vw, 18px) clamp(12px, 1.6vw, 18px) clamp(10px, 1.4vw, 14px);
+  border-radius: clamp(20px, 2.8vw, 28px);
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.zhd-services-window__card--outline {
+  background: #fff;
+  border: 1px solid #d1d9e0;
+}
+
+.zhd-services-window__card--fill {
+  background: #f0f2f5;
+}
+
+.zhd-services-window__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: clamp(8px, 1.2vw, 12px);
+}
+
+.zhd-services-window__head--compact {
+  margin-bottom: 0;
+}
+
+.zhd-services-window__card-title {
+  margin: 0;
+  font-size: clamp(17px, 1.9vw, 22px);
+  font-weight: 600;
+  line-height: 1.2;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+.zhd-services-window__head-icon {
+  flex-shrink: 0;
+  display: block;
+  width: clamp(32px, 4vw, 40px);
+  height: auto;
+  object-fit: contain;
+}
+
+.zhd-services-window__media {
+  margin-top: auto;
+  border-radius: clamp(12px, 1.6vw, 16px);
+  overflow: hidden;
+  min-height: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  max-height: clamp(148px, 20vw, 200px);
+}
+
+.zhd-services-window__img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: clamp(148px, 20vw, 200px);
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.zhd-services-window__card--taxi {
+  justify-content: flex-start;
+}
+
+.zhd-services-window__card--taxi .zhd-services-window__head {
+  flex-shrink: 0;
+}
+
+.zhd-services-window__card--taxi .zhd-services-window__media {
+  flex: 1 1 auto;
+  margin-top: auto;
+  max-height: none;
+  min-height: 0;
+  align-items: flex-end;
+  align-self: stretch;
+}
+
+.zhd-services-window__img--taxi {
+  max-height: clamp(108px, 15vw, 150px);
+  margin-top: auto;
+}
+
+.zhd-services-window__stack {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 1.5vw, 14px);
+  min-width: 0;
+  min-height: 100%;
+}
+
+.zhd-services-window__mini {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: clamp(12px, 1.8vw, 18px) clamp(12px, 1.6vw, 18px);
+  border-radius: clamp(20px, 2.8vw, 28px);
+  box-sizing: border-box;
+  min-height: clamp(76px, 11vw, 108px);
+}
+
+.zhd-services-window__mini--fill {
+  background: #f0f2f5;
+}
+
+.zhd-services-window__mini--outline {
+  background: #fff;
+  border: 1px solid #d1d9e0;
+}
+
+/* Доверие клиентов: заголовок + бегущая строка логотипов (как на главной) */
+.zhd-trust {
+  --zhd-trust-marquee-gap: 80px;
+  --zhd-trust-marquee-height: 53px;
+  --zhd-trust-marquee-opacity: 0.7;
+  margin: 0 0 clamp(32px, 5vw, 56px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.zhd-trust__intro {
+  text-align: center;
+  padding: clamp(24px, 3.5vw, 40px) clamp(12px, 3vw, 20px) clamp(8px, 1.5vw, 16px);
+  box-sizing: border-box;
+}
+
+.zhd-trust__title {
+  margin: 0 auto;
+  max-width: 56rem;
+  font-size: clamp(22px, 3.2vw, 34px);
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+}
+
+.zhd-trust__title-row {
+  display: block;
+}
+
+.zhd-trust__title-row + .zhd-trust__title-row {
+  margin-top: 0.18em;
+}
+
+.zhd-trust__accent {
+  color: #d14331;
+}
+
+.zhd-trust__dark,
+.zhd-trust__title-row--dark {
+  color: #333;
+}
+
+.zhd-trust__marquee {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  box-sizing: border-box;
+  padding: clamp(20px, 3vw, 48px) 0;
+  overflow: hidden;
+}
+
+.zhd-trust__marquee-strip {
+  overflow: hidden;
+  width: 100%;
+}
+
+.zhd-trust__marquee-track {
+  display: flex;
+  align-items: center;
+  gap: var(--zhd-trust-marquee-gap);
+  width: max-content;
+  animation: zhd-trust-marquee 40s linear infinite;
+}
+
+.zhd-trust__marquee-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.zhd-trust__marquee-logo {
+  display: block;
+  height: var(--zhd-trust-marquee-height);
+  width: auto;
+  min-width: 1760px;
+  object-fit: contain;
+  opacity: var(--zhd-trust-marquee-opacity);
+}
+
+@keyframes zhd-trust-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - var(--zhd-trust-marquee-gap) / 2));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zhd-trust__marquee-track {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .zhd-trust {
+    --zhd-trust-marquee-gap: 48px;
+  }
+
+  .zhd-trust__marquee {
+    padding: 28px 0;
+  }
+
+  .zhd-trust__marquee-logo {
+    height: 32px;
+    min-width: 1200px;
+  }
+
+  .zhd-trust__marquee-track {
+    animation-duration: 30s;
+  }
+}
+
+@media (max-width: 480px) {
+  .zhd-trust {
+    --zhd-trust-marquee-gap: 32px;
+  }
+
+  .zhd-trust__marquee {
+    padding: 20px 0;
+  }
+
+  .zhd-trust__marquee-logo {
+    height: 24px;
+    min-width: 900px;
+  }
+
+  .zhd-trust__marquee-track {
+    animation-duration: 25s;
+  }
+}
+
+/* Простое подключение — три шага */
+.zhd-connect {
+  margin: clamp(40px, 6vw, 72px) 0 0;
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.zhd-connect__title {
+  margin: 0 0 clamp(24px, 3.5vw, 40px);
+  text-align: center;
+  font-size: clamp(26px, 3.6vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #222;
+}
+
+.zhd-connect__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(14px, 2vw, 20px);
+  align-items: stretch;
+}
+
+.zhd-connect__card {
+  margin: 0;
+  padding: clamp(20px, 2.8vw, 28px);
+  background: #f0f2f5;
+  border-radius: clamp(18px, 2.5vw, 24px);
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.zhd-connect__num-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: clamp(12px, 2vw, 16px);
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.zhd-connect__num {
+  font-size: clamp(20px, 2.2vw, 24px);
+  font-weight: 700;
+  line-height: 1;
+  color: #1a1a1a;
+}
+
+.zhd-connect__text {
+  margin: 0;
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 1.5;
+  font-weight: 400;
+  color: #3a3a3a;
+}
+
+/* Форма заявки — красный блок + белая карточка (вариант как на главной cta-form) */
+.zhd-lead-form {
+  margin: clamp(40px, 6vw, 72px) 0 0;
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.zhd-lead-form__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #d94536;
+  border-radius: clamp(24px, 3.5vw, 40px);
+  padding: clamp(28px, 5vw, 52px) clamp(22px, 4vw, 48px);
+  box-sizing: border-box;
+}
+
+.zhd-lead-form__content {
+  min-width: 0;
+  justify-self: start;
+  text-align: left;
+  align-self: start;
+}
+
+.zhd-lead-form__title {
+  margin: 0 0 clamp(14px, 2vw, 20px);
+  font-size: clamp(26px, 3.8vw, 44px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.zhd-lead-form__lead {
+  margin: 0;
+  max-width: 34rem;
+  font-size: clamp(15px, 1.7vw, 18px);
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.zhd-lead-form__card {
+  background: #fff;
+  border-radius: clamp(20px, 2.5vw, 28px);
+  padding: clamp(24px, 3.5vw, 36px);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.14);
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+}
+
+.zhd-lead-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(14px, 2vw, 18px);
+}
+
+.zhd-lead-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.zhd-lead-form__label {
+  font-size: 13px;
+  font-weight: 400;
+  color: #3a3a3a;
+}
+
+.zhd-lead-form__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.zhd-lead-form__input {
+  height: 52px;
+  border-radius: 999px;
+  border: 1px solid #b3b3b3;
+  background: #fff;
+  padding: 0 20px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 15px;
+  color: #3a3a3a;
+  box-sizing: border-box;
+}
+
+.zhd-lead-form__input::placeholder {
+  color: #9a9a9a;
+}
+
+.zhd-lead-form__input:hover {
+  border-color: #999;
+}
+
+.zhd-lead-form__input:focus {
+  outline: none;
+  border-color: #3a3a3a;
+}
+
+.zhd-lead-form__select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%233A3A3A' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  padding-right: 44px;
+  cursor: pointer;
+}
+
+.zhd-lead-form__toggle {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 2px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.zhd-lead-form__toggle-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.zhd-lead-form__toggle-ui {
+  flex-shrink: 0;
+  width: 44px;
+  height: 26px;
+  border-radius: 999px;
+  background: #e0e0e0;
+  position: relative;
+  transition: background 0.2s ease;
+  margin-top: 1px;
+}
+
+.zhd-lead-form__toggle-ui::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #5c5c5c;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.zhd-lead-form__toggle-input:checked + .zhd-lead-form__toggle-ui {
+  background: #c8c8c8;
+}
+
+.zhd-lead-form__toggle-input:checked + .zhd-lead-form__toggle-ui::after {
+  transform: translateX(18px);
+  background: #3a3a3a;
+}
+
+.zhd-lead-form__toggle-input:focus-visible + .zhd-lead-form__toggle-ui {
+  outline: 2px solid #3a3a3a;
+  outline-offset: 2px;
+}
+
+.zhd-lead-form__toggle-text {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #777;
+}
+
+.zhd-lead-form__submit {
+  height: 52px;
+  border: none;
+  border-radius: 999px;
+  background: #d94536;
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 4px;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+}
+
+.zhd-lead-form__submit:hover {
+  opacity: 0.92;
+}
+
+.zhd-lead-form__submit:active {
+  transform: scale(0.99);
+}
+
+.zhd-lead-form__footnote {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #999;
+  text-align: center;
+}
+
+.zhd-lead-form__footnote-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.zhd-lead-form__footnote-link:hover {
+  color: #3a3a3a;
+}
+
+.zhd-consult-cta {
+  display: flex;
+  justify-content: center;
+  margin: clamp(32px, 5vw, 56px) 0 clamp(48px, 7vw, 80px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.zhd-bileti {
+  margin: 0;
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+  font-size: clamp(17px, 2vw, 20px);
+  line-height: 1.5;
+  color: #3a3a3a;
+  text-align: left;
+}
+
+.zhd-bileti__section {
+  margin: 0 0 clamp(24px, 3vw, 36px);
+}
+
+.zhd-bileti__section:last-child {
+  margin-bottom: 0;
+}
+
+.zhd-bileti__heading {
+  margin: 0 0 12px;
+  font-size: clamp(20px, 2.4vw, 24px);
+  font-weight: 700;
+  line-height: 1.3;
+  color: #1a1a1a;
+}
+
+.zhd-bileti__text {
+  margin: 0;
+}
+
+.zhd-bileti__text + .zhd-bileti__text {
+  margin-top: 0.85em;
+}
+
+.zhd-bileti a {
+  color: #d94636;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.zhd-bileti a:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+  body.zhd-bileti-page .komand-main {
+    padding-left: clamp(12px, 3.5vw, 24px);
+    padding-right: clamp(12px, 3.5vw, 24px);
+  }
+
+  .zhd-hero__inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .zhd-hero__visual {
+    max-width: none;
+    justify-content: center;
+  }
+
+  .zhd-stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .zhd-split__inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .zhd-split__visual {
+    justify-content: center;
+  }
+
+  .zhd-split__img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .zhd-pay__inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .zhd-pay__visual {
+    justify-content: center;
+  }
+
+  .zhd-pay__img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .zhd-features__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .zhd-support__inner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .zhd-support__content {
+    max-width: none;
+  }
+
+  .zhd-support__visual {
+    margin: clamp(8px, 2vw, 16px) auto 0;
+    max-width: min(480px, 100%);
+  }
+
+  .zhd-support__chat {
+    margin: 0 auto;
+  }
+
+  .zhd-support__headset {
+    transform: translate(42%, -50%);
+  }
+
+  .zhd-report__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zhd-services-window__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zhd-connect__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zhd-lead-form__inner {
+    grid-template-columns: 1fr;
+    padding: clamp(24px, 5vw, 36px) clamp(18px, 4vw, 28px);
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 901px) {
+  .zhd-report__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .zhd-services-window__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  body.zhd-bileti-page .komand-main {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .zhd-stats__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zhd-features__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zhd-support__headset {
+    width: clamp(56px, 18vw, 72px);
+    transform: translate(38%, -50%);
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+  .zhd-stats__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,172 @@
+/* MICE: бриф мероприятия — линейные поля, как на макете */
+
+.mice-brief-page .komand-layout__segment--bottom {
+  background: #fff;
+}
+
+.mice-brief-main {
+  margin: 0 auto;
+  padding: clamp(32px, 5vw, 56px) clamp(18px, 4vw, 28px) clamp(64px, 10vw, 100px);
+  box-sizing: border-box;
+  max-width: 720px;
+  background: #fff;
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.mb-brief {
+  margin: 0;
+  padding: 0;
+}
+
+.mb-brief__title {
+  margin: 0 0 clamp(36px, 6vw, 56px);
+  font-size: clamp(22px, 3.2vw, 30px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.mb-brief__field {
+  margin: 0 0 clamp(22px, 3.5vw, 32px);
+}
+
+.mb-brief__field--radio {
+  border: 0;
+  margin: 0 0 clamp(26px, 3.5vw, 36px);
+  padding: 0;
+  min-width: 0;
+}
+
+.mb-brief__label {
+  display: block;
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #8a8f98;
+}
+
+.mb-brief__field--radio .mb-brief__label {
+  margin-bottom: 14px;
+}
+
+.mb-brief__input,
+.mb-brief__textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 6px 0 10px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.45;
+  color: #1a1a1a;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #d5d8de;
+  border-radius: 0;
+  transition: border-color 0.15s ease;
+}
+
+.mb-brief__input::placeholder,
+.mb-brief__textarea::placeholder {
+  color: #b4b8c0;
+}
+
+.mb-brief__input:hover,
+.mb-brief__textarea:hover {
+  border-bottom-color: #aeb3bd;
+}
+
+.mb-brief__input:focus,
+.mb-brief__textarea:focus {
+  outline: none;
+  border-bottom-color: #3a3a3a;
+}
+
+.mb-brief__textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.mb-brief__radio-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 32px;
+  align-items: center;
+}
+
+.mb-brief__radio-row label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3a3a3a;
+  cursor: pointer;
+}
+
+.mb-brief__radio-row input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #d84333;
+  cursor: pointer;
+}
+
+.mb-brief__legal {
+  margin: clamp(28px, 4vw, 40px) 0 clamp(28px, 4vw, 36px);
+  font-size: 12px;
+  line-height: 1.55;
+  color: #8a8f98;
+  text-align: center;
+}
+
+.mb-brief__legal-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.mb-brief__legal-link:hover {
+  color: #d84333;
+}
+
+.mb-brief__submit-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.mb-brief__submit {
+  display: inline-block;
+  min-width: min(100%, 420px);
+  margin: 0;
+  padding: 16px 40px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: #d84333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.mb-brief__submit:hover {
+  background: #c23627;
+}
+
+.mb-brief__submit:focus-visible {
+  outline: 2px solid #1a1a1a;
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .mb-brief__submit {
+    width: 100%;
+  }
+}

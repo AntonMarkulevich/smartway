@@ -111,6 +111,19 @@ body.confidence-page .komand-breadcrumb a {
   margin-bottom: 0;
 }
 
+.confidence-intro__body ul {
+  margin: 0.5em 0 1em 1.25em;
+  padding: 0;
+}
+
+.confidence-intro__body li {
+  margin-bottom: 0.35em;
+}
+
+.confidence-intro__body li:last-child {
+  margin-bottom: 0;
+}
+
 /* Разделы политики (после вводного блока) */
 .confidence-policy {
   max-width: 900px;

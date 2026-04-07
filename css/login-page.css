@@ -1,0 +1,24 @@
+/* Страница входа — те же классы формы, что на registration-page */
+
+.login-page .reg-hero {
+  margin-bottom: clamp(28px, 5vw, 56px);
+}
+
+.login-page .reg-hero__stack--login {
+  --reg-form-protrude: clamp(96px, 14vw, 200px);
+}
+
+.login-page .reg-form__legal--split {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35em 0.5em;
+  margin-bottom: 12px;
+}
+
+.login-page .reg-form__legal-sep {
+  color: #c5cad3;
+  user-select: none;
+}
+
