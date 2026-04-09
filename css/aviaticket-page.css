@@ -1,0 +1,1837 @@
+/* Страница «Авиабилеты» */
+
+body.aviaticket-page.komand-page--no-sidebar .komand-layout {
+  display: block;
+}
+
+body.aviaticket-page.komand-page--no-sidebar .komand-layout__segment--top,
+body.aviaticket-page.komand-page--no-sidebar .komand-layout__segment--bottom {
+  min-width: 0;
+}
+
+body.aviaticket-page .komand-main {
+  margin: 0;
+  max-width: none;
+  width: 100%;
+  padding: clamp(24px, 4vw, 40px) clamp(16px, 4vw, 40px) clamp(56px, 10vw, 100px);
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.aviaticket-hero {
+  margin: 0 0 clamp(40px, 6vw, 64px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.aviaticket-hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(24px, 4vw, 48px);
+  padding: clamp(32px, 5vw, 56px) clamp(24px, 4vw, 48px);
+  background: #d44333;
+  border-radius: clamp(20px, 3vw, 28px);
+  box-sizing: border-box;
+}
+
+.aviaticket-hero__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.aviaticket-hero__title {
+  margin: 0 0 clamp(16px, 2vw, 24px);
+  font-size: clamp(26px, 3.8vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.aviaticket-hero__lead {
+  margin: 0 0 clamp(24px, 3vw, 32px);
+  font-size: clamp(15px, 1.9vw, 20px);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.82);
+}
+.aviaticket-support__headset {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(46%, -50%);
+  width: clamp(64px, 11vw, 96px);
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.12));
+}
+.aviaticket-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px 14px 24px;
+  font-family: inherit;
+  font-size: clamp(15px, 1.7vw, 18px);
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background: #3A3A3A;
+  border-radius: 999px;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.aviaticket-hero__btn:hover {
+  background: #c73a2b;
+  color: #fff;
+}
+
+.aviaticket-hero__btn:active {
+  transform: scale(0.99);
+}
+
+.aviaticket-hero__btn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.aviaticket-hero__btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: #1a1a1a;
+}
+
+.aviaticket-hero__visual {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.aviaticket-hero__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Блок «Smartway в цифрах» */
+.aviaticket-stats {
+  margin: 0 0 clamp(48px, 7vw, 80px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.aviaticket-stats__title {
+  margin: 0 0 clamp(28px, 4vw, 40px);
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #222;
+}
+
+.aviaticket-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(12px, 1.8vw, 20px);
+}
+
+.aviaticket-stats__card {
+  margin: 0;
+  padding: clamp(20px, 2.8vw, 30px);
+  background: #f0f2f5;
+  border-radius: 20px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.aviaticket-stats__value {
+  margin: 0 0 clamp(10px, 1.4vw, 14px);
+  font-size: clamp(22px, 2.8vw, 32px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #222;
+}
+
+.aviaticket-stats__desc {
+  margin: 0;
+  font-size: clamp(13px, 1.35vw, 15px);
+  line-height: 1.45;
+  font-weight: 400;
+  color: #666;
+}
+
+/* Текст + макеты + CTA (светлая панель) */
+.aviaticket-split {
+  margin: 0 0 clamp(56px, 8vw, 96px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.aviaticket-split__panel {
+  background: #eef0f4;
+  border-radius: clamp(20px, 3vw, 28px);
+  padding: clamp(28px, 4vw, 48px) clamp(24px, 3vw, 40px) clamp(20px, 3vw, 28px);
+  box-sizing: border-box;
+}
+
+.aviaticket-split__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(28px, 5vw, 56px);
+}
+
+.aviaticket-split__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.aviaticket-split__title {
+  margin: 0 0 clamp(16px, 2vw, 22px);
+  font-size: clamp(26px, 3.4vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #222;
+}
+
+.aviaticket-split__text {
+  margin: 0 0 clamp(24px, 3.5vw, 36px);
+  font-size: clamp(16px, 1.8vw, 19px);
+  line-height: 1.55;
+  font-weight: 400;
+  color: #3a3a3a;
+}
+
+.aviaticket-split__badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: clamp(16px, 2.5vw, 28px) clamp(20px, 3vw, 40px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.aviaticket-split__badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 16rem;
+}
+
+.aviaticket-split__badge-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.aviaticket-split__badge-text {
+  font-size: clamp(13px, 1.4vw, 15px);
+  line-height: 1.35;
+  color: #555;
+}
+
+.aviaticket-split__visual {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.aviaticket-split__img {
+  display: block;
+  width: 100%;
+  max-width: min(620px, 100%);
+  height: auto;
+}
+
+.aviaticket-split__cta-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(8px, 2vw, 16px);
+  margin-bottom: clamp(-24px, -3.5vw, -32px);
+  position: relative;
+  z-index: 1;
+}
+
+.aviaticket-split__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px 14px 28px;
+  font-family: inherit;
+  font-size: clamp(15px, 1.7vw, 18px);
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background: #d44333;
+  border-radius: 999px;
+  transition: background 0.15s ease, transform 0.1s ease;
+  box-shadow: 0 8px 28px rgba(212, 67, 51, 0.35);
+}
+
+.aviaticket-split__btn:hover {
+  background: #c73a2b;
+  color: #fff;
+}
+
+.aviaticket-split__btn:active {
+  transform: scale(0.99);
+}
+
+.aviaticket-split__btn:focus-visible {
+  outline: 3px solid #d44333;
+  outline-offset: 3px;
+}
+
+.aviaticket-split__btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: #1a1a1a;
+}
+
+/* Блок «Удобный поиск авиабилетов»: макет интерфейса */
+.aviaticket-search {
+  margin: 0 0 clamp(48px, 7vw, 80px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.aviaticket-search__inner {
+  margin: 0;
+  padding: clamp(28px, 4vw, 48px) clamp(20px, 3vw, 40px) clamp(32px, 5vw, 56px);
+  background: #eef0f4;
+  border-radius: clamp(20px, 3vw, 28px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.aviaticket-search__title {
+  margin: 0 0 clamp(14px, 2vw, 20px);
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.aviaticket-search__title-accent {
+  color: #d44333;
+}
+
+.aviaticket-search__title-rest {
+  color: #222;
+}
+
+.aviaticket-search__lead {
+  margin: 0 auto clamp(28px, 4vw, 40px);
+  max-width: 42rem;
+  font-size: clamp(15px, 1.75vw, 18px);
+  line-height: 1.55;
+  font-weight: 400;
+  color: #3a3a3a;
+}
+
+.aviaticket-search__visual {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aviaticket-search__img {
+  display: block;
+  width: 100%;
+  max-width: 1120px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: clamp(12px, 2vw, 16px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+}
+
+/* Преимущества: сетка 4×2 */
+.aviaticket-features {
+  margin: 0 0 clamp(48px, 7vw, 80px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.aviaticket-features__title {
+  margin: 0 0 clamp(16px, 2.2vw, 22px);
+  text-align: center;
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #222;
+}
+
+.aviaticket-features__title-text {
+  color: #222;
+}
+
+.aviaticket-features__title-accent {
+  color: #d44333;
+}
+
+.aviaticket-features__lead {
+  margin: 0 auto clamp(32px, 4vw, 44px);
+  max-width: 42rem;
+  text-align: center;
+  font-size: clamp(15px, 1.75vw, 18px);
+  line-height: 1.55;
+  font-weight: 400;
+  color: #5c5c5c;
+}
+
+.aviaticket-features__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.aviaticket-features__card {
+  margin: 0;
+  padding: clamp(20px, 2.5vw, 26px);
+  background: #f2f3f7;
+  border-radius: 14px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.aviaticket-features__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  margin: 0 0 16px;
+  background: #fff;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+.aviaticket-features__icon {
+  display: block;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.aviaticket-features__text {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.45;
+  font-weight: 400;
+  color: #222;
+}
+
+.aviaticket-features__note {
+  margin: clamp(16px, 2vw, 20px) 0 0;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #888;
+  text-align: right;
+}
+
+/* Поддержка 24/7: текст + макет чата */
+.aviaticket-support {
+  margin: 0 0 clamp(40px, 6vw, 64px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.aviaticket-support__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(24px, 4vw, 48px);
+  padding: clamp(28px, 4.5vw, 48px) clamp(20px, 3.5vw, 40px);
+  background: #f0f2f5;
+  border-radius: clamp(20px, 3vw, 28px);
+  box-sizing: border-box;
+}
+
+.aviaticket-support__content {
+  flex: 1;
+  min-width: 0;
+  max-width: 36rem;
+}
+
+.aviaticket-support__title {
+  margin: 0 0 clamp(14px, 2vw, 20px);
+  font-size: clamp(26px, 3.6vw, 40px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: #222;
+}
+
+.aviaticket-support__text {
+  margin: 0;
+  font-size: clamp(16px, 1.65vw, 19px);
+  line-height: 1.55;
+  font-weight: 400;
+  color: #3a3a3a;
+}
+
+.aviaticket-support__text strong {
+  font-weight: 700;
+}
+
+.aviaticket-support__visual {
+  position: relative;
+  flex-shrink: 0;
+  align-self: center;
+  margin-right: clamp(8px, 2vw, 20px);
+}
+
+.aviaticket-support__chat {
+  display: block;
+  width: 100%;
+  max-width: min(540px, 100%);
+  height: auto;
+}
+
+/* Быстрая оплата: список + макет кабинета */
+.aviaticket-pay {
+  margin: 0 0 clamp(48px, 7vw, 80px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.aviaticket-pay__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(28px, 5vw, 56px);
+}
+
+.aviaticket-pay__content {
+  flex: 1;
+  min-width: 0;
+  max-width: 36rem;
+}
+
+.aviaticket-pay__title {
+  margin: 0 0 clamp(20px, 2.5vw, 28px);
+  font-size: clamp(26px, 3.4vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #222;
+}
+
+.aviaticket-pay__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.aviaticket-pay__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0 0 clamp(16px, 2vw, 22px);
+}
+
+.aviaticket-pay__item:last-child {
+  margin-bottom: 0;
+}
+
+.aviaticket-pay__arrow {
+  flex-shrink: 0;
+  margin-top: 0.15em;
+  font-size: 1.15em;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #d44333;
+}
+
+.aviaticket-pay__item-text {
+  font-size: clamp(16px, 1.8vw, 19px);
+  line-height: 1.55;
+  color: #3a3a3a;
+}
+
+.aviaticket-pay__item-text strong {
+  font-weight: 700;
+  color: #222;
+}
+
+.aviaticket-pay__visual {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aviaticket-pay__frame {
+  width: 100%;
+  max-width: min(620px, 100%);
+  padding: clamp(16px, 2.5vw, 28px);
+  background: #eef0f4;
+  border-radius: clamp(18px, 2.5vw, 24px);
+  box-sizing: border-box;
+}
+
+.aviaticket-pay__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: clamp(12px, 2vw, 16px);
+}
+
+/* Автоматизированная отчётность по поездкам */
+.aviaticket-report {
+  margin: 0 0 clamp(48px, 7vw, 80px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.aviaticket-report__header {
+  margin-bottom: clamp(28px, 4vw, 44px);
+  text-align: center;
+  max-width: 52rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aviaticket-report__title {
+  margin: 0;
+}
+
+.aviaticket-report__title-line {
+  display: block;
+  font-size: clamp(26px, 3.6vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.aviaticket-report__title-line--accent {
+  color: #d44333;
+}
+
+.aviaticket-report__title-line--dark {
+  margin-top: 0.12em;
+  color: #222;
+}
+
+.aviaticket-report__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+  align-items: stretch;
+}
+
+.aviaticket-report__card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(22px, 3vw, 32px) clamp(18px, 2.5vw, 28px) clamp(20px, 2.8vw, 28px);
+  background: #f2f3f7;
+  border-radius: clamp(22px, 3.5vw, 32px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.aviaticket-report__card-text {
+  margin: 0 0 clamp(18px, 2.5vw, 28px);
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.5;
+  font-weight: 400;
+  color: #3a3a3a;
+}
+
+.aviaticket-report__card-visual {
+  margin-top: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: clamp(160px, 22vw, 220px);
+}
+
+.aviaticket-report__card-img {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Все услуги в одном окне — как zhd-bileti.html */
+body.aviaticket-page .zhd-services-window {
+  margin: 0 0 clamp(40px, 6vw, 72px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+body.aviaticket-page .zhd-services-window__title {
+  margin: 0 0 clamp(28px, 4vw, 44px);
+  text-align: center;
+}
+
+body.aviaticket-page .zhd-services-window__title-line {
+  display: block;
+  font-size: clamp(26px, 3.6vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+body.aviaticket-page .zhd-services-window__title-line--dark {
+  color: #222;
+}
+
+body.aviaticket-page .zhd-services-window__title-line--accent {
+  margin-top: 0.12em;
+  color: #d84d3d;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: clamp(24px, 3.2vw, 36px);
+}
+
+body.aviaticket-page .zhd-services-window__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.65fr) minmax(0, 1fr);
+  gap: clamp(14px, 2vw, 20px);
+  align-items: stretch;
+}
+
+body.aviaticket-page .zhd-services-window__card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(12px, 1.6vw, 18px) clamp(12px, 1.6vw, 18px) clamp(10px, 1.4vw, 14px);
+  border-radius: clamp(20px, 2.8vw, 28px);
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+body.aviaticket-page .zhd-services-window__card--outline {
+  background: #fff;
+  border: 1px solid #d1d9e0;
+}
+
+body.aviaticket-page .zhd-services-window__card--fill {
+  background: #f0f2f5;
+}
+
+body.aviaticket-page .zhd-services-window__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: clamp(8px, 1.2vw, 12px);
+}
+
+body.aviaticket-page .zhd-services-window__head--compact {
+  margin-bottom: 0;
+}
+
+body.aviaticket-page .zhd-services-window__card-title {
+  margin: 0;
+  font-size: clamp(17px, 1.9vw, 22px);
+  font-weight: 600;
+  line-height: 1.2;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+body.aviaticket-page .zhd-services-window__head-icon {
+  flex-shrink: 0;
+  display: block;
+  width: clamp(32px, 4vw, 40px);
+  height: auto;
+  object-fit: contain;
+}
+
+body.aviaticket-page .zhd-services-window__media {
+  margin-top: auto;
+  border-radius: clamp(12px, 1.6vw, 16px);
+  overflow: hidden;
+  min-height: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  max-height: clamp(148px, 20vw, 200px);
+}
+
+body.aviaticket-page .zhd-services-window__img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: clamp(148px, 20vw, 200px);
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+body.aviaticket-page .zhd-services-window__card--taxi {
+  justify-content: flex-start;
+}
+
+body.aviaticket-page .zhd-services-window__card--taxi .zhd-services-window__head {
+  flex-shrink: 0;
+}
+
+body.aviaticket-page .zhd-services-window__card--taxi .zhd-services-window__media {
+  flex: 1 1 auto;
+  margin-top: auto;
+  max-height: none;
+  min-height: 0;
+  align-items: flex-end;
+  align-self: stretch;
+}
+
+body.aviaticket-page .zhd-services-window__img--taxi {
+  max-height: clamp(108px, 15vw, 150px);
+  margin-top: auto;
+}
+
+/* Центр секции: мозаика как на главной (1index.html → .services) */
+body.aviaticket-page .aviaticket-services-main-mosaic {
+  min-width: 0;
+  align-self: stretch;
+}
+
+body.aviaticket-page .aviaticket-services-main-mosaic__grid {
+  --mosaic-side-min-h: clamp(56px, 6vw, 100px);
+  --mosaic-side-pad-y: clamp(10px, 1.3vw, 14px);
+  --mosaic-side-pad-x: clamp(12px, 1.8vw, 20px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.42fr) minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  gap: 10px;
+  justify-content: stretch;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  min-height: 100%;
+  height: 100%;
+}
+
+body.aviaticket-page .aviaticket-services-main-mosaic__grid > .services__card--aeroekspressy {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+body.aviaticket-page .aviaticket-services-main-mosaic__grid > .services__card--vizovaya-podderzhka {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+body.aviaticket-page .aviaticket-services-main-mosaic__grid > .services__card--transfery {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+body.aviaticket-page .aviaticket-services-main-mosaic .services__card {
+  position: relative;
+  overflow: hidden;
+  border-radius: clamp(14px, 2vw, 18px);
+  padding: clamp(12px, 1.6vw, 22px) clamp(14px, 2vw, 28px);
+  text-align: left;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #d2d6e0;
+  border: 2px solid transparent;
+  box-shadow: none;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body.aviaticket-page .aviaticket-services-main-mosaic .services__card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+body.aviaticket-page .aviaticket-services-main-mosaic .services__card-title {
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+  font-size: clamp(16px, 2.1vw, 26px);
+  font-weight: 600;
+  color: #393939;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+body.aviaticket-page .aviaticket-services-main-mosaic__grid > .services__card--aeroekspressy .services__card-title,
+body.aviaticket-page .aviaticket-services-main-mosaic__grid > .services__card--vizovaya-podderzhka .services__card-title {
+  font-size: clamp(15px, 1.9vw, 22px);
+}
+
+body.aviaticket-page .aviaticket-services-main-mosaic .services__badge-icon {
+  flex-shrink: 0;
+  width: clamp(38px, 4.5vw, 52px);
+  height: clamp(38px, 4.5vw, 52px);
+  object-fit: contain;
+}
+
+body.aviaticket-page .aviaticket-services-main-mosaic__grid > .services__card--aeroekspressy .services__badge-icon,
+body.aviaticket-page .aviaticket-services-main-mosaic__grid > .services__card--vizovaya-podderzhka .services__badge-icon {
+  width: clamp(32px, 3.8vw, 44px);
+  height: clamp(32px, 3.8vw, 44px);
+}
+
+body.aviaticket-page .aviaticket-services-main-mosaic .services__card--aeroekspressy {
+  background-color: #fff;
+  border-color: #b8c3d6;
+  min-height: var(--mosaic-side-min-h);
+  padding: var(--mosaic-side-pad-y) var(--mosaic-side-pad-x);
+  justify-content: center;
+}
+
+body.aviaticket-page .aviaticket-services-main-mosaic .services__card--vizovaya-podderzhka {
+  min-height: var(--mosaic-side-min-h);
+  padding: var(--mosaic-side-pad-y) var(--mosaic-side-pad-x);
+  justify-content: center;
+}
+
+body.aviaticket-page .aviaticket-services-main-mosaic .services__card--transfery {
+  --transfer-panel: #c4c9d84d;
+  --transfer-panel-visual: #d8dae4;
+  --transfer-connector-size: 20px;
+  position: relative;
+  z-index: 0;
+  background-color: white;
+  border: none;
+  min-height: 0;
+  height: 100%;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0;
+  align-items: stretch;
+  overflow: visible;
+}
+
+body.aviaticket-page .aviaticket-services-main-mosaic .services__transfer-top {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  min-height: 0;
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+
+body.aviaticket-page .aviaticket-services-main-mosaic .services__transfer-top .services__card-head {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+  background-color: var(--transfer-panel);
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 0;
+  padding: 12px 12px;
+  box-sizing: border-box;
+}
+
+body.aviaticket-page .aviaticket-services-main-mosaic .services__transfer-vip {
+  grid-column: 1;
+  grid-row: 2;
+  min-width: 0;
+  min-height: var(--mosaic-side-min-h);
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--mosaic-side-pad-y) var(--mosaic-side-pad-x);
+  margin-top: 8px;
+  margin-right: 8px;
+  background-color: var(--transfer-panel);
+  border: 2px solid transparent;
+  border-radius: 18px;
+  align-self: start;
+  box-sizing: border-box;
+}
+
+body.aviaticket-page .aviaticket-services-main-mosaic .services__transfer-vip .services__card-title {
+  position: relative;
+  z-index: 2;
+  font-size: clamp(14px, 1.8vw, 22px);
+  line-height: 1.1;
+  margin: 0;
+  text-align: center;
+}
+
+body.aviaticket-page .aviaticket-services-main-mosaic .services__transfer-car {
+  grid-column: 2;
+  grid-row: 2;
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+  z-index: 2;
+  background-color: var(--transfer-panel);
+  display: flex;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 2px 2px 4px;
+}
+
+body.aviaticket-page .aviaticket-services-main-mosaic .services__transfer-car .services__img--car {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 168px;
+  max-height: 88px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transform: translate(0, 2px);
+}
+
+/* Кнопка «Получить консультацию» (как на zhd-bileti, без подключения zhd-bileti.css) */
+body.aviaticket-page .zhd-consult-cta {
+  display: flex;
+  justify-content: center;
+  margin: clamp(32px, 5vw, 56px) 0 clamp(48px, 7vw, 80px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+body.aviaticket-page .zhd-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px 14px 24px;
+  font-family: inherit;
+  font-size: clamp(15px, 1.7vw, 18px);
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background: #d84f37;
+  border-radius: 999px;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+body.aviaticket-page .zhd-hero__btn:hover {
+  background: #c73a2b;
+  color: #fff;
+}
+
+body.aviaticket-page .zhd-hero__btn:active {
+  transform: scale(0.99);
+}
+
+body.aviaticket-page .zhd-hero__btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: #1a1a1a;
+}
+
+/* Доверие клиентов: заголовок + бегущая строка (как на zhd-bileti) */
+body.aviaticket-page .aviaticket-trust {
+  --aviaticket-trust-marquee-gap: 80px;
+  --aviaticket-trust-marquee-h: 53px;
+  --aviaticket-trust-marquee-opacity: 0.7;
+  margin: 0 0 clamp(32px, 5vw, 56px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+body.aviaticket-page .aviaticket-trust__intro {
+  text-align: center;
+  padding: clamp(20px, 3vw, 36px) clamp(12px, 3vw, 20px) clamp(20px, 3vw, 32px);
+  box-sizing: border-box;
+}
+
+body.aviaticket-page .aviaticket-trust__title {
+  margin: 0 auto;
+  max-width: 52rem;
+  font-size: clamp(20px, 3vw, 32px);
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+}
+
+body.aviaticket-page .aviaticket-trust__row {
+  display: block;
+}
+
+body.aviaticket-page .aviaticket-trust__row + .aviaticket-trust__row {
+  margin-top: 0.2em;
+}
+
+body.aviaticket-page .aviaticket-trust__accent {
+  color: #d8432e;
+}
+
+body.aviaticket-page .aviaticket-trust__dark,
+body.aviaticket-page .aviaticket-trust__row--dark {
+  color: #333;
+}
+
+body.aviaticket-page .aviaticket-trust__marquee {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  box-sizing: border-box;
+  padding: clamp(18px, 2.8vw, 40px) 0;
+  overflow: hidden;
+}
+
+body.aviaticket-page .aviaticket-trust__marquee-strip {
+  overflow: hidden;
+  width: 100%;
+}
+
+body.aviaticket-page .aviaticket-trust__marquee-track {
+  display: flex;
+  align-items: center;
+  gap: var(--aviaticket-trust-marquee-gap);
+  width: max-content;
+  animation: aviaticket-trust-marquee 40s linear infinite;
+}
+
+body.aviaticket-page .aviaticket-trust__marquee-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+body.aviaticket-page .aviaticket-trust__marquee-logo {
+  display: block;
+  height: var(--aviaticket-trust-marquee-h);
+  width: auto;
+  min-width: 1760px;
+  object-fit: contain;
+  opacity: var(--aviaticket-trust-marquee-opacity);
+}
+
+@keyframes aviaticket-trust-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - var(--aviaticket-trust-marquee-gap) / 2));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.aviaticket-page .aviaticket-trust__marquee-track {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body.aviaticket-page .aviaticket-trust {
+    --aviaticket-trust-marquee-gap: 48px;
+  }
+
+  body.aviaticket-page .aviaticket-trust__marquee {
+    padding: 24px 0;
+  }
+
+  body.aviaticket-page .aviaticket-trust__marquee-logo {
+    height: 32px;
+    min-width: 1200px;
+  }
+
+  body.aviaticket-page .aviaticket-trust__marquee-track {
+    animation-duration: 30s;
+  }
+}
+
+@media (max-width: 480px) {
+  body.aviaticket-page .aviaticket-trust {
+    --aviaticket-trust-marquee-gap: 32px;
+  }
+
+  body.aviaticket-page .aviaticket-trust__marquee {
+    padding: 18px 0;
+  }
+
+  body.aviaticket-page .aviaticket-trust__marquee-logo {
+    height: 24px;
+    min-width: 900px;
+  }
+}
+
+/* Отзывы клиентов (три карточки) */
+body.aviaticket-page .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+body.aviaticket-page .aviaticket-cases {
+  margin: 0 calc(-1 * clamp(12px, 3.5vw, 24px)) 0;
+  padding: clamp(36px, 5vw, 56px) clamp(12px, 3.5vw, 24px) clamp(40px, 6vw, 64px);
+  background: #f0f1f7;
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+  box-sizing: border-box;
+}
+
+body.aviaticket-page .aviaticket-cases__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 22px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body.aviaticket-page .aviaticket-cases__card {
+  background: #fff;
+  border-radius: clamp(22px, 3vw, 30px);
+  padding: clamp(20px, 2.5vw, 28px);
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+body.aviaticket-page .aviaticket-cases__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: clamp(16px, 2vw, 20px);
+  min-width: 0;
+}
+
+body.aviaticket-page .aviaticket-cases__logo-pill {
+  flex: 0 1 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px 12px;
+  min-height: 44px;
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: 0 2px 14px rgba(15, 23, 42, 0.07);
+  box-sizing: border-box;
+}
+
+body.aviaticket-page .aviaticket-cases__logo-pill--wide {
+  padding: 6px 12px;
+  border-radius: 14px;
+}
+
+body.aviaticket-page .aviaticket-cases__logo-pill--gelpic {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 14px;
+  padding: 10px 14px;
+  min-height: auto;
+}
+
+body.aviaticket-page .aviaticket-cases__gelpic-brand {
+  display: block;
+  font-size: clamp(12px, 1.35vw, 15px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #1e4db7;
+  line-height: 1.2;
+}
+
+body.aviaticket-page .aviaticket-cases__gelpic-tag {
+  display: block;
+  margin-top: 4px;
+  font-size: clamp(9px, 1vw, 11px);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1e4db7;
+  opacity: 0.9;
+  line-height: 1.2;
+  max-width: 11em;
+}
+
+body.aviaticket-page .aviaticket-cases__logo-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
+}
+
+body.aviaticket-page .aviaticket-cases__avatar-wrap {
+  flex-shrink: 0;
+}
+
+body.aviaticket-page .aviaticket-cases__avatar-fallback {
+  display: block;
+  width: clamp(44px, 5vw, 52px);
+  height: clamp(44px, 5vw, 52px);
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #e4e7ef;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+  box-sizing: border-box;
+}
+
+body.aviaticket-page .aviaticket-cases__name {
+  flex: 0 1 auto;
+  margin: 0;
+  max-width: 42%;
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+  text-align: right;
+}
+
+body.aviaticket-page .aviaticket-cases__quote {
+  margin: 0;
+  padding: clamp(16px, 2vw, 22px);
+  background: #f7f8fc;
+  border: 1px solid #e8eaf0;
+  border-radius: clamp(16px, 2vw, 22px);
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+body.aviaticket-page .aviaticket-cases__quote p {
+  margin: 0 0 0.9em;
+  font-size: clamp(14px, 1.45vw, 16px);
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
+}
+
+body.aviaticket-page .aviaticket-cases__quote p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  body.aviaticket-page .aviaticket-cases__grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+  }
+
+  body.aviaticket-page .aviaticket-cases__name {
+    max-width: none;
+  }
+}
+
+@media (max-width: 560px) {
+  body.aviaticket-page .aviaticket-cases__head {
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+
+  body.aviaticket-page .aviaticket-cases__name {
+    width: 100%;
+    flex-basis: 100%;
+    text-align: left;
+    order: 3;
+  }
+
+  body.aviaticket-page .aviaticket-cases__logo-pill {
+    order: 1;
+  }
+
+  body.aviaticket-page .aviaticket-cases__avatar-wrap {
+    order: 2;
+    margin-left: auto;
+  }
+}
+
+/* CTA «Попробовать бесплатно» под отзывами */
+body.aviaticket-page .aviaticket-bottom-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: clamp(28px, 4vw, 48px) clamp(12px, 3.5vw, 24px) clamp(40px, 6vw, 64px);
+  background: #fff;
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+  box-sizing: border-box;
+}
+
+body.aviaticket-page .aviaticket-bottom-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 2vw, 18px);
+  padding: 12px 12px 12px clamp(28px, 4vw, 40px);
+  min-height: 56px;
+  font-family: inherit;
+  font-size: clamp(15px, 1.8vw, 18px);
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background: #d94535;
+  border-radius: 999px;
+  box-shadow: 0 10px 32px rgba(217, 69, 53, 0.28);
+  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+  box-sizing: border-box;
+}
+
+body.aviaticket-page .aviaticket-bottom-cta__btn:hover {
+  background: #c73a2b;
+  color: #fff;
+  box-shadow: 0 8px 28px rgba(199, 58, 43, 0.32);
+}
+
+body.aviaticket-page .aviaticket-bottom-cta__btn:active {
+  transform: scale(0.99);
+}
+
+body.aviaticket-page .aviaticket-bottom-cta__btn:focus-visible {
+  outline: 3px solid #d94535;
+  outline-offset: 3px;
+}
+
+body.aviaticket-page .aviaticket-bottom-cta__label {
+  flex: 1 1 auto;
+  text-align: center;
+  padding-left: 4px;
+}
+
+body.aviaticket-page .aviaticket-bottom-cta__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: clamp(44px, 6vw, 52px);
+  height: clamp(44px, 6vw, 52px);
+  margin: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: #2a2a2a;
+  box-sizing: border-box;
+}
+
+@media (max-width: 560px) {
+  body.aviaticket-page .aviaticket-bottom-cta__btn {
+    width: 100%;
+    max-width: 22rem;
+    justify-content: center;
+  }
+}
+
+/* FAQ: строки на светло-сером фоне, плюс справа */
+body.aviaticket-page .aviaticket-faq {
+  margin: 0;
+  padding: clamp(32px, 5vw, 56px) clamp(12px, 3.5vw, 24px) clamp(40px, 6vw, 72px);
+  background: #fff;
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+  box-sizing: border-box;
+}
+
+body.aviaticket-page .aviaticket-faq__inner {
+  max-width: 52rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body.aviaticket-page .aviaticket-faq__title {
+  margin: 0 0 clamp(24px, 3.5vw, 40px);
+  text-align: center;
+  font-size: clamp(20px, 2.8vw, 32px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+}
+
+body.aviaticket-page .aviaticket-faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+body.aviaticket-page .aviaticket-faq__item {
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+  background: #f0f2f5;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+body.aviaticket-page .aviaticket-faq__question {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: clamp(14px, 2vw, 18px) clamp(16px, 2.2vw, 22px);
+  margin: 0;
+  cursor: pointer;
+  font-size: clamp(15px, 1.65vw, 18px);
+  font-weight: 600;
+  line-height: 1.35;
+  color: #222;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+body.aviaticket-page .aviaticket-faq__question::-webkit-details-marker {
+  display: none;
+}
+
+body.aviaticket-page .aviaticket-faq__question:focus-visible {
+  outline: 2px solid #d94535;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+body.aviaticket-page .aviaticket-faq__q-text {
+  flex: 1;
+  min-width: 0;
+}
+
+body.aviaticket-page .aviaticket-faq__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: clamp(1.5rem, 2.5vw, 1.875rem);
+  font-weight: 300;
+  line-height: 1;
+  color: #1a1a1a;
+  transition: transform 0.2s ease;
+}
+
+body.aviaticket-page .aviaticket-faq__item[open] .aviaticket-faq__icon {
+  transform: rotate(45deg);
+}
+
+body.aviaticket-page .aviaticket-faq__panel {
+  padding: 0 clamp(16px, 2.2vw, 22px) clamp(14px, 2vw, 18px);
+  box-sizing: border-box;
+}
+
+body.aviaticket-page .aviaticket-faq__answer {
+  margin: 0;
+  padding: 0 0 4px;
+  font-size: clamp(14px, 1.5vw, 17px);
+  line-height: 1.55;
+  font-weight: 400;
+  color: #4a4a4a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.aviaticket-page .aviaticket-faq__icon {
+    transition: none;
+  }
+}
+
+.aviaticket-next-cta {
+  display: flex;
+  justify-content: center;
+  margin: clamp(8px, 2vw, 16px) 0 clamp(40px, 6vw, 72px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.aviaticket-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px 14px 28px;
+  font-family: inherit;
+  font-size: clamp(15px, 1.7vw, 18px);
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background: #d44333;
+  border-radius: 999px;
+  transition: background 0.15s ease, transform 0.1s ease;
+  box-shadow: 0 8px 28px rgba(212, 67, 51, 0.28);
+}
+
+.aviaticket-pill-btn:hover {
+  background: #c73a2b;
+  color: #fff;
+}
+
+.aviaticket-pill-btn:active {
+  transform: scale(0.99);
+}
+
+.aviaticket-pill-btn:focus-visible {
+  outline: 3px solid #d44333;
+  outline-offset: 3px;
+}
+
+.aviaticket-pill-btn__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: #4a4a4a;
+}
+
+@media (max-width: 900px) {
+  body.aviaticket-page .komand-main {
+    padding-left: clamp(12px, 3.5vw, 24px);
+    padding-right: clamp(12px, 3.5vw, 24px);
+  }
+
+  .aviaticket-hero__inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .aviaticket-hero__visual {
+    max-width: none;
+    justify-content: center;
+  }
+
+  .aviaticket-stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .aviaticket-split__inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .aviaticket-split__visual {
+    justify-content: center;
+  }
+
+  .aviaticket-split__img {
+    max-width: min(520px, 100%);
+    margin: 0 auto;
+  }
+
+  .aviaticket-split__cta-wrap {
+    margin-bottom: clamp(-20px, -3vw, -26px);
+  }
+
+  .aviaticket-features__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .aviaticket-support__inner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .aviaticket-support__content {
+    max-width: none;
+  }
+
+  .aviaticket-support__visual {
+    margin: clamp(8px, 2vw, 16px) auto 0;
+    max-width: min(480px, 100%);
+  }
+
+  .aviaticket-support__chat {
+    margin: 0 auto;
+  }
+
+  .aviaticket-pay__inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .aviaticket-pay__content {
+    max-width: none;
+  }
+
+  .aviaticket-pay__visual {
+    justify-content: center;
+  }
+
+  .aviaticket-pay__img {
+    margin: 0 auto;
+  }
+
+  .aviaticket-report__grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.aviaticket-page .zhd-services-window__grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.aviaticket-page .aviaticket-services-main-mosaic__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 12px;
+  }
+
+  body.aviaticket-page .aviaticket-services-main-mosaic__grid > .services__card--aeroekspressy,
+  body.aviaticket-page .aviaticket-services-main-mosaic__grid > .services__card--vizovaya-podderzhka,
+  body.aviaticket-page .aviaticket-services-main-mosaic__grid > .services__card--transfery {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+  }
+
+  body.aviaticket-page .aviaticket-services-main-mosaic .services__card--transfery {
+    display: flex !important;
+    flex-direction: column;
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
+    gap: 0;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  body.aviaticket-page .aviaticket-services-main-mosaic .services__card--transfery .services__transfer-vip {
+    display: none !important;
+  }
+
+  body.aviaticket-page .aviaticket-services-main-mosaic .services__card--transfery .services__transfer-top {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+
+  body.aviaticket-page .aviaticket-services-main-mosaic .services__card--transfery .services__transfer-top .services__card-head {
+    border-radius: clamp(18px, 4vw, 22px) clamp(18px, 4vw, 22px) 0 0;
+    padding: 12px 14px;
+    align-items: center;
+    min-height: 72px;
+  }
+
+  body.aviaticket-page .aviaticket-services-main-mosaic .services__card--transfery .services__transfer-car {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    border-radius: 0 0 clamp(18px, 4vw, 22px) clamp(18px, 4vw, 22px);
+    padding: 6px 10px 10px;
+    min-height: 84px;
+    background: #d8dbe5;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  body.aviaticket-page .aviaticket-services-main-mosaic .services__card--aeroekspressy {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 72px;
+    padding: 12px 14px;
+    background: #fff;
+    border: 2px solid #b8c3d6;
+  }
+
+  body.aviaticket-page .aviaticket-services-main-mosaic .services__card--vizovaya-podderzhka {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 72px;
+    padding: 12px 14px;
+    background: #dfe2e9;
+  }
+
+  body.aviaticket-page .aviaticket-services-main-mosaic .services__transfer-car .services__img--car {
+    max-width: 55%;
+    transform: none;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+  .aviaticket-stats__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .aviaticket-features__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .aviaticket-report__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 901px) {
+  body.aviaticket-page .zhd-services-window__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  body.aviaticket-page .zhd-services-window__grid > .zhd-services-window__card:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  body.aviaticket-page .zhd-services-window__grid > .zhd-services-window__card--taxi {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  body.aviaticket-page .zhd-services-window__grid > .aviaticket-services-main-mosaic {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 560px) {
+  body.aviaticket-page .komand-main {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .aviaticket-stats__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aviaticket-split__btn {
+    width: 100%;
+    max-width: 22rem;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .aviaticket-features__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aviaticket-features__note {
+    text-align: left;
+  }
+
+  .aviaticket-pill-btn {
+    width: 100%;
+    max-width: 22rem;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}

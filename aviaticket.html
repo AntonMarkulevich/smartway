@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Авиабилеты для бизнеса — Smartway</title>
+  <meta name="description" content="Поиск и бронирование авиабилетов для командировок: Smartway для юридических лиц.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/komandirovka.css">
+  <link rel="stylesheet" href="css/footer-unified.css">
+  <link rel="stylesheet" href="css/site-header.css">
+  <link rel="stylesheet" href="css/helpic.css">
+  <link rel="stylesheet" href="css/aviaticket-page.css">
+  <link rel="stylesheet" href="css/zhd-bileti.css">
+</head>
+<body class="komand-page komand-page--no-sidebar aviaticket-page">
+  <div class="komand-layout">
+    <div class="komand-layout__segment komand-layout__segment--top">
+      <header class="header">
+        <input type="checkbox" id="site-nav" class="site-nav-input" aria-hidden="true">
+        <div class="header__inner">
+          <div class="header__left">
+            <a href="1index.html" aria-label="Smartway — на главную">
+              <img src="img/header-logo.svg" alt="Smartway" class="header__logo">
+            </a>
+            <div class="header__divider"></div>
+            <span class="header__descriptor">Стандарт управления<br>командировками</span>
+          </div>
+          <label for="site-nav" class="header__burger" aria-label="Открыть меню">
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+          </label>
+          <nav class="header__nav" aria-label="Основное меню">
+            <ul class="header__menu">
+              <li><a href="1index.html#audience" class="header__link">Для кого <span class="header__chevron"></span></a></li>
+              <li><a href="1index.html#capabilities" class="header__link">Возможности <span class="header__chevron"></span></a></li>
+              <li><a href="1index.html#useful" class="header__link">Полезное <span class="header__chevron"></span></a></li>
+              <li><a href="1index.html#mice" class="header__link">MICE</a></li>
+              <li><a href="1index.html#tariffs" class="header__link">Тарифы</a></li>
+              <li><a href="clients.html" class="header__link">Клиенты</a></li>
+            </ul>
+          </nav>
+          <div class="header__actions">
+            <a href="mailto:hello@smartway.today" class="header__icon-btn" aria-label="Написать">
+              <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail">
+            </a>
+            <a href="tel:+78007751428" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
+              <img src="img/phone.svg" alt="">
+            </a>
+            <a href="login.html" class="header__login">
+              <img src="img/header-icon-email.svg" alt=""> Войти
+            </a>
+            <a href="https://smartway.today/" class="header__btn">Протестировать</a>
+          </div>
+        </div>
+        <label for="site-nav" class="header__backdrop" aria-hidden="true"></label>
+        <div class="header__drawer" aria-label="Меню">
+          <div class="header__drawer-inner">
+            <label for="site-nav" class="header__drawer-close" aria-label="Закрыть">×</label>
+            <ul class="header__drawer-menu">
+              <li><a href="1index.html#audience" class="header__drawer-link">Для кого</a></li>
+              <li><a href="1index.html#capabilities" class="header__drawer-link">Возможности</a></li>
+              <li><a href="1index.html#useful" class="header__drawer-link">Полезное</a></li>
+              <li><a href="1index.html#mice" class="header__drawer-link">MICE</a></li>
+              <li><a href="1index.html#tariffs" class="header__drawer-link">Тарифы</a></li>
+              <li><a href="clients.html" class="header__drawer-link">Клиенты</a></li>
+            </ul>
+            <div class="header__drawer-contacts" aria-label="Связаться">
+              <a href="mailto:hello@smartway.today" class="header__icon-btn" aria-label="Написать">
+                <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail">
+              </a>
+              <a href="tel:+78007751428" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
+                <img src="img/phone.svg" alt="">
+              </a>
+            </div>
+            <div class="header__drawer-cta">
+              <a href="login.html" class="header__drawer-login">Войти</a>
+              <a href="https://smartway.today/" class="header__btn header__drawer-btn">Протестировать</a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div class="komand-layout__segment komand-layout__segment--bottom">
+      <main class="komand-main">
+        <section class="aviaticket-hero" aria-labelledby="aviaticket-hero-title">
+          <div class="aviaticket-hero__inner">
+            <div class="aviaticket-hero__content">
+              <h1 id="aviaticket-hero-title" class="aviaticket-hero__title">Авиабилеты для командировок и деловых поездок</h1>
+              <p class="aviaticket-hero__lead">
+                Ищите и бронируйте рейсы для сотрудников в одном окне: корпоративная оплата, тревел-политики и отчётность в Smartway.
+              </p>
+              <a href="registration.html" class="aviaticket-hero__btn">
+                <span class="aviaticket-hero__btn-label">Попробовать бесплатно</span>
+                <span class="aviaticket-hero__btn-icon" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M1 7h12M8 1l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </a>
+            </div>
+            <div class="aviaticket-hero__visual">
+              <img src="img/aviamain.png" class="aviaticket-hero__img" width="560" height="400" alt="Поиск и выбор авиабилетов в интерфейсе Smartway" loading="eager" decoding="async">
+            </div>
+          </div>
+        </section>
+
+        <section class="aviaticket-stats" aria-labelledby="aviaticket-stats-title">
+          <h2 id="aviaticket-stats-title" class="aviaticket-stats__title">Smartway в цифрах</h2>
+          <div class="aviaticket-stats__grid">
+            <article class="aviaticket-stats__card">
+              <p class="aviaticket-stats__value">№1</p>
+              <p class="aviaticket-stats__desc">на рынке бизнес-тревел по версии РБК</p>
+            </article>
+            <article class="aviaticket-stats__card">
+              <p class="aviaticket-stats__value">850+</p>
+              <p class="aviaticket-stats__desc">авиакомпаний доступны для клиентов</p>
+            </article>
+            <article class="aviaticket-stats__card">
+              <p class="aviaticket-stats__value">2&nbsp;млн</p>
+              <p class="aviaticket-stats__desc">бронирований авиабилетов в 2025 году</p>
+            </article>
+            <article class="aviaticket-stats__card">
+              <p class="aviaticket-stats__value">10 лет</p>
+              <p class="aviaticket-stats__desc">в сфере делового туризма</p>
+            </article>
+            <article class="aviaticket-stats__card">
+              <p class="aviaticket-stats__value">148&nbsp;500+</p>
+              <p class="aviaticket-stats__desc">пользователей в сервисе</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="aviaticket-split" aria-labelledby="aviaticket-split-title">
+          <div class="aviaticket-split__panel">
+            <div class="aviaticket-split__inner">
+              <div class="aviaticket-split__content">
+                <h2 id="aviaticket-split-title" class="aviaticket-split__title">От покупки до отчёта по деловой поездке</h2>
+                <p class="aviaticket-split__text">
+                  В сервисе Smartway вы за пару минут сможете подобрать, согласовать и оплатить авиабилеты для командировок по безналичному расчёту. А также обеспечить контроль расходов, прозрачную отчётность и удобство для бухгалтерии&nbsp;— в одном окне.
+                </p>
+                <ul class="aviaticket-split__badges">
+                  <li class="aviaticket-split__badge">
+                    <img src="img/mclogo.png" alt="" class="aviaticket-split__badge-icon" width="44" height="44" loading="lazy" decoding="async">
+                    <span class="aviaticket-split__badge-text">Входим в реестр российского ПО «Минцифры»</span>
+                  </li>
+                  <li class="aviaticket-split__badge">
+                    <img src="img/1clogo.png" alt="" class="aviaticket-split__badge-icon" width="44" height="44" loading="lazy" decoding="async">
+                    <span class="aviaticket-split__badge-text">Входим в группу компаний «1С»</span>
+                  </li>
+                  <li class="aviaticket-split__badge">
+                    <img src="img/sklogo.png" alt="" class="aviaticket-split__badge-icon" width="44" height="44" loading="lazy" decoding="async">
+                    <span class="aviaticket-split__badge-text">Резиденты технопарка «Сколково»</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="aviaticket-split__visual">
+                <img src="img/tabletavia.png" class="aviaticket-split__img" width="640" height="420" alt="Интерфейс Smartway на планшете и в мобильном приложении: поиск авиабилетов и заявки" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <div class="aviaticket-split__cta-wrap">
+              <a href="registration.html" class="aviaticket-split__btn">
+                <span class="aviaticket-split__btn-label">Попробовать бесплатно</span>
+                <span class="aviaticket-split__btn-icon" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 7h12M8 1l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="aviaticket-search" aria-labelledby="aviaticket-search-title">
+          <div class="aviaticket-search__inner">
+            <h2 id="aviaticket-search-title" class="aviaticket-search__title">
+              <span class="aviaticket-search__title-accent">Удобный поиск</span>
+              <span class="aviaticket-search__title-rest"> авиабилетов</span>
+            </h2>
+            <p class="aviaticket-search__lead">
+              Работает как привычный онлайн-поиск, но с корпоративными способами оплаты, автоматическими закрывающими документами и гибкими настройками Travel-политики
+            </p>
+            <div class="aviaticket-search__visual">
+              <img src="img/aviasearch.png" class="aviaticket-search__img" width="1120" height="640" alt="Поиск авиабилетов в Smartway: строка поиска, фильтры и дополнительные услуги" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </section>
+
+        <section class="aviaticket-features" aria-labelledby="aviaticket-features-title">
+          <h2 id="aviaticket-features-title" class="aviaticket-features__title">
+            <span class="aviaticket-features__title-text">Перелёты для бизнеса </span><span class="aviaticket-features__title-accent">без переплат</span>
+          </h2>
+          <p class="aviaticket-features__lead">
+            В сервисе Smartway вы за пару минут сможете подобрать, согласовать и оплатить авиабилеты для командировок по безналичному расчёту. А также обеспечить контроль расходов, прозрачную отчётность и удобство для бухгалтерии&nbsp;— в одном окне.
+          </p>
+          <div class="aviaticket-features__grid">
+            <article class="aviaticket-features__card">
+              <div class="aviaticket-features__icon-wrap">
+                <img src="img/avialogos/Group%202085656725.png" width="60" height="60" alt="" class="aviaticket-features__icon" decoding="async">
+              </div>
+              <p class="aviaticket-features__text">Экономьте до 7% благодаря корпоративным программам от авиакомпаний</p>
+            </article>
+            <article class="aviaticket-features__card">
+              <div class="aviaticket-features__icon-wrap">
+                <img src="img/avialogos/Group%202085656726.png" width="60" height="60" alt="" class="aviaticket-features__icon" decoding="async">
+              </div>
+              <p class="aviaticket-features__text">Настраивайте гибкие лимиты в Travel-политике компании</p>
+            </article>
+            <article class="aviaticket-features__card">
+              <div class="aviaticket-features__icon-wrap">
+                <img src="img/avialogos/Group%202085656727.png" width="60" height="60" alt="" class="aviaticket-features__icon" decoding="async">
+              </div>
+              <p class="aviaticket-features__text">Покупайте билеты на самолёт для юридических лиц со сложными маршрутами</p>
+            </article>
+            <article class="aviaticket-features__card">
+              <div class="aviaticket-features__icon-wrap">
+                <img src="img/avialogos/Group%202085656729.png" width="60" height="60" alt="" class="aviaticket-features__icon" decoding="async">
+              </div>
+              <p class="aviaticket-features__text">Оплачивайте билеты с расчётного счёта или с отсрочкой платежа</p>
+            </article>
+            <article class="aviaticket-features__card">
+              <div class="aviaticket-features__icon-wrap">
+                <img src="img/avialogos/Group%202085656730.png" width="60" height="60" alt="" class="aviaticket-features__icon" decoding="async">
+              </div>
+              <p class="aviaticket-features__text">Возвращайте авиабилеты без штрафов в течение 24 часов после покупки*</p>
+            </article>
+            <article class="aviaticket-features__card">
+              <div class="aviaticket-features__icon-wrap">
+                <img src="img/avialogos/Group%202085656731.png" width="60" height="60" alt="" class="aviaticket-features__icon" decoding="async">
+              </div>
+              <p class="aviaticket-features__text">Выбирайте авиабилеты по выгодным ценам благодаря цветовой разметке в поиске</p>
+            </article>
+            <article class="aviaticket-features__card">
+              <div class="aviaticket-features__icon-wrap">
+                <img src="img/avialogos/Group%202085656732.png" width="60" height="60" alt="" class="aviaticket-features__icon" decoding="async">
+              </div>
+              <p class="aviaticket-features__text">Оформляйте без ошибок благодаря автозаполнению данных</p>
+            </article>
+            <article class="aviaticket-features__card">
+              <div class="aviaticket-features__icon-wrap">
+                <img src="img/avialogos/Group%202085656733.png" width="60" height="60" alt="" class="aviaticket-features__icon" decoding="async">
+              </div>
+              <p class="aviaticket-features__text">Используйте детализированную аналитику расходов</p>
+            </article>
+          </div>
+          <p class="aviaticket-features__note">*точное время резерва зависит от условий конкретной авиакомпании</p>
+        </section>
+
+
+        <div class="aviaticket-next-cta">
+          <a href="registration.html" class="aviaticket-pill-btn">
+            <span class="aviaticket-pill-btn__label">Проверить выгоду</span>
+            <span class="aviaticket-pill-btn__icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 7h12M8 1l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+        <section class="aviaticket-support" aria-labelledby="aviaticket-support-title">
+          <div class="aviaticket-support__inner">
+            <div class="aviaticket-support__content">
+              <h2 id="aviaticket-support-title" class="aviaticket-support__title">Поддержка 24/7</h2>
+              <p class="aviaticket-support__text">
+                Travel-поддержка Smartway на сайте, в мобильном приложении или по телефону <strong>за 2 минуты поможет решить любые вопросы по бронированию</strong>: от изменений и отмен до покупки дополнительных услуг
+              </p>
+            </div>
+            <div class="aviaticket-support__visual">
+              <img src="img/aviasupport.png" class="aviaticket-support__chat" width="560" height="400" alt="Чат Travel-помощника: отмена бронирования авиабилета и ответ поддержки" loading="lazy" decoding="async">
+              <img src="img/naushniki.png" class="aviaticket-support__headset" width="96" height="96" alt="" aria-hidden="true" decoding="async">
+
+            </div>
+          </div>
+        </section>
+
+        <section class="aviaticket-pay" aria-labelledby="aviaticket-pay-title">
+          <div class="aviaticket-pay__inner">
+            <div class="aviaticket-pay__content">
+              <h2 id="aviaticket-pay-title" class="aviaticket-pay__title">Быстрая оплата</h2>
+              <ul class="aviaticket-pay__list">
+                <li class="aviaticket-pay__item">
+                  <span class="aviaticket-pay__arrow" aria-hidden="true">→</span>
+                  <span class="aviaticket-pay__item-text">Оплачивайте авиабилеты <strong>по безналичному расчёту</strong></span>
+                </li>
+                <li class="aviaticket-pay__item">
+                  <span class="aviaticket-pay__arrow" aria-hidden="true">→</span>
+                  <span class="aviaticket-pay__item-text"><strong>Выбирайте удобный способ оплаты:</strong> предоплата или отсрочка платежа</span>
+                </li>
+                <li class="aviaticket-pay__item">
+                  <span class="aviaticket-pay__arrow" aria-hidden="true">→</span>
+                  <span class="aviaticket-pay__item-text"><strong>Пополняйте баланс в личном кабинете</strong> напрямую с расчётного счёта компании или с банковской карты</span>
+                </li>
+                <li class="aviaticket-pay__item">
+                  <span class="aviaticket-pay__arrow" aria-hidden="true">→</span>
+                  <span class="aviaticket-pay__item-text">В зависимости от тарифа оформляйте <strong>сотрудничество по оферте или договору</strong></span>
+                </li>
+              </ul>
+            </div>
+            <div class="aviaticket-pay__visual">
+              <div class="aviaticket-pay__frame">
+                <img src="img/aviapay.png" class="aviaticket-pay__img" width="640" height="520" alt="Баланс, корзина и выставление счёта в личном кабинете Smartway" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="aviaticket-report" aria-labelledby="aviaticket-report-title">
+          <header class="aviaticket-report__header">
+            <h2 id="aviaticket-report-title" class="aviaticket-report__title">
+              <span class="aviaticket-report__title-line aviaticket-report__title-line--accent">Автоматизированная отчётность</span>
+              <span class="aviaticket-report__title-line aviaticket-report__title-line--dark">по поездкам</span>
+            </h2>
+          </header>
+          <div class="aviaticket-report__grid">
+            <article class="aviaticket-report__card">
+              <p class="aviaticket-report__card-text">Благодаря бесшовной интеграции сервис сам передаст данные о перелётах сотрудников в&nbsp;«1С»</p>
+              <div class="aviaticket-report__card-visual">
+                <img src="img/zhdauto1.png" class="aviaticket-report__card-img" width="400" height="280" alt="Интеграция с «1С»: переключатель и статус «Отправлено в 1С»" loading="lazy" decoding="async">
+              </div>
+            </article>
+            <article class="aviaticket-report__card">
+              <p class="aviaticket-report__card-text">Если сотрудник потерял посадочный талон, вы сможете заказать справку о перелёте в пару кликов</p>
+              <div class="aviaticket-report__card-visual">
+                <img src="img/avia2.png" class="aviaticket-report__card-img" width="400" height="280" alt="Справка к билету и скачивание в личном кабинете" loading="lazy" decoding="async">
+              </div>
+            </article>
+            <article class="aviaticket-report__card">
+              <p class="aviaticket-report__card-text">Закрывающие документы можно сформировать автоматически, а оригиналы получить по почте или ЭДО</p>
+              <div class="aviaticket-report__card-visual">
+                <img src="img/zhdauto3.png" class="aviaticket-report__card-img" width="400" height="280" alt="Пакет закрывающих документов для отправки из кабинета" loading="lazy" decoding="async">
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="zhd-services-window" aria-labelledby="zhd-services-window-title">
+          <h2 id="zhd-services-window-title" class="zhd-services-window__title">
+            <span class="zhd-services-window__title-line zhd-services-window__title-line--dark">Все услуги для командировок —</span>
+            <span class="zhd-services-window__title-line zhd-services-window__title-line--accent">в одном окне</span>
+          </h2>
+          <div class="zhd-services-window__grid">
+            <article class="zhd-services-window__card zhd-services-window__card--outline">
+              <div class="zhd-services-window__head">
+                <h3 class="zhd-services-window__card-title">Бронирование отелей</h3>
+              </div>
+              <div class="zhd-services-window__media">
+                <img src="img/zhdusl1.png" class="zhd-services-window__img" width="400" height="220" alt="Бронирование отеля: карточка с рейтингом и выбором в Smartway" loading="lazy" decoding="async">
+              </div>
+            </article>
+            <div class="aviaticket-services-main-mosaic" aria-label="Дополнительные услуги в Smartway">
+              <div class="services__grid aviaticket-services-main-mosaic__grid">
+                <div class="services__card services__card--aeroekspressy">
+                  <div class="services__card-head">
+                    <h3 class="services__card-title">Аэроэкспрессы</h3>
+                    <img src="img/services/aero-ticket.svg" alt="" class="services__badge-icon" width="40" height="40" decoding="async">
+                  </div>
+                </div>
+                <div class="services__card services__card--vizovaya-podderzhka">
+                  <div class="services__card-head">
+                    <h3 class="services__card-title">Визовая поддержка</h3>
+                    <img src="img/services/visa-check.svg" alt="" class="services__badge-icon" width="40" height="40" decoding="async">
+                  </div>
+                </div>
+                <div class="services__card services__card--transfery">
+                  <div class="services__transfer-top">
+                    <div class="services__card-head">
+                      <h3 class="services__card-title">Трансферы</h3>
+                      <img src="img/services/transfer-arrows.svg" alt="" class="services__badge-icon" width="40" height="40" decoding="async">
+                    </div>
+                  </div>
+                  <div class="services__transfer-vip">
+                    <h3 class="services__card-title">VIP-залы</h3>
+                  </div>
+                  <div class="services__transfer-car">
+                    <img src="img/services/transfer-car.png" alt="" class="services__img services__img--car" width="210" height="120" loading="lazy" decoding="async">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <article class="zhd-services-window__card zhd-services-window__card--fill zhd-services-window__card--taxi">
+              <div class="zhd-services-window__head">
+                <h3 class="zhd-services-window__card-title">Такси</h3>
+              </div>
+              <div class="zhd-services-window__media">
+                <img src="img/zhdusl3.png" class="zhd-services-window__img zhd-services-window__img--taxi" width="400" height="200" alt="Заказ такси в поездке через Smartway" loading="lazy" decoding="async">
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="zhd-consult-cta" aria-label="Запись на консультацию">
+          <a href="1index.html#consult" class="zhd-hero__btn">
+            <span class="zhd-hero__btn-label">Получить консультацию</span>
+            <span class="zhd-hero__btn-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M1 7h12M8 1l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        </section>
+
+        <section class="aviaticket-trust" aria-labelledby="aviaticket-trust-title">
+          <div class="aviaticket-trust__intro">
+            <h2 id="aviaticket-trust-title" class="aviaticket-trust__title">
+              <span class="aviaticket-trust__row">
+                <span class="aviaticket-trust__accent">Более 7&nbsp;600 компаний</span><span class="aviaticket-trust__dark"> уже экономят</span>
+              </span>
+              <span class="aviaticket-trust__row aviaticket-trust__row--dark">на корпоративных авиабилетах со Smartway</span>
+            </h2>
+          </div>
+          <div class="aviaticket-trust__marquee" aria-label="Логотипы компаний-клиентов">
+            <div class="aviaticket-trust__marquee-strip">
+              <div class="aviaticket-trust__marquee-track">
+                <div class="aviaticket-trust__marquee-group">
+                  <img src="img/clients-logos.svg" alt="ОМК, SOKOLOV, ССК, СИТИДРАЙВ, Белая Дача, Sisley Paris, Сеченовский университет, REDWINGS, hh, Московский политехнический университет" width="1760" height="53" class="aviaticket-trust__marquee-logo" loading="lazy" decoding="async">
+                </div>
+                <div class="aviaticket-trust__marquee-group" aria-hidden="true">
+                  <img src="img/clients-logos.svg" alt="" width="1760" height="53" class="aviaticket-trust__marquee-logo" loading="lazy" decoding="async">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="aviaticket-cases" aria-labelledby="aviaticket-cases-title">
+          <h2 id="aviaticket-cases-title" class="visually-hidden">Отзывы клиентов об авиабилетах и Smartway</h2>
+          <div class="aviaticket-cases__grid">
+            <article class="aviaticket-cases__card">
+              <header class="aviaticket-cases__head">
+                <div class="aviaticket-cases__logo-pill">
+                  <img src="img/companylogo1.png" alt="МТЛ" class="aviaticket-cases__logo-img" width="88" height="28" loading="lazy" decoding="async">
+                </div>
+                <div class="aviaticket-cases__avatar-wrap" aria-hidden="true">
+                  <span class="aviaticket-cases__avatar-fallback"></span>
+                </div>
+                <p class="aviaticket-cases__name">Дарья Еремина</p>
+              </header>
+              <blockquote class="aviaticket-cases__quote">
+                <p>«Командировки бронируют офис-менеджеры, согласуем поездки коротким звонком. Проблема с паспортными данными решилась благодаря единой базе сотрудников.</p>
+                <p>Ещё один плюс&nbsp;— интеграция с 1С: Бухгалтерией: мы без проблем получаем акты, счета-фактуры и реестры, а потом формируем общую проводку. Раньше были сложности с обоснованием расходов, сейчас Smartway экономит нам время и нервы»</p>
+              </blockquote>
+            </article>
+            <article class="aviaticket-cases__card">
+              <header class="aviaticket-cases__head">
+                <div class="aviaticket-cases__logo-pill aviaticket-cases__logo-pill--gelpic">
+                  <span class="aviaticket-cases__gelpic-brand">С.П.ГЕЛПИК</span>
+                  <span class="aviaticket-cases__gelpic-tag">Достоверность результата</span>
+                </div>
+                <div class="aviaticket-cases__avatar-wrap" aria-hidden="true">
+                  <span class="aviaticket-cases__avatar-fallback"></span>
+                </div>
+                <p class="aviaticket-cases__name">Владимир Брязгун</p>
+              </header>
+              <blockquote class="aviaticket-cases__quote">
+                <p>«В компании настроили Travel-политику: сотрудники сами покупают билеты, но теперь делают это через Smartway, с лимитами.</p>
+                <p>Если расходы выходят за рамки, система отправляет запрос на согласование. Теперь мы обсуждаем поездки в одном личном кабинете.</p>
+                <p>Никто ни за кем не следит, но сотрудники не выходят за пределы&nbsp;бюджета»</p>
+              </blockquote>
+            </article>
+            <article class="aviaticket-cases__card">
+              <header class="aviaticket-cases__head">
+                <div class="aviaticket-cases__logo-pill aviaticket-cases__logo-pill--wide">
+                  <img src="img/companylogo3.png" alt="ССК, строительная компания" class="aviaticket-cases__logo-img" width="160" height="32" loading="lazy" decoding="async">
+                </div>
+                <div class="aviaticket-cases__avatar-wrap" aria-hidden="true">
+                  <span class="aviaticket-cases__avatar-fallback"></span>
+                </div>
+                <p class="aviaticket-cases__name">Татьяна Атабаева</p>
+              </header>
+              <blockquote class="aviaticket-cases__quote">
+                <p>«Раньше покупка одного билета могла занимать несколько часов и иногда мы не успевали взять последний билет на самолёт. Теперь процесс выглядит так: диспетчер подаёт заявку, согласовывает детали с сотрудником, заказывает билет в Smartway за 20–30 секунд.</p>
+                <p>А авансовые отчёты и закрывающие документы формируются автоматически и приходят в личный кабинет, оригиналы через ЭДО»</p>
+              </blockquote>
+            </article>
+          </div>
+        </section>
+
+        <section class="aviaticket-bottom-cta" aria-label="Попробовать Smartway бесплатно">
+          <a href="registration.html" class="aviaticket-bottom-cta__btn">
+            <span class="aviaticket-bottom-cta__label">Попробовать бесплатно</span>
+            <span class="aviaticket-bottom-cta__icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M1 7h12M8 1l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        </section>
+        <section class="zhd-connect" aria-labelledby="zhd-connect-title">
+          <h2 id="zhd-connect-title" class="zhd-connect__title">Подключение к сервису</h2>
+          <div class="zhd-connect__grid">
+            <article class="zhd-connect__card">
+              <div class="zhd-connect__num-wrap" aria-hidden="true">
+                <span class="zhd-connect__num">1</span>
+              </div>
+              <p class="zhd-connect__text">Отправьте запрос на активацию личного кабинета</p>
+            </article>
+            <article class="zhd-connect__card">
+              <div class="zhd-connect__num-wrap" aria-hidden="true">
+                <span class="zhd-connect__num">2</span>
+              </div>
+              <p class="zhd-connect__text">Оформите договор, чтобы получить доступ к сервису</p>
+            </article>
+            <article class="zhd-connect__card">
+              <div class="zhd-connect__num-wrap" aria-hidden="true">
+                <span class="zhd-connect__num">3</span>
+              </div>
+              <p class="zhd-connect__text">Выбирайте и оплачивайте ж/д билеты и другие услуги для командировок</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="zhd-lead-form" aria-labelledby="zhd-lead-form-title">
+          <div class="zhd-lead-form__inner">
+            <div class="zhd-lead-form__content">
+              <h2 id="zhd-lead-form-title" class="zhd-lead-form__title">Сделайте 
+                организацию деловых 
+                поездок удобной 
+                и выгодной</h2>
+              <p class="zhd-lead-form__lead">Получите бесплатный доступ к Smartway: оставьте контакты, менеджер свяжется с вами в течение 30 минут</p>
+            </div>
+            <div class="zhd-lead-form__card">
+              <form class="zhd-lead-form__form" action="#" method="post">
+                <div class="zhd-lead-form__field">
+                  <label for="zhd-lead-name" class="zhd-lead-form__sr-only">Имя и фамилия (обязательно)</label>
+                  <input type="text" id="zhd-lead-name" name="name" class="zhd-lead-form__input" required autocomplete="name" placeholder="Имя и фамилия*">
+                </div>
+                <div class="zhd-lead-form__field">
+                  <label for="zhd-lead-company" class="zhd-lead-form__sr-only">Название компании (обязательно)</label>
+                  <input type="text" id="zhd-lead-company" name="company" class="zhd-lead-form__input" required autocomplete="organization" placeholder="Название компании*">
+                </div>
+                <div class="zhd-lead-form__field">
+                  <label for="zhd-lead-trips" class="zhd-lead-form__label">Командировок в компании*</label>
+                  <select id="zhd-lead-trips" name="trips" class="zhd-lead-form__input zhd-lead-form__select" required>
+                    <option value="">—</option>
+                    <option value="1-10">1–10</option>
+                    <option value="11-50">11–50</option>
+                    <option value="51-200">51–200</option>
+                    <option value="200+">Более 200</option>
+                  </select>
+                </div>
+                <div class="zhd-lead-form__field">
+                  <label for="zhd-lead-email" class="zhd-lead-form__sr-only">Корпоративная почта (обязательно)</label>
+                  <input type="email" id="zhd-lead-email" name="email" class="zhd-lead-form__input" required autocomplete="email" placeholder="Корпоративная почта*">
+                </div>
+                <div class="zhd-lead-form__field">
+                  <label for="zhd-lead-phone" class="zhd-lead-form__sr-only">Телефон (обязательно)</label>
+                  <input type="tel" id="zhd-lead-phone" name="phone" class="zhd-lead-form__input" required inputmode="tel" autocomplete="tel" placeholder="+7 (000) 000-00-00">
+                </div>
+                <label class="zhd-lead-form__toggle">
+                  <input type="checkbox" id="zhd-lead-consent" name="ads_consent" class="zhd-lead-form__toggle-input" required>
+                  <span class="zhd-lead-form__toggle-ui" aria-hidden="true"></span>
+                  <span class="zhd-lead-form__toggle-text">Даю согласие на получение сообщений рекламного и информационного характера</span>
+                </label>
+                <button type="submit" class="zhd-lead-form__submit">Оставить заявку</button>
+                <p class="zhd-lead-form__footnote">Нажав кнопку, вы продолжаете <a href="offer.html" class="zhd-lead-form__footnote-link">соглашение об обработке цифровых данных</a> и принимаете условия <a href="confidence-page.html" class="zhd-lead-form__footnote-link">политики обработки цифровых данных</a></p>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="aviaticket-faq" aria-labelledby="aviaticket-faq-title">
+          <div class="aviaticket-faq__inner">
+            <h2 id="aviaticket-faq-title" class="aviaticket-faq__title">Частые вопросы об авиабилетах для юридических лиц</h2>
+            <div class="aviaticket-faq__list">
+              <details class="aviaticket-faq__item">
+                <summary class="aviaticket-faq__question">
+                  <span class="aviaticket-faq__q-text">Как оплатить авиабилеты по безналичному расчёту?</span>
+                  <span class="aviaticket-faq__icon" aria-hidden="true">+</span>
+                </summary>
+                <div class="aviaticket-faq__panel">
+                  <p class="aviaticket-faq__answer">Оплата проходит с корпоративного баланса в Smartway: пополняйте счёт по реквизитам или с карты юридического лица, затем списание за заказы выполняется в рамках договора. При необходимости выставляется счёт на оплату услуг сервиса.</p>
+                </div>
+              </details>
+              <details class="aviaticket-faq__item">
+                <summary class="aviaticket-faq__question">
+                  <span class="aviaticket-faq__q-text">В чём разница между покупкой авиабилетов для юридических лиц и для физических лиц?</span>
+                  <span class="aviaticket-faq__icon" aria-hidden="true">+</span>
+                </summary>
+                <div class="aviaticket-faq__panel">
+                  <p class="aviaticket-faq__answer">Для юрлиц действует договор с Smartway, безналичные платежи, закрывающие документы на организацию, тревел-политики и согласования. Физлицо обычно оплачивает картой «для себя»; для бизнеса важны учёт, лимиты и единый контур закупок.</p>
+                </div>
+              </details>
+              <details class="aviaticket-faq__item">
+                <summary class="aviaticket-faq__question">
+                  <span class="aviaticket-faq__q-text">Какие реквизиты использовать?</span>
+                  <span class="aviaticket-faq__icon" aria-hidden="true">+</span>
+                </summary>
+                <div class="aviaticket-faq__panel">
+                  <p class="aviaticket-faq__answer">Используются реквизиты вашей организации по договору с сервисом и данные, которые вы передали при подключении. В операции бронирования подставляются данные компании и сотрудника согласно настройкам личного кабинета.</p>
+                </div>
+              </details>
+              <details class="aviaticket-faq__item">
+                <summary class="aviaticket-faq__question">
+                  <span class="aviaticket-faq__q-text">Как формируются счета и закрывающие документы?</span>
+                  <span class="aviaticket-faq__icon" aria-hidden="true">+</span>
+                </summary>
+                <div class="aviaticket-faq__panel">
+                  <p class="aviaticket-faq__answer">После оплаты в личном кабинете доступны счета, реестры и закрывающие документы по приобретённым услугам. Набор документов зависит от поставщика и маршрута; оригиналы можно получить по почте или через ЭДО — в том числе в рамках настроенного документооборота.</p>
+                </div>
+              </details>
+              <details class="aviaticket-faq__item">
+                <summary class="aviaticket-faq__question">
+                  <span class="aviaticket-faq__q-text">Можно ли выгрузить данные в «1С»?</span>
+                  <span class="aviaticket-faq__icon" aria-hidden="true">+</span>
+                </summary>
+                <div class="aviaticket-faq__panel">
+                  <p class="aviaticket-faq__answer">Да. Smartway поддерживает интеграцию с продуктами «1С»: данные о перелётах и заказах могут передаваться в учётную систему без ручного ввода — в том числе для формирования проводок и отчётности.</p>
+                </div>
+              </details>
+              <details class="aviaticket-faq__item">
+                <summary class="aviaticket-faq__question">
+                  <span class="aviaticket-faq__q-text">Какие проводки использовать, чтобы учесть приобретение авиабилетов для командировок?</span>
+                  <span class="aviaticket-faq__icon" aria-hidden="true">+</span>
+                </summary>
+                <div class="aviaticket-faq__panel">
+                  <p class="aviaticket-faq__answer">Конкретные счета зависят от учётной политики, системы налогообложения и наличия НДС в документах. Обычно билеты относят к командировочным расходам; финальную схему согласуйте с главным бухгалтером, опираясь на акты и реестры из Smartway.</p>
+                </div>
+              </details>
+              <details class="aviaticket-faq__item">
+                <summary class="aviaticket-faq__question">
+                  <span class="aviaticket-faq__q-text">Как вернуть билеты?</span>
+                  <span class="aviaticket-faq__icon" aria-hidden="true">+</span>
+                </summary>
+                <div class="aviaticket-faq__panel">
+                  <p class="aviaticket-faq__answer">Возврат оформляется в личном кабинете по правилам тарифа и авиакомпании: доступны сроки, удержания и возврат на баланс юрлица. Статус операции и документы отображаются в заказе.</p>
+                </div>
+              </details>
+              <details class="aviaticket-faq__item">
+                <summary class="aviaticket-faq__question">
+                  <span class="aviaticket-faq__q-text">Что делать, если командировка не состоялась, а билеты невозвратные?</span>
+                  <span class="aviaticket-faq__icon" aria-hidden="true">+</span>
+                </summary>
+                <div class="aviaticket-faq__panel">
+                  <p class="aviaticket-faq__answer">Вариант зависит от правил тарифа: иногда возможен обмен или использование билета позже. Если возврат средств исключён условиями тарифа, фиксируйте факт и документы для внутреннего учёта и отчёта по политике компании уточняйте у бухгалтерии.</p>
+                </div>
+              </details>
+              <details class="aviaticket-faq__item">
+                <summary class="aviaticket-faq__question">
+                  <span class="aviaticket-faq__q-text">Какие ограничения на лимиты?</span>
+                  <span class="aviaticket-faq__icon" aria-hidden="true">+</span>
+                </summary>
+                <div class="aviaticket-faq__panel">
+                  <p class="aviaticket-faq__answer">Лимиты задаются в тревел-политике: класс обслуживания, бюджет на билет или маршрут, обязательное согласование при выходе за рамки. Ограничения можно настроить по ролям, подразделениям и типам поездок.</p>
+                </div>
+              </details>
+              <details class="aviaticket-faq__item">
+                <summary class="aviaticket-faq__question">
+                  <span class="aviaticket-faq__q-text">Можно ли покупать билеты на разные юридические лица?</span>
+                  <span class="aviaticket-faq__icon" aria-hidden="true">+</span>
+                </summary>
+                <div class="aviaticket-faq__panel">
+                  <p class="aviaticket-faq__answer">Да, при корпоративной настройке можно вести несколько юридических лиц и выбирать нужное при оформлении — важно, чтобы договор и лимиты соответствовали выбранной организации. Детали подключения уточняйте у менеджера Smartway.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="footer">
+        <div class="footer__main">
+          <div class="footer__inner">
+            <div class="footer__col footer__col--info">
+              <div class="footer__col-head">
+                <img src="img/footerImages/Container.png" alt="Smartway" class="footer__logo" width="170" height="40" loading="lazy" decoding="async">
+              </div>
+              <div class="footer__col-body">
+                <div class="footer__contacts">
+                  <p class="footer__contact footer__contact--strong"><a href="tel:+78007751428">8&nbsp;800&nbsp;775&nbsp;14&nbsp;28</a></p>
+                  <p class="footer__contact footer__contact--strong"><a href="mailto:hello@smartway.today">hello@smartway.today</a></p>
+                  <div class="footer__press">
+                    <p class="footer__muted-label">Пресс-служба</p>
+                    <p class="footer__contact footer__contact--strong"><a href="mailto:pr@smartway.today">pr@smartway.today</a></p>
+                  </div>
+                  <p class="footer__contact">
+                    <a href="contract-hotel.html" class="footer__link-external">Для отелей по вопросам контрактинга<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
+                  </p>
+                </div>
+                <p class="footer__address">125124, г.&nbsp;Москва, 5-я&nbsp;ул.&nbsp;Ямского Поля, д.&nbsp;5, стр.&nbsp;1, пом.&nbsp;2/11</p>
+                <div class="footer__legal">
+                  <p>ООО «Смартвэй», 2026</p>
+                  <p>ИНН 7714379242</p>
+                  <p>ОГРН 1167746277247</p>
+                  <p>ОКВЭД 62.01</p>
+                </div>
+              </div>
+            </div>
+            <div class="footer__col footer__col--scenarios">
+              <div class="footer__col-head">
+                <div class="footer__badges">
+                  <span class="footer__badge-pill">
+                    <img src="img/footerImages/Container-1.png" alt="ТКП" class="footer__badge footer__badge--in-pill" width="80" height="42" loading="lazy" decoding="async">
+                  </span>
+                  <img src="img/footerImages/sk-uchastnik1.png.webp.png" alt="Участник Сколково" class="footer__badge" width="100" height="42" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <div class="footer__col-body">
+                <h3 class="footer__heading">Сценарии</h3>
+                <ul class="footer__list">
+                  <li><a href="#">Для руководителя</a></li>
+                  <li><a href="#">Для бухгалтера</a></li>
+                  <li><a href="#">Для организатора командировок</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__col footer__col--capabilities">
+              <div class="footer__col-head">
+                <div class="footer__socials">
+                  <a href="#" class="footer__social footer__social--round" aria-label="ВКонтакте"><img src="img/footer-icon-vk.svg" alt="" width="20" height="20"></a>
+                  <a href="#" class="footer__social footer__social--round" aria-label="VC.ru"><img src="img/footer-icon-vc.svg" alt="" class="footer__social-img--vc" width="22" height="16"></a>
+                  <a href="#" class="footer__channel-pill">
+                    <img src="img/footer-icon-tg.svg" alt="" class="footer__channel-icon" width="18" height="18">
+                    <span class="footer__channel-label">Канал «Командировки.Сегодня»</span>
+                  </a>
+                </div>
+              </div>
+              <div class="footer__col-body">
+                <h3 class="footer__heading">Возможности</h3>
+                <ul class="footer__list">
+                  <li><a href="aviaticket.html" aria-current="page">Поиск авиабилетов</a></li>
+                  <li><a href="#">Поиск ж/д билетов</a></li>
+                  <li><a href="hotels.html">Поиск отелей</a></li>
+                  <li><a href="taxi.html">Такси</a></li>
+                  <li><a href="#">Интеграция с 1С</a></li>
+                  <li><a href="#">Согласование</a></li>
+                  <li><a href="#">Тревел-политики</a></li>
+                  <li><a href="#" class="footer__list-link--accent">Smartway Отпуск</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__col footer__col--useful">
+              <div class="footer__col-head footer__col-head--spacer" aria-hidden="true"></div>
+              <div class="footer__col-body">
+                <h3 class="footer__heading">Полезное</h3>
+                <ul class="footer__list">
+                  <li><a href="faq.html">Вопрос-ответ</a></li>
+                  <li><a href="blog.html">Блог</a></li>
+                  <li><a href="#">Такси в командировке</a></li>
+                  <li><a href="#">Бесплатная консультация</a></li>
+                  <li><a href="#">Оформление командировок</a></li>
+                  <li><a href="#">Реферальная программа Smartway</a></li>
+                  <li><a href="#">Аудит командировок</a></li>
+                  <li><a href="#">Партнерская программа для франчайзи «1С»</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__col footer__col--about">
+              <div class="footer__col-head">
+                <a href="1index.html#consult" class="footer__btn">Записаться на консультацию<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
+              </div>
+              <div class="footer__col-body">
+                <h3 class="footer__heading">О компании</h3>
+                <ul class="footer__list footer__list--compact">
+                  <li><a href="#">Общая информация</a></li>
+                  <li><a href="#">Работа в Smartway</a></li>
+                  <li><a href="#">Реквизиты</a></li>
+                  <li><a href="offer.html">Оферта</a></li>
+                  <li><a href="#">Контакты</a></li>
+                  <li><a href="#">Условия доступа к личным поездкам</a></li>
+                  <li><a href="#">Пользовательское соглашение</a></li>
+                  <li><a href="confidence-page.html">Политика конфиденциальности</a></li>
+                  <li><a href="#">Правила использования ПЭП</a></li>
+                  <li><a href="#">Аккредитованная IT-компания</a></li>
+                  <li><a href="#">Договор о страховании финансовых рисков</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__bottom-inner">
+            <a href="#" class="footer__bottom-link">Защита персональных данных</a>
+            <a href="certificate.html" class="footer__bottom-link">Сертификат Транспортной Клиринговой Компании</a>
+            <a href="#" class="footer__bottom-link">Безопасное соединение SSL</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.header__drawer a, .header__drawer-login, .header__drawer-btn').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var cb = document.getElementById('site-nav');
+        if (cb) cb.checked = false;
+      });
+    });
+  </script>
+</body>
+</html>

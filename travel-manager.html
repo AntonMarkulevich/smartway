@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smartway — Тревел-менеджер</title>
+  <meta name="description" content="Организация командировок для тревел-менеджеров в Smartway.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site-header.css">
+  <link rel="stylesheet" href="css/1style.css">
+</head>
+<body>
+  <header class="header">
+    <input type="checkbox" id="site-nav" class="site-nav-input" aria-hidden="true">
+    <div class="header__inner">
+      <div class="header__left">
+        <a href="1index.html" aria-label="Smartway — на главную">
+          <img src="img/header-logo.svg" alt="Smartway" class="header__logo">
+        </a>
+        <div class="header__divider"></div>
+        <span class="header__descriptor">Стандарт управления<br>командировками</span>
+      </div>
+      <label for="site-nav" class="header__burger" aria-label="Открыть меню">
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </label>
+      <nav class="header__nav" aria-label="Основное меню">
+        <ul class="header__menu">
+          <li><a href="1index.html#audience" class="header__link">Для кого <span class="header__chevron"></span></a></li>
+          <li><a href="1index.html#capabilities" class="header__link">Возможности <span class="header__chevron"></span></a></li>
+          <li><a href="1index.html#useful" class="header__link">Полезное <span class="header__chevron"></span></a></li>
+          <li><a href="1index.html#mice" class="header__link">MICE</a></li>
+          <li><a href="1index.html#tariffs" class="header__link">Тарифы</a></li>
+          <li><a href="1index.html#clients" class="header__link">Клиенты</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="mailto:hello@smartway.today" class="header__icon-btn" aria-label="Написать">
+          <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail">
+        </a>
+        <a href="tel:+78007751428" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
+          <img src="img/phone.svg" alt="">
+        </a>
+        <a href="https://www.smartway.today" class="header__login">
+          <img src="img/header-icon-email.svg" alt=""> Войти
+        </a>
+        <a href="https://smartway.today/" class="header__btn">Протестировать</a>
+      </div>
+    </div>
+    <label for="site-nav" class="header__backdrop" aria-hidden="true"></label>
+    <div class="header__drawer" aria-label="Меню">
+      <div class="header__drawer-inner">
+        <label for="site-nav" class="header__drawer-close" aria-label="Закрыть">×</label>
+        <ul class="header__drawer-menu">
+          <li><a href="1index.html#audience" class="header__drawer-link">Для кого</a></li>
+          <li><a href="1index.html#capabilities" class="header__drawer-link">Возможности</a></li>
+          <li><a href="1index.html#useful" class="header__drawer-link">Полезное</a></li>
+          <li><a href="1index.html#mice" class="header__drawer-link">MICE</a></li>
+          <li><a href="1index.html#tariffs" class="header__drawer-link">Тарифы</a></li>
+          <li><a href="1index.html#clients" class="header__drawer-link">Клиенты</a></li>
+        </ul>
+        <div class="header__drawer-contacts" aria-label="Связаться">
+          <a href="mailto:hello@smartway.today" class="header__icon-btn" aria-label="Написать">
+            <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail">
+          </a>
+          <a href="tel:+78007751428" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
+            <img src="img/phone.svg" alt="">
+          </a>
+        </div>
+        <div class="header__drawer-cta">
+          <a href="https://www.smartway.today" class="header__drawer-login">Войти</a>
+          <a href="https://smartway.today/" class="header__btn header__drawer-btn">Протестировать</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="tm-hero-block" aria-labelledby="tm-hero-title">
+      <div class="tm-hero-block__inner">
+        <div class="tm-hero-block__copy">
+          <span class="tm-hero-block__badge">Онлайн-сервис для организатора командировок</span>
+          <h1 id="tm-hero-title" class="tm-hero-block__title">
+            Оформляйте<br />
+            поездки компании<br />
+            в одном окне
+          </h1>
+          <p class="tm-hero-block__subtitle">Билеты, отели, закрывающие и поддержка 24/7</p>
+        </div>
+        <a class="tm-hero-block__btn" href="https://smartway.today/">
+          <span class="tm-hero-block__btn-label">Оставьте заявку</span>
+          <span class="tm-hero-block__btn-icon" aria-hidden="true">
+            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1 1L8 8L1 15"
+                stroke="#1A1A1A"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+        </a>
+        <div class="tm-hero-block__visual">
+          <div class="tm-hero-block__blob" aria-hidden="true"></div>
+          <img
+            class="tm-hero-block__person"
+            src="img/travelmanagermain.png"
+            alt=""
+            width="520"
+            height="640"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="tm-steps-block" aria-labelledby="tm-steps-title">
+      <div class="tm-steps-block__inner">
+        <h2 id="tm-steps-title" class="tm-steps-block__title">
+          Организация командировки займёт всего 2 минуты
+        </h2>
+        <div class="tm-steps-block__track">
+          <article class="tm-step-card">
+            <div class="tm-step-card__badge" aria-hidden="true">1</div>
+            <h3 class="tm-step-card__title">Бронируйте билеты и отели</h3>
+            <p class="tm-step-card__text">
+              Система сравнит цены у разных поставщиков и покажет самые выгодные варианты
+            </p>
+          </article>
+          <span class="tm-steps-block__arrow" aria-hidden="true">
+            <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1 6h14M13 2l4 4-4 4"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <article class="tm-step-card">
+            <div class="tm-step-card__badge" aria-hidden="true">2</div>
+            <h3 class="tm-step-card__title">Фиксируйте цену на время согласования</h3>
+            <p class="tm-step-card__text">Используйте «заморозку» цены, чтобы билет не подорожал</p>
+          </article>
+          <span class="tm-steps-block__arrow" aria-hidden="true">
+            <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1 6h14M13 2l4 4-4 4"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <article class="tm-step-card">
+            <div class="tm-step-card__badge" aria-hidden="true">3</div>
+            <h3 class="tm-step-card__title">Оплачивайте услуги</h3>
+            <p class="tm-step-card__text">
+              Платите со счёта в Smartway, который вы пополняете заранее или с отсрочкой
+            </p>
+          </article>
+          <span class="tm-steps-block__arrow" aria-hidden="true">
+            <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1 6h14M13 2l4 4-4 4"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <article class="tm-step-card">
+            <div class="tm-step-card__badge" aria-hidden="true">4</div>
+            <h3 class="tm-step-card__title">Получайте документы</h3>
+            <p class="tm-step-card__text">
+              Закрывающие появятся в личном кабинете сразу после поездки. Оригиналы пришлём на почту или по ЭДО
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="tm-proof-banner" aria-label="Внедрение Smartway за один день">
+      <div class="tm-proof-banner__inner">
+        <div class="tm-proof-banner__avatars">
+          <img
+            class="tm-proof-banner__tri"
+            src="img/tri4elika.png"
+            alt=""
+            width="180"
+            height="60"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <p class="tm-proof-banner__text">
+          <span class="tm-proof-banner__line-accent">93% наших клиентов внедрили Smartway за один</span><br />
+          <span class="tm-proof-banner__accent">день</span><span class="tm-proof-banner__muted">
+            без дополнительного обучения сотрудников</span>
+        </p>
+        <a class="tm-proof-banner__btn" href="https://smartway.today/">
+          <span class="tm-proof-banner__btn-label">Попробовать бесплатно</span>
+          <span class="tm-proof-banner__btn-icon" aria-hidden="true">
+            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1 1L8 8L1 15"
+                stroke="#1A1A1A"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="tm-control-block" aria-labelledby="tm-control-title">
+      <div class="tm-control-block__inner">
+        <h2 id="tm-control-title" class="tm-control-block__title">Деловые поездки под контролем</h2>
+        <div class="tm-control-block__grid">
+          <article class="tm-control-card">
+            <div class="tm-control-card__icon" aria-hidden="true"></div>
+            <div class="tm-control-card__body">
+              <h3 class="tm-control-card__heading">Уладим форс-мажор в поездке за вас</h3>
+              <p class="tm-control-card__text">
+                Мы на связи 24/7. Отвечаем в чате и по телефону за 5 минут. Свяжемся с поставщиками и решим проблему
+              </p>
+            </div>
+          </article>
+          <article class="tm-control-card">
+            <div class="tm-control-card__icon" aria-hidden="true"></div>
+            <div class="tm-control-card__body">
+              <h3 class="tm-control-card__heading">Вся информация в одном месте</h3>
+              <p class="tm-control-card__text">
+                Больше не придётся переключаться между вкладками, мессенджерами и почтой
+              </p>
+            </div>
+          </article>
+          <article class="tm-control-card">
+            <div class="tm-control-card__icon" aria-hidden="true"></div>
+            <div class="tm-control-card__body">
+              <h3 class="tm-control-card__heading">Отчёты уже готовы</h3>
+              <p class="tm-control-card__text">
+                Документы по поездкам формируются автоматически. Не нужно собирать чеки, вручную сканировать отчёты и передавать в
+                бухгалтерию
+              </p>
+            </div>
+          </article>
+          <article class="tm-control-card">
+            <div class="tm-control-card__icon" aria-hidden="true"></div>
+            <div class="tm-control-card__body">
+              <h3 class="tm-control-card__heading">Автозаполнение данных</h3>
+              <p class="tm-control-card__text">
+                Введите данные сотрудников один раз — и они сохранятся в сервисе. Это снижает риск опечаток и экономит время
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="tm-mobile-block" aria-labelledby="tm-mobile-title">
+      <div class="tm-mobile-block__inner">
+        <h2 id="tm-mobile-title" class="tm-mobile-block__title">Управляйте командировками на ходу</h2>
+        <div class="tm-mobile-block__grid">
+          <article class="tm-mobile-card">
+            <div class="tm-mobile-card__main">
+              <h3 class="tm-mobile-card__heading">Мобильное приложение</h3>
+              <p class="tm-mobile-card__text">Организуйте поездки даже без ноутбука под рукой</p>
+            </div>
+            <div class="tm-mobile-card__store-row">
+              <span class="tm-mobile-card__store-dot" aria-hidden="true">
+                <img src="img/app-store.svg" alt="" width="22" height="22" decoding="async" />
+              </span>
+              <span class="tm-mobile-card__store-dot" aria-hidden="true">
+                <img src="img/google-play.svg" alt="" width="22" height="22" decoding="async" />
+              </span>
+              <span class="tm-mobile-card__store-dot" aria-hidden="true">
+                <img src="img/appgallery.svg" alt="" width="22" height="22" decoding="async" />
+              </span>
+            </div>
+          </article>
+          <article class="tm-mobile-card">
+            <div class="tm-mobile-card__main">
+              <h3 class="tm-mobile-card__heading">Интеграция с Яндекс Go</h3>
+              <p class="tm-mobile-card__text">
+                Вызывайте такси в приложении и оплачивайте со счёта в Smartway
+              </p>
+            </div>
+            <div class="tm-mobile-card__yandex-pill">
+              <img
+                class="tm-mobile-card__yandex-logo"
+                src="img/taxiBlock/Group%202085656711.png"
+                alt="Яндекс Go"
+                width="140"
+                height="36"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </article>
+          <article class="tm-mobile-card tm-mobile-card--wide">
+            <div class="tm-mobile-card__main">
+              <h3 class="tm-mobile-card__heading">Моментальные уведомления</h3>
+              <p class="tm-mobile-card__text">
+                В телеграм-боте или по электронной почте. Вы не пропустите ни одной важной детали: от согласования до изменений в
+                бронировании
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="tm-dark-cta" aria-labelledby="tm-dark-cta-title">
+      <div class="tm-dark-cta__wrap">
+        <div class="tm-dark-cta__inner">
+          <h2 id="tm-dark-cta-title" class="tm-dark-cta__title">
+            Как Smartway поможет<br />
+            вашей компании
+          </h2>
+          <p class="tm-dark-cta__lead">
+            Оставьте заявку — менеджер проведёт бесплатную консультацию и откроет демо-доступ к сервису
+          </p>
+          <a class="tm-dark-cta__btn" href="https://smartway.today/">
+            <span class="tm-dark-cta__btn-label">Попробовать бесплатно</span>
+            <span class="tm-dark-cta__btn-icon" aria-hidden="true">
+              <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1 1L8 8L1 15"
+                  stroke="#1A1A1A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="clients" aria-label="Нам доверяют">
+      <div class="clients__strip">
+        <div class="clients__track">
+          <div class="clients__group">
+            <img
+              src="img/clients-logos.svg"
+              alt="ОМК, SOKOLOV, ССК, СИТИДРАЙВ, Белая Дача, Sisley Paris, Сеченовский университет, REDWINGS, hh, Московский политехнический университет"
+              width="1760"
+              height="53"
+              class="clients__logo"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="clients__group" aria-hidden="true">
+            <img src="img/clients-logos.svg" alt="" width="1760" height="53" class="clients__logo" loading="lazy" decoding="async" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="companies-stat-block companies-stat-block--banner-row" aria-label="Компании бронируют командировки в Smartway">
+      <div class="companies-stat-block__inner">
+        <p class="companies-stat-block__value">7&nbsp;600+</p>
+        <p class="companies-stat-block__caption">компаний бронируют<br>командировки в Smartway</p>
+      </div>
+    </section>
+
+    <section class="tm-case-cards" aria-label="Кейсы клиентов">
+      <div class="tm-case-cards__inner">
+        <div class="tm-case-cards__grid">
+          <article class="tm-case-card tm-case-card--soft-title">
+            <p class="tm-case-card__stat">в 2 раза</p>
+            <h3 class="tm-case-card__title">быстрее организуют командировки</h3>
+            <p class="tm-case-card__desc">
+              Как Dodo Brands доверили сотрудникам самостоятельно бронировать поездки и освободили 50% тревел-менеджера
+            </p>
+            <div class="tm-case-card__footer">
+              <img
+                src="img/cases-dodo.svg"
+                alt="Dodo Brands"
+                class="tm-case-card__logo"
+                width="170"
+                height="43"
+                loading="lazy"
+                decoding="async"
+              />
+              <a href="#" class="tm-case-card__btn">Читать кейс</a>
+            </div>
+          </article>
+          <article class="tm-case-card">
+            <p class="tm-case-card__stat">в 4 раза</p>
+            <h3 class="tm-case-card__title">сократили расходы на вахты</h3>
+            <p class="tm-case-card__desc">
+              Как в ООО «ССК» перестали платить комиссию агентству за каждую операцию и сэкономили в 4 раза
+            </p>
+            <div class="tm-case-card__footer">
+              <img
+                src="img/cases-cck.svg"
+                alt="ССК"
+                class="tm-case-card__logo"
+                width="168"
+                height="40"
+                loading="lazy"
+                decoding="async"
+              />
+              <a href="#" class="tm-case-card__btn">Читать кейс</a>
+            </div>
+          </article>
+          <article class="tm-case-card">
+            <p class="tm-case-card__stat">4&nbsp;000+</p>
+            <h3 class="tm-case-card__title">сотрудников сами бронируют командировки</h3>
+            <p class="tm-case-card__desc">
+              Как «Точка» разгрузила команду и сократила расходы на командировки с помощью аналитики
+            </p>
+            <div class="tm-case-card__footer">
+              <span class="tm-case-card__wordmark tm-case-card__wordmark--tochka">точка</span>
+              <a href="#" class="tm-case-card__btn">Читать кейс</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="tm-try-free-cta" aria-labelledby="tm-try-free-cta-title">
+      <div class="tm-try-free-cta__inner">
+        <div class="tm-try-free-cta__shell">
+          <div class="tm-try-free-cta__layout">
+            <div class="tm-try-free-cta__left">
+              <h2 id="tm-try-free-cta-title" class="tm-try-free-cta__title">Попробуйте Smartway бесплатно</h2>
+              <p class="tm-try-free-cta__lead">
+                <span class="tm-try-free-cta__stat">7&nbsp;600+</span>
+                компаний бронируют командировки в Smartway
+              </p>
+              <div class="tm-try-free-cta__visual">
+                <img
+                  class="tm-try-free-cta__illustration"
+                  src="img/accountform.png"
+                  alt=""
+                  width="701"
+                  height="589"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+            <div class="tm-try-free-cta__right">
+              <form class="tm-try-free-cta__form" action="#" method="post">
+                <div class="tm-try-free-cta__field">
+                  <label class="tm-try-free-cta__label" for="tm-try-free-name">Ваше имя<span aria-hidden="true">*</span></label>
+                  <input
+                    class="tm-try-free-cta__input"
+                    type="text"
+                    id="tm-try-free-name"
+                    name="name"
+                    required
+                    autocomplete="name"
+                    placeholder="Ваше имя*"
+                  />
+                </div>
+                <div class="tm-try-free-cta__field">
+                  <label class="tm-try-free-cta__label" for="tm-try-free-company">Название компании<span aria-hidden="true">*</span></label>
+                  <input
+                    class="tm-try-free-cta__input"
+                    type="text"
+                    id="tm-try-free-company"
+                    name="company"
+                    required
+                    autocomplete="organization"
+                    placeholder="Название компании*"
+                  />
+                </div>
+                <div class="tm-try-free-cta__field">
+                  <label class="tm-try-free-cta__label" for="tm-try-free-trips">Сколько командировок в компании в месяц<span aria-hidden="true">*</span></label>
+                  <select class="tm-try-free-cta__input tm-try-free-cta__select" id="tm-try-free-trips" name="trips_per_month" required>
+                    <option value="">—</option>
+                    <option value="1-10">1–10</option>
+                    <option value="11-50">11–50</option>
+                    <option value="51-200">51–200</option>
+                    <option value="200+">Более 200</option>
+                  </select>
+                </div>
+                <div class="tm-try-free-cta__field">
+                  <label class="tm-try-free-cta__label" for="tm-try-free-email">Корпоративная почта<span aria-hidden="true">*</span></label>
+                  <input
+                    class="tm-try-free-cta__input"
+                    type="email"
+                    id="tm-try-free-email"
+                    name="email"
+                    required
+                    autocomplete="email"
+                    placeholder="Корпоративная почта*"
+                  />
+                </div>
+                <div class="tm-try-free-cta__field">
+                  <label class="tm-try-free-cta__label" for="tm-try-free-phone">Телефон<span aria-hidden="true">*</span></label>
+                  <input
+                    class="tm-try-free-cta__input"
+                    type="tel"
+                    id="tm-try-free-phone"
+                    name="phone"
+                    required
+                    autocomplete="tel"
+                    inputmode="tel"
+                    placeholder="+7(000) 000-00-00"
+                  />
+                </div>
+                <label class="tm-try-free-cta__consent">
+                  <input class="tm-try-free-cta__checkbox" type="checkbox" name="marketing_consent" value="1" />
+                  <span class="tm-try-free-cta__switch" aria-hidden="true"></span>
+                  <span class="tm-try-free-cta__consent-label">
+                    Даю согласие
+                    <a href="confidence-page.html" class="tm-try-free-cta__link">на получение сообщений рекламного и информационного характера</a>
+                  </span>
+                </label>
+                <button class="tm-try-free-cta__submit" type="submit">Попробовать бесплатно</button>
+                <p class="tm-try-free-cta__legal">
+                  Нажимая на эту кнопку, вы даёте
+                  <a href="confidence-page.html" class="tm-try-free-cta__link">согласие на обработку персональных данных</a>
+                  и принимаете условия
+                  <a href="confidence-page.html" class="tm-try-free-cta__link">Политики обработки персональных данных</a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="tm-materials" aria-labelledby="tm-materials-title">
+      <div class="tm-materials__inner">
+        <h2 id="tm-materials-title" class="tm-materials__heading">Полезные материалы по теме</h2>
+        <div class="tm-materials__grid">
+          <a class="tm-materials-card" href="#">
+            <div class="tm-materials-card__thumb" aria-hidden="true"></div>
+            <p class="tm-materials-card__text">Как организовать 100 и больше командировок в месяц</p>
+          </a>
+          <a class="tm-materials-card" href="#">
+            <div class="tm-materials-card__thumb" aria-hidden="true"></div>
+            <p class="tm-materials-card__text">
+              Кейс Точка: Как 4&nbsp;000+ сотрудников «Точки» начали сами бронировать командировки
+            </p>
+          </a>
+          <a class="tm-materials-card" href="#">
+            <div class="tm-materials-card__thumb" aria-hidden="true"></div>
+            <p class="tm-materials-card__text">Кейс как ООО «ВГК» оптимизировали организацию командировок и вахт</p>
+          </a>
+          <a class="tm-materials-card" href="#">
+            <div class="tm-materials-card__thumb" aria-hidden="true"></div>
+            <p class="tm-materials-card__text">Как оформить командировку сотруднику в 2026 году</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__inner">
+        <div class="footer__col footer__col--info">
+          <div class="footer__col-head">
+            <img src="img/footerImages/Container.png" alt="Smartway" class="footer__logo" width="170" height="40" loading="lazy" decoding="async">
+          </div>
+          <div class="footer__col-body">
+            <div class="footer__contacts">
+              <p class="footer__contact footer__contact--strong"><a href="tel:+78007751428">8&nbsp;800&nbsp;775&nbsp;14&nbsp;28</a></p>
+              <p class="footer__contact footer__contact--strong"><a href="mailto:hello@smartway.today">hello@smartway.today</a></p>
+              <div class="footer__press">
+                <p class="footer__muted-label">Пресс-служба</p>
+                <p class="footer__contact footer__contact--strong"><a href="mailto:pr@smartway.today">pr@smartway.today</a></p>
+              </div>
+              <p class="footer__contact">
+                <a href="#" class="footer__link-external">Для отелей по вопросам контрактинга<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
+              </p>
+            </div>
+            <p class="footer__address">125124, г.&nbsp;Москва, 5-я&nbsp;ул.&nbsp;Ямского Поля, д.&nbsp;5, стр.&nbsp;1, пом.&nbsp;2/11</p>
+            <div class="footer__legal">
+              <p>ООО «Смартвэй», 2026</p>
+              <p>ИНН 7714379242</p>
+              <p>ОГРН 1167746277247</p>
+              <p>ОКВЭД 62.01</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__col footer__col--scenarios">
+          <div class="footer__col-head">
+            <div class="footer__badges">
+              <span class="footer__badge-pill">
+                <img src="img/footerImages/Container-1.png" alt="ТКП" class="footer__badge footer__badge--in-pill" width="80" height="42" loading="lazy" decoding="async">
+              </span>
+              <img src="img/footerImages/sk-uchastnik1.png.webp.png" alt="Участник Сколково" class="footer__badge" width="100" height="42" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="footer__col-body">
+            <h3 class="footer__heading">Сценарии</h3>
+            <ul class="footer__list">
+              <li><a href="#">Для руководителя</a></li>
+              <li><a href="#">Для бухгалтера</a></li>
+              <li><a href="#">Для организатора командировок</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__col footer__col--capabilities">
+          <div class="footer__col-head">
+            <div class="footer__socials">
+              <a href="#" class="footer__social footer__social--round" aria-label="ВКонтакте"><img src="img/footer-icon-vk.svg" alt="" width="20" height="20"></a>
+              <a href="#" class="footer__social footer__social--round" aria-label="VC.ru"><img src="img/footer-icon-vc.svg" alt="" class="footer__social-img--vc" width="22" height="16"></a>
+              <a href="#" class="footer__channel-pill">
+                <img src="img/footer-icon-tg.svg" alt="" class="footer__channel-icon" width="18" height="18">
+                <span class="footer__channel-label">Канал «Командировки.Сегодня»</span>
+              </a>
+            </div>
+          </div>
+          <div class="footer__col-body">
+            <h3 class="footer__heading">Возможности</h3>
+            <ul class="footer__list">
+              <li><a href="#">Поиск авиабилетов</a></li>
+              <li><a href="#">Поиск ж/д билетов</a></li>
+              <li><a href="#">Поиск отелей</a></li>
+              <li><a href="#">Такси</a></li>
+              <li><a href="#">Интеграция с 1С</a></li>
+              <li><a href="#">Согласование</a></li>
+              <li><a href="#">Тревел-политики</a></li>
+              <li><a href="#" class="footer__list-link--accent">Smartway Отпуск</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__col footer__col--useful">
+          <div class="footer__col-head footer__col-head--spacer" aria-hidden="true"></div>
+          <div class="footer__col-body">
+            <h3 class="footer__heading">Полезное</h3>
+            <ul class="footer__list">
+              <li><a href="#">Вопрос-ответ</a></li>
+              <li><a href="#">Блог</a></li>
+              <li><a href="#">Такси в командировке</a></li>
+              <li><a href="#">Бесплатная консультация</a></li>
+              <li><a href="#">Оформление командировок</a></li>
+              <li><a href="#">Реферальная программа Smartway</a></li>
+              <li><a href="#">Аудит командировок</a></li>
+              <li><a href="#">Партнерская программа для франчайзи «1С»</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__col footer__col--about">
+          <div class="footer__col-head">
+            <a href="1index.html#consult" class="footer__btn">Записаться на консультацию<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
+          </div>
+          <div class="footer__col-body">
+            <h3 class="footer__heading">О компании</h3>
+            <ul class="footer__list footer__list--compact">
+              <li><a href="#">Общая информация</a></li>
+              <li><a href="#">Работа в Smartway</a></li>
+              <li><a href="#">Реквизиты</a></li>
+              <li><a href="#">Оферта</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">Условия доступа к личным поездкам</a></li>
+              <li><a href="#">Пользовательское соглашение</a></li>
+              <li><a href="#">Политика конфиденциальности</a></li>
+              <li><a href="#">Правила использования ПЭП</a></li>
+              <li><a href="#">Аккредитованная IT-компания</a></li>
+              <li><a href="#">Договор о страховании финансовых рисков</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__bottom-inner">
+        <a href="#" class="footer__bottom-link">Защита персональных данных</a>
+        <a href="#" class="footer__bottom-link">Сертификат Транспортной Клиринговой Компании</a>
+        <a href="#" class="footer__bottom-link">Безопасное соединение SSL</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

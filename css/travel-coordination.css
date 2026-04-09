@@ -1,0 +1,1338 @@
+/* Страница «Согласование» */
+
+body.travel-coordination-page.komand-page--no-sidebar .komand-layout {
+  display: block;
+}
+
+body.travel-coordination-page.komand-page--no-sidebar .komand-layout__segment--top,
+body.travel-coordination-page.komand-page--no-sidebar .komand-layout__segment--bottom {
+  min-width: 0;
+}
+
+body.travel-coordination-page .komand-main {
+  margin: 0;
+  max-width: none;
+  width: 100%;
+  padding: clamp(24px, 5vw, 48px) 10% clamp(48px, 8vw, 88px);
+  box-sizing: border-box;
+  background: #fff;
+}
+
+/* Герой: текст слева, иллюстрация справа */
+.travel-coordination-hero {
+  margin: 0 0 clamp(40px, 6vw, 72px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.travel-coordination-hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(28px, 5vw, 56px);
+  box-sizing: border-box;
+}
+
+.travel-coordination-hero__content {
+  flex: 1;
+  min-width: 0;
+  max-width: min(28rem, 100%);
+  text-align: left;
+}
+
+.travel-coordination-hero__title {
+  margin: 0 0 clamp(14px, 2.2vw, 22px);
+  font-size: clamp(26px, 3.5vw, 42px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+}
+
+.travel-coordination-hero__lead {
+  margin: 0 0 clamp(28px, 4vw, 40px);
+  font-size: clamp(16px, 1.8vw, 19px);
+  line-height: 1.52;
+  font-weight: 400;
+  color: #5c5c5c;
+}
+
+.travel-coordination-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  font-family: inherit;
+  font-size: clamp(15px, 1.65vw, 17px);
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background: #eb4433;
+  border-radius: 14px;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.travel-coordination-hero__btn:hover {
+  background: #d63a2b;
+  color: #fff;
+}
+
+.travel-coordination-hero__btn:active {
+  transform: scale(0.99);
+}
+
+.travel-coordination-hero__btn:focus-visible {
+  outline: 3px solid #eb4433;
+  outline-offset: 3px;
+}
+
+.travel-coordination-hero__visual {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: min(55%, 620px);
+}
+
+.travel-coordination-hero__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Две карточки: «было / Smartway» */
+.travel-coordination-compare {
+  margin: 0 0 clamp(48px, 7vw, 88px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.travel-coordination-compare__heading {
+  margin: 0 0 clamp(28px, 4vw, 44px);
+  text-align: center;
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+}
+
+.travel-coordination-compare__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 2.5vw, 24px);
+  align-items: stretch;
+}
+
+.travel-coordination-compare__card {
+  display: flex;
+  flex-direction: column;
+  min-height: min(520px, 88vw);
+  border-radius: clamp(28px, 3.5vw, 40px);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.travel-coordination-compare__card--light {
+  background: #fff;
+  border: 1px solid #ececec;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.07);
+}
+
+.travel-coordination-compare__card--accent {
+  background: #eb4433;
+  color: #fff;
+}
+
+.travel-coordination-compare__card-body {
+  flex: 0 0 auto;
+  padding: clamp(22px, 3.2vw, 32px) clamp(20px, 2.8vw, 28px) clamp(12px, 2vw, 16px);
+}
+
+.travel-coordination-compare__icon-thumb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: 0 0 14px;
+  border-radius: 50%;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.travel-coordination-compare__icon-thumb--down {
+  background: transparent;
+  width: auto;
+  height: auto;
+  padding: 0;
+}
+
+.travel-coordination-compare__icon-thumb--up {
+  background: transparent;
+  width: auto;
+  height: auto;
+  padding: 0;
+}
+
+.travel-coordination-compare__like-img {
+  display: block;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.travel-coordination-compare__like-img--dislike,
+.travel-coordination-compare__like-img--logo {
+  width: clamp(36px, 6.5vw, 52px);
+  height: clamp(36px, 6.5vw, 52px);
+  object-fit: contain;
+}
+
+.travel-coordination-compare__like-img--dislike {
+  transform: none;
+}
+
+.travel-coordination-compare__like-img--logo {
+  transform: none;
+  filter: none;
+}
+
+.travel-coordination-compare__card-title {
+  margin: 0 0 12px;
+  font-size: clamp(19px, 2.1vw, 24px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+}
+
+.travel-coordination-compare__card--accent .travel-coordination-compare__card-title {
+  color: #fff;
+}
+
+.travel-coordination-compare__card-text {
+  margin: 0;
+  font-size: clamp(14px, 1.45vw, 16px);
+  line-height: 1.5;
+  color: #3a3a3a;
+}
+
+.travel-coordination-compare__card--accent .travel-coordination-compare__card-text {
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.travel-coordination-compare__card-visual {
+  position: relative;
+  flex: 1;
+  min-height: 200px;
+  overflow: hidden;
+  margin-top: auto;
+  padding: 0 clamp(8px, 2vw, 12px);
+  box-sizing: border-box;
+}
+
+/* Лайки цепляем к габариту самой картинки, а не ко всей полосе визуала */
+.travel-coordination-compare__card-visual--with-stack {
+  overflow: visible;
+}
+
+/* Сетка: высота ряда = высота картинки; колонка лайков растягивается на ту же высоту */
+.travel-coordination-compare__card-visual-stack {
+  display: grid;
+  grid-template-columns: minmax(0, max-content) clamp(132px, 36vw, 218px);
+  grid-template-rows: auto;
+  align-items: stretch;
+  justify-content: center;
+  column-gap: clamp(6px, 1.8vw, 18px);
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  overflow: visible;
+}
+
+.travel-coordination-compare__card-visual-stack > .travel-coordination-compare__card-img {
+  display: block;
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+  justify-self: center;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  object-fit: contain;
+  object-position: bottom center;
+  pointer-events: none;
+}
+
+/* Лайки слева от картинки — зеркальная колонка */
+.travel-coordination-compare__card-visual-stack--likes-left {
+  grid-template-columns: clamp(132px, 36vw, 218px) minmax(0, max-content);
+}
+
+.travel-coordination-compare__card-visual-stack--likes-left > .travel-coordination-compare__card-img {
+  grid-column: 2;
+}
+
+.travel-coordination-compare__deco-likes {
+  z-index: 2;
+  pointer-events: none;
+}
+
+.travel-coordination-compare__deco-likes--before {
+  position: relative;
+  grid-column: 1;
+  grid-row: 1;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: clamp(4px, 1vw, 10px) clamp(2px, 0.8vw, 6px);
+  box-sizing: border-box;
+}
+
+.travel-coordination-compare__deco-like {
+  display: block;
+  width: clamp(36px, 6.5vw, 54px);
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.travel-coordination-compare__deco-like--down {
+  transform: rotate(180deg);
+  opacity: 0.2;
+}
+
+.travel-coordination-compare__card--light .travel-coordination-compare__deco-like--down {
+  filter: grayscale(1);
+  opacity: 0.28;
+}
+
+/* Отдельный ассет для пузырей слева (ориентация в файле, без rotate как у like.png) */
+.travel-coordination-compare__deco-like--leftlike {
+  transform: rotate(180deg);
+  opacity: 1;
+  filter: none;
+}
+
+.travel-coordination-compare__deco-like--up {
+  transform: none;
+  opacity: 0.45;
+  filter: brightness(0) invert(1);
+}
+
+/* Три лайка — вершины широкого треугольника (основание внизу, вершина по центру сверху) */
+.travel-coordination-compare__deco-likes--after {
+  position: relative;
+  grid-column: 2;
+  grid-row: 1;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: clamp(4px, 1vw, 10px) clamp(2px, 0.8vw, 6px);
+  box-sizing: border-box;
+}
+
+.travel-coordination-compare__deco-likes--after .travel-coordination-compare__deco-bubble,
+.travel-coordination-compare__deco-likes--before .travel-coordination-compare__deco-bubble {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.24);
+  box-sizing: border-box;
+}
+
+.travel-coordination-compare__card--light .travel-coordination-compare__deco-likes--before .travel-coordination-compare__deco-bubble {
+  background: rgba(0, 0, 0, 0.07);
+}
+
+/* Нижний левый — самый крупный; по часовой ~18° */
+.travel-coordination-compare__deco-bubble--accent-bl {
+  left: 0;
+  bottom: clamp(18px, 8%, 42px);
+  width: clamp(74px, 12.5vw, 96px);
+  height: clamp(74px, 12.5vw, 96px);
+  transform: translate(0, 0) rotate(18deg);
+  transform-origin: center center;
+}
+
+.travel-coordination-compare__deco-bubble--accent-bl .travel-coordination-compare__deco-like {
+  width: clamp(38px, 6.2vw, 50px);
+  height: auto;
+}
+
+/* Верхняя вершина — самая маленькая; по часовой ~22–25° */
+.travel-coordination-compare__deco-bubble--accent-nw {
+  left: 50%;
+  top: 0;
+  width: clamp(42px, 6.8vw, 56px);
+  height: clamp(42px, 6.8vw, 56px);
+  transform: translate(-50%, 0) rotate(23deg);
+  transform-origin: center center;
+}
+
+.travel-coordination-compare__deco-bubble--accent-nw .travel-coordination-compare__deco-like {
+  width: clamp(20px, 3.2vw, 27px);
+  height: auto;
+}
+
+/* Нижний правый — средний размер; против часовой ~18° (к центру кластера) */
+.travel-coordination-compare__deco-bubble--accent-br {
+  right: 0;
+  bottom: clamp(18px, 8%, 42px);
+  width: clamp(56px, 9.2vw, 74px);
+  height: clamp(56px, 9.2vw, 74px);
+  transform: translate(0, 0) rotate(-18deg);
+  transform-origin: center center;
+}
+
+.travel-coordination-compare__deco-bubble--accent-br .travel-coordination-compare__deco-like {
+  width: clamp(28px, 4.4vw, 37px);
+  height: auto;
+}
+
+/* Левый блок: тот же треугольник, повёрнутый на 180° (основание сверху, вершина снизу по центру) */
+.travel-coordination-compare__deco-likes--before .travel-coordination-compare__deco-bubble--accent-nw {
+  left: 50%;
+  top: auto;
+  right: auto;
+  bottom: clamp(40px, 15%, 62px);
+  transform: translate(-50%, -10px) rotate(203deg);
+}
+
+.travel-coordination-compare__deco-likes--before .travel-coordination-compare__deco-bubble--accent-bl {
+  left: auto;
+  right: 0;
+  top: clamp(8px, 3.5%, 22px);
+  bottom: auto;
+  transform: translate(0, -12px) rotate(198deg);
+}
+
+.travel-coordination-compare__deco-likes--before .travel-coordination-compare__deco-bubble--accent-br {
+  left: 0;
+  right: auto;
+  top: clamp(8px, 3.5%, 22px);
+  bottom: auto;
+  transform: translate(0, -12px) rotate(162deg);
+}
+
+.travel-coordination-compare__card-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  object-position: bottom center;
+  pointer-events: none;
+}
+
+.travel-coordination-compare__card--light .travel-coordination-compare__card-img {
+  max-width: 88%;
+}
+
+/* «Как это работает»: три шага, пунктир между номерами */
+.travel-coordination-how {
+  margin: 0 0 clamp(48px, 7vw, 88px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+  background: #fff;
+}
+
+.travel-coordination-how__title {
+  margin: 0 0 clamp(28px, 4vw, 48px);
+  text-align: center;
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+}
+
+.travel-coordination-how__steps {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  align-items: flex-start;
+}
+
+.travel-coordination-how__step {
+  --how-num-size: clamp(26px, 4.5vw, 32px);
+  --how-icon-size: clamp(40px, 7vw, 48px);
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* Иконка строго над красным кружком (центры по вертикальной оси номера) */
+.travel-coordination-how__icon-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 clamp(8px, 1.4vw, 12px);
+}
+
+.travel-coordination-how__icon {
+  display: block;
+  width: var(--how-icon-size);
+  height: auto;
+  object-fit: contain;
+  margin-left: calc((var(--how-num-size) - var(--how-icon-size)) / 2);
+}
+
+.travel-coordination-how__track {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 32px;
+  margin: 0 0 clamp(12px, 2vw, 18px);
+  box-sizing: border-box;
+}
+
+.travel-coordination-how__num {
+  flex-shrink: 0;
+  width: var(--how-num-size);
+  height: var(--how-num-size);
+  border-radius: 50%;
+  background: #e24c3b;
+  color: #fff;
+  font-size: clamp(12px, 1.5vw, 15px);
+  font-weight: 600;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.travel-coordination-how__step:not(:last-child) .travel-coordination-how__track::after {
+  content: "";
+  flex: 1 1 auto;
+  min-width: 8px;
+  height: 0;
+  margin-left: clamp(6px, 1.5vw, 12px);
+  margin-right: clamp(4px, 1vw, 10px);
+  border-top: 2px dotted #e24c3b;
+  opacity: 0.95;
+}
+
+.travel-coordination-how__text {
+  margin: 0;
+  padding-right: clamp(8px, 2vw, 20px);
+  font-size: clamp(14px, 1.45vw, 17px);
+  line-height: 1.45;
+  font-weight: 400;
+  color: #3a3a3a;
+  text-align: left;
+  max-width: 22rem;
+}
+
+/* «Кто согласовывает»: текст + скрин confform */
+.travel-coordination-schemes {
+  margin: 0 0 clamp(48px, 7vw, 88px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+  background: #fff;
+}
+
+.travel-coordination-schemes__title {
+  margin: 0 auto clamp(28px, 4vw, 48px);
+  text-align: center;
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  max-width: 52rem;
+}
+
+.travel-coordination-schemes__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+  gap: clamp(28px, 4vw, 48px);
+  align-items: start;
+}
+
+.travel-coordination-schemes__subtitle {
+  margin: 0 0 clamp(20px, 3vw, 28px);
+  font-size: clamp(17px, 2vw, 21px);
+  font-weight: 700;
+  line-height: 1.25;
+  color: #eb4433;
+}
+
+.travel-coordination-schemes__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(22px, 3.5vw, 32px);
+}
+
+.travel-coordination-schemes__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: clamp(14px, 2.5vw, 20px);
+}
+
+.travel-coordination-schemes__aside {
+  --schemes-num-size: clamp(26px, 4.5vw, 32px);
+  flex-shrink: 0;
+}
+
+.travel-coordination-schemes__num {
+  flex-shrink: 0;
+  width: var(--schemes-num-size);
+  height: var(--schemes-num-size);
+  border-radius: 50%;
+  background: #eb4433;
+  color: #fff;
+  font-size: clamp(12px, 1.5vw, 15px);
+  font-weight: 600;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.travel-coordination-schemes__item-text {
+  margin: 0;
+  padding: 0;
+  font-size: clamp(14px, 1.45vw, 17px);
+  line-height: 1.5;
+  font-weight: 400;
+  color: #3a3a3a;
+  text-align: left;
+}
+
+.travel-coordination-schemes__figure {
+  margin: 0;
+  padding: clamp(16px, 2vw, 24px);
+  background: #fff;
+  border-radius: clamp(20px, 2.5vw, 28px);
+  box-shadow: 0 12px 44px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.travel-coordination-schemes__mockup-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: clamp(12px, 1.5vw, 18px);
+}
+
+/* Тревел-политики: светло-серый фон, картинка слева */
+.travel-coordination-policies {
+  margin-left: -10%;
+  margin-right: -10%;
+  padding: clamp(40px, 6vw, 80px) 10%;
+  background: #f5f6f8;
+  box-sizing: border-box;
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.travel-coordination-policies__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  align-items: center;
+  gap: clamp(24px, 3.5vw, 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.travel-coordination-policies__visual {
+  min-width: 0;
+  justify-self: start;
+  width: 100%;
+}
+
+.travel-coordination-policies__figure {
+  margin: 0;
+  padding: clamp(12px, 1.8vw, 20px);
+  background: #fff;
+  border-radius: clamp(18px, 2.2vw, 26px);
+  box-shadow: 0 14px 48px rgba(0, 0, 0, 0.09);
+  box-sizing: border-box;
+}
+
+.travel-coordination-policies__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: clamp(10px, 1.3vw, 16px);
+}
+
+.travel-coordination-policies__content {
+  min-width: 0;
+}
+
+.travel-coordination-policies__title {
+  margin: 0 0 clamp(18px, 2.5vw, 26px);
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+.travel-coordination-policies__title-accent {
+  color: #eb4433;
+}
+
+.travel-coordination-policies__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(20px, 3vw, 32px);
+  flex-wrap: wrap;
+}
+
+.travel-coordination-policies__text {
+  margin: 0;
+  flex: 1 1 min(16rem, 100%);
+  font-size: clamp(14px, 1.45vw, 17px);
+  line-height: 1.55;
+  font-weight: 400;
+  color: #5c5c5c;
+  text-align: left;
+}
+
+.travel-coordination-policies__btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  font-family: inherit;
+  font-size: clamp(14px, 1.45vw, 16px);
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background: #eb4433;
+  border-radius: 10px;
+  transition: background 0.15s ease, transform 0.1s ease;
+  white-space: nowrap;
+}
+
+.travel-coordination-policies__btn:hover {
+  background: #d63a2b;
+  color: #fff;
+}
+
+.travel-coordination-policies__btn:active {
+  transform: scale(0.99);
+}
+
+.travel-coordination-policies__btn:focus-visible {
+  outline: 3px solid #eb4433;
+  outline-offset: 3px;
+}
+
+/* Красный баннер: текст слева (~47%), группа портретов справа (~53%) */
+.travel-coordination-limits {
+  margin: 0 0 clamp(48px, 7vw, 88px);
+  padding: clamp(28px, 4.5vw, 48px) clamp(22px, 3.5vw, 40px);
+  background: #eb4433;
+  border-radius: clamp(24px, 3vw, 34px);
+  color: #fff;
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+  box-sizing: border-box;
+}
+
+.travel-coordination-limits__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 9fr) minmax(0, 11fr);
+  align-items: center;
+  gap: clamp(20px, 3vw, 36px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.travel-coordination-limits__content {
+  min-width: 0;
+  justify-self: stretch;
+  padding-right: clamp(0px, 1vw, 8px);
+}
+
+.travel-coordination-limits__visual {
+  min-width: 0;
+  justify-self: end;
+  width: 100%;
+  max-width: 100%;
+}
+
+.travel-coordination-limits__img {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  margin-left: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: right center;
+}
+
+.travel-coordination-limits__title {
+  margin: 0 0 clamp(14px, 2vw, 20px);
+  font-size: clamp(24px, 3.2vw, 36px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.travel-coordination-limits__text {
+  margin: 0;
+  font-size: clamp(15px, 1.55vw, 18px);
+  line-height: 1.55;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Предкомандировочное согласование: заголовок, скрин по центру, CTA */
+.travel-coordination-predcom {
+  margin: 0 0 clamp(48px, 7vw, 88px);
+  padding: 0 clamp(8px, 2vw, 16px);
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.travel-coordination-predcom__title {
+  margin: 0 0 clamp(14px, 2vw, 20px);
+  max-width: 22rem;
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+}
+
+.travel-coordination-predcom__lead {
+  margin: 0 0 clamp(24px, 4vw, 40px);
+  max-width: min(36rem, 100%);
+  font-size: clamp(15px, 1.55vw, 18px);
+  line-height: 1.5;
+  font-weight: 400;
+  color: #5c5c5c;
+}
+
+.travel-coordination-predcom__visual {
+  width: 100%;
+  max-width: min(920px, 100%);
+  margin: 0 0 clamp(28px, 4.5vw, 44px);
+}
+
+.travel-coordination-predcom__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: clamp(12px, 1.5vw, 18px);
+}
+
+.travel-coordination-predcom__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  min-width: min(280px, 100%);
+  font-family: inherit;
+  font-size: clamp(15px, 1.65vw, 17px);
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background: #eb4433;
+  border-radius: 14px;
+  transition: background 0.15s ease, transform 0.1s ease;
+  box-sizing: border-box;
+}
+
+.travel-coordination-predcom__btn:hover {
+  background: #d63a2b;
+  color: #fff;
+}
+
+.travel-coordination-predcom__btn:active {
+  transform: scale(0.99);
+}
+
+.travel-coordination-predcom__btn:focus-visible {
+  outline: 3px solid #eb4433;
+  outline-offset: 3px;
+}
+
+/* Лид-форма: заголовок + сторы слева, карточка заявки справа */
+.travel-coordination-lead {
+  margin-left: -10%;
+  margin-right: -10%;
+  margin-bottom: clamp(48px, 7vw, 88px);
+  padding: clamp(40px, 6vw, 72px) 10%;
+  background: #f5f6f8;
+  box-sizing: border-box;
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+}
+
+.travel-coordination-lead__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(28px, 4vw, 52px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.travel-coordination-lead__col--copy {
+  min-width: 0;
+}
+
+.travel-coordination-lead__col--form {
+  min-width: 0;
+}
+
+.travel-coordination-lead__headline {
+  margin: 0 0 clamp(28px, 4vw, 40px);
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.travel-coordination-lead__headline-accent {
+  display: block;
+  color: #eb4433;
+}
+
+.travel-coordination-lead__headline-rest {
+  display: block;
+  color: #1a1a1a;
+}
+
+.travel-coordination-lead__stores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.travel-coordination-lead__store {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  text-decoration: none;
+  background: transparent;
+  border-radius: 0;
+  transition: opacity 0.15s ease;
+}
+
+.travel-coordination-lead__store:hover {
+  opacity: 0.88;
+}
+
+.travel-coordination-lead__store-badge,
+.travel-coordination-lead__store img {
+  display: block;
+  width: auto;
+  height: clamp(44px, 4.2vw, 52px);
+  max-width: min(200px, 46vw);
+  object-fit: contain;
+}
+
+.travel-coordination-lead__card {
+  background: #fff;
+  border-radius: clamp(16px, 2vw, 24px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1);
+  padding: clamp(28px, 3.5vw, 40px) clamp(24px, 3vw, 36px);
+  box-sizing: border-box;
+}
+
+.travel-coordination-lead__form-title {
+  margin: 0 0 clamp(22px, 2.5vw, 28px);
+  text-align: center;
+  font-size: clamp(20px, 2.2vw, 24px);
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.travel-coordination-lead__form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 1.6vw, 16px);
+}
+
+.travel-coordination-lead__field {
+  margin: 0;
+}
+
+.travel-coordination-lead__label {
+  display: block;
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: #5c5c5c;
+}
+
+.travel-coordination-lead__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.travel-coordination-lead__input,
+.travel-coordination-lead__select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 16px;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.35;
+  color: #1a1a1a;
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  border-radius: 12px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.travel-coordination-lead__input::placeholder {
+  color: #9a9a9a;
+}
+
+.travel-coordination-lead__input:hover,
+.travel-coordination-lead__select:hover {
+  border-color: #c0c0c0;
+}
+
+.travel-coordination-lead__input:focus,
+.travel-coordination-lead__select:focus {
+  outline: none;
+  border-color: #eb4433;
+  box-shadow: 0 0 0 3px rgba(235, 68, 51, 0.18);
+}
+
+.travel-coordination-lead__select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 42px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath stroke='%23666' stroke-linecap='round' stroke-width='1.5' d='m1 1.5 5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  color: #1a1a1a;
+}
+
+.travel-coordination-lead__consent {
+  padding-top: 4px;
+}
+
+.travel-coordination-lead__toggle-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.travel-coordination-lead__toggle {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 400;
+  color: #3a3a3a;
+}
+
+.travel-coordination-lead__toggle-ui {
+  flex-shrink: 0;
+  width: 44px;
+  height: 24px;
+  margin-top: 1px;
+  border-radius: 12px;
+  background: #c8c8c8;
+  position: relative;
+  transition: background 0.2s ease;
+}
+
+.travel-coordination-lead__toggle-ui::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  top: 2px;
+  left: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.travel-coordination-lead__toggle-input:checked + .travel-coordination-lead__toggle .travel-coordination-lead__toggle-ui {
+  background: #eb4433;
+}
+
+.travel-coordination-lead__toggle-input:checked + .travel-coordination-lead__toggle .travel-coordination-lead__toggle-ui::after {
+  transform: translateX(20px);
+}
+
+.travel-coordination-lead__toggle-input:focus-visible + .travel-coordination-lead__toggle .travel-coordination-lead__toggle-ui {
+  outline: 2px solid #eb4433;
+  outline-offset: 2px;
+}
+
+.travel-coordination-lead__toggle-text {
+  min-width: 0;
+}
+
+.travel-coordination-lead__inline-link {
+  color: #d44333;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.travel-coordination-lead__inline-link:hover {
+  opacity: 0.88;
+}
+
+.travel-coordination-lead__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 6px;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: clamp(15px, 1.6vw, 17px);
+  font-weight: 600;
+  color: #fff;
+  background: #eb4433;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.travel-coordination-lead__submit:hover {
+  background: #d63a2b;
+}
+
+.travel-coordination-lead__submit:active {
+  transform: scale(0.99);
+}
+
+.travel-coordination-lead__submit:focus-visible {
+  outline: 3px solid #eb4433;
+  outline-offset: 3px;
+}
+
+.travel-coordination-lead__footnote {
+  margin: clamp(10px, 1.5vw, 14px) 0 0;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #888;
+  text-align: center;
+}
+
+.travel-coordination-lead__footnote-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.travel-coordination-lead__footnote-link:hover {
+  color: #5a5a5a;
+}
+
+.travel-coordination {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  font-family: "Golos Text", "Manrope", system-ui, sans-serif;
+  font-size: clamp(17px, 2vw, 20px);
+  line-height: 1.45;
+  color: #3a3a3a;
+  text-align: left;
+}
+
+.travel-coordination__title {
+  margin: 0 0 clamp(16px, 2.5vw, 24px);
+  padding: 0;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+}
+
+.travel-coordination__text {
+  margin: 0;
+  font-size: inherit;
+  line-height: 1.5;
+  font-weight: 400;
+  max-width: 42rem;
+}
+
+.travel-coordination__text + .travel-coordination__text {
+  margin-top: 0.95em;
+}
+
+.travel-coordination a {
+  color: #d44333;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.travel-coordination a:hover {
+  opacity: 0.88;
+}
+
+@media (max-width: 900px) {
+  .travel-coordination-compare__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .travel-coordination-compare__card {
+    min-height: min(480px, 120vw);
+  }
+
+  .travel-coordination-hero__inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .travel-coordination-hero__content {
+    max-width: none;
+  }
+
+  .travel-coordination-hero__visual {
+    max-width: none;
+    justify-content: center;
+  }
+
+  .travel-coordination-hero__img {
+    max-width: min(560px, 100%);
+    margin: 0 auto;
+  }
+
+  .travel-coordination-how__steps {
+    flex-direction: column;
+    gap: clamp(28px, 6vw, 40px);
+  }
+
+  .travel-coordination-how__step:not(:last-child) .travel-coordination-how__track::after {
+    display: none;
+  }
+
+  .travel-coordination-how__text {
+    max-width: none;
+    padding-right: 0;
+  }
+
+  .travel-coordination-schemes__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .travel-coordination-schemes__figure {
+    order: -1;
+    max-width: min(560px, 100%);
+    margin: 0 auto;
+  }
+
+  .travel-coordination-policies {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .travel-coordination-policies__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .travel-coordination-policies__visual {
+    max-width: min(520px, 100%);
+    margin: 0 auto;
+    justify-self: center;
+  }
+
+  .travel-coordination-policies__row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .travel-coordination-policies__btn {
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .travel-coordination-limits__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .travel-coordination-limits__content {
+    padding-right: 0;
+  }
+
+  .travel-coordination-limits__visual {
+    justify-self: center;
+    max-width: min(480px, 100%);
+  }
+
+  .travel-coordination-limits__img {
+    margin-left: auto;
+    margin-right: auto;
+    object-position: center;
+  }
+
+  .travel-coordination-lead {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .travel-coordination-lead__inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  body.travel-coordination-page .komand-main {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .travel-coordination-hero__btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .travel-coordination-predcom__btn {
+    width: 100%;
+    max-width: none;
+  }
+}

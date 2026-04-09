@@ -98,32 +98,7 @@
         </div>
 
         <div class="accountant-hero-block__visual" aria-hidden="true">
-          <div class="accountant-hero-block__visual-bg"></div>
-          <img src="img/hero-person.webp" alt="" class="accountant-hero-block__person" width="402" height="486" loading="eager">
-
-          <div class="accountant-hero-block__avans-card">
-            <div class="accountant-hero-block__avans-chip">3 мин</div>
-            <div class="accountant-hero-block__avans-title">Авансовый отчёт</div>
-            <div class="accountant-hero-block__avans-plus">+</div>
-          </div>
-
-          <div class="accountant-hero-block__download-card">
-            <div class="accountant-hero-block__download-icon" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 3V15" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
-                <path d="M7 11L12 16L17 11" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M4 20H20" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="accountant-hero-block__download-text">
-              <div class="accountant-hero-block__download-title">Скачать документы</div>
-              <div class="accountant-hero-block__download-meta">214 Мб</div>
-            </div>
-          </div>
-
-          <div class="accountant-hero-block__1c-circle">
-            <span>1С</span>
-          </div>
+          <img src="img/accountantmain.png" alt="" class="accountant-hero-block__person" width="402" height="486" loading="eager">
         </div>
       </div>
     </section>
@@ -365,19 +340,32 @@
           <article class="accountant-avans-card">
             <h3 class="accountant-avans-card__title">Создавайте отчёты<br>в 2 клика</h3>
             <p class="accountant-avans-card__text">
-              Выберите детали, сотрудника и создайте отчёт. Имя и даты подтянутся в документ.
+              Выберите поездку, сотрудника и создайте отчёт. Имя и даты подтянутся в документ.
             </p>
           </article>
 
-          <article class="accountant-avans-card">
-            <h3 class="accountant-avans-card__title">Заполняйте данные<br>автоматически</h3>
-            <p class="accountant-avans-card__text">
-              Используйте сканер чеков в мобильном приложении, чтобы не вносить расходы вручную.
-            </p>
+          <article class="accountant-avans-card accountant-avans-card--wide">
+            <div class="accountant-avans-card__wide-inner">
+              <div class="accountant-avans-card__wide-text">
+                <h3 class="accountant-avans-card__title">Заполняйте данные<br>автоматически</h3>
+                <p class="accountant-avans-card__text">
+                  Используйте сканер чеков в мобильном приложении, чтобы не вносить расходы вручную.
+                </p>
+              </div>
+              <div class="accountant-avans-card__wide-visual">
+                <img
+                  src="img/avansphone.png"
+                  alt="Сканирование чека в мобильном приложении Smartway"
+                  class="accountant-avans-card__wide-img"
+                  width="260"
+                  height="210"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+            </div>
           </article>
 
-          <div class="accountant-avans-phone" aria-hidden="true">
-          </div>
 
           <article class="accountant-avans-card">
             <h3 class="accountant-avans-card__title">Прикрепляйте<br>файлы</h3>
@@ -394,7 +382,7 @@
           </article>
 
           <article class="accountant-avans-card">
-            <h3 class="accountant-avans-card__title">Не напоминать<br>сотрудникам</h3>
+            <h3 class="accountant-avans-card__title">Не напоминайте<br>сотрудникам</h3>
             <p class="accountant-avans-card__text">
               Вся информация для авансового отчета уже есть в сервисе.
             </p>
@@ -410,7 +398,16 @@
             <a href="#try" class="accountant-avans-bottom__btn">Попробовать бесплатно</a>
           </article>
 
-          <div class="accountant-avans-bottom__ui" aria-hidden="true">
+          <div class="accountant-avans-bottom__ui">
+            <img
+              src="img/avansupload.png"
+              alt="Интерфейс Smartway: выгрузка отчёта и скачивание пакета документов"
+              class="accountant-avans-bottom__ui-img"
+              width="1040"
+              height="380"
+              loading="lazy"
+              decoding="async"
+            >
           </div>
         </div>
       </div>
@@ -421,94 +418,117 @@
         <h2 class="docs-report-block__title">Документы и отчётность</h2>
 
         <div class="docs-report-block__top">
-          <div class="docs-report-block__nodes" aria-hidden="true">
-            <div class="docs-report-node">
-              <div class="docs-report-node__icon docs-report-node__icon--tickets">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4 7.5C4 6.67157 4.67157 6 5.5 6H13.5C14.3284 6 15 6.67157 15 7.5V12.5C15 13.3284 14.3284 14 13.5 14H5.5C4.67157 14 4 13.3284 4 12.5V7.5Z" stroke="#FFFFFF" stroke-width="1.5"/>
-                  <path d="M8 6V14" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="2 2"/>
-                </svg>
-              </div>
-              <div class="docs-report-node__label">Билеты</div>
-              <div class="docs-report-node__dots">.</div>
-            </div>
-
-            <div class="docs-report-node">
-              <div class="docs-report-node__icon docs-report-node__icon--taxi">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4 10.2C4 9.53726 4.53726 9 5.2 9H14.8C15.4627 9 16 9.53726 16 10.2V12.2H4V10.2Z" stroke="#FFFFFF" stroke-width="1.5"/>
-                  <path d="M6.2 9V7.8C6.2 7.24689 6.64689 6.8 7.2 6.8H12.8C13.3531 6.8 13.8 7.24689 13.8 7.8V9" stroke="#FFFFFF" stroke-width="1.5"/>
-                  <path d="M6.5 12.2V13.6" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M13.5 12.2V13.6" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M7.3 13.8H12.7" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="docs-report-node__label">Такси</div>
-            </div>
-
-            <div class="docs-report-node">
-              <div class="docs-report-node__icon docs-report-node__icon--hotels">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 6.8C6 6.35817 6.35817 6 6.8 6H13.2C13.6418 6 14 6.35817 14 6.8V13.2C14 13.6418 13.6418 14 13.2 14H6.8C6.35817 14 6 13.6418 6 13.2V6.8Z" stroke="#FFFFFF" stroke-width="1.5"/>
-                  <path d="M6.3 9H14" stroke="#FFFFFF" stroke-width="1.5"/>
-                  <path d="M9 14V16" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="docs-report-node__label">Отели</div>
-            </div>
-          </div>
-
-          <svg class="docs-report-block__dotted docs-report-block__dotted--top" width="100%" height="70" viewBox="0 0 900 70" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M70,35 C180,0 300,0 410,35 C520,70 640,70 830,35" fill="none" stroke="#1F1F1F" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 10"/>
-            <path d="M450 38 L470 38 L460 58 Z" fill="#D44333"/>
-          </svg>
+          <img
+            src="img/docreport.png"
+            alt="Документы и отчётность: связка услуг командировки и закрывающих документов"
+            class="docs-report-block__top-img"
+            width="1180"
+            height="360"
+            loading="lazy"
+            decoding="async"
+          >
         </div>
 
-        <div class="docs-report-block__table-card" aria-hidden="true">
-          <img src="img/accountant-docs-screenshot.png" alt="" class="docs-report-block__table-img">
-        </div>
+        <img
+          src="img/accountant-docs-screenshot.png"
+          alt="Скриншот отчёта и документов в Smartway"
+          class="docs-report-block__table-img"
+          loading="lazy"
+          decoding="async"
+        >
 
-        <svg class="docs-report-block__dotted docs-report-block__dotted--bottom" width="100%" height="110" viewBox="0 0 900 110" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M90 55 C250 10 370 10 450 55 C530 100 650 100 810 55" fill="none" stroke="#D44333" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 10"/>
-          <path d="M440 58 L480 58 L460 96 Z" fill="#D44333"/>
-        </svg>
+        <img
+          src="img/downarrow.png"
+          alt=""
+          class="docs-report-block__downarrow"
+          loading="lazy"
+          decoding="async"
+        >
 
-        <div class="docs-report-block__cards" aria-hidden="true">
+        <div class="docs-report-block__cards">
           <article class="docs-report-mini-card">
-            <div class="docs-report-mini-card__icon docs-report-mini-card__icon--red">
-              <div class="docs-report-mini-card__icon-inner"></div>
+            <div class="docs-report-mini-card__icon">
+              <img
+                class="docs-report-mini-card__icon-img"
+                src="img/cardslogos/Vector.png"
+                alt=""
+                width="40"
+                height="40"
+                loading="lazy"
+                decoding="async"
+              >
             </div>
-            <div class="docs-report-mini-card__text">Все документы в одном месте</div>
+            <p class="docs-report-mini-card__text">Все документы в одном месте</p>
           </article>
           <article class="docs-report-mini-card">
-            <div class="docs-report-mini-card__icon docs-report-mini-card__icon--red">
-              <div class="docs-report-mini-card__icon-inner"></div>
+            <div class="docs-report-mini-card__icon">
+              <img
+                class="docs-report-mini-card__icon-img"
+                src="img/cardslogos/Vector-1.png"
+                alt=""
+                width="40"
+                height="40"
+                loading="lazy"
+                decoding="async"
+              >
             </div>
-            <div class="docs-report-mini-card__text">Закрывающие формируются вовремя</div>
+            <p class="docs-report-mini-card__text">Закрывающие формируются вовремя</p>
           </article>
           <article class="docs-report-mini-card">
-            <div class="docs-report-mini-card__icon docs-report-mini-card__icon--red">
-              <div class="docs-report-mini-card__icon-inner"></div>
+            <div class="docs-report-mini-card__icon">
+              <img
+                class="docs-report-mini-card__icon-img"
+                src="img/cardslogos/Group 2085656633.png"
+                alt=""
+                width="40"
+                height="40"
+                loading="lazy"
+                decoding="async"
+              >
             </div>
-            <div class="docs-report-mini-card__text">Оригиналы приходят по почте или ЭДО</div>
+            <p class="docs-report-mini-card__text">Оригиналы приходят по почте или ЭДО</p>
           </article>
           <article class="docs-report-mini-card">
-            <div class="docs-report-mini-card__icon docs-report-mini-card__icon--red">
-              <div class="docs-report-mini-card__icon-inner"></div>
+            <div class="docs-report-mini-card__icon">
+              <img
+                class="docs-report-mini-card__icon-img"
+                src="img/cardslogos/Group 2085656632.png"
+                alt=""
+                width="40"
+                height="40"
+                loading="lazy"
+                decoding="async"
+              >
             </div>
-            <div class="docs-report-mini-card__text">Формат документов под ваш бухучёт</div>
+            <p class="docs-report-mini-card__text">Формат документов под ваш бухучёт</p>
           </article>
           <article class="docs-report-mini-card">
-            <div class="docs-report-mini-card__icon docs-report-mini-card__icon--red">
-              <div class="docs-report-mini-card__icon-inner"></div>
+            <div class="docs-report-mini-card__icon">
+              <img
+                class="docs-report-mini-card__icon-img"
+                src="img/cardslogos/Group 2085656636.png"
+                alt=""
+                width="40"
+                height="40"
+                loading="lazy"
+                decoding="async"
+              >
             </div>
-            <div class="docs-report-mini-card__text">Формируйте акты сверок автоматически</div>
+            <p class="docs-report-mini-card__text">Формируйте акты сверок автоматически</p>
           </article>
           <article class="docs-report-mini-card">
-            <div class="docs-report-mini-card__icon docs-report-mini-card__icon--red">
-              <div class="docs-report-mini-card__icon-inner"></div>
+            <div class="docs-report-mini-card__icon">
+              <img
+                class="docs-report-mini-card__icon-img"
+                src="img/cardslogos/Group 2085656635.png"
+                alt=""
+                width="40"
+                height="40"
+                loading="lazy"
+                decoding="async"
+              >
             </div>
-            <div class="docs-report-mini-card__text">Получайте документы с удобной периодичностью</div>
+            <p class="docs-report-mini-card__text">Получайте документы с удобной периодичностью</p>
           </article>
         </div>
 
@@ -517,50 +537,59 @@
     </section>
 
     <section class="payment-flex-block" aria-label="Прозрачная и гибкая оплата">
+      <svg class="payment-flex-block__defs" aria-hidden="true" focusable="false" width="0" height="0">
+        <defs>
+          <clipPath id="payment-flex-card-notch" clipPathUnits="objectBoundingBox">
+            <path
+              d="M 0.03 0.042 Q 0.03 0 0.05 0 L 0.26 0 Q 0.5 0.48 0.74 0 L 0.95 0 Q 0.97 0 0.97 0.042 L 0.97 0.958 Q 0.97 1 0.95 1 L 0.05 1 Q 0.03 1 0.03 0.958 Z"
+            />
+          </clipPath>
+        </defs>
+      </svg>
       <div class="payment-flex-block__inner">
         <h2 class="payment-flex-block__title">Прозрачная и гибкая оплата</h2>
         <div class="payment-flex-block__grid">
           <article class="payment-flex-card">
+            <div class="payment-flex-card__icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 9.5C4 8.11929 5.11929 7 6.5 7H17.5C18.8807 7 20 8.11929 20 9.5V16.5C20 17.8807 18.8807 19 17.5 19H6.5C5.11929 19 4 17.8807 4 16.5V9.5Z" stroke="#FFFFFF" stroke-width="1.5"/>
+                <path d="M4 11.5H14.5C15.8807 11.5 17 12.6193 17 14V16.5" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
             <div class="payment-flex-card__body">
-              <div class="payment-flex-card__icon" aria-hidden="true">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4 9.5C4 8.11929 5.11929 7 6.5 7H17.5C18.8807 7 20 8.11929 20 9.5V16.5C20 17.8807 18.8807 19 17.5 19H6.5C5.11929 19 4 17.8807 4 16.5V9.5Z" stroke="#FFFFFF" stroke-width="1.5"/>
-                  <path d="M4 11.5H14.5C15.8807 11.5 17 12.6193 17 14V16.5" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
               <p class="payment-flex-card__text">Оплачивайте заранее или с отсрочкой</p>
             </div>
           </article>
           <article class="payment-flex-card">
+            <div class="payment-flex-card__icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="8" stroke="#FFFFFF" stroke-width="1.5"/>
+                <path d="M8 12L11 15L16 9" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
             <div class="payment-flex-card__body">
-              <div class="payment-flex-card__icon" aria-hidden="true">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="8" stroke="#FFFFFF" stroke-width="1.5"/>
-                  <path d="M8 12L11 15L16 9" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
               <p class="payment-flex-card__text">Формируйте счёт на оплату самостоятельно</p>
             </div>
           </article>
           <article class="payment-flex-card">
+            <div class="payment-flex-card__icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4V14" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M8 10L12 14L16 10" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5 18H19" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
             <div class="payment-flex-card__body">
-              <div class="payment-flex-card__icon" aria-hidden="true">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 4V14" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M8 10L12 14L16 10" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M5 18H19" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
               <p class="payment-flex-card__text">Скачивайте счета по поездкам</p>
             </div>
           </article>
           <article class="payment-flex-card">
+            <div class="payment-flex-card__icon payment-flex-card__icon--ruble" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <text x="12" y="17" text-anchor="middle" fill="#FFFFFF" font-size="17" font-weight="700" font-family="'Golos Text', Arial, sans-serif">₽</text>
+              </svg>
+            </div>
             <div class="payment-flex-card__body">
-              <div class="payment-flex-card__icon payment-flex-card__icon--ruble" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <text x="12" y="17" text-anchor="middle" fill="#FFFFFF" font-size="17" font-weight="700" font-family="'Golos Text', Arial, sans-serif">₽</text>
-                </svg>
-              </div>
               <p class="payment-flex-card__text">Проверяйте баланс компании в режиме реального времени</p>
             </div>
           </article>
@@ -655,238 +684,460 @@
       </div>
     </section>
 
-    <section class="hotel-reviews-block" aria-labelledby="hotel-reviews-title">
-      <div class="hotel-reviews-block__inner">
-        <h2 id="hotel-reviews-title" class="hotel-reviews-block__title">
-          Компании — о бронировании бизнес-отелей для командировок через Smartway
-        </h2>
-        <div class="hotel-reviews-block__grid">
-          <article class="hotel-reviews-card">
-            <div class="hotel-reviews-card__logo">
-              <div class="hotel-reviews-card__pill-logo">
-                <span class="hotel-reviews-card__pill-text">Revolut</span>
-              </div>
-            </div>
-            <blockquote class="hotel-reviews-card__quote">
-              <p>
-                «Раньше бронировали жилье корпоративной картой, но платили при въезде — это было неудобно.
-                <span class="hotel-reviews-card__accent"
-                  >С оплатой через Smartway упростили организацию поездки и сбор закрывающих документов</span>»
-              </p>
-            </blockquote>
-            <footer class="hotel-reviews-card__author">
-              <img
-                class="hotel-reviews-card__avatar"
-                src="img/cases-avatar-2.svg"
-                alt=""
-                width="56"
-                height="56"
-                loading="lazy"
-              />
-              <div class="hotel-reviews-card__author-text">
-                <span class="hotel-reviews-card__name">Вероника Шевцова</span>
-                <span class="hotel-reviews-card__role">менеджер по командировкам Revolut</span>
-              </div>
-            </footer>
-          </article>
+    <section class="companies-stat-block" aria-label="Компании бронируют командировки в Smartway">
+      <div class="companies-stat-block__inner">
+        <p class="companies-stat-block__value">7&nbsp;600 +</p>
+        <p class="companies-stat-block__caption">Компаний бронируют командировки в Smartway</p>
+      </div>
+    </section>
 
-          <article class="hotel-reviews-card">
-            <div class="hotel-reviews-card__logo hotel-reviews-card__logo--alvarez">
-              <svg
-                class="hotel-reviews-card__alvarez-icon"
-                width="36"
-                height="36"
-                viewBox="0 0 36 36"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <path d="M18 4L30 32H6L18 4Z" stroke="#1A1A1A" stroke-width="1.8" fill="none" stroke-linejoin="round" />
-                <path d="M14 22h8M14 18h8" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" />
-              </svg>
-              <div class="hotel-reviews-card__alvarez-wordmark">
-                <span class="hotel-reviews-card__alvarez-line1">ALVAREZ</span>
-                <span class="hotel-reviews-card__alvarez-line2">&amp; MARSAL</span>
+    <section class="trust-strip-block" aria-label="Компании бронируют командировки в Smartway — среди клиентов">
+      <div class="trust-strip-block__inner">
+        <img
+          src="img/clients-logos.svg"
+          alt="ОМК, SOKOLOV, ССК, СИТИДРАЙВ, Белая Дача, Sisley Paris, Сеченовский университет, REDWINGS, hh, Московский политехнический университет"
+          class="trust-strip-block__logos"
+          width="1760"
+          height="53"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </section>
+
+    <section class="trust-credentials-block" aria-label="Официальный статус и партнёрства">
+      <div class="trust-credentials-block__inner">
+        <div class="trust-credentials-block__grid">
+          <article class="trust-credentials-block__card">
+            <img
+              src="img/1clogo.png"
+              alt="1С"
+              class="trust-credentials-block__logo"
+              width="120"
+              height="48"
+              loading="lazy"
+              decoding="async"
+            >
+            <p class="trust-credentials-block__text">Входим в группу компаний «1С»</p>
+          </article>
+          <article class="trust-credentials-block__card">
+            <img
+              src="img/sklogo.png"
+              alt="Сколково — участник"
+              class="trust-credentials-block__logo trust-credentials-block__logo--sk"
+              width="140"
+              height="72"
+              loading="lazy"
+              decoding="async"
+            >
+            <p class="trust-credentials-block__text">Являемся резидентами технопарка «Сколково»</p>
+          </article>
+          <article class="trust-credentials-block__card">
+            <img
+              src="img/mclogo.png"
+              alt="Минцифры России"
+              class="trust-credentials-block__logo"
+              width="120"
+              height="56"
+              loading="lazy"
+              decoding="async"
+            >
+            <p class="trust-credentials-block__text">Входим в реестр российского ПО «Минцифры»</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="results-cases-block" aria-labelledby="results-cases-title">
+      <div class="results-cases-block__inner">
+        <h2 id="results-cases-title" class="results-cases-block__title">Результаты, которых мы достигли вместе</h2>
+        <div class="results-cases-block__grid">
+          <article class="results-cases-card">
+            <div class="results-cases-card__top">
+              <div class="results-cases-card__logo-wrap">
+                <span class="results-cases-card__wordmark results-cases-card__wordmark--forbes">Forbes</span>
               </div>
-            </div>
-            <blockquote class="hotel-reviews-card__quote">
-              <p>
-                «В Smartway можно сохранять направления, рейсы и отели в избранном. А нужную услугу — билеты,
-                трансфер, гостиницы — можно выбрать в два клика. Билеты и ваучеры после покупки автоматически
-                приходят на почту»
+              <p class="results-cases-card__text">
+                Данные автоматически попадают из Smartway в «1С», документы загружаются уже с проводками, авансовый отчёт заполняют
+                <span class="results-cases-card__hl">за 3–5 минут</span>.
               </p>
-            </blockquote>
-            <footer class="hotel-reviews-card__author">
+              <a href="#" class="results-cases-card__link">
+                Читать кейс
+                <span class="results-cases-card__link-icon" aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <div class="results-cases-card__footer">
               <img
-                class="hotel-reviews-card__avatar"
                 src="img/cases-avatar-1.svg"
                 alt=""
-                width="56"
-                height="56"
+                class="results-cases-card__avatar"
+                width="48"
+                height="48"
                 loading="lazy"
-              />
-              <div class="hotel-reviews-card__author-text">
-                <span class="hotel-reviews-card__name">Надежда Николаева</span>
-                <span class="hotel-reviews-card__role">старший финансовый менеджер Alvarez &amp; Marsal</span>
+                decoding="async"
+              >
+              <div class="results-cases-card__person">
+                <span class="results-cases-card__name">Любовь Валова</span>
+                <span class="results-cases-card__role">Главный бухгалтер Forbes Russia (АО&nbsp;«АС&nbsp;РУС&nbsp;Медиа»)</span>
               </div>
-            </footer>
-          </article>
-
-          <article class="hotel-reviews-card">
-            <div class="hotel-reviews-card__logo hotel-reviews-card__logo--modul">
-              <img
-                class="hotel-reviews-card__modul-img"
-                src="img/cases-modulbank.svg"
-                alt="Модульбанк"
-                width="170"
-                height="43"
-                loading="lazy"
-              />
             </div>
-            <blockquote class="hotel-reviews-card__quote">
-              <p>
-                «Мы часто настраиваем лимиты и тревел-политики для сотрудников. Для некоторых направлений
-                прописали доступы и ограничения по стоимости. Сотрудник в системе увидит только отели в пределах
-                установленного для него лимита»
-              </p>
-            </blockquote>
-            <footer class="hotel-reviews-card__author hotel-reviews-card__author--text-only">
-              <div class="hotel-reviews-card__author-text">
-                <span class="hotel-reviews-card__name">Яна Громова</span>
-                <span class="hotel-reviews-card__role"
-                  >управляющий директор блока поддержки бизнеса «Модульбанк»</span>
-              </div>
-            </footer>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="smartway-stats-block" aria-labelledby="smartway-stats-title">
-      <div class="smartway-stats-block__inner">
-        <h2 id="smartway-stats-title" class="smartway-stats-block__title">Smartway в цифрах</h2>
-        <div class="smartway-stats-block__grid">
-          <article class="smartway-stats-card smartway-stats-card--light">
-            <div class="smartway-stats-card__value">7 600 +</div>
-            <p class="smartway-stats-card__label">клиентов</p>
-          </article>
-          <article class="smartway-stats-card smartway-stats-card--dark">
-            <div class="smartway-stats-card__value">520 000 +</div>
-            <p class="smartway-stats-card__label">билетов и отелей бронируют каждый месяц</p>
-          </article>
-          <article class="smartway-stats-card smartway-stats-card--accent">
-            <div class="smartway-stats-card__value">№ 1</div>
-            <p class="smartway-stats-card__label">на рынке бизнес-тревел*</p>
-            <p class="smartway-stats-card__note">*по данным РБК</p>
-          </article>
-          <article class="smartway-stats-card smartway-stats-card--accent">
-            <div class="smartway-stats-card__value">3 млн +</div>
-            <p class="smartway-stats-card__label">отелей по всему миру</p>
-          </article>
-          <article class="smartway-stats-card smartway-stats-card--light">
-            <div class="smartway-stats-card__value">850 +</div>
-            <p class="smartway-stats-card__label">российских и международных авиакомпаний</p>
-          </article>
-          <article class="smartway-stats-card smartway-stats-card--dark">
-            <div class="smartway-stats-card__value">98,7 %</div>
-            <p class="smartway-stats-card__label">довольных клиентов*</p>
-            <p class="smartway-stats-card__note">*по результатам опроса CSAT</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="try-free-cta" aria-labelledby="try-free-cta-title">
-      <div class="try-free-cta__inner">
-        <div class="try-free-cta__shell">
-          <div class="try-free-cta__layout">
-            <div class="try-free-cta__left">
-              <h2 id="try-free-cta-title" class="try-free-cta__title">Попробуйте Smartway бесплатно</h2>
-              <p class="try-free-cta__lead">
-                Изучите варианты отелей и убедитесь в преимуществах бронирования в одном окне.
-                <strong>Платите за сервис только после первого бронирования</strong>
-              </p>
-              <div class="try-free-cta__visual">
+          <article class="results-cases-card">
+            <div class="results-cases-card__top">
+              <div class="results-cases-card__logo-wrap">
                 <img
-                  class="try-free-cta__illustration"
-                  src="img/smartway-free.png"
-                  alt=""
-                  width="640"
-                  height="400"
+                  src="img/cases-cck.svg"
+                  alt="Строительно-сервисная компания"
+                  class="results-cases-card__logo"
+                  width="168"
+                  height="34"
                   loading="lazy"
                   decoding="async"
-                />
+                >
+              </div>
+              <p class="results-cases-card__text">
+                Автоматизировали заполнение авансовых отчётов и
+                <span class="results-cases-card__hl">освободили 4 дня</span>
+                работы бухгалтеров в месяц.
+              </p>
+              <a href="#" class="results-cases-card__link">
+                Читать кейс
+                <span class="results-cases-card__link-icon" aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <div class="results-cases-card__footer">
+              <img
+                src="img/cases-avatar-2.svg"
+                alt=""
+                class="results-cases-card__avatar"
+                width="48"
+                height="48"
+                loading="lazy"
+                decoding="async"
+              >
+              <div class="results-cases-card__person">
+                <span class="results-cases-card__name">Татьяна Атабаева</span>
+                <span class="results-cases-card__role">ООО «Строительно-сервисная компания»</span>
               </div>
             </div>
-            <div class="try-free-cta__right">
-              <form class="try-free-cta__form" action="#" method="post">
-                <div class="try-free-cta__field">
-                  <label class="try-free-cta__label" for="try-free-name">Ваше имя<span aria-hidden="true">*</span></label>
-                  <input class="try-free-cta__input" type="text" id="try-free-name" name="name" required autocomplete="name" />
-                </div>
-                <div class="try-free-cta__field">
-                  <label class="try-free-cta__label" for="try-free-company"
-                    >Название компании<span aria-hidden="true">*</span></label>
-                  <input class="try-free-cta__input" type="text" id="try-free-company" name="company" required />
-                </div>
-                <div class="try-free-cta__field">
-                  <label class="try-free-cta__label" for="try-free-trips"
-                    >Сколько командировок в компании в месяц<span aria-hidden="true">*</span></label>
-                  <input class="try-free-cta__input" type="text" id="try-free-trips" name="trips_per_month" required />
-                </div>
-                <div class="try-free-cta__field">
-                  <label class="try-free-cta__label" for="try-free-email"
-                    >Корпоративная почта<span aria-hidden="true">*</span></label>
-                  <input
-                    class="try-free-cta__input"
-                    type="email"
-                    id="try-free-email"
-                    name="email"
-                    required
-                    autocomplete="email"
-                  />
-                </div>
-                <div class="try-free-cta__field">
-                  <label class="try-free-cta__label" for="try-free-phone">Телефон<span aria-hidden="true">*</span></label>
-                  <input
-                    class="try-free-cta__input"
-                    type="tel"
-                    id="try-free-phone"
-                    name="phone"
-                    required
-                    autocomplete="tel"
-                    placeholder="+7(000) 000-00-00"
-                  />
-                </div>
-                <label class="try-free-cta__consent">
-                  <input class="try-free-cta__checkbox" type="checkbox" name="marketing_consent" required />
-                  <span class="try-free-cta__switch" aria-hidden="true"></span>
-                  <span class="try-free-cta__consent-label">
-                    Даю согласие
-                    <a href="#" class="try-free-cta__link">на получение сообщений рекламного и информационного характера</a>
-                  </span>
-                </label>
-                <button class="try-free-cta__submit" type="submit">Попробовать бесплатно</button>
-                <p class="try-free-cta__legal">
-                  Нажимая на эту кнопку, Вы даете согласие на обработку персональных данных и принимаете условия
-                  <a href="#" class="try-free-cta__link">Политики обработки персональных данных</a>
-                </p>
-              </form>
+          </article>
+          <article class="results-cases-card">
+            <div class="results-cases-card__top">
+              <div class="results-cases-card__logo-wrap">
+                <span class="results-cases-card__wordmark results-cases-card__wordmark--tochka">точка</span>
+              </div>
+              <p class="results-cases-card__text">
+                Стали тратить
+                <span class="results-cases-card__hl">в 2 раза</span>
+                меньше времени на операции с билетами, когда синхронизировали Smartway и «1С».
+              </p>
+              <a href="#" class="results-cases-card__link">
+                Читать кейс
+                <span class="results-cases-card__link-icon" aria-hidden="true">↗</span>
+              </a>
             </div>
+            <div class="results-cases-card__footer">
+              <img
+                src="img/cases-avatar-3.svg"
+                alt=""
+                class="results-cases-card__avatar"
+                width="48"
+                height="48"
+                loading="lazy"
+                decoding="async"
+              >
+              <div class="results-cases-card__person">
+                <span class="results-cases-card__name">Анна Сергеева</span>
+                <span class="results-cases-card__role">Руководитель бухгалтерии, Банк «Точка»</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="results-cases-cta-block" aria-label="Повторить результат">
+      <div class="results-cases-cta-block__inner">
+        <a href="#try" class="results-cases-cta-block__btn">Повторить результат</a>
+      </div>
+    </section>
+
+    <section class="accountant-useful-block" aria-labelledby="accountant-useful-title">
+      <div class="accountant-useful-block__inner">
+        <h2 id="accountant-useful-title" class="accountant-useful-block__title">Полезное для бухгалтеров</h2>
+        <div class="accountant-useful-block__grid">
+          <article class="accountant-useful-card accountant-useful-card--book">
+            <div class="accountant-useful-card__main">
+              <h3 class="accountant-useful-card__heading accountant-useful-card__heading--light">
+                <span class="accountant-useful-card__heading-text">Всё-всё о бухучёте командировок</span>
+                <span class="accountant-useful-card__pill accountant-useful-card__pill--ink">в одной книге</span>
+              </h3>
+              <p class="accountant-useful-card__lead accountant-useful-card__lead--light">
+                С разбором трудных случаев, примерами проводок и частыми ошибками.
+              </p>
+              <a href="#" class="accountant-useful-card__action">Скачать бесплатно</a>
+            </div>
+            <div class="accountant-useful-card__deco accountant-useful-card__deco--stack" aria-hidden="true">
+              <svg width="200" height="160" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="48" y="18" width="132" height="92" rx="4" fill="#F5F5F5" stroke="#E0E0E0" stroke-width="1"/>
+                <rect x="38" y="28" width="132" height="92" rx="4" fill="#FAFAFA" stroke="#E8E8E8" stroke-width="1"/>
+                <rect x="28" y="38" width="132" height="92" rx="4" fill="#FFFFFF" stroke="#DCDCDC" stroke-width="1"/>
+                <rect x="40" y="50" width="88" height="8" rx="2" fill="#ECECEC"/>
+                <rect x="40" y="64" width="72" height="8" rx="2" fill="#ECECEC"/>
+                <rect x="40" y="78" width="96" height="8" rx="2" fill="#ECECEC"/>
+              </svg>
+            </div>
+          </article>
+          <article class="accountant-useful-card accountant-useful-card--webinar">
+            <div class="accountant-useful-card__main">
+              <h3 class="accountant-useful-card__heading accountant-useful-card__heading--webinar">
+                Вебинары от бухгалтеров и финдиректоров, которые работают с
+                <span class="accountant-useful-card__inline-badges">
+                  <span class="accountant-useful-card__pill accountant-useful-card__pill--accent">сотнями</span>
+                  <span class="accountant-useful-card__pill accountant-useful-card__pill--ink-muted">командировок</span>
+                </span>
+              </h3>
+              <p class="accountant-useful-card__lead">Участие бесплатное, нужно только зарегистрироваться.</p>
+              <a href="#" class="accountant-useful-card__action">Выбрать вебинар</a>
+            </div>
+            <div class="accountant-useful-card__deco accountant-useful-card__deco--play" aria-hidden="true">
+              <span class="accountant-useful-card__play">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 7.5v9l8-4.5-8-4.5z" fill="#D44333"/>
+                </svg>
+              </span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="smartway-compare-block" aria-labelledby="smartway-compare-title">
+      <div class="smartway-compare-block__inner">
+        <h2 id="smartway-compare-title" class="smartway-compare-block__title">Со Smartway проще</h2>
+        <div class="smartway-compare-block__row">
+          <div class="smartway-compare-block__labels">
+            <div class="smartway-compare-block__labels-spacer" aria-hidden="true"></div>
+            <p class="smartway-compare-block__label">Закрывающие документы формируются в личном кабинете автоматически</p>
+            <p class="smartway-compare-block__label">Оригиналы документов приходят по почте или ЭДО, когда удобно</p>
+            <p class="smartway-compare-block__label">Авансовый отчёт можно составить в личном кабинете за 3 минуты</p>
+            <p class="smartway-compare-block__label">Бухгалтеры освобождают время от рутины и ручного ввода</p>
+            <p class="smartway-compare-block__label">Ошибок меньше благодаря автозаполнению</p>
+          </div>
+          <div class="smartway-compare-block__mid">
+            <p class="smartway-compare-block__mid-title">Со Smartway</p>
+            <ul class="smartway-compare-block__mid-list">
+              <li class="smartway-compare-block__mid-item">
+                <span class="smartway-compare-block__icon smartway-compare-block__icon--yes" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M5 13.5L10 18.5L19 7.5" stroke="#d44333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </li>
+              <li class="smartway-compare-block__mid-item">
+                <span class="smartway-compare-block__icon smartway-compare-block__icon--yes" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M5 13.5L10 18.5L19 7.5" stroke="#d44333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </li>
+              <li class="smartway-compare-block__mid-item">
+                <span class="smartway-compare-block__icon smartway-compare-block__icon--yes" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M5 13.5L10 18.5L19 7.5" stroke="#d44333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </li>
+              <li class="smartway-compare-block__mid-item">
+                <span class="smartway-compare-block__icon smartway-compare-block__icon--yes" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M5 13.5L10 18.5L19 7.5" stroke="#d44333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </li>
+              <li class="smartway-compare-block__mid-item">
+                <span class="smartway-compare-block__icon smartway-compare-block__icon--yes" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M5 13.5L10 18.5L19 7.5" stroke="#d44333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="smartway-compare-block__aside">
+            <p class="smartway-compare-block__aside-title">Без Smartway</p>
+            <ul class="smartway-compare-block__aside-list">
+              <li class="smartway-compare-block__aside-item">
+                <span class="smartway-compare-block__icon smartway-compare-block__icon--no" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M6 6L18 18M18 6L6 18" stroke="#5a5a5a" stroke-width="2.2" stroke-linecap="round"/>
+                  </svg>
+                </span>
+              </li>
+              <li class="smartway-compare-block__aside-item">
+                <span class="smartway-compare-block__icon smartway-compare-block__icon--no" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M6 6L18 18M18 6L6 18" stroke="#5a5a5a" stroke-width="2.2" stroke-linecap="round"/>
+                  </svg>
+                </span>
+              </li>
+              <li class="smartway-compare-block__aside-item">
+                <span class="smartway-compare-block__icon smartway-compare-block__icon--no" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M6 6L18 18M18 6L6 18" stroke="#5a5a5a" stroke-width="2.2" stroke-linecap="round"/>
+                  </svg>
+                </span>
+              </li>
+              <li class="smartway-compare-block__aside-item">
+                <span class="smartway-compare-block__icon smartway-compare-block__icon--no" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M6 6L18 18M18 6L6 18" stroke="#5a5a5a" stroke-width="2.2" stroke-linecap="round"/>
+                  </svg>
+                </span>
+              </li>
+              <li class="smartway-compare-block__aside-item">
+                <span class="smartway-compare-block__icon smartway-compare-block__icon--no" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M6 6L18 18M18 6L6 18" stroke="#5a5a5a" stroke-width="2.2" stroke-linecap="round"/>
+                  </svg>
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="faq-accordion-block" aria-labelledby="faq-accordion-heading">
-      <div class="faq-accordion-block__inner">
-        <h2 id="faq-accordion-heading" class="faq-accordion-block__heading">
-          Частые вопросы и ответы о бронировании<br />
-          отелей для командировок
+    <section class="delegate-heading-block" aria-labelledby="delegate-heading-title">
+      <div class="delegate-heading-block__inner">
+        <h2 id="delegate-heading-title" class="delegate-heading-block__title">
+          Доверьте командировки нам и оставьте<br />
+          время для важного
         </h2>
+      </div>
+    </section>
+
+    <section class="accountant-level-lead-block" id="try" aria-labelledby="accountant-level-lead-title">
+      <div class="accountant-level-lead-block__inner">
+        <div class="accountant-level-lead-block__card">
+          <div class="accountant-level-lead-block__visual">
+            <h2 id="accountant-level-lead-title" class="accountant-level-lead-block__title">
+              Выведите организацию командировок на новый уровень
+            </h2>
+            <div class="accountant-level-lead-block__illu">
+              <img
+                class="accountant-level-lead-block__illu-img"
+                src="img/accountform.png"
+                alt=""
+                width="701"
+                height="589"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+          <div class="accountant-level-lead-block__form-shell">
+            <form class="accountant-level-lead-block__form" action="#" method="post">
+              <div class="accountant-level-lead-block__field">
+                <label for="acc-level-lead-name" class="accountant-level-lead-block__sr-only">Имя и фамилия (обязательно)</label>
+                <input
+                  type="text"
+                  id="acc-level-lead-name"
+                  name="name"
+                  class="accountant-level-lead-block__input"
+                  required
+                  autocomplete="name"
+                  placeholder="Имя Фамилия*"
+                />
+              </div>
+              <div class="accountant-level-lead-block__field">
+                <label for="acc-level-lead-company" class="accountant-level-lead-block__sr-only">Название компании</label>
+                <input
+                  type="text"
+                  id="acc-level-lead-company"
+                  name="company"
+                  class="accountant-level-lead-block__input"
+                  autocomplete="organization"
+                  placeholder="Название компании"
+                />
+              </div>
+              <div class="accountant-level-lead-block__field">
+                <label for="acc-level-lead-trips" class="accountant-level-lead-block__label"
+                  >Сколько командировок в компании в месяц*</label>
+                <select
+                  id="acc-level-lead-trips"
+                  name="trips"
+                  class="accountant-level-lead-block__input accountant-level-lead-block__select"
+                  required
+                >
+                  <option value="" disabled selected>—</option>
+                  <option value="1-10">1–10</option>
+                  <option value="11-50">11–50</option>
+                  <option value="51-200">51–200</option>
+                  <option value="200+">Более 200</option>
+                </select>
+              </div>
+              <div class="accountant-level-lead-block__field">
+                <label for="acc-level-lead-email" class="accountant-level-lead-block__sr-only">Корпоративная почта (обязательно)</label>
+                <input
+                  type="email"
+                  id="acc-level-lead-email"
+                  name="email"
+                  class="accountant-level-lead-block__input"
+                  required
+                  autocomplete="email"
+                  placeholder="Корпоративная почта*"
+                />
+              </div>
+              <div class="accountant-level-lead-block__field">
+                <label for="acc-level-lead-phone" class="accountant-level-lead-block__sr-only">Телефон (обязательно)</label>
+                <input
+                  type="tel"
+                  id="acc-level-lead-phone"
+                  name="phone"
+                  class="accountant-level-lead-block__input"
+                  required
+                  inputmode="tel"
+                  autocomplete="tel-national"
+                  placeholder="+7(000) 000-00-00"
+                />
+              </div>
+              <div class="accountant-level-lead-block__consent">
+                <input
+                  type="checkbox"
+                  id="acc-level-lead-consent"
+                  name="ads_consent"
+                  class="accountant-level-lead-block__toggle-input"
+                  value="1"
+                  required
+                />
+                <label for="acc-level-lead-consent" class="accountant-level-lead-block__toggle">
+                  <span class="accountant-level-lead-block__toggle-ui" aria-hidden="true"></span>
+                  <span class="accountant-level-lead-block__toggle-text"
+                    >Даю согласие на
+                    <a href="consent-advertising.html" class="accountant-level-lead-block__inline-link">получение сообщений</a>
+                    рекламного и информационного характера</span>
+                </label>
+              </div>
+              <button type="submit" class="accountant-level-lead-block__submit">Получить бесплатный доступ</button>
+              <p class="accountant-level-lead-block__footnote">
+                Нажав кнопку, вы продолжаете
+                <a href="offer.html" class="accountant-level-lead-block__footnote-link">соглашение об обработке цифровых данных</a>
+                и принимаете условия
+                <a href="confidence-page.html" class="accountant-level-lead-block__footnote-link">политики обработки цифровых данных</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-accordion-block faq-accordion-block--accountant" aria-labelledby="faq-accordion-heading">
+      <div class="faq-accordion-block__inner">
+        <h2 id="faq-accordion-heading" class="faq-accordion-block__heading">Часто задаваемые вопросы</h2>
         <details class="faq-accordion__item">
           <summary class="faq-accordion__summary">
-            <span class="faq-accordion__title">Можно ли оплатить бронь отеля для командировки корпоративной картой компании?</span>
+            <span class="faq-accordion__title">Почему ваши справки о перелёте подходят для бухучёта?</span>
             <span class="faq-accordion__icon-wrap" aria-hidden="true">
               <span class="faq-accordion__circle"></span>
               <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -901,21 +1152,21 @@
           </summary>
           <div class="faq-accordion__content">
             <p>
-              Да, оплатить бронирование можно корпоративной картой или с расчётного счёта компании прямо в сервисе. Сотрудникам не
-              придётся использовать личные банковские карты для оплаты.
+              Справки содержат сведения, необходимые для первичного учёта: реквизиты, маршрут, перевозчика и оплату. Их можно приложить к
+              авансовому отчёту и отразить командировочные расходы в учёте.
             </p>
           </div>
         </details>
         <details class="faq-accordion__item">
           <summary class="faq-accordion__summary">
-            <span class="faq-accordion__title">В сервисе можно отменить бронь или внести изменения?</span>
+            <span class="faq-accordion__title">Справки точно ещё нужны, их же отменили?</span>
             <span class="faq-accordion__icon-wrap" aria-hidden="true">
               <span class="faq-accordion__circle"></span>
               <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <g fill="none" stroke-linecap="square">
                   <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
-                    <path d="M0 11h22" stroke="currentColor" stroke-width="2" />
-                    <path d="M11 0v22" stroke="currentColor" stroke-width="2" />
+                    <path class="faq-accordion__plus-h" d="M0 11h22" stroke="currentColor" stroke-width="2" />
+                    <path class="faq-accordion__plus-v" d="M11 0v22" stroke="currentColor" stroke-width="2" />
                   </g>
                 </g>
               </svg>
@@ -923,22 +1174,21 @@
           </summary>
           <div class="faq-accordion__content">
             <p>
-              Да, в личном кабинете на странице конкретного заказа. Вы отменяете бронирование самостоятельно, travel-помощник получает
-              информацию об отмене и передаёт отелю. Условия отмены или внесение изменений в бронирование зависят от политики
-              выбранного отеля.
+              Изменения касались отдельных форм и порядка оформления; подтверждение расходов на проезд для бухгалтерского и налогового
+              учёта по-прежнему оформляется документами из сервиса. Мы отслеживаем нормы и обновляем форматы под актуальные требования.
             </p>
           </div>
         </details>
         <details class="faq-accordion__item">
           <summary class="faq-accordion__summary">
-            <span class="faq-accordion__title">Какие документы по бронированию отеля предоставляет сервис?</span>
+            <span class="faq-accordion__title">Как вы защищаете персональные данные?</span>
             <span class="faq-accordion__icon-wrap" aria-hidden="true">
               <span class="faq-accordion__circle"></span>
               <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <g fill="none" stroke-linecap="square">
                   <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
-                    <path d="M0 11h22" stroke="currentColor" stroke-width="2" />
-                    <path d="M11 0v22" stroke="currentColor" stroke-width="2" />
+                    <path class="faq-accordion__plus-h" d="M0 11h22" stroke="currentColor" stroke-width="2" />
+                    <path class="faq-accordion__plus-v" d="M11 0v22" stroke="currentColor" stroke-width="2" />
                   </g>
                 </g>
               </svg>
@@ -946,22 +1196,21 @@
           </summary>
           <div class="faq-accordion__content">
             <p>
-              Ваучер со всеми деталями бронирования и полный комплект закрывающих документов. В том числе счёт-фактуру, чтобы возместить
-              НДС и акт выполненных работ.
+              Обработка ведётся в соответствии с 152-ФЗ: шифрование каналов передачи, разграничение доступа, журналирование действий.
+              Подробности — в документе о политике обработки персональных данных на сайте.
             </p>
           </div>
         </details>
         <details class="faq-accordion__item">
           <summary class="faq-accordion__summary">
-            <span class="faq-accordion__title"
-              >Через сервис можно забронировать номер с питанием и другими дополнительными услугами?</span>
+            <span class="faq-accordion__title">Чем ваша интеграция отличается от других решений на рынке?</span>
             <span class="faq-accordion__icon-wrap" aria-hidden="true">
               <span class="faq-accordion__circle"></span>
               <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <g fill="none" stroke-linecap="square">
                   <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
-                    <path d="M0 11h22" stroke="currentColor" stroke-width="2" />
-                    <path d="M11 0v22" stroke="currentColor" stroke-width="2" />
+                    <path class="faq-accordion__plus-h" d="M0 11h22" stroke="currentColor" stroke-width="2" />
+                    <path class="faq-accordion__plus-v" d="M11 0v22" stroke="currentColor" stroke-width="2" />
                   </g>
                 </g>
               </svg>
@@ -969,292 +1218,48 @@
           </summary>
           <div class="faq-accordion__content">
             <p>
-              Да, вы можете выбрать тарифы с разными допуслугами, включая завтраки, обеды и ужины на странице бронирования в
-              зависимости от предложений конкретного отеля.
+              Готовые сценарии для «1С», автоматическая выгрузка операций и закрывающих документов, единый кабинет на авиа, ж/д, отели
+              и такси — без ручного переноса данных между системами.
             </p>
           </div>
         </details>
-        <details class="faq-accordion__item">
-          <summary class="faq-accordion__summary">
-            <span class="faq-accordion__title">Как быстро сотрудник получит подтверждение бронирования?</span>
-            <span class="faq-accordion__icon-wrap" aria-hidden="true">
-              <span class="faq-accordion__circle"></span>
-              <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" stroke-linecap="square">
-                  <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
-                    <path d="M0 11h22" stroke="currentColor" stroke-width="2" />
-                    <path d="M11 0v22" stroke="currentColor" stroke-width="2" />
-                  </g>
-                </g>
-              </svg>
-            </span>
-          </summary>
-          <div class="faq-accordion__content">
-            <p>
-              После оплаты бронирования подтверждение мгновенно отправляется на электронную почту сотрудника или на почту администратора
-              сервиса, указанную в настройках.
-            </p>
-          </div>
-        </details>
-        <details class="faq-accordion__item">
-          <summary class="faq-accordion__summary">
-            <span class="faq-accordion__title">Как быстро информация о бронировании появляется в системе отеля?</span>
-            <span class="faq-accordion__icon-wrap" aria-hidden="true">
-              <span class="faq-accordion__circle"></span>
-              <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" stroke-linecap="square">
-                  <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
-                    <path d="M0 11h22" stroke="currentColor" stroke-width="2" />
-                    <path d="M11 0v22" stroke="currentColor" stroke-width="2" />
-                  </g>
-                </g>
-              </svg>
-            </span>
-          </summary>
-          <div class="faq-accordion__content">
-            <p>
-              Обычно отель получает информацию о новом бронировании моментально или в течение нескольких минут. Если вы бронируете номер
-              в гостинице за рубежом, потребуется чуть больше времени, чтобы данные появились в системе отеля.
-            </p>
-          </div>
-        </details>
-        <details class="faq-accordion__item">
-          <summary class="faq-accordion__summary">
-            <span class="faq-accordion__title">Можно ли забронировать отель для командировки за рубеж?</span>
-            <span class="faq-accordion__icon-wrap" aria-hidden="true">
-              <span class="faq-accordion__circle"></span>
-              <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" stroke-linecap="square">
-                  <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
-                    <path d="M0 11h22" stroke="currentColor" stroke-width="2" />
-                    <path d="M11 0v22" stroke="currentColor" stroke-width="2" />
-                  </g>
-                </g>
-              </svg>
-            </span>
-          </summary>
-          <div class="faq-accordion__content">
-            <p>Да, сервис работает с 3 млн отелями в России и за границей, в том числе в Китае.</p>
-          </div>
-        </details>
-        <details class="faq-accordion__item">
-          <summary class="faq-accordion__summary">
-            <span class="faq-accordion__title">Что делать, если сотрудник прибыл в отель, а бронирования нет в системе?</span>
-            <span class="faq-accordion__icon-wrap" aria-hidden="true">
-              <span class="faq-accordion__circle"></span>
-              <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" stroke-linecap="square">
-                  <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
-                    <path d="M0 11h22" stroke="currentColor" stroke-width="2" />
-                    <path d="M11 0v22" stroke="currentColor" stroke-width="2" />
-                  </g>
-                </g>
-              </svg>
-            </span>
-          </summary>
-          <div class="faq-accordion__content">
-            <p>
-              Это крайне редкая ситуация. Но если такое произошло, тревел-поддержка сервиса оперативно свяжется с отелем и решит вопрос.
-              Команда поддержки работает 24/7 независимо от часовых поясов.
-            </p>
-          </div>
-        </details>
-        <details class="faq-accordion__item">
-          <summary class="faq-accordion__summary">
-            <span class="faq-accordion__title">Можно ли забронировать номер для командировки в день заезда?</span>
-            <span class="faq-accordion__icon-wrap" aria-hidden="true">
-              <span class="faq-accordion__circle"></span>
-              <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" stroke-linecap="square">
-                  <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
-                    <path d="M0 11h22" stroke="currentColor" stroke-width="2" />
-                    <path d="M11 0v22" stroke="currentColor" stroke-width="2" />
-                  </g>
-                </g>
-              </svg>
-            </span>
-          </summary>
-          <div class="faq-accordion__content">
-            <p>Да, в сервисе доступны отели с моментальным подтверждением бронирования.</p>
-          </div>
-        </details>
-        <details class="faq-accordion__item">
-          <summary class="faq-accordion__summary">
-            <span class="faq-accordion__title"
-              >Почему бронировать отели через Smartway выгоднее, чем через сторонние сайты-агрегаторы?</span>
-            <span class="faq-accordion__icon-wrap" aria-hidden="true">
-              <span class="faq-accordion__circle"></span>
-              <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" stroke-linecap="square">
-                  <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
-                    <path d="M0 11h22" stroke="currentColor" stroke-width="2" />
-                    <path d="M11 0v22" stroke="currentColor" stroke-width="2" />
-                  </g>
-                </g>
-              </svg>
-            </span>
-          </summary>
-          <div class="faq-accordion__content">
-            <p>
-              Сервис обеспечивает гарантию лучшей цены. А ещё вы экономите на скрытых сборах и комиссиях. Круглосуточная тревел-поддержка
-              поможет при форс-мажорах.
-            </p>
-          </div>
-        </details>
-        <details class="faq-accordion__item">
-          <summary class="faq-accordion__summary">
-            <span class="faq-accordion__title">Есть ли у вас программы лояльности для постоянных корпоративных клиентов?</span>
-            <span class="faq-accordion__icon-wrap" aria-hidden="true">
-              <span class="faq-accordion__circle"></span>
-              <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" stroke-linecap="square">
-                  <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
-                    <path d="M0 11h22" stroke="currentColor" stroke-width="2" />
-                    <path d="M11 0v22" stroke="currentColor" stroke-width="2" />
-                  </g>
-                </g>
-              </svg>
-            </span>
-          </summary>
-          <div class="faq-accordion__content">
-            <p>
-              Компании могут заключить трёхсторонние договоры с гостиницами, где часто останавливаются сотрудники, и экономить на
-              дополнительных скидках.
-            </p>
-          </div>
-        </details>
-        <details class="faq-accordion__item">
-          <summary class="faq-accordion__summary">
-            <span class="faq-accordion__title"
-              >Предоставляет ли отель скидку по трёхстороннему договору, если оплачивать бронирование при заселении?</span>
-            <span class="faq-accordion__icon-wrap" aria-hidden="true">
-              <span class="faq-accordion__circle"></span>
-              <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" stroke-linecap="square">
-                  <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
-                    <path d="M0 11h22" stroke="currentColor" stroke-width="2" />
-                    <path d="M11 0v22" stroke="currentColor" stroke-width="2" />
-                  </g>
-                </g>
-              </svg>
-            </span>
-          </summary>
-          <div class="faq-accordion__content">
-            <p>Скидка по трёхстороннему договору действует только при безналичной оплате через сервис Smartway.</p>
-          </div>
-        </details>
-        <details class="faq-accordion__item">
-          <summary class="faq-accordion__summary">
-            <span class="faq-accordion__title"
-              >Доступны ли скидки при групповом бронировании для нескольких сотрудников одновременно?</span>
-            <span class="faq-accordion__icon-wrap" aria-hidden="true">
-              <span class="faq-accordion__circle"></span>
-              <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" stroke-linecap="square">
-                  <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
-                    <path d="M0 11h22" stroke="currentColor" stroke-width="2" />
-                    <path d="M11 0v22" stroke="currentColor" stroke-width="2" />
-                  </g>
-                </g>
-              </svg>
-            </span>
-          </summary>
-          <div class="faq-accordion__content">
-            <p>
-              Некоторые отели предлагают специальные условия и скидки для групповых бронирований. Свяжитесь с тревел-поддержкой, чтобы
-              узнать подробности.
-            </p>
-          </div>
-        </details>
-        <details class="faq-accordion__item">
-          <summary class="faq-accordion__summary">
-            <span class="faq-accordion__title">Вы сможете проконсультировать по выбору отеля в определённом городе или регионе?</span>
-            <span class="faq-accordion__icon-wrap" aria-hidden="true">
-              <span class="faq-accordion__circle"></span>
-              <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" stroke-linecap="square">
-                  <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
-                    <path d="M0 11h22" stroke="currentColor" stroke-width="2" />
-                    <path d="M11 0v22" stroke="currentColor" stroke-width="2" />
-                  </g>
-                </g>
-              </svg>
-            </span>
-          </summary>
-          <div class="faq-accordion__content">
-            <p>
-              Эксперты тревел-поддержки Smartway всегда готовы подобрать отель, который идеально подойдёт под ваши требования, специальные
-              запросы и бюджет.
-            </p>
-          </div>
-        </details>
-        <details class="faq-accordion__item">
-          <summary class="faq-accordion__summary">
-            <span class="faq-accordion__title">Можно ли заехать в российский отель по загранпаспорту?</span>
-            <span class="faq-accordion__icon-wrap" aria-hidden="true">
-              <span class="faq-accordion__circle"></span>
-              <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" stroke-linecap="square">
-                  <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
-                    <path d="M0 11h22" stroke="currentColor" stroke-width="2" />
-                    <path d="M11 0v22" stroke="currentColor" stroke-width="2" />
-                  </g>
-                </g>
-              </svg>
-            </span>
-          </summary>
-          <div class="faq-accordion__content">
-            <p>
-              К сожалению, российские отели не принимают никакие документы кроме внутреннего паспорта при заселении, поэтому по
-              загранпаспорту в отеле зарегистрироваться не получится.
-            </p>
-          </div>
-        </details>
-        <details class="faq-accordion__item">
-          <summary class="faq-accordion__summary">
-            <span class="faq-accordion__title">Можно ли оформить отель для иностранного гостя?</span>
-            <span class="faq-accordion__icon-wrap" aria-hidden="true">
-              <span class="faq-accordion__circle"></span>
-              <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" stroke-linecap="square">
-                  <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
-                    <path d="M0 11h22" stroke="currentColor" stroke-width="2" />
-                    <path d="M11 0v22" stroke="currentColor" stroke-width="2" />
-                  </g>
-                </g>
-              </svg>
-            </span>
-          </summary>
-          <div class="faq-accordion__content">
-            <p>
-              Да, большинство российских отелей принимает гостей-иностранцев, но перед бронированием лучше уточнить правила заселения в
-              гостинице.
-            </p>
-          </div>
-        </details>
-        <details class="faq-accordion__item">
-          <summary class="faq-accordion__summary">
-            <span class="faq-accordion__title"
-              >Можно ли получить ваучер на английском для иностранного гостя или зарубежного бронирования?</span>
-            <span class="faq-accordion__icon-wrap" aria-hidden="true">
-              <span class="faq-accordion__circle"></span>
-              <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" stroke-linecap="square">
-                  <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
-                    <path d="M0 11h22" stroke="currentColor" stroke-width="2" />
-                    <path d="M11 0v22" stroke="currentColor" stroke-width="2" />
-                  </g>
-                </g>
-              </svg>
-            </span>
-          </summary>
-          <div class="faq-accordion__content">
-            <p>
-              Ваучер на английском языке не формируется в личном кабинете, но его можно запросить в чате travel-помощника по любому
-              бронированию.
-            </p>
-          </div>
-        </details>
+      </div>
+    </section>
+    
+
+    <section class="accountant-materials-block" aria-labelledby="accountant-materials-title">
+      <div class="accountant-materials-block__inner">
+        <h2 id="accountant-materials-title" class="accountant-materials-block__title">Интересные материалы по теме</h2>
+        <div class="accountant-materials-block__grid">
+          <article class="accountant-materials-card">
+            <a href="#" class="accountant-materials-card__link">
+              <div class="accountant-materials-card__thumb" aria-hidden="true"></div>
+              <p class="accountant-materials-card__text">Руководство «Нюансы налогового учёта командировок 2025»</p>
+            </a>
+          </article>
+          <article class="accountant-materials-card">
+            <a href="#" class="accountant-materials-card__link">
+              <div class="accountant-materials-card__thumb" aria-hidden="true"></div>
+              <p class="accountant-materials-card__text">
+                Гайд для бухгалтеров «Как корректно оплачивать и учитывать командировки в 2025»
+              </p>
+            </a>
+          </article>
+          <article class="accountant-materials-card">
+            <a href="#" class="accountant-materials-card__link">
+              <div class="accountant-materials-card__thumb" aria-hidden="true"></div>
+              <p class="accountant-materials-card__text">Две книги для учёта командировок 2025 без штрафов и ошибок</p>
+            </a>
+          </article>
+          <article class="accountant-materials-card">
+            <a href="#" class="accountant-materials-card__link">
+              <div class="accountant-materials-card__thumb" aria-hidden="true"></div>
+              <p class="accountant-materials-card__text">
+                Командировочные расходы и суточные в 2026: возмещение, что входит, нормы, налог на прибыль
+              </p>
+            </a>
+          </article>
+        </div>
       </div>
     </section>
   </main>
