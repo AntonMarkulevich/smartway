@@ -1,0 +1,1400 @@
+/* ===== Страница тарифов (rates.html) — блок «Тарифные планы» ===== */
+
+.page-rates {
+  --rates-accent: #d64b36;
+  --rates-card-bg: #f4f6f8;
+  --rates-text-muted: #6b6b6b;
+  background: #ffffff;
+}
+
+.rates-main {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.rates-tariffs {
+  padding: 48px var(--container-padding-x) 72px;
+  box-sizing: border-box;
+}
+
+.rates-tariffs__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.rates-tariffs__head {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 52rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rates-tariffs__title {
+  margin: 0 0 14px;
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: clamp(30px, 4vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #2a2a2a;
+}
+
+.rates-tariffs__subtitle {
+  margin: 0;
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: clamp(15px, 1.9vw, 17px);
+  line-height: 1.5;
+  color: var(--rates-text-muted);
+}
+
+.rates-tariffs__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.rates-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 28px 26px 26px;
+  background: var(--rates-card-bg);
+  border-radius: 24px;
+  box-sizing: border-box;
+}
+
+.rates-card__badge {
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 18px;
+  padding: 7px 12px;
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 8px;
+}
+
+.rates-card__badge--dark {
+  color: #ffffff;
+  background: #3a3a3a;
+}
+
+.rates-card__badge--muted {
+  color: #3a3a3a;
+  background: #e8eaee;
+}
+
+.rates-card__price {
+  margin: 0 0 12px;
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: clamp(18px, 2.2vw, 22px);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+}
+
+.rates-card__price--accent {
+  color: var(--rates-accent);
+}
+
+.rates-card__desc {
+  margin: 0 0 20px;
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--rates-text-muted);
+}
+
+.rates-card__divider {
+  height: 0;
+  margin: 0 0 18px;
+  border: 0;
+  border-top: 1px solid #dce0e6;
+}
+
+.rates-card__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+
+.rates-card__list li + li {
+  margin-top: 10px;
+}
+
+/* Нижняя зона: кнопка + сноска — прижата к низу карточки, одинаковая высота колонок */
+.rates-card__foot {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: auto;
+  flex-shrink: 0;
+  padding-top: 8px;
+}
+
+.rates-card__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15px 20px;
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background: var(--rates-accent);
+  border-radius: 999px;
+  box-sizing: border-box;
+  transition: opacity 0.15s ease, filter 0.15s ease;
+}
+
+.rates-card__btn:hover {
+  opacity: 0.94;
+  filter: brightness(1.03);
+}
+
+.rates-card__btn:focus-visible {
+  outline: 2px solid var(--rates-accent);
+  outline-offset: 3px;
+}
+
+.rates-card__fineprint {
+  margin: 22px 0 0;
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.45;
+  text-align: center;
+  color: #8f8f8f;
+}
+
+/* Резерв под двустрочную сноску в 1-й и 2-й карточках — кнопки на одной линии */
+.rates-card__fineprint--spacer {
+  margin-top: 22px;
+  min-height: calc(2 * 1.45 * 12px);
+  margin-bottom: 0;
+  visibility: hidden;
+  user-select: none;
+  pointer-events: none;
+}
+
+@media (max-width: 960px) {
+  .rates-tariffs__grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .rates-tariffs__head {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .rates-tariffs {
+    padding-top: 32px;
+    padding-bottom: 48px;
+  }
+
+  .rates-card {
+    padding: 22px 20px 22px;
+  }
+}
+
+/* ——— Секция: заголовок + карточки + тёмный CTA ——— */
+.rates-tariff-suite {
+  padding: 48px var(--container-padding-x) 64px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.rates-tariff-suite__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.rates-tariff-suite__title {
+  margin: 0 0 44px;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 3.8vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+.page-rates .rates-tariff-suite__cards.payment-flex-block {
+  padding: 0 0 40px;
+  background: transparent;
+}
+
+.page-rates .rates-tariff-suite__cards .payment-flex-block__inner {
+  max-width: none;
+  margin: 0;
+}
+
+/* Карточки с вырезом — как payment-flex-block в superviser.html */
+.page-rates .payment-flex-block--rates-tariff-perks .payment-flex-card__body--superviser {
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 80px 22px 28px !important;
+  min-height: 168px;
+}
+
+.page-rates .payment-flex-card__rates-text {
+  margin: 0;
+  max-width: 17rem;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #2a2a2a;
+}
+
+@media (max-width: 1024px) {
+  .page-rates .payment-flex-card__rates-text {
+    max-width: 20rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .rates-tariff-suite {
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .rates-tariff-suite__title {
+    margin-bottom: 32px;
+  }
+
+  .page-rates .rates-tariff-suite__cards.payment-flex-block {
+    padding-bottom: 32px;
+  }
+
+  .page-rates .payment-flex-block--rates-tariff-perks .payment-flex-card__body--superviser {
+    min-height: 148px;
+    padding: 76px 18px 24px !important;
+  }
+}
+
+/* ——— Тёмный баннер «Персональный подбор тарифа» ——— */
+.rates-personal-cta__banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px 40px;
+  padding: clamp(22px, 3.5vw, 30px) clamp(22px, 4vw, 40px);
+  background: #3a3a3a;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+.rates-personal-cta__copy {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.rates-personal-cta__headline {
+  margin: 0 0 10px;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(20px, 2.6vw, 28px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.rates-personal-cta__headline-white {
+  color: #ffffff;
+}
+
+.rates-personal-cta__headline-gray {
+  color: #9b9ba0;
+  font-weight: 700;
+}
+
+.rates-personal-cta__text {
+  margin: 0;
+  max-width: 36rem;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.rates-personal-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-shrink: 0;
+  padding: 12px 12px 12px 24px;
+  border: 1.5px solid #ffffff;
+  border-radius: 999px;
+  background: transparent;
+  color: #ffffff;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.2;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.rates-personal-cta__btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.rates-personal-cta__btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+.rates-personal-cta__btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #d44333;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .rates-personal-cta__banner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .rates-personal-cta__copy {
+    text-align: center;
+  }
+
+  .rates-personal-cta__text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rates-personal-cta__btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+/* ——— Блок «Поездки за 15 минут» (перенесён со страницы супервайзера) ——— */
+
+.page-rates .sup-trips-hub {
+  padding: 56px var(--container-padding-x) 64px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.page-rates .sup-trips-hub__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.page-rates .sup-trips-hub__title { 
+  margin: 0 0 40px;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(24px, 3.5vw, 40px);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #3A3A3A;
+}
+
+.page-rates .sup-trips-hub__accent {
+  color: var(--color-accent);
+}
+
+.page-rates .sup-trips-hub__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.page-rates .sup-trips-hub__col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.page-rates .sup-trips-hub__card {
+  margin: 0;
+  padding: 24px 22px 26px;
+  background: #e8eaef;
+  border-radius: 49px;
+  box-sizing: border-box;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-rates .sup-trips-hub__card--docs {
+  flex: 1 1 auto;
+}
+
+.page-rates .sup-trips-hub__card--mgmt {
+  flex: 1 1 auto;
+}
+
+.page-rates .sup-trips-hub__card--travel {
+  flex: 0 0 auto;
+}
+
+.page-rates .sup-trips-hub__card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.page-rates .sup-trips-hub__dot {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.page-rates .sup-trips-hub__card-title {
+  margin: 0;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(18px, 2.2vw, 22px);
+  line-height: 1.2;
+  color: var(--color-accent);
+}
+
+.page-rates .sup-trips-hub__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-rates .sup-trips-hub__tag {
+  margin: 0;
+  padding: 9px 14px;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.3;
+  color: #1a1a1a;
+  background: #ffffff;
+  border: 1px solid #cfd2d8;
+  border-radius: 999px;
+  box-sizing: border-box;
+}
+
+.page-rates .sup-trips-hub__card--visual {
+  flex: 0 0 auto;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 49px;
+  aspect-ratio: 2.15 / 1;
+  min-height: 180px;
+  max-height: 320px;
+  background-color: #2f2f2f;
+  background-image: url('../img/rateblock.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+@media (max-width: 900px) {
+  .page-rates .sup-trips-hub {
+    padding: 44px var(--container-padding-x) 48px;
+  }
+
+  .page-rates .sup-trips-hub__title {
+    margin-bottom: 28px;
+  }
+
+  .page-rates .sup-trips-hub__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .page-rates .sup-trips-hub__col {
+    display: contents;
+    gap: 0;
+  }
+
+  .page-rates .sup-trips-hub__card--travel {
+    order: 1;
+  }
+
+  .page-rates .sup-trips-hub__card--visual {
+    order: 2;
+    aspect-ratio: 1.85 / 1;
+    max-height: 280px;
+    min-height: 200px;
+  }
+
+  .page-rates .sup-trips-hub__card--docs {
+    order: 3;
+    flex: none;
+  }
+
+  .page-rates .sup-trips-hub__card--mgmt {
+    order: 4;
+    flex: none;
+  }
+}
+
+/* ===== Consult CTA — как на superviser.html (tm-consult-cta из 1style.css) ===== */
+
+.page-rates .tm-consult-cta {
+  padding: 8px var(--container-padding-x) 48px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.page-rates .tm-consult-cta__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.page-rates .tm-consult-cta__panel {
+  padding: clamp(24px, 4vw, 40px);
+  border-radius: 28px;
+  background: #f0f2f5;
+  box-sizing: border-box;
+}
+
+.page-rates .tm-consult-cta__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: clamp(28px, 4vw, 48px);
+  align-items: center;
+}
+
+.page-rates .tm-consult-cta__visual {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  min-width: 0;
+}
+
+.page-rates .tm-consult-cta__badge {
+  margin: 0;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+}
+
+.page-rates .tm-consult-cta__call {
+  width: 100%;
+  max-width: 340px;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: clamp(16px, 2.5vw, 22px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+}
+
+.page-rates .tm-consult-cta__call-head {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 12px;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.page-rates .tm-consult-cta__call-close {
+  font-size: 22px;
+  line-height: 1;
+  color: #999;
+  user-select: none;
+}
+
+.page-rates .tm-consult-cta__call-media {
+  position: relative;
+  background: #e8eaed;
+}
+
+.page-rates .tm-consult-cta__call-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.page-rates .tm-consult-cta__call-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 14px 16px 18px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 100%);
+}
+
+.page-rates .tm-consult-cta__fab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.page-rates .tm-consult-cta__fab--muted {
+  background: #ffffff;
+  color: #222;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.page-rates .tm-consult-cta__fab--hangup {
+  background: #d94a3d;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(217, 74, 61, 0.4);
+}
+
+.page-rates .tm-consult-cta__content {
+  min-width: 0;
+}
+
+.page-rates .tm-consult-cta__title {
+  margin: 0 0 16px;
+  max-width: 34rem;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(22px, 2.6vw, 30px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+}
+
+.page-rates .tm-consult-cta__lead {
+  margin: 0 0 20px;
+  max-width: 36rem;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-size: clamp(15px, 1.5vw, 17px);
+  line-height: 1.45;
+  font-weight: 500;
+  color: #3a3a3a;
+}
+
+.page-rates .tm-consult-cta__list {
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.page-rates .tm-consult-cta__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.page-rates .tm-consult-cta__q {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  margin-top: 2px;
+  border-radius: 50%;
+  background: #555555;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.page-rates .tm-consult-cta__item-text strong {
+  font-weight: 700;
+}
+
+.page-rates .tm-consult-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 56px;
+  padding: 0 14px 0 28px;
+  border-radius: 999px;
+  background: #d94a38;
+  color: #ffffff;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1.2;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.page-rates .tm-consult-cta__btn:hover {
+  background: #c73b2a;
+}
+
+.page-rates .tm-consult-cta__btn:active {
+  transform: scale(0.99);
+}
+
+.page-rates .tm-consult-cta__btn:focus-visible {
+  outline: 3px solid rgba(217, 74, 56, 0.45);
+  outline-offset: 3px;
+}
+
+.page-rates .tm-consult-cta__btn-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .page-rates .tm-consult-cta__layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .page-rates .tm-consult-cta__visual {
+    align-items: center;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .page-rates .tm-consult-cta__btn {
+    width: 100%;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-rates .tm-consult-cta {
+    padding-bottom: 40px;
+  }
+
+  .page-rates .tm-consult-cta__panel {
+    padding: 22px 18px;
+    border-radius: 22px;
+  }
+
+  .page-rates .tm-consult-cta__item {
+    font-size: 14px;
+  }
+
+  .page-rates .tm-consult-cta__btn {
+    max-width: none;
+  }
+}
+
+/* ===== Stats — сетка 3×2 (rates.html, макет «Smartway в цифрах») ===== */
+
+.page-rates .stats--rates-grid {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #e0e2ea;
+  padding: 40px var(--container-padding-x) 48px;
+}
+
+.page-rates .stats--rates-grid .stats__inner {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.page-rates .stats--rates-grid .stats__title {
+  font-family: var(--font-main);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 40px;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.page-rates .stats--rates-grid .stats__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.page-rates .stats--rates-grid .stats-card {
+  border-radius: 49px;
+  padding: clamp(24px, 3vw, 36px) clamp(22px, 3vw, 38px);
+  box-sizing: border-box;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 10px;
+}
+
+.page-rates .stats--rates-grid .stats-card--light {
+  background-color: #f4f4f6;
+}
+
+.page-rates .stats--rates-grid .stats-card--dark {
+  background-color: #333333;
+}
+
+.page-rates .stats--rates-grid .stats-card--brand {
+  background-color: #d93e2b;
+}
+
+.page-rates .stats--rates-grid .stats-card__value {
+  font-family: var(--font-main);
+  font-size: clamp(36px, 4.5vw, 56px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  white-space: normal;
+}
+
+.page-rates .stats--rates-grid .stats-card--light .stats-card__value {
+  color: #1a1a1a;
+}
+
+.page-rates .stats--rates-grid .stats-card--dark .stats-card__value,
+.page-rates .stats--rates-grid .stats-card--brand .stats-card__value {
+  color: #ffffff;
+}
+
+.page-rates .stats--rates-grid .stats-card__label {
+  font-family: var(--font-main);
+  font-size: clamp(15px, 1.5vw, 18px);
+  font-weight: 500;
+  line-height: 1.35;
+  margin: 0;
+  max-width: 22rem;
+}
+
+.page-rates .stats--rates-grid .stats-card--light .stats-card__label {
+  color: #3a3a3a;
+}
+
+.page-rates .stats--rates-grid .stats-card--dark .stats-card__label,
+.page-rates .stats--rates-grid .stats-card--brand .stats-card__label {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.page-rates .stats--rates-grid .stats-card__note {
+  margin: auto 0 0;
+  padding-top: 8px;
+  font-family: var(--font-main);
+  font-size: clamp(12px, 1.1vw, 14px);
+  font-weight: 400;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 22rem;
+}
+
+.page-rates .stats--rates-grid .stats-card--light .stats-card__note {
+  color: rgba(58, 58, 58, 0.55);
+}
+
+@media (max-width: 900px) {
+  .page-rates .stats--rates-grid .stats__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .page-rates .stats--rates-grid .stats-card {
+    min-height: 180px;
+    border-radius: 40px;
+  }
+
+  .page-rates .stats--rates-grid .stats-card__label {
+    max-width: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .page-rates .stats--rates-grid {
+    padding: 32px var(--container-padding-x) 40px;
+    background-color: #e9ebf0;
+  }
+
+  .page-rates .stats--rates-grid .stats__title {
+    margin-bottom: 24px;
+  }
+
+  .page-rates .stats--rates-grid .stats__grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .page-rates .stats--rates-grid .stats-card {
+    min-height: 0;
+    border-radius: 32px;
+    padding: 22px 20px 24px;
+  }
+
+  .page-rates .stats--rates-grid .stats-card__note {
+    margin-top: 4px;
+  }
+}
+
+/* ===== Бесплатный доступ: красный блок с формой (rates.html) ===== */
+
+.page-rates .rates-free-access {
+  padding: 32px var(--container-padding-x) 64px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.page-rates .rates-free-access__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.page-rates .rates-free-access__shell {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  background: #e34a32;
+  border-radius: 49px;
+  padding: clamp(40px, 6vw, 72px) clamp(36px, 5vw, 64px);
+  box-sizing: border-box;
+}
+
+/* Декор vector-line — как .reg-hero__red на registration-page.css */
+.page-rates .rates-free-access__shell::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60%;
+  z-index: 0;
+  background-image: url('../img/vector-line2.png');
+  background-repeat: no-repeat;
+  background-size: auto min(72%, 22rem);
+  opacity: 0.42;
+  pointer-events: none;
+}
+
+.page-rates .rates-free-access__shell::before {
+  left: 0;
+  background-position: center 94%;
+}
+
+
+.page-rates .rates-free-access__layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: clamp(32px, 4vw, 52px);
+  align-items: center;
+}
+
+.page-rates .rates-free-access__copy {
+  min-width: 0;
+}
+
+.page-rates .rates-free-access__title {
+  margin: 0 0 clamp(14px, 2vw, 20px);
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 3.5vw, 42px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.page-rates .rates-free-access__lead {
+  margin: 0;
+  max-width: 34rem;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 400;
+  font-size: clamp(15px, 1.6vw, 18px);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.page-rates .rates-free-access__form {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: clamp(28px, 4vw, 40px) clamp(24px, 3vw, 36px) clamp(22px, 3vw, 32px);
+  box-sizing: border-box;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.page-rates .rates-free-access__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.page-rates .rates-free-access__field {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.page-rates .rates-free-access__input {
+  width: 100%;
+  height: 52px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  border: 1px solid #dedede;
+  border-radius: 999px;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-size: 15px;
+  color: #333333;
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.page-rates .rates-free-access__input::placeholder {
+  color: #b0b0b0;
+}
+
+.page-rates .rates-free-access__input:focus {
+  border-color: #c4c4c4;
+}
+
+.page-rates .rates-free-access__consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 4px 0 18px;
+  cursor: pointer;
+  position: relative;
+}
+
+.page-rates .rates-free-access__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.page-rates .rates-free-access__switch {
+  flex-shrink: 0;
+  width: 44px;
+  height: 24px;
+  border-radius: 999px;
+  background: #c4c4c4;
+  position: relative;
+  margin-top: 2px;
+  transition: background 0.2s ease;
+}
+
+.page-rates .rates-free-access__switch::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  top: 2px;
+  left: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease;
+}
+
+.page-rates .rates-free-access__checkbox:checked + .rates-free-access__switch {
+  background: #9a9a9a;
+}
+
+.page-rates .rates-free-access__checkbox:checked + .rates-free-access__switch::after {
+  transform: translateX(20px);
+}
+
+.page-rates .rates-free-access__checkbox:focus-visible + .rates-free-access__switch {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.page-rates .rates-free-access__consent-label {
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #666666;
+}
+
+.page-rates .rates-free-access__submit {
+  width: 100%;
+  min-height: 56px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 999px;
+  background: #e34a32;
+  color: #ffffff;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.page-rates .rates-free-access__submit:hover {
+  background: #d63f28;
+}
+
+.page-rates .rates-free-access__submit:active {
+  transform: scale(0.99);
+}
+
+.page-rates .rates-free-access__legal {
+  margin: 14px 0 0;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #888888;
+  text-align: center;
+}
+
+.page-rates .rates-free-access__link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.page-rates .rates-free-access__link:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+  .page-rates .rates-free-access__shell {
+    border-radius: 40px;
+    padding: clamp(32px, 6vw, 48px) clamp(24px, 4vw, 36px);
+  }
+
+  .page-rates .rates-free-access__layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-rates .rates-free-access {
+    padding-bottom: 48px;
+  }
+
+  .page-rates .rates-free-access__shell {
+    border-radius: 32px;
+  }
+
+  .page-rates .rates-free-access__form {
+    border-radius: 22px;
+    padding: 24px 18px 22px;
+  }
+
+  .page-rates .rates-free-access__legal {
+    font-size: 10px;
+    text-align: left;
+  }
+}
+
+/* ===== Частые вопросы — аккордеон (rates.html) ===== */
+
+.page-rates .rates-faq {
+  padding: 48px var(--container-padding-x) 64px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.page-rates .rates-faq__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.page-rates .rates-faq__heading {
+  margin: 0 auto clamp(28px, 4vw, 40px);
+  max-width: 100%;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(26px, 3.5vw, 38px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+.page-rates .rates-faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.page-rates .rates-faq__item {
+  margin: 0;
+  background: #f0f2f5;
+  border-radius: 49px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.page-rates .rates-faq__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(16px, 3vw, 28px);
+  padding: clamp(22px, 3.5vw, 36px) clamp(22px, 4vw, 42px);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.page-rates .rates-faq__summary::-webkit-details-marker {
+  display: none;
+}
+
+.page-rates .rates-faq__summary::marker {
+  content: '';
+}
+
+.page-rates .rates-faq__question {
+  flex: 1;
+  min-width: 0;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 600;
+  font-size: clamp(16px, 1.65vw, 20px);
+  line-height: 1.38;
+  letter-spacing: -0.01em;
+  color: #2a2a2a;
+}
+
+.page-rates .rates-faq__icon {
+  flex-shrink: 0;
+  width: 2rem;
+  text-align: center;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 400;
+  font-size: clamp(26px, 3.5vw, 32px);
+  line-height: 1;
+  color: #4a4a4a;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.page-rates .rates-faq__item[open] .rates-faq__icon {
+  transform: rotate(45deg);
+  color: #2a2a2a;
+}
+
+.page-rates .rates-faq__summary:focus {
+  outline: none;
+}
+
+.page-rates .rates-faq__summary:focus-visible {
+  outline: 2px solid #7a91b2;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.page-rates .rates-faq__content {
+  padding: 0 clamp(22px, 4vw, 42px) clamp(22px, 3.5vw, 36px);
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 400;
+  color: #3a3a3a;
+}
+
+.page-rates .rates-faq__content p {
+  margin: 0;
+  max-width: 100%;
+}
+
+.page-rates .rates-faq__item[open] .rates-faq__summary {
+  padding-bottom: clamp(12px, 2vw, 18px);
+}
+
+@media (max-width: 520px) {
+  .page-rates .rates-faq {
+    padding: 36px var(--container-padding-x) 48px;
+  }
+
+  .page-rates .rates-faq__heading {
+    margin-bottom: 24px;
+  }
+
+  .page-rates .rates-faq__list {
+    gap: 14px;
+  }
+
+  .page-rates .rates-faq__item {
+    border-radius: 32px;
+  }
+
+  .page-rates .rates-faq__summary {
+    padding: 20px 20px 20px 22px;
+  }
+
+  .page-rates .rates-faq__content {
+    padding: 0 22px 22px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smartway — Руководителю</title>
+  <meta name="description" content="Управление командировками для руководителя в Smartway.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site-header.css">
+  <link rel="stylesheet" href="css/1style.css">
+</head>
+<body>
+  <header class="header">
+    <input type="checkbox" id="site-nav" class="site-nav-input" aria-hidden="true">
+    <div class="header__inner">
+      <div class="header__left">
+        <a href="1index.html" aria-label="Smartway — на главную">
+          <img src="img/header-logo.svg" alt="Smartway" class="header__logo">
+        </a>
+        <div class="header__divider"></div>
+        <span class="header__descriptor">Стандарт управления<br>командировками</span>
+      </div>
+      <label for="site-nav" class="header__burger" aria-label="Открыть меню">
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </label>
+      <nav class="header__nav" aria-label="Основное меню">
+        <ul class="header__menu">
+          <li><a href="1index.html#audience" class="header__link">Для кого <span class="header__chevron"></span></a></li>
+          <li><a href="1index.html#capabilities" class="header__link">Возможности <span class="header__chevron"></span></a></li>
+          <li><a href="1index.html#useful" class="header__link">Полезное <span class="header__chevron"></span></a></li>
+          <li><a href="1index.html#mice" class="header__link">MICE</a></li>
+          <li><a href="1index.html#tariffs" class="header__link">Тарифы</a></li>
+          <li><a href="1index.html#clients" class="header__link">Клиенты</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="mailto:hello@smartway.today" class="header__icon-btn" aria-label="Написать">
+          <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail">
+        </a>
+        <a href="tel:+78007751428" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
+          <img src="img/phone.svg" alt="">
+        </a>
+        <a href="https://www.smartway.today" class="header__login">
+          <img src="img/header-icon-email.svg" alt=""> Войти
+        </a>
+        <a href="https://smartway.today/" class="header__btn">Протестировать</a>
+      </div>
+    </div>
+    <label for="site-nav" class="header__backdrop" aria-hidden="true"></label>
+    <div class="header__drawer" aria-label="Меню">
+      <div class="header__drawer-inner">
+        <label for="site-nav" class="header__drawer-close" aria-label="Закрыть">×</label>
+        <ul class="header__drawer-menu">
+          <li><a href="1index.html#audience" class="header__drawer-link">Для кого</a></li>
+          <li><a href="1index.html#capabilities" class="header__drawer-link">Возможности</a></li>
+          <li><a href="1index.html#useful" class="header__drawer-link">Полезное</a></li>
+          <li><a href="1index.html#mice" class="header__drawer-link">MICE</a></li>
+          <li><a href="1index.html#tariffs" class="header__drawer-link">Тарифы</a></li>
+          <li><a href="1index.html#clients" class="header__drawer-link">Клиенты</a></li>
+        </ul>
+        <div class="header__drawer-contacts" aria-label="Связаться">
+          <a href="mailto:hello@smartway.today" class="header__icon-btn" aria-label="Написать">
+            <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail">
+          </a>
+          <a href="tel:+78007751428" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
+            <img src="img/phone.svg" alt="">
+          </a>
+        </div>
+        <div class="header__drawer-cta">
+          <a href="https://www.smartway.today" class="header__drawer-login">Войти</a>
+          <a href="https://smartway.today/" class="header__btn header__drawer-btn">Протестировать</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="sup-hero" aria-labelledby="sup-hero-title">
+      <div class="sup-hero__inner">
+        <div class="sup-hero__copy">
+          <span class="sup-hero__badge">Возможности для руководителей</span>
+          <h1 id="sup-hero-title" class="sup-hero__title">Экономьте до 50% на организации командировок</h1>
+          <p class="sup-hero__subtitle">
+            Автоматизируйте 90% рутины, чтобы разгрузить команду и сократить расходы
+          </p>
+        </div>
+        <a class="sup-hero__btn" href="https://smartway.today/">
+          <span class="sup-hero__btn-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5 12H12M12 8l4 4-4 4"
+                stroke="#1A1A1A"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <span class="sup-hero__btn-label">Попробовать бесплатно</span>
+        </a>
+        <div class="sup-hero__visual">
+          <div class="sup-hero__blob" aria-hidden="true"></div>
+          <img
+            class="sup-hero__person"
+            src="img/supervisermain.png"
+            alt=""
+            width="520"
+            height="640"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="accountant-tools" aria-label="Возможности сервиса для командировок">
+      <div class="accountant-tools__inner">
+        <h2 class="accountant-tools__title">
+          Все, что нужно для командировки —<br />
+          в одном сервисе
+        </h2>
+
+        <div class="accountant-tools__row">
+          <div class="accountant-tools__track accountant-tools__track--left">
+            <div class="accountant-tools__group">
+              <div class="accountant-tools__plus accountant-tools__plus--dark" aria-hidden="true">+</div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray" aria-hidden="true"></span>
+                <span class="accountant-tools__pill-text">Тревел-политики</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray" aria-hidden="true"></span>
+                <span class="accountant-tools__pill-text">Автоматические закрывающие</span>
+              </div>
+              <div class="accountant-tools__solo accountant-tools__solo--blue" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="12" width="4" height="8" rx="1" fill="#1a4d7a" />
+                  <rect x="10" y="8" width="4" height="12" rx="1" fill="#1a4d7a" />
+                  <rect x="16" y="4" width="4" height="16" rx="1" fill="#1a4d7a" />
+                </svg>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray" aria-hidden="true"></span>
+                <span class="accountant-tools__pill-text">Аналитика</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray" aria-hidden="true"></span>
+                <span class="accountant-tools__pill-text">Гарантия лучшей цены</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray" aria-hidden="true"></span>
+                <span class="accountant-tools__pill-text">Умный поиск билетов и отелей</span>
+              </div>
+              <div class="accountant-tools__solo accountant-tools__solo--red" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="10" cy="10" r="6" stroke="#fff" stroke-width="2" />
+                  <path d="M15 15l4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="accountant-tools__plus accountant-tools__plus--dark" aria-hidden="true">+</div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray" aria-hidden="true"></span>
+                <span class="accountant-tools__pill-text">Тревел-политики</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray" aria-hidden="true"></span>
+                <span class="accountant-tools__pill-text">Автоматические закрывающие</span>
+              </div>
+              <div class="accountant-tools__solo accountant-tools__solo--blue" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="12" width="4" height="8" rx="1" fill="#1a4d7a" />
+                  <rect x="10" y="8" width="4" height="12" rx="1" fill="#1a4d7a" />
+                  <rect x="16" y="4" width="4" height="16" rx="1" fill="#1a4d7a" />
+                </svg>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray" aria-hidden="true"></span>
+                <span class="accountant-tools__pill-text">Аналитика</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray" aria-hidden="true"></span>
+                <span class="accountant-tools__pill-text">Гарантия лучшей цены</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray" aria-hidden="true"></span>
+                <span class="accountant-tools__pill-text">Умный поиск билетов и отелей</span>
+              </div>
+              <div class="accountant-tools__solo accountant-tools__solo--red" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="10" cy="10" r="6" stroke="#fff" stroke-width="2" />
+                  <path d="M15 15l4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="accountant-tools__group" aria-hidden="true">
+              <div class="accountant-tools__plus accountant-tools__plus--dark">+</div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray"></span>
+                <span class="accountant-tools__pill-text">Тревел-политики</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray"></span>
+                <span class="accountant-tools__pill-text">Автоматические закрывающие</span>
+              </div>
+              <div class="accountant-tools__solo accountant-tools__solo--blue">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="12" width="4" height="8" rx="1" fill="#1a4d7a" />
+                  <rect x="10" y="8" width="4" height="12" rx="1" fill="#1a4d7a" />
+                  <rect x="16" y="4" width="4" height="16" rx="1" fill="#1a4d7a" />
+                </svg>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray"></span>
+                <span class="accountant-tools__pill-text">Аналитика</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray"></span>
+                <span class="accountant-tools__pill-text">Гарантия лучшей цены</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray"></span>
+                <span class="accountant-tools__pill-text">Умный поиск билетов и отелей</span>
+              </div>
+              <div class="accountant-tools__solo accountant-tools__solo--red">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="10" cy="10" r="6" stroke="#fff" stroke-width="2" />
+                  <path d="M15 15l4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="accountant-tools__plus accountant-tools__plus--dark">+</div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray"></span>
+                <span class="accountant-tools__pill-text">Тревел-политики</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray"></span>
+                <span class="accountant-tools__pill-text">Автоматические закрывающие</span>
+              </div>
+              <div class="accountant-tools__solo accountant-tools__solo--blue">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="12" width="4" height="8" rx="1" fill="#1a4d7a" />
+                  <rect x="10" y="8" width="4" height="12" rx="1" fill="#1a4d7a" />
+                  <rect x="16" y="4" width="4" height="16" rx="1" fill="#1a4d7a" />
+                </svg>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray"></span>
+                <span class="accountant-tools__pill-text">Аналитика</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray"></span>
+                <span class="accountant-tools__pill-text">Гарантия лучшей цены</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray"></span>
+                <span class="accountant-tools__pill-text">Умный поиск билетов и отелей</span>
+              </div>
+              <div class="accountant-tools__solo accountant-tools__solo--red">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="10" cy="10" r="6" stroke="#fff" stroke-width="2" />
+                  <path d="M15 15l4 4" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accountant-tools__row">
+          <div class="accountant-tools__track accountant-tools__track--right">
+            <div class="accountant-tools__group">
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray" aria-hidden="true"></span>
+                <span class="accountant-tools__pill-text">Такси</span>
+              </div>
+              <div class="accountant-tools__solo accountant-tools__solo--blue" aria-hidden="true">
+                <svg width="15" height="12" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2 14h1.5l1-3h11l1 3H22l-2-7h-4l-1.5-3h-5L9 7H5L2 14z"
+                    fill="#1a4d7a"
+                  />
+                  <circle cx="7" cy="15" r="1.8" fill="#fff" />
+                  <circle cx="17" cy="15" r="1.8" fill="#fff" />
+                </svg>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray" aria-hidden="true"></span>
+                <span class="accountant-tools__pill-text">Заявка на поездку</span>
+              </div>
+              <div class="accountant-tools__solo accountant-tools__solo--red" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4 16.5h2l1-3h10l1 3h2V9l-2-3H6L4 9v7.5z"
+                    stroke="#fff"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                  <circle cx="8.5" cy="17" r="1.2" fill="#fff" />
+                  <circle cx="16.5" cy="17" r="1.2" fill="#fff" />
+                </svg>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--red" aria-hidden="true">1С</span>
+                <span class="accountant-tools__pill-text">Интеграция с «1С»</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray" aria-hidden="true"></span>
+                <span class="accountant-tools__pill-text">Отчётность для руководителей</span>
+              </div>
+              <div class="accountant-tools__solo accountant-tools__solo--dark" aria-hidden="true">%</div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray" aria-hidden="true"></span>
+                <span class="accountant-tools__pill-text">Программы лояльности</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray" aria-hidden="true"></span>
+                <span class="accountant-tools__pill-text">MICE</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray" aria-hidden="true"></span>
+                <span class="accountant-tools__pill-text">Такси</span>
+              </div>
+              <div class="accountant-tools__solo accountant-tools__solo--blue" aria-hidden="true">
+                <svg width="15" height="12" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2 14h1.5l1-3h11l1 3H22l-2-7h-4l-1.5-3h-5L9 7H5L2 14z"
+                    fill="#1a4d7a"
+                  />
+                  <circle cx="7" cy="15" r="1.8" fill="#fff" />
+                  <circle cx="17" cy="15" r="1.8" fill="#fff" />
+                </svg>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray" aria-hidden="true"></span>
+                <span class="accountant-tools__pill-text">Заявка на поездку</span>
+              </div>
+              <div class="accountant-tools__solo accountant-tools__solo--red" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4 16.5h2l1-3h10l1 3h2V9l-2-3H6L4 9v7.5z"
+                    stroke="#fff"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                  <circle cx="8.5" cy="17" r="1.2" fill="#fff" />
+                  <circle cx="16.5" cy="17" r="1.2" fill="#fff" />
+                </svg>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--red" aria-hidden="true">1С</span>
+                <span class="accountant-tools__pill-text">Интеграция с «1С»</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray" aria-hidden="true"></span>
+                <span class="accountant-tools__pill-text">Отчётность для руководителей</span>
+              </div>
+              <div class="accountant-tools__solo accountant-tools__solo--dark" aria-hidden="true">%</div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray" aria-hidden="true"></span>
+                <span class="accountant-tools__pill-text">Программы лояльности</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray" aria-hidden="true"></span>
+                <span class="accountant-tools__pill-text">MICE</span>
+              </div>
+            </div>
+            <div class="accountant-tools__group" aria-hidden="true">
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray"></span>
+                <span class="accountant-tools__pill-text">Такси</span>
+              </div>
+              <div class="accountant-tools__solo accountant-tools__solo--blue">
+                <svg width="15" height="12" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2 14h1.5l1-3h11l1 3H22l-2-7h-4l-1.5-3h-5L9 7H5L2 14z"
+                    fill="#1a4d7a"
+                  />
+                  <circle cx="7" cy="15" r="1.8" fill="#fff" />
+                  <circle cx="17" cy="15" r="1.8" fill="#fff" />
+                </svg>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray"></span>
+                <span class="accountant-tools__pill-text">Заявка на поездку</span>
+              </div>
+              <div class="accountant-tools__solo accountant-tools__solo--red">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4 16.5h2l1-3h10l1 3h2V9l-2-3H6L4 9v7.5z"
+                    stroke="#fff"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                  <circle cx="8.5" cy="17" r="1.2" fill="#fff" />
+                  <circle cx="16.5" cy="17" r="1.2" fill="#fff" />
+                </svg>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--red">1С</span>
+                <span class="accountant-tools__pill-text">Интеграция с «1С»</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray"></span>
+                <span class="accountant-tools__pill-text">Отчётность для руководителей</span>
+              </div>
+              <div class="accountant-tools__solo accountant-tools__solo--dark">%</div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray"></span>
+                <span class="accountant-tools__pill-text">Программы лояльности</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray"></span>
+                <span class="accountant-tools__pill-text">MICE</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray"></span>
+                <span class="accountant-tools__pill-text">Такси</span>
+              </div>
+              <div class="accountant-tools__solo accountant-tools__solo--blue">
+                <svg width="15" height="12" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2 14h1.5l1-3h11l1 3H22l-2-7h-4l-1.5-3h-5L9 7H5L2 14z"
+                    fill="#1a4d7a"
+                  />
+                  <circle cx="7" cy="15" r="1.8" fill="#fff" />
+                  <circle cx="17" cy="15" r="1.8" fill="#fff" />
+                </svg>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray"></span>
+                <span class="accountant-tools__pill-text">Заявка на поездку</span>
+              </div>
+              <div class="accountant-tools__solo accountant-tools__solo--red">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4 16.5h2l1-3h10l1 3h2V9l-2-3H6L4 9v7.5z"
+                    stroke="#fff"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                  <circle cx="8.5" cy="17" r="1.2" fill="#fff" />
+                  <circle cx="16.5" cy="17" r="1.2" fill="#fff" />
+                </svg>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--red">1С</span>
+                <span class="accountant-tools__pill-text">Интеграция с «1С»</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray"></span>
+                <span class="accountant-tools__pill-text">Отчётность для руководителей</span>
+              </div>
+              <div class="accountant-tools__solo accountant-tools__solo--dark">%</div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray"></span>
+                <span class="accountant-tools__pill-text">Программы лояльности</span>
+              </div>
+              <div class="accountant-tools__pill">
+                <span class="accountant-tools__icon accountant-tools__icon--gray"></span>
+                <span class="accountant-tools__pill-text">MICE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="integration-1c-topcta integration-1c-topcta--flush-footer" aria-label="Попробовать сервис">
+      <a href="https://smartway.today/" class="integration-1c-topcta__btn">
+        <span class="integration-1c-topcta__icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5 12H12M12 8l4 4-4 4"
+              stroke="#1A1A1A"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+        <span class="integration-1c-topcta__text">Попробовать бесплатно</span>
+      </a>
+    </div>
+    <section class="sup-policy-feature" aria-labelledby="sup-policy-feature-title">
+      <div class="sup-policy-feature__inner">
+        <h2 id="sup-policy-feature-title" class="sup-policy-feature__heading">Сокращайте расходы на поездки</h2>
+        <div class="sup-policy-feature__shell">
+          <div class="sup-policy-feature__visual">
+            <img
+              class="sup-policy-feature__img"
+              src="img/superviseravia.png"
+              alt=""
+              width="560"
+              height="420"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="sup-policy-feature__content">
+            <h3 class="sup-policy-feature__subheading">Устанавливайте автоматические лимиты на расходы</h3>
+            <p class="sup-policy-feature__text">
+              Настраивайте тревел-политики. Они не позволят сотрудникам тратить больше, чем предусмотрено бюджетом.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="payment-flex-block payment-flex-block--superviser-control" aria-label="Контроль командировок">
+      <svg class="payment-flex-block__defs" aria-hidden="true" focusable="false" width="0" height="0">
+        <defs>
+          <clipPath id="payment-flex-card-notch-sup" clipPathUnits="objectBoundingBox">
+            <path
+              d="M 0.03 0.042 Q 0.03 0 0.05 0 L 0.26 0 Q 0.5 0.48 0.74 0 L 0.95 0 Q 0.97 0 0.97 0.042 L 0.97 0.958 Q 0.97 1 0.95 1 L 0.05 1 Q 0.03 1 0.03 0.958 Z"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+      <div class="payment-flex-block__inner">
+        <h2 class="payment-flex-block__title">Держите командировки под контролем</h2>
+        <div class="payment-flex-block__grid">
+          <article class="payment-flex-card payment-flex-card--superviser">
+            <div class="payment-flex-card__icon payment-flex-card__icon--num" aria-hidden="true">1</div>
+            <div class="payment-flex-card__body payment-flex-card__body--superviser">
+              <h3 class="payment-flex-card__heading">Организуйте поездки по схеме, принятой в вашей компании</h3>
+              <ul class="payment-flex-card__bullets">
+                <li>услуги бронирует администратор от компании</li>
+                <li>сотрудники бронируют сами, оплачивает ответственный</li>
+                <li>сотрудники все делают самостоятельно</li>
+              </ul>
+            </div>
+          </article>
+          <article class="payment-flex-card payment-flex-card--superviser">
+            <div class="payment-flex-card__icon payment-flex-card__icon--num" aria-hidden="true">2</div>
+            <div class="payment-flex-card__body payment-flex-card__body--superviser">
+              <h3 class="payment-flex-card__heading">Настройте схемы согласования</h3>
+              <p class="payment-flex-card__desc">Утверждайте поездки и расходы в удобном порядке</p>
+              <a href="https://smartway.today/" class="payment-flex-card__action">Настроить процессы</a>
+            </div>
+          </article>
+          <article class="payment-flex-card payment-flex-card--superviser">
+            <div class="payment-flex-card__icon payment-flex-card__icon--num" aria-hidden="true">3</div>
+            <div class="payment-flex-card__body payment-flex-card__body--superviser">
+              <h3 class="payment-flex-card__heading">Согласуйте поездки в 1 клик</h3>
+              <p class="payment-flex-card__desc">
+                Заявки на согласование придут на почту, в телеграм и в личном кабинете. А быстрые изменения можно внести в
+                мобильном приложении
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sup-docs-dark" aria-labelledby="sup-docs-dark-heading">
+      <div class="sup-docs-dark__wrap">
+        <h2 id="sup-docs-dark-heading" class="sup-docs-dark__page-title">
+          Сделайте процессы прозрачными, а отчетность&nbsp;— быстрой
+        </h2>
+        <div class="sup-docs-dark__panel">
+          <div class="sup-docs-dark__copy">
+            <h3 class="sup-docs-dark__title">Получайте закрывающие в срок</h3>
+            <p class="sup-docs-dark__text">
+              Документы формируются автоматически в личном кабинете, а оригиналы приходят по почте или ЭДО
+            </p>
+          </div>
+          <div class="sup-docs-dark__visual">
+            <img
+              class="sup-docs-dark__img"
+              src="img/superviserprocess.png"
+              alt="Интерфейс закрывающих документов в Smartway"
+              width="640"
+              height="420"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="tm-consult-cta" aria-labelledby="tm-consult-cta-title">
+      <div class="tm-consult-cta__inner">
+        <div class="tm-consult-cta__panel">
+          <div class="tm-consult-cta__layout">
+            <div class="tm-consult-cta__visual">
+              <p class="tm-consult-cta__badge">Бесплатная консультация</p>
+              <div class="tm-consult-cta__call">
+                <div class="tm-consult-cta__call-media">
+                  <img
+                    class="tm-consult-cta__call-img"
+                    src="img/hero-call.png"
+                    alt="Консультант Smartway на видеосвязи"
+                    width="320"
+                    height="400"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="tm-consult-cta__call-bar" aria-hidden="true">
+                    <span class="tm-consult-cta__fab tm-consult-cta__fab--muted">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect x="3" y="8" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5" />
+                        <path d="M17 11l4-2v8l-4-2" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    <span class="tm-consult-cta__fab tm-consult-cta__fab--muted">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path
+                          d="M12 14a3 3 0 003-3V5a3 3 0 10-6 0v6a3 3 0 003 3z"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                        />
+                        <path d="M8 11v2a4 4 0 008 0v-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                      </svg>
+                    </span>
+                    <span class="tm-consult-cta__fab tm-consult-cta__fab--hangup">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path
+                          d="M6.62 10.79a15.1 15.1 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.13.37 2.35.57 3.59.62a1 1 0 011 1v3.46a1 1 0 01-.96 1 19.89 19.89 0 01-8.96-2.33 19.5 19.5 0 01-6-6 19.89 19.89 0 01-2.33-8.96 1 1 0 011-1H5.5a1 1 0 011.01.96c.05 1.24.25 2.46.62 3.59a1 1 0 01-.24 1.01l-2.27 2.21z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tm-consult-cta__content">
+              <h2 id="tm-consult-cta-title" class="tm-consult-cta__title">
+                Как упростить работу с тревел-поставщиками, возвратами билетов и бронированиями
+              </h2>
+              <p class="tm-consult-cta__lead">
+                За <strong>15&nbsp;минут</strong> эксперт разберёт ваши вопросы. Например:
+              </p>
+              <ul class="tm-consult-cta__list">
+                <li class="tm-consult-cta__item">
+                  <span class="tm-consult-cta__q" aria-hidden="true">?</span>
+                  <span class="tm-consult-cta__item-text">
+                    Как <strong>навести порядок в бюджете</strong> и сделать затраты прозрачными?
+                  </span>
+                </li>
+                <li class="tm-consult-cta__item">
+                  <span class="tm-consult-cta__q" aria-hidden="true">?</span>
+                  <span class="tm-consult-cta__item-text">
+                    Как <strong>сократить расходы</strong> на поездки без потери качества?
+                  </span>
+                </li>
+                <li class="tm-consult-cta__item">
+                  <span class="tm-consult-cta__q" aria-hidden="true">?</span>
+                  <span class="tm-consult-cta__item-text">
+                    Как <strong>оптимизировать процессы</strong>, чтобы исключить слабые места?
+                  </span>
+                </li>
+              </ul>
+              <a class="tm-consult-cta__btn" href="https://smartway.today/">
+                <span class="tm-consult-cta__btn-label">Оставить заявку</span>
+                <span class="tm-consult-cta__btn-icon" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5 12H12M12 8l4 4-4 4"
+                      stroke="#1A1A1A"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="companies-stat-block companies-stat-block--banner-row" aria-label="Компании бронируют командировки в Smartway">
+      <div class="companies-stat-block__inner">
+        <p class="companies-stat-block__value">7&nbsp;600+</p>
+        <p class="companies-stat-block__caption">компаний бронируют<br>командировки в Smartway</p>
+      </div>
+    </section>
+
+    <section class="trust-strip-block" aria-label="Компании бронируют командировки в Smartway — среди клиентов">
+      <div class="trust-strip-block__inner">
+        <img
+          src="img/clients-logos.svg"
+          alt="ОМК, SOKOLOV, ССК, СИТИДРАЙВ, Белая Дача, Sisley Paris, Сеченовский университет, REDWINGS, hh, Московский политехнический университет"
+          class="trust-strip-block__logos"
+          width="1760"
+          height="53"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </section>
+
+    <section class="trust-credentials-block" aria-label="Официальный статус и партнёрства">
+      <div class="trust-credentials-block__inner">
+        <div class="trust-credentials-block__grid">
+          <article class="trust-credentials-block__card">
+            <img
+              src="img/1clogo.png"
+              alt="1С"
+              class="trust-credentials-block__logo"
+              width="120"
+              height="48"
+              loading="lazy"
+              decoding="async"
+            >
+            <p class="trust-credentials-block__text">Входим в группу компаний «1С»</p>
+          </article>
+          <article class="trust-credentials-block__card">
+            <img
+              src="img/sklogo.png"
+              alt="Сколково — участник"
+              class="trust-credentials-block__logo trust-credentials-block__logo--sk"
+              width="140"
+              height="72"
+              loading="lazy"
+              decoding="async"
+            >
+            <p class="trust-credentials-block__text">Являемся резидентами технопарка «Сколково»</p>
+          </article>
+          <article class="trust-credentials-block__card">
+            <img
+              src="img/mclogo.png"
+              alt="Минцифры России"
+              class="trust-credentials-block__logo"
+              width="120"
+              height="56"
+              loading="lazy"
+              decoding="async"
+            >
+            <p class="trust-credentials-block__text">Входим в реестр российского ПО «Минцифры»</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="sup-results" aria-labelledby="sup-results-title">
+      <div class="sup-results__inner">
+        <h2 id="sup-results-title" class="sup-results__heading">Вот каких результатов мы добились вместе</h2>
+        <div class="sup-results__grid">
+          <article class="sup-results-card">
+            <div class="sup-results-card__top">
+              <div class="sup-results-card__logo-wrap">
+                <img
+                  class="sup-results-card__logo"
+                  src="img/Modulbank.png"
+                  alt="Модульбанк"
+                  width="170"
+                  height="43"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="sup-results-card__text">
+                Ускорили согласование поездок
+                <span class="sup-results-card__hl">с&nbsp;24&nbsp;часов до 10&nbsp;минут</span>
+                благодаря схемам согласования.
+              </p>
+              <a href="#" class="sup-results-card__link">Читать кейс <span class="sup-results-card__link-arr" aria-hidden="true">↗</span></a>
+            </div>
+            <div class="sup-results-card__foot">
+              <span class="sup-results-card__avatar" aria-hidden="true"></span>
+              <div class="sup-results-card__who">
+                <span class="sup-results-card__name">Анастасия Филимонова</span>
+                <span class="sup-results-card__role">
+                  Руководитель Центра оценки персонала и корпоративных программ АО&nbsp;КБ «Модульбанк»
+                </span>
+              </div>
+            </div>
+          </article>
+          <article class="sup-results-card">
+            <div class="sup-results-card__top">
+              <div class="sup-results-card__logo-wrap">
+                <img
+                  class="sup-results-card__logo"
+                  src="img/dodo.png"
+                  alt="Dodo Brands"
+                  width="170"
+                  height="43"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="sup-results-card__text">
+                «Dodo Brands» доверили сотрудникам оформление поездок и
+                <span class="sup-results-card__hl">освободили 50% времени</span>
+                тревел-менеджера.
+              </p>
+              <a href="#" class="sup-results-card__link">Читать кейс <span class="sup-results-card__link-arr" aria-hidden="true">↗</span></a>
+            </div>
+            <div class="sup-results-card__foot">
+              <span class="sup-results-card__avatar" aria-hidden="true"></span>
+              <div class="sup-results-card__who">
+                <span class="sup-results-card__name">Наталья Полугрудова</span>
+                <span class="sup-results-card__role">HR-менеджер Dodo Brands</span>
+              </div>
+            </div>
+          </article>
+          <article class="sup-results-card">
+            <div class="sup-results-card__top">
+              <div class="sup-results-card__logo-wrap">
+                <img
+                  class="sup-results-card__logo"
+                  src="img/mirroko.png"
+                  alt="МИРРИКО"
+                  width="170"
+                  height="43"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="sup-results-card__text">
+                Сократили траты на
+                <span class="sup-results-card__hl">40% при 7&nbsp;000 поездках</span>
+                в год.
+              </p>
+              <a href="#" class="sup-results-card__link">Читать кейс <span class="sup-results-card__link-arr" aria-hidden="true">↗</span></a>
+            </div>
+            <div class="sup-results-card__foot">
+              <span class="sup-results-card__avatar" aria-hidden="true"></span>
+              <div class="sup-results-card__who">
+                <span class="sup-results-card__name">Аида Самитова</span>
+                <span class="sup-results-card__role">Специалист отдела контактного обеспечения</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="sup-results__cta-wrap">
+          <a class="sup-results__cta" href="https://smartway.today/">Повторить результат</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sup-excursion" aria-labelledby="sup-excursion-title">
+      <div class="sup-excursion__inner">
+        <div class="sup-excursion__panel">
+          <div class="sup-excursion__grid">
+            <div class="sup-excursion__copy">
+              <h2 id="sup-excursion-title" class="sup-excursion__title">Запишитесь на экскурсию по сервису</h2>
+              <p class="sup-excursion__lead">
+                Оставьте заявку, и наш менеджер проведёт демонстрацию сервиса. Это бесплатно.
+              </p>
+              <a class="sup-excursion__btn" href="https://smartway.today/">Записаться</a>
+            </div>
+            <div class="sup-excursion__visual">
+              <div class="sup-excursion__stage">
+                <div class="sup-excursion__mock">
+                  <img
+                    class="sup-excursion__img"
+                    src="img/superviserbebebe.png"
+                    alt="Интерфейс Smartway: поездки, согласования, календарь и заявки"
+                    width="660"
+                    height="570"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="sup-excursion__promo-cluster">
+                  <div class="sup-excursion__playbtn-wrap" aria-hidden="true">
+                    <img
+                      class="sup-excursion__playbtn"
+                      src="img/playbtn.png"
+                      alt=""
+                      width="100"
+                      height="84"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="sup-excursion__demo__promo-row" aria-hidden="true">
+                    <img
+                      class="sup-excursion__demo__promo-figure"
+                      src="img/zhanchIbHA.png"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+                <div class="sup-excursion__demo__promo-slogos-wrap" aria-hidden="true">
+                  <img
+                    class="sup-excursion__demo__promo-slogos"
+                    src="img/slogos.png"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="faq-accordion-block faq-accordion-block--accountant faq-accordion-block--superviser-faq"
+      aria-labelledby="sup-faq-heading"
+    >
+      <div class="faq-accordion-block__inner">
+        <h2 id="sup-faq-heading" class="faq-accordion-block__heading">Частые вопросы</h2>
+        <details class="faq-accordion__item">
+          <summary class="faq-accordion__summary">
+            <span class="faq-accordion__title">Как именно вы помогаете экономить?</span>
+            <span class="faq-accordion__icon-wrap" aria-hidden="true">
+              <span class="faq-accordion__circle"></span>
+              <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd" stroke-linecap="square">
+                  <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
+                    <path class="faq-accordion__plus-h" d="M0 11h22" stroke="currentColor" stroke-width="2" />
+                    <path class="faq-accordion__plus-v" d="M11 0v22" stroke="currentColor" stroke-width="2" />
+                  </g>
+                </g>
+              </svg>
+            </span>
+          </summary>
+          <div class="faq-accordion__content">
+            <p>
+              Единый доступ к тарифам, контроль лимитов по тревел-политике, автоматизация согласований и отчётности — меньше ручной работы
+              и лишних трат на организацию поездок.
+            </p>
+          </div>
+        </details>
+        <details class="faq-accordion__item">
+          <summary class="faq-accordion__summary">
+            <span class="faq-accordion__title">
+              В компании командировки не каждый месяц. Нужно ли оплачивать сервис в периоды без поездок?
+            </span>
+            <span class="faq-accordion__icon-wrap" aria-hidden="true">
+              <span class="faq-accordion__circle"></span>
+              <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd" stroke-linecap="square">
+                  <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
+                    <path class="faq-accordion__plus-h" d="M0 11h22" stroke="currentColor" stroke-width="2" />
+                    <path class="faq-accordion__plus-v" d="M11 0v22" stroke="currentColor" stroke-width="2" />
+                  </g>
+                </g>
+              </svg>
+            </span>
+          </summary>
+          <div class="faq-accordion__content">
+            <p>
+              Условия зависят от выбранного тарифа и договора. Точные правила по «тихим» периодам и объёму доступа лучше уточнить у менеджера
+              при подключении — подберут формат под ваш график поездок.
+            </p>
+          </div>
+        </details>
+        <details class="faq-accordion__item">
+          <summary class="faq-accordion__summary">
+            <span class="faq-accordion__title">Как оплачивать?</span>
+            <span class="faq-accordion__icon-wrap" aria-hidden="true">
+              <span class="faq-accordion__circle"></span>
+              <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd" stroke-linecap="square">
+                  <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
+                    <path class="faq-accordion__plus-h" d="M0 11h22" stroke="currentColor" stroke-width="2" />
+                    <path class="faq-accordion__plus-v" d="M11 0v22" stroke="currentColor" stroke-width="2" />
+                  </g>
+                </g>
+              </svg>
+            </span>
+          </summary>
+          <div class="faq-accordion__content">
+            <p>
+              Обычно доступен безналичный расчёт по счёту для юрлица; конкретные способы и сроки фиксируются в договоре при подключении компании.
+            </p>
+          </div>
+        </details>
+        <details class="faq-accordion__item">
+          <summary class="faq-accordion__summary">
+            <span class="faq-accordion__title">Сколько стоит доступ к сервису?</span>
+            <span class="faq-accordion__icon-wrap" aria-hidden="true">
+              <span class="faq-accordion__circle"></span>
+              <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd" stroke-linecap="square">
+                  <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
+                    <path class="faq-accordion__plus-h" d="M0 11h22" stroke="currentColor" stroke-width="2" />
+                    <path class="faq-accordion__plus-v" d="M11 0v22" stroke="currentColor" stroke-width="2" />
+                  </g>
+                </g>
+              </svg>
+            </span>
+          </summary>
+          <div class="faq-accordion__content">
+            <p>
+              Стоимость зависит от масштаба и набора опций. Актуальные условия и демонстрацию можно запросить на smartway.today — менеджер предложит
+              подходящий формат.
+            </p>
+          </div>
+        </details>
+        <details class="faq-accordion__item">
+          <summary class="faq-accordion__summary">
+            <span class="faq-accordion__title">С какими отраслями бизнеса работаете?</span>
+            <span class="faq-accordion__icon-wrap" aria-hidden="true">
+              <span class="faq-accordion__circle"></span>
+              <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd" stroke-linecap="square">
+                  <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
+                    <path class="faq-accordion__plus-h" d="M0 11h22" stroke="currentColor" stroke-width="2" />
+                    <path class="faq-accordion__plus-v" d="M11 0v22" stroke="currentColor" stroke-width="2" />
+                  </g>
+                </g>
+              </svg>
+            </span>
+          </summary>
+          <div class="faq-accordion__content">
+            <p>
+              Сервисом пользуются компании из разных отраслей: производство, ритейл, IT, услуги и другие — типовые сценарии командировок закрываются
+              в одном кабинете.
+            </p>
+          </div>
+        </details>
+        <details class="faq-accordion__item">
+          <summary class="faq-accordion__summary">
+            <span class="faq-accordion__title">Как вы защищаете персональные данные?</span>
+            <span class="faq-accordion__icon-wrap" aria-hidden="true">
+              <span class="faq-accordion__circle"></span>
+              <svg class="faq-accordion__plus" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd" stroke-linecap="square">
+                  <g transform="translate(1 1)" class="faq-accordion__plus-stroke">
+                    <path class="faq-accordion__plus-h" d="M0 11h22" stroke="currentColor" stroke-width="2" />
+                    <path class="faq-accordion__plus-v" d="M11 0v22" stroke="currentColor" stroke-width="2" />
+                  </g>
+                </g>
+              </svg>
+            </span>
+          </summary>
+          <div class="faq-accordion__content">
+            <p>
+              Обработка данных ведётся с учётом требований 152-ФЗ: шифрование каналов связи, разграничение доступа, журналирование действий. Подробности
+              — в политике конфиденциальности на сайте.
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="tm-materials tm-materials--superviser" aria-labelledby="sup-materials-title">
+      <div class="tm-materials__inner">
+        <h2 id="sup-materials-title" class="tm-materials__heading">Полезные материалы по теме</h2>
+        <div class="tm-materials__grid">
+          <a class="tm-materials-card" href="#">
+            <div class="tm-materials-card__thumb" aria-hidden="true"></div>
+            <p class="tm-materials-card__text">
+              Как ООО «ССК» увеличили количество вахт вдвое, а платить стали в 4 раза меньше
+            </p>
+          </a>
+          <a class="tm-materials-card" href="#">
+            <div class="tm-materials-card__thumb" aria-hidden="true"></div>
+            <p class="tm-materials-card__text">Кейс ОМК: Сотрудник сам бронирует билеты и отель моментально</p>
+          </a>
+          <a class="tm-materials-card" href="#">
+            <div class="tm-materials-card__thumb" aria-hidden="true"></div>
+            <p class="tm-materials-card__text">Что выбрать: IT-платформа, агентство или самостоятельное бронирование</p>
+          </a>
+          <a class="tm-materials-card" href="#">
+            <div class="tm-materials-card__thumb" aria-hidden="true"></div>
+            <p class="tm-materials-card__text">
+              Оплата командировки в 2026 году: изменения в законах, нюансы расчётов
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__inner">
+        <div class="footer__col footer__col--info">
+          <div class="footer__col-head">
+            <img src="img/footerImages/Container.png" alt="Smartway" class="footer__logo" width="170" height="40" loading="lazy" decoding="async">
+          </div>
+          <div class="footer__col-body">
+            <div class="footer__contacts">
+              <p class="footer__contact footer__contact--strong"><a href="tel:+78007751428">8&nbsp;800&nbsp;775&nbsp;14&nbsp;28</a></p>
+              <p class="footer__contact footer__contact--strong"><a href="mailto:hello@smartway.today">hello@smartway.today</a></p>
+              <div class="footer__press">
+                <p class="footer__muted-label">Пресс-служба</p>
+                <p class="footer__contact footer__contact--strong"><a href="mailto:pr@smartway.today">pr@smartway.today</a></p>
+              </div>
+              <p class="footer__contact">
+                <a href="#" class="footer__link-external">Для отелей по вопросам контрактинга<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
+              </p>
+            </div>
+            <p class="footer__address">125124, г.&nbsp;Москва, 5-я&nbsp;ул.&nbsp;Ямского Поля, д.&nbsp;5, стр.&nbsp;1, пом.&nbsp;2/11</p>
+            <div class="footer__legal">
+              <p>ООО «Смартвэй», 2026</p>
+              <p>ИНН 7714379242</p>
+              <p>ОГРН 1167746277247</p>
+              <p>ОКВЭД 62.01</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__col footer__col--scenarios">
+          <div class="footer__col-head">
+            <div class="footer__badges">
+              <span class="footer__badge-pill">
+                <img src="img/footerImages/Container-1.png" alt="ТКП" class="footer__badge footer__badge--in-pill" width="80" height="42" loading="lazy" decoding="async">
+              </span>
+              <img src="img/footerImages/sk-uchastnik1.png.webp.png" alt="Участник Сколково" class="footer__badge" width="100" height="42" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="footer__col-body">
+            <h3 class="footer__heading">Сценарии</h3>
+            <ul class="footer__list">
+              <li><a href="#">Для руководителя</a></li>
+              <li><a href="#">Для бухгалтера</a></li>
+              <li><a href="#">Для организатора командировок</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__col footer__col--capabilities">
+          <div class="footer__col-head">
+            <div class="footer__socials">
+              <a href="#" class="footer__social footer__social--round" aria-label="ВКонтакте"><img src="img/footer-icon-vk.svg" alt="" width="20" height="20"></a>
+              <a href="#" class="footer__social footer__social--round" aria-label="VC.ru"><img src="img/footer-icon-vc.svg" alt="" class="footer__social-img--vc" width="22" height="16"></a>
+              <a href="#" class="footer__channel-pill">
+                <img src="img/footer-icon-tg.svg" alt="" class="footer__channel-icon" width="18" height="18">
+                <span class="footer__channel-label">Канал «Командировки.Сегодня»</span>
+              </a>
+            </div>
+          </div>
+          <div class="footer__col-body">
+            <h3 class="footer__heading">Возможности</h3>
+            <ul class="footer__list">
+              <li><a href="#">Поиск авиабилетов</a></li>
+              <li><a href="#">Поиск ж/д билетов</a></li>
+              <li><a href="#">Поиск отелей</a></li>
+              <li><a href="#">Такси</a></li>
+              <li><a href="#">Интеграция с 1С</a></li>
+              <li><a href="#">Согласование</a></li>
+              <li><a href="#">Тревел-политики</a></li>
+              <li><a href="#" class="footer__list-link--accent">Smartway Отпуск</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__col footer__col--useful">
+          <div class="footer__col-head footer__col-head--spacer" aria-hidden="true"></div>
+          <div class="footer__col-body">
+            <h3 class="footer__heading">Полезное</h3>
+            <ul class="footer__list">
+              <li><a href="#">Вопрос-ответ</a></li>
+              <li><a href="#">Блог</a></li>
+              <li><a href="#">Такси в командировке</a></li>
+              <li><a href="#">Бесплатная консультация</a></li>
+              <li><a href="#">Оформление командировок</a></li>
+              <li><a href="#">Реферальная программа Smartway</a></li>
+              <li><a href="#">Аудит командировок</a></li>
+              <li><a href="#">Партнерская программа для франчайзи «1С»</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__col footer__col--about">
+          <div class="footer__col-head">
+            <a href="1index.html#consult" class="footer__btn">Записаться на консультацию<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
+          </div>
+          <div class="footer__col-body">
+            <h3 class="footer__heading">О компании</h3>
+            <ul class="footer__list footer__list--compact">
+              <li><a href="#">Общая информация</a></li>
+              <li><a href="#">Работа в Smartway</a></li>
+              <li><a href="#">Реквизиты</a></li>
+              <li><a href="#">Оферта</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">Условия доступа к личным поездкам</a></li>
+              <li><a href="#">Пользовательское соглашение</a></li>
+              <li><a href="#">Политика конфиденциальности</a></li>
+              <li><a href="#">Правила использования ПЭП</a></li>
+              <li><a href="#">Аккредитованная IT-компания</a></li>
+              <li><a href="#">Договор о страховании финансовых рисков</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__bottom-inner">
+        <a href="#" class="footer__bottom-link">Защита персональных данных</a>
+        <a href="#" class="footer__bottom-link">Сертификат Транспортной Клиринговой Компании</a>
+        <a href="#" class="footer__bottom-link">Безопасное соединение SSL</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

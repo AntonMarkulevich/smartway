@@ -1,0 +1,1066 @@
+/* Страница «О компании» (about.html) */
+
+.page-about {
+  background: #ffff;
+}
+
+.about-main {
+  padding: 0 var(--container-padding-x) clamp(48px, 8vw, 88px);
+  box-sizing: border-box;
+}
+
+/* Герой: слева заголовок + слот под круги, справа слот под иллюстрацию */
+.about-hero {
+  background: #ffffff;
+  padding: clamp(40px, 6vw, 88px) 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.about-hero__inner {
+  width: 100%;
+  margin: 0;
+  padding: 0 clamp(8px, 1.4vw, 18px);
+  box-sizing: border-box;
+}
+
+.about-hero__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.28fr);
+  gap: clamp(10px, 1.6vw, 22px);
+  align-items: center;
+}
+
+.about-hero__copy {
+  min-width: 0;
+}
+
+.about-hero__title {
+  margin: 0 0 clamp(28px, 4vw, 44px);
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(36px, 4.5vw, 72px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+.about-hero__icons-slot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.about-hero__icon-circle {
+  width: clamp(52px, 6.5vw, 64px);
+  height: clamp(52px, 6.5vw, 64px);
+  border-radius: 50%;
+  background: #e8e8e8;
+  border: 3px solid #ffffff;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.about-hero__icon-circle--2 {
+  margin-left: -18px;
+}
+
+.about-hero__icon-circle--3 {
+  margin-left: -18px;
+}
+
+.about-hero__icon-circle img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-hero__visual {
+  width: 100%;
+  min-height: clamp(320px, 42vw, 560px);
+  aspect-ratio: 16 / 10;
+  max-height: min(640px, 78vh);
+  border-radius: clamp(18px, 2.5vw, 28px);
+  box-sizing: border-box;
+  overflow: hidden;
+  justify-self: stretch;
+}
+
+.about-hero__visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-width: 900px) {
+  .about-hero__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero__visual {
+    order: 2;
+    max-width: min(640px, 100%);
+    margin-left: auto;
+    margin-right: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .about-hero__copy {
+    order: 1;
+  }
+}
+
+/* Блок «ведущий сервис»: серая карточка, слева иллюстрация, справа текст */
+.about-pitch {
+  margin-top: clamp(20px, 3.5vw, 36px);
+  background: #f2f4f7;
+  border-radius: clamp(20px, 2.5vw, 28px);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.about-pitch__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(16px, 2.2vw, 32px);
+  align-items: center;
+  padding: clamp(44px, 6vw, 72px) clamp(28px, 4vw, 52px);
+  box-sizing: border-box;
+}
+
+.about-pitch__visual {
+  min-width: 0;
+  min-height: clamp(180px, 26vw, 340px);
+  border-radius: clamp(16px, 2vw, 24px);
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-pitch__visual:empty {
+  background: linear-gradient(145deg, #e8ebf0 0%, #dce1e9 100%);
+}
+
+.about-pitch__img,
+.about-pitch__visual img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: clamp(16px, 2vw, 24px);
+  object-fit: contain;
+  object-position: center;
+}
+
+.about-pitch__copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(22px, 3vw, 30px);
+}
+
+.about-pitch__text {
+  margin: 0;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-size: clamp(19px, 1.65vw, 24px);
+  font-weight: 400;
+  line-height: 1.48;
+  color: #222222;
+}
+
+.about-pitch__accent {
+  font-weight: 700;
+  color: #eb4c3d;
+}
+
+@media (max-width: 900px) {
+  .about-pitch__inner {
+    grid-template-columns: 1fr;
+    padding: clamp(36px, 6vw, 52px) clamp(22px, 4vw, 36px);
+  }
+
+  .about-pitch__visual {
+    order: -1;
+    min-height: clamp(170px, 36vw, 280px);
+    max-width: min(460px, 100%);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Блок «Smartway в цифрах» */
+.about-stats {
+  margin-top: clamp(28px, 4vw, 44px);
+  box-sizing: border-box;
+}
+
+.about-stats__title {
+  margin: 0 0 clamp(28px, 4vw, 48px);
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 3.5vw, 42px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.about-stats__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 20px);
+}
+
+.about-stats__card {
+  margin: 0;
+  padding: clamp(22px, 3.2vw, 32px) clamp(20px, 2.8vw, 28px);
+  border-radius: clamp(18px, 2.2vw, 26px);
+  box-sizing: border-box;
+  min-height: clamp(120px, 14vw, 150px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.about-stats__card--light {
+  background: #EAEAED;
+  color: #1a1a1a;
+}
+
+.about-stats__card--dark {
+  background: #2d2d2d;
+  color: #ffffff;
+}
+
+.about-stats__card--accent {
+  background: #d94032;
+  color: #ffffff;
+}
+
+.about-stats__value {
+  margin: 0 0 clamp(10px, 1.4vw, 14px);
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 3.2vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.about-stats__label {
+  margin: 0;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 400;
+  font-size: clamp(15px, 1.35vw, 17px);
+  line-height: 1.35;
+  max-width: 22ch;
+}
+
+.about-stats__card--light .about-stats__label {
+  color: #333333;
+}
+
+@media (max-width: 768px) {
+  .about-stats__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .about-stats__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats__label {
+    max-width: none;
+  }
+}
+
+/* История / таймлайн и оборот компании */
+.about-timeline {
+  margin-top: clamp(28px, 4vw, 44px);
+  background: #ffffff;
+  border-radius: clamp(20px, 2.5vw, 28px);
+  padding: clamp(40px, 5vw, 64px) clamp(22px, 3.5vw, 40px);
+  box-sizing: border-box;
+}
+
+.about-timeline__title {
+  margin: 0 0 clamp(32px, 4.5vw, 52px);
+  max-width: 44ch;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(26px, 3.2vw, 40px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.about-timeline__title-accent {
+  color: #d94032;
+}
+
+.about-timeline__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: clamp(24px, 3.5vw, 44px);
+  align-items: start;
+}
+
+.about-timeline__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about-timeline__item + .about-timeline__item {
+  margin-top: clamp(20px, 2.6vw, 30px);
+}
+
+.about-timeline__year {
+  margin: 0 0 8px;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1.2;
+  color: #d94032;
+}
+
+.about-timeline__text {
+  margin: 0;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 400;
+  font-size: clamp(15px, 1.25vw, 17px);
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+
+.about-timeline__chart {
+  position: relative;
+  padding-left: clamp(22px, 2.8vw, 36px);
+  border-left: 1px solid #d5d5d8;
+  box-sizing: border-box;
+}
+
+.about-timeline__chart::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d94032;
+  box-shadow: 0 0 0 3px #ffffff;
+}
+
+.about-timeline__arrow {
+  display: block;
+  width: min(58%, 260px);
+  max-width: 100%;
+  height: auto;
+  max-height: min(340px, 42vw);
+  object-fit: contain;
+  object-position: right center;
+}
+
+.about-timeline__chart-title {
+  margin: 0 0 clamp(12px, 1.8vw, 18px);
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.2;
+  color: #1a1a1a;
+}
+
+.about-timeline__bars {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about-timeline__bar-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: clamp(14px, 1.8vw, 20px);
+}
+
+.about-timeline__bar-row:last-child {
+  margin-bottom: 0;
+}
+
+.about-timeline__bar-value {
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(15px, 1.35vw, 18px);
+  line-height: 1.2;
+  color: #1a1a1a;
+}
+
+.about-timeline__bar-value--accent {
+  color: #d94032;
+}
+
+.about-timeline__bar-track {
+  display: block;
+  width: 100%;
+  height: 48px;
+  border-radius: 999px;
+}
+
+.about-timeline__bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: #cfd1d6;
+  width: calc(8% + (var(--billions) / 45) * 92%);
+  min-width: 0;
+  transition: width 0.4s ease;
+}
+
+.about-timeline__bar-fill--accent {
+  background: #d94032;
+}
+
+@media (max-width: 960px) {
+  .about-timeline__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-timeline__title {
+    max-width: none;
+    text-align: left;
+  }
+
+  .about-timeline__chart {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid #d5d5d8;
+    padding-top: clamp(28px, 4vw, 40px);
+    margin-top: clamp(8px, 2vw, 16px);
+  }
+
+  .about-timeline__chart::before {
+    left: 50%;
+    top: -5px;
+    transform: translateX(-50%);
+  }
+
+  .about-timeline__arrow {
+    width: min(200px, 70%);
+    max-height: min(280px, 48vw);
+    margin-bottom: clamp(18px, 3vw, 24px);
+  }
+}
+
+.about-intro {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: clamp(32px, 5vw, 56px) clamp(var(--container-padding-x), 4vw, 48px);
+  box-sizing: border-box;
+  max-width: 920px;
+  margin: clamp(24px, 4vw, 40px) auto 0;
+  width: 100%;
+}
+
+.about-intro__inner {
+  max-width: 640px;
+}
+
+.about-intro__title {
+  margin: 0 0 16px;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+}
+
+.about-intro__lead {
+  margin: 0;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  color: #444444;
+}
+
+/* Наша команда */
+.about-team {
+  margin-top: clamp(28px, 4vw, 44px);
+  padding: clamp(40px, 5vw, 64px) clamp(16px, 3vw, 40px);
+  background: #ffffff;
+  border-radius: clamp(20px, 2.5vw, 28px);
+  box-sizing: border-box;
+}
+
+.about-team__title {
+  margin: 0 0 clamp(32px, 4vw, 48px);
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 3.5vw, 42px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.about-team__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(16px, 2.2vw, 28px) clamp(14px, 2vw, 22px);
+}
+
+.about-team__card {
+  margin: 0;
+  min-width: 0;
+}
+
+.about-team__photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: clamp(14px, 1.8vw, 22px);
+  background: #e8eaee;
+}
+
+.about-team__name {
+  margin: clamp(12px, 1.6vw, 16px) 0 6px;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(15px, 1.25vw, 17px);
+  line-height: 1.25;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+.about-team__role {
+  margin: 0;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 400;
+  font-size: clamp(13px, 1.1vw, 15px);
+  line-height: 1.35;
+  color: #666666;
+  text-align: left;
+}
+
+@media (max-width: 1100px) {
+  .about-team__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .about-team {
+    padding-left: clamp(12px, 4vw, 20px);
+    padding-right: clamp(12px, 4vw, 20px);
+  }
+
+  .about-team__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(18px, 4vw, 24px);
+  }
+}
+
+@media (max-width: 380px) {
+  .about-team__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* О нас пишут (логотипы СМИ) */
+.about-press {
+  margin-top: clamp(28px, 4vw, 44px);
+  padding: clamp(40px, 5vw, 64px) clamp(16px, 3vw, 40px);
+  background: #ffffff;
+  border-radius: clamp(20px, 2.5vw, 28px);
+  box-sizing: border-box;
+}
+
+.about-press__title {
+  margin: 0 0 clamp(28px, 4vw, 40px);
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 3.5vw, 42px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.about-press__grid {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 20px);
+}
+
+.about-press__item {
+  margin: 0;
+  min-width: 0;
+}
+
+.about-press__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(88px, 12vw, 112px);
+  padding: clamp(18px, 3vw, 28px) clamp(16px, 2.5vw, 24px);
+  background: #f0f2f5;
+  border-radius: clamp(12px, 1.5vw, 16px);
+  box-sizing: border-box;
+}
+
+.about-press__logo {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  max-height: clamp(36px, 5vw, 52px);
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-width: 600px) {
+  .about-press__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 360px) {
+  .about-press__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Контакты для СМИ */
+.about-media-contact {
+  margin-top: clamp(28px, 4vw, 44px);
+  padding: clamp(28px, 4vw, 40px) clamp(22px, 3.5vw, 40px);
+  background: #f0f2f5;
+  border-radius: clamp(20px, 2.5vw, 28px);
+  box-sizing: border-box;
+}
+
+.about-media-contact__inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(32px, 5vw, 56px);
+}
+
+.about-media-contact__visual {
+  flex: 0 1 auto;
+  min-width: 0;
+  width: min(586px, 100%);
+  max-width: 586px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-media-contact__visual:empty {
+  width: min(586px, 100%);
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(145deg, #e4e7ec 0%, #d6dae2 100%);
+  border-radius: clamp(12px, 1.5vw, 20px);
+}
+
+.about-media-contact__img,
+.about-media-contact__visual img {
+  display: block;
+  width: 586px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  object-position: center;
+}
+
+.about-media-contact__copy {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 40ch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 1.5vw, 14px);
+  text-align: center;
+}
+
+.about-media-contact__title {
+  margin: 0;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(48px, 2.8vw, 72px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.about-media-contact__email {
+  margin: 0;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-size: clamp(24px, 1.6vw, 32px);
+  line-height: 1.35;
+}
+
+.about-media-contact__link {
+  color: #d94032;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.about-media-contact__link:hover {
+  text-decoration: underline;
+}
+
+.about-media-contact__link:focus-visible {
+  outline: 2px solid #d94032;
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .about-media-contact__inner {
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(24px, 4vw, 32px);
+  }
+
+  .about-media-contact__visual,
+  .about-media-contact__visual:empty {
+    width: 100%;
+    max-width: min(586px, 100%);
+  }
+
+  .about-media-contact__copy {
+    max-width: 100%;
+  }
+}
+
+/* Пресс-центр */
+.about-press-center {
+  margin-top: clamp(28px, 4vw, 44px);
+  box-sizing: border-box;
+}
+
+.about-press-center__title {
+  margin: 0 0 clamp(28px, 4vw, 40px);
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 3.5vw, 42px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.about-press-center__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 20px);
+  align-items: stretch;
+}
+
+.about-press-center__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: clamp(240px, 32vw, 320px);
+  padding: clamp(28px, 4vw, 40px) clamp(24px, 3.5vw, 36px);
+  padding-right: clamp(36%, 42vw, 46%);
+  border-radius: clamp(22px, 2.5vw, 30px);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.about-press-center__card--brand {
+  background: #d64333;
+}
+
+.about-press-center__card--logo-kit {
+  background: #3d3d3d;
+}
+
+.about-press-center__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 28ch;
+}
+
+.about-press-center__card-title {
+  margin: 0 0 clamp(12px, 1.8vw, 16px);
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.2;
+  color: #ffffff;
+  text-align: left;
+}
+
+.about-press-center__card-text {
+  margin: 0 0 clamp(22px, 3vw, 28px);
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 1.25vw, 17px);
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.92);
+  text-align: left;
+}
+
+.about-press-center__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 600;
+  font-size: clamp(14px, 1.15vw, 16px);
+  line-height: 1.2;
+  color: #3d3d3d;
+  background: #ffffff;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.about-press-center__btn:hover {
+  background: #f2f2f2;
+}
+
+.about-press-center__btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+.about-press-center__decor {
+  position: absolute;
+  right: 75px;
+  bottom: -20px;
+  z-index: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: min(48%, 220px);
+  max-height: 55%;
+  pointer-events: none;
+}
+
+.about-press-center__decor2 {
+  position: absolute;
+  right: clamp(12px, 4vw, 56px);
+  bottom: clamp(8px, 2vw, 14px);
+  z-index: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: min(34%, 150px);
+  max-height: 42%;
+  pointer-events: none;
+}
+
+.about-press-center__decor-img,
+.about-press-center__decor img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: clamp(120px, 22vw, 200px);
+  object-fit: contain;
+  object-position: right bottom;
+}
+
+.about-press-center__decor2 .about-press-center__decor-img,
+.about-press-center__decor2 img {
+  max-height: clamp(72px, 12vw, 118px);
+}
+
+@media (max-width: 800px) {
+  .about-press-center__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-press-center__card {
+    padding-right: clamp(24px, 4vw, 36px);
+    min-height: clamp(220px, 42vw, 300px);
+  }
+
+  .about-press-center__content {
+    max-width: min(36ch, 100%);
+    padding-right: min(38%, 180px);
+  }
+
+  .about-press-center__decor {
+    width: min(42%, 200px);
+  }
+
+  .about-press-center__decor2 {
+    width: min(32%, 130px);
+  }
+
+  .about-press-center__decor2 .about-press-center__decor-img,
+  .about-press-center__decor2 img {
+    max-height: clamp(64px, 14vw, 100px);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-press-center__content {
+    padding-right: 0;
+    max-width: 100%;
+  }
+
+  .about-press-center__decor {
+    width: min(52%, 160px);
+    opacity: 0.95;
+  }
+
+  .about-press-center__decor2 {
+    width: min(40%, 120px);
+  }
+
+  .about-press-center__decor2 .about-press-center__decor-img,
+  .about-press-center__decor2 img {
+    max-height: clamp(56px, 18vw, 88px);
+  }
+}
+
+/* Присоединяйтесь к команде (CTA) */
+.about-careers-cta {
+  margin-top: clamp(28px, 4vw, 44px);
+  padding: clamp(36px, 5vw, 56px) clamp(24px, 4vw, 48px);
+  background: #eef0f4;
+  border-radius: clamp(24px, 3vw, 32px);
+  box-sizing: border-box;
+}
+
+.about-careers-cta__inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(24px, 4vw, 48px);
+}
+
+.about-careers-cta__copy {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 36ch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.about-careers-cta__title {
+  margin: 0 0 clamp(14px, 2vw, 20px);
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 3.6vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+}
+
+.about-careers-cta__lead {
+  margin: 0 0 clamp(22px, 3vw, 32px);
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 400;
+  font-size: clamp(16px, 1.45vw, 20px);
+  line-height: 1.45;
+  color: #5c5c5c;
+}
+
+.about-careers-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 600;
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.2;
+  color: #ffffff;
+  background: #d94032;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.about-careers-cta__btn:hover {
+  background: #c2382c;
+}
+
+.about-careers-cta__btn:focus-visible {
+  outline: 2px solid #1a1a1a;
+  outline-offset: 3px;
+}
+
+.about-careers-cta__visual {
+  flex: 0 1 46%;
+  min-width: 0;
+  width: 100%;
+  max-width: min(520px, 48%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-careers-cta__visual:empty {
+  min-height: clamp(200px, 28vw, 320px);
+  background: linear-gradient(145deg, #e2e5eb 0%, #d4d8e0 100%);
+  border-radius: clamp(16px, 2vw, 24px);
+}
+
+.about-careers-cta__img,
+.about-careers-cta__visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 520px;
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-width: 800px) {
+  .about-careers-cta__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-careers-cta__visual,
+  .about-careers-cta__visual:empty {
+    max-width: 100%;
+    width: 100%;
+    align-self: stretch;
+  }
+}

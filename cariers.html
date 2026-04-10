@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Карьера — Smartway</title>
+  <meta name="description" content="Работа и вакансии в Smartway.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site-header.css">
+  <link rel="stylesheet" href="css/1style.css">
+  <link rel="stylesheet" href="css/cariers-page.css">
+</head>
+<body class="page-cariers">
+  <header class="header">
+    <input type="checkbox" id="site-nav" class="site-nav-input" aria-hidden="true">
+    <div class="header__inner">
+      <div class="header__left">
+        <a href="1index.html" aria-label="Smartway — на главную">
+          <img src="img/header-logo.svg" alt="Smartway" class="header__logo">
+        </a>
+        <div class="header__divider"></div>
+        <span class="header__descriptor">Стандарт управления<br>командировками</span>
+      </div>
+      <label for="site-nav" class="header__burger" aria-label="Открыть меню">
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </label>
+      <nav class="header__nav" aria-label="Основное меню">
+        <ul class="header__menu">
+          <li><a href="1index.html#audience" class="header__link">Для кого <span class="header__chevron"></span></a></li>
+          <li><a href="1index.html#capabilities" class="header__link">Возможности <span class="header__chevron"></span></a></li>
+          <li><a href="1index.html#useful" class="header__link">Полезное <span class="header__chevron"></span></a></li>
+          <li><a href="1index.html#mice" class="header__link">MICE</a></li>
+          <li><a href="1index.html#tariffs" class="header__link">Тарифы</a></li>
+          <li><a href="1index.html#clients" class="header__link">Клиенты</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="mailto:hello@smartway.today" class="header__icon-btn" aria-label="Написать">
+          <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail">
+        </a>
+        <a href="tel:+78007751428" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
+          <img src="img/phone.svg" alt="">
+        </a>
+        <a href="https://www.smartway.today" class="header__login">
+          <img src="img/header-icon-email.svg" alt=""> Войти
+        </a>
+        <a href="https://smartway.today/" class="header__btn">Протестировать</a>
+      </div>
+    </div>
+    <label for="site-nav" class="header__backdrop" aria-hidden="true"></label>
+    <div class="header__drawer" aria-label="Меню">
+      <div class="header__drawer-inner">
+        <label for="site-nav" class="header__drawer-close" aria-label="Закрыть">×</label>
+        <ul class="header__drawer-menu">
+          <li><a href="1index.html#audience" class="header__drawer-link">Для кого</a></li>
+          <li><a href="1index.html#capabilities" class="header__drawer-link">Возможности</a></li>
+          <li><a href="1index.html#useful" class="header__drawer-link">Полезное</a></li>
+          <li><a href="1index.html#mice" class="header__drawer-link">MICE</a></li>
+          <li><a href="1index.html#tariffs" class="header__drawer-link">Тарифы</a></li>
+          <li><a href="1index.html#clients" class="header__drawer-link">Клиенты</a></li>
+        </ul>
+        <div class="header__drawer-contacts" aria-label="Связаться">
+          <a href="mailto:hello@smartway.today" class="header__icon-btn" aria-label="Написать">
+            <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail">
+          </a>
+          <a href="tel:+78007751428" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
+            <img src="img/phone.svg" alt="">
+          </a>
+        </div>
+        <div class="header__drawer-cta">
+          <a href="https://www.smartway.today" class="header__drawer-login">Войти</a>
+          <a href="https://smartway.today/" class="header__btn header__drawer-btn">Протестировать</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="cariers-main">
+    <section class="cariers-hero" aria-labelledby="cariers-hero-title">
+      <div class="cariers-hero__inner">
+        <div class="cariers-hero__layout">
+          <div class="cariers-hero__copy">
+            <h1 id="cariers-hero-title" class="cariers-hero__title">Работа в Smartway</h1>
+            <p class="cariers-hero__lead">
+              Развивайтесь в комфортной обстановке — с поддержкой и без бюрократии. У нас так можно!
+            </p>
+            <a class="cariers-hero__cta" href="#">Смотреть вакансии</a>
+          </div>
+          <div class="cariers-hero__visual">
+            <img src="img/cariersmain.png" alt="Работа в Smartway" width="850" height="477" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cariers-growth" aria-labelledby="cariers-growth-title">
+      <div class="cariers-growth__inner">
+        <div class="cariers-growth__layout">
+          <div class="cariers-growth__copy">
+            <h2 id="cariers-growth-title" class="cariers-growth__title">Растем даже в кризисы</h2>
+            <p class="cariers-growth__text">
+              Несмотря на спад в сфере путешествий из-за пандемии, в 2020&nbsp;г. не сократили никого из сотрудников и не уменьшили
+              зарплату, а компания выросла на 27% по выручке.
+            </p>
+          </div>
+          <div class="cariers-growth__visual">
+            <div
+              class="cariers-growth-chart"
+              role="img"
+              aria-label="Рост компании по выручке по годам: 2019, 2020, 2021 и наиболее высокий столбец в 2022 году"
+            >
+              <div class="cariers-growth-chart__plot">
+                <div class="cariers-growth-chart__col">
+                  <div class="cariers-growth-chart__bar cariers-growth-chart__bar--plain cariers-growth-chart__bar--2019"></div>
+                  <span class="cariers-growth-chart__year">2019</span>
+                </div>
+                <div class="cariers-growth-chart__col">
+                  <div class="cariers-growth-chart__bar cariers-growth-chart__bar--plain cariers-growth-chart__bar--2020"></div>
+                  <span class="cariers-growth-chart__year">2020</span>
+                </div>
+                <div class="cariers-growth-chart__col">
+                  <div class="cariers-growth-chart__bar cariers-growth-chart__bar--plain cariers-growth-chart__bar--2021"></div>
+                  <span class="cariers-growth-chart__year">2021</span>
+                </div>
+                <div class="cariers-growth-chart__col">
+                  <div class="cariers-growth-chart__bar cariers-growth-chart__bar--accent cariers-growth-chart__bar--2022"></div>
+                  <span class="cariers-growth-chart__year">2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cariers-values" aria-labelledby="cariers-values-title">
+      <div class="cariers-values__inner">
+        <h2 id="cariers-values-title" class="cariers-values__heading">Наши ценности</h2>
+        <div class="cariers-values__grid">
+          <article class="cariers-values__item">
+            <span class="cariers-values__num" aria-hidden="true">01</span>
+            <h3 class="cariers-values__name">Открытость</h3>
+            <p class="cariers-values__text">Слушаем, слышим и меняемся через обратную связь</p>
+          </article>
+          <article class="cariers-values__item">
+            <span class="cariers-values__num" aria-hidden="true">02</span>
+            <h3 class="cariers-values__name">Гибкость</h3>
+            <p class="cariers-values__text">
+              У нас нет лишней бюрократии — главное, сделать работу, а не отчет о ней
+            </p>
+          </article>
+          <article class="cariers-values__item">
+            <span class="cariers-values__num" aria-hidden="true">03</span>
+            <h3 class="cariers-values__name">Развитие</h3>
+            <p class="cariers-values__text">
+              Даем сложные и интересные задачи, чтобы вы могли расти профессионально. Инвестируем в обучение сотрудников
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cariers-benefits" aria-labelledby="cariers-benefits-title">
+      <div class="cariers-benefits__shell">
+        <h2 id="cariers-benefits-title" class="cariers-benefits__heading">
+          Почему классно<br />с нами работать
+        </h2>
+        <div class="cariers-benefits__grid">
+          <ul class="cariers-benefits__list">
+            <li class="cariers-benefits__item">
+              <span class="cariers-benefits__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5 12.5l4.6 4.5L19 7"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <p class="cariers-benefits__text">
+                <strong>Все по трудовому кодексу:</strong> белая зарплата, отпуск, больничный.
+              </p>
+            </li>
+            <li class="cariers-benefits__item">
+              <span class="cariers-benefits__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5 12.5l4.6 4.5L19 7"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <p class="cariers-benefits__text">
+                <strong>Прозрачность:</strong> всегда знаем, что происходит в компании, какие цели достигнуты и можем задать любые вопросы топ-менеджерам
+              </p>
+            </li>
+            <li class="cariers-benefits__item">
+              <span class="cariers-benefits__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5 12.5l4.6 4.5L19 7"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <p class="cariers-benefits__text">
+                <strong>Инвестируем в образование:</strong> у нас есть внутреннее обучение, корпоративные скидки на онлайн-курсы от проверенных школ, а также подписка на электронную библиотеку MyBook
+              </p>
+            </li>
+            <li class="cariers-benefits__item">
+              <span class="cariers-benefits__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5 12.5l4.6 4.5L19 7"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <p class="cariers-benefits__text">
+                <strong>Мы социально-ответственные:</strong> собираем батарейки, участвуем в благотворительных и экопроектах
+              </p>
+            </li>
+          </ul>
+          <ul class="cariers-benefits__list">
+            <li class="cariers-benefits__item">
+              <span class="cariers-benefits__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5 12.5l4.6 4.5L19 7"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <p class="cariers-benefits__text">
+                <strong>У нас весело:</strong> играем в настолки, playstation, квизы и выезжаем на природу
+              </p>
+            </li>
+            <li class="cariers-benefits__item">
+              <span class="cariers-benefits__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5 12.5l4.6 4.5L19 7"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <p class="cariers-benefits__text">
+                <strong>Помогаем экономить на путешествиях:</strong> корпоративные скидки на билеты и гостиницы
+              </p>
+            </li>
+            <li class="cariers-benefits__item">
+              <span class="cariers-benefits__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5 12.5l4.6 4.5L19 7"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <p class="cariers-benefits__text">
+                <strong>Льготная программа ДМС со стоматологией</strong> после испытательного срока
+              </p>
+            </li>
+            <li class="cariers-benefits__item">
+              <span class="cariers-benefits__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5 12.5l4.6 4.5L19 7"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <p class="cariers-benefits__text"><strong>Реферальная программа</strong> «Пригласи друга»</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cariers-offices" aria-labelledby="cariers-offices-title">
+      <div class="cariers-offices__inner">
+        <h2 id="cariers-offices-title" class="cariers-offices__heading">Наши офисы</h2>
+        <div class="cariers-offices__grid">
+          <div class="cariers-offices__head cariers-offices__head--msk">
+            <span class="cariers-offices__icon-wrap cariers-offices__icon-wrap--msk" aria-hidden="true">
+              <img class="cariers-offices__navicon" src="img/navicon1.svg" alt="" width="24" height="24" decoding="async">
+            </span>
+            <div class="cariers-offices__meta">
+              <h3 class="cariers-offices__city">Москва</h3>
+              <p class="cariers-offices__addr">5-я улица Ямского Поля д.5 с.1, 11 этаж</p>
+            </div>
+          </div>
+          <div class="cariers-offices__media cariers-offices__media--msk">
+            <img src="img/office1.png" alt="Офис Smartway в Москве" width="578" height="365" loading="lazy" decoding="async">
+          </div>
+          <div class="cariers-offices__head cariers-offices__head--penza">
+            <span class="cariers-offices__icon-wrap cariers-offices__icon-wrap--penza" aria-hidden="true">
+              <img class="cariers-offices__navicon" src="img/navicon2.svg" alt="" width="24" height="24" decoding="async">
+            </span>
+            <div class="cariers-offices__meta">
+              <h3 class="cariers-offices__city">Пенза</h3>
+              <p class="cariers-offices__addr">
+                ул.&nbsp;Кирова, 49<br>
+                ул.&nbsp;Московская, 39&nbsp;— отдел разработки
+              </p>
+            </div>
+          </div>
+          <div class="cariers-offices__media cariers-offices__media--penza">
+            <img src="img/office2.png" alt="Офис Smartway в Пензе" width="578" height="365" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cariers-contact" aria-labelledby="cariers-contact-title">
+      <div class="cariers-contact__shell">
+        <div class="cariers-contact__intro">
+          <h2 id="cariers-contact-title" class="cariers-contact__title">Свяжитесь с нами</h2>
+          <p class="cariers-contact__hh">
+            <a
+              href="https://hh.ru/"
+              class="cariers-contact__hh-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Smartway на Headhunter</a>
+          </p>
+        </div>
+        <form class="cariers-contact__form" action="#" method="post">
+          <div class="cariers-contact__field">
+            <input
+              class="cariers-contact__input"
+              type="text"
+              id="cariers-contact-name"
+              name="name"
+              required
+              autocomplete="name"
+              aria-label="Ваше имя"
+              placeholder="Ваше имя"
+            />
+          </div>
+          <div class="cariers-contact__field">
+            <input
+              class="cariers-contact__input"
+              type="email"
+              id="cariers-contact-email"
+              name="email"
+              required
+              autocomplete="email"
+              aria-label="Электронная почта"
+              placeholder="Электронная почта"
+            />
+          </div>
+          <div class="cariers-contact__field">
+            <input
+              class="cariers-contact__input"
+              type="tel"
+              id="cariers-contact-phone"
+              name="phone"
+              required
+              autocomplete="tel"
+              inputmode="tel"
+              aria-label="Телефон"
+              placeholder="+7(000) 000-00-00"
+            />
+          </div>
+          <div class="cariers-contact__field">
+            <input
+              class="cariers-contact__input"
+              type="url"
+              id="cariers-contact-resume"
+              name="resume_url"
+              autocomplete="url"
+              aria-label="О себе (ссылка на резюме)"
+              placeholder="О себе (ссылка на резюме)"
+            />
+          </div>
+          <label class="cariers-contact__consent">
+            <input class="cariers-contact__checkbox" type="checkbox" name="marketing_consent" value="1" />
+            <span class="cariers-contact__switch" aria-hidden="true"></span>
+            <span class="cariers-contact__consent-label">
+              Даю согласие на
+              <span class="cariers-contact__consent-em">получение сообщений</span>
+              рекламного и информационного характера
+            </span>
+          </label>
+          <button class="cariers-contact__submit" type="submit">Отправить</button>
+          <p class="cariers-contact__legal">
+            Нажимая на эту кнопку, Вы даёте
+            <a href="confidence-page.html" class="cariers-contact__legal-link">согласие на обработку персональных данных</a>
+            и принимаете условия
+            <a href="confidence-page.html" class="cariers-contact__legal-link">Политики обработки персональных данных</a>.
+          </p>
+        </form>
+      </div>
+    </section>
+    <section class="cariers-hr-team" aria-labelledby="cariers-vacancies-title">
+      <div class="cariers-hr-team__inner">
+        <h2 id="cariers-vacancies-title" class="cariers-hr-team__title">Наши вакансии</h2>
+        <p class="cariers-hr-team__subtitle">С вами будут общаться</p>
+        <ul class="cariers-hr-team__grid">
+          <li class="cariers-hr-team__card">
+            <img
+              class="cariers-hr-team__avatar"
+              src="img/hrs/1.png"
+              alt="Надежда Седова"
+              width="80"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="cariers-hr-team__text">
+              <span class="cariers-hr-team__name">Надежда Седова</span>
+              <span class="cariers-hr-team__role">HR-менеджер</span>
+            </div>
+          </li>
+          <li class="cariers-hr-team__card">
+            <img
+              class="cariers-hr-team__avatar"
+              src="img/hrs/2.png"
+              alt="Екатерина Логоцкая"
+              width="80"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="cariers-hr-team__text">
+              <span class="cariers-hr-team__name">Екатерина Логоцкая</span>
+              <span class="cariers-hr-team__role">HR-менеджер</span>
+            </div>
+          </li>
+          <li class="cariers-hr-team__card">
+            <img
+              class="cariers-hr-team__avatar"
+              src="img/hrs/3.png"
+              alt="Анна Кафтаева"
+              width="80"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="cariers-hr-team__text">
+              <span class="cariers-hr-team__name">Анна Кафтаева</span>
+              <span class="cariers-hr-team__role">HR-менеджер</span>
+            </div>
+          </li>
+          <li class="cariers-hr-team__card">
+            <img
+              class="cariers-hr-team__avatar"
+              src="img/hrs/4.png"
+              alt="Ирина Мешочкова"
+              width="80"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="cariers-hr-team__text">
+              <span class="cariers-hr-team__name">Ирина Мешочкова</span>
+              <span class="cariers-hr-team__role">HR-менеджер</span>
+            </div>
+          </li>
+          <li class="cariers-hr-team__card">
+            <img
+              class="cariers-hr-team__avatar"
+              src="img/hrs/5.png"
+              alt="Динара Ямашева"
+              width="80"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="cariers-hr-team__text">
+              <span class="cariers-hr-team__name">Динара Ямашева</span>
+              <span class="cariers-hr-team__role">HR-менеджер</span>
+            </div>
+          </li>
+          <li class="cariers-hr-team__card">
+            <img
+              class="cariers-hr-team__avatar"
+              src="img/hrs/6.png"
+              alt="Анастасия Цибискина"
+              width="80"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="cariers-hr-team__text">
+              <span class="cariers-hr-team__name">Анастасия Цибискина</span>
+              <span class="cariers-hr-team__role">HR-менеджер</span>
+            </div>
+          </li>
+          <li class="cariers-hr-team__card">
+            <img
+              class="cariers-hr-team__avatar"
+              src="img/hrs/7.png"
+              alt="Алина Ерошок"
+              width="80"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="cariers-hr-team__text">
+              <span class="cariers-hr-team__name">Алина Ерошок</span>
+              <span class="cariers-hr-team__role">HR-менеджер</span>
+            </div>
+          </li>
+          <li class="cariers-hr-team__card">
+            <img
+              class="cariers-hr-team__avatar"
+              src="img/hrs/8.png"
+              alt="Светлана Балашова"
+              width="80"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="cariers-hr-team__text">
+              <span class="cariers-hr-team__name">Светлана Балашова</span>
+              <span class="cariers-hr-team__role">HR-менеджер</span>
+            </div>
+          </li>
+          <li class="cariers-hr-team__card">
+            <img
+              class="cariers-hr-team__avatar"
+              src="img/hrs/9.png"
+              alt="Карина Москвина"
+              width="80"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="cariers-hr-team__text">
+              <span class="cariers-hr-team__name">Карина Москвина</span>
+              <span class="cariers-hr-team__role">HR-менеджер</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cariers-vacancy-list" aria-label="Открытые вакансии">
+      <div class="cariers-vacancy-list__inner">
+        <ul class="cariers-vacancy-list__list">
+          <li class="cariers-vacancy-list__item">
+            <a class="cariers-vacancy-list__row" href="#">
+              <span class="cariers-vacancy-list__mark" aria-hidden="true">
+                <img src="img/cariers-vacancy-mark.svg" alt="" width="48" height="48" decoding="async">
+              </span>
+              <span class="cariers-vacancy-list__body">
+                <span class="cariers-vacancy-list__title">Менеджер по сопровождению клиентов</span>
+                <span class="cariers-vacancy-list__loc">Пенза</span>
+              </span>
+              <span class="cariers-vacancy-list__chev" aria-hidden="true">
+                <svg class="cariers-vacancy-list__chev-svg" width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M2 2l6.5 6L2 14" stroke="#E34A32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li class="cariers-vacancy-list__item">
+            <a class="cariers-vacancy-list__row" href="#">
+              <span class="cariers-vacancy-list__mark" aria-hidden="true">
+                <img src="img/cariers-vacancy-mark.svg" alt="" width="48" height="48" decoding="async">
+              </span>
+              <span class="cariers-vacancy-list__body">
+                <span class="cariers-vacancy-list__title">Чат-поддержка клиентов</span>
+                <span class="cariers-vacancy-list__loc">Пенза</span>
+              </span>
+              <span class="cariers-vacancy-list__chev" aria-hidden="true">
+                <svg class="cariers-vacancy-list__chev-svg" width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M2 2l6.5 6L2 14" stroke="#E34A32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li class="cariers-vacancy-list__item">
+            <a class="cariers-vacancy-list__row" href="#">
+              <span class="cariers-vacancy-list__mark" aria-hidden="true">
+                <img src="img/cariers-vacancy-mark.svg" alt="" width="48" height="48" decoding="async">
+              </span>
+              <span class="cariers-vacancy-list__body">
+                <span class="cariers-vacancy-list__title">Менеджер по продажам (IT)</span>
+                <span class="cariers-vacancy-list__loc">Пенза</span>
+              </span>
+              <span class="cariers-vacancy-list__chev" aria-hidden="true">
+                <svg class="cariers-vacancy-list__chev-svg" width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M2 2l6.5 6L2 14" stroke="#E34A32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li class="cariers-vacancy-list__item">
+            <a class="cariers-vacancy-list__row" href="#">
+              <span class="cariers-vacancy-list__mark" aria-hidden="true">
+                <img src="img/cariers-vacancy-mark.svg" alt="" width="48" height="48" decoding="async">
+              </span>
+              <span class="cariers-vacancy-list__body">
+                <span class="cariers-vacancy-list__title">Специалист по бухгалтерской поддержке</span>
+                <span class="cariers-vacancy-list__loc">Пенза</span>
+              </span>
+              <span class="cariers-vacancy-list__chev" aria-hidden="true">
+                <svg class="cariers-vacancy-list__chev-svg" width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M2 2l6.5 6L2 14" stroke="#E34A32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li class="cariers-vacancy-list__item">
+            <a class="cariers-vacancy-list__row" href="#">
+              <span class="cariers-vacancy-list__mark" aria-hidden="true">
+                <img src="img/cariers-vacancy-mark.svg" alt="" width="48" height="48" decoding="async">
+              </span>
+              <span class="cariers-vacancy-list__body">
+                <span class="cariers-vacancy-list__title">MICE менеджер</span>
+                <span class="cariers-vacancy-list__loc">Москва</span>
+              </span>
+              <span class="cariers-vacancy-list__chev" aria-hidden="true">
+                <svg class="cariers-vacancy-list__chev-svg" width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M2 2l6.5 6L2 14" stroke="#E34A32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__inner">
+        <div class="footer__col footer__col--info">
+          <div class="footer__col-head">
+            <img src="img/footerImages/Container.png" alt="Smartway" class="footer__logo" width="170" height="40" loading="lazy" decoding="async">
+          </div>
+          <div class="footer__col-body">
+            <div class="footer__contacts">
+              <p class="footer__contact footer__contact--strong"><a href="tel:+78007751428">8&nbsp;800&nbsp;775&nbsp;14&nbsp;28</a></p>
+              <p class="footer__contact footer__contact--strong"><a href="mailto:hello@smartway.today">hello@smartway.today</a></p>
+              <div class="footer__press">
+                <p class="footer__muted-label">Пресс-служба</p>
+                <p class="footer__contact footer__contact--strong"><a href="mailto:pr@smartway.today">pr@smartway.today</a></p>
+              </div>
+              <p class="footer__contact">
+                <a href="#" class="footer__link-external">Для отелей по вопросам контрактинга<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
+              </p>
+            </div>
+            <p class="footer__address">125124, г.&nbsp;Москва, 5-я&nbsp;ул.&nbsp;Ямского Поля, д.&nbsp;5, стр.&nbsp;1, пом.&nbsp;2/11</p>
+            <div class="footer__legal">
+              <p>ООО «Смартвэй», 2026</p>
+              <p>ИНН 7714379242</p>
+              <p>ОГРН 1167746277247</p>
+              <p>ОКВЭД 62.01</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__col footer__col--scenarios">
+          <div class="footer__col-head">
+            <div class="footer__badges">
+              <span class="footer__badge-pill">
+                <img src="img/footerImages/Container-1.png" alt="ТКП" class="footer__badge footer__badge--in-pill" width="80" height="42" loading="lazy" decoding="async">
+              </span>
+              <img src="img/footerImages/sk-uchastnik1.png.webp.png" alt="Участник Сколково" class="footer__badge" width="100" height="42" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="footer__col-body">
+            <h3 class="footer__heading">Сценарии</h3>
+            <ul class="footer__list">
+              <li><a href="#">Для руководителя</a></li>
+              <li><a href="#">Для бухгалтера</a></li>
+              <li><a href="#">Для организатора командировок</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__col footer__col--capabilities">
+          <div class="footer__col-head">
+            <div class="footer__socials">
+              <a href="#" class="footer__social footer__social--round" aria-label="ВКонтакте"><img src="img/footer-icon-vk.svg" alt="" width="20" height="20"></a>
+              <a href="#" class="footer__social footer__social--round" aria-label="VC.ru"><img src="img/footer-icon-vc.svg" alt="" class="footer__social-img--vc" width="22" height="16"></a>
+              <a href="#" class="footer__channel-pill">
+                <img src="img/footer-icon-tg.svg" alt="" class="footer__channel-icon" width="18" height="18">
+                <span class="footer__channel-label">Канал «Командировки.Сегодня»</span>
+              </a>
+            </div>
+          </div>
+          <div class="footer__col-body">
+            <h3 class="footer__heading">Возможности</h3>
+            <ul class="footer__list">
+              <li><a href="#">Поиск авиабилетов</a></li>
+              <li><a href="#">Поиск ж/д билетов</a></li>
+              <li><a href="#">Поиск отелей</a></li>
+              <li><a href="#">Такси</a></li>
+              <li><a href="#">Интеграция с 1С</a></li>
+              <li><a href="#">Согласование</a></li>
+              <li><a href="#">Тревел-политики</a></li>
+              <li><a href="#" class="footer__list-link--accent">Smartway Отпуск</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__col footer__col--useful">
+          <div class="footer__col-head footer__col-head--spacer" aria-hidden="true"></div>
+          <div class="footer__col-body">
+            <h3 class="footer__heading">Полезное</h3>
+            <ul class="footer__list">
+              <li><a href="#">Вопрос-ответ</a></li>
+              <li><a href="#">Блог</a></li>
+              <li><a href="#">Такси в командировке</a></li>
+              <li><a href="#">Бесплатная консультация</a></li>
+              <li><a href="#">Оформление командировок</a></li>
+              <li><a href="#">Реферальная программа Smartway</a></li>
+              <li><a href="#">Аудит командировок</a></li>
+              <li><a href="#">Партнерская программа для франчайзи «1С»</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__col footer__col--about">
+          <div class="footer__col-head">
+            <a href="1index.html#consult" class="footer__btn">Записаться на консультацию<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
+          </div>
+          <div class="footer__col-body">
+            <h3 class="footer__heading">О компании</h3>
+            <ul class="footer__list footer__list--compact">
+              <li><a href="#">Общая информация</a></li>
+              <li><a href="cariers.html" aria-current="page">Работа в Smartway</a></li>
+              <li><a href="rekvizity.html">Реквизиты</a></li>
+              <li><a href="#">Оферта</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+              <li><a href="#">Условия доступа к личным поездкам</a></li>
+              <li><a href="#">Пользовательское соглашение</a></li>
+              <li><a href="#">Политика конфиденциальности</a></li>
+              <li><a href="#">Правила использования ПЭП</a></li>
+              <li><a href="#">Аккредитованная IT-компания</a></li>
+              <li><a href="#">Договор о страховании финансовых рисков</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__bottom-inner">
+        <a href="#" class="footer__bottom-link">Защита персональных данных</a>
+        <a href="#" class="footer__bottom-link">Сертификат Транспортной Клиринговой Компании</a>
+        <a href="#" class="footer__bottom-link">Безопасное соединение SSL</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.querySelectorAll('.header__drawer a, .header__drawer-login, .header__drawer-btn').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var cb = document.getElementById('site-nav');
+        if (cb) cb.checked = false;
+      });
+    });
+  </script>
+</body>
+</html>
