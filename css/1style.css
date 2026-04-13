@@ -11456,18 +11456,24 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
 .smartway-1c-hero {
   background: #ffffff;
   padding: 40px var(--container-padding-x) 80px;
+  box-sizing: border-box;
 }
 
 .smartway-1c-hero__inner {
-  max-width: 1180px;
+  max-width: 1480px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
-  gap: 40px 64px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
+  gap: 48px;
+  box-sizing: border-box;
 }
 
 .smartway-1c-hero__content {
+  position: relative;
+  z-index: 2;
+  flex: 1 1 0;
   min-width: 0;
 }
 
@@ -11475,8 +11481,8 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   margin: 0 0 20px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: 40px;
-  line-height: 1.14;
+  font-size: 72px;
+  line-height: 1.08;
   letter-spacing: -0.02em;
   color: #333333;
 }
@@ -11485,22 +11491,22 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   margin: 0 0 32px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.45;
   color: #666666;
-  max-width: 520px;
+  max-width: 100%;
 }
 
 .smartway-1c-hero__intro {
   margin: 0 0 32px;
-  max-width: 520px;
+  max-width: 100%;
 }
 
 .smartway-1c-hero__lead {
   margin: 0;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.45;
   color: #666666;
 }
@@ -11536,7 +11542,7 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   color: #ffffff;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 600;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.2;
   text-decoration: none;
   border-radius: 10px;
@@ -11553,60 +11559,39 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
 
 .smartway-1c-hero__diagram {
   position: relative;
+  z-index: 1;
+  flex: 0 1 min(760px, 100%);
   width: 100%;
-  max-width: 520px;
-  min-height: 400px;
-  margin: 0 0 0 auto;
+  min-width: 280px;
+  max-width: 900px;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 0;
+  transform: translateX(clamp(-72px, -5vw, -32px));
 }
 
-.smartway-1c-hero__rings {
-  position: absolute;
-  left: -6%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 92%;
-  max-width: 470px;
+.smartway-1c-hero__main-img {
+  display: block;
+  width: 100%;
   height: auto;
-  pointer-events: none;
 }
 
-.smartway-1c-hero__hub {
-  position: absolute;
-  right: 2%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: clamp(100px, 26vw, 132px);
-  height: clamp(100px, 26vw, 132px);
-  border-radius: 50%;
-  background: #d34436;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 18px 48px rgba(211, 68, 54, 0.32);
-  z-index: 2;
-}
-
-.smartway-1c-hero__hub-text {
-  font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-weight: 700;
-  font-size: clamp(24px, 5vw, 32px);
-  color: #ffffff;
-  letter-spacing: -0.03em;
-  line-height: 1;
-}
-
+/* Подписи по углам поверх 1cmain */
 .smartway-1c-hero__node {
   position: absolute;
-  z-index: 3;
+  z-index: 2;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
+  margin: 0;
+  line-height: normal;
 }
 
 .smartway-1c-hero__node-disc {
   width: 44px;
   height: 44px;
+  flex-shrink: 0;
   border-radius: 50%;
   background: #ffffff;
   border: 1px solid #1a1a1a;
@@ -11614,7 +11599,6 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 
@@ -11623,45 +11607,87 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
 }
 
 .smartway-1c-hero__node-label {
+  margin: 0;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 600;
-  font-size: 12px;
+  font-size: clamp(12px, 1.35vw, 20px);
   line-height: 1.3;
   color: #333333;
-  max-width: 168px;
 }
 
+/* Верхний правый угол */
 .smartway-1c-hero__node--zup {
-  top: 4%;
+  top: 0;
   right: 0;
-  max-width: 220px;
+  left: auto;
+  bottom: auto;
+  transform: none;
+  max-width: min(300px, 52%);
+  align-items: flex-start;
 }
 
+/* Нижний правый угол */
 .smartway-1c-hero__node--erp {
-  bottom: 10%;
-  right: 2%;
+  bottom: 90px;
+  right: 150px;
+  left: auto;
+  top: auto;
+  transform: none;
+  max-width: min(140px, 42%);
 }
 
-.smartway-1c-hero__node--erp .smartway-1c-hero__node-label {
-  max-width: 90px;
-}
-
+/* Нижний левый угол, текст слева от иконки */
 .smartway-1c-hero__node--buh {
-  bottom: 14%;
+  bottom: 45px;
   left: 0;
-  max-width: 200px;
+  right: auto;
+  top: auto;
+  transform: none;
+  flex-direction: row-reverse;
+  max-width: min(240px, 50%);
+}
+
+.smartway-1c-hero__node--buh .smartway-1c-hero__node-label {
+  text-align: right;
+}
+
+@media (min-width: 1025px) {
+  .smartway-1c-hero {
+    min-height: 780px;
+    display: flex;
+    align-items: center;
+  }
+
+  .smartway-1c-hero__inner {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1024px) {
   .smartway-1c-hero__inner {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
     gap: 48px;
   }
 
+  .smartway-1c-hero__content {
+    flex: 1 1 auto;
+  }
+
   .smartway-1c-hero__diagram {
+    flex: 1 1 auto;
+    min-width: 0;
+    align-self: center;
     margin: 0 auto;
-    max-width: 480px;
-    min-height: 360px;
+    width: 100%;
+    max-width: min(100%, 600px);
+    transform: none;
+  }
+
+  .smartway-1c-hero__node-disc {
+    width: 40px;
+    height: 40px;
   }
 
   .smartway-1c-hero__visual .smartway-1c-hero__img {
@@ -11669,7 +11695,7 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   }
 
   .smartway-1c-hero__title {
-    font-size: 34px;
+    font-size: 56px;
   }
 }
 
@@ -11679,12 +11705,12 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   }
 
   .smartway-1c-hero__title {
-    font-size: 26px;
+    font-size: 40px;
     margin-bottom: 14px;
   }
 
   .smartway-1c-hero__subtitle {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 24px;
   }
 
@@ -11693,7 +11719,7 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   }
 
   .smartway-1c-hero__lead {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .smartway-1c-hero__btn {
@@ -11702,26 +11728,37 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   }
 
   .smartway-1c-hero__diagram {
-    min-height: 320px;
-    max-width: 100%;
+    width: 100%;
+    transform: none;
+  }
+
+  .smartway-1c-hero__node {
+    gap: 6px;
+  }
+
+  .smartway-1c-hero__node-disc {
+    width: 34px;
+    height: 34px;
+  }
+
+  .smartway-1c-hero__node-label {
+    font-size: 12px;
+  }
+
+  .smartway-1c-hero__node--zup {
+    max-width: min(200px, 55%);
+  }
+
+  .smartway-1c-hero__node--erp {
+    max-width: min(100px, 38%);
+  }
+
+  .smartway-1c-hero__node--buh {
+    max-width: min(180px, 48%);
   }
 
   .smartway-1c-hero__visual .smartway-1c-hero__img {
     max-width: 100%;
-  }
-
-  .smartway-1c-hero__node-label {
-    font-size: 11px;
-    max-width: 140px;
-  }
-
-  .smartway-1c-hero__node--erp .smartway-1c-hero__node-label {
-    max-width: 64px;
-  }
-
-  .smartway-1c-hero__rings {
-    left: -10%;
-    width: 100%;
   }
 }
 
@@ -11745,11 +11782,11 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
 .smartway-1c-how__title {
   margin: 0;
   flex: 0 0 auto;
-  max-width: 280px;
+  max-width: 360px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: 32px;
-  line-height: 1.12;
+  font-size: 22px;
+  line-height: 1.2;
   letter-spacing: -0.02em;
   color: #e54133;
 }
@@ -11778,14 +11815,14 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
 
 .smartway-1c-how__num {
   flex-shrink: 0;
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: #e54133;
   color: #ffffff;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 1;
   display: flex;
   align-items: center;
@@ -11802,7 +11839,7 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
 .smartway-1c-how__line {
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.3;
   color: #2a2a2a;
 }
@@ -11833,10 +11870,6 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
     padding: 36px var(--container-padding-x) 28px;
   }
 
-  .smartway-1c-how__title {
-    font-size: 26px;
-  }
-
   .smartway-1c-how__steps {
     flex-direction: column;
     align-items: flex-start;
@@ -11844,13 +11877,13 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   }
 
   .smartway-1c-how__line {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .smartway-1c-how__num {
-    width: 46px;
-    height: 46px;
-    font-size: 20px;
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
   }
 }
 
@@ -11861,12 +11894,13 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
 }
 
 .smartway-1c-feature__inner {
-  max-width: 1180px;
+  max-width: 1320px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.32fr);
   gap: 40px 56px;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .smartway-1c-feature__content {
@@ -11877,8 +11911,8 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   margin: 0 0 22px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 72px;
+  line-height: 1.2;
   letter-spacing: -0.02em;
   color: #1a1a1a;
 }
@@ -11887,7 +11921,7 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   margin: 0;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.65;
   color: #4a4a4a;
   max-width: 500px;
@@ -11897,10 +11931,19 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   min-width: 0;
 }
 
+.smartway-1c-feature__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 @media (max-width: 968px) {
   .smartway-1c-feature__inner {
     grid-template-columns: 1fr;
     gap: 32px;
+    min-height: 0;
+    height: auto;
+    align-items: start;
   }
 
   .smartway-1c-feature__text {
@@ -11909,10 +11952,17 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
 
   .smartway-1c-feature__media {
     order: 2;
+    height: auto;
+  }
+
+  .smartway-1c-feature__media img {
+    height: auto;
+    width: 100%;
   }
 
   .smartway-1c-feature__content {
     order: 1;
+    align-self: start;
   }
 }
 
@@ -11922,12 +11972,11 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   }
 
   .smartway-1c-feature__title {
-    font-size: 26px;
     margin-bottom: 16px;
   }
 
   .smartway-1c-feature__text {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6;
   }
 }
@@ -11952,11 +12001,11 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
 .smartway-1c-pros__title {
   margin: 0;
   flex: 0 0 auto;
-  max-width: 220px;
+  max-width: 360px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: 34px;
-  line-height: 1.08;
+  font-size: 22px;
+  line-height: 1.2;
   letter-spacing: -0.02em;
   color: #e34234;
 }
@@ -11986,14 +12035,14 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
 
 .smartway-1c-pros__num {
   flex-shrink: 0;
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: #e34234;
   color: #ffffff;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 1;
   display: flex;
   align-items: center;
@@ -12005,7 +12054,7 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   padding-top: 2px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
   letter-spacing: -0.01em;
   color: #2a2a2a;
@@ -12030,7 +12079,6 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
 
   .smartway-1c-pros__title {
     max-width: none;
-    font-size: 28px;
   }
 
   .smartway-1c-pros__list {
@@ -12049,19 +12097,15 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
     padding: 36px var(--container-padding-x) 40px;
   }
 
-  .smartway-1c-pros__title {
-    font-size: 26px;
-  }
-
   .smartway-1c-pros__text {
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.55;
   }
 
   .smartway-1c-pros__num {
-    width: 46px;
-    height: 46px;
-    font-size: 20px;
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
   }
 }
 
@@ -12084,8 +12128,8 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   margin: 0 0 40px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: 44px;
-  line-height: 1.1;
+  font-size: 72px;
+  line-height: 1.06;
   letter-spacing: -0.03em;
 }
 
@@ -12141,7 +12185,7 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   margin: 0 0 28px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 36px;
   line-height: 1.25;
   letter-spacing: -0.02em;
   color: #333333;
@@ -12177,7 +12221,7 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   margin-bottom: 8px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 1.35;
   color: #555555;
 }
@@ -12189,13 +12233,13 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
 .smartway-1c-lead__input,
 .smartway-1c-lead__select {
   width: 100%;
-  height: 52px;
+  height: 58px;
   padding: 0 18px;
   box-sizing: border-box;
   border: 1px solid #dedede;
   border-radius: 12px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 1.2;
   color: #333333;
   background: #ffffff;
@@ -12305,7 +12349,7 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
 
 .smartway-1c-lead__consent-text {
   font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-size: 13px;
+  font-size: 20px;
   line-height: 1.45;
   color: #777777;
 }
@@ -12322,7 +12366,7 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
 
 .smartway-1c-lead__submit {
   width: 100%;
-  min-height: 54px;
+  min-height: 58px;
   padding: 14px 20px;
   border: none;
   border-radius: 14px;
@@ -12330,7 +12374,7 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   color: #ffffff;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.2;
   letter-spacing: -0.01em;
   cursor: pointer;
@@ -12348,7 +12392,7 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
 .smartway-1c-lead__legal {
   margin: 16px 0 0;
   font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.5;
   color: #a8a8a8;
   text-align: center;
@@ -12364,7 +12408,7 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   margin: 0 0 14px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 1.35;
   color: #555555;
   text-align: center;
@@ -12391,7 +12435,7 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   }
 
   .smartway-1c-lead__heading {
-    font-size: 36px;
+    font-size: 52px;
     margin-bottom: 32px;
   }
 
@@ -12406,7 +12450,7 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   }
 
   .smartway-1c-lead__heading {
-    font-size: 30px;
+    font-size: 42px;
     margin-bottom: 24px;
   }
 
@@ -12420,7 +12464,7 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   }
 
   .smartway-1c-lead__form-title {
-    font-size: 20px;
+    font-size: 28px;
     margin-bottom: 22px;
   }
 }
