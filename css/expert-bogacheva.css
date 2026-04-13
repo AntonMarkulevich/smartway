@@ -37,7 +37,7 @@
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  background: #e9ebf0;
+  background: #E0E2EA;
   padding: clamp(40px, 10vw, 125px) clamp(28px, 8vw, 115px)
     clamp(40px, 8vw, 100px);
   border-radius: clamp(36px, 8vw, 58px);

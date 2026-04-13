@@ -164,14 +164,14 @@ body.faq-index-page .komand-main {
 
 .faq-hero__accent--one {
   width: clamp(140px, 22vw, 240px);
-  left: clamp(4%, 12vw, 14%);
+  left: clamp(18%, 22vw, 34%);
   top: 16%;
   transform: rotate(-6deg);
 }
 
 .faq-hero__accent--two {
   width: clamp(120px, 18vw, 200px);
-  left: 6%;
+  left: clamp(24%, 28vw, 42%);
   bottom: 10%;
   transform: rotate(4deg);
 }
@@ -214,7 +214,7 @@ body.faq-index-page .komand-main {
   }
 
   .faq-hero__accent--one {
-    left: 2%;
+    left: 12%;
     top: 22%;
     width: clamp(96px, 28vw, 160px);
     opacity: 0.28;
@@ -222,7 +222,7 @@ body.faq-index-page .komand-main {
 
   .faq-hero__accent--two {
     left: auto;
-    right: 4%;
+    right: -2%;
     bottom: 38%;
     width: clamp(88px, 24vw, 140px);
     opacity: 0.26;
@@ -705,10 +705,10 @@ body.faq-index-page .komand-main {
 .faq-demo__promo-figure {
   position: relative;
   left: auto;
-  bottom: auto;
+  bottom: -90px;
   display: block;
-  width: clamp(200px, 36vw, 340px);
-  max-width: min(100%, 340px);
+  width: clamp(200px, 36vw, 470px);
+  max-width: min(100%, 470px);
   height: auto;
   border-radius: clamp(18px, 2.5vw, 28px);
   pointer-events: none;

@@ -234,7 +234,7 @@ body.faq-aeroport-page .faqzp-telegram {
 
 .faqap-feature {
   display: grid;
-  grid-template-columns: minmax(260px, min(100%, 543px)) 1fr;
+  grid-template-columns: minmax(260px, min(100%, 566px)) 1fr;
   gap: clamp(32px, 5vw, 60px);
   align-items: center;
   width: 100%;
@@ -243,19 +243,38 @@ body.faq-aeroport-page .faqzp-telegram {
 .faqap-feature__media {
   position: relative;
   overflow: hidden;
-  max-height: 752px;
-  border-right: 2px solid #d44333;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 20px;
 }
 
-.faqap-feature__img {
-  display: block;
+.faqap-feature__media::after {
+  content: "";
+  width: 3px;
+  flex-shrink: 0;
+  align-self: stretch;
+  background: #d44333;
+}
+
+.faqap-feature__video {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
   width: 100%;
-  height: auto;
-  min-height: 280px;
-  max-height: 752px;
-  object-fit: cover;
-  vertical-align: middle;
+  max-width: 543px;
+  aspect-ratio: 543 / 752;
+  background: #0f0f0f;
+}
+
+.faqap-feature__iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
 
 .faqap-feature__text {
@@ -288,14 +307,20 @@ body.faq-aeroport-page .faqzp-telegram {
     grid-template-columns: 1fr;
   }
 
-  .faqap-feature__media {
-    border-right: none;
-    border-bottom: 2px solid #d44333;
-    max-height: none;
+   .faqap-feature__media {
+    display: block;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #d44333;
   }
 
-  .faqap-feature__img {
-    max-height: 480px;
-    min-height: 240px;
+  .faqap-feature__media::after {
+    display: none;
+  }
+
+  .faqap-feature__video {
+    flex: none;
+    max-width: min(100%, 543px);
+    margin-inline: auto;
+    aspect-ratio: 543 / 752;
   }
 }
