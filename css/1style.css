@@ -63,6 +63,12 @@
   --stats-footnote-gap: 40px;
 }
 
+@media (min-width: 1025px) {
+  :root {
+    --container-padding-x: 80px;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -96,7 +102,7 @@ a {
 /* ===== Hero — первый экран (Figma node 44:15232) ===== */
 .hero {
   background-color: #E0E2EA;
-  padding: 20px 30px 32px;
+  padding: 20px var(--container-padding-x) 32px;
 }
 
 .hero__inner {
@@ -170,6 +176,14 @@ a {
   color: #D44333;
   height: 68px;
   min-width: 301px;
+}
+
+@media (min-width: 769px) {
+  .btn.btn--primary[href="#consult"],
+  .btn.btn--outline[href="#consult"] {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 }
 
 /* Правая колонка: композит (интерфейс + календарь + персона) и логотипы доверия */
@@ -332,15 +346,18 @@ a {
 .clients__track {
   display: flex;
   align-items: center;
-  gap: var(--clients-strip-gap);
+  gap: 0;
   width: max-content;
   animation: clients-marquee 40s linear infinite;
+  will-change: transform;
 }
 
 .clients__group {
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  padding-right: var(--clients-strip-gap);
+  box-sizing: content-box;
 }
 
 .clients__logo {
@@ -357,13 +374,14 @@ a {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-50% - var(--clients-strip-gap) / 2));
+    transform: translateX(-50%);
   }
 }
 
 @media (max-width: 768px) {
   .clients {
     padding: 28px 0;
+    --clients-strip-gap: 48px;
   }
 
   .clients__logo {
@@ -372,7 +390,6 @@ a {
   }
 
   .clients__track {
-    gap: 48px;
     animation-duration: 30s;
   }
 }
@@ -380,6 +397,7 @@ a {
 @media (max-width: 480px) {
   .clients {
     padding: 20px 0;
+    --clients-strip-gap: 32px;
   }
 
   .clients__logo {
@@ -388,7 +406,6 @@ a {
   }
 
   .clients__track {
-    gap: 32px;
     animation-duration: 25s;
   }
 }
@@ -421,7 +438,8 @@ a {
 .services__grid {
   display: grid;
   grid-template-columns: 432px 431px 431px 239px;
-  grid-template-rows: 113px 119px 249px 119px;
+  /* «Короткие» строки бенто-сетки — 120px (десктоп); средняя полоса 249px */
+  grid-template-rows: 120px 120px 120px 120px;
   gap: 14px;
   justify-content: center;
 }
@@ -432,7 +450,6 @@ a {
   border-radius: 20px;
   padding: 34px 40px;
   text-align: left;
-  min-height: 113px;
   display: flex;
   flex-direction: column;
   background-color: #D2D6E0;
@@ -453,13 +470,11 @@ a {
   grid-row: 1 / span 3;
   background-color: #fff;
   border-color: #B8C3D6;
-  min-height: 380px;
 }
 
 .services__card--avtobusy {
   grid-column: 2;
   grid-row: 1;
-  min-height: 113px;
 }
 
 .services__card--taxi {
@@ -467,13 +482,11 @@ a {
   grid-row: 1;
   background-color: #fff;
   border-color: #B8C3D6;
-  min-height: 113px;
 }
 
 .services__card--gruppovye-zaezdy {
   grid-column: 4;
   grid-row: 1 / span 2;
-  min-height: 249px;
   padding: 24px;
 }
 
@@ -488,19 +501,16 @@ a {
   grid-row: 2;
   background-color: #fff;
   border-color: #B8C3D6;
-  min-height: 119px;
 }
 
 .services__card--strahovanie {
   grid-column: 3;
   grid-row: 2;
-  min-height: 119px;
 }
 
 .services__card--vizovaya-podderzhka {
   grid-column: 1;
   grid-row: 4;
-  min-height: 119px;
 }
 
 .services__card--gostinicy {
@@ -508,7 +518,54 @@ a {
   grid-row: 3 / span 2;
   background-color: #fff;
   border-color: #B8C3D6;
-  min-height: 382px;
+}
+
+/* Гостиницы — композиция: меньший скрин, иконка слева снизу, плашка справа снизу */
+.services__card--gostinicy .services__media--hotel {
+  position: relative;
+  margin-top: 16px;
+  padding: 0 6px 36px;
+  width: 100%;
+  max-width: 292px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.services__card--gostinicy .services__img--hotel-shot {
+  width: 186px;
+  max-width: 68%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 6px 22px rgba(15, 23, 42, 0.09);
+}
+
+.services__card--gostinicy .services__img--hotel-icon {
+  position: absolute;
+  left: 2px;
+  right: auto;
+  bottom: 6px;
+  top: auto;
+  transform: none;
+  width: 32px;
+  height: 32px;
+  z-index: 2;
+  object-fit: contain;
+}
+
+.services__card--gostinicy .services__img--hotel-badges {
+  position: absolute;
+  left: auto;
+  right: 4px;
+  bottom: 4px;
+  width: 128px;
+  max-width: 90%;
+  height: auto;
+  z-index: 1;
 }
 
 .services__card--transfery {
@@ -520,7 +577,6 @@ a {
   z-index: 0;
   background-color: #E0E2EA;
   border: none;
-  min-height: 382px;
   padding: 0px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -603,7 +659,6 @@ a {
   grid-row: 3 / span 2;
   display: flex;
   flex-direction: column;
-  min-height: 382px;
   padding: 0;
   background-color: #ffffff;
   border: 1px solid #d1d9e0;
@@ -637,24 +692,17 @@ a {
   position: relative;
   margin-top: 14px;
   flex: 1 1 auto;
-  min-height: 56px;
   border-radius: 16px;
 }
 
 .services__media--screen {
   background: transparent;
   padding: 0;
-  min-height: 228px;
-}
-
-.services__media--iconrow {
-  min-height: 44px;
 }
 
 .services__media--car {
   position: relative;
   margin-top: 6px;
-  min-height: 200px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
@@ -662,23 +710,16 @@ a {
 
 .services__media--brand {
   margin-top: 18px;
-  min-height: 200px;
 }
 
 .services__media--mice {
   position: relative;
   flex: 1 1 auto;
   width: 100%;
-  min-height: 210px;
   margin-top: 14px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-}
-
-.services__media--hotel {
-  min-height: 190px;
-  margin-top: 34px;
 }
 
 .services__img {
@@ -750,25 +791,6 @@ a {
 
 .services__avatar:nth-child(n + 2) {
   margin-left: -8px;
-}
-
-.services__img--hotel-shot {
-  width: 276px;
-  border-radius: 14px;
-}
-
-.services__img--hotel-icon {
-  position: absolute;
-  right: 0;
-  top: 52px;
-  width: 31px;
-}
-
-.services__img--hotel-badges {
-  position: absolute;
-  right: 0;
-  bottom: -2px;
-  width: 168px;
 }
 
 .services__img--car {
@@ -863,7 +885,7 @@ a {
   display: grid;
   grid-template-columns: repeat(4, 428px);
   grid-auto-rows: 423px;
-  gap: 24px;
+  gap: 15px;
   margin-bottom: 40px;
   width: max-content;
   max-width: none;
@@ -1610,7 +1632,7 @@ a {
 /* ===== Integrations — Синхронизируйте сервис ===== */
 .integrations {
   width: 100%;
-  background-color: #F2F4F7;
+  background-color: #E0E2EA;
   padding: 80px var(--container-padding-x);
 }
 
@@ -1643,8 +1665,8 @@ a {
 .integrations__layout {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: auto auto auto;
-  gap: 20px;
+  grid-template-rows: 240px 150px 230px;
+  gap: 15px;
   width: 100%;
   align-items: stretch;
 }
@@ -1860,6 +1882,7 @@ a {
 
 .app-block__inner {
   display: grid;
+  position: relative;
   grid-template-columns: minmax(0, 1.22fr) minmax(0, 1fr);
   align-items: center;
   gap: clamp(24px, 4vw, 56px);
@@ -1953,13 +1976,12 @@ a {
 .app-block__store:hover {
   opacity: 0.88;
 }
-
 .app-block__store-badge,
 .app-block__store img {
   display: block;
   width: auto;
-  height: clamp(44px, 4.2vw, 52px);
-  max-width: min(200px, 46vw);
+  height: 73px;
+  width: 200px;
   object-fit: contain;
 }
 
@@ -1974,7 +1996,6 @@ a {
 }
 
 .app-block__visual-inner {
-  position: relative;
   width: min(112%, 680px);
   max-width: none;
   margin-left: auto;
@@ -2001,7 +2022,9 @@ a {
 /* Карточка поездки — левее телефона, без захода на корпус */
 .app-block__float--card {
   z-index: 20;
-  top: 1%;
+  position: absolute;
+  left: 50%;
+  top: 140px;
   width: min(48%, 260px);
   max-width: calc(100% - 8px);
 }
@@ -2009,8 +2032,8 @@ a {
 /* Меню — ниже; сдвиг вправо + поверх телефона, слегка наезжает на левый край */
 .app-block__float--menu {
   z-index: 30;
-  bottom: 14%;
-  left: 0%;
+  top: 45%;
+  left: 58%;
   width: min(44%, 220px);
   max-width: calc(100% - 12px);
   transform: translateX(clamp(8px, 2vw, 28px));
@@ -2129,7 +2152,7 @@ a {
 .mice__header {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
-  gap: clamp(28px, 4vw, 48px);
+  gap: clamp(28px, 4vw, 96px);
   align-items: start;
 }
 
@@ -2174,6 +2197,7 @@ a {
   height: 56px;
   padding: 0 28px;
   font-size: 17px;
+  width: 292px;
   font-weight: 600;
   background-color: #d14333;
   border-radius: 100px;
@@ -2207,10 +2231,12 @@ a {
 
 .mice__grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: 350px 400px 410px 385px;
+  grid-template-rows: 305px;
+  gap: 15px;
   margin-top: clamp(40px, 4.5vw, 56px);
   align-items: stretch;
+  justify-content: center;
 }
 
 .mice__card {
@@ -2225,8 +2251,8 @@ a {
 }
 
 .mice__card-icon {
-  width: 44px;
-  height: 44px;
+  width: 61px;
+  height: 62px;
   background: #ffffff;
   border-radius: 50%;
   display: flex;
@@ -2237,14 +2263,14 @@ a {
 }
 
 .mice__card-icon img {
-  width: 50px;
-  height: 50px;
+  width: 61px;
+  height: 62px;
   object-fit: contain;
 }
 
 .mice__card-title {
   font-family: 'Golos Text', sans-serif;
-  font-size: 18px;
+  font-size: 28px;
   font-weight: 700;
   color: #ffffff;
   margin: 0 0 10px;
@@ -2253,30 +2279,38 @@ a {
 
 .mice__card-text {
   font-family: 'Golos Text', sans-serif;
-  font-size: 15px;
+  font-size: 22px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.92);
   line-height: 1.45;
   margin: 0;
-  flex: 1 1 auto;
+}
+
+.mice__card:not(.mice__card--photo) .mice__card-title {
+  margin-top: auto;
 }
 
 .mice__card--photo {
   padding: 0;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   min-height: 260px;
   background-color: #2a2a2a;
+  isolation: isolate;
 }
 
-.mice__card-img {
+.mice__card--photo::before {
+  content: "";
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
+  border-radius: inherit;
+  background-color: #2a2a2a;
+  background-image: url("../img/mice-photo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  transform: scale(1.15);
+  transform-origin: center center;
 }
 
 @media (max-width: 1024px) {
@@ -5632,7 +5666,7 @@ a {
 .stats {
   width: 100%;
   background-color: #E0E2EA;
-  padding: 24px 30px 36px;
+  padding: 24px var(--container-padding-x) 36px;
 }
 
 .stats__inner {
@@ -5653,7 +5687,8 @@ a {
 
 .stats__grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  /* Пропорции ширин как на макете 1920×1080: 296, 443, 276, 332, 270 px при высоте карточки 220 px */
+  grid-template-columns: minmax(0, 296fr) minmax(0, 443fr) minmax(0, 276fr) minmax(0, 332fr) minmax(0, 270fr);
   gap: var(--stats-grid-gap);
   margin-bottom: 30px;
 }
@@ -5662,6 +5697,8 @@ a {
   background-color: var(--color-white);
   border-radius: 30px;
   padding: 28px 36px;
+  box-sizing: border-box;
+  height: 220px;
   min-height: 220px;
   display: flex;
   flex-direction: column;
@@ -5681,7 +5718,7 @@ a {
   font-family: var(--font-main);
   font-size: 56px;
   font-weight: 800;
-  color: var(--color-text-dark);
+  color: var(--color-text);
   line-height: 1.18;
   white-space: nowrap;
 }
@@ -5694,7 +5731,7 @@ a {
   font-family: var(--font-main);
   font-size: var(--stats-label-size);
   font-weight: var(--stats-label-weight);
-  color: var(--stats-label-color);
+  color: var(--color-text);
   line-height: 1.3;
   margin: 0;
 }
@@ -5718,6 +5755,11 @@ a {
 @media (max-width: 1024px) {
   .stats__grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stats-card {
+    height: auto;
+    min-height: 180px;
   }
 }
 
@@ -5766,6 +5808,7 @@ a {
   }
 
   .stats-card {
+    height: auto;
     min-height: 0;
     padding: 20px 18px 22px;
     border-radius: 26px;
@@ -6116,6 +6159,39 @@ a {
 
   .services__img--hotel-badges {
     position: absolute;
+    right: 4px;
+    bottom: 4px;
+    width: min(140px, 55%);
+  }
+
+  /* Сброс десктопной композиции «Гостиницы» на мобилке */
+  .services__card--gostinicy .services__media--hotel {
+    max-width: 100%;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .services__card--gostinicy .services__img--hotel-shot {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    box-shadow: none;
+    border-radius: clamp(12px, 3vw, 16px);
+  }
+
+  .services__card--gostinicy .services__img--hotel-icon {
+    left: 8px;
+    right: auto;
+    bottom: 10px;
+    top: auto;
+    transform: none;
+    width: 30px;
+    height: 30px;
+  }
+
+  .services__card--gostinicy .services__img--hotel-badges {
+    left: auto;
     right: 4px;
     bottom: 4px;
     width: min(140px, 55%);
@@ -6850,7 +6926,7 @@ a {
   }
 
   .mice__actions .mice__btn {
-    width: 100%;
+    width: 292px;
     justify-content: center;
   }
 
@@ -6869,6 +6945,7 @@ a {
   }
 
   .mice__card--photo {
+    padding: 0;
     min-height: 200px;
     aspect-ratio: 16 / 10;
   }
@@ -6900,6 +6977,7 @@ a {
   /* Clients mobile */
   .clients {
     padding: 20px 0;
+    --clients-strip-gap: 32px;
   }
 
   .clients__logo {

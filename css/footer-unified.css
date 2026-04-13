@@ -1,12 +1,28 @@
 /* Единый футер Smartway — 5 колонок: верх ряда в каждой колонке (лого / бейджи / соцсети / — / CTA) */
 
+:root {
+  --container-padding-x: 30px;
+}
+
+@media (min-width: 1025px) {
+  :root {
+    --container-padding-x: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-padding-x: 20px;
+  }
+}
+
 .footer {
   width: 100%;
 }
 
 .footer__main {
   background-color: #2d2d2d;
-  padding: 80px var(--container-padding-x, 30px);
+  padding: 80px var(--container-padding-x);
 }
 
 .footer__inner {
@@ -309,7 +325,7 @@ span.footer__btn {
   max-width: 1860px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 var(--container-padding-x, 30px);
+  padding: 0 var(--container-padding-x);
   min-height: 50px;
 }
 
@@ -334,7 +350,7 @@ span.footer__btn {
 
 @media (max-width: 768px) {
   .footer__main {
-    padding: 48px var(--container-padding-x, 30px);
+    padding: 48px var(--container-padding-x);
   }
 
   .footer__inner {

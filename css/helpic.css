@@ -48,7 +48,7 @@ body.komand-page--no-sidebar .komand-layout__segment--bottom {
   width: 100%;
   max-width: none;
   margin: 48px 0 0;
-  padding: 52px 20px 56px 23px;
+  padding: 52px var(--container-padding-x) 56px var(--container-padding-x);
   box-sizing: border-box;
   background: #0e4d92;
   color: #fff;

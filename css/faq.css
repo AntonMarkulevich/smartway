@@ -46,8 +46,23 @@ body.faq-index-page .komand-main {
   min-height: clamp(440px, 72vh, 560px);
   display: flex;
   align-items: center;
-  padding: clamp(40px, 7vh, 60px) max(16px, 5vw);
+  padding-block: clamp(40px, 7vh, 60px);
+  padding-inline: max(16px, 5vw);
   overflow: hidden;
+}
+
+@media (min-width: 1025px) {
+  .faq-hero {
+    padding-inline: var(--container-padding-x);
+  }
+
+  .faq-topics-band,
+  .faq-topics__inner,
+  .faq-interest__inner,
+  .faq-demo__shell,
+  .faq-index {
+    padding-inline: var(--container-padding-x);
+  }
 }
 
 .faq-hero__inner {
@@ -163,7 +178,8 @@ body.faq-index-page .komand-main {
 
 @media (max-width: 959px) {
   .faq-hero {
-      padding: clamp(32px, 6vw, 48px) max(16px, 5vw);
+    padding-block: clamp(32px, 6vw, 48px);
+    padding-inline: max(16px, 5vw);
     min-height: 0;
   }
 
@@ -222,7 +238,8 @@ body.faq-index-page .komand-main {
 /* ——— 1272:14029: серая полоса; 1272:14030: белая карточка с темами ——— */
 .faq-topics-band {
   background: #e0e2ea;
-  padding: clamp(28px, 5vw, 48px) max(16px, 5vw);
+  padding-block: clamp(28px, 5vw, 48px);
+  padding-inline: max(16px, 5vw);
   box-sizing: border-box;
   width: 100%;
 }
@@ -244,7 +261,8 @@ body.faq-index-page .komand-main {
 .faq-topics__inner {
   max-width: 1680px;
   margin: 0 auto;
-  padding: clamp(40px, 6vw, 72px) max(16px, 5vw);
+  padding-block: clamp(40px, 6vw, 72px);
+  padding-inline: max(16px, 5vw);
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -394,7 +412,8 @@ body.faq-index-page .komand-main {
 }
 
 .faq-interest__inner {
-  padding: clamp(48px, 7vw, 80px) max(16px, 5vw) clamp(56px, 8vw, 100px);
+  padding-block: clamp(48px, 7vw, 80px) clamp(56px, 8vw, 100px);
+  padding-inline: max(16px, 5vw);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -542,7 +561,8 @@ body.faq-index-page .komand-main {
 }
 
 .faq-demo__shell {
-  padding: clamp(32px, 6vw, 72px) max(16px, 5vw) clamp(72px, 16vw, 168px);
+  padding-block: clamp(32px, 6vw, 72px) clamp(72px, 16vw, 168px);
+  padding-inline: max(16px, 5vw);
   box-sizing: border-box;
 }
 
@@ -1008,7 +1028,8 @@ body.faq-index-page .komand-main {
 .faq-index {
   max-width: 1200px;
   margin: 0 auto;
-  padding: clamp(28px, 5vw, 48px) max(16px, 5vw) 0;
+  padding-block: clamp(28px, 5vw, 48px) 0;
+  padding-inline: max(16px, 5vw);
   color: #3a3a3a;
 }
 

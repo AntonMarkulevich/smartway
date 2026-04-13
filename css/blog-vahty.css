@@ -8,6 +8,19 @@
   --sw-footer-bg: #272727;
   --sw-container: 1200px;
   --sw-font: 'Manrope', 'Mont', Arial, sans-serif;
+  --container-padding-x: 30px;
+}
+
+@media (min-width: 1025px) {
+  :root {
+    --container-padding-x: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-padding-x: 20px;
+  }
 }
 
 *,
@@ -51,7 +64,7 @@ body.sw-blog-vahty {
 .sw-header__bar {
   max-width: var(--sw-container);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 var(--container-padding-x);
   min-height: 60px;
   display: flex;
   align-items: center;
@@ -307,7 +320,7 @@ body.sw-blog-vahty {
 
 /* ——— Заголовок страницы (T050) ——— */
 .sw-hero {
-  padding: 30px 20px;
+  padding: 30px var(--container-padding-x);
   text-align: center;
 }
 
@@ -344,7 +357,7 @@ body.sw-blog-vahty {
 
 /* ——— Поиск (T838) ——— */
 .sw-search {
-  padding: 0 20px 30px;
+  padding: 0 var(--container-padding-x) 30px;
 }
 
 .sw-search__inner {
@@ -421,7 +434,7 @@ body.sw-blog-vahty {
 
 /* ——— Сетка карточек (T401) ——— */
 .sw-cards {
-  padding: 30px 20px 40px;
+  padding: 30px var(--container-padding-x) 40px;
 }
 
 .sw-cards__grid {
@@ -495,7 +508,7 @@ body.sw-blog-vahty {
 .sw-footer {
   background: var(--sw-footer-bg);
   color: #fff;
-  padding: 48px 20px 40px;
+  padding: 48px var(--container-padding-x) 40px;
 }
 
 .sw-footer a:hover {
