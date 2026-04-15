@@ -11,6 +11,13 @@
   }
 }
 
+/* FHD и уже: чуть уже поля шапки, чтобы меню и CTA помещались в одну строку */
+@media (min-width: 1025px) and (max-width: 1920px) {
+  :root {
+    --container-padding-x: 64px;
+  }
+}
+
 @media (max-width: 480px) {
   :root {
     --container-padding-x: 20px;
@@ -18,7 +25,7 @@
 }
 
 /* До ~1600px меню и CTA не помещаются в одну строку с макетными отступами — показываем бургер */
-@media (max-width: 1600px) {
+@media (max-width: 1200px) {
   :root {
     --site-header-offset: 118px;
   }
@@ -32,6 +39,7 @@
 
 html {
   scroll-padding-top: var(--site-header-offset);
+  zoom: 0.75;
 }
 
 body {
@@ -60,7 +68,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 50px 0 50px;
+  padding: 0 38px 0 38px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -108,7 +116,7 @@ body {
 
 .header__menu {
   display: flex;
-  gap: 5px;
+  gap: 4px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -120,7 +128,7 @@ body {
   height: 55px;
   background: #FFFFFF;
   border-radius: 30px;
-  padding: 0 24px;
+  padding: 0 18px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,9 +156,9 @@ body {
 .header__actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   flex-shrink: 0;
-  margin-left: 25px;
+  margin-left: 16px;
 }
 
 .header__icon-btn {
@@ -195,7 +203,7 @@ body {
   font-size: 17px;
   letter-spacing: -0.5px;
   text-decoration: none;
-  margin: 0 16px;
+  margin: 0 10px;
   flex-shrink: 0;
 }
 
@@ -251,7 +259,7 @@ body {
   border-radius: 2px;
 }
 /* ===== Компактная шапка: бургер + выезжающее меню (одна строка в баре) ===== */
-@media (max-width: 1600px) {
+@media (max-width: 1200px) {
   /* Логотип слева; справа подряд: действия, бургер (крайний справа) */
   .header__inner {
     justify-content: flex-start;
@@ -387,7 +395,7 @@ body {
 }
 
 /* Планшет: дубли «Войти» / «Протестировать» в drawer не нужны — они уже в шапке */
-@media (max-width: 1600px) and (min-width: 481px) {
+@media (max-width: 1200px) and (min-width: 481px) {
   .header .header__drawer-cta {
     display: none;
   }
