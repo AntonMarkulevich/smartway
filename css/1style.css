@@ -6874,166 +6874,272 @@ a {
 
   /* Steps mobile */
   .steps {
-    padding: 21px 20px;
+    padding: 21px 10px 28px;
+    background: #e0e2ea;
+  }
+
+  .steps__inner {
+    max-width: 355px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .steps__title {
     font-size: 32px;
-    line-height: 1.3;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: -1px;
     margin-bottom: 20px;
+    text-align: center;
+    max-width: 363px;
+  }
+
+  .steps__title-accent {
+    color: inherit;
   }
 
   .steps__grid {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
-    gap: 12px;
-    margin-bottom: 24px;
+    gap: 10px;
+    margin-bottom: 20px;
     width: 100%;
     max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .steps__card {
     width: 100%;
     max-width: 100%;
     height: auto;
-    padding: 16px;
+    min-height: 0;
+    padding: 30px;
+    border-radius: 30px;
+    background: #ffffff;
   }
 
   .steps__card--one-window {
-    padding: 14px 12px 8px;
-    border-radius: 24px;
+    padding: 30px;
+    gap: 18px;
+    box-shadow: none;
+  }
+
+  .steps__one-window-intro {
+    gap: 18px;
   }
 
   .steps__card-title--one-window {
-    line-height: 1.2;
+    line-height: 1.1;
+    margin: 0;
+    max-width: none;
   }
 
+  /* Шаг 1 — точная мобильная композиция по макету */
   .steps__card--one-window {
-    --one-window-visual-scale: 0.76;
+    --one-window-visual-scale: 1;
   }
 
   .steps__one-window-stage {
-    height: calc(220px * var(--one-window-visual-scale));
+    height: 188px;
+    min-height: 188px;
+    margin-top: 4px;
   }
 
   .steps__one-window-scale {
-    height: 220px;
+    height: 188px;
+    overflow: visible;
+  }
+
+  .steps__one-window-bg {
+    left: 22px;
+    right: auto;
+    transform: none;
+    bottom: 0;
+    width: 252px;
+    max-width: 252px;
+    height: auto;
+    border-radius: 0;
+    object-fit: contain;
   }
 
   .steps__one-window-flight {
-    bottom: 38px;
-    width: 56%;
-    max-width: 230px;
+    left: 0;
+    bottom: 78px;
+    width: 162px;
+    max-width: 162px;
+    height: auto;
+    z-index: 1;
+    object-fit: contain;
   }
 
   .steps__one-window-hotel {
-    bottom: 48px;
-    width: 50%;
-    max-width: 200px;
-    right: -6%;
+    right: 0;
+    bottom: 46px;
+    width: 126px;
+    max-width: 126px;
+    height: auto;
+    z-index: 3;
+    object-fit: contain;
   }
 
   .steps__one-window-taxi {
-    width: 84%;
-    max-width: 290px;
-    bottom: -2px;
+    left: 52px;
+    right: auto;
+    transform: none;
+    bottom: 26px;
+    width: 109px;
+    max-width: 109px;
+    height: auto;
+    z-index: 2;
+    object-fit: contain;
+  }
+
+  .steps__number {
+    width: 55px;
+    height: 56px;
+    border-radius: 11px;
+    margin-bottom: 0;
+    font-size: 28px;
+    line-height: 1.1;
+    background: #d6d8e0;
+  }
+
+  .steps__card-title {
+    font-size: 28px;
+    line-height: 1.1;
+    letter-spacing: -1px;
   }
 
   .steps__card-title--step-two {
-    font-size: 19px;
+    font-size: 28px;
+    max-width: 260px;
+    margin-bottom: 18px;
   }
 
   .steps__step-two-stage {
-    height: 220px;
+    height: 136px;
   }
 
   .steps__step-two-layer--trip {
-    width: 56%;
-    max-width: 210px;
-    bottom: 8px;
+    width: 60%;
+    max-width: 200px;
+    bottom: 2px;
   }
 
   .steps__step-two-layer--bill {
-    width: 46%;
-    max-width: 178px;
-    top: 4px;
+    width: 40%;
+    max-width: 130px;
+    top: -2px;
+    right: 2px;
   }
 
   .steps__step-two-layer--policy {
-    width: 52%;
-    max-width: 195px;
-    right: 1%;
-    bottom: 10px;
+    width: 48%;
+    max-width: 155px;
+    right: 6%;
+    bottom: 0;
   }
 
   .steps__step-two-layer--bg-mid {
-    width: 90%;
+    width: 92%;
   }
 
   .steps__card-title--step-three {
-    font-size: 18px;
+    font-size: 28px;
+    max-width: 306px;
+    margin-bottom: 18px;
   }
 
   .steps__step-three-stage {
-    height: 228px;
+    width: 295px;
+    max-width: 100%;
+    height: 130px;
+    margin: 0 auto;
+  }
+
+  .steps__step-three-stage::before {
+    left: 17px;
+    right: auto;
+    top: 0;
+    bottom: auto;
+    width: 278px;
+    height: 112px;
+    border-radius: 14px;
   }
 
   .steps__step-three-layer--sign {
-    width: 46%;
-    max-width: 195px;
-    bottom: 16%;
+    left: 0;
+    top: 15px;
+    bottom: auto;
+    width: 127px;
+    max-width: 127px;
   }
 
   .steps__step-three-layer--download {
-    width: 50%;
-    max-width: 198px;
-    top: 8%;
+    left: 133px;
+    right: auto;
+    top: 41px;
+    width: 128px;
+    max-width: 128px;
   }
 
   .steps__step-three-layer--integr {
-    width: 94%;
-    max-width: 340px;
-    bottom: -4px;
+    left: 78px;
+    right: auto;
+    transform: none;
+    top: 82px;
+    bottom: auto;
+    width: 230px;
+    max-width: 230px;
   }
 
   .steps__card-title--step-four {
-    font-size: 18px;
+    font-size: 28px;
+    max-width: 286px;
+    margin-bottom: 18px;
   }
 
   .steps__step-four-stage {
-    height: 236px;
+    height: 132px;
   }
 
   .steps__step-four-panels {
-    bottom: 20px;
-    gap: 6px;
+    bottom: 7px;
+    gap: 4px;
   }
 
   .steps__step-four-bar {
-    gap: 6px;
-    height: 9px;
-    bottom: 6px;
+    gap: 0;
+    height: 6.6px;
+    bottom: 0;
   }
 
   .steps__step-four-layer--chart {
-    width: 44%;
-    max-width: 188px;
-    bottom: 26px;
+    width: 42%;
+    max-width: 128px;
+    bottom: 8px;
+    left: 12px;
   }
 
   .steps__step-four-layer--analytics {
-    width: 52%;
-    max-width: 205px;
-    bottom: 28px;
+    width: 40%;
+    max-width: 103px;
+    bottom: 16px;
+    right: 16px;
   }
 
   .steps__step-four-layer--pie {
-    width: 40px;
-    top: 4%;
+    width: 18px;
+    top: 2px;
+    right: 140px;
   }
 
   .steps__actions .btn {
     width: 100%;
+    max-width: 332px;
+    height: 70px;
+    margin: 0 auto;
   }
 
   /* CTA mobile (Figma 276:3503) */
