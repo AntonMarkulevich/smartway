@@ -6253,7 +6253,7 @@ a {
 
   /* Hero mobile — боковые поля как на smartway.today (~20px) */
   .hero {
-    padding: 21px 20px;
+    padding: 21px 12px 24px;
     background-color: #E0E2EA;
   }
 
@@ -6261,12 +6261,12 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 28px;
+    gap: 24px;
     grid-template-columns: unset;
-    max-width: 355px;
+    max-width: 341px;
     width: 100%;
     margin: 0 auto;
-    padding: 42px 18px 32px;
+    padding: 42px 18px 30px;
     border-radius: 40px;
     background: #FFFFFF;
     min-height: auto;
@@ -6283,8 +6283,8 @@ a {
   .hero__title {
     font-size: 32px;
     line-height: 35px;
-    letter-spacing: -1px;
-    margin: 0 0 8px;
+    letter-spacing: -0.6px;
+    margin: 0 0 10px;
   }
 
   .hero__title br {
@@ -6294,9 +6294,9 @@ a {
   .hero__subtitle {
     font-size: 18px;
     line-height: 27px;
-    max-width: none;
+    max-width: 291px;
     text-align: center;
-    margin: 0;
+    margin: 0 auto;
   }
 
   .hero__subtitle br {
@@ -6306,37 +6306,40 @@ a {
   .hero__actions {
     flex-direction: column;
     gap: 13px;
-    margin-top: 24px;
-    align-items: stretch;
+    margin-top: 26px;
+    align-items: center;
     order: 1;
     padding: 0;
+    width: 100%;
   }
 
   .hero__actions .btn {
     width: 100%;
+    max-width: 301px;
     min-width: 0;
   }
 
   .hero__actions .btn--primary {
     height: 70px;
-    padding: 19px 28px;
+    padding: 19px 28px 20px;
   }
 
   .hero__actions .btn--outline {
     height: 68px;
     min-width: 0;
+    padding: 16px 26px 17px;
   }
 
   .hero__visual {
     order: 2;
     margin: 0;
     width: 100%;
-    max-width: 355px;
-    min-height: 320px;
+    max-width: 292px;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 28px;
+    gap: 16px;
   }
 
   .hero__visual-bg {
@@ -6371,31 +6374,60 @@ a {
     max-width: 292px;
     background: #EEEFF3;
     border-radius: 40px;
-    padding: 39px 24px 24px;
+    padding: 0;
     min-height: 320px;
+    height: 320px;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
+    overflow: hidden;
   }
 
   .hero__image {
     display: block;
     width: 100%;
-    max-width: 243px;
+    max-width: none;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    transform: translateY(-14px) scale(1.5);
+    transform-origin: center bottom;
   }
 
   .hero__trust {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px 40px;
+    width: 100%;
+    max-width: 292px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    justify-items: start;
+    gap: 12px 14px;
     padding: 0;
-    margin-top: 24px;
   }
 
   .hero__trust-icon {
-    max-height: 23px;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: left center;
     opacity: 0.75;
+  }
+
+  .hero__trust .hero__trust-icon:nth-child(1) {
+    max-width: 136px;
+  }
+
+  .hero__trust .hero__trust-icon:nth-child(2) {
+    max-width: 117px;
+    justify-self: end;
+  }
+
+  .hero__trust .hero__trust-icon:nth-child(3) {
+    max-width: 170px;
+    grid-column: 1 / -1;
   }
 
   /* Stats — уточнения под узкие телефоны (сетка: max-width 768px) */
