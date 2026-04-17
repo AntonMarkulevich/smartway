@@ -2475,6 +2475,12 @@ a {
 
 .cases__card .text-accent {
   color: var(--color-accent);
+  font-weight: 600;
+}
+
+.cases__text strong {
+  font-weight: 700;
+  color: #272727;
 }
 
 .cases__link {
@@ -2499,9 +2505,10 @@ a {
 }
 
 .cases__avatar {
-  width: 170px;
-  height: 65px;
-  object-fit: contain;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
   flex-shrink: 0;
 }
 
@@ -2509,6 +2516,8 @@ a {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  min-width: 0;
+  flex: 1;
 }
 
 .cases__author-name {
@@ -2529,6 +2538,7 @@ a {
   .cases__inner {
     flex-direction: column;
     align-items: flex-start;
+    gap: 40px;
   }
 
   .cases__number {
@@ -2548,21 +2558,96 @@ a {
     padding: 40px var(--container-padding-x);
   }
 
+  .cases__inner {
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .cases__left {
+    width: 100%;
+    min-width: 0;
+  }
+
   .cases__number {
-    font-size: 80px;
-    line-height: 80px;
-    letter-spacing: normal;
+    font-weight: 700;
+    font-size: clamp(52px, 11vw, 72px);
+    line-height: 1;
+    letter-spacing: -0.035em;
+    color: #272727;
+  }
+
+  .cases__caption {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.35;
+    font-weight: 400;
+    color: #6b6b6b;
+    max-width: 22em;
   }
 
   .cases__right {
     flex-direction: column;
     width: 100%;
+    gap: 20px;
   }
 
   .cases__card {
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
     height: auto;
     min-height: 0;
+    box-sizing: border-box;
+    border-radius: 40px;
+    padding: 28px 24px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .cases__logo-wrap {
+    margin-bottom: 0;
+    max-width: 200px;
+    height: auto;
+    min-height: 44px;
+  }
+
+  .cases__text {
+    font-size: 18px;
+    line-height: 1.42;
+    letter-spacing: -0.02em;
+    color: #272727;
+  }
+
+  .cases__card .text-accent {
+    font-weight: 700;
+  }
+
+  .cases__link {
+    margin-top: 0;
+    font-size: 15px;
+    line-height: 1.35;
+    color: #8b8d91;
+  }
+
+  .cases__author {
+    margin-top: 0;
+    padding-top: 0;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .cases__author-name {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #272727;
+  }
+
+  .cases__author-role {
+    font-size: 13px;
+    line-height: 1.35;
+    color: #8b8d91;
   }
 }
 
@@ -7913,28 +7998,45 @@ a {
     border-radius: 28px;
   }
 
-  /* Cases mobile */
+  /* Cases — узкие экраны: как в мобильном макете */
   .cases {
-    padding: 21px 20px;
+    padding: 24px var(--container-padding-x);
   }
 
   .cases__inner {
-    flex-direction: column;
-    gap: 24px;
+    gap: 20px;
   }
 
   .cases__number {
-    font-size: 72px;
-    line-height: 72px;
-    letter-spacing: -4px;
+    font-size: clamp(48px, 12.5vw, 64px);
+    line-height: 1;
+    letter-spacing: -0.03em;
   }
 
   .cases__caption {
-    font-size: 16px;
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 1.4;
   }
 
   .cases__card {
     width: 100%;
+    padding: 26px 20px 24px;
+    border-radius: 36px;
+    gap: 20px;
+  }
+
+  .cases__text {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+
+  .cases__author-name {
+    font-size: 14px;
+  }
+
+  .cases__author-role {
+    font-size: 12px;
   }
 
   /* Clients mobile */
