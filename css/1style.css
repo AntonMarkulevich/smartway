@@ -2173,7 +2173,7 @@ a {
   max-width: 1860px;
   width: 100%;
   margin: 0 auto;
-  background-color: #2e2e2e;
+  background-color: #1a1a1a;
   border-radius: 40px;
   padding: clamp(40px, 5vw, 60px) clamp(36px, 4.5vw, 64px) clamp(44px, 5vw, 60px);
   color: #ffffff;
@@ -2228,7 +2228,7 @@ a {
   font-size: 17px;
   width: 292px;
   font-weight: 600;
-  background-color: #d84330;
+  background-color: #d44333;
   border-radius: 100px;
   gap: 8px;
 }
@@ -2243,7 +2243,8 @@ a {
   opacity: 0.92;
 }
 
-.mice__link {
+.mice__link,
+.mice__link:visited {
   font-family: 'Golos Text', sans-serif;
   font-size: 17px;
   font-weight: 400;
@@ -2319,7 +2320,7 @@ a {
   font-family: 'Golos Text', sans-serif;
   font-size: 22px;
   font-weight: 400;
-  color: #ffffff;
+  color: #cccccc;
   line-height: 1.45;
   margin: 0;
 }
@@ -6485,7 +6486,7 @@ a {
   /* Stats — уточнения под узкие телефоны (сетка: max-width 768px) */
   .stats {
     padding: 24px 16px 28px;
-    background-color: #e9ebf0;
+    background-color: #e0e2ea;
   }
 
   .stats__title {
@@ -7645,7 +7646,7 @@ a {
   /* App Block mobile — макет Figma «Переезд на Wordpress» node 278:2518 */
   .app-block {
     padding: 21px 10px;
-    background-color: #f2f4f7;
+    background-color: #e0e2ea;
   }
 
   .app-block__inner {
@@ -7850,7 +7851,7 @@ a {
     padding: 0 24px;
     font-size: 16px;
     font-weight: 600;
-    background-color: #d84330;
+    background-color: #d44333;
     border-radius: 100px;
     justify-content: center;
     box-sizing: border-box;
@@ -7902,7 +7903,7 @@ a {
   .mice__card-text {
     font-size: 15px;
     line-height: 1.45;
-    color: #ffffff;
+    color: #cccccc;
   }
 
   .mice__card--photo {
