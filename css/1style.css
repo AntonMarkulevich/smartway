@@ -7285,48 +7285,151 @@ a {
 
   /* Team Roles mobile */
   .team-roles {
-    padding: 21px 20px;
+    padding: 21px 10px;
+    background: #ffffff;
   }
 
   .team-roles__inner {
-    padding: 40px 24px;
-    border-radius: 40px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    max-width: 355px;
+    margin: 0 auto;
   }
 
   .team-roles__title {
     font-size: 32px;
-    line-height: 1.2;
-    margin-bottom: 24px;
+    line-height: 33px;
+    letter-spacing: -1px;
+    margin: 0 auto 20px;
+    width: 311px;
+  }
+
+  .team-roles__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .team-card {
-    min-height: 0;
-    padding: 24px 20px 0;
+    min-height: 716px;
+    height: auto;
+    padding: 30px 10px 30px 25px;
+    border-radius: 40px;
+    background: #ecedf2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .team-card__content {
     max-width: 100%;
-    width: 100%;
-    padding: 0 0 20px;
+    width: 315px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .team-card__role {
+    height: 58px;
+    border-radius: 15px;
+    padding: 0 20px;
+    margin: 0 0 20px;
+    gap: 11px;
+    box-shadow: none;
+  }
+
+  .team-card__role-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .team-card__role-text {
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: -1px;
+    font-weight: 600;
+  }
+
+  .team-card:nth-child(1) .team-card__role {
+    width: 279px;
+  }
+
+  .team-card:nth-child(2) .team-card__role {
+    width: 179px;
+  }
+
+  .team-card:nth-child(3) .team-card__role {
+    width: 155px;
+  }
+
+  .team-card:nth-child(4) .team-card__role {
+    width: 245px;
+    height: auto;
+    min-height: 58px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 
   .team-card__title {
-    font-size: 20px;
+    font-size: 28px;
+    line-height: 33px;
+    letter-spacing: -1px;
+    margin: 0 0 20px;
+    color: #3a3a3a;
   }
 
   .team-card__desc {
-    font-size: 14px;
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    color: #3a3a3a;
+    margin: 0;
   }
 
   .team-card__person {
-    max-width: 200px;
-    max-height: 220px;
+    flex: 0 0 auto;
+    align-self: flex-start;
+    margin: auto 0 0;
+    width: 312px;
+    max-width: 312px;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: left bottom;
+    transform: none;
+  }
+
+  .team-card:nth-child(2) .team-card__person {
+    width: 369px;
+    max-width: 369px;
+    margin-left: -24px;
+  }
+
+  .team-card:nth-child(3) .team-card__person {
+    width: 320px;
+    max-width: 320px;
+  }
+
+  .team-card:nth-child(4) .team-card__person {
+    width: 300px;
+    max-width: 300px;
   }
 
   .team-roles__btn {
-    width: 100%;
+    width: 245px;
+    max-width: 245px;
     height: 61px;
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.15px;
+    letter-spacing: -0.5px;
+    border-radius: 65px;
+  }
+
+  .team-roles__actions {
+    margin-top: 20px;
   }
 
   /* Integrations mobile */
