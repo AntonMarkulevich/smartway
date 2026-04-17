@@ -69,6 +69,12 @@
   }
 }
 
+@media (max-width: 767px) {
+  :root {
+    --container-padding-x: 20px;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -6245,9 +6251,9 @@ a {
 @media (max-width: 480px) {
   /* Header mobile (Figma 266:5662) — 365×78px, padding 19px 29px */
 
-  /* Hero mobile (Figma 266:5663, 267:5698) — padding 21px 10px, gap 28px */
+  /* Hero mobile — боковые поля как на smartway.today (~20px) */
   .hero {
-    padding: 21px 10px;
+    padding: 21px 20px;
     background-color: #E0E2EA;
   }
 
@@ -6439,7 +6445,7 @@ a {
 
   /* Services — узкие телефоны (сетка и порядок из max-width: 768px) */
   .services {
-    padding: 21px 10px 28px;
+    padding: 21px 20px 28px;
   }
 
   .services__title {
@@ -6467,7 +6473,7 @@ a {
 
   /* Steps mobile */
   .steps {
-    padding: 21px 10px;
+    padding: 21px 20px;
   }
 
   .steps__title {
@@ -6631,7 +6637,7 @@ a {
 
   /* CTA mobile (Figma 276:3503) */
   .cta {
-    padding: 21px 10px;
+    padding: 21px 20px;
   }
 
   .cta__inner {
@@ -6677,7 +6683,7 @@ a {
 
   /* CTA Form mobile */
   .cta-form {
-    padding: 21px 10px;
+    padding: 21px 20px;
   }
 
   .cta-form__inner {
@@ -6729,7 +6735,7 @@ a {
 
   /* Support CTA mobile */
   .support-cta {
-    padding: 21px 10px;
+    padding: 21px 20px;
   }
 
   .support-cta__inner {
@@ -6754,7 +6760,7 @@ a {
 
   /* Team Roles mobile */
   .team-roles {
-    padding: 21px 10px;
+    padding: 21px 20px;
   }
 
   .team-roles__inner {
@@ -6800,7 +6806,7 @@ a {
 
   /* Integrations mobile */
   .integrations {
-    padding: 21px 10px;
+    padding: 21px 20px;
   }
 
   .integrations__title {
@@ -6854,7 +6860,7 @@ a {
 
   /* App Block mobile (Figma 278:2326) */
   .app-block {
-    padding: 21px 10px;
+    padding: 21px 20px;
   }
 
   .app-block__inner {
@@ -6914,7 +6920,7 @@ a {
 
   /* MICE mobile */
   .mice {
-    padding: 21px 10px;
+    padding: 21px 20px;
   }
 
   .mice__inner {
@@ -6967,7 +6973,7 @@ a {
 
   /* Cases mobile */
   .cases {
-    padding: 21px 10px;
+    padding: 21px 20px;
   }
 
   .cases__inner {
@@ -6999,10 +7005,6 @@ a {
     height: 24px;
   }
 
-  /* Container padding */
-  :root {
-    --container-padding-x: 20px;
-  }
 }
 
 /* ===== Accountant tools — бегущие строки (Инструменты для бухучёта) ===== */

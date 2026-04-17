@@ -23,7 +23,8 @@
   }
 }
 
-@media (max-width: 480px) {
+/* Как на smartway.today (Tilda): до планшета — единые боковые поля 20px */
+@media (max-width: 767px) {
   :root {
     --container-padding-x: 20px;
   }
@@ -282,7 +283,7 @@ body.komand-page {
 @media (max-width: 480px) {
   .komand-header__bar {
     min-height: 49px;
-    padding: 0 12px;
+    padding: 0 var(--container-padding-x);
   }
 
   .komand-header__logo img {
@@ -341,7 +342,7 @@ body.komand-page {
 
 @media (max-width: 640px) {
   .komand-breadcrumb {
-    padding: 36px 16px 20px;
+    padding: 36px var(--container-padding-x) 20px;
     font-size: 14px;
   }
 }
@@ -442,7 +443,7 @@ body.komand-page {
   }
 
   .komand-hero__card--text {
-    padding: 35px 25px;
+    padding: 35px 20px;
     border-radius: 29px;
   }
 

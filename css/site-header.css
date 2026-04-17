@@ -403,7 +403,7 @@ body {
 
 @media (max-width: 480px) {
   .header {
-    padding: 21px 10px 0;
+    padding: 21px var(--container-padding-x) 0;
     background-color: transparent;
   }
 
@@ -421,9 +421,9 @@ body {
 
   .header__inner {
     width: 100%;
-    max-width: 365px;
+    max-width: none;
     height: 78px;
-    padding: 19px 29px;
+    padding: 19px 24px;
     margin: 0 auto;
     border-radius: 40px;
     background: #F2F3F6;
@@ -486,4 +486,803 @@ body {
 label.header__burger {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+}
+
+/* Общий хедер (как 1index.html). Подключать после шрифтов Golos Text. */
+/* Отступ под фиксированную шапку (padding + высота .header__inner) */
+:root {
+  --site-header-offset: 132px;
+  --container-padding-x: 30px;
+}
+
+@media (min-width: 1025px) {
+  :root {
+    --container-padding-x: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-padding-x: 20px;
+  }
+}
+
+/* До ~1600px меню и CTA не помещаются в одну строку с макетными отступами — показываем бургер */
+@media (max-width: 1600px) {
+  :root {
+    --site-header-offset: 118px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --site-header-offset: 110px;
+  }
+}
+
+html {
+  scroll-padding-top: var(--site-header-offset);
+}
+
+body {
+  padding-top: var(--site-header-offset);
+}
+
+/* ===== Header (1:1 по макету Figma node 44:15148) ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1000;
+  padding: 15px var(--container-padding-x) 0;
+  /* совпадает с фоном страницы (body), в т.ч. на белых лендингах */
+  background-color: transparent;
+}
+
+.header__inner {
+  max-width: 1860px;
+  min-height: 100px;
+  background: #F5F7F9;
+  border-radius: 130px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 50px 0 50px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* — Левый блок (логотип, разделитель, дескриптор) — */
+.header__left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.header__logo {
+  width: 202px;
+  height: auto;
+  display: block;
+}
+
+.header__divider {
+  width: 3px;
+  height: 29px;
+  background: #000000;
+  opacity: 0.3;
+  flex-shrink: 0;
+}
+
+.header__descriptor {
+  width: 191px;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 15px;
+  color: #000000;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+/* — Центральное меню (белые таблетки по макету) — */
+.header__nav {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
+.header__menu {
+  display: flex;
+  gap: 5px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.header__menu-item {
+  position: relative;
+  /* Bridge hover from parent pill to dropdown */
+  padding-bottom: 8px;
+  margin-bottom: -8px;
+}
+
+.header__link {
+  height: 55px;
+  background: #FFFFFF;
+  border-radius: 30px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #3A3A3A;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.header__link:hover {
+  background-color: #EEEFF3;
+}
+
+.header__chevron {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #666;
+  border-bottom: 2px solid #666;
+  transform: rotate(45deg);
+  margin-top: -3px;
+}
+
+.header__menu-item--has-children .header__submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 260px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(30, 35, 50, 0.15);
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: none;
+  z-index: 1100;
+}
+
+.header__menu-item--has-children:hover .header__submenu {
+  display: block;
+}
+
+.header__menu-item--has-children:focus-within .header__submenu {
+  display: block;
+}
+
+.header__submenu li {
+  margin: 0;
+  padding: 0;
+}
+
+.header__submenu-link {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #3A3A3A;
+  text-decoration: none;
+}
+
+.header__submenu-link:hover {
+  background: #F1F3F7;
+}
+
+/* — Правый блок (иконки, Войти, кнопка) — */
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  margin-left: 25px;
+}
+
+.header__icon-btn {
+  width: 55px;
+  height: 55px;
+  background: #3A3A3A;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.header__icon-btn img {
+  width: 66px;
+  height: 66px;
+  object-fit: contain;
+}
+
+.header__icon--mail {
+  width: 66px;
+  height: 66px;
+}
+
+.header__icon-btn--phone {
+  background: #3A3A3A;
+}
+
+.header__icon-btn--phone img {
+  width: 22px;
+  height: 22px;
+}
+
+.header__login {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #D84B3B;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+  margin: 0 16px;
+  flex-shrink: 0;
+}
+
+.header__login:hover {
+  color: #c03d2e;
+}
+
+.header__login img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.header__btn {
+  width: 178px;
+  height: 55px;
+  background: #D84B3B;
+  color: #FFFFFF;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+  flex-shrink: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* Бургер-меню — скрыт на десктопе */
+.header__burger {
+  display: none;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.header__burger-line {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #D44333;
+  border-radius: 2px;
+}
+/* ===== Компактная шапка: бургер + выезжающее меню (одна строка в баре) ===== */
+@media (max-width: 1600px) {
+  /* Логотип слева; справа подряд: действия, бургер (крайний справа) */
+  .header__inner {
+    justify-content: flex-start;
+  }
+
+  .header__left {
+    order: 1;
+    margin-right: auto;
+  }
+
+  /* Только пункты меню уходят в drawer; почта, телефон, «Войти», «Протестировать» остаются в баре */
+  .header__nav {
+    order: 2;
+    display: none;
+  }
+
+  .header__actions {
+    order: 3;
+    margin-left: 0;
+  }
+
+  .header__burger {
+    order: 4;
+    display: flex;
+    flex-shrink: 0;
+    margin-left: 12px;
+  }
+
+  .header .header__backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 199;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+
+  #site-nav:checked ~ .header__backdrop {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .header.is-drawer-open .header__backdrop {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .header .header__drawer {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(100vw, 380px);
+    height: 100%;
+    max-height: 100dvh;
+    background: #f5f7f9;
+    z-index: 200;
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.12);
+  }
+
+  #site-nav:checked ~ .header__drawer {
+    transform: translateX(0);
+  }
+
+  .header.is-drawer-open .header__drawer {
+    transform: translateX(0);
+  }
+
+  .header__drawer-inner {
+    padding: 24px 20px 32px;
+  }
+
+  .header__drawer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .header__drawer-brand {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .header__drawer-logo {
+    width: 160px;
+    height: auto;
+    display: block;
+  }
+
+  .header__drawer-close {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 28px;
+    line-height: 1;
+    color: #3a3a3a;
+    cursor: pointer;
+    margin-bottom: 16px;
+    user-select: none;
+  }
+
+  .header__drawer-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .header__drawer-link {
+    display: block;
+    position: relative;
+    padding: 8px 2px;
+    background: transparent;
+    border-radius: 0;
+    font-family: "Golos Text", sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: #3a3a3a;
+    text-decoration: none;
+  }
+
+  .header__drawer-group {
+    margin-bottom: 8px;
+  }
+
+  .header__drawer-group.is-open > .header__drawer-link {
+    color: #d84b3b;
+  }
+
+  .header__drawer-link[data-drawer-toggle]::after {
+    content: "▾";
+    font-size: 15px;
+    position: relative;
+    top: -2px;
+    margin-left: 8px;
+    opacity: 0.7;
+  }
+
+  .header__drawer-link:hover {
+    background: transparent;
+  }
+
+  .header__drawer-submenu {
+    list-style: none;
+    margin: 6px 0 0;
+    padding: 14px 14px 10px;
+    border-radius: 18px;
+    background: #fff;
+    display: none;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .header__drawer-group.is-open > .header__drawer-submenu {
+    display: flex;
+  }
+
+  .header__drawer-sublink {
+    display: block;
+    background: transparent;
+    padding: 8px 8px;
+    border-radius: 10px;
+    font-family: "Golos Text", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #3A3A3A;
+    text-decoration: none;
+  }
+
+  .header__drawer-sublink:hover {
+    background: #eeeff3;
+  }
+
+  .header__drawer-cta {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .header__drawer-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #d84b3b;
+    border-radius: 999px;
+    font-family: "Golos Text", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #d84b3b;
+    background: transparent;
+    text-decoration: none;
+    padding: 0;
+  }
+
+  .header__drawer-btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 999px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+/* Иконки почты/телефона в drawer скрыты на планшете (дублируют шапку); только мобильная ширина — см. блок 480px */
+.header__drawer-contacts {
+  display: none;
+}
+
+/* Планшет: блок связи + CTA в drawer не нужен — дублирует шапку */
+@media (max-width: 1600px) and (min-width: 481px) {
+  .header .header__drawer-bottom {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 21px var(--container-padding-x) 0;
+    background-color: transparent;
+  }
+
+  /* Мобильная шапка: в баре только логотип и бургер; действия — в drawer */
+  .header__actions {
+    display: none !important;
+  }
+
+  .header .header__drawer-bottom {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin-top: auto;
+    width: 100%;
+    padding-top: 12px;
+    box-sizing: border-box;
+  }
+
+  .header .header__drawer-contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 0;
+    margin: 0 0 14px;
+    padding: 0 2px;
+    box-sizing: border-box;
+  }
+
+  .header__inner {
+    width: 100%;
+    max-width: none;
+    height: 78px;
+    padding: 19px 24px;
+    margin: 0 auto;
+    border-radius: 40px;
+    background: #F2F3F6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .header__left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .header__divider {
+    display: none;
+  }
+
+  .header__descriptor {
+    font-size: 12px;
+    line-height: 15px;
+    color: #8C8C8C;
+    font-weight: 600;
+    opacity: 1;
+    width: auto;
+    max-width: 248px;
+  }
+
+  .header__descriptor br {
+    display: none;
+  }
+
+  .header__logo {
+    width: 166px;
+  }
+
+  .header .header__drawer {
+    width: min(100vw, 360px);
+    background: #f2f3f6;
+    display: flex !important;
+    flex-direction: column;
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow: hidden;
+  }
+
+  .header__drawer-inner {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 18px 18px calc(20px + env(safe-area-inset-bottom, 0px));
+    box-sizing: border-box;
+  }
+
+  .header__drawer-top {
+    flex-shrink: 0;
+  }
+
+  .header__drawer-logo {
+    width: 145px;
+  }
+
+  .header__drawer-close {
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  .header__drawer-menu {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 0;
+  }
+
+  .header__drawer-group {
+    margin-bottom: 8px;
+  }
+
+  .header__drawer-link {
+    position: relative;
+    padding: 8px 2px;
+    background: transparent;
+    border-radius: 0;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  .header__drawer-group.is-open > .header__drawer-link {
+    color: #d84b3b;
+  }
+
+  .header__drawer-link[data-drawer-toggle]::after {
+    content: "▾";
+    font-size: 15px;
+    position: relative;
+    top: -2px;
+    margin-left: 8px;
+    opacity: 0.7;
+  }
+
+  .header__drawer-submenu {
+    display: none;
+    margin: 6px 0 0;
+    padding: 14px 14px 10px;
+    border-radius: 18px;
+    background: #fff;
+    gap: 2px;
+  }
+
+  .header__drawer-group.is-open > .header__drawer-submenu {
+    display: flex;
+  }
+
+  .header__drawer-sublink {
+    background: transparent;
+    padding: 8px 8px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .header__drawer-cta {
+    margin-top: 0;
+    gap: 10px;
+  }
+
+  .header__drawer-btn {
+    width: 100%;
+    height: 50px;
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 999px;
+  }
+
+  .header__drawer-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #d84b3b;
+    border-radius: 999px;
+    color: #d84b3b;
+    background: transparent;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 0;
+  }
+}
+
+.site-nav-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.header .header__backdrop {
+  display: none;
+}
+
+.header .header__drawer {
+  display: none;
+}
+
+/* Keep burger drawer visible on collapsed header widths */
+@media (max-width: 1600px) {
+  .header .header__backdrop {
+    display: block !important;
+  }
+
+  .header .header__drawer {
+    display: block !important;
+  }
+}
+
+/* На телефоне drawer — колонка (низ с контактами + CTA), иначе перебивается правилом выше */
+@media (max-width: 480px) {
+  .header .header__drawer {
+    display: flex !important;
+    flex-direction: column;
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow: hidden;
+  }
+}
+
+label.header__burger {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html.sw-drawer-lock,
+body.sw-drawer-lock {
+  overflow: hidden;
+}
+
+/* Мобильная сетка как на smartway.today: без zoom всей страницы, боковые поля 20px, отступ под шапку под реальный масштаб */
+@media (max-width: 767px) {
+  html {
+    zoom: 1;
+  }
+
+  :root {
+    --container-padding-x: 20px;
+    --site-header-offset: 128px;
+  }
 }
