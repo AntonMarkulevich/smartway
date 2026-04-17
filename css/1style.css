@@ -7434,19 +7434,41 @@ a {
 
   /* Integrations mobile */
   .integrations {
-    padding: 21px 20px;
+    padding: 21px 10px;
+    background: #e0e2ea;
+  }
+
+  .integrations__inner {
+    max-width: 355px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .integrations__title {
     font-size: 32px;
-    line-height: 1.2;
+    line-height: 33px;
     letter-spacing: -1px;
-    margin-bottom: 24px;
+    margin: 0 auto 20px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .integrations__title .text-red {
+    color: inherit;
+  }
+
+  .integrations__layout {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
   }
 
   .integration-card {
-    padding: 24px;
-    border-radius: 24px;
+    background: #edeff4;
+    border-radius: 30px;
+    padding: 30px;
+    width: 100%;
+    min-height: 0;
   }
 
   .integration-card__title {
@@ -7455,35 +7477,108 @@ a {
   }
 
   .integration-card__text {
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.5px;
+    color: #3a3a3a;
   }
 
   .integration-card__logo {
-    height: 28px;
-    margin-bottom: 16px;
+    height: auto;
+    margin-bottom: 18px;
+  }
+
+  .integration-card--1c .integration-card__logo {
+    width: 109px;
+    height: 52px;
+  }
+
+  .integration-card--1c .integration-card__text {
+    width: 294px;
+    max-width: 100%;
+  }
+
+  .integration-card--1c .integration-card__visual {
+    margin: 0;
+    width: 100%;
+  }
+
+  .integration-card--1c .integration-card__img {
+    width: 100%;
+    max-width: 295px;
+    margin: 0 auto;
+  }
+
+  .integration-card--edo .integration-card__title {
+    font-size: 52px;
+    line-height: 80px;
+    letter-spacing: -1.5px;
+    margin: 0;
+  }
+
+  .integration-card--edo .integration-card__text {
+    width: 294px;
+    max-width: 100%;
+  }
+
+  .integration-card--api .integration-card__title {
+    font-size: 32px;
+    line-height: 52px;
+    letter-spacing: -1.5px;
+    margin: 0;
+  }
+
+  .integration-card--api .integration-card__text {
+    width: 294px;
+    max-width: 100%;
+  }
+
+  .integration-card__yandex-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .integration-card__yandex-copy {
+    width: 100%;
   }
 
   .integration-card--yandex .integration-card__logo {
-    height: 34px;
-    max-width: 180px;
-  }
-
-  .integration-card__visual:not(.integration-card__visual--yandex) {
-    margin-left: -24px;
-    margin-right: -24px;
-    margin-bottom: -24px;
-    width: calc(100% + 48px);
+    width: 230px;
+    max-width: 100%;
+    height: 55px;
+    margin-bottom: 18px;
   }
 
   .integration-card__visual--yandex {
     margin: 0;
     width: 100%;
-    max-width: min(240px, 90vw);
+    max-width: 295px;
     align-self: center;
+    position: relative;
   }
 
   .integration-card__img--yandex {
-    max-height: 200px;
+    width: 100%;
+    max-width: 295px;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .integrations__actions {
+    margin-top: 20px;
+  }
+
+  .integrations__actions .btn {
+    width: 245px;
+    min-width: 0;
+    height: 61px;
+    border-radius: 65px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.15px;
+    letter-spacing: -0.5px;
   }
 
   /* App Block mobile (Figma 278:2326) */
