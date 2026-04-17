@@ -6026,6 +6026,25 @@ a {
     background: #dfe2e9;
   }
 
+  .services__card--strahovanie .services__card-head {
+    position: relative;
+    width: 100%;
+    justify-content: flex-start;
+    padding-right: 64px;
+  }
+
+  .services__card--strahovanie .services__badge-icon {
+    position: absolute;
+    right: 0;
+    left: auto;
+    top: 50%;
+    margin-left: 0;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+  }
+
   /* Трансферы: не display:grid с десктопа */
   .services__card--transfery {
     display: flex !important;
@@ -6475,32 +6494,382 @@ a {
     line-height: 1.35;
   }
 
-  /* Services — узкие телефоны (сетка и порядок из max-width: 768px) */
+  /* Services — mobile 1:1 по Figma (node 0:15808) */
   .services {
-    padding: 21px 20px 28px;
+    padding: 21px 10px 28px;
+    background-color: #e0e2ea;
+  }
+
+  .services__inner {
+    max-width: 355px;
+    width: 100%;
   }
 
   .services__title {
-    font-size: 28px;
-    line-height: 1.1;
-    margin-bottom: 14px;
+    max-width: 363px;
+    margin: 0 auto 20px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -1px;
+    text-align: center;
   }
 
   .services__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
+    justify-content: center;
+    max-width: 355px;
+    width: 100%;
+    margin: 0 auto;
   }
 
-  .services__card--avia {
-    min-height: 248px;
-    padding: 18px 14px 14px;
+  .services__grid > .services__card {
+    grid-column: auto;
+    grid-row: auto;
+    width: 100%;
+    min-height: 80px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: none;
+    padding: 30px 30px 30px 35px;
+    background: #d8dbe5;
+    overflow: hidden;
+  }
+
+  .services__grid > .services__card--avia,
+  .services__grid > .services__card--avtobusy,
+  .services__grid > .services__card--vizovaya-podderzhka,
+  .services__grid > .services__card--aeroekspressy,
+  .services__grid > .services__card--gruppovye-zaezdy,
+  .services__grid > .services__card--strahovanie,
+  .services__grid > .services__card--transfery,
+  .services__grid > .services__card--mice,
+  .services__grid > .services__card--gostinicy {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .services__grid > .services__card--taxi {
+    grid-column: 1;
+  }
+
+  .services__grid > .services__card--vip-solo-mobile {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .services__card-head {
+    align-items: center;
+    gap: 16px;
   }
 
   .services__card-title {
-    font-size: 21px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    color: #393939;
+  }
+
+  .services__badge-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
+
+  .services__badge-icon--taxi {
+    width: 34px;
+    height: 34px;
+  }
+
+  .services__card--avtobusy {
+    background: #ffffff !important;
+  }
+
+  .services__card--taxi {
+    background: #ffffff !important;
+  }
+
+  .services__card--avtobusy .services__badge-icon {
+    width: 81px;
+    height: 38px;
+  }
+
+  .services__card--vizovaya-podderzhka,
+  .services__card--aeroekspressy,
+  .services__card--gruppovye-zaezdy,
+  .services__card--strahovanie,
+  .services__card--transfery {
+    background: #d8dbe5;
+  }
+
+  .services__card--vizovaya-podderzhka .services__card-head,
+  .services__card--aeroekspressy .services__card-head,
+  .services__card--gruppovye-zaezdy .services__card-head,
+  .services__card--strahovanie .services__card-head {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .services__card--vizovaya-podderzhka .services__card-head,
+  .services__card--aeroekspressy .services__card-head,
+  .services__card--strahovanie .services__card-head {
+    position: relative;
+    justify-content: flex-start;
+    padding-right: 76px;
+  }
+
+  .services__card--vizovaya-podderzhka .services__badge-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 29px;
+    height: 21px;
+    object-fit: contain;
+  }
+
+  .services__card--aeroekspressy .services__badge-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 28px;
+    object-fit: contain;
+  }
+
+  .services__card--avia {
+    height: 284px;
+    min-height: 284px;
+    padding: 30px;
+    background: #ffffff !important;
+    border: none;
+  }
+
+  .services__card--avia .services__card-head {
+    gap: 18px;
   }
 
   .services__media--screen {
-    min-height: 148px;
+    position: relative;
+    margin-top: 18px;
+    height: 170px;
+    min-height: 170px;
+    width: 100%;
+    overflow: visible;
+  }
+
+  .services__card--avia .services__img--plane {
+    top: -56px;
+    right: 0;
+    left: auto;
+    width: 38px;
+    height: 36px;
+  }
+
+  .services__img--ticket-main {
+    position: absolute;
+    left: 0;
+    right: auto;
+    bottom: 0;
+    width: min(275px, 100%);
+    max-width: 100%;
+  }
+
+  .services__img--ticket-top {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: auto;
+    width: min(137px, 44%);
+    max-width: 100%;
+  }
+
+  .services__card--gruppovye-zaezdy .services__card-head {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+  }
+
+  .services__avatars {
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-right: 6px;
+  }
+
+  .services__avatar {
+    width: 40px;
+    height: 41px;
+    border-width: 0;
+    border-radius: 999px;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .services__avatar:nth-child(n + 2) {
+    margin-left: -6px;
+  }
+
+  .services__avatar:nth-child(1) {
+    background-color: #3a3a3a;
+  }
+
+  .services__avatar:nth-child(2) {
+    background-color: #d44333;
+  }
+
+  .services__avatar:nth-child(3) {
+    background-color: #b9c4d7;
+  }
+
+  .services__card--transfery {
+    position: relative;
+    height: 80px;
+    min-height: 80px;
+    padding: 0;
+    overflow: hidden;
+    background: #d8dbe5;
+  }
+
+  .services__card--transfery .services__transfer-top {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+
+  .services__card--transfery .services__transfer-top .services__card-head {
+    min-height: 80px;
+    height: 80px;
+    padding: 30px 30px 30px 35px;
+    border-radius: 30px;
+    background: transparent;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 39px;
+  }
+
+  .services__card--transfery .services__badge-icon {
+    width: 55px;
+    height: 30px;
+    object-fit: contain;
+  }
+
+  .services__card--strahovanie .services__badge-icon {
+    position: absolute;
+    right: 2px;
+    left: auto;
+    top: 50%;
+    margin-left: 0;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+  }
+
+  .services__card--transfery .services__transfer-vip {
+    display: none !important;
+  }
+
+  .services__card--transfery .services__transfer-car {
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+    width: 118px;
+    height: 78px;
+    min-height: 0;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .services__img--car {
+    width: 118px;
+    max-width: none;
+    transform: none;
+  }
+
+  .services__card--mice {
+    position: relative;
+    height: 80px;
+    min-height: 80px;
+    padding: 30px 35px 0;
+    background: #ffffff !important;
+    border: none;
+    border-radius: 30px;
+  }
+
+  .services__card--mice .services__card-head {
+    padding: 0;
+  }
+
+  .services__media--mice {
+    position: absolute;
+    right: -4px;
+    bottom: -22px;
+    margin: 0;
+    width: 178px;
+    min-height: 0;
+    justify-content: flex-end;
+  }
+
+  .services__card--mice .services__img--mice {
+    width: 178px;
+    max-width: none;
+    max-height: none;
+  }
+
+  .services__card--gostinicy {
+    height: 230px;
+    min-height: 230px;
+    padding: 30px;
+    background: #ffffff !important;
+    border: none;
+  }
+
+  .services__card--gostinicy .services__media--hotel {
+    position: relative;
+    margin-top: 18px;
+    width: 285px;
+    max-width: 100%;
+    height: 132px;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .services__card--gostinicy .services__img--hotel-shot {
+    width: 230px;
+    max-width: none;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .services__card--gostinicy .services__img--hotel-icon {
+    left: 0;
+    right: auto;
+    bottom: 0;
+    top: auto;
+    width: 50px;
+    height: 30px;
+  }
+
+  .services__card--gostinicy .services__img--hotel-badges {
+    right: 0;
+    left: auto;
+    bottom: 0;
+    width: 140px;
+    max-width: none;
   }
 
   /* Steps mobile */
