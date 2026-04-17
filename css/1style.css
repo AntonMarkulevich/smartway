@@ -7152,6 +7152,11 @@ a {
     padding: 51px 10px;
     border-radius: 40px;
     gap: 20px;
+    width: 355px;
+    max-width: 100%;
+    min-height: 492px;
+    margin: 0 auto;
+    justify-content: flex-start;
   }
 
   .cta__title {
@@ -7159,33 +7164,46 @@ a {
     line-height: 33px;
     letter-spacing: -1px;
     text-align: center;
-    margin-bottom: 12px;
+    margin: 0 auto 0;
+    max-width: 311px;
   }
 
   .cta__text {
     font-size: 18px;
     line-height: 27px;
     text-align: center;
+    max-width: 285px;
+    margin: 0 auto;
   }
 
   .cta__actions {
     align-items: center;
     gap: 20px;
+    width: 100%;
   }
 
   .cta__icons {
     justify-content: center;
+    width: 190px;
+    padding: 10px;
   }
 
   .cta__icons-img {
-    height: 52px;
+    width: 170px;
+    height: 64.6px;
   }
 
   .cta__actions .btn {
     width: 245px;
     height: 61px;
     font-size: 14px;
+    font-weight: 500;
+    line-height: 16.15px;
+    letter-spacing: -0.5px;
+    border-radius: 65px;
     min-width: 0;
+    padding: 10px 20px;
+    margin: 0 auto;
   }
 
   /* CTA Form mobile */
