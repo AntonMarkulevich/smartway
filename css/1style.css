@@ -2173,7 +2173,7 @@ a {
   max-width: 1860px;
   width: 100%;
   margin: 0 auto;
-  background-color: #333333;
+  background-color: #2e2e2e;
   border-radius: 40px;
   padding: clamp(40px, 5vw, 60px) clamp(36px, 4.5vw, 64px) clamp(44px, 5vw, 60px);
   color: #ffffff;
@@ -2208,10 +2208,9 @@ a {
   font-size: clamp(16px, 1.2vw, 18px);
   font-weight: 400;
   line-height: 1.5;
-  color: #ffffff;
+  color: #cccccc;
   margin: 0;
   max-width: 36em;
-  opacity: 0.98;
 }
 
 .mice__actions {
@@ -2229,8 +2228,15 @@ a {
   font-size: 17px;
   width: 292px;
   font-weight: 600;
-  background-color: #d14333;
+  background-color: #d84330;
   border-radius: 100px;
+  gap: 8px;
+}
+
+.mice__btn-arrow {
+  font-weight: 400;
+  font-size: 1.15em;
+  line-height: 1;
 }
 
 .mice__actions .mice__btn:hover {
@@ -2240,7 +2246,7 @@ a {
 .mice__link {
   font-family: 'Golos Text', sans-serif;
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 400;
   color: #ffffff;
   text-decoration: none;
   display: inline-flex;
@@ -2270,9 +2276,9 @@ a {
 }
 
 .mice__card {
-  background-color: #444444;
-  border-radius: 20px;
-  padding: 24px 22px 28px;
+  background-color: #5e5e5e;
+  border-radius: 28px;
+  padding: 28px 26px 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -2281,21 +2287,23 @@ a {
 }
 
 .mice__card-icon {
-  width: 61px;
-  height: 62px;
+  width: 60px;
+  height: 60px;
   background: #ffffff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .mice__card-icon img {
-  width: 61px;
-  height: 62px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
+  display: block;
 }
 
 .mice__card-title {
@@ -2303,7 +2311,7 @@ a {
   font-size: 28px;
   font-weight: 700;
   color: #ffffff;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   line-height: 1.25;
 }
 
@@ -2311,7 +2319,7 @@ a {
   font-family: 'Golos Text', sans-serif;
   font-size: 22px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.92);
+  color: #ffffff;
   line-height: 1.45;
   margin: 0;
 }
@@ -2325,7 +2333,8 @@ a {
   position: relative;
   overflow: hidden;
   min-height: 260px;
-  background-color: #2a2a2a;
+  background-color: #5e5e5e;
+  border-radius: 28px;
   isolation: isolate;
 }
 
@@ -2334,12 +2343,12 @@ a {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background-color: #2a2a2a;
+  background-color: #5e5e5e;
   background-image: url("../img/mice-photo.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%;
-  transform: scale(1.15);
+  background-size: cover;
+  transform: scale(1.08);
   transform-origin: center center;
 }
 
@@ -7633,9 +7642,10 @@ a {
     letter-spacing: -0.5px;
   }
 
-  /* App Block mobile (Figma 0:15550) */
+  /* App Block mobile — макет Figma «Переезд на Wordpress» node 278:2518 */
   .app-block {
     padding: 21px 10px;
+    background-color: #f2f4f7;
   }
 
   .app-block__inner {
@@ -7645,14 +7655,16 @@ a {
     width: 100%;
     margin: 0 auto;
     padding: 30px 24px 0;
-    border-radius: 40px 40px 0 0;
+    border-radius: 30px;
     gap: 0;
     background: #ffffff;
     overflow: hidden;
+    box-shadow: 0 1px 0 rgba(26, 26, 26, 0.04);
   }
 
   .app-block__content {
     width: 100%;
+    box-sizing: border-box;
   }
 
   .app-block__title {
@@ -7661,7 +7673,7 @@ a {
     line-height: 33px;
     letter-spacing: -1px;
     text-align: left;
-    margin: 0 0 14px;
+    margin: 0 0 12px;
     color: #1a1a1a;
   }
 
@@ -7672,7 +7684,7 @@ a {
   }
 
   .app-block__lead {
-    margin: 0 0 18px;
+    margin: 0 0 16px;
     font-size: 16px;
     line-height: 1.45;
     color: #3a3a3a;
@@ -7680,56 +7692,62 @@ a {
 
   .app-block__list {
     max-width: none;
-    margin: 0 0 22px;
+    margin: 0 0 20px;
   }
 
   .app-block__item {
     font-size: 18px;
     line-height: 1.45;
     padding-left: 28px;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     color: #3a3a3a;
+  }
+
+  .app-block__item:last-child {
+    margin-bottom: 0;
   }
 
   .app-block__item::before {
     color: #d44333;
+    top: 0.1em;
   }
 
   .app-block__stores {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
-    margin: 0 0 8px;
+    gap: 10px;
+    margin: 0 0 4px;
     width: 100%;
   }
 
   .app-block__store {
     flex: unset;
-    max-width: 300px;
+    max-width: 307px;
     width: 100%;
     min-width: 0;
-    padding: 12px 18px;
+    padding: 14px 20px;
     background: #ffffff;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(26, 26, 26, 0.08);
-    border: 1px solid rgba(26, 26, 26, 0.06);
+    box-shadow: 0 2px 14px rgba(26, 26, 26, 0.07), 0 0 0 1px rgba(26, 26, 26, 0.05);
     justify-content: center;
+    box-sizing: border-box;
+    border: none;
   }
 
   .app-block__store-badge,
   .app-block__store img {
     width: auto;
-    height: 48px;
+    height: 50px;
     max-width: 100%;
     object-fit: contain;
   }
 
   .app-block__visual {
-    margin: 16px -24px 0;
-    width: calc(100% + 48px);
-    min-height: min(300px, 58vw);
-    max-height: min(380px, 78vw);
+    margin: 18px 0 0;
+    width: 100%;
+    min-height: min(292px, 56vw);
+    max-height: min(372px, 76vw);
     overflow: hidden;
     justify-content: center;
     align-items: flex-end;
@@ -7738,8 +7756,8 @@ a {
 
   .app-block__visual-inner {
     width: 100%;
-    max-width: 340px;
-    min-height: min(280px, 62vw);
+    max-width: 320px;
+    min-height: min(268px, 58vw);
     margin: 0 auto;
     position: relative;
   }
@@ -7747,85 +7765,151 @@ a {
   .app-block__phone {
     display: block;
     position: relative;
-    width: min(56%, 198px);
-    max-width: 198px;
+    width: min(54%, 192px);
+    max-width: 192px;
     height: auto;
-    margin: 0 4% 0 auto;
-    transform: translateX(6px);
+    margin: 0 2% 0 auto;
+    transform: translateX(4px);
     z-index: 5;
   }
 
   .app-block__float--card {
     display: block;
-    top: 10%;
-    left: -4%;
-    width: min(54%, 178px);
-    max-width: calc(100% - 12px);
+    top: 8%;
+    left: 0;
+    width: min(56%, 172px);
+    max-width: calc(100% - 20px);
     z-index: 20;
   }
 
   .app-block__float--menu {
     display: block;
     top: auto;
-    bottom: 6%;
-    left: 0;
-    width: min(52%, 168px);
-    max-width: calc(100% - 16px);
+    bottom: 8%;
+    left: 2%;
+    width: min(54%, 158px);
+    max-width: calc(100% - 24px);
     z-index: 30;
-    transform: translateX(4px);
+    transform: translateX(0);
   }
 
-  /* MICE mobile */
+  /* MICE mobile — тёмный блок как в макете */
   .mice {
-    padding: 21px 20px;
+    padding: 21px 10px;
   }
 
   .mice__inner {
-    padding: 28px 20px 32px;
-    border-radius: 28px;
+    max-width: 355px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 28px 24px 32px;
+    border-radius: 24px;
+    box-sizing: border-box;
   }
 
   .mice__header {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 18px;
+  }
+
+  .mice__intro {
+    align-items: stretch;
+    width: 100%;
   }
 
   .mice__title {
     font-size: 26px;
+    font-weight: 700;
     line-height: 1.12;
+    letter-spacing: -0.5px;
+    max-width: none;
+    margin: 0;
+    color: #ffffff;
+  }
+
+  .mice__text {
+    font-size: 16px;
+    line-height: 1.45;
+    color: #cccccc;
     max-width: none;
   }
 
   .mice__actions {
     flex-direction: column;
     align-items: stretch;
-    gap: 14px;
+    gap: 12px;
     margin-top: 20px;
+    width: 100%;
   }
 
   .mice__actions .mice__btn {
-    width: 292px;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    height: 56px;
+    padding: 0 24px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #d84330;
+    border-radius: 100px;
     justify-content: center;
+    box-sizing: border-box;
   }
 
   .mice__link {
     justify-content: flex-start;
+    font-size: 16px;
+    font-weight: 500;
+    gap: 6px;
   }
 
   .mice__grid {
-    grid-template-columns: 1fr;
-    margin-top: 28px;
-    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    margin-top: 20px;
+    gap: 14px;
   }
 
   .mice__card {
-    padding: 22px 20px 24px;
+    padding: 26px 22px 28px;
+    border-radius: 28px;
+    width: 100%;
+  }
+
+  .mice__card:not(.mice__card--photo) .mice__card-title {
+    margin-top: 0;
+  }
+
+  .mice__card-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 18px;
+  }
+
+  .mice__card-icon img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .mice__card-title {
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 0 0 8px;
+  }
+
+  .mice__card-text {
+    font-size: 15px;
+    line-height: 1.45;
+    color: #ffffff;
   }
 
   .mice__card--photo {
     padding: 0;
     min-height: 200px;
     aspect-ratio: 16 / 10;
+    border-radius: 28px;
   }
 
   /* Cases mobile */
