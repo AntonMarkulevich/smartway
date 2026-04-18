@@ -209,6 +209,18 @@
   margin-bottom: 0;
 }
 
+.footer__col--capabilities .footer__col-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+
+.footer__col--capabilities .footer__socials {
+  margin-bottom: 0;
+}
+
 .footer__social:not(.footer__social--round) {
   display: flex;
   color: #a3a3a3;
@@ -441,7 +453,7 @@ span.footer__btn {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 14px;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
@@ -451,7 +463,8 @@ span.footer__btn {
     display: contents;
   }
 
-  .footer__info-brand {
+  /* Реальный порядок для текущей HTML-разметки mice.html */
+  .footer__col--info > .footer__col-head {
     order: 1;
     width: 100%;
     max-width: 100%;
@@ -459,40 +472,69 @@ span.footer__btn {
   }
 
   .footer__col--scenarios {
-    order: 5;
+    display: contents;
+  }
+
+  .footer__col--scenarios > .footer__col-head {
+    order: 2;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footer__col--scenarios > .footer__col-body {
+    order: 6;
     width: 100%;
     max-width: 100%;
     gap: 0;
   }
 
+  /* Порядок как на референсе: лого → бейджи → Telegram → CTA → соцсети → списки → контакты */
   .footer__col--capabilities {
     display: contents;
   }
 
-  .footer__capabilities-top {
+  .footer__col--capabilities > .footer__col-head {
     display: contents;
   }
 
-  /* Порядок как в Figma: лого+бейджи → Telegram → CTA → соцсети → колонки навигации → контакты */
-  .footer__channel-pill {
-    order: 2;
+  .footer__col--capabilities .footer__socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    order: 5;
+    width: auto;
+    max-width: none;
+    margin: 0;
+  }
+
+  /* order на самой ссылке не работает: flex-элемент — обёртка .footer__channel-wrap */
+  .footer__col--capabilities .footer__channel-wrap {
+    order: 3;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .footer__col--capabilities .footer__channel-pill {
     width: 100%;
     max-width: 100%;
     flex: none;
+    margin-top: 0;
   }
 
-  .footer__social-icons {
-    order: 4;
+  .footer__col--capabilities .footer__social--round {
+    order: initial;
   }
 
   .footer__col--capabilities > .footer__col-body {
-    order: 6;
+    order: 7;
     width: 100%;
     max-width: 100%;
   }
 
   .footer__col--useful {
-    order: 7;
+    order: 8;
     width: 100%;
     max-width: 100%;
     gap: 0;
@@ -502,15 +544,20 @@ span.footer__btn {
     display: contents;
   }
 
-  .footer__col--about > .footer__btn {
-    order: 3;
+  .footer__col--about > .footer__col-head {
+    order: 4;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footer__col--about > .footer__col-head > .footer__btn {
     width: 100%;
     max-width: 100%;
     margin-bottom: 0;
   }
 
   .footer__col--about > .footer__col-body {
-    order: 8;
+    order: 9;
     width: 100%;
     max-width: 100%;
   }
@@ -554,8 +601,8 @@ span.footer__btn {
   }
 
   /* Нижний блок: как на 1-й картинке — одинаковый шаг между крупными строками, без «провала» перед адресом */
-  .footer__info-legal {
-    order: 9;
+  .footer__col--info > .footer__col-body {
+    order: 10;
     width: 100%;
     max-width: 100%;
     display: flex;
@@ -564,7 +611,7 @@ span.footer__btn {
     gap: 20px;
   }
 
-  .footer__info-legal .footer__contacts {
+  .footer__col--info > .footer__col-body .footer__contacts {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -574,11 +621,11 @@ span.footer__btn {
     color: #ffffff;
   }
 
-  .footer__info-legal .footer__contacts > p {
+  .footer__col--info > .footer__col-body .footer__contacts > p {
     margin: 0;
   }
 
-  .footer__info-legal .footer__press {
+  .footer__col--info > .footer__col-body .footer__press {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -586,15 +633,15 @@ span.footer__btn {
     margin: 0;
   }
 
-  .footer__info-legal .footer__press .footer__muted-label {
+  .footer__col--info > .footer__col-body .footer__press .footer__muted-label {
     margin: 0;
   }
 
-  .footer__info-legal .footer__press .footer__contact {
+  .footer__col--info > .footer__col-body .footer__press .footer__contact {
     margin: 0;
   }
 
-  .footer__info-legal .footer__address {
+  .footer__col--info > .footer__col-body .footer__address {
     margin: 0;
     color: #ffffff;
     font-weight: 600;
@@ -602,7 +649,7 @@ span.footer__btn {
     overflow-wrap: anywhere;
   }
 
-  .footer__info-legal .footer__legal {
+  .footer__col--info > .footer__col-body .footer__legal {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -611,14 +658,14 @@ span.footer__btn {
     margin: 0;
   }
 
-  .footer__info-legal .footer__legal p {
+  .footer__col--info > .footer__col-body .footer__legal p {
     margin: 0;
     color: #8c8c8c;
     font-weight: 600;
     line-height: 22px;
   }
 
-  .footer__info-legal .footer__legal-inn {
+  .footer__col--info > .footer__col-body .footer__legal-inn {
     color: #8c8c8c !important;
   }
 
@@ -684,6 +731,31 @@ span.footer__btn {
 @media (max-width: 480px) {
   .footer__main {
     padding: var(--footer-pad-mobile);
+  }
+
+  .footer__heading {
+    font-size: 16px;
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+
+  .footer__list a,
+  .footer__list span {
+    font-size: 14px;
+    line-height: 1.45;
+    font-weight: 600;
+  }
+
+  .footer__list {
+    gap: 8px;
+  }
+
+  .footer__contact a,
+  .footer__contact span,
+  .footer__address,
+  .footer__legal p {
+    font-size: 14px;
+    line-height: 1.45;
   }
 
   .footer__social-icons {
