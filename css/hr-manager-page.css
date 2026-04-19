@@ -1190,3 +1190,216 @@
   font-weight: 500;
   font-size: clamp(14px, 1.35vw, 16px);
 }
+
+/* Мобилка: текст по центру по всей странице HR (как в макетах) */
+@media (max-width: 768px) {
+  .page-hr-manager .hr-manager-hero__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .page-hr-manager .hr-manager-hero__title,
+  .page-hr-manager .hr-manager-hero__subtitle {
+    text-align: center;
+  }
+
+  .page-hr-manager .hr-manager-hero__cta {
+    align-self: stretch;
+    justify-content: center;
+    max-width: min(100%, 360px);
+  }
+
+  .page-hr-manager .hr-manager-tickets__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .page-hr-manager .hr-manager-tickets__title,
+  .page-hr-manager .hr-manager-tickets__text {
+    text-align: center;
+    max-width: none;
+  }
+
+  .page-hr-manager .hr-manager-tickets__cta {
+    align-self: center;
+  }
+
+  .page-hr-manager .accountant-avans-block__title,
+  .page-hr-manager .accountant-avans-card__title,
+  .page-hr-manager .accountant-avans-card__text,
+  .page-hr-manager .accountant-avans-bottom__title,
+  .page-hr-manager .accountant-avans-bottom__text {
+    text-align: center;
+  }
+
+  .page-hr-manager .accountant-avans-card__wide-text {
+    text-align: center;
+  }
+
+  .page-hr-manager .hr-manager-app-promo__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .page-hr-manager .hr-manager-app-promo__title,
+  .page-hr-manager .hr-manager-app-promo__text {
+    text-align: center;
+    max-width: none;
+  }
+
+  .page-hr-manager .hr-manager-app-promo__content .app-block__stores {
+    justify-content: center;
+  }
+
+  .page-hr-manager .hr-manager-team-benefits__item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .page-hr-manager .hr-manager-team-benefits__body {
+    text-align: center;
+  }
+
+  .page-hr-manager .hr-manager-team-benefits__item-title,
+  .page-hr-manager .hr-manager-team-benefits__item-desc {
+    text-align: center;
+  }
+
+  .page-hr-manager .tm-consult-cta__content {
+    text-align: center;
+  }
+
+  .page-hr-manager .tm-consult-cta__title,
+  .page-hr-manager .tm-consult-cta__lead {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-hr-manager .tm-consult-cta__list {
+    align-items: center;
+  }
+
+  .page-hr-manager .tm-consult-cta__item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .page-hr-manager .tm-consult-cta__q {
+    margin-top: 0;
+  }
+
+  .page-hr-manager .tm-consult-cta__item-text {
+    text-align: center;
+  }
+
+  .page-hr-manager .tm-consult-cta__btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-hr-manager .companies-stat-block__inner,
+  .page-hr-manager .companies-stat-block__caption,
+  .page-hr-manager .companies-stat-block__value {
+    text-align: center;
+  }
+
+  .page-hr-manager .trust-credentials-block__text {
+    text-align: center;
+  }
+
+  .page-hr-manager .hr-manager-experts-banner__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .page-hr-manager .hr-manager-experts-banner__title,
+  .page-hr-manager .hr-manager-experts-banner__lead {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: none;
+  }
+
+  .page-hr-manager .hr-manager-experts-banner__actions {
+    justify-content: center;
+  }
+
+  .page-hr-manager .tm-try-free-cta__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .page-hr-manager .tm-try-free-cta__right {
+    text-align: center;
+  }
+
+  .page-hr-manager .tm-try-free-cta__title,
+  .page-hr-manager .tm-try-free-cta__lead {
+    text-align: center;
+  }
+
+  .page-hr-manager .tm-try-free-cta__form {
+    text-align: center;
+  }
+
+  .page-hr-manager .tm-try-free-cta__field {
+    text-align: center;
+  }
+
+  .page-hr-manager .tm-try-free-cta__label {
+    text-align: center;
+  }
+
+  .page-hr-manager .tm-try-free-cta__input,
+  .page-hr-manager .tm-try-free-cta__select {
+    text-align: center;
+  }
+
+  .page-hr-manager .tm-try-free-cta__consent {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .page-hr-manager .tm-try-free-cta__consent-label {
+    text-align: center;
+  }
+
+  .page-hr-manager .tm-try-free-cta__legal {
+    text-align: center;
+  }
+
+  .page-hr-manager .faq-accordion-block__heading {
+    text-align: center;
+  }
+
+  .page-hr-manager .faq-accordion__title {
+    text-align: center;
+  }
+
+  .page-hr-manager .faq-accordion__content {
+    text-align: center;
+  }
+
+  .page-hr-manager .tm-materials--hr-interesting .tm-materials__heading {
+    text-align: center;
+  }
+
+  .page-hr-manager .tm-materials--hr-interesting .tm-materials-card__text {
+    text-align: center;
+  }
+}

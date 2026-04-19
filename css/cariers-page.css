@@ -46,6 +46,24 @@
   min-width: 0;
 }
 
+.cariers-hero__badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 clamp(16px, 2.2vw, 22px);
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: #eceef2;
+  color: #3a3a3a;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 600;
+  font-size: clamp(12px, 1.1vw, 14px);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
 .cariers-hero__title {
   margin: 0 0 clamp(16px, 2vw, 22px);
   max-width: 12em;
@@ -135,6 +153,53 @@
 
   .cariers-hero__copy {
     order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .cariers-hero {
+    padding-top: clamp(28px, 6vw, 40px);
+    padding-bottom: clamp(36px, 7vw, 48px);
+  }
+
+  .cariers-hero__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cariers-hero__badge {
+    margin-bottom: clamp(14px, 3.5vw, 20px);
+    padding: clamp(10px, 2.5vw, 12px) clamp(18px, 5vw, 24px);
+  }
+
+  .cariers-hero__title,
+  .cariers-hero__lead {
+    text-align: center;
+    max-width: none;
+  }
+
+  .cariers-hero__title {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cariers-hero__lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cariers-hero__cta {
+    width: min(85%, 320px);
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .cariers-hero__visual {
+    margin-inline: auto;
+    max-width: 100%;
+    border-radius: clamp(14px, 3.5vw, 22px);
   }
 }
 
@@ -284,6 +349,53 @@
   }
 }
 
+@media (max-width: 768px) {
+  .cariers-growth {
+    padding-top: clamp(32px, 7vw, 48px);
+    padding-bottom: clamp(40px, 8vw, 56px);
+  }
+
+  .cariers-growth__layout {
+    gap: clamp(24px, 5vw, 36px);
+  }
+
+  .cariers-growth__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: none;
+  }
+
+  .cariers-growth__title,
+  .cariers-growth__text {
+    text-align: center;
+    max-width: none;
+  }
+
+  .cariers-growth__visual {
+    margin-inline: auto;
+    justify-self: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cariers-growth-chart {
+    padding-inline: clamp(12px, 4vw, 20px);
+  }
+
+  .cariers-growth-chart__plot {
+    justify-content: center;
+    gap: clamp(10px, 3.5vw, 18px);
+    margin-inline: auto;
+    max-width: min(100%, 380px);
+  }
+
+  .cariers-growth-chart__bar {
+    max-width: min(68px, 16vw);
+  }
+}
+
 /* Блок «Наши ценности»: белый фон, три колонки */
 .cariers-values {
   padding: clamp(56px, 8vw, 104px) var(--container-padding-x) clamp(56px, 8vw, 104px);
@@ -299,7 +411,7 @@
 }
 
 .cariers-values__heading {
-  margin: 0 0 clamp(40px, 5vw, 56px);
+  margin: 0 0 clamp(16px, 2.5vw, 20px);
   max-width: 20ch;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
@@ -307,6 +419,16 @@
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: #000000;
+}
+
+.cariers-values__lead {
+  margin: 0 0 clamp(40px, 5vw, 56px);
+  max-width: min(100%, 52ch);
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 400;
+  font-size: clamp(15px, 1.45vw, 17px);
+  line-height: 1.55;
+  color: #333333;
 }
 
 .cariers-values__grid {
@@ -347,14 +469,77 @@
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 400;
   font-size: clamp(15px, 1.4vw, 17px);
-  line-height: 1.5;
-  color: #000000;
+  line-height: 1.55;
+  color: #333333;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
+  .cariers-values {
+    padding-top: clamp(40px, 8vw, 56px);
+    padding-bottom: clamp(40px, 8vw, 56px);
+  }
+
+  .cariers-values__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cariers-values__heading {
+    text-align: center;
+    max-width: 18ch;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: clamp(14px, 3vw, 18px);
+  }
+
+  .cariers-values__lead {
+    text-align: center;
+    max-width: min(100%, 34rem);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: clamp(32px, 7vw, 48px);
+    text-wrap: balance;
+  }
+
   .cariers-values__grid {
     grid-template-columns: 1fr;
-    gap: clamp(32px, 5vw, 40px);
+    gap: clamp(36px, 6vw, 48px);
+    width: 100%;
+    max-width: min(100%, 34rem);
+    margin-inline: auto;
+    justify-items: stretch;
+    text-align: left;
+  }
+
+  .cariers-values__item {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    text-align: left;
+  }
+
+  .cariers-values__num,
+  .cariers-values__name,
+  .cariers-values__text {
+    width: 100%;
+    text-align: left;
+  }
+
+  .cariers-values__num {
+    margin-bottom: 10px;
+    letter-spacing: 0.04em;
+  }
+
+  .cariers-values__name {
+    margin-bottom: 10px;
+  }
+
+  .cariers-values__text {
+    max-width: 100%;
+    text-wrap: pretty;
   }
 }
 
@@ -571,8 +756,32 @@
 }
 
 @media (max-width: 900px) {
+  .cariers-offices {
+    padding-top: clamp(40px, 8vw, 64px);
+    padding-bottom: clamp(48px, 9vw, 80px);
+  }
+
+  .cariers-offices__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cariers-offices__heading {
+    margin-bottom: clamp(32px, 7vw, 48px);
+    max-width: 22ch;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
   .cariers-offices__grid {
     grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+    justify-items: stretch;
+    gap: clamp(22px, 5vw, 32px) 0;
   }
 
   .cariers-offices__head--msk,
@@ -581,6 +790,45 @@
   .cariers-offices__media--penza {
     grid-column: 1;
     grid-row: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cariers-offices__head {
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(14px, 3.5vw, 20px);
+    text-align: center;
+  }
+
+  .cariers-offices__icon-wrap {
+    width: clamp(52px, 14vw, 60px);
+    height: clamp(52px, 14vw, 60px);
+  }
+
+  .cariers-offices__navicon {
+    width: clamp(22px, 5.5vw, 28px);
+    height: clamp(22px, 5.5vw, 28px);
+  }
+
+  .cariers-offices__meta {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .cariers-offices__city {
+    margin-bottom: clamp(6px, 1.8vw, 10px);
+    text-align: center;
+  }
+
+  .cariers-offices__addr {
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  .cariers-offices__media {
+    border-radius: clamp(16px, 4.2vw, 22px);
   }
 }
 
