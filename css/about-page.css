@@ -496,11 +496,34 @@
 }
 
 @media (max-width: 960px) {
-  /* Как в мобильном макете: слева вся история, справа узкая колонка оборота с «позвонком» у правого края */
+  /* 9 общих строк: 2016–2017 = заголовок + стрелка; 2018–2024 = 7 строк оборота (subgrid) */
   .about-timeline__layout {
-    grid-template-columns: minmax(0, 1fr) clamp(92px, 30vw, 152px);
-    gap: clamp(12px, 3.5vw, 20px);
-    align-items: start;
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+    grid-template-rows: repeat(9, auto);
+    gap: 0;
+    align-items: stretch;
+  }
+
+  .about-timeline__timeline {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    display: grid;
+    grid-template-rows: subgrid;
+    padding-right: clamp(8px, 2.2vw, 14px);
+    box-sizing: border-box;
+    min-width: 0;
+  }
+
+  .about-timeline__list {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-column: 1;
+    grid-row: 1 / -1;
+    row-gap: 0;
+  }
+
+  .about-timeline__item + .about-timeline__item {
+    margin-top: 0;
   }
 
   .about-timeline__title {
@@ -509,46 +532,153 @@
   }
 
   .about-timeline__chart {
-    border-left: none;
-    padding-left: 0;
+    grid-column: 2;
+    grid-row: 1 / -1;
+    display: grid;
+    grid-template-rows: subgrid;
+    border-right: none;
     border-top: none;
-    padding-top: 0;
     margin-top: 0;
-    border-right: 1px solid #d5d5d8;
-    padding-right: clamp(10px, 2.8vw, 18px);
-    align-self: start;
+    padding-top: 0;
+    border-left: 1px solid #d5d5d8;
+    padding-left: clamp(14px, 3.8vw, 24px);
+    padding-right: 0;
+    box-sizing: border-box;
+    min-width: 0;
+    align-self: stretch;
   }
 
   .about-timeline__chart::before {
-    left: auto;
-    right: -5px;
+    left: -5px;
+    right: auto;
     top: 0;
     transform: none;
   }
 
   .about-timeline__chart-title {
-    text-align: right;
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+    text-align: left;
+    font-size: clamp(17px, 4.2vw, 22px);
+    margin: 0 0 clamp(6px, 1.5vw, 10px);
   }
 
   .about-timeline__arrow {
-    display: none;
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+    display: block;
+    width: min(100%, 180px);
+    max-height: min(200px, 42vw);
+    margin: 0;
+    object-fit: contain;
+    object-position: left center;
+    opacity: 0.38;
+  }
+
+  .about-timeline__bars {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: 3 / span 7;
+    grid-column: 1;
+    row-gap: 0;
   }
 
   .about-timeline__bar-row {
-    align-items: flex-end;
+    align-items: flex-start;
+    gap: clamp(8px, 2vw, 12px);
+    margin-bottom: 0;
+  }
+
+  .about-timeline__bar-row:last-child {
+    margin-bottom: 0;
   }
 
   .about-timeline__bar-value {
-    text-align: right;
+    text-align: left;
     width: 100%;
+    font-size: clamp(17px, 4.8vw, 24px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .about-timeline__bar-value--accent {
+    font-size: clamp(18px, 5.2vw, 26px);
   }
 
   .about-timeline__bar-track {
+    display: block;
     width: 100%;
+    height: clamp(48px, 12vw, 72px);
+    border-radius: 999px;
+    background: transparent;
   }
 
   .about-timeline__bar-fill {
-    margin-left: auto;
+    margin-left: 0;
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+    width: calc(10% + (var(--billions) / 45) * 90%);
+    min-width: 12px;
+    transition: width 0.4s ease;
+  }
+}
+
+/* Без subgrid (старые браузеры): прежняя двухколоночная вёрстка без привязки строк */
+@supports not (grid-template-rows: subgrid) {
+  @media (max-width: 960px) {
+    .about-timeline__layout {
+      grid-template-rows: none;
+      align-items: start;
+    }
+
+    .about-timeline__timeline {
+      display: block;
+      grid-column: 1;
+      grid-row: auto;
+    }
+
+    .about-timeline__list {
+      display: block;
+      grid-column: auto;
+      grid-row: auto;
+    }
+
+    .about-timeline__item + .about-timeline__item {
+      margin-top: clamp(20px, 2.6vw, 30px);
+    }
+
+    .about-timeline__chart {
+      display: block;
+      grid-column: 2;
+      grid-row: auto;
+    }
+
+    .about-timeline__chart-title {
+      grid-row: auto;
+    }
+
+    .about-timeline__arrow {
+      grid-row: auto;
+      margin: 0 0 clamp(12px, 2.8vw, 18px);
+    }
+
+    .about-timeline__bars {
+      display: block;
+      grid-row: auto;
+      grid-column: auto;
+    }
+
+    .about-timeline__bar-row {
+      margin-bottom: clamp(16px, 3.5vw, 22px);
+    }
+
+    .about-timeline__bar-row:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
