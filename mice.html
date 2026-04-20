@@ -373,15 +373,6 @@
             </div>
             <p class="mice-partner__text"><strong class="mice-partner__lead">Контролируем каждый этап:</strong> избегаем форс-мажоров и&nbsp;соблюдаем даже сжатые сроки</p>
           </article>
-          <div class="mice-partner__cta" role="note">
-            <div class="mice-partner__cta-icon" aria-hidden="true">
-              <svg class="mice-partner__cta-clock" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.75"/>
-                <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <p class="mice-partner__cta-text">Отвечаем на&nbsp;вашу заявку в&nbsp;течение часа</p>
-          </div>
         </div>
       </div>
     </section>
@@ -460,9 +451,15 @@
     </section>
 
     <section class="mice-reviews" aria-labelledby="mice-reviews-title">
-      <h2 id="mice-reviews-title" class="mice-reviews__title">
-        Нам доверяют <span class="mice-reviews__title-accent">лидеры рынка</span>
-      </h2>
+      <div class="mice-reviews__head">
+        <h2 id="mice-reviews-title" class="mice-reviews__title">
+          Нам доверяют <span class="mice-reviews__title-accent">лидеры рынка</span>
+        </h2>
+        <div class="mice-reviews__arrows" aria-hidden="true">
+          <span class="mice-reviews__arrow mice-reviews__arrow--prev">←</span>
+          <span class="mice-reviews__arrow mice-reviews__arrow--next">→</span>
+        </div>
+      </div>
       <div class="mice-reviews__viewport" tabindex="0" role="region" aria-roledescription="карусель" aria-label="Отзывы клиентов о MICE Smartway">
         <div class="mice-reviews__track">
           <article class="mice-reviews__card">
@@ -640,30 +637,34 @@
               <li><a href="#">Для организатора командировок</a></li>
             </ul>
           </div>
+            <div class="footer__col-body">
+                <h3 class="footer__heading">Возможности</h3>
+                <ul class="footer__list">
+                    <li><a href="#">Поиск авиабилетов</a></li>
+                    <li><a href="#">Поиск ж/д билетов</a></li>
+                    <li><a href="#">Поиск отелей</a></li>
+                    <li><a href="#">Такси</a></li>
+                    <li><a href="#">Интеграция с 1С</a></li>
+                    <li><a href="#">Согласование</a></li>
+                    <li><a href="#">Тревел-политики</a></li>
+                    <li><a href="#" class="footer__list-link--accent">Smartway Отпуск</a></li>
+                </ul>
+            </div>
         </div>
         <div class="footer__col footer__col--capabilities">
           <div class="footer__col-head">
             <div class="footer__socials">
               <a href="#" class="footer__social footer__social--round" aria-label="ВКонтакте"><img src="img/footer-icon-vk.svg" alt="" width="20" height="20"></a>
               <a href="#" class="footer__social footer__social--round" aria-label="VC.ru"><img src="img/footer-icon-vc.svg" alt="" class="footer__social-img--vc" width="22" height="16"></a>
-              <a href="#" class="footer__channel-pill">
-                <img src="img/footer-icon-tg.svg" alt="" class="footer__channel-icon" width="18" height="18">
-                <span class="footer__channel-label">Канал «Командировки.Сегодня»</span>
-              </a>
+
             </div>
           </div>
-          <div class="footer__col-body">
-            <h3 class="footer__heading">Возможности</h3>
-            <ul class="footer__list">
-              <li><a href="#">Поиск авиабилетов</a></li>
-              <li><a href="#">Поиск ж/д билетов</a></li>
-              <li><a href="#">Поиск отелей</a></li>
-              <li><a href="#">Такси</a></li>
-              <li><a href="#">Интеграция с 1С</a></li>
-              <li><a href="#">Согласование</a></li>
-              <li><a href="#">Тревел-политики</a></li>
-              <li><a href="#" class="footer__list-link--accent">Smartway Отпуск</a></li>
-            </ul>
+
+          <div class="footer__channel-wrap">
+            <a href="#" class="footer__channel-pill">
+              <img src="img/footer-icon-tg.svg" alt="" class="footer__channel-icon" width="18" height="18">
+              <span class="footer__channel-label">Канал «Командировки.Сегодня»</span>
+            </a>
           </div>
         </div>
         <div class="footer__col footer__col--useful">

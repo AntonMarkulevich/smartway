@@ -293,28 +293,256 @@
 }
 
 @media (max-width: 900px) {
-  .hr-manager-tickets__card-layout {
-    grid-template-columns: 1fr;
-    gap: 28px;
+  .hr-manager-tickets {
+    padding-top: clamp(32px, 7vw, 52px);
+    padding-bottom: clamp(40px, 9vw, 72px);
+    background: #ffffff;
+  }
+
+  .hr-manager-tickets__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hr-manager-tickets__intro {
+    margin-bottom: clamp(28px, 6vw, 40px);
+    max-width: min(100%, 22rem);
+    text-align: center;
+  }
+
+  .hr-manager-tickets__intro-title {
+    margin-bottom: clamp(10px, 2.5vw, 14px);
+    font-size: clamp(24px, 6.2vw, 30px);
+    line-height: 1.12;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  .hr-manager-tickets__intro-sub {
+    margin-inline: auto;
+    max-width: min(100%, 19rem);
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  .hr-manager-tickets__card {
+    width: 100%;
+    max-width: 100%;
+    border-radius: clamp(28px, 9vw, 40px);
+    padding: clamp(32px, 8vw, 44px) clamp(20px, 5.5vw, 28px) clamp(28px, 7vw, 40px);
+    background: #1a1a1a;
   }
 
   .hr-manager-tickets__card::before {
+    content: '';
+    position: absolute;
+    right: -25%;
+    bottom: -20%;
+    width: 120%;
+    height: 55%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.35;
+    background: radial-gradient(ellipse 55% 45% at 78% 100%, rgba(255, 255, 255, 0.12), transparent 72%);
+  }
+
+  .hr-manager-tickets__card-layout {
+    grid-template-columns: 1fr;
+    gap: clamp(24px, 6vw, 36px);
+    align-items: center;
+  }
+
+  .hr-manager-tickets__copy {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    background-position: right -15% 55%;
-    opacity: 0.55;
+    text-align: center;
+    order: 1;
+  }
+
+  .hr-manager-tickets__title {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: min(100%, 20rem);
+    text-align: center;
+    text-wrap: balance;
+    font-size: clamp(22px, 5.4vw, 28px);
+    line-height: 1.15;
+  }
+
+  .hr-manager-tickets__text {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: clamp(22px, 5vw, 32px);
+    max-width: min(100%, 32rem);
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  .hr-manager-tickets__cta {
+    width: 100%;
+    max-width: min(100%, 320px);
+    box-sizing: border-box;
+    align-self: center;
   }
 
   .hr-manager-tickets__visual {
+    position: relative;
+    z-index: 1;
     justify-content: center;
+    width: 100%;
     order: 2;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
   }
 
   .hr-manager-tickets__img {
     object-position: center;
+    border-radius: clamp(14px, 3.5vw, 20px);
+  }
+}
+
+/* Блок: почему выбирают Smartway — карточки с вырезом под шарик (белый круг + красный круг) */
+.hr-manager-why {
+  --why-surface: #ffffff;
+  padding: clamp(40px, 7vw, 80px) var(--container-padding-x) clamp(48px, 8vw, 96px);
+  background: var(--why-surface);
+  box-sizing: border-box;
+}
+
+.hr-manager-why__inner {
+  width: 100%;
+  max-width: 1860px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.hr-manager-why__heading {
+  margin: 0 auto clamp(32px, 6vw, 48px);
+  max-width: min(100%, 28rem);
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(26px, 3.4vw, 40px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.hr-manager-why__list {
+  margin: 0 auto;
+  padding: clamp(18px, 4vw, 26px) 0 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(32px, 5.5vw, 44px);
+  max-width: min(100%, 36rem);
+}
+
+.hr-manager-why__item {
+  margin: 0;
+}
+
+.hr-manager-why__card {
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+  margin: 0;
+  overflow: visible;
+  --why-ball: clamp(50px, 11.5vw, 58px);
+  padding: calc(var(--why-ball) * 0.5 + clamp(16px, 3.8vw, 24px)) clamp(28px, 6vw, 40px)
+    clamp(32px, 5.5vw, 42px);
+  border-radius: clamp(36px, 8vw, 48px);
+  background: #f2f4f7;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* Круг с белой обводкой — «воротник» и вырез как на макете */
+.hr-manager-why__dot {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--why-ball);
+  height: var(--why-ball);
+  margin: 0;
+  border: clamp(5px, 1.25vw, 8px) solid var(--why-surface, #ffffff);
+  border-radius: 50%;
+  background: #d14d33;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.hr-manager-why__dot-icon {
+  display: block;
+  width: 50%;
+  height: 50%;
+  flex-shrink: 0;
+}
+
+.hr-manager-why__dot-icon--cursor {
+  width: 54%;
+  height: 54%;
+}
+
+.hr-manager-why__dot-icon--ticket {
+  width: 48%;
+  height: 48%;
+}
+
+.hr-manager-why__dot-icon--heart {
+  width: 52%;
+  height: 52%;
+}
+
+.hr-manager-why__title {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 clamp(10px, 2vw, 14px);
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: clamp(18px, 2.2vw, 22px);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #1c2533;
+  text-align: left;
+}
+
+.hr-manager-why__text {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  font-weight: 400;
+  font-size: clamp(15px, 1.45vw, 17px);
+  line-height: 1.45;
+  color: #1c2533;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .hr-manager-why__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 100%;
+    gap: clamp(32px, 4vw, 40px) clamp(24px, 3vw, 32px);
   }
 
-  .hr-manager-tickets__copy {
-    order: 1;
+  .hr-manager-why__heading {
+    max-width: 32rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hr-manager-why__list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
@@ -380,26 +608,157 @@
   color: #3a3a3a;
 }
 
-/* Ряд магазинов: классы app-block__stores / app-block__store из 1style.css (как на главной) */
+/* Кнопки магазинов: цельные «пилюли» (как 1-й макет), не белая карточка + серая капсула */
+.hr-manager-app-promo__stores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(12px, 3vw, 16px);
+  width: 100%;
+}
+
+.hr-manager-app-promo__store {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 3vw, 16px);
+  width: 100%;
+  max-width: min(100%, 320px);
+  min-height: 56px;
+  padding: clamp(14px, 3.5vw, 18px) clamp(20px, 5vw, 28px);
+  border-radius: clamp(24px, 6vw, 30px);
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Golos Text', var(--font-main), sans-serif;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+}
+
+.hr-manager-app-promo__store:hover {
+  opacity: 0.92;
+}
+
+.hr-manager-app-promo__store:active {
+  transform: scale(0.99);
+}
+
+.hr-manager-app-promo__store--apple {
+  background: #333333;
+  color: #ffffff;
+}
+
+.hr-manager-app-promo__store--google {
+  background: #d14d3d;
+  color: #ffffff;
+}
+
+.hr-manager-app-promo__store--gallery {
+  background: #bfc7d9;
+  color: #3a3f4a;
+}
+
+.hr-manager-app-promo__store-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(26px, 7vw, 32px);
+  height: clamp(26px, 7vw, 32px);
+}
+
+.hr-manager-app-promo__store-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hr-manager-app-promo__store-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  line-height: 1.18;
+  min-width: 0;
+}
+
+.hr-manager-app-promo__store-label {
+  font-size: clamp(11px, 2.8vw, 12px);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.hr-manager-app-promo__store-name {
+  margin-top: 2px;
+  font-size: clamp(16px, 4.2vw, 18px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 901px) {
+  .hr-manager-app-promo__stores {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 12px;
+    max-width: 100%;
+  }
+
+  .hr-manager-app-promo__store {
+    flex: 1 1 auto;
+    width: auto;
+    max-width: min(240px, 32%);
+    min-width: min(200px, 100%);
+    padding: 12px 18px;
+    border-radius: clamp(20px, 2.5vw, 26px);
+  }
+}
+
+/* Ряд магазинов (исторически app-block на главной) — на HR используется hr-manager-app-promo__stores */
 
 @media (max-width: 900px) {
+  .hr-manager-app-promo {
+    padding-top: clamp(36px, 8vw, 56px);
+    padding-bottom: clamp(40px, 9vw, 72px);
+  }
+
   .hr-manager-app-promo__inner {
     flex-direction: column-reverse;
     align-items: stretch;
+    gap: clamp(24px, 6vw, 40px);
   }
 
+  /* Текст и кнопки сверху, телефон снизу — без масштаба 1.3, иначе картинка залезает на контент */
   .hr-manager-app-promo__visual {
+    flex: 0 0 auto;
     flex-basis: auto;
+    align-self: center;
     width: 100%;
-    min-height: clamp(260px, 58.5vw, 416px);
+    max-width: min(300px, 82vw);
+    min-height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: visible;
   }
 
   .hr-manager-app-promo__visual img {
+    transform: none;
     transform-origin: center bottom;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
   }
 
   .hr-manager-app-promo__content {
-    max-width: none;
+    flex: 0 0 auto;
+    max-width: min(100%, 26rem);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
   }
 }
 
@@ -511,6 +870,87 @@
 @media (max-width: 560px) {
   .hr-manager-team-benefits__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* HR / мобилка: «Сервис поможет всей команде» — колонка, слева галочки, заголовок секции по центру */
+@media (max-width: 900px) {
+  .page-hr-manager .hr-manager-team-benefits {
+    padding-top: clamp(36px, 8vw, 56px);
+    padding-bottom: clamp(40px, 9vw, 72px);
+  }
+
+  .page-hr-manager .hr-manager-team-benefits__inner {
+    max-width: min(100%, 26rem);
+    margin-inline: auto;
+  }
+
+  .page-hr-manager .hr-manager-team-benefits__heading {
+    align-items: center;
+    text-align: center;
+    margin-bottom: clamp(28px, 6vw, 40px);
+  }
+
+  .page-hr-manager .hr-manager-team-benefits__title {
+    margin-bottom: 10px;
+    font-size: clamp(24px, 6vw, 30px);
+    color: #1a1d1f;
+  }
+
+  .page-hr-manager .hr-manager-team-benefits__pill {
+    transform: rotate(-6deg);
+    transform-origin: center center;
+    padding: 10px 22px;
+    font-size: clamp(14px, 3.6vw, 17px);
+    background: #d44333;
+    color: #ffffff;
+  }
+
+  .page-hr-manager .hr-manager-team-benefits__grid {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(22px, 5vw, 30px);
+    max-width: 100%;
+  }
+
+  .page-hr-manager .hr-manager-team-benefits__item {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    gap: clamp(12px, 3.5vw, 16px);
+  }
+
+  .page-hr-manager .hr-manager-team-benefits__check {
+    width: clamp(30px, 8vw, 36px);
+    height: clamp(30px, 8vw, 36px);
+    margin-top: 1px;
+  }
+
+  .page-hr-manager .hr-manager-team-benefits__check svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .page-hr-manager .hr-manager-team-benefits__body {
+    text-align: left;
+  }
+
+  .page-hr-manager .hr-manager-team-benefits__item-title {
+    margin: 0 0 6px;
+    font-size: clamp(16px, 4.1vw, 18px);
+    font-weight: 700;
+    line-height: 1.25;
+    color: #1a1d1f;
+    text-align: left;
+  }
+
+  .page-hr-manager .hr-manager-team-benefits__item-desc {
+    font-size: clamp(14px, 3.5vw, 15px);
+    font-weight: 400;
+    line-height: 1.45;
+    color: #5f646d;
+    text-align: left;
   }
 }
 
@@ -849,6 +1289,10 @@
   white-space: nowrap;
 }
 
+.accountant-avans-bottom__btn--mobile {
+  display: none;
+}
+
 .accountant-avans-bottom__ui {
   flex-shrink: 0;
   width: 520px;
@@ -910,27 +1354,34 @@
 
 @media (max-width: 768px) {
   .accountant-avans-block {
-    padding: 28px var(--container-padding-x) 40px;
+    padding: 18px 10px 28px;
   }
 
   .accountant-avans-block__inner {
-    padding: 26px 22px 30px;
-    border-radius: 40px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
   }
 
   .accountant-avans-block__title {
-    font-size: 26px;
+    margin-bottom: 14px;
+    font-size: 36px;
+    line-height: 1.04;
+    letter-spacing: -0.03em;
   }
 
   .accountant-avans-block__badge {
-    margin-left: 8px;
-    height: 26px;
-    font-size: 12px;
-    padding: 0 12px;
+    margin-left: 6px;
+    height: 22px;
+    font-size: 10px;
+    padding: 0 10px;
+    border-radius: 6px;
+    transform: translateY(-2px) rotate(-6deg);
   }
 
   .accountant-avans-block__grid {
     grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .accountant-avans-block__grid > .accountant-avans-card:nth-child(1),
@@ -949,14 +1400,18 @@
 
   .accountant-avans-card__wide-inner {
     grid-template-columns: 1fr;
-    padding: 24px 18px 22px;
-    gap: 18px;
+    padding: 16px 14px 14px;
+    gap: 12px;
+    overflow: visible;
   }
 
   .accountant-avans-card__wide-visual {
-    justify-content: center;
+    justify-content: flex-start;
     order: 1;
-    min-height: 140px;
+    min-height: 170px;
+    margin-top: 2px;
+    padding-left: 2px;
+    overflow: visible;
   }
 
   .accountant-avans-card__wide-text {
@@ -964,27 +1419,246 @@
   }
 
   .accountant-avans-card__wide-img {
-    right: 50%;
-    transform: translate(50%, calc(-1 * clamp(14px, 4vw, 36px)));
-    width: min(200px, 55%);
-    max-width: 240px;
+    position: static;
+    right: auto;
+    transform: none;
+    width: min(220px, 78%);
+    max-width: 220px;
     object-fit: contain;
-    object-position: bottom center;
+    object-position: left bottom;
+    margin: 0;
   }
 
   .accountant-avans-bottom {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    margin-top: 8px;
+    padding: 16px 14px 14px;
+    gap: 10px;
   }
 
   .accountant-avans-bottom__card {
     max-width: 100%;
   }
 
+  .accountant-avans-bottom__title {
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 1.1;
+  }
+
+  .accountant-avans-bottom__text {
+    margin-bottom: 0;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
   .accountant-avans-bottom__ui {
     width: 100%;
     max-width: 100%;
-    height: 180px;
+    height: auto;
+    min-height: 86px;
+    border-radius: 12px;
+  }
+
+  .accountant-avans-bottom__ui-img {
+    min-height: 86px;
+    object-fit: contain;
+  }
+
+  .accountant-avans-bottom__btn--desktop {
+    display: none;
+  }
+
+  .accountant-avans-bottom__btn--mobile {
+    display: inline-flex;
+    width: 100%;
+    height: 36px;
+    padding: 0 18px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 480px) {
+  .accountant-avans-card {
+    padding: 14px 12px 12px;
+    border-radius: 16px;
+  }
+
+  .accountant-avans-card__title {
+    margin-bottom: 6px;
+    font-size: 20px;
+    line-height: 1.08;
+  }
+
+  .accountant-avans-card__text {
+    font-size: 12px;
+    line-height: 1.33;
+  }
+
+  .accountant-avans-card__wide-visual {
+    min-height: 156px;
+  }
+
+  .accountant-avans-card__wide-img {
+    width: min(205px, 76%);
+    max-width: 205px;
+  }
+}
+
+/* HR / мобилка: блок «Делегируйте рутину…» — колонка, карточки #F2F4F7 как в макете */
+@media (max-width: 900px) {
+  .page-hr-manager .accountant-avans-block {
+    padding: clamp(28px, 6vw, 48px) var(--container-padding-x) clamp(36px, 7vw, 56px);
+    background: #ffffff;
+  }
+
+  .page-hr-manager .accountant-avans-block__inner {
+    max-width: min(100%, 26rem);
+    margin-inline: auto;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .page-hr-manager .accountant-avans-block__title {
+    margin-bottom: clamp(20px, 5vw, 28px);
+    font-size: clamp(22px, 5.5vw, 28px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: #1a1d1f;
+    text-align: center;
+  }
+
+  .page-hr-manager .accountant-avans-block__grid {
+    gap: clamp(12px, 3.2vw, 16px);
+  }
+
+  .page-hr-manager .accountant-avans-card,
+  .page-hr-manager .accountant-avans-bottom {
+    background: #f2f4f7;
+    border-radius: clamp(22px, 5vw, 30px);
+  }
+
+  .page-hr-manager .accountant-avans-card {
+    padding: clamp(22px, 5.5vw, 28px);
+  }
+
+  .page-hr-manager .accountant-avans-card__title {
+    margin-bottom: clamp(8px, 2vw, 12px);
+    font-size: clamp(17px, 4.2vw, 20px);
+    font-weight: 700;
+    line-height: 1.25;
+    color: #1a1d1f;
+    text-align: left;
+  }
+
+  .page-hr-manager .accountant-avans-card__text {
+    font-size: clamp(14px, 3.8vw, 15px);
+    font-weight: 400;
+    line-height: 1.45;
+    color: #5f646d;
+    text-align: left;
+  }
+
+  .page-hr-manager .accountant-avans-card--wide.accountant-avans-card {
+    padding: 0;
+    overflow: visible;
+  }
+
+  .page-hr-manager .accountant-avans-card__wide-inner {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(22px, 5.5vw, 28px);
+    gap: 0;
+    align-items: stretch;
+  }
+
+  .page-hr-manager .accountant-avans-card__wide-text {
+    order: 0;
+    align-self: stretch;
+    text-align: left;
+  }
+
+  .page-hr-manager .accountant-avans-card__wide-text .accountant-avans-card__title,
+  .page-hr-manager .accountant-avans-card__wide-text .accountant-avans-card__text {
+    text-align: left;
+  }
+
+  .page-hr-manager .accountant-avans-card__wide-visual {
+    order: 1;
+    position: relative;
+    align-self: center;
+    width: 100%;
+    min-height: 0;
+    margin-top: clamp(14px, 3.5vw, 20px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: visible;
+  }
+
+  .page-hr-manager .accountant-avans-card__wide-img {
+    position: static;
+    transform: none;
+    right: auto;
+    width: 100%;
+    max-width: min(280px, 92%);
+    height: auto;
+    object-fit: contain;
+    object-position: center bottom;
+    pointer-events: none;
+  }
+
+  .page-hr-manager .accountant-avans-bottom {
+    margin-top: clamp(12px, 3.2vw, 16px);
+    padding: clamp(22px, 5.5vw, 28px);
+    flex-direction: column;
+    align-items: stretch;
+    gap: clamp(14px, 3.5vw, 20px);
+  }
+
+  .page-hr-manager .accountant-avans-bottom__card {
+    max-width: 100%;
+  }
+
+  .page-hr-manager .accountant-avans-bottom__title {
+    margin-bottom: clamp(8px, 2vw, 12px);
+    font-size: clamp(17px, 4.2vw, 20px);
+    font-weight: 700;
+    line-height: 1.25;
+    color: #1a1d1f;
+    text-align: left;
+  }
+
+  .page-hr-manager .accountant-avans-bottom__text {
+    margin-bottom: 0;
+    font-size: clamp(14px, 3.8vw, 15px);
+    font-weight: 400;
+    line-height: 1.45;
+    color: #5f646d;
+    text-align: left;
+  }
+
+  .page-hr-manager .accountant-avans-bottom__ui {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: clamp(140px, 42vw, 200px);
+    border-radius: clamp(14px, 3.5vw, 20px);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .page-hr-manager .accountant-avans-bottom__ui-img {
+    width: 100%;
+    height: 100%;
+    min-height: clamp(140px, 42vw, 200px);
+    object-fit: cover;
+    object-position: center;
   }
 }
 
@@ -1171,6 +1845,20 @@
   }
 }
 
+/* HR — форма try-free: мобильный заголовок скрыт на десктопе; визуал — третий ребёнок в сетке (слева снизу под текстом при 2 колонках) */
+.page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__title-text--mobile {
+  display: none;
+}
+
+.page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__layout--hr > .tm-try-free-cta__visual {
+  margin-top: 28px;
+  justify-content: flex-start;
+}
+
+.page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__layout--hr > .tm-try-free-cta__visual .tm-try-free-cta__illustration {
+  object-position: left bottom;
+}
+
 /* Блок «Интересные материалы по теме» (как на макете: серые превью, скругление) */
 .page-hr-manager .tm-materials--hr-interesting {
   padding-top: clamp(32px, 5vw, 56px);
@@ -1189,4 +1877,793 @@
 .page-hr-manager .tm-materials--hr-interesting .tm-materials-card__text {
   font-weight: 500;
   font-size: clamp(14px, 1.35vw, 16px);
+}
+
+/* Блок «Бесплатная консультация» на HR: макет с бейджем, списком и карточкой звонка */
+.page-hr-manager .tm-consult-cta--hr .tm-consult-cta__panel {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.page-hr-manager .tm-consult-cta--hr .tm-consult-cta__badge--hr {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  text-align: center;
+}
+
+.page-hr-manager .tm-consult-cta--hr .tm-consult-cta__badge-frame {
+  display: inline-block;
+  box-sizing: border-box;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+
+@media (min-width: 901px) {
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__panel {
+    padding: clamp(28px, 4vw, 44px);
+    border-radius: clamp(36px, 4vw, 48px);
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__badge--hr {
+    align-self: center;
+    margin: 0 auto clamp(20px, 3vw, 28px);
+    border: none;
+    padding: 0;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__badge-frame {
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__badge-line {
+    display: inline;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__badge-line:first-child::after {
+    content: '\00a0';
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr);
+    grid-template-rows: auto auto;
+    gap: clamp(22px, 3.5vw, 32px) clamp(28px, 4vw, 48px);
+    align-items: start;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__visual--hr {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    width: 100%;
+    max-width: min(100%, 340px);
+    margin: 0;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__content--hr {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__btn--hr {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+    width: auto;
+    min-width: min(100%, 300px);
+    max-width: 100%;
+    margin: 0;
+    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 26px;
+    border-radius: 50px;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__btn-label {
+    text-align: inherit;
+    flex: none;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__list {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__panel {
+    padding: clamp(22px, 5vw, 30px);
+    border-radius: clamp(32px, 8vw, 48px);
+    background: #eff1f5;
+  }
+
+  /* Крупная белая «пилюля» как на макете: две строки, caps, на всю ширину */
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__badge--hr {
+    align-self: stretch;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 clamp(20px, 5vw, 28px);
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__badge-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: clamp(18px, 4.5vw, 26px) clamp(20px, 5vw, 28px);
+    border: none;
+    border-radius: 100px;
+    background: #ffffff;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    font-family: 'Golos Text', var(--font-main), sans-serif;
+    font-weight: 700;
+    font-size: clamp(15px, 4.1vw, 18px);
+    line-height: 1.18;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #1a1d1f;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__badge-line {
+    display: block;
+    text-align: center;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__badge-line:first-child::after {
+    content: none;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__layout {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(22px, 5.5vw, 32px);
+    align-items: stretch;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__content--hr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__title {
+    margin: 0 0 clamp(12px, 3vw, 16px);
+    max-width: min(100%, 22rem);
+    font-size: clamp(21px, 5.2vw, 26px);
+    text-align: center;
+    color: #1a1d1f;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__lead {
+    margin: 0 0 clamp(16px, 4vw, 22px);
+    max-width: min(100%, 24rem);
+    text-align: center;
+    font-weight: 400;
+    color: #3a3f4a;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__lead strong {
+    font-weight: 700;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__list {
+    margin: 0;
+    width: 100%;
+    max-width: min(100%, 26rem);
+    align-self: center;
+    gap: clamp(14px, 3.5vw, 18px);
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__item {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 12px;
+    font-size: clamp(14px, 3.6vw, 15px);
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__item-text {
+    text-align: left;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__visual--hr {
+    align-items: center;
+    width: 100%;
+    max-width: min(340px, 92%);
+    margin: 0 auto;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__call {
+    margin: 0 auto;
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Панель звонка поверх нижней части фото, как в макете */
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__call-bar {
+    display: flex;
+    padding: 12px 16px 20px;
+    gap: 12px;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__call-media {
+    overflow: hidden;
+    border-radius: 0;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__call-img {
+    border-radius: 0;
+  }
+
+  /* Красная CTA перекрывает низ карточки примерно наполовину */
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__btn--hr {
+    display: inline-flex;
+    width: 100%;
+    max-width: min(340px, 92%);
+    margin-top: clamp(-44px, -9vw, -30px);
+    margin-bottom: clamp(10px, 2.5vw, 18px);
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 12px 12px clamp(22px, 5vw, 28px);
+    gap: 12px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    font-size: clamp(13px, 3.4vw, 15px);
+    color: #ffffff;
+    background: #d94f3b;
+    min-height: 56px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__btn-label {
+    text-align: left;
+    flex: 1;
+  }
+
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__btn--hr:hover {
+    background: #c73d2a;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hr-manager .tm-consult-cta--hr .tm-consult-cta__btn--hr {
+    max-width: min(340px, 92%);
+  }
+}
+
+/* Полоса логотипов на HR: мобильный макет — яркий красный фон, белые лого, горизонтальный скролл */
+@media (max-width: 768px) {
+  .page-hr-manager .trust-strip-block--hr.trust-strip-block {
+    padding: clamp(16px, 4vw, 22px) 0;
+    background: #e33e2b;
+  }
+
+  .page-hr-manager .trust-strip-block--hr .trust-strip-block__inner {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0 max(16px, env(safe-area-inset-right)) 0 max(16px, env(safe-area-inset-left));
+    box-sizing: border-box;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  .page-hr-manager .trust-strip-block--hr .trust-strip-block__inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .page-hr-manager .trust-strip-block--hr .trust-strip-block__logos {
+    display: block;
+    width: auto;
+    max-width: none;
+    height: clamp(36px, 9.5vw, 44px);
+    max-height: none;
+    margin: 0;
+    object-fit: contain;
+    object-position: left center;
+    filter: brightness(0) invert(1);
+  }
+}
+
+/* Карточки 1С / Минцифры / Сколково на HR: мобильный макет — как в макете Figma/SVG (375): фон #E0E2EA, карточки #EDEFF4, rx 30, отступ поля 10px, шаг 20px */
+@media (max-width: 768px) {
+  .page-hr-manager .trust-credentials-block--hr.trust-credentials-block {
+    padding: 21px max(10px, env(safe-area-inset-left)) 21px max(10px, env(safe-area-inset-right));
+    background: #e0e2ea;
+  }
+
+  .page-hr-manager .trust-credentials-block--hr .trust-credentials-block__inner {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .page-hr-manager .trust-credentials-block--hr .trust-credentials-block__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .page-hr-manager .trust-credentials-block--hr .trust-credentials-block__card {
+    width: 100%;
+    padding: 32px 40px;
+    background: #edeff4;
+    border-radius: 30px;
+    box-shadow: none;
+    gap: 24px;
+    align-items: flex-start;
+    box-sizing: border-box;
+  }
+
+  .page-hr-manager .trust-credentials-block--hr .trust-credentials-block__logo {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: min(160px, 72%);
+    max-height: 62px;
+    margin: 0;
+    object-fit: contain;
+    object-position: left top;
+    opacity: 1;
+  }
+
+  .page-hr-manager .trust-credentials-block--hr .trust-credentials-block__logo--sk {
+    max-width: min(140px, 72%);
+    max-height: 71px;
+    margin: 0;
+  }
+
+  .page-hr-manager .trust-credentials-block--hr .trust-credentials-block__text {
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    text-align: left;
+    font-family: 'Golos Text', var(--font-main), system-ui, sans-serif;
+    font-weight: 500;
+    font-size: clamp(16px, 4.4vw, 18px);
+    line-height: 1.35;
+    letter-spacing: 0;
+    color: #3a3a3a;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page-hr-manager .trust-credentials-block--hr .trust-credentials-block__text--split .trust-credentials-block__text-line {
+    display: block;
+  }
+}
+
+@media (max-width: 360px) {
+  .page-hr-manager .trust-credentials-block--hr .trust-credentials-block__card {
+    padding: 28px clamp(20px, 5vw, 40px);
+  }
+}
+
+/* Статистика «7 600+» на HR: мобильный макет — белый фон, слева, капс, плотная вёрстка */
+@media (max-width: 768px) {
+  .page-hr-manager .companies-stat-block--hr.companies-stat-block {
+    padding: clamp(28px, 6vw, 44px) var(--container-padding-x) clamp(32px, 7vw, 48px);
+    background: #ffffff;
+  }
+
+  .page-hr-manager .companies-stat-block--hr .companies-stat-block__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: clamp(6px, 1.8vw, 10px);
+  }
+
+  .page-hr-manager .companies-stat-block--hr .companies-stat-block__value {
+    margin: 0;
+    font-weight: 800;
+    font-size: clamp(50px, 13vw, 72px);
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    color: #222222;
+    text-align: left;
+  }
+
+  .page-hr-manager .companies-stat-block--hr .companies-stat-block__caption {
+    margin: 0;
+    max-width: 20em;
+    font-weight: 700;
+    font-size: clamp(12px, 3.25vw, 14px);
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #222222;
+    text-align: left;
+  }
+}
+
+/* Мобилка: текст по центру по всей странице HR (как в макетах) */
+@media (max-width: 768px) {
+  .page-hr-manager .hr-manager-hero__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .page-hr-manager .hr-manager-hero__title,
+  .page-hr-manager .hr-manager-hero__subtitle {
+    text-align: center;
+  }
+
+  .page-hr-manager .hr-manager-hero__cta {
+    align-self: stretch;
+    justify-content: center;
+    max-width: min(100%, 360px);
+  }
+
+  .page-hr-manager .accountant-avans-block__title {
+    text-align: center;
+  }
+
+  .page-hr-manager .accountant-avans-card__title,
+  .page-hr-manager .accountant-avans-card__text,
+  .page-hr-manager .accountant-avans-bottom__title,
+  .page-hr-manager .accountant-avans-bottom__text,
+  .page-hr-manager .accountant-avans-card__wide-text {
+    text-align: left;
+  }
+
+  .page-hr-manager .hr-manager-app-promo__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .page-hr-manager .hr-manager-app-promo__title,
+  .page-hr-manager .hr-manager-app-promo__text {
+    text-align: center;
+    max-width: none;
+  }
+
+  .page-hr-manager .hr-manager-app-promo__content .hr-manager-app-promo__stores {
+    align-items: center;
+  }
+
+  /* Баннер «эксперты / телеграм» — мобильный макет (фото 1): фон #E0E2EA, сверху заголовок+подзаголовок+кнопки, снизу телефон с обрезкой и волнами */
+  .page-hr-manager .hr-manager-experts-banner {
+    padding: 16px max(10px, env(safe-area-inset-left)) 28px max(10px, env(safe-area-inset-right));
+    box-sizing: border-box;
+  }
+
+  .page-hr-manager .hr-manager-experts-banner__wrap {
+    max-width: none;
+  }
+
+  .page-hr-manager .hr-manager-experts-banner__shell {
+    position: relative;
+    background: #e0e2ea;
+    border-radius: clamp(40px, 11vw, 56px);
+    overflow: hidden;
+    padding: clamp(28px, 7vw, 40px) clamp(18px, 5vw, 26px) 0;
+    box-sizing: border-box;
+  }
+
+  .page-hr-manager .hr-manager-experts-banner__shell::before {
+    opacity: 0.2;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200' fill='none'%3E%3Cpath stroke='%2394a3b8' stroke-width='1.1' d='M-20 88c50-26 100-26 150 0s100 26 150 0'/%3E%3Cpath stroke='%23a8b4cc' stroke-width='1' opacity='.65' d='M-20 120c58-18 116-18 174 0s116 18 174 0'/%3E%3Cpath stroke='%23b8c2d6' stroke-width='1' opacity='.45' d='M-20 152c66-12 132-12 198 0'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 50% calc(100% - 12px);
+    background-size: min(125%, 440px) auto;
+  }
+
+  .page-hr-manager .hr-manager-experts-banner__layout {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .page-hr-manager .hr-manager-experts-banner__copy {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  .page-hr-manager .hr-manager-experts-banner__title--multiline .hr-manager-experts-banner__title-line {
+    display: block;
+  }
+
+  .page-hr-manager .hr-manager-experts-banner__lead--multiline .hr-manager-experts-banner__lead-line {
+    display: block;
+  }
+
+  .page-hr-manager .hr-manager-experts-banner__title {
+    text-align: center;
+    margin: 0 auto clamp(14px, 3.5vw, 20px);
+    max-width: 15em;
+    color: #2d2d2d;
+    font-size: clamp(20px, 5.5vw, 26px);
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  .page-hr-manager .hr-manager-experts-banner__lead {
+    text-align: center;
+    margin: 0 auto clamp(22px, 5.5vw, 30px);
+    max-width: 18em;
+    color: #2d2d2d;
+    font-size: clamp(14px, 3.7vw, 16px);
+    line-height: 1.4;
+    font-weight: 400;
+  }
+
+  .page-hr-manager .hr-manager-experts-banner__actions {
+    justify-content: stretch;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: none;
+    gap: 10px;
+    margin-bottom: clamp(8px, 2.5vw, 16px);
+  }
+
+  .page-hr-manager .hr-manager-experts-banner__btn {
+    width: 100%;
+    min-height: 54px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 999px;
+  }
+
+  .page-hr-manager .hr-manager-experts-banner__btn--primary {
+    background: #d64c3e;
+    border-color: transparent;
+    color: #ffffff;
+  }
+
+  .page-hr-manager .hr-manager-experts-banner__btn--primary:hover {
+    background: #c44436;
+    color: #ffffff;
+  }
+
+  .page-hr-manager .hr-manager-experts-banner__btn--secondary {
+    background: #ffffff;
+    color: #2d2d2d;
+    border: 2px solid transparent;
+    box-shadow: none;
+  }
+
+  .page-hr-manager .hr-manager-experts-banner__btn--secondary:hover {
+    background: #f5f5f7;
+    color: #2d2d2d;
+    border-color: transparent;
+  }
+
+  .page-hr-manager .hr-manager-experts-banner__layout > .hr-manager-experts-banner__visual {
+    order: 1;
+    position: relative;
+    top: auto;
+    right: auto;
+    grid-column: auto;
+    grid-row: auto;
+    width: min(88%, 300px);
+    max-width: 100%;
+    margin: clamp(4px, 1.5vw, 12px) auto 0;
+    margin-bottom: clamp(-48px, -14vw, -28px);
+    justify-self: center;
+    z-index: 0;
+    flex-shrink: 0;
+    pointer-events: auto;
+  }
+
+  .page-hr-manager .hr-manager-experts-banner__visual img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center bottom;
+  }
+
+  /* Форма «Попробуйте» на HR — мобильный макет: красная оболочка #D13E2E, заголовок сверху, белая карточка, кнопка тёмная, графика снизу */
+  .page-hr-manager .tm-try-free-cta--hr.tm-try-free-cta {
+    padding: 16px max(10px, env(safe-area-inset-left)) 48px max(10px, env(safe-area-inset-right));
+    background: transparent;
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__inner {
+    max-width: none;
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__shell {
+    background: #d13e2e;
+    border-radius: clamp(36px, 10vw, 52px);
+    padding: clamp(24px, 6.5vw, 34px) clamp(14px, 4vw, 20px) clamp(20px, 5vw, 28px);
+    box-sizing: border-box;
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__layout--hr {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: clamp(18px, 4.5vw, 24px);
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__title-text--desktop {
+    display: none;
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__title-text--mobile {
+    display: block;
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__lead {
+    display: none;
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__title {
+    margin: 0 auto;
+    max-width: 15em;
+    font-size: clamp(22px, 6.2vw, 28px);
+    line-height: 1.18;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__right {
+    width: 100%;
+    text-align: left;
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__form {
+    text-align: left;
+    max-width: none;
+    margin: 0;
+    padding: clamp(22px, 5.5vw, 28px) clamp(18px, 4.5vw, 22px) clamp(20px, 5vw, 24px);
+    border-radius: clamp(26px, 7vw, 32px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__field {
+    position: relative;
+    text-align: left;
+    margin-bottom: 14px;
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__field:not(.tm-try-free-cta__field--dropdown) .tm-try-free-cta__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__field--dropdown .tm-try-free-cta__label {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0 0 8px;
+    clip: auto;
+    overflow: visible;
+    white-space: normal;
+    text-align: left;
+    font-size: 13px;
+    color: #999999;
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__input,
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__select {
+    text-align: left;
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__consent {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    margin: 10px 0 18px;
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__consent-label {
+    text-align: left;
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__submit {
+    background: #1a1a1a;
+    color: #ffffff;
+    border-radius: 999px;
+    text-transform: none;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0;
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__submit:hover {
+    background: #2d2d2d;
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__legal {
+    text-align: center;
+    color: #888888;
+    margin-top: 12px;
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__visual {
+    margin-top: clamp(4px, 1.5vw, 12px);
+    justify-content: center;
+  }
+
+  .page-hr-manager .tm-try-free-cta--hr .tm-try-free-cta__illustration {
+    max-width: min(100%, 340px);
+    margin-left: auto;
+    margin-right: auto;
+    object-position: center bottom;
+  }
+
+  .page-hr-manager .faq-accordion-block__heading {
+    text-align: center;
+  }
+
+  .page-hr-manager .faq-accordion__title {
+    text-align: center;
+  }
+
+  .page-hr-manager .faq-accordion__content {
+    text-align: center;
+  }
+
+  .page-hr-manager .tm-materials--hr-interesting .tm-materials__heading {
+    text-align: center;
+  }
+
+  .page-hr-manager .tm-materials--hr-interesting .tm-materials-card__text {
+    text-align: center;
+  }
 }
