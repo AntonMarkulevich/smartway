@@ -143,6 +143,9 @@
                 <p class="aviaticket-split__text">
                   В сервисе Smartway вы за пару минут сможете подобрать, согласовать и оплатить авиабилеты для командировок по безналичному расчёту. А также обеспечить контроль расходов, прозрачную отчётность и удобство для бухгалтерии&nbsp;— в одном окне.
                 </p>
+                <div class="aviaticket-split__visual">
+                  <img src="img/tabletavia.png" class="aviaticket-split__img" width="640" height="420" alt="Интерфейс Smartway на планшете и в мобильном приложении: поиск авиабилетов и заявки" loading="lazy" decoding="async">
+                </div>
                 <ul class="aviaticket-split__badges">
                   <li class="aviaticket-split__badge">
                     <img src="img/mclogo.png" alt="" class="aviaticket-split__badge-icon" width="44" height="44" loading="lazy" decoding="async">
@@ -157,9 +160,6 @@
                     <span class="aviaticket-split__badge-text">Резиденты технопарка «Сколково»</span>
                   </li>
                 </ul>
-              </div>
-              <div class="aviaticket-split__visual">
-                <img src="img/tabletavia.png" class="aviaticket-split__img" width="640" height="420" alt="Интерфейс Smartway на планшете и в мобильном приложении: поиск авиабилетов и заявки" loading="lazy" decoding="async">
               </div>
             </div>
             <div class="aviaticket-split__cta-wrap">
@@ -337,18 +337,24 @@
           </div>
         </section>
 
-        <section class="zhd-services-window" aria-labelledby="zhd-services-window-title">
+        <section class="zhd-services-window zhd-services-window--aviaticket" aria-labelledby="zhd-services-window-title">
           <h2 id="zhd-services-window-title" class="zhd-services-window__title">
             <span class="zhd-services-window__title-line zhd-services-window__title-line--dark">Все услуги для командировок —</span>
             <span class="zhd-services-window__title-line zhd-services-window__title-line--accent">в одном окне</span>
           </h2>
           <div class="zhd-services-window__grid">
-            <article class="zhd-services-window__card zhd-services-window__card--outline">
+            <article class="zhd-services-window__card zhd-services-window__card--outline zhd-services-window__card--hotels">
               <div class="zhd-services-window__head">
                 <h3 class="zhd-services-window__card-title">Бронирование отелей</h3>
               </div>
-              <div class="zhd-services-window__media">
-                <img src="img/zhdusl1.png" class="zhd-services-window__img" width="400" height="220" alt="Бронирование отеля: карточка с рейтингом и выбором в Smartway" loading="lazy" decoding="async">
+              <div class="zhd-services-window__media zhd-services-window__media--hotels">
+                <div class="zhd-services-window__media-main">
+                  <img src="img/zhdusl1.png" class="zhd-services-window__img" width="400" height="220" alt="Бронирование отеля: карточка с рейтингом и выбором в Smartway" loading="lazy" decoding="async">
+                </div>
+                <div class="zhd-services-window__hotel-badges" aria-hidden="true">
+                  <span class="zhd-services-window__hotel-badge zhd-services-window__hotel-badge--plus">+</span>
+                  <span class="zhd-services-window__hotel-badge zhd-services-window__hotel-badge--count">×2</span>
+                </div>
               </div>
             </article>
             <div class="aviaticket-services-main-mosaic" aria-label="Дополнительные услуги в Smartway">
@@ -359,12 +365,6 @@
                     <img src="img/services/aero-ticket.svg" alt="" class="services__badge-icon" width="40" height="40" decoding="async">
                   </div>
                 </div>
-                <div class="services__card services__card--vizovaya-podderzhka">
-                  <div class="services__card-head">
-                    <h3 class="services__card-title">Визовая поддержка</h3>
-                    <img src="img/services/visa-check.svg" alt="" class="services__badge-icon" width="40" height="40" decoding="async">
-                  </div>
-                </div>
                 <div class="services__card services__card--transfery">
                   <div class="services__transfer-top">
                     <div class="services__card-head">
@@ -372,11 +372,19 @@
                       <img src="img/services/transfer-arrows.svg" alt="" class="services__badge-icon" width="40" height="40" decoding="async">
                     </div>
                   </div>
-                  <div class="services__transfer-vip">
-                    <h3 class="services__card-title">VIP-залы</h3>
+                  <div class="services__transfer-bottom">
+                    <div class="services__transfer-vip">
+                      <h3 class="services__card-title">VIP-залы</h3>
+                    </div>
+                    <div class="services__transfer-car">
+                      <img src="img/services/transfer-car.png" alt="" class="services__img services__img--car" width="210" height="120" loading="lazy" decoding="async">
+                    </div>
                   </div>
-                  <div class="services__transfer-car">
-                    <img src="img/services/transfer-car.png" alt="" class="services__img services__img--car" width="210" height="120" loading="lazy" decoding="async">
+                </div>
+                <div class="services__card services__card--vizovaya-podderzhka">
+                  <div class="services__card-head">
+                    <h3 class="services__card-title">Визовая<br>поддержка</h3>
+                    <img src="img/services/visa-check.svg" alt="" class="services__badge-icon" width="40" height="40" decoding="async">
                   </div>
                 </div>
               </div>
@@ -385,7 +393,8 @@
               <div class="zhd-services-window__head">
                 <h3 class="zhd-services-window__card-title">Такси</h3>
               </div>
-              <div class="zhd-services-window__media">
+              <div class="zhd-services-window__media zhd-services-window__media--taxi">
+                <span class="zhd-services-window__taxi-go-badge" aria-hidden="true">Go</span>
                 <img src="img/zhdusl3.png" class="zhd-services-window__img zhd-services-window__img--taxi" width="400" height="200" alt="Заказ такси в поездке через Smartway" loading="lazy" decoding="async">
               </div>
             </article>
@@ -479,16 +488,6 @@
           </div>
         </section>
 
-        <section class="aviaticket-bottom-cta" aria-label="Попробовать Smartway бесплатно">
-          <a href="registration.html" class="aviaticket-bottom-cta__btn">
-            <span class="aviaticket-bottom-cta__label">Попробовать бесплатно</span>
-            <span class="aviaticket-bottom-cta__icon" aria-hidden="true">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M1 7h12M8 1l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-          </a>
-        </section>
         <section class="zhd-connect" aria-labelledby="zhd-connect-title">
           <h2 id="zhd-connect-title" class="zhd-connect__title">Подключение к сервису</h2>
           <div class="zhd-connect__grid">
@@ -496,20 +495,31 @@
               <div class="zhd-connect__num-wrap" aria-hidden="true">
                 <span class="zhd-connect__num">1</span>
               </div>
-              <p class="zhd-connect__text">Отправьте запрос на активацию личного кабинета</p>
+              <p class="zhd-connect__text">Оставьте заявку на подключение к сервису и выберите подходящий тариф</p>
             </article>
             <article class="zhd-connect__card">
               <div class="zhd-connect__num-wrap" aria-hidden="true">
                 <span class="zhd-connect__num">2</span>
               </div>
-              <p class="zhd-connect__text">Оформите договор, чтобы получить доступ к сервису</p>
+              <p class="zhd-connect__text">Заключите договор с сервисом и получите доступ к личному кабинету</p>
             </article>
             <article class="zhd-connect__card">
               <div class="zhd-connect__num-wrap" aria-hidden="true">
                 <span class="zhd-connect__num">3</span>
               </div>
-              <p class="zhd-connect__text">Выбирайте и оплачивайте ж/д билеты и другие услуги для командировок</p>
+              <p class="zhd-connect__text">Переходите к выбору и покупке билетов в сервисе</p>
             </article>
+          </div>
+          <p class="zhd-connect__note">*точное время резерва зависит от условий конкретной авиакомпании</p>
+          <div class="zhd-connect__cta-wrap">
+            <a href="registration.html" class="zhd-connect__cta" aria-label="Проверить выгоду">
+              <span class="zhd-connect__cta-label">Проверить выгоду</span>
+              <span class="zhd-connect__cta-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 7h12M8 1l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
           </div>
         </section>
 
@@ -530,12 +540,12 @@
                 </div>
                 <div class="zhd-lead-form__field">
                   <label for="zhd-lead-company" class="zhd-lead-form__sr-only">Название компании (обязательно)</label>
-                  <input type="text" id="zhd-lead-company" name="company" class="zhd-lead-form__input" required autocomplete="organization" placeholder="Название компании*">
+                  <input type="text" id="zhd-lead-company" name="company" class="zhd-lead-form__input" required autocomplete="organization" placeholder="Название компании">
                 </div>
                 <div class="zhd-lead-form__field">
                   <label for="zhd-lead-trips" class="zhd-lead-form__label">Командировок в компании*</label>
                   <select id="zhd-lead-trips" name="trips" class="zhd-lead-form__input zhd-lead-form__select" required>
-                    <option value="">—</option>
+                    <option value="" selected>Затрудняюсь ответить</option>
                     <option value="1-10">1–10</option>
                     <option value="11-50">11–50</option>
                     <option value="51-200">51–200</option>
@@ -544,7 +554,7 @@
                 </div>
                 <div class="zhd-lead-form__field">
                   <label for="zhd-lead-email" class="zhd-lead-form__sr-only">Корпоративная почта (обязательно)</label>
-                  <input type="email" id="zhd-lead-email" name="email" class="zhd-lead-form__input" required autocomplete="email" placeholder="Корпоративная почта*">
+                  <input type="email" id="zhd-lead-email" name="email" class="zhd-lead-form__input" required autocomplete="email" placeholder="Корпоративная почта">
                 </div>
                 <div class="zhd-lead-form__field">
                   <label for="zhd-lead-phone" class="zhd-lead-form__sr-only">Телефон (обязательно)</label>
@@ -553,9 +563,9 @@
                 <label class="zhd-lead-form__toggle">
                   <input type="checkbox" id="zhd-lead-consent" name="ads_consent" class="zhd-lead-form__toggle-input" required>
                   <span class="zhd-lead-form__toggle-ui" aria-hidden="true"></span>
-                  <span class="zhd-lead-form__toggle-text">Даю согласие на получение сообщений рекламного и информационного характера</span>
+                  <span class="zhd-lead-form__toggle-text">Согласен(на) получать полезные материалы и новости на почту</span>
                 </label>
-                <button type="submit" class="zhd-lead-form__submit">Оставить заявку</button>
+                <button type="submit" class="zhd-lead-form__submit">Отправить заявку</button>
                 <p class="zhd-lead-form__footnote">Нажав кнопку, вы продолжаете <a href="offer.html" class="zhd-lead-form__footnote-link">соглашение об обработке цифровых данных</a> и принимаете условия <a href="confidence-page.html" class="zhd-lead-form__footnote-link">политики обработки цифровых данных</a></p>
               </form>
             </div>
@@ -662,136 +672,140 @@
 
       </main>
 
-      <footer class="footer">
-        <div class="footer__main">
-          <div class="footer__inner">
-            <div class="footer__col footer__col--info">
-              <div class="footer__col-head">
-                <img src="img/footerImages/Container.png" alt="Smartway" class="footer__logo" width="170" height="40" loading="lazy" decoding="async">
-              </div>
-              <div class="footer__col-body">
-                <div class="footer__contacts">
-                  <p class="footer__contact footer__contact--strong"><a href="tel:+78007751428">8&nbsp;800&nbsp;775&nbsp;14&nbsp;28</a></p>
-                  <p class="footer__contact footer__contact--strong"><a href="mailto:hello@smartway.today">hello@smartway.today</a></p>
-                  <div class="footer__press">
-                    <p class="footer__muted-label">Пресс-служба</p>
-                    <p class="footer__contact footer__contact--strong"><a href="mailto:pr@smartway.today">pr@smartway.today</a></p>
-                  </div>
-                  <p class="footer__contact">
-                    <a href="contract-hotel.html" class="footer__link-external">Для отелей по вопросам контрактинга<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
-                  </p>
+        <footer class="footer">
+            <div class="footer__main">
+                <div class="footer__inner">
+                    <div class="footer__col footer__col--info">
+                        <div class="footer__col-head">
+                            <img src="img/footerImages/Container.png" alt="Smartway" class="footer__logo" width="170" height="40" loading="lazy" decoding="async">
+                        </div>
+                        <div class="footer__col-body">
+                            <div class="footer__contacts">
+                                <p class="footer__contact footer__contact--strong"><a href="tel:+78007751428">8&nbsp;800&nbsp;775&nbsp;14&nbsp;28</a></p>
+                                <p class="footer__contact footer__contact--strong"><a href="mailto:hello@smartway.today">hello@smartway.today</a></p>
+                                <div class="footer__press">
+                                    <p class="footer__muted-label">Пресс-служба</p>
+                                    <p class="footer__contact footer__contact--strong"><a href="mailto:pr@smartway.today">pr@smartway.today</a></p>
+                                </div>
+                                <p class="footer__contact">
+                                    <a href="#" class="footer__link-external">Для отелей по вопросам контрактинга<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
+                                </p>
+                            </div>
+                            <p class="footer__address">125124, г.&nbsp;Москва, 5-я&nbsp;ул.&nbsp;Ямского Поля, д.&nbsp;5, стр.1, пом.&nbsp;2/11</p>
+                            <div class="footer__legal">
+                                <p>ООО «Смартвэй», 2024</p>
+                                <p>ИНН 7714379242</p>
+                                <p>ОГРН 1167746277247</p>
+                                <p>ОКВЭД 62.01</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__col footer__col--scenarios">
+                        <div class="footer__col-head">
+                            <div class="footer__badges">
+              <span class="footer__badge-pill">
+                <img src="img/footerImages/Container-1.png" alt="ГКП" class="footer__badge footer__badge--in-pill" width="80" height="42" loading="lazy" decoding="async">
+              </span>
+                                <img src="img/footerImages/sk-uchastnik1.png.webp.png" alt="Участник Сколково" class="footer__badge" width="100" height="42" loading="lazy" decoding="async">
+                            </div>
+                        </div>
+                        <div class="footer__col-body">
+                            <h3 class="footer__heading">Сценарии</h3>
+                            <ul class="footer__list">
+                                <li><a href="#">Для руководителя</a></li>
+                                <li><a href="#">Для бухгалтера</a></li>
+                                <li><a href="#">Для организатора командировок</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__col-body">
+                            <h3 class="footer__heading">Возможности</h3>
+                            <ul class="footer__list">
+                                <li><a href="#">Поиск авиабилетов</a></li>
+                                <li><a href="#">Поиск ж/д билетов</a></li>
+                                <li><a href="#">Поиск отелей</a></li>
+                                <li><a href="#">Такси</a></li>
+                                <li><a href="#">Интеграция с 1С</a></li>
+                                <li><a href="#">Согласование</a></li>
+                                <li><a href="#">Тревел-политики</a></li>
+                                <li><a href="#" class="footer__list-link--accent">Smartway Отпуск</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__col footer__col--capabilities">
+                        <div class="footer__col-head">
+                            <div class="footer__socials">
+                                <a href="#" class="footer__social footer__social--round" aria-label="ВКонтакте"><img src="img/footer-icon-vk.svg" alt="" width="20" height="20"></a>
+                                <a href="#" class="footer__social footer__social--round" aria-label="VC.ru"><img src="img/footer-icon-vc.svg" alt="" class="footer__social-img--vc" width="22" height="16"></a>
+
+                            </div>
+                        </div>
+
+                        <div class="footer__channel-wrap">
+                            <a href="#" class="footer__channel-pill">
+                                <img src="img/footer-icon-tg.svg" alt="" class="footer__channel-icon" width="18" height="18">
+                                <span class="footer__channel-label">Канал «Командировки.Сегодня»</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__col footer__col--useful">
+                        <div class="footer__col-head footer__col-head--spacer" aria-hidden="true"></div>
+                        <div class="footer__col-body">
+                            <h3 class="footer__heading">Полезное</h3>
+                            <ul class="footer__list">
+                                <li><a href="#">Вопрос-ответ</a></li>
+                                <li><a href="#">Блог</a></li>
+                                <li><a href="#">Такси в командировке</a></li>
+                                <li><a href="#">Бесплатная консультация</a></li>
+                                <li><a href="#">Оформление командировок</a></li>
+                                <li><a href="#">Реферальная программа Smartway</a></li>
+                                <li><a href="#">Аудит командировок</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__col footer__col--about">
+                        <div class="footer__col-head">
+                            <a href="1index.html#consult" class="footer__btn">Записаться на консультацию<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
+                        </div>
+                        <div class="footer__col-body">
+                            <h3 class="footer__heading">О компании</h3>
+                            <ul class="footer__list footer__list--compact">
+                                <li><a href="about.html">Общая информация</a></li>
+                                <li><a href="#">Работа в Smartway</a></li>
+                                <li><a href="rekvizity.html">Реквизиты</a></li>
+                                <li><a href="#">Оферта</a></li>
+                                <li><a href="contacts.html">Контакты</a></li>
+                                <li><a href="#">Условия доступа к личным поездкам</a></li>
+                                <li><a href="#">Пользовательское соглашение</a></li>
+                                <li><a href="#">Политика конфиденциальности</a></li>
+                                <li><a href="#">Правила использования ПЭП</a></li>
+                                <li><a href="#">Гарантия лучшей цены</a></li>
+                                <li><a href="#">Аккредитованная IT-компания</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <p class="footer__address">125124, г.&nbsp;Москва, 5-я&nbsp;ул.&nbsp;Ямского Поля, д.&nbsp;5, стр.1, пом.&nbsp;2/11</p>
-                <div class="footer__legal">
-                  <p>ООО «Смартвэй», 2024</p>
-                  <p>ИНН 7714379242</p>
-                  <p>ОГРН 1167746277247</p>
-                  <p>ОКВЭД 62.01</p>
+            </div>
+            <section class="footer-newsletter" aria-labelledby="footer-newsletter-title">
+                <div class="footer-newsletter__inner">
+                    <p class="footer-newsletter__lead" id="footer-newsletter-title">
+                        <span class="footer-newsletter__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#E4232C" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.35l-8 4.94-8-4.94V6l8 4.94L20 6zm0 12H4V9.06l8 4.94 8-4.94V18z"/></svg></span>
+                        <span class="footer-newsletter__text">Подпишитесь на рассылку полезных материалов Smartway</span>
+                    </p>
+                    <form class="footer-newsletter__form" action="#" method="post">
+                        <label class="footer-newsletter__sr-only" for="footer-newsletter-email">Корпоративная почта</label>
+                        <input type="email" id="footer-newsletter-email" name="email" class="footer-newsletter__input" placeholder="Корпоративная почта" autocomplete="email" required>
+                        <button type="submit" class="footer-newsletter__submit">Подписаться</button>
+                    </form>
                 </div>
-              </div>
-            </div>
-            <div class="footer__col footer__col--scenarios">
-              <div class="footer__col-head">
-                <div class="footer__badges">
-                  <span class="footer__badge-pill">
-                    <img src="img/footerImages/Container-1.png" alt="ГКП" class="footer__badge footer__badge--in-pill" width="80" height="42" loading="lazy" decoding="async">
-                  </span>
-                  <img src="img/footerImages/sk-uchastnik1.png.webp.png" alt="Участник Сколково" class="footer__badge" width="100" height="42" loading="lazy" decoding="async">
+            </section>
+            <div class="footer__bottom">
+                <div class="footer__bottom-inner">
+                    <a href="#" class="footer__bottom-link">Защита персональных данных</a>
+                    <a href="#" class="footer__bottom-link">Сертификат Транспортной Клиринговой Компании</a>
+                    <a href="#" class="footer__bottom-link">Безопасное соединение SSL</a>
                 </div>
-              </div>
-              <div class="footer__col-body">
-                <h3 class="footer__heading">Сценарии</h3>
-                <ul class="footer__list">
-                  <li><a href="#">Для руководителя</a></li>
-                  <li><a href="#">Для бухгалтера</a></li>
-                  <li><a href="#">Для организатора командировок</a></li>
-                </ul>
-              </div>
             </div>
-            <div class="footer__col footer__col--capabilities">
-              <div class="footer__col-head">
-                <div class="footer__socials">
-                  <a href="#" class="footer__social footer__social--round" aria-label="ВКонтакте"><img src="img/footer-icon-vk.svg" alt="" width="20" height="20"></a>
-                  <a href="#" class="footer__social footer__social--round" aria-label="VC.ru"><img src="img/footer-icon-vc.svg" alt="" class="footer__social-img--vc" width="22" height="16"></a>
-                  <a href="#" class="footer__channel-pill">
-                    <img src="img/footer-icon-tg.svg" alt="" class="footer__channel-icon" width="18" height="18">
-                    <span class="footer__channel-label">Канал «Командировки.Сегодня»</span>
-                  </a>
-                </div>
-              </div>
-              <div class="footer__col-body">
-                <h3 class="footer__heading">Возможности</h3>
-                <ul class="footer__list">
-                  <li><a href="aviaticket.html" aria-current="page">Поиск авиабилетов</a></li>
-                  <li><a href="#">Поиск ж/д билетов</a></li>
-                  <li><a href="hotels.html">Поиск отелей</a></li>
-                  <li><a href="taxi.html">Такси</a></li>
-                  <li><a href="#">Интеграция с 1С</a></li>
-                  <li><a href="#">Согласование</a></li>
-                  <li><a href="#">Тревел-политики</a></li>
-                  <li><a href="#" class="footer__list-link--accent">Smartway Отпуск</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="footer__col footer__col--useful">
-              <div class="footer__col-head footer__col-head--spacer" aria-hidden="true"></div>
-              <div class="footer__col-body">
-                <h3 class="footer__heading">Полезное</h3>
-                <ul class="footer__list">
-                  <li><a href="faq.html">Вопрос-ответ</a></li>
-                  <li><a href="blog.html">Блог</a></li>
-                  <li><a href="#">Такси в командировке</a></li>
-                  <li><a href="#">Бесплатная консультация</a></li>
-                  <li><a href="#">Оформление командировок</a></li>
-                  <li><a href="#">Реферальная программа Smartway</a></li>
-                  <li><a href="#">Аудит командировок</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="footer__col footer__col--about">
-              <div class="footer__col-head">
-                <a href="1index.html#consult" class="footer__btn">Записаться на консультацию<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
-              </div>
-              <div class="footer__col-body">
-                <h3 class="footer__heading">О компании</h3>
-                <ul class="footer__list footer__list--compact">
-                  <li><a href="#">Общая информация</a></li>
-                  <li><a href="#">Работа в Smartway</a></li>
-                  <li><a href="#">Реквизиты</a></li>
-                  <li><a href="offer.html">Оферта</a></li>
-                  <li><a href="#">Контакты</a></li>
-                  <li><a href="#">Условия доступа к личным поездкам</a></li>
-                  <li><a href="#">Пользовательское соглашение</a></li>
-                  <li><a href="confidence-page.html">Политика конфиденциальности</a></li>
-                  <li><a href="#">Правила использования ПЭП</a></li>
-                  <li><a href="#">Гарантия лучшей цены</a></li>
-                  <li><a href="#">Аккредитованная IT-компания</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <section class="footer-newsletter" aria-labelledby="footer-newsletter-title">
-          <div class="footer-newsletter__inner">
-            <p class="footer-newsletter__lead" id="footer-newsletter-title">
-              <span class="footer-newsletter__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#E4232C" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.35l-8 4.94-8-4.94V6l8 4.94L20 6zm0 12H4V9.06l8 4.94 8-4.94V18z"/></svg></span>
-              <span class="footer-newsletter__text">Подпишитесь на рассылку полезных материалов Smartway</span>
-            </p>
-            <form class="footer-newsletter__form" action="#" method="post">
-              <label class="footer-newsletter__sr-only" for="footer-newsletter-email">Корпоративная почта</label>
-              <input type="email" id="footer-newsletter-email" name="email" class="footer-newsletter__input" placeholder="Корпоративная почта" autocomplete="email" required>
-              <button type="submit" class="footer-newsletter__submit">Подписаться</button>
-            </form>
-          </div>
-        </section>
-        <div class="footer__bottom">
-          <div class="footer__bottom-inner">
-            <a href="#" class="footer__bottom-link">Защита персональных данных</a>
-            <a href="certificate.html" class="footer__bottom-link">Сертификат Транспортной Клиринговой Компании</a>
-            <a href="#" class="footer__bottom-link">Безопасное соединение SSL</a>
-          </div>
-        </div>
-      </footer>
+        </footer>
 </div>
   </div>
 
