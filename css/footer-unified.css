@@ -285,7 +285,7 @@
   min-width: 0;
   box-sizing: border-box;
   border-radius: 1000px;
-  background-color: rgba(255, 255, 255, 0.07);
+  background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
   font-family: 'Golos Text', sans-serif;
   font-size: 14px;
@@ -294,11 +294,18 @@
   text-decoration: none;
   transition: background-color 0.15s ease;
 }
+
+a.footer__channel-pill,
+a.footer__channel-pill:visited,
+a.footer__channel-pill:hover,
+a.footer__channel-pill:active {
+  color: #ffffff;
+}
 .footer__address {
   color: #A3A3A3;
 }
 .footer__channel-pill:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(255, 255, 255, 0.16);
   color: #ffffff;
 }
 
@@ -317,6 +324,7 @@
 .footer__channel-label {
   min-width: 0;
   overflow-wrap: anywhere;
+  color: #ffffff;
 }
 
 .footer__social-text {
@@ -521,6 +529,18 @@ span.footer__btn {
     max-width: 100%;
     flex: none;
     margin-top: 0;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .footer__col--capabilities .footer__channel-pill:visited,
+  .footer__col--capabilities .footer__channel-pill:hover,
+  .footer__col--capabilities .footer__channel-pill:active {
+    color: #ffffff;
+  }
+
+  .footer__col--capabilities .footer__channel-label {
+    color: #ffffff;
   }
 
   .footer__col--capabilities .footer__social--round {
@@ -767,6 +787,18 @@ span.footer__btn {
     font-size: 14px;
     gap: 8px;
     justify-content: flex-start;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .footer__channel-pill:visited,
+  .footer__channel-pill:hover,
+  .footer__channel-pill:active {
+    color: #ffffff;
+  }
+
+  .footer__channel-label {
+    color: #ffffff;
   }
 }
 
