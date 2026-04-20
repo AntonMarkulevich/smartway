@@ -1,5 +1,17 @@
 /* MICE: бриф мероприятия — линейные поля, как на макете */
 
+.mice-brief-page .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .mice-brief-page .komand-layout__segment--bottom {
   background: #fff;
 }
@@ -112,7 +124,7 @@
   width: 18px;
   height: 18px;
   margin: 0;
-  accent-color: #d84333;
+  accent-color: #d74536;
   cursor: pointer;
 }
 
@@ -131,7 +143,7 @@
 }
 
 .mb-brief__legal-link:hover {
-  color: #d84333;
+  color: #d74536;
 }
 
 .mb-brief__submit-wrap {
@@ -149,7 +161,7 @@
   font-size: 16px;
   font-weight: 600;
   color: #fff;
-  background: #d84333;
+  background: #d74536;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -157,7 +169,7 @@
 }
 
 .mb-brief__submit:hover {
-  background: #c23627;
+  background: #c43d2f;
 }
 
 .mb-brief__submit:focus-visible {
@@ -165,8 +177,103 @@
   outline-offset: 3px;
 }
 
-@media (max-width: 480px) {
-  .mb-brief__submit {
+@media (max-width: 767px) {
+  .mice-brief-main {
+    max-width: none;
+    padding: clamp(20px, 5vw, 28px) 20px clamp(28px, 7vw, 40px);
+  }
+
+  .mb-brief__title {
+    margin: 0 0 clamp(22px, 5vw, 28px);
+    font-size: clamp(20px, 5.2vw, 26px);
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
+    text-align: left;
+  }
+
+  .mb-brief__field {
+    margin: 0 0 clamp(16px, 4vw, 22px);
+  }
+
+  .mb-brief__field--radio {
+    margin: 0 0 clamp(18px, 4vw, 24px);
+  }
+
+  .mb-brief__label {
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: #9aa0a8;
+  }
+
+  .mb-brief__field--radio .mb-brief__label {
+    margin-bottom: 12px;
+  }
+
+  .mb-brief__input,
+  .mb-brief__textarea {
+    padding: 4px 0 10px;
+    font-size: 15px;
+    border-bottom-color: #e0e0e0;
+  }
+
+  .mb-brief__input::placeholder,
+  .mb-brief__textarea::placeholder {
+    color: #9aa0a8;
+  }
+
+  .mb-brief__textarea {
+    min-height: 52px;
+    resize: vertical;
+  }
+
+  .mb-brief__radio-row {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .mb-brief__radio-row label {
+    font-size: 15px;
+    color: #3a3a3a;
+  }
+
+  .mb-brief__legal {
+    margin: clamp(22px, 5vw, 28px) 0 clamp(18px, 4vw, 22px);
+    font-size: 11px;
+    line-height: 1.5;
+    color: #444444;
+    text-align: left;
+  }
+
+  .mb-brief__legal-link {
+    color: inherit;
+  }
+
+  .mb-brief__legal-link:hover {
+    color: #d74536;
+  }
+
+  .mb-brief__submit-wrap {
+    display: block;
     width: 100%;
+  }
+
+  .mb-brief__submit {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    padding: 16px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 6px;
+    background: #d74536;
+  }
+
+  .mb-brief__submit:hover {
+    background: #c43d2f;
   }
 }
