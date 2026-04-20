@@ -1289,6 +1289,10 @@
   white-space: nowrap;
 }
 
+.accountant-avans-bottom__btn--mobile {
+  display: none;
+}
+
 .accountant-avans-bottom__ui {
   flex-shrink: 0;
   width: 520px;
@@ -1350,27 +1354,34 @@
 
 @media (max-width: 768px) {
   .accountant-avans-block {
-    padding: 28px var(--container-padding-x) 40px;
+    padding: 18px 10px 28px;
   }
 
   .accountant-avans-block__inner {
-    padding: 26px 22px 30px;
-    border-radius: 40px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
   }
 
   .accountant-avans-block__title {
-    font-size: 26px;
+    margin-bottom: 14px;
+    font-size: 36px;
+    line-height: 1.04;
+    letter-spacing: -0.03em;
   }
 
   .accountant-avans-block__badge {
-    margin-left: 8px;
-    height: 26px;
-    font-size: 12px;
-    padding: 0 12px;
+    margin-left: 6px;
+    height: 22px;
+    font-size: 10px;
+    padding: 0 10px;
+    border-radius: 6px;
+    transform: translateY(-2px) rotate(-6deg);
   }
 
   .accountant-avans-block__grid {
     grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .accountant-avans-block__grid > .accountant-avans-card:nth-child(1),
@@ -1389,14 +1400,18 @@
 
   .accountant-avans-card__wide-inner {
     grid-template-columns: 1fr;
-    padding: 24px 18px 22px;
-    gap: 18px;
+    padding: 16px 14px 14px;
+    gap: 12px;
+    overflow: visible;
   }
 
   .accountant-avans-card__wide-visual {
-    justify-content: center;
+    justify-content: flex-start;
     order: 1;
-    min-height: 140px;
+    min-height: 170px;
+    margin-top: 2px;
+    padding-left: 2px;
+    overflow: visible;
   }
 
   .accountant-avans-card__wide-text {
@@ -1404,27 +1419,91 @@
   }
 
   .accountant-avans-card__wide-img {
-    right: 50%;
-    transform: translate(50%, calc(-1 * clamp(14px, 4vw, 36px)));
-    width: min(200px, 55%);
-    max-width: 240px;
+    position: static;
+    right: auto;
+    transform: none;
+    width: min(220px, 78%);
+    max-width: 220px;
     object-fit: contain;
-    object-position: bottom center;
+    object-position: left bottom;
+    margin: 0;
   }
 
   .accountant-avans-bottom {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    margin-top: 8px;
+    padding: 16px 14px 14px;
+    gap: 10px;
   }
 
   .accountant-avans-bottom__card {
     max-width: 100%;
   }
 
+  .accountant-avans-bottom__title {
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 1.1;
+  }
+
+  .accountant-avans-bottom__text {
+    margin-bottom: 0;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
   .accountant-avans-bottom__ui {
     width: 100%;
     max-width: 100%;
-    height: 180px;
+    height: auto;
+    min-height: 86px;
+    border-radius: 12px;
+  }
+
+  .accountant-avans-bottom__ui-img {
+    min-height: 86px;
+    object-fit: contain;
+  }
+
+  .accountant-avans-bottom__btn--desktop {
+    display: none;
+  }
+
+  .accountant-avans-bottom__btn--mobile {
+    display: inline-flex;
+    width: 100%;
+    height: 36px;
+    padding: 0 18px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 480px) {
+  .accountant-avans-card {
+    padding: 14px 12px 12px;
+    border-radius: 16px;
+  }
+
+  .accountant-avans-card__title {
+    margin-bottom: 6px;
+    font-size: 20px;
+    line-height: 1.08;
+  }
+
+  .accountant-avans-card__text {
+    font-size: 12px;
+    line-height: 1.33;
+  }
+
+  .accountant-avans-card__wide-visual {
+    min-height: 156px;
+  }
+
+  .accountant-avans-card__wide-img {
+    width: min(205px, 76%);
+    max-width: 205px;
   }
 }
 

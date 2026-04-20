@@ -8700,6 +8700,10 @@ a {
   white-space: nowrap;
 }
 
+.integration-1c-block__btn--mobile {
+  display: none;
+}
+
 .integration-1c-block__media {
   flex-shrink: 0;
 }
@@ -8740,27 +8744,72 @@ a {
 }
 
 @media (max-width: 768px) {
+  .integration-1c-block {
+    padding: 24px 12px 30px;
+  }
+
   .integration-1c-block__title {
-    font-size: 28px;
+    margin-bottom: 16px;
+    font-size: 22px;
+    line-height: 1.12;
     letter-spacing: normal;
   }
 
   .integration-1c-block__card {
-    padding: 24px 18px;
+    padding: 20px 16px 16px;
     border-radius: 30px;
+    gap: 14px;
   }
 
   .integration-1c-block__lead {
-    font-size: 18px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 1.04;
+  }
+
+  .integration-1c-block__list {
+    margin-bottom: 0;
   }
 
   .integration-1c-block__list li {
-    font-size: 14px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .integration-1c-block__list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .integration-1c-block__list li::before {
+    top: 0.05em;
   }
 
   .integration-1c-block__btn {
     width: 100%;
-    max-width: 330px;
+    max-width: none;
+    height: 76px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 999px;
+  }
+
+  .integration-1c-block__btn--desktop {
+    display: none;
+  }
+
+  .integration-1c-block__btn--mobile {
+    display: inline-flex;
+  }
+
+  .integration-1c-block__media {
+    align-self: center;
+  }
+
+  .integration-1c-block__img {
+    max-width: 100%;
+    width: min(360px, 100%);
   }
 }
 
@@ -8809,16 +8858,21 @@ a {
 
 @media (max-width: 768px) {
   .integration-1c-topcta {
-    padding-top: 8px;
+    padding: 8px 10px 0;
   }
 
   .integration-1c-topcta__btn {
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
     font-size: 16px;
     height: 62px;
-    gap: 14px;
-    padding: 0 18px;
+    gap: 10px;
+    padding: 0 8px 0 20px;
+  }
+
+  .integration-1c-topcta__text {
+    flex: 1 1 auto;
+    text-align: center;
   }
 
   .integration-1c-topcta__icon {
@@ -10073,6 +10127,7 @@ a {
   .support247-block__card {
     padding: 24px 20px 26px;
     border-radius: 28px;
+    overflow: hidden;
   }
 
   .support247-block__squiggle {
@@ -10102,12 +10157,14 @@ a {
   }
 
   .support247-block__visual {
-    margin-top: -36px;
-    margin-bottom: 0;
+    justify-content: flex-end;
+    margin-top: 8px;
+    margin-right: -2px;
+    margin-bottom: -42px;
   }
 
   .support247-block__phone {
-    max-width: 200px;
+    max-width: 242px;
   }
 }
 
@@ -11041,6 +11098,11 @@ a {
   white-space: nowrap;
 }
 
+.accountant-useful-card__pill--book {
+  margin: 0 0 14px;
+  align-self: flex-start;
+}
+
 .accountant-useful-card__heading--light .accountant-useful-card__pill--ink {
   position: absolute;
   right: -12px;
@@ -11186,36 +11248,288 @@ a {
 @media (max-width: 768px) {
   .accountant-useful-block__grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .accountant-useful-block__title {
-    margin-bottom: 24px;
-    text-align: left;
+    margin-bottom: 18px;
+    text-align: center;
+    font-size: clamp(26px, 8.2vw, 34px);
+    line-height: 1.08;
   }
 
   .accountant-useful-card {
     min-height: 0;
+    border-radius: 24px;
   }
 
   .accountant-useful-card__main {
     max-width: none;
-    padding: 26px 22px 100px;
+    padding: 22px 22px 150px;
+  }
+
+  .accountant-useful-card__heading {
+    margin-bottom: 10px;
+    font-size: clamp(20px, 6.6vw, 28px);
+    line-height: 1.08;
+  }
+
+  .accountant-useful-card__lead {
+    margin-bottom: 12px;
+    font-size: clamp(14px, 4.4vw, 18px);
+    line-height: 1.35;
+    max-width: none;
+  }
+
+  .accountant-useful-card__action {
+    align-self: center;
+    width: 100%;
+    max-width: 268px;
+    min-height: 48px;
+    font-size: 16px;
+  }
+
+  .accountant-useful-card__heading--light .accountant-useful-card__pill--ink {
+    position: static;
+    right: auto;
+    top: auto;
+    margin-left: 0;
+    margin-top: 0;
+    transform: rotate(-4deg);
+    display: inline-flex;
+  }
+
+  .accountant-useful-card__inline-badges {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 6px 8px;
+    margin-left: 0;
+    margin-top: 6px;
   }
 
   .accountant-useful-card__deco--stack {
-    width: 46%;
-    right: -20px;
+    width: min(250px, 80%);
+    right: auto;
+    left: 50%;
     bottom: -12px;
+    transform: translateX(-50%);
   }
 
   .accountant-useful-card__deco--play {
-    right: 22px;
-    bottom: 22px;
+    right: 50%;
+    bottom: 28px;
+    transform: translateX(50%);
   }
 
   .accountant-useful-card__play {
-    width: 56px;
-    height: 56px;
+    width: 90px;
+    height: 90px;
+    box-shadow: none;
+  }
+
+  .accountant-useful-card__play svg {
+    width: 30px;
+    height: 30px;
+    margin-left: 2px;
+  }
+
+  .accountant-useful-card--webinar .accountant-useful-card__main {
+    padding: 24px 24px 156px;
+  }
+
+  .accountant-useful-card--webinar .accountant-useful-card__heading {
+    margin-bottom: 12px;
+    max-width: none;
+    font-size: clamp(30px, 8vw, 48px);
+    line-height: 1.03;
+  }
+
+  .accountant-useful-card--webinar .accountant-useful-card__lead {
+    max-width: 22ch;
+    margin-bottom: 14px;
+    font-size: clamp(16px, 4.2vw, 22px);
+    line-height: 1.32;
+  }
+
+  .accountant-useful-card--webinar .accountant-useful-card__inline-badges {
+    display: block;
+    margin-top: 8px;
+  }
+
+  .accountant-useful-card--webinar .accountant-useful-card__heading--webinar .accountant-useful-card__pill--accent {
+    margin: 2px 0 8px;
+    padding: 8px 20px;
+    font-size: clamp(13px, 3.4vw, 18px);
+    transform: rotate(-7deg);
+  }
+
+  .accountant-useful-card--webinar .accountant-useful-card__heading--webinar .accountant-useful-card__pill--ink-muted {
+    display: block;
+    width: fit-content;
+    margin: 0;
+    padding: 8px 20px;
+    font-size: clamp(13px, 3.4vw, 18px);
+    transform: rotate(-4deg);
+  }
+
+  .accountant-useful-card--webinar .accountant-useful-card__action {
+    min-height: 54px;
+    max-width: min(100%, 330px);
+    font-size: 16px;
+  }
+
+  .accountant-useful-card--webinar .accountant-useful-card__deco--play {
+    right: 50%;
+    bottom: 24px;
+    transform: translateX(50%);
+  }
+
+  .accountant-useful-card--webinar .accountant-useful-card__play {
+    width: 112px;
+    height: 112px;
+  }
+}
+
+@media (max-width: 480px) {
+  .accountant-useful-block {
+    padding: 18px 8px 28px;
+  }
+
+  .accountant-useful-block__inner {
+    max-width: 420px;
+  }
+
+  .accountant-useful-block__title {
+    margin-bottom: 14px;
+    font-size: 22px;
+    line-height: 1.08;
+    max-width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .accountant-useful-card {
+    border-radius: 22px;
+  }
+
+  .accountant-useful-card__main {
+    padding: 20px 22px 146px;
+  }
+
+  .accountant-useful-card__heading {
+    font-size: 18px;
+    line-height: 1.06;
+    margin-bottom: 10px;
+    max-width: 11.5ch;
+  }
+
+  .accountant-useful-card__lead {
+    font-size: 14px;
+    line-height: 1.32;
+    margin-bottom: 12px;
+    max-width: 19ch;
+  }
+
+  .accountant-useful-card__pill {
+    padding: 6px 16px;
+    font-size: 12px;
+  }
+
+  .accountant-useful-card__pill--book {
+    margin-bottom: 12px;
+    transform: rotate(-4deg);
+    background: #2f3137;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+  }
+
+  .accountant-useful-card__action {
+    min-height: 46px;
+    max-width: 240px;
+    font-size: 14px;
+  }
+
+  .accountant-useful-card__deco--stack {
+    width: min(230px, 78%);
+    bottom: -18px;
+  }
+
+  .accountant-useful-card__inline-badges {
+    display: block;
+    margin-top: 4px;
+  }
+
+  .accountant-useful-card__heading--webinar .accountant-useful-card__pill--accent {
+    margin: 2px 0 6px;
+    transform: rotate(-6deg);
+  }
+
+  .accountant-useful-card__heading--webinar .accountant-useful-card__pill--ink-muted {
+    display: block;
+    width: fit-content;
+    margin: 0;
+    transform: rotate(-3deg);
+  }
+
+  .accountant-useful-card__deco--play {
+    bottom: 26px;
+  }
+
+  .accountant-useful-card__play {
+    width: 88px;
+    height: 88px;
+  }
+
+  .accountant-useful-card--webinar .accountant-useful-card__main {
+    padding: 22px 24px 182px;
+  }
+
+  .accountant-useful-card--webinar .accountant-useful-card__heading {
+    max-width: 11ch;
+    font-size: clamp(28px, 9.6vw, 44px);
+    line-height: 1.03;
+    margin-bottom: 14px;
+  }
+
+  .accountant-useful-card--webinar .accountant-useful-card__lead {
+    max-width: 18ch;
+    font-size: clamp(15px, 4.8vw, 22px);
+    line-height: 1.34;
+    margin-bottom: 14px;
+  }
+
+  .accountant-useful-card--webinar {
+    border-radius: 34px;
+  }
+
+  .accountant-useful-card--webinar .accountant-useful-card__heading--webinar .accountant-useful-card__pill--accent {
+    padding: 8px 18px;
+    font-size: clamp(14px, 4.3vw, 20px);
+    transform: rotate(-8deg);
+  }
+
+  .accountant-useful-card--webinar .accountant-useful-card__heading--webinar .accountant-useful-card__pill--ink-muted {
+    padding: 8px 18px;
+    font-size: clamp(14px, 4.3vw, 20px);
+    transform: rotate(-5deg);
+  }
+
+  .accountant-useful-card--webinar .accountant-useful-card__deco--play {
+    right: 50%;
+    bottom: 26px;
+    transform: translateX(50%);
+  }
+
+  .accountant-useful-card--webinar .accountant-useful-card__play {
+    width: 132px;
+    height: 132px;
+  }
+
+  .accountant-useful-card--webinar .accountant-useful-card__action {
+    width: 100%;
+    max-width: none;
+    min-height: 58px;
+    font-size: 17px;
   }
 }
 
@@ -11365,6 +11679,10 @@ a {
   text-align: center;
 }
 
+.smartway-compare-block__mobile-text {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .smartway-compare-block__inner {
     max-width: 940px;
@@ -11390,31 +11708,80 @@ a {
 }
 
 @media (max-width: 820px) {
-  .smartway-compare-block__row {
-    flex-direction: column;
-    align-items: stretch;
+  .smartway-compare-block {
+    padding: 28px 10px 38px;
   }
 
-  .smartway-compare-block__labels-spacer {
+  .smartway-compare-block__inner {
+    max-width: 560px;
+  }
+
+  .smartway-compare-block__row {
+    display: block;
+  }
+
+  .smartway-compare-block__labels,
+  .smartway-compare-block__aside {
     display: none;
   }
 
-  .smartway-compare-block__mid,
-  .smartway-compare-block__aside {
+  .smartway-compare-block__mid {
     flex: none;
     width: 100%;
-    max-width: 400px;
+    max-width: none;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .smartway-compare-block__aside-title {
-    min-height: 0;
-    margin-bottom: 10px;
+    padding: 26px 20px 24px;
+    border-radius: 34px;
+    align-items: flex-start;
   }
 
   .smartway-compare-block__title {
-    margin-bottom: 28px;
+    margin-bottom: 14px;
+    text-align: center;
+    font-size: clamp(28px, 8.4vw, 48px);
+    line-height: 1.08;
+  }
+
+  .smartway-compare-block__mid {
+    gap: 12px;
+  }
+
+  .smartway-compare-block__mid-title {
+    margin: 0 0 2px;
+    font-size: clamp(24px, 7vw, 40px);
+    line-height: 1.1;
+    text-align: left;
+  }
+
+  .smartway-compare-block__mid-list {
+    gap: 14px;
+    align-items: stretch;
+  }
+
+  .smartway-compare-block__mid-item {
+    min-height: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .smartway-compare-block__icon--yes {
+    width: 46px;
+    height: 46px;
+    margin-top: 2px;
+  }
+
+  .smartway-compare-block__mobile-text {
+    display: block;
+    margin: 0;
+    font-family: 'Golos Text', var(--font-main), sans-serif;
+    font-weight: 500;
+    font-size: clamp(18px, 5vw, 28px);
+    line-height: 1.26;
+    color: #ffffff;
     text-align: left;
   }
 }
@@ -11447,6 +11814,8 @@ a {
 @media (max-width: 820px) {
   .delegate-heading-block {
     padding: 28px var(--container-padding-x) 24px;
+    background: #dfe2ea;
+    border-top: none;
   }
 
   .delegate-heading-block__title br {
@@ -11513,6 +11882,10 @@ a {
   width: 100%;
   max-width: 520px;
   height: auto;
+}
+
+.accountant-level-lead-block__illu--mobile {
+  display: none;
 }
 
 .accountant-level-lead-block__form-shell {
@@ -11744,17 +12117,124 @@ a {
 }
 
 @media (max-width: 480px) {
+  .delegate-heading-block {
+    padding: 20px 10px 14px;
+    background: #dfe2ea;
+  }
+
+  .delegate-heading-block__inner {
+    max-width: 420px;
+  }
+
+  .delegate-heading-block__title {
+    font-size: 24px;
+    line-height: 1.08;
+  }
+
   .accountant-level-lead-block {
-    padding-bottom: 36px;
+    padding: 0 10px 28px;
+    background: #dfe2ea;
+  }
+
+  .accountant-level-lead-block__inner {
+    max-width: 420px;
   }
 
   .accountant-level-lead-block__card {
-    padding: 20px 16px;
-    border-radius: 18px;
+    padding: 20px 14px 14px;
+    border-radius: 24px;
+    gap: 12px;
+    background: #eceef3;
+  }
+
+  .accountant-level-lead-block__title {
+    margin-bottom: 0;
+    max-width: 11.5ch;
+    font-size: clamp(24px, 8.8vw, 40px);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
   }
 
   .accountant-level-lead-block__form-shell {
-    padding: 18px 16px;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .accountant-level-lead-block__form {
+    gap: 10px;
+  }
+
+  .accountant-level-lead-block__input,
+  .accountant-level-lead-block__select {
+    min-height: 44px;
+    padding: 10px 14px;
+    font-size: 14px;
+    border-radius: 999px;
+    background: #eceef3;
+    border-color: #c7ccd8;
+  }
+
+  .accountant-level-lead-block__label {
+    margin-bottom: 4px;
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  .accountant-level-lead-block__toggle {
+    gap: 8px;
+    font-size: 12px;
+    line-height: 1.35;
+    color: #7e8390;
+  }
+
+  .accountant-level-lead-block__toggle-ui {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    margin-top: 1px;
+    background: transparent;
+    border: 1px solid #d4d8e2;
+  }
+
+  .accountant-level-lead-block__toggle-ui::after {
+    display: none;
+  }
+
+  .accountant-level-lead-block__submit {
+    margin-top: 8px;
+    min-height: 46px;
+    padding: 12px 16px;
+    font-size: 14px;
+    border-radius: 999px;
+  }
+
+  .accountant-level-lead-block__footnote {
+    margin-top: 8px;
+    max-width: 30ch;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+    line-height: 1.35;
+    color: #9da3b0;
+  }
+
+  .accountant-level-lead-block__illu {
+    display: none;
+  }
+
+  .accountant-level-lead-block__illu--mobile {
+    display: flex;
+    margin-top: 6px;
+    min-height: 0;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .accountant-level-lead-block__illu--mobile .accountant-level-lead-block__illu-img {
+    width: 100%;
+    max-width: 280px;
   }
 }
 
