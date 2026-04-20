@@ -326,6 +326,79 @@
             </div>
           </div>
         </section>
+
+        <section class="travel-policy-tabs" aria-labelledby="travel-policy-tabs-heading">
+          <h2 id="travel-policy-tabs-heading" class="travel-policy-tabs__page-title">На что можно установить ограничения:</h2>
+          <div class="travel-policy-tabs__bar-wrap">
+            <div class="travel-policy-tabs__bar" role="tablist" aria-label="Тип услуги">
+              <button type="button" class="travel-policy-tabs__tab is-active" role="tab" id="tp-tab-avia" aria-selected="true" aria-controls="tp-panel-avia">Авиабилеты</button>
+              <button type="button" class="travel-policy-tabs__tab" role="tab" id="tp-tab-rzd" aria-selected="false" aria-controls="tp-panel-rzd" tabindex="-1">ЖД-билеты</button>
+              <button type="button" class="travel-policy-tabs__tab" role="tab" id="tp-tab-hotel" aria-selected="false" aria-controls="tp-panel-hotel" tabindex="-1">Гостиницы</button>
+              <button type="button" class="travel-policy-tabs__tab" role="tab" id="tp-tab-taxi" aria-selected="false" aria-controls="tp-panel-taxi" tabindex="-1">Такси</button>
+              <button type="button" class="travel-policy-tabs__tab" role="tab" id="tp-tab-aero" aria-selected="false" aria-controls="tp-panel-aero" tabindex="-1">Аэроэкспрессы</button>
+            </div>
+          </div>
+
+          <div class="travel-policy-tabs__panels">
+          <div id="tp-panel-avia" class="travel-policy-tabs__panel is-active" role="tabpanel" aria-labelledby="tp-tab-avia">
+            <div class="travel-policy-tabs__panel-inner">
+              <div class="travel-policy-tabs__visual">
+                <img src="img/1tabpic.png" class="travel-policy-tabs__panel-img" width="560" height="420" alt="Настройки ограничений по авиабилетам в travel-политике Smartway" loading="lazy" decoding="async">
+              </div>
+              <div class="travel-policy-tabs__aside">
+                <h3 class="travel-policy-tabs__aside-title">Авиабилеты</h3>
+                <p class="travel-policy-tabs__aside-text">Устанавливайте ограничения по стоимости, классу, дням вылета или направлению полёта</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="tp-panel-rzd" class="travel-policy-tabs__panel" role="tabpanel" aria-labelledby="tp-tab-rzd" hidden>
+            <div class="travel-policy-tabs__panel-inner">
+              <div class="travel-policy-tabs__visual">
+                <img src="img/2tabpic.png" class="travel-policy-tabs__panel-img" width="560" height="420" alt="Настройки ограничений по ЖД-билетам в travel-политике Smartway" loading="lazy" decoding="async">
+              </div>
+              <div class="travel-policy-tabs__aside">
+                <h3 class="travel-policy-tabs__aside-title">Ж/Д билеты</h3>
+                <p class="travel-policy-tabs__aside-text">Контролируйте стоимость, типы вагонов, дни поездки и направления поездов</p>
+              </div>
+            </div>
+          </div>
+          <div id="tp-panel-hotel" class="travel-policy-tabs__panel" role="tabpanel" aria-labelledby="tp-tab-hotel" hidden>
+            <div class="travel-policy-tabs__panel-inner">
+              <div class="travel-policy-tabs__visual">
+                <img src="img/3tabpic.png" class="travel-policy-tabs__panel-img" width="560" height="420" alt="Настройки ограничений по гостиницам в travel-политике Smartway" loading="lazy" decoding="async">
+              </div>
+              <div class="travel-policy-tabs__aside">
+                <h3 class="travel-policy-tabs__aside-title">Гостиницы</h3>
+                <p class="travel-policy-tabs__aside-text">Добавьте ограничения по району, стоимости проживания за ночь и классу отеля</p>
+              </div>
+            </div>
+          </div>
+          <div id="tp-panel-taxi" class="travel-policy-tabs__panel" role="tabpanel" aria-labelledby="tp-tab-taxi" hidden>
+            <div class="travel-policy-tabs__panel-inner">
+              <div class="travel-policy-tabs__visual">
+                <img src="img/4tabpic.png" class="travel-policy-tabs__panel-img" width="560" height="420" alt="Настройки ограничений по такси в travel-политике Smartway" loading="lazy" decoding="async">
+              </div>
+              <div class="travel-policy-tabs__aside">
+                <h3 class="travel-policy-tabs__aside-title">Такси</h3>
+                <p class="travel-policy-tabs__aside-text">Задайте ограничения по классам автомобиля, дням использования и кто имеет право оформлять ваучеры</p>
+              </div>
+            </div>
+          </div>
+          <div id="tp-panel-aero" class="travel-policy-tabs__panel" role="tabpanel" aria-labelledby="tp-tab-aero" hidden>
+            <div class="travel-policy-tabs__panel-inner">
+              <div class="travel-policy-tabs__visual">
+                <img src="img/5tabpic.png" class="travel-policy-tabs__panel-img" width="560" height="420" alt="Настройки ограничений по аэроэкспрессам в travel-политике Smartway" loading="lazy" decoding="async">
+              </div>
+              <div class="travel-policy-tabs__aside">
+                <h3 class="travel-policy-tabs__aside-title">Аэроэкспрессы</h3>
+                <p class="travel-policy-tabs__aside-text">Настраивайте допустимый класс билетов или включайте согласование для всех покупок — даже если они соответствуют политике компании</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </section>
+
         <section class="travel-policy-banner" aria-labelledby="travel-policy-banner-title">
           <div class="travel-policy-banner__outer">
             <div class="travel-policy-banner__card">
@@ -345,7 +418,6 @@
         </section>
 
       </main>
-
         <footer class="footer">
             <div class="footer__main">
                 <div class="footer__inner">
@@ -490,6 +562,38 @@
         if (cb) cb.checked = false;
       });
     });
+
+    (function () {
+      var root = document.querySelector('.travel-policy-tabs');
+      if (!root) return;
+      var tabs = root.querySelectorAll('.travel-policy-tabs__tab');
+      var panels = root.querySelectorAll('.travel-policy-tabs__panel');
+      function activate(tab) {
+        var pid = tab.getAttribute('aria-controls');
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          t.classList.toggle('is-active', on);
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+          if (on) t.removeAttribute('tabindex');
+          else t.setAttribute('tabindex', '-1');
+        });
+        panels.forEach(function (p) {
+          var on = p.getAttribute('id') === pid;
+          p.classList.toggle('is-active', on);
+          p.setAttribute('aria-hidden', on ? 'false' : 'true');
+        });
+      }
+      panels.forEach(function (p) {
+        p.removeAttribute('hidden');
+      });
+      var initial = root.querySelector('.travel-policy-tabs__tab.is-active');
+      if (initial) activate(initial);
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          activate(tab);
+        });
+      });
+    })();
   </script>
 </body>
 </html>

@@ -210,7 +210,7 @@
           <div class="travel-policy-present__inner">
             <div class="travel-policy-present__col travel-policy-present__col--copy">
               <h2 id="travel-policy-present-title" class="travel-policy-present__title">
-                <span class="travel-policy-present__title-dark">Запишитесь</span><span class="travel-policy-present__title-accent"> на персональную презентацию сервиса</span>
+                <span class="travel-policy-present__title-dark">Запишитесь<br>на </span><span class="travel-policy-present__title-accent">персональную презентацию сервиса</span>
               </h2>
               <p class="travel-policy-present__lead">чтобы сократить до 50% расходов на командировки</p>
               <div class="travel-policy-present__media">
@@ -222,18 +222,19 @@
               <div class="travel-policy-present__card">
                 <form class="travel-policy-present__form" action="#" method="post">
                   <div class="travel-policy-present__field">
-                    <label class="visually-hidden" for="tp-present-name">Ваше имя</label>
-                    <input type="text" id="tp-present-name" name="name" class="travel-policy-present__input" required autocomplete="name" placeholder="Ваше имя*">
+                    <label class="visually-hidden" for="tp-present-name">Имя и фамилия</label>
+                    <input type="text" id="tp-present-name" name="name" class="travel-policy-present__input" required autocomplete="name" placeholder="Имя и фамилия*">
                   </div>
                   <div class="travel-policy-present__field">
                     <label class="visually-hidden" for="tp-present-company">Название компании</label>
-                    <input type="text" id="tp-present-company" name="company" class="travel-policy-present__input" required autocomplete="organization" placeholder="Название компании*">
+                    <input type="text" id="tp-present-company" name="company" class="travel-policy-present__input" autocomplete="organization" placeholder="Название компании">
                   </div>
                   <div class="travel-policy-present__field">
-                    <label for="tp-present-trips" class="travel-policy-present__label">Командировок в компании в месяц*</label>
+                    <label for="tp-present-trips" class="travel-policy-present__label">Сколько командировок в компании в месяц*</label>
                     <select id="tp-present-trips" name="trips" class="travel-policy-present__input travel-policy-present__select" required>
+                      <option value="" disabled selected>Затрудняюсь ответить</option>
                       <option value="1-10">1–10</option>
-                      <option value="10+" selected>10+</option>
+                      <option value="10+">10+</option>
                       <option value="11-50">11–50</option>
                       <option value="51-200">51–200</option>
                       <option value="200+">Более 200</option>
@@ -241,19 +242,19 @@
                   </div>
                   <div class="travel-policy-present__field">
                     <label class="visually-hidden" for="tp-present-email">Корпоративная почта</label>
-                    <input type="email" id="tp-present-email" name="email" class="travel-policy-present__input" required autocomplete="email" placeholder="Корпоративная почта*">
+                    <input type="email" id="tp-present-email" name="email" class="travel-policy-present__input" required autocomplete="email" placeholder="Корпоративная почта">
                   </div>
                   <div class="travel-policy-present__field">
                     <label class="visually-hidden" for="tp-present-phone">Телефон</label>
-                    <input type="tel" id="tp-present-phone" name="phone" class="travel-policy-present__input" required autocomplete="tel" inputmode="tel" placeholder="+7 (000) 000-00-00">
+                    <input type="tel" id="tp-present-phone" name="phone" class="travel-policy-present__input" required autocomplete="tel" inputmode="tel" placeholder="+7(000) 000-00-00">
                   </div>
                   <label class="travel-policy-present__consent">
                     <input type="checkbox" class="travel-policy-present__consent-input" name="marketing_consent" value="1">
                     <span class="travel-policy-present__switch-ui" aria-hidden="true"></span>
                     <span class="travel-policy-present__consent-text">Даю согласие на получение сообщений рекламного и информационного характера</span>
                   </label>
-                  <button type="submit" class="travel-policy-present__submit">Оставить заявку</button>
-                  <p class="travel-policy-present__footnote">Нажимая на эту кнопку, вы даёте <a href="confidence-page.html" class="travel-policy-present__footnote-link">согласие на обработку персональных данных</a> и принимаете условия <a href="confidence-page.html" class="travel-policy-present__footnote-link">Политики обработки персональных данных</a></p>
+                  <button type="submit" class="travel-policy-present__submit">Записаться бесплатно</button>
+                  <p class="travel-policy-present__footnote">Нажав кнопку, вы продолжаете <a href="offer.html" class="travel-policy-present__footnote-link">соглашение об обработке цифровых данных</a> и принимаете условия <a href="confidence-page.html" class="travel-policy-present__footnote-link">политики обработки цифровых данных</a></p>
                 </form>
               </div>
             </div>
