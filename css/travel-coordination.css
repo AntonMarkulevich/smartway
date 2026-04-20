@@ -1208,85 +1208,471 @@ body.travel-coordination-page .komand-main {
 }
 
 @media (max-width: 900px) {
+  .travel-coordination-compare {
+    margin-top: 0;
+    margin-bottom: clamp(40px, 8vw, 64px);
+    margin-left: -10%;
+    margin-right: -10%;
+    padding: clamp(28px, 6vw, 40px) 10% clamp(32px, 7vw, 48px);
+    background: #f5f5f5;
+    box-sizing: border-box;
+    border-radius: 0;
+  }
+
+  .travel-coordination-compare__heading {
+    margin: 0 0 clamp(22px, 5vw, 28px);
+    font-size: clamp(22px, 5.8vw, 28px);
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    text-align: center;
+    color: #1a1a1a;
+  }
+
   .travel-coordination-compare__grid {
     grid-template-columns: 1fr;
+    gap: clamp(16px, 4vw, 22px);
+    align-items: stretch;
   }
 
   .travel-coordination-compare__card {
-    min-height: min(480px, 120vw);
+    min-height: 0;
+    border-radius: clamp(26px, 7vw, 32px);
+    overflow: hidden;
+  }
+
+  .travel-coordination-compare__card--light {
+    background: #fff;
+    border: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  }
+
+  .travel-coordination-compare__card--accent {
+    background: #e33e2e;
+    color: #fff;
+  }
+
+  .travel-coordination-compare__card-body {
+    padding: clamp(22px, 5vw, 28px) clamp(20px, 5vw, 26px) clamp(6px, 1.5vw, 10px);
+    text-align: left;
+  }
+
+  .travel-coordination-compare__icon-thumb--down,
+  .travel-coordination-compare__icon-thumb--up {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    margin: 0 0 14px;
+    padding: 0;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.07);
+    box-sizing: border-box;
+  }
+
+  .travel-coordination-compare__like-img--dislike,
+  .travel-coordination-compare__like-img--logo {
+    width: 26px;
+    height: 26px;
+  }
+
+  .travel-coordination-compare__card-title {
+    margin: 0 0 10px;
+    font-size: clamp(19px, 5vw, 22px);
+    text-align: left;
+  }
+
+  .travel-coordination-compare__card-text {
+    font-size: clamp(14px, 3.8vw, 16px);
+    line-height: 1.55;
+    text-align: left;
+  }
+
+  .travel-coordination-compare__card--light .travel-coordination-compare__card-text {
+    color: #3a3a3a;
+  }
+
+  .travel-coordination-compare__card-visual {
+    flex: none;
+    min-height: 0;
+    padding: clamp(4px, 1.5vw, 8px) clamp(12px, 3vw, 16px) clamp(18px, 4vw, 26px);
+  }
+
+  .travel-coordination-compare__card-visual-stack,
+  .travel-coordination-compare__card-visual-stack--likes-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    column-gap: 0;
+  }
+
+  .travel-coordination-compare__deco-likes--before,
+  .travel-coordination-compare__deco-likes--after {
+    display: none;
+  }
+
+  .travel-coordination-compare__card-visual-stack > .travel-coordination-compare__card-img,
+  .travel-coordination-compare__card-visual-stack--likes-left > .travel-coordination-compare__card-img {
+    max-width: min(300px, 92%);
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .travel-coordination-compare__card--light .travel-coordination-compare__card-img {
+    max-width: min(300px, 92%);
+  }
+
+  .travel-coordination-hero {
+    margin-bottom: clamp(36px, 7vw, 56px);
   }
 
   .travel-coordination-hero__inner {
     flex-direction: column;
     align-items: stretch;
-  }
-
-  .travel-coordination-hero__content {
-    max-width: none;
+    gap: clamp(24px, 5vw, 32px);
   }
 
   .travel-coordination-hero__visual {
+    order: -1;
+    flex: none;
+    width: 100%;
     max-width: none;
     justify-content: center;
+    margin: 0;
   }
 
   .travel-coordination-hero__img {
-    max-width: min(560px, 100%);
+    display: block;
+    width: 100%;
+    max-width: min(420px, 100%);
+    height: auto;
     margin: 0 auto;
+  }
+
+  .travel-coordination-hero__content {
+    flex: none;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .travel-coordination-hero__title {
+    max-width: min(18em, 100%);
+    margin: 0 auto clamp(12px, 3vw, 18px);
+    text-align: center;
+    font-size: clamp(24px, 6.2vw, 32px);
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  .travel-coordination-hero__lead {
+    max-width: min(36ch, 100%);
+    margin: 0 auto clamp(22px, 5vw, 28px);
+    text-align: center;
+    font-size: clamp(15px, 4vw, 17px);
+    line-height: 1.55;
+    font-weight: 400;
+    color: #5c5c5c;
+  }
+
+  .travel-coordination-hero__btn {
+    align-self: stretch;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    padding: 16px 22px;
+    border-radius: 999px;
+    font-size: clamp(15px, 4vw, 16px);
+    font-weight: 700;
+    line-height: 1.25;
+    white-space: normal;
+    text-align: center;
+    background: #eb4433;
+  }
+
+  .travel-coordination-hero__btn:hover {
+    background: #d63a2b;
+  }
+
+  .travel-coordination-how {
+    margin-bottom: clamp(40px, 8vw, 72px);
+    background: #fff;
+  }
+
+  .travel-coordination-how__title {
+    margin: 0 0 clamp(24px, 5.5vw, 32px);
+    text-align: left;
+    font-size: clamp(22px, 5.8vw, 28px);
+    line-height: 1.18;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
   }
 
   .travel-coordination-how__steps {
     flex-direction: column;
-    gap: clamp(28px, 6vw, 40px);
+    align-items: stretch;
+    gap: clamp(28px, 7vw, 40px);
+  }
+
+  .travel-coordination-how__step {
+    --how-num-size: clamp(32px, 9vw, 40px);
+    --how-icon-size: clamp(40px, 11vw, 48px);
+    flex: none;
+    width: 100%;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: clamp(12px, 3.5vw, 18px);
+    row-gap: clamp(14px, 3.8vw, 20px);
+    align-items: center;
+  }
+
+  .travel-coordination-how__track {
+    grid-column: 1;
+    grid-row: 1;
+    width: auto;
+    min-height: 0;
+    margin: 0;
+    align-self: center;
   }
 
   .travel-coordination-how__step:not(:last-child) .travel-coordination-how__track::after {
     display: none;
   }
 
+  .travel-coordination-how__num {
+    width: var(--how-num-size);
+    height: var(--how-num-size);
+    background: #f14635;
+    font-size: clamp(14px, 4vw, 16px);
+    font-weight: 700;
+  }
+
+  .travel-coordination-how__icon-wrap {
+    grid-column: 2;
+    grid-row: 1;
+    width: auto;
+    margin: 0;
+    justify-self: start;
+    align-self: center;
+  }
+
+  .travel-coordination-how__icon {
+    margin-left: 0;
+    width: var(--how-icon-size);
+    filter: grayscale(1) brightness(1.15) contrast(0.92);
+    opacity: 0.92;
+  }
+
   .travel-coordination-how__text {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: stretch;
+    min-width: 0;
     max-width: none;
-    padding-right: 0;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: clamp(15px, 4vw, 17px);
+    line-height: 1.55;
+    font-weight: 400;
+    color: #3a3a3a;
+  }
+
+  .travel-coordination-schemes {
+    margin-bottom: clamp(40px, 8vw, 72px);
+    background: #fff;
+  }
+
+  .travel-coordination-schemes__title {
+    margin: 0 0 clamp(20px, 4.5vw, 28px);
+    max-width: none;
+    text-align: left;
+    font-size: clamp(24px, 6.2vw, 32px);
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #2d2d2d;
   }
 
   .travel-coordination-schemes__layout {
     grid-template-columns: 1fr;
+    gap: clamp(24px, 5.5vw, 36px);
+    align-items: stretch;
+  }
+
+  .travel-coordination-schemes__content {
+    min-width: 0;
+  }
+
+  .travel-coordination-schemes__subtitle {
+    margin: 0 0 clamp(18px, 4vw, 24px);
+    text-align: left;
+    font-size: clamp(20px, 5.2vw, 24px);
+    line-height: 1.25;
+    font-weight: 700;
+    color: #ef4433;
+  }
+
+  .travel-coordination-schemes__list {
+    gap: clamp(18px, 4vw, 26px);
+  }
+
+  .travel-coordination-schemes__item {
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    gap: clamp(14px, 3.5vw, 18px);
+  }
+
+  .travel-coordination-schemes__aside {
+    --schemes-num-size: clamp(30px, 8vw, 36px);
+    padding-top: 0.28em;
+    align-self: start;
+  }
+
+  .travel-coordination-schemes__num {
+    width: var(--schemes-num-size);
+    height: var(--schemes-num-size);
+    background: #ef4433;
+    font-size: clamp(13px, 3.6vw, 15px);
+    font-weight: 700;
+  }
+
+  .travel-coordination-schemes__item-text {
+    min-width: 0;
+    font-size: clamp(15px, 4vw, 17px);
+    line-height: 1.55;
+    font-weight: 400;
+    color: #2d2d2d;
+    text-align: left;
   }
 
   .travel-coordination-schemes__figure {
-    order: -1;
-    max-width: min(560px, 100%);
-    margin: 0 auto;
+    order: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: clamp(14px, 3.5vw, 20px);
+    border-radius: clamp(18px, 4vw, 24px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+  }
+
+  .travel-coordination-schemes__mockup-img {
+    border-radius: clamp(10px, 2.5vw, 14px);
   }
 
   .travel-coordination-policies {
     margin-left: 0;
     margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
+    margin-bottom: clamp(40px, 8vw, 72px);
+    padding: clamp(28px, 6vw, 44px) 0;
+    background: #f5f5f5;
+    box-sizing: border-box;
   }
 
   .travel-coordination-policies__inner {
     grid-template-columns: 1fr;
+    gap: clamp(24px, 5.5vw, 32px);
+    align-items: stretch;
   }
 
-  .travel-coordination-policies__visual {
-    max-width: min(520px, 100%);
-    margin: 0 auto;
-    justify-self: center;
+  .travel-coordination-policies__content {
+    order: -1;
+    min-width: 0;
+  }
+
+  .travel-coordination-policies__title {
+    margin: 0 0 clamp(16px, 3.8vw, 22px);
+    font-size: clamp(22px, 5.8vw, 30px);
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    text-align: left;
+    color: #2d2d2d;
+  }
+
+  .travel-coordination-policies__title-accent {
+    color: #f04438;
   }
 
   .travel-coordination-policies__row {
     flex-direction: column;
     align-items: stretch;
+    gap: 0;
+    justify-content: flex-start;
+  }
+
+  .travel-coordination-policies__text {
+    flex: none;
+    margin: 0 0 clamp(18px, 4.2vw, 24px);
+    max-width: none;
+    font-size: clamp(15px, 4vw, 17px);
+    line-height: 1.55;
+    font-weight: 400;
+    color: #5c5c5c;
+    text-align: left;
   }
 
   .travel-coordination-policies__btn {
     width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
     justify-content: center;
+    align-self: stretch;
+    padding: 16px 22px;
+    border-radius: 999px;
+    font-size: clamp(15px, 4vw, 16px);
+    font-weight: 700;
     white-space: normal;
     text-align: center;
+    background: #f04438;
+    transition: background 0.15s ease, transform 0.1s ease;
+  }
+
+  .travel-coordination-policies__btn:hover {
+    background: #d93a30;
+    color: #fff;
+  }
+
+  .travel-coordination-policies__btn:focus-visible {
+    outline-color: #f04438;
+  }
+
+  .travel-coordination-policies__visual {
+    order: 0;
+    width: 100%;
+    max-width: min(480px, 100%);
+    margin: 0 auto;
+    justify-self: center;
+  }
+
+  .travel-coordination-policies__figure {
+    padding: clamp(12px, 3vw, 18px);
+    border-radius: clamp(16px, 4vw, 22px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  }
+
+  .travel-coordination-policies__img {
+    border-radius: clamp(10px, 2.5vw, 14px);
   }
 
   .travel-coordination-limits__inner {
@@ -1311,12 +1697,185 @@ body.travel-coordination-page .komand-main {
   .travel-coordination-lead {
     margin-left: 0;
     margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
+    margin-bottom: clamp(40px, 8vw, 64px);
+    padding: clamp(24px, 6vw, 36px) clamp(12px, 3vw, 20px);
+    background: #f5f5f5;
+    border-radius: clamp(20px, 5vw, 28px);
+    box-sizing: border-box;
   }
 
   .travel-coordination-lead__inner {
     grid-template-columns: 1fr;
+    gap: clamp(22px, 5vw, 30px);
+  }
+
+  .travel-coordination-lead__col--copy {
+    text-align: center;
+  }
+
+  .travel-coordination-lead__headline {
+    margin: 0 auto clamp(18px, 4vw, 24px);
+    max-width: 20em;
+    text-align: center;
+    font-size: clamp(22px, 5.6vw, 28px);
+    line-height: 1.12;
+  }
+
+  .travel-coordination-lead__headline-accent {
+    color: #d84333;
+  }
+
+  .travel-coordination-lead__headline-rest {
+    color: #272727;
+  }
+
+  .travel-coordination-lead__stores {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+  }
+
+  .travel-coordination-lead__store:nth-child(4) {
+    display: none;
+  }
+
+  .travel-coordination-lead__store-badge,
+  .travel-coordination-lead__store img {
+    height: clamp(36px, 10vw, 44px);
+    max-height: 44px;
+    max-width: min(160px, 30vw);
+  }
+
+  .travel-coordination-lead__form-title {
+    display: none;
+  }
+
+  .travel-coordination-lead__card {
+    border-radius: clamp(18px, 4vw, 24px);
+    padding: clamp(22px, 5vw, 28px) clamp(18px, 4vw, 22px);
+    box-shadow: 0 4px 28px rgba(0, 0, 0, 0.07);
+  }
+
+  .travel-coordination-lead__form {
+    gap: clamp(14px, 3.5vw, 18px);
+  }
+
+  .travel-coordination-lead__label {
+    margin-bottom: 8px;
+    font-size: clamp(13px, 3.4vw, 15px);
+    font-weight: 400;
+    color: #1a1a1a;
+    text-align: left;
+  }
+
+  .travel-coordination-lead__input,
+  .travel-coordination-lead__select {
+    border-radius: 999px;
+    padding: 14px 18px;
+    border-color: #d2d2d2;
+  }
+
+  .travel-coordination-lead__select:invalid {
+    color: #9a9a9a;
+  }
+
+  .travel-coordination-lead__select option {
+    color: #1a1a1a;
+  }
+
+  .travel-coordination-lead__toggle {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    column-gap: 10px;
+    row-gap: 0;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #9a9a9a;
+  }
+
+  .travel-coordination-lead__toggle-ui {
+    grid-column: 1;
+    grid-row: 1;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    border-radius: 3px;
+    background: #f5f5f5;
+    border: 1px solid #bdbdbd;
+    box-sizing: border-box;
+  }
+
+  .travel-coordination-lead__toggle-text {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+    color: #9a9a9a;
+  }
+
+  .travel-coordination-lead__inline-link {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
+  }
+
+  .travel-coordination-lead__toggle-ui::after {
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 9px;
+    margin: -6px 0 0 -3px;
+    border-radius: 0;
+    background: transparent;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    box-shadow: none;
+    transform: translate(0, 0) rotate(45deg) scale(0);
+    opacity: 0;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+  }
+
+  .travel-coordination-lead__toggle-input:checked + .travel-coordination-lead__toggle .travel-coordination-lead__toggle-ui {
+    background: #d84333;
+    border-color: #d84333;
+  }
+
+  .travel-coordination-lead__toggle-input:checked + .travel-coordination-lead__toggle .travel-coordination-lead__toggle-ui::after {
+    transform: translate(0, 0) rotate(45deg) scale(1);
+    opacity: 1;
+  }
+
+  .travel-coordination-lead__toggle-input:focus-visible + .travel-coordination-lead__toggle .travel-coordination-lead__toggle-ui {
+    outline: 2px solid #d84333;
+    outline-offset: 2px;
+  }
+
+  .travel-coordination-lead__submit {
+    margin-top: 8px;
+    padding: 16px 20px;
+    border-radius: 999px;
+    background: #d84333;
+    font-size: clamp(16px, 4.2vw, 18px);
+    font-weight: 700;
+  }
+
+  .travel-coordination-lead__submit:hover {
+    background: #c73d2e;
+  }
+
+  .travel-coordination-lead__submit:focus-visible {
+    outline: 3px solid #d84333;
+  }
+
+  .travel-coordination-lead__footnote {
+    margin-top: clamp(12px, 3vw, 16px);
+    font-size: 11px;
+    line-height: 1.5;
+    color: #9a9a9a;
+  }
+
+  .travel-coordination-lead__footnote-link {
+    color: inherit;
   }
 }
 
@@ -1326,9 +1885,11 @@ body.travel-coordination-page .komand-main {
     padding-right: 16px;
   }
 
-  .travel-coordination-hero__btn {
-    width: 100%;
-    box-sizing: border-box;
+  .travel-coordination-compare {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .travel-coordination-predcom__btn {
