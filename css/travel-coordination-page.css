@@ -1,0 +1,115 @@
+/* travel-coordination.html — аудит: overflow-x, H1, reveal, ховеры */
+
+html:has(body.travel-coordination-page),
+body.travel-coordination-page {
+  overflow-x: hidden;
+}
+
+@media (min-width: 1024px) {
+  .travel-coordination-hero__title {
+    font-size: 72px;
+    line-height: 70px;
+    letter-spacing: -3px;
+    color: #3c3c3c;
+  }
+}
+
+.travel-coordination-page .reveal {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.travel-coordination-page .reveal--left {
+  transform: translate3d(-28px, 32px, 0);
+}
+
+.travel-coordination-page .reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .travel-coordination-page .reveal,
+  .travel-coordination-page .reveal--left {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+body.travel-coordination-page main a,
+body.travel-coordination-page main button,
+body.travel-coordination-page .footer a,
+body.travel-coordination-page .footer button,
+body.travel-coordination-page [role="button"] {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+body.travel-coordination-page main .travel-coordination-compare__card,
+body.travel-coordination-page main .travel-policy-banner__card {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.travel-coordination-page main .travel-coordination-compare__card:hover,
+  body.travel-coordination-page main .travel-policy-banner__card:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes tc-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes tc-fade-in-left {
+  from {
+    opacity: 0;
+    transform: translate3d(-28px, 24px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes tc-fade-in-right {
+  from {
+    opacity: 0;
+    transform: translate3d(28px, 24px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes tc-hide-down {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0);
+  }
+}

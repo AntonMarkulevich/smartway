@@ -1,0 +1,121 @@
+/* Доп. стили rekvizity.html (аудит: макет H1, overflow-x, scroll-reveal, ховеры) */
+
+html:has(body.page-rekvizity),
+body.page-rekvizity {
+  overflow-x: hidden;
+}
+
+/* Кадры анимации (аудит) */
+@keyframes sw-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes sw-fade-in-left {
+  from {
+    opacity: 0;
+    transform: translate3d(-28px, 24px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes sw-fade-in-right {
+  from {
+    opacity: 0;
+    transform: translate3d(28px, 24px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes sw-hide-down {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0);
+  }
+}
+
+.page-rekvizity .reveal {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.page-rekvizity .reveal--left {
+  transform: translate3d(-28px, 32px, 0);
+}
+
+.page-rekvizity .reveal--right {
+  transform: translate3d(28px, 32px, 0);
+}
+
+.page-rekvizity .reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-rekvizity .reveal,
+  .page-rekvizity .reveal--left,
+  .page-rekvizity .reveal--right {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Десктоп: H1 по макету (32px, #3a3a3a, line-height 70px, letter-spacing -1px) */
+@media (min-width: 1024px) {
+  .page-rekvizity h1.rekvizity-block__title,
+  .page-rekvizity .rekvizity-block__title {
+    font-size: 32px;
+    line-height: 70px;
+    letter-spacing: -1px;
+    color: #3a3a3a;
+  }
+}
+
+/* Плавные состояния интерактивных элементов */
+body.page-rekvizity a,
+body.page-rekvizity button,
+body.page-rekvizity [role="button"] {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+body.page-rekvizity .rekvizity-doc,
+body.page-rekvizity .card {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.page-rekvizity .rekvizity-doc:hover {
+    transform: translateY(-2px);
+  }
+}

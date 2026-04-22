@@ -1,10 +1,15 @@
 /* ===== Страница тарифов (rates.html) — блок «Тарифные планы» ===== */
 
+html:has(body.page-rates) {
+  overflow-x: hidden;
+}
+
 .page-rates {
   --rates-accent: #d64b36;
   --rates-card-bg: #f4f6f8;
   --rates-text-muted: #6b6b6b;
   background: #ffffff;
+  overflow-x: hidden;
 }
 
 .rates-main {
@@ -38,6 +43,16 @@
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: #2a2a2a;
+}
+
+/* Десктоп: макет (аудит) — 72 / 70 / -3px / #3a3a3a */
+@media (min-width: 1024px) {
+  .rates-tariffs__title {
+    font-size: 72px;
+    line-height: 70px;
+    letter-spacing: -3px;
+    color: #3a3a3a;
+  }
 }
 
 .rates-tariffs__subtitle {
@@ -161,7 +176,13 @@
   background: var(--rates-accent);
   border-radius: 999px;
   box-sizing: border-box;
-  transition: opacity 0.15s ease, filter 0.15s ease;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    opacity 0.2s ease,
+    filter 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .rates-card__btn:hover {
@@ -1773,5 +1794,62 @@
   .page-rates .rates-faq__content {
     padding: 0 22px 22px;
     font-size: 14px;
+  }
+}
+
+/* Аудит: появление секций (keyframes в 1style.css) */
+.page-rates .reveal {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.page-rates .reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-rates .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.page-rates .rates-main a,
+.page-rates .rates-main button,
+.page-rates .footer a,
+.page-rates .footer button,
+.page-rates [role='button'] {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.page-rates .rates-card,
+.page-rates .tariff-card,
+.page-rates .about-stats__card,
+.page-rates .payment-flex-card--superviser,
+.page-rates .sup-trips-hub__card,
+.page-rates .rates-faq__item {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .page-rates .rates-card:hover,
+  .page-rates .tariff-card:hover,
+  .page-rates .about-stats__card:hover,
+  .page-rates .payment-flex-card--superviser:hover,
+  .page-rates .sup-trips-hub__card:hover {
+    transform: translateY(-2px);
   }
 }

@@ -2,6 +2,7 @@
 
 .page-contacts {
   background: #f0f0f2;
+  overflow-x: hidden;
 }
 
 .contacts-main {
@@ -24,6 +25,15 @@
   letter-spacing: -0.02em;
   text-align: center;
   color: #1a1a1a;
+}
+
+@media (min-width: 1025px) {
+  .contacts-landing__title {
+    font-size: 72px;
+    line-height: 70px;
+    letter-spacing: -3px;
+    color: #3a3a3a;
+  }
 }
 
 .contacts-landing__cards {
@@ -249,4 +259,58 @@ a.contacts-card:focus-visible {
     padding-top: 24px;
     padding-bottom: 48px;
   }
+}
+
+/* Аудит: плавные ховеры интерактивов, карточки документов */
+.page-contacts .contacts-main a,
+.page-contacts .contacts-main button,
+.page-contacts .contacts-main [role='button'] {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.page-contacts .contacts-card {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.page-contacts .contacts-card--social .contacts-card__icon-link,
+.page-contacts .contacts-card--social .contacts-card__channel-pill {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.page-contacts .rekvizity-doc {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.page-contacts .rekvizity-doc:hover {
+  transform: translateY(-2px);
+}
+
+.page-contacts .rekvizity-doc:hover .rekvizity-doc__img-wrap {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+}
+
+.page-contacts .footer a,
+.page-contacts .footer button {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
 }

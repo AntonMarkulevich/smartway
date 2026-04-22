@@ -1,7 +1,12 @@
 /* Страница MICE (mice.html) */
 
+html:has(body.page-mice) {
+  overflow-x: hidden;
+}
+
 .page-mice {
   background: #ffff;
+  overflow-x: hidden;
 }
 
 .mice-main {
@@ -95,6 +100,15 @@
   letter-spacing: -0.02em;
   color: #ffffff;
   text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Десктоп: макет (аудит) — 82 / 81 / -2.5px */
+@media (min-width: 1024px) {
+  .mice-hero__title {
+    font-size: 82px;
+    line-height: 81px;
+    letter-spacing: -2.5px;
+  }
 }
 
 .mice-hero__lead {
@@ -1940,4 +1954,67 @@
   font-size: 17px;
   line-height: 1.55;
   color: #444444;
+}
+
+/* Аудит: появление секций при скролле (1style.css содержит @keyframes fade_in_up и др.) */
+.page-mice .reveal {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.page-mice .reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-mice .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.page-mice .mice-main a:not(.mice-hero__btn):not(.mice-trust__btn),
+.page-mice .mice-main button,
+.page-mice .footer a,
+.page-mice .footer button,
+.page-mice [role='button'] {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.page-mice .mice-hero__btn,
+.page-mice .mice-trust__btn {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.page-mice .mice-features__card,
+.page-mice .mice-formats__card,
+.page-mice .mice-cases__card,
+.page-mice .mice-partner__card,
+.page-mice .mice-reviews__card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .page-mice .mice-features__card:hover,
+  .page-mice .mice-formats__card:hover,
+  .page-mice .mice-cases__card:hover,
+  .page-mice .mice-partner__card:hover,
+  .page-mice .mice-reviews__card:hover {
+    transform: translateY(-2px);
+  }
 }

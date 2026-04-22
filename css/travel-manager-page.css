@@ -1,0 +1,77 @@
+/* travel-manager.html — аудит: overflow-x, H1 (desktop), reveal, ховеры */
+
+html:has(body.travel-manager-page),
+body.travel-manager-page {
+  overflow-x: hidden;
+}
+
+@media (min-width: 1024px) {
+  .travel-manager-page .tm-hero-block__title {
+    font-size: 72px;
+    line-height: 70px;
+    letter-spacing: -3px;
+    color: #3a3a3a;
+  }
+}
+
+body.travel-manager-page .reveal {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body.travel-manager-page .reveal--left {
+  transform: translate3d(-28px, 32px, 0);
+}
+
+body.travel-manager-page .reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.travel-manager-page .reveal,
+  body.travel-manager-page .reveal--left {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+body.travel-manager-page main a,
+body.travel-manager-page main button,
+body.travel-manager-page .footer a,
+body.travel-manager-page .footer button,
+body.travel-manager-page [role="button"] {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+body.travel-manager-page main .tm-step-card,
+body.travel-manager-page main .tm-control-card,
+body.travel-manager-page main .tm-mobile-card,
+body.travel-manager-page main .tm-case-card,
+body.travel-manager-page main .tm-materials-card {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.travel-manager-page main .tm-step-card:hover,
+  body.travel-manager-page main .tm-control-card:hover,
+  body.travel-manager-page main .tm-mobile-card:hover,
+  body.travel-manager-page main .tm-case-card:hover,
+  body.travel-manager-page main .tm-materials-card:hover {
+    transform: translateY(-2px);
+  }
+}

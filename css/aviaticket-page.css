@@ -1182,10 +1182,11 @@ body.aviaticket-page .aviaticket-services-main-mosaic .services__transfer-bottom
   grid-row: 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: minmax(0, 1fr);
   gap: 0;
   align-items: stretch;
   min-height: 0;
+  height: 100%;
   margin-top: 8px;
 }
 
@@ -1222,7 +1223,7 @@ body.aviaticket-page .aviaticket-services-main-mosaic .services__transfer-vip {
   background-color: var(--transfer-panel);
   border: 2px solid transparent;
   border-radius: 18px;
-  align-self: start;
+  align-self: stretch;
   box-sizing: border-box;
 }
 
@@ -1236,6 +1237,7 @@ body.aviaticket-page .aviaticket-services-main-mosaic .services__transfer-vip .s
 }
 
 body.aviaticket-page .aviaticket-services-main-mosaic .services__transfer-car {
+  margin-top: -8px;
   grid-column: auto;
   grid-row: auto;
   min-width: 0;
@@ -2810,4 +2812,71 @@ body.aviaticket-page .aviaticket-faq__answer {
     justify-content: center;
     box-sizing: border-box;
   }
+}
+
+/* Аудит: горизонтальный скролл на мобильных, типографика H1 на десктопе, reveal, ховеры карточек */
+html {
+  overflow-x: hidden;
+}
+
+body.aviaticket-page {
+  overflow-x: hidden;
+}
+
+@media (min-width: 769px) {
+  .aviaticket-hero__title {
+    font-size: 72px;
+    line-height: 70px;
+    letter-spacing: -3px;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+body.aviaticket-page .komand-main a,
+body.aviaticket-page .komand-main button {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+body.aviaticket-page .aviaticket-stats__card,
+body.aviaticket-page .aviaticket-features__card,
+body.aviaticket-page .aviaticket-cases__card,
+body.aviaticket-page .zhd-connect__card,
+body.aviaticket-page .aviaticket-report__card,
+body.aviaticket-page .zhd-services-window__card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.aviaticket-page .aviaticket-stats__card:hover,
+body.aviaticket-page .aviaticket-features__card:hover,
+body.aviaticket-page .aviaticket-cases__card:hover,
+body.aviaticket-page .zhd-connect__card:hover,
+body.aviaticket-page .aviaticket-report__card:hover,
+body.aviaticket-page .zhd-services-window__card:hover {
+  transform: translateY(-2px);
 }

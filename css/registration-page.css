@@ -1,7 +1,9 @@
 /* Страница регистрации / «Попробовать бесплатно» */
 
 body.registration-page .visually-hidden,
-body.login-page .visually-hidden {
+body.login-page .visually-hidden,
+body.registration-page .sr-only,
+body.login-page .sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -106,6 +108,13 @@ body.login-page.komand-page--no-sidebar .komand-layout__segment--bottom {
   line-height: 1.02;
   letter-spacing: -0.035em;
   color: #fff;
+}
+
+/* Десктоп: line-height H1 по макету (1.02 × 72 ≈ 73.44px → 70px) */
+@media (min-width: 1024px) {
+  body.registration-page .reg-hero__title {
+    line-height: 70px;
+  }
 }
 
 /* Карточка формы — отдельный блок, absolute справа в слое красного (.reg-hero__layer) */
@@ -281,19 +290,12 @@ body.login-page.komand-page--no-sidebar .komand-layout__segment--bottom {
 
 .reg-note__title {
   margin: 0 0 clamp(10px, 1.5vw, 14px);
+  max-width: 12em;
   font-size: clamp(20px, 2.5vw, 28px);
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.02em;
   color: #d1432a;
-}
-
-.reg-note__title-line {
-  display: block;
-}
-
-.reg-note__title-line + .reg-note__title-line {
-  margin-top: 0.08em;
 }
 
 .reg-note__text {
@@ -509,10 +511,6 @@ body.login-page.komand-page--no-sidebar .komand-layout__segment--bottom {
     color: #d74536;
   }
 
-  .reg-note__title-line + .reg-note__title-line {
-    margin-top: 0.06em;
-  }
-
   .reg-note__text {
     max-width: none;
     font-size: clamp(14px, 3.8vw, 16px);
@@ -531,5 +529,60 @@ body.login-page.komand-page--no-sidebar .komand-layout__segment--bottom {
 
   .reg-hero__title {
     max-width: none;
+  }
+}
+
+/* Аудит: горизонтальный скролл, появление блока, плавные ховеры */
+html:has(body.registration-page) {
+  overflow-x: hidden;
+}
+
+body.registration-page {
+  overflow-x: hidden;
+}
+
+body.registration-page .reveal {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body.registration-page .reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.registration-page .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+body.registration-page .reg-main a,
+body.registration-page .reg-main button,
+body.registration-page .footer a,
+body.registration-page .footer button,
+body.registration-page [role="button"] {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+body.registration-page .reg-form {
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.registration-page .reg-form:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
   }
 }

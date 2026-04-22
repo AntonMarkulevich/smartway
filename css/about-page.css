@@ -1,7 +1,8 @@
 /* Страница «О компании» (about.html) */
 
 .page-about {
-  background: #ffff;
+  background: #fff;
+  overflow-x: hidden;
 }
 
 .about-main {
@@ -42,9 +43,16 @@
   font-weight: 700;
   font-size: clamp(32px, 6.5vw, 72px);
   line-height: 1.08;
-  letter-spacing: -0.03em;
-  color: #1a1a1a;
+  letter-spacing: -3px;
+  color: #3c3c3c;
   text-align: inherit;
+}
+
+@media (min-width: 901px) {
+  .about-hero__title {
+    font-size: 72px;
+    line-height: 70px;
+  }
 }
 
 .about-hero__icons-slot {
@@ -137,6 +145,7 @@
   .about-hero__title {
     font-size: clamp(28px, 8.2vw, 40px);
     line-height: 1.06;
+    letter-spacing: -0.04em;
     margin-bottom: clamp(16px, 4vw, 24px);
   }
 }
@@ -161,9 +170,12 @@
 
 .about-pitch__visual {
   min-width: 0;
-  min-height: clamp(180px, 26vw, 340px);
+  width: 100%;
+  max-width: min(850px, 100%);
+  max-height: 477px;
+  aspect-ratio: 850 / 477;
   border-radius: clamp(16px, 2vw, 24px);
-  overflow: visible;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,6 +190,7 @@
   display: block;
   width: 100%;
   max-width: 100%;
+  max-height: 100%;
   height: auto;
   border-radius: clamp(16px, 2vw, 24px);
   object-fit: contain;
@@ -212,9 +225,9 @@
   }
 
   .about-pitch__visual {
-    order: -1;
-    min-height: clamp(170px, 36vw, 280px);
-    max-width: min(460px, 100%);
+    max-width: min(850px, 100%);
+    max-height: 477px;
+    aspect-ratio: 850 / 477;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1443,4 +1456,42 @@
     max-width: 100%;
     object-position: center bottom;
   }
+}
+
+/* Интерактив: плавные ховеры (аудит about.html) */
+.page-about main a:not([class*='__btn']):not(.about-careers-cta__btn):not(.about-media-contact__btn),
+.page-about main button,
+.page-about .about-stats__card,
+.page-about .about-team__card,
+.page-about .about-press__item,
+.page-about .about-press-center__card,
+.page-about .about-media-contact__link {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.page-about .about-stats__card:hover,
+.page-about .about-team__card:hover,
+.page-about .about-press__item .about-press__card:hover,
+.page-about .about-press-center__card:hover {
+  transform: translateY(-2px);
+}
+
+.page-about .footer a:not(.footer__btn) {
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.page-about .about-press-center__btn,
+.page-about .about-careers-cta__btn,
+.page-about .about-media-contact__btn {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }

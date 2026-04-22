@@ -1399,3 +1399,119 @@ body.taxi-page .travel-coordination-lead__footnote-link:hover {
   }
 
 }
+
+/* ——— Аудит taxi.html: overflow-x, H1 (десктоп), scroll-reveal, ховеры ——— */
+
+html:has(body.taxi-page),
+body.taxi-page {
+  overflow-x: hidden;
+}
+
+@media (min-width: 1024px) {
+  .taxi-hero__title {
+    font-size: 72px;
+    line-height: 70px;
+    letter-spacing: -3px;
+    color: #3c3c3c;
+  }
+}
+
+.taxi-page .reveal {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.taxi-page .reveal--left {
+  transform: translate3d(-28px, 32px, 0);
+}
+
+.taxi-page .reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .taxi-page .reveal,
+  .taxi-page .reveal--left {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+body.taxi-page main a,
+body.taxi-page main button,
+body.taxi-page .footer a,
+body.taxi-page .footer button,
+body.taxi-page [role="button"] {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+body.taxi-page main .taxi-more__card {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.taxi-page main .taxi-more__card:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Кадры для согласования с чек-листом (при необходимости анимаций по @keyframes) */
+@keyframes taxi-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes taxi-fade-in-left {
+  from {
+    opacity: 0;
+    transform: translate3d(-28px, 24px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes taxi-fade-in-right {
+  from {
+    opacity: 0;
+    transform: translate3d(28px, 24px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes taxi-hide-down {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0);
+  }
+}
+

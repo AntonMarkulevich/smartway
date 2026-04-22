@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smartway — онлайн-сервис для организации командировок: авиа и ж/д, отели, закрывающие и интеграция с 1С в одном окне. Экономьте время и бюджет компании.">
   <title>Smartway — Онлайн-сервис для организации командировок</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,14 +11,15 @@
   <link rel="stylesheet" href="css/site-header.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@26.9.1/build/css/intlTelInput.css">
   <link rel="stylesheet" href="css/1style.css">
+  <script src="js/1index-main.js" defer></script>
 </head>
-<body>
+<body class="page-1index">
   <header class="header">
     <input type="checkbox" id="site-nav" class="site-nav-input" aria-hidden="true">
     <div class="header__inner">
       <div class="header__left">
         <a href="1index.html" aria-label="Smartway — на главную">
-          <img src="img/header-logo.svg" alt="Smartway" class="header__logo">
+          <img src="img/header-logo.svg" alt="Smartway" class="header__logo" width="120" height="32" fetchpriority="high" loading="eager" decoding="async">
         </a>
         <div class="header__divider"></div>
         <span class="header__descriptor">Стандарт управления<br>командировками</span>
@@ -29,23 +31,23 @@
       </label>
       <nav class="header__nav" aria-label="Основное меню">
         <ul class="header__menu">
-          <li><a href="1index.html#audience" class="header__link">Для кого <span class="header__chevron"></span></a></li>
-          <li><a href="1index.html#capabilities" class="header__link">Возможности <span class="header__chevron"></span></a></li>
-          <li><a href="1index.html#useful" class="header__link">Полезное <span class="header__chevron"></span></a></li>
-          <li><a href="1index.html#mice" class="header__link">MICE</a></li>
-          <li><a href="1index.html#tariffs" class="header__link">Тарифы</a></li>
+          <li><a href="#audience" class="header__link">Для кого <span class="header__chevron"></span></a></li>
+          <li><a href="#capabilities" class="header__link">Возможности <span class="header__chevron"></span></a></li>
+          <li><a href="#useful" class="header__link">Полезное <span class="header__chevron"></span></a></li>
+          <li><a href="#mice" class="header__link">MICE</a></li>
+          <li><a href="rates.html" class="header__link">Тарифы</a></li>
           <li><a href="clients.html" class="header__link">Клиенты</a></li>
         </ul>
       </nav>
       <div class="header__actions">
         <a href="mailto:hello@smartway.today" class="header__icon-btn" aria-label="Написать">
-          <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail">
+          <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail" width="24" height="24" loading="eager" decoding="async">
         </a>
         <a href="tel:+78007751428" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
-          <img src="img/phone.svg" alt="">
+          <img src="img/phone.svg" alt="" width="20" height="20" loading="eager" decoding="async">
         </a>
         <a href="https://www.smartway.today" class="header__login">
-          <img src="img/header-icon-email.svg" alt=""> Войти
+          <img src="img/header-icon-email.svg" alt="" width="20" height="20" loading="eager" decoding="async"> Войти
         </a>
         <a href="https://smartway.today/" class="header__btn">Протестировать</a>
       </div>
@@ -55,19 +57,19 @@
       <div class="header__drawer-inner">
         <label for="site-nav" class="header__drawer-close" aria-label="Закрыть">×</label>
         <ul class="header__drawer-menu">
-          <li><a href="1index.html#audience" class="header__drawer-link">Для кого</a></li>
-          <li><a href="1index.html#capabilities" class="header__drawer-link">Возможности</a></li>
-          <li><a href="1index.html#useful" class="header__drawer-link">Полезное</a></li>
-          <li><a href="1index.html#mice" class="header__drawer-link">MICE</a></li>
-          <li><a href="1index.html#tariffs" class="header__drawer-link">Тарифы</a></li>
+          <li><a href="#audience" class="header__drawer-link">Для кого</a></li>
+          <li><a href="#capabilities" class="header__drawer-link">Возможности</a></li>
+          <li><a href="#useful" class="header__drawer-link">Полезное</a></li>
+          <li><a href="#mice" class="header__drawer-link">MICE</a></li>
+          <li><a href="rates.html" class="header__drawer-link">Тарифы</a></li>
           <li><a href="clients.html" class="header__drawer-link">Клиенты</a></li>
         </ul>
         <div class="header__drawer-contacts" aria-label="Связаться">
           <a href="mailto:hello@smartway.today" class="header__icon-btn" aria-label="Написать">
-            <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail">
+            <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail" width="24" height="24" loading="eager" decoding="async">
           </a>
           <a href="tel:+78007751428" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
-            <img src="img/phone.svg" alt="">
+            <img src="img/phone.svg" alt="" width="20" height="20" loading="eager" decoding="async">
           </a>
         </div>
         <div class="header__drawer-cta">
@@ -85,24 +87,24 @@
           <h1 class="hero__title">Онлайн-сервис<br> для организации <br>командировок</h1>
           <p class="hero__subtitle">Билеты, отели, закрывающие<br>и интеграция с 1С в одном окне</p>
           <div class="hero__actions">
-            <a href="#try" class="btn btn--primary">Попробовать бесплатно &rarr;</a>
+            <a href="#consult" class="btn btn--primary">Попробовать бесплатно &rarr;</a>
             <a href="#consult" class="btn btn--outline">Получить консультацию</a>
           </div>
         </div>
         <div class="hero__visual">
           <div class="hero__illustration">
-            <img src="img/hero-illustration.png" alt="Интерфейс сервиса" class="hero__image">
+            <img src="img/hero-illustration.png" alt="Интерфейс Smartway: поиск билетов и бронирование" class="hero__image" fetchpriority="high" loading="eager" decoding="async">
           </div>
           <div class="hero__trust">
-            <img src="img/partner-skolkovo.png" alt="Резиденты технопарка «Сколково»" class="hero__trust-icon" width="229" height="37">
-            <img src="img/partner-1c.svg" alt="Входим в группу компаний «1С»" class="hero__trust-icon" width="193" height="36">
-            <img src="img/rfcifra.svg" alt="Входим в реестр российского ПО «Минцифры»" class="hero__trust-icon" width="275" height="40">
+            <img src="img/partner-skolkovo.png" alt="Резиденты технопарка «Сколково»" class="hero__trust-icon" width="229" height="37" loading="eager" decoding="async">
+            <img src="img/partner-1c.svg" alt="Входим в группу компаний «1С»" class="hero__trust-icon" width="193" height="36" loading="eager" decoding="async">
+            <img src="img/rfcifra.svg" alt="Входим в реестр российского ПО «Минцифры»" class="hero__trust-icon" width="275" height="40" loading="eager" decoding="async">
           </div>
         </div>
       </div>
     </section>
 
-    <section class="clients" aria-label="Нам доверяют">
+    <section class="clients reveal" aria-label="Нам доверяют">
       <div class="clients__strip">
         <div class="clients__track">
           <div class="clients__group">
@@ -115,7 +117,7 @@
       </div>
     </section>
 
-    <section class="stats">
+    <section class="stats reveal">
       <div class="stats__inner">
         <h2 class="stats__title">Smartway в цифрах</h2>
         <div class="stats__grid">
@@ -147,7 +149,7 @@
       </div>
     </section>
 
-    <section class="services" id="services" aria-labelledby="services-title">
+    <section class="services reveal" id="capabilities" aria-labelledby="services-title">
       <div class="services__inner">
         <h2 class="services__title" id="services-title">Все услуги для организации деловых поездок сотрудников</h2>
         <div class="services__grid">
@@ -156,21 +158,21 @@
               <h3 class="services__card-title">Авиа и Ж/Д билеты</h3>
             </div>
             <div class="services__media services__media--screen">
-              <img src="img/services/avia-plane.svg" alt="" class="services__img services__img--plane">
-              <img src="img/services/avia-main.png" alt="" class="services__img services__img--ticket-main">
-              <img src="img/services/avia-top.png" alt="" class="services__img services__img--ticket-top">
+              <img src="img/services/avia-plane.svg" alt="" class="services__img services__img--plane" loading="lazy" decoding="async">
+              <img src="img/services/avia-main.png" alt="Маршрут и выбор рейса" class="services__img services__img--ticket-main" loading="lazy" decoding="async">
+              <img src="img/services/avia-top.png" alt="Список рейсов" class="services__img services__img--ticket-top" loading="lazy" decoding="async">
             </div>
           </div>
           <div class="services__card services__card--avtobusy">
             <div class="services__card-head">
               <h3 class="services__card-title">Авиа и Ж/Д билеты</h3>
-              <img src="img/services/buses.svg" alt="" class="services__badge-icon">
+              <img src="img/services/buses.svg" alt="" class="services__badge-icon" loading="lazy" decoding="async">
             </div>
           </div>
           <div class="services__card services__card--vizovaya-podderzhka">
             <div class="services__card-head">
               <h3 class="services__card-title">Визовая поддержка</h3>
-              <img src="img/services/visa-check.svg" alt="" class="services__badge-icon">
+              <img src="img/services/visa-check.svg" alt="" class="services__badge-icon" loading="lazy" decoding="async">
             </div>
           </div>
           <div class="services__card services__card--taxi">
@@ -187,7 +189,7 @@
           <div class="services__card services__card--aeroekspressy">
             <div class="services__card-head">
               <h3 class="services__card-title">Аэроэкспрессы</h3>
-              <img src="img/services/aero-ticket.svg" alt="" class="services__badge-icon">
+              <img src="img/services/aero-ticket.svg" alt="" class="services__badge-icon" loading="lazy" decoding="async">
             </div>
           </div>
           <div class="services__card services__card--gruppovye-zaezdy">
@@ -210,14 +212,14 @@
             <div class="services__transfer-top">
               <div class="services__card-head">
                 <h3 class="services__card-title">Трансферы</h3>
-                <img src="img/services/transfer-arrows.svg" alt="" class="services__badge-icon">
+                <img src="img/services/transfer-arrows.svg" alt="" class="services__badge-icon" loading="lazy" decoding="async">
               </div>
             </div>
             <div class="services__transfer-vip">
               <h3 class="services__card-title">VIP-залы</h3>
             </div>
             <div class="services__transfer-car">
-              <img src="img/services/transfer-car.png" alt="" class="services__img services__img--car">
+              <img src="img/services/transfer-car.png" alt="Автомобиль трансфера" class="services__img services__img--car" loading="lazy" decoding="async">
             </div>
           </div>
           <div class="services__card services__card--mice">
@@ -225,7 +227,7 @@
               <h3 class="services__card-title">MICE</h3>
             </div>
             <div class="services__media services__media--mice">
-              <img src="img/mice.svg" alt="" class="services__img services__img--mice" width="235" height="164" decoding="async">
+              <img src="img/mice.svg" alt="MICE и корпоративные мероприятия" class="services__img services__img--mice" width="235" height="164" loading="lazy" decoding="async">
             </div>
           </div>
           <div class="services__card services__card--gostinicy">
@@ -233,16 +235,16 @@
               <h3 class="services__card-title">Гостиницы</h3>
             </div>
             <div class="services__media services__media--hotel">
-              <img src="img/services/hotel-shot.png" alt="" class="services__img services__img--hotel-shot">
-              <img src="img/mainhotelsbtn.png" alt="" class="services__img services__img--hotel-icon">
-              <img src="img/mainhotelsblock.png" alt="" class="services__img services__img--hotel-badges">
+              <img src="img/services/hotel-shot.png" alt="Бронирование отелей" class="services__img services__img--hotel-shot" loading="lazy" decoding="async">
+              <img src="img/mainhotelsbtn.png" alt="" class="services__img services__img--hotel-icon" loading="lazy" decoding="async">
+              <img src="img/mainhotelsblock.png" alt="Категории отелей" class="services__img services__img--hotel-badges" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="steps" id="steps" aria-labelledby="steps-title">
+    <section class="steps reveal" id="steps" aria-labelledby="steps-title">
       <div class="steps__inner">
         <h2 class="steps__title" id="steps-title">Управляйте командировками <span class="steps__title-accent">от заявки до отчетности</span></h2>
         <div class="steps__grid">
@@ -254,10 +256,10 @@
             <div class="steps__one-window" aria-hidden="true">
               <div class="steps__one-window-stage">
                 <div class="steps__one-window-scale">
-                  <img src="img/oneWindow/Rectangle%20376714326.png" alt="" class="steps__one-window-bg" width="560" height="200" decoding="async">
-                  <img src="img/oneWindow/Group%202085656548.png" alt="" class="steps__one-window-flight" width="320" height="auto" decoding="async">
-                  <img src="img/oneWindow/Group%202085656549.png" alt="" class="steps__one-window-hotel" width="280" height="auto" decoding="async">
-                  <img src="img/oneWindow/Tariff%20avia.png" alt="" class="steps__one-window-taxi" width="340" height="auto" decoding="async">
+                  <img src="img/oneWindow/Rectangle%20376714326.png" alt="" class="steps__one-window-bg" width="560" height="200" loading="lazy" decoding="async">
+                  <img src="img/oneWindow/Group%202085656548.png" alt="" class="steps__one-window-flight" width="320" height="auto" loading="lazy" decoding="async">
+                  <img src="img/oneWindow/Group%202085656549.png" alt="" class="steps__one-window-hotel" width="280" height="auto" loading="lazy" decoding="async">
+                  <img src="img/oneWindow/Tariff%20avia.png" alt="" class="steps__one-window-taxi" width="340" height="auto" loading="lazy" decoding="async">
                 </div>
               </div>
             </div>
@@ -267,11 +269,11 @@
             <h3 class="steps__card-title steps__card-title--step-two">Согласовывайте и оплачивайте выбранные услуги</h3>
             <div class="steps__step-two-visual" aria-hidden="true">
               <div class="steps__step-two-stage">
-                <img src="img/secondStep/Rectangle%20376714327.png" alt="" class="steps__step-two-layer steps__step-two-layer--bg" width="400" height="180" decoding="async">
-                <img src="img/secondStep/Rectangle%20376714328.png" alt="" class="steps__step-two-layer steps__step-two-layer--bg-mid" width="380" height="160" decoding="async">
-                <img src="img/secondStep/Right%20section.png" alt="" class="steps__step-two-layer steps__step-two-layer--trip" width="280" height="200" decoding="async">
-                <img src="img/secondStep/Card%20bill%20payment.png" alt="" class="steps__step-two-layer steps__step-two-layer--bill" width="260" height="120" decoding="async">
-                <img src="img/secondStep/Group%202085656550.png" alt="" class="steps__step-two-layer steps__step-two-layer--policy" width="260" height="100" decoding="async">
+                <img src="img/secondStep/Rectangle%20376714327.png" alt="" class="steps__step-two-layer steps__step-two-layer--bg" width="400" height="180" loading="lazy" decoding="async">
+                <img src="img/secondStep/Rectangle%20376714328.png" alt="" class="steps__step-two-layer steps__step-two-layer--bg-mid" width="380" height="160" loading="lazy" decoding="async">
+                <img src="img/secondStep/Right%20section.png" alt="" class="steps__step-two-layer steps__step-two-layer--trip" width="280" height="200" loading="lazy" decoding="async">
+                <img src="img/secondStep/Card%20bill%20payment.png" alt="" class="steps__step-two-layer steps__step-two-layer--bill" width="260" height="120" loading="lazy" decoding="async">
+                <img src="img/secondStep/Group%202085656550.png" alt="" class="steps__step-two-layer steps__step-two-layer--policy" width="260" height="100" loading="lazy" decoding="async">
               </div>
             </div>
           </article>
@@ -280,9 +282,9 @@
             <h3 class="steps__card-title steps__card-title--step-three">Заполняйте авансовые и получайте закрывающие онлайн</h3>
             <div class="steps__step-three-visual" aria-hidden="true">
               <div class="steps__step-three-stage">
-                <img src="img/thirdStep/TextFilter.png" alt="" class="steps__step-three-layer steps__step-three-layer--sign" width="220" height="140" decoding="async">
-                <img src="img/thirdStep/Tab%20ticket.png" alt="" class="steps__step-three-layer steps__step-three-layer--download" width="220" height="100" decoding="async">
-                <img src="img/thirdStep/Group%202085656546.png" alt="" class="steps__step-three-layer steps__step-three-layer--integr" width="340" height="72" decoding="async">
+                <img src="img/thirdStep/TextFilter.png" alt="" class="steps__step-three-layer steps__step-three-layer--sign" width="220" height="140" loading="lazy" decoding="async">
+                <img src="img/thirdStep/Tab%20ticket.png" alt="" class="steps__step-three-layer steps__step-three-layer--download" width="220" height="100" loading="lazy" decoding="async">
+                <img src="img/thirdStep/Group%202085656546.png" alt="" class="steps__step-three-layer steps__step-three-layer--integr" width="340" height="72" loading="lazy" decoding="async">
               </div>
             </div>
           </article>
@@ -292,29 +294,29 @@
             <div class="steps__step-four-visual" aria-hidden="true">
               <div class="steps__step-four-stage">
                 <div class="steps__step-four-panels">
-                  <img src="img/fourthStep/Rectangle%20376714329.png" alt="" class="steps__step-four-panel" decoding="async">
-                  <img src="img/fourthStep/Rectangle%20376714330.png" alt="" class="steps__step-four-panel" decoding="async">
-                  <img src="img/fourthStep/Rectangle%20376714331.png" alt="" class="steps__step-four-panel" decoding="async">
+                  <img src="img/fourthStep/Rectangle%20376714329.png" alt="" class="steps__step-four-panel" loading="lazy" decoding="async">
+                  <img src="img/fourthStep/Rectangle%20376714330.png" alt="" class="steps__step-four-panel" loading="lazy" decoding="async">
+                  <img src="img/fourthStep/Rectangle%20376714331.png" alt="" class="steps__step-four-panel" loading="lazy" decoding="async">
                 </div>
                 <div class="steps__step-four-bar">
                   <span class="steps__step-four-bar-segment steps__step-four-bar-segment--red"></span>
                   <span class="steps__step-four-bar-segment steps__step-four-bar-segment--yellow"></span>
                   <span class="steps__step-four-bar-segment steps__step-four-bar-segment--green"></span>
                 </div>
-                <img src="img/fourthStep/x.png" alt="" class="steps__step-four-layer steps__step-four-layer--chart" width="200" height="160" decoding="async">
-                <img src="img/fourthStep/Analytics.png" alt="" class="steps__step-four-layer steps__step-four-layer--analytics" width="220" height="200" decoding="async">
-                <img src="img/fourthStep/Union.png" alt="" class="steps__step-four-layer steps__step-four-layer--pie" width="56" height="56" decoding="async">
+                <img src="img/fourthStep/x.png" alt="" class="steps__step-four-layer steps__step-four-layer--chart" width="200" height="160" loading="lazy" decoding="async">
+                <img src="img/fourthStep/Analytics.png" alt="" class="steps__step-four-layer steps__step-four-layer--analytics" width="220" height="200" loading="lazy" decoding="async">
+                <img src="img/fourthStep/Union.png" alt="" class="steps__step-four-layer steps__step-four-layer--pie" width="56" height="56" loading="lazy" decoding="async">
               </div>
             </div>
           </article>
         </div>
         <div class="steps__actions">
-          <a href="#try" class="btn btn--primary">Попробовать бесплатно &rarr;</a>
+          <a href="#consult" class="btn btn--primary">Попробовать бесплатно &rarr;</a>
         </div>
       </div>
     </section>
 
-    <section class="cta" id="cta" aria-labelledby="cta-title">
+    <section class="cta reveal" id="cta" aria-labelledby="cta-title">
       <div class="cta__inner">
         <div class="cta__content">
           <h2 class="cta__title" id="cta-title">Сократите расходы на командировки в 2 раза</h2>
@@ -324,79 +326,80 @@
           <div class="cta__icons" aria-hidden="true">
             <img
               src="img/expensesIcons/Container.png"
-              alt=""
+              alt="Иконки сервисов: самолёт, отель, вагон, такси, изображение карты"
               class="cta__icons-img"
               width="168"
               height="56"
+              loading="lazy"
               decoding="async"
             >
           </div>
-          <a href="#try" class="btn btn--primary">Попробовать бесплатно &rarr;</a>
+          <a href="#consult" class="btn btn--primary">Попробовать бесплатно &rarr;</a>
         </div>
       </div>
     </section>
 
-    <section class="team-roles" id="team-roles" aria-labelledby="team-roles-title">
+    <section class="team-roles reveal" id="audience" aria-labelledby="team-roles-title">
       <div class="team-roles__inner">
         <h2 class="team-roles__title" id="team-roles-title">Сервис поможет всей команде</h2>
         <div class="team-roles__grid">
           <article class="team-card">
             <div class="team-card__content">
               <div class="team-card__role">
-                <img src="img/team/icon-organizer.svg" alt="" class="team-card__role-icon" width="24" height="24">
+                <img src="img/team/icon-organizer.svg" alt="" class="team-card__role-icon" width="24" height="24" loading="lazy" decoding="async">
                 <span class="team-card__role-text">Организатору командировок</span>
               </div>
               <h3 class="team-card__title">Бронируйте деловые поездки в одном окне за 2 минуты</h3>
               <p class="team-card__desc">Создание и согласование поездок за пару кликов, с поддержкой 24/7. Сервис автоматически подставляет данные сотрудников, контролирует лимиты и снижает риск ошибок</p>
             </div>
-            <img src="img/team/person-figma-1.png" alt="" class="team-card__person" loading="lazy">
+            <img src="img/team/person-figma-1.png" alt="Организатор командировок" class="team-card__person" loading="lazy">
           </article>
           <article class="team-card">
             <div class="team-card__content">
               <div class="team-card__role">
-                <img src="img/team/icon-manager.svg" alt="" class="team-card__role-icon" width="24" height="24">
+                <img src="img/team/icon-manager.svg" alt="" class="team-card__role-icon" width="24" height="24" loading="lazy" decoding="async">
                 <span class="team-card__role-text">Руководителю</span>
               </div>
               <h3 class="team-card__title">Контролируйте командировки и экономьте бюджет компании</h3>
               <p class="team-card__desc">Детализированная аналитика по расходам и контроль отклонений. При превышении установленных лимитов бронирование возможно только после согласования.</p>
             </div>
-            <img src="img/team/person-figma-2.png" alt="" class="team-card__person" loading="lazy">
+            <img src="img/team/person-figma-2.png" alt="Руководитель" class="team-card__person" loading="lazy">
           </article>
           <article class="team-card">
             <div class="team-card__content">
               <div class="team-card__role">
-                <img src="img/team/icon-accountant.svg" alt="" class="team-card__role-icon" width="24" height="24">
+                <img src="img/team/icon-accountant.svg" alt="" class="team-card__role-icon" width="24" height="24" loading="lazy" decoding="async">
                 <span class="team-card__role-text">Бухгалтеру</span>
               </div>
               <h3 class="team-card__title">Учитывайте расходы по поездкам быстро и без ошибок</h3>
               <p class="team-card__desc">Закрывающие формируются автоматически, соответствуют требованиям законодательства и хранятся в одном месте. Интеграция с «1С» и ЭДО упрощает подтверждение расходов</p>
             </div>
-            <img src="img/team/person-figma-3.png" alt="" class="team-card__person" loading="lazy">
+            <img src="img/team/person-figma-3.png" alt="Бухгалтер" class="team-card__person" loading="lazy">
           </article>
           <article class="team-card">
             <div class="team-card__content">
               <div class="team-card__role">
-                <img src="img/team/icon-hr.svg" alt="" class="team-card__role-icon" width="24" height="24">
+                <img src="img/team/icon-hr.svg" alt="" class="team-card__role-icon" width="24" height="24" loading="lazy" decoding="async">
                 <span class="team-card__role-text">Кадровому специалисту и HR-менеджеру</span>
               </div>
               <h3 class="team-card__title">Держите все документы в порядке и обеспечьте комфорт сотрудников</h3>
               <p class="team-card__desc">Гибкие схемы согласования ускоряют работу, формирование приказов и служебных заданий происходит в два клика. Данные о командировках и бронированиях передаются в «1С» по бесшовной интеграции</p>
             </div>
-            <img src="img/team/person-figma-4.png" alt="" class="team-card__person" loading="lazy">
+            <img src="img/team/person-figma-4.png" alt="HR-менеджер" class="team-card__person" loading="lazy">
           </article>
         </div>
         <div class="team-roles__actions">
-          <a href="#try" class="team-roles__btn">Попробовать бесплатно &rarr;</a>
+          <a href="#consult" class="team-roles__btn">Попробовать бесплатно &rarr;</a>
         </div>
       </div>
     </section>
 
-    <section class="integrations" id="integrations" aria-labelledby="integrations-title">
+    <section class="integrations reveal reveal--left" id="integrations" aria-labelledby="integrations-title">
       <div class="integrations__inner">
         <h2 class="integrations__title" id="integrations-title">Синхронизируйте сервис <span class="text-red">автоматизации командировок</span> с другими IT-системами</h2>
         <div class="integrations__layout">
           <article class="integration-card integration-card--large integration-card--1c">
-            <img src="img/integrations-mobile/logo-1c-mobile.svg" alt="1С" class="integration-card__logo" width="109" height="52" decoding="async">
+            <img src="img/integrations-mobile/logo-1c-mobile.svg" alt="1С" class="integration-card__logo" width="109" height="52" loading="lazy" decoding="async">
             <p class="integration-card__text">Настройте бесшовную интеграцию с «1С:Бухгалтерией», «1С:ERP» и «1С:ЗУП» в 2 клика, без переноса данных вручную и ошибок</p>
             <div class="integration-card__visual">
               <img src="img/integrations-mobile/integration-1c-screen.png" alt="Настройка интеграции с 1С:Бухгалтерией" class="integration-card__img" width="717" height="134" loading="lazy" decoding="async">
@@ -409,7 +412,7 @@
           <article class="integration-card integration-card--large integration-card--yandex">
             <div class="integration-card__yandex-row">
               <div class="integration-card__yandex-copy">
-                <img src="img/integrations-mobile/logo-yandex-go-mobile.svg" alt="Яндекс Go" class="integration-card__logo" width="230" height="55" decoding="async">
+                <img src="img/integrations-mobile/logo-yandex-go-mobile.svg" alt="Яндекс Go" class="integration-card__logo" width="230" height="55" loading="lazy" decoding="async">
                 <p class="integration-card__text">Вызывайте такси как обычно и оплачивайте их с корпоративного счета в Smartway — расходы сразу отобразятся в системе</p>
               </div>
               <div class="integration-card__visual integration-card__visual--yandex">
@@ -429,7 +432,7 @@
       </div>
     </section>
 
-    <section class="app-block" id="app-block" aria-labelledby="app-block-title">
+    <section class="app-block reveal reveal--right" id="app-block" aria-labelledby="app-block-title">
       <div class="app-block__inner">
         <div class="app-block__content">
           <h2 class="app-block__title" id="app-block-title">Все возможности сервиса в <span class="text-accent">мобильном приложении</span></h2>
@@ -440,17 +443,17 @@
             <li class="app-block__item">Получайте уведомления, общайтесь с Travel-поддержкой 24/7</li>
           </ul>
           <div class="app-block__stores">
-            <a href="#" class="app-block__store" aria-label="Скачать в App Store">
-              <img src="img/osLogo/photo.svg.png" alt="Загрузить в App Store" class="app-block__store-badge" width="180" height="52" decoding="async">
+            <a href="https://smartway.today/" class="app-block__store" aria-label="Скачать в App Store" rel="noopener noreferrer">
+              <img src="img/osLogo/photo.svg.png" alt="Загрузить в App Store" class="app-block__store-badge" width="180" height="52" loading="lazy" decoding="async">
             </a>
-            <a href="#" class="app-block__store" aria-label="Скачать в Google Play">
-              <img src="img/osLogo/Container.png" alt="Загрузить в Google Play" class="app-block__store-badge" width="200" height="52" decoding="async">
+            <a href="https://smartway.today/" class="app-block__store" aria-label="Скачать в Google Play" rel="noopener noreferrer">
+              <img src="img/osLogo/Container.png" alt="Загрузить в Google Play" class="app-block__store-badge" width="200" height="52" loading="lazy" decoding="async">
             </a>
-            <a href="#" class="app-block__store" aria-label="Скачать в RuStore">
-              <img src="img/osLogo/Container-1.png" alt="Загрузить в RuStore" class="app-block__store-badge" width="180" height="52" decoding="async">
+            <a href="https://smartway.today/" class="app-block__store" aria-label="Скачать в RuStore" rel="noopener noreferrer">
+              <img src="img/osLogo/Container-1.png" alt="Загрузить в RuStore" class="app-block__store-badge" width="180" height="52" loading="lazy" decoding="async">
             </a>
-            <a href="#" class="app-block__store" aria-label="Скачать в App Gallery">
-              <img src="img/osLogo/Container-2.png" alt="Загрузить в AppGallery" class="app-block__store-badge" width="200" height="52" decoding="async">
+            <a href="https://smartway.today/" class="app-block__store" aria-label="Скачать в App Gallery" rel="noopener noreferrer">
+              <img src="img/osLogo/Container-2.png" alt="Загрузить в AppGallery" class="app-block__store-badge" width="200" height="52" loading="lazy" decoding="async">
             </a>
           </div>
         </div>
@@ -464,7 +467,7 @@
       </div>
     </section>
 
-    <section class="mice" id="mice" aria-labelledby="mice-title">
+    <section class="mice reveal" id="mice" aria-labelledby="mice-title">
       <div class="mice__inner">
         <div class="mice__header">
           <h2 class="mice__title" id="mice-title">Планируйте деловые поездки и мероприятия в одном месте</h2>
@@ -472,21 +475,21 @@
             <p class="mice__text">Организуем корпоративы, конференции, тимбилдинг и другие форматы в России и за границей</p>
             <div class="mice__actions">
               <a href="#consult" class="btn btn--primary mice__btn">Получить консультацию <span class="mice__btn-arrow" aria-hidden="true">→</span></a>
-              <a href="#mice-details" class="mice__link">Подробнее о MICE в Smartway <span class="mice__link-arrow" aria-hidden="true">→</span></a>
+              <a href="mice.html" class="mice__link">Подробнее о MICE в Smartway <span class="mice__link-arrow" aria-hidden="true">→</span></a>
             </div>
           </div>
         </div>
         <div class="mice__grid">
           <article class="mice__card">
             <div class="mice__card-icon" aria-hidden="true">
-              <img src="img/icon-handshake.svg" alt="" width="22" height="22">
+              <img src="img/icon-handshake.svg" alt="" width="22" height="22" loading="lazy" decoding="async">
             </div>
             <h3 class="mice__card-title">Событие от и до</h3>
             <p class="mice__card-text">Отвечаем за каждый этап: от концепции до закрывающих</p>
           </article>
           <article class="mice__card">
             <div class="mice__card-icon" aria-hidden="true">
-              <img src="img/icon-briefcase.svg" alt="" width="22" height="22">
+              <img src="img/icon-briefcase.svg" alt="" width="22" height="22" loading="lazy" decoding="async">
             </div>
             <h3 class="mice__card-title">Помогаем расти бизнесу</h3>
             <p class="mice__card-text">Повышаем вовлечённость команды и лояльность партнеров</p>
@@ -494,7 +497,7 @@
           <article class="mice__card mice__card--photo" role="img" aria-label="Участники корпоративного мероприятия"></article>
           <article class="mice__card">
             <div class="mice__card-icon" aria-hidden="true">
-              <img src="img/icon-star.svg" alt="" width="22" height="22">
+              <img src="img/icon-star.svg" alt="" width="22" height="22" loading="lazy" decoding="async">
             </div>
             <h3 class="mice__card-title">800+ событий в год</h3>
             <p class="mice__card-text">Организуем по 2 мероприятия ежедневно для разных клиентов</p>
@@ -503,7 +506,7 @@
       </div>
     </section>
 
-    <section class="cases" id="cases" aria-labelledby="cases-title">
+    <section class="cases reveal" id="cases" aria-labelledby="cases-title">
       <div class="cases__inner">
         <div class="cases__left">
           <span class="cases__number">7 600+</span>
@@ -512,10 +515,10 @@
         <div class="cases__right">
           <article class="cases__card">
             <div class="cases__logo-wrap">
-              <img src="img/cases-dodo.png" alt="Dodo Brands" class="cases__logo" width="170" height="43">
+              <img src="img/cases-dodo.png" alt="Dodo Brands" class="cases__logo" width="170" height="43" loading="lazy" decoding="async">
             </div>
             <p class="cases__text">Доверили сотрудникам оформление поездок <strong>и освободили 50% времени</strong> организатора командировок</p>
-            <a href="#" class="cases__link">Читать кейс</a>
+            <a href="clients.html" class="cases__link">Читать кейс</a>
             <div class="cases__author">
               <img src="img/cases-avatar-1.svg" alt="" class="cases__avatar" width="47" height="47" loading="lazy">
               <div class="cases__author-info">
@@ -526,10 +529,10 @@
           </article>
             <article class="cases__card">
                 <div class="cases__logo-wrap">
-                    <img src="img/cases-modulbank.svg" alt="Модульбанк" class="cases__logo" width="170" height="43">
+                    <img src="img/cases-modulbank.svg" alt="Модульбанк" class="cases__logo" width="170" height="43" loading="lazy" decoding="async">
                 </div>
                 <p class="cases__text">Ускорили согласование поездок <span class="text-accent">с 24 часов до 10 минут</span> благодаря схемам согласования</p>
-                <a href="#" class="cases__link">Читать кейс</a>
+                <a href="clients.html" class="cases__link">Читать кейс</a>
                 <div class="cases__author">
                     <img src="img/cases-gelpic.svg" alt="" class="cases__avatar" width="48" height="48" loading="lazy">
                     <div class="cases__author-info">
@@ -540,13 +543,13 @@
             </article>
           <article class="cases__card">
             <div class="cases__logo-wrap">
-              <img src="img/cases-gelpic.png" alt="Гелпик" class="cases__logo" width="170" height="43">
+              <img src="img/cases-gelpic.png" alt="Гелпик" class="cases__logo" width="170" height="43" loading="lazy" decoding="async">
             </div>
             <p class="cases__text"><span class="text-accent">Сэкономили 50% на командировках</span>
             <br>благодаря гибким
             тревел-политикам
             в сервисе</p>
-            <a href="#" class="cases__link">Читать кейс</a>
+            <a href="clients.html" class="cases__link">Читать кейс</a>
             <div class="cases__author">
               <img src="img/cases-avatar-2.svg" alt="" class="cases__avatar" width="47" height="47" loading="lazy">
               <div class="cases__author-info">
@@ -559,7 +562,7 @@
       </div>
     </section>
 
-    <section class="cta-form" id="consult" aria-labelledby="cta-form-title">
+    <section class="cta-form reveal" id="consult" aria-labelledby="cta-form-title">
       <div class="cta-form__inner">
         <div class="cta-form__content">
           <div class="cta-form__copy">
@@ -571,7 +574,7 @@
           </div>
         </div>
         <div class="cta-form__card">
-          <form class="cta-form__form" action="#" method="post">
+          <form class="cta-form__form" action="" method="post">
             <div class="cta-form__field">
               <label for="cta-name" class="cta-form__label">Ваше имя*</label>
               <input type="text" id="cta-name" name="name" class="cta-form__input" required placeholder="Иван Иванов">
@@ -605,14 +608,14 @@
               <label for="cta-consent" class="cta-form__checkbox-label">Даю согласие на получение сообщений рекламного и информационного характера.</label>
             </div>
             <button type="submit" class="cta-form__submit">Попробовать бесплатно</button>
-            <p class="cta-form__footnote">Нажимая на эту кнопку, Вы даёте согласие на обработку <a href="#" class="cta-form__footnote-link">персональных данных</a> и принимаете условия <a href="#" class="cta-form__footnote-link">Политики обработки персональных данных</a></p>
+            <p class="cta-form__footnote">Нажимая на эту кнопку, Вы даёте согласие на обработку <a href="consent-advertising.html" class="cta-form__footnote-link">персональных данных</a> и принимаете условия <a href="confidence-page.html" class="cta-form__footnote-link">Политики обработки персональных данных</a></p>
           </form>
         </div>
       </div>
     </section>
 
 
-    <section class="faq" id="faq" aria-labelledby="faq-title">
+    <section class="faq reveal" id="useful" aria-labelledby="faq-title">
       <div class="faq__inner">
         <h2 class="faq__title" id="faq-title">Частые вопросы и ответы о бронировании отелей для командировок</h2>
         <div class="faq__list">
@@ -688,17 +691,17 @@
       </div>
     </section>
 
-    <section class="support-cta" id="support-cta" aria-labelledby="support-cta-title">
+    <section class="support-cta reveal" id="support-cta" aria-labelledby="support-cta-title">
       <div class="support-cta__inner">
         <div class="support-cta__avatars" aria-hidden="true">
           <div class="support-cta__avatar support-cta__avatar--1">
-            <img src="img/support-icon-chat.svg" alt="" width="28" height="28" decoding="async">
+            <img src="img/support-icon-chat.svg" alt="" width="28" height="28" loading="lazy" decoding="async">
           </div>
           <div class="support-cta__avatar support-cta__avatar--2">
-            <img src="img/support-icon-person.svg" alt="" width="28" height="28" decoding="async">
+            <img src="img/support-icon-person.svg" alt="" width="28" height="28" loading="lazy" decoding="async">
           </div>
           <div class="support-cta__avatar support-cta__avatar--3">
-            <img src="img/support-icon-question.svg" alt="" width="28" height="28" decoding="async">
+            <img src="img/support-icon-question.svg" alt="" width="28" height="28" loading="lazy" decoding="async">
           </div>
         </div>
         <div class="support-cta__content">
@@ -735,7 +738,7 @@
                 <p class="footer__contact footer__contact--strong"><a href="mailto:pr@smartway.today">pr@smartway.today</a></p>
               </div>
               <p class="footer__contact">
-                <a href="#" class="footer__link-external">Для отелей по вопросам контрактинга<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
+                <a href="contract-hotel.html" class="footer__link-external">Для отелей по вопросам контрактинга<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
               </p>
             </div>
             <p class="footer__address">121205, город&nbsp;Москва, Сколково, Бульвар Большой, дом&nbsp;42, стр.&nbsp;1, цок.&nbsp;этаж, пом.&nbsp;137 часть рм&nbsp;27</p>
@@ -751,34 +754,34 @@
           <div class="footer__col-body">
             <h3 class="footer__heading">Сценарии</h3>
             <ul class="footer__list">
-              <li><a href="#">Для руководителя</a></li>
-              <li><a href="#">Для тревел-менеджера</a></li>
-              <li><a href="#">Для бухгалтера</a></li>
+              <li><a href="superviser.html">Для руководителя</a></li>
+              <li><a href="travel-manager.html">Для тревел-менеджера</a></li>
+              <li><a href="accountant.html">Для бухгалтера</a></li>
             </ul>
           </div>
         </div>
         <div class="footer__col footer__col--capabilities">
           <div class="footer__capabilities-top">
-            <a href="#" class="footer__channel-pill">
-              <img src="img/footer-icon-tg.svg" alt="" class="footer__channel-icon" width="18" height="18">
+            <a href="https://smartway.today/" class="footer__channel-pill" rel="noopener noreferrer">
+              <img src="img/footer-icon-tg.svg" alt="" class="footer__channel-icon" width="18" height="18" loading="lazy" decoding="async">
               <span class="footer__channel-label">Канал «Командировки.Сегодня»</span>
             </a>
             <div class="footer__social-icons">
-              <a href="#" class="footer__social footer__social--round" aria-label="ВКонтакте"><img src="img/footer-icon-vk.svg" alt="" width="20" height="20"></a>
-              <a href="#" class="footer__social footer__social--round" aria-label="VC.ru"><img src="img/footer-icon-vc.svg" alt="" class="footer__social-img--vc" width="22" height="16"></a>
+              <a href="https://smartway.today/" class="footer__social footer__social--round" aria-label="ВКонтакте" rel="noopener noreferrer"><img src="img/footer-icon-vk.svg" alt="" width="20" height="20" loading="lazy" decoding="async"></a>
+              <a href="https://vc.ru/" class="footer__social footer__social--round" aria-label="VC.ru" rel="noopener noreferrer"><img src="img/footer-icon-vc.svg" alt="" class="footer__social-img--vc" width="22" height="16" loading="lazy" decoding="async"></a>
             </div>
           </div>
           <div class="footer__col-body">
             <h3 class="footer__heading">Возможности</h3>
             <ul class="footer__list">
-              <li><a href="#">Поиск авиабилетов</a></li>
-              <li><a href="#">Поиск ж/д билетов</a></li>
-              <li><a href="#">Поиск отелей</a></li>
-              <li><a href="#">Такси</a></li>
-              <li><a href="#">Интеграция с 1С</a></li>
-              <li><a href="#">Согласование</a></li>
-              <li><a href="#">Тревел-политики</a></li>
-              <li><a href="#" class="footer__list-link--accent">Smartway Отпуск</a></li>
+              <li><a href="aviaticket.html">Поиск авиабилетов</a></li>
+              <li><a href="zhd-bileti.html">Поиск ж/д билетов</a></li>
+              <li><a href="hotels.html">Поиск отелей</a></li>
+              <li><a href="taxi.html">Такси</a></li>
+              <li><a href="smartway1c.html">Интеграция с 1С</a></li>
+              <li><a href="travel-coordination.html">Согласование</a></li>
+              <li><a href="travel-policy.html">Тревел-политики</a></li>
+              <li><a href="helpic.html" class="footer__list-link--accent">Smartway Отпуск</a></li>
             </ul>
           </div>
         </div>
@@ -787,13 +790,13 @@
           <div class="footer__col-body">
             <h3 class="footer__heading">Полезное</h3>
             <ul class="footer__list">
-              <li><a href="#">Вопрос-ответ</a></li>
-              <li><a href="#">Блог</a></li>
-              <li><a href="#">Бесплатная консультация</a></li>
-              <li><a href="#">Такси в командировке</a></li>
-              <li><a href="#">Оформление командировок</a></li>
-              <li><a href="#">Реферальная программа Smartway</a></li>
-              <li><a href="#">Аудит командировок</a></li>
+              <li><a href="faq.html">Вопрос-ответ</a></li>
+              <li><a href="blog.html">Блог</a></li>
+              <li><a href="1index.html#consult">Бесплатная консультация</a></li>
+              <li><a href="taxi.html">Такси в командировке</a></li>
+              <li><a href="komandirovka.html">Оформление командировок</a></li>
+              <li><a href="https://smartway.today/" rel="noopener noreferrer">Реферальная программа Smartway</a></li>
+              <li><a href="download-docs.html">Аудит командировок</a></li>
             </ul>
           </div>
         </div>
@@ -802,17 +805,17 @@
           <div class="footer__col-body">
             <h3 class="footer__heading">О компании</h3>
             <ul class="footer__list footer__list--compact">
-              <li><a href="#">Общая информация</a></li>
-              <li><a href="#">Работа в Smartway</a></li>
-              <li><a href="#">Реквизиты</a></li>
-              <li><a href="#">Оферта</a></li>
-              <li><a href="#">Контакты</a></li>
-              <li><a href="#">Условия доступа к личным поездкам</a></li>
-              <li><a href="#">Пользовательское соглашение</a></li>
-              <li><a href="#">Политика конфиденциальности</a></li>
-              <li><a href="#">Правила использования ПЭП</a></li>
-              <li><a href="#">Гарантия лучшей цены</a></li>
-              <li><a href="#">Аккредитованная IT-компания</a></li>
+              <li><a href="about.html">Общая информация</a></li>
+              <li><a href="cariers.html">Работа в Smartway</a></li>
+              <li><a href="rekvizity.html">Реквизиты</a></li>
+              <li><a href="offer.html">Оферта</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+              <li><a href="helpic.html">Условия доступа к личным поездкам</a></li>
+              <li><a href="offer.html">Пользовательское соглашение</a></li>
+              <li><a href="confidence-page.html">Политика конфиденциальности</a></li>
+              <li><a href="certificate.html">Правила использования ПЭП</a></li>
+              <li><a href="rates.html">Гарантия лучшей цены</a></li>
+              <li><a href="certificate.html">Аккредитованная IT-компания</a></li>
             </ul>
           </div>
         </div>
@@ -829,7 +832,7 @@
           </span>
           <span class="footer-newsletter__text">Подпишитесь на рассылку полезных материалов Smartway</span>
         </p>
-        <form class="footer-newsletter__form" action="#" method="post">
+        <form class="footer-newsletter__form" action="" method="post">
           <label class="footer-newsletter__sr-only" for="footer-newsletter-email">Корпоративная почта</label>
           <input type="email" id="footer-newsletter-email" name="email" class="footer-newsletter__input" placeholder="Корпоративная почта" autocomplete="email" required>
           <button type="submit" class="footer-newsletter__submit">Подписаться</button>
@@ -838,9 +841,9 @@
     </section>
     <div class="footer__bottom">
       <div class="footer__bottom-inner">
-        <a href="#" class="footer__bottom-link">Защита персональных данных</a>
-        <a href="#" class="footer__bottom-link">Сертификат Транспортной Клиринговой Компании</a>
-        <a href="#" class="footer__bottom-link">Безопасное соединение SSL</a>
+        <a href="confidence-page.html" class="footer__bottom-link">Защита персональных данных</a>
+        <a href="certificate.html" class="footer__bottom-link">Сертификат Транспортной Клиринговой Компании</a>
+        <a href="confidence-page.html" class="footer__bottom-link">Безопасное соединение SSL</a>
       </div>
     </div>
   </footer>

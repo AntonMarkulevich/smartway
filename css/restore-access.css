@@ -1,4 +1,10 @@
 /* Страница «Помощь с авторизацией» — без навигации в шапке */
+
+html:has(body.restore-access-page),
+body.restore-access-page {
+  overflow-x: hidden;
+}
+
 body.restore-access-page.komand-page--no-sidebar .komand-layout {
   display: block;
 }
@@ -35,6 +41,12 @@ body.restore-access-page .komand-main {
   font-weight: 500;
   color: #6b6d72;
   text-decoration: none;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .restore-access__back:hover {
@@ -52,8 +64,24 @@ body.restore-access-page .komand-main {
   color: #1a1a1a;
 }
 
+/* Десктоп: H1 по макету (аудит) */
+@media (min-width: 1024px) {
+  .restore-access__title {
+    font-size: 72px;
+    line-height: 70px;
+    min-height: 70px;
+    letter-spacing: -3px;
+    color: #3a3a3a;
+  }
+}
+
 .restore-access__section {
   margin: 0 0 28px;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .restore-access__section:last-child {
@@ -83,10 +111,22 @@ body.restore-access-page .komand-main {
   color: #d44333;
   text-decoration: underline;
   text-underline-offset: 0.15em;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .restore-access a:not(.restore-access__back):hover {
   opacity: 0.88;
+}
+
+@media (min-width: 561px) and (max-width: 1023px) {
+  .restore-access__title {
+    color: #3a3a3a;
+  }
 }
 
 @media (max-width: 560px) {
@@ -94,5 +134,50 @@ body.restore-access-page .komand-main {
     font-size: clamp(26px, 7.5vw, 52px);
     line-height: 1.25;
     min-height: 0;
+  }
+}
+
+/* ——— Аудит: анимации по скроллу ——— */
+.restore-access-page .reveal {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.restore-access-page .reveal--left {
+  transform: translate3d(-28px, 32px, 0);
+}
+
+.restore-access-page .reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .restore-access-page .reveal,
+  .restore-access-page .reveal--left {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+body.restore-access-page .komand-main a,
+body.restore-access-page .komand-main button,
+body.restore-access-page [role="button"] {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .restore-access__section:hover {
+    transform: translateY(-2px);
   }
 }

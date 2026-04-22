@@ -2,6 +2,7 @@
 
 .page-cariers {
   background: #f0f0f2;
+  overflow-x: hidden;
 }
 
 .cariers-main {
@@ -73,6 +74,15 @@
   line-height: 1.12;
   letter-spacing: -0.02em;
   color: #1a1a1a;
+}
+
+@media (min-width: 769px) {
+  .cariers-hero__title {
+    font-size: 72px;
+    line-height: 70px;
+    letter-spacing: -2.5px;
+    color: #3c3c3c;
+  }
 }
 
 .cariers-hero__lead {
@@ -1258,4 +1268,31 @@
 
 .page-cariers .cariers-strip--muted {
   background: #f5f5f7;
+}
+
+/* Аудит: плавные ховеры, лёгкий подъём карточек, доп. страховка от горизонтального скролла */
+html:has(.page-cariers) {
+  overflow-x: hidden;
+}
+
+body.page-cariers .cariers-main a,
+body.page-cariers .cariers-main button {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+body.page-cariers .cariers-values__item,
+body.page-cariers .cariers-hr-team__card,
+body.page-cariers .cariers-vacancy-list__row {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.page-cariers .cariers-values__item:hover,
+body.page-cariers .cariers-hr-team__card:hover {
+  transform: translateY(-2px);
 }

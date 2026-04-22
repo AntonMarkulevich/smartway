@@ -83,6 +83,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -91,6 +92,7 @@ body {
   font-weight: 400;
   color: var(--color-text);
   background-color: var(--color-bg);
+  overflow-x: hidden;
 }
 
 img {
@@ -104,6 +106,122 @@ a {
   text-decoration: none;
 }
 
+/* Плавные ховеры интерактивов (главная) */
+main a:not(.btn):not(.footer__btn),
+main button,
+.btn,
+[role='button'] {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.team-card,
+.stats-card,
+.services__card,
+.cases__card,
+.integration-card,
+.mice__card:not(.mice__card--photo) {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.team-card:hover,
+.stats-card:hover,
+.services__card:hover,
+.cases__card:hover,
+.integration-card:hover,
+.mice__card:not(.mice__card--photo):hover {
+  transform: translateY(-2px);
+}
+
+.page-1index .footer a:not(.footer__btn) {
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Появление секций при скролле */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal--left {
+  transform: translate3d(-28px, 32px, 0);
+}
+
+.reveal--right {
+  transform: translate3d(28px, 32px, 0);
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Keyframes для scroll-reveal и кастомных анимаций (аудит) */
+@keyframes fade_in_up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade_in_left {
+  from {
+    opacity: 0;
+    transform: translate3d(-28px, 24px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade_in_right {
+  from {
+    opacity: 0;
+    transform: translate3d(28px, 24px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes hide-down {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+}
 
 /* ===== Hero — первый экран (Figma node 44:15232) ===== */
 .hero {
@@ -133,10 +251,10 @@ a {
   margin: 0 0 31px;
   font-family: 'Golos Text', sans-serif;
   font-weight: 700;
-  font-size: 82px;
-  line-height: 74px;
+  font-size: 72px;
+  line-height: 70px;
   letter-spacing: -3px;
-  color: #3A3A3A;
+  color: #3a3a3a;
 }
 
 .hero__subtitle {
@@ -586,7 +704,8 @@ a {
   padding: 0px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 0;
+  row-gap: 12px;
+  column-gap: 0;
   grid-column: 3;
   grid-row: 3 / span 2;
   display: grid;
@@ -811,18 +930,17 @@ a {
   grid-column: 1;
   grid-row: 2;
   min-width: 0;
-  min-height: 0;
   position: relative;
   z-index: 3;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 16px 12px;
-  margin-top: 12px;
-  margin-right: 12px;
+  margin: 0 12px 0 0;
   background-color: var(--transfer-panel);
   border-radius: 18px;
   align-self: stretch;
+  min-height: 100%;
   box-sizing: border-box;
 }
 

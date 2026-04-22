@@ -38,6 +38,13 @@
   .clients-hero {
     padding-inline: var(--container-padding-x);
   }
+
+  .clients-hero__title {
+    font-size: 63.26px;
+    line-height: 60.73px;
+    color: #272727;
+    letter-spacing: -2.5304px;
+  }
 }
 
 .clients-hero__title {
@@ -167,7 +174,12 @@
   border: 1px solid transparent;
   border-radius: 999px;
   cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .clients-filter__btn:hover {
@@ -479,4 +491,85 @@
 
 .client-card--cta .client-card__cta-btn:hover {
   background: #f5f5f5;
+}
+
+/* ——— Аудит: горизонтальный скролл, анимации по скроллу, плавные ховеры ——— */
+body.clients-page {
+  overflow-x: hidden;
+}
+
+/* Кадры анимации (аудит); по умолчанию — transition у .reveal */
+@keyframes sw-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes sw-fade-in-left {
+  from {
+    opacity: 0;
+    transform: translate3d(-28px, 24px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.clients-page .reveal {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.clients-page .reveal--left {
+  transform: translate3d(-28px, 32px, 0);
+}
+
+.clients-page .reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clients-page .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.clients-page .komand-main a,
+.clients-page .komand-main button {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.clients-page .client-card {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+.clients-page .client-card:hover {
+  transform: translateY(-2px);
+}
+
+.clients-page .client-card--media:hover {
+  transform: none;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
 }

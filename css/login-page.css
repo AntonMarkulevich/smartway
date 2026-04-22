@@ -1,5 +1,61 @@
 /* Страница входа — те же классы формы, что на registration-page */
 
+html:has(body.login-page) {
+  overflow-x: hidden;
+}
+
+body.login-page {
+  overflow-x: hidden;
+}
+
+/* Появление основного блока при скролле */
+.login-page .reveal {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.login-page .reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .login-page .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Плавные ховеры на интерактивных элементах страницы */
+.login-page .reg-main a,
+.login-page .reg-main button,
+.login-page .footer a,
+.login-page .footer button,
+.login-page [role="button"] {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.login-page .reg-form {
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .login-page .reg-form:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  }
+}
+
 .login-page .reg-hero {
   margin-bottom: clamp(28px, 5vw, 56px);
 }

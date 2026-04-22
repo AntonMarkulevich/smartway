@@ -1,0 +1,64 @@
+/* superviser.html — аудит: overflow-x, scroll-reveal, плавные ховеры */
+
+html:has(body.superviser-page),
+body.superviser-page {
+  overflow-x: hidden;
+}
+
+.superviser-page .reveal {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.superviser-page .reveal--left {
+  transform: translate3d(-28px, 32px, 0);
+}
+
+.superviser-page .reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .superviser-page .reveal,
+  .superviser-page .reveal--left {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+body.superviser-page main a,
+body.superviser-page main button,
+body.superviser-page .footer a,
+body.superviser-page .footer button,
+body.superviser-page [role="button"] {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+body.superviser-page main .sup-results-card,
+body.superviser-page main .trust-credentials-block__card,
+body.superviser-page main .payment-flex-card {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.superviser-page main .sup-results-card:hover,
+  body.superviser-page main .trust-credentials-block__card:hover,
+  body.superviser-page main .payment-flex-card:hover {
+    transform: translateY(-2px);
+  }
+}

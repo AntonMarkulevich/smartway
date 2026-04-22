@@ -1,0 +1,38 @@
+/**
+ * Лендинг бухгалтера (accountant.html): базовые стили из hr-manager-page.css
+ * и правки макета/типографики по аудиту.
+ */
+@import url("hr-manager-page.css");
+
+.page-accountant {
+  overflow-x: hidden;
+}
+
+@media (min-width: 769px) {
+  .page-accountant .accountant-hero-block__title {
+    font-size: 72px;
+    line-height: 70px;
+  }
+}
+
+.page-accountant .accountant-avans-card,
+.page-accountant .accountant-avans-bottom__card,
+.page-accountant .payment-flex-card,
+.page-accountant .docs-report-mini-card,
+.page-accountant .results-cases-card,
+.page-accountant .accountant-useful-card,
+.page-accountant .accountant-materials-card,
+.page-accountant .trust-credentials-block__card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.page-accountant .accountant-avans-card:hover,
+.page-accountant .accountant-avans-bottom__card:hover,
+.page-accountant .payment-flex-card:hover,
+.page-accountant .docs-report-mini-card:hover,
+.page-accountant .results-cases-card:hover,
+.page-accountant .accountant-useful-card:hover,
+.page-accountant .accountant-materials-card:hover,
+.page-accountant .trust-credentials-block__card:hover {
+  transform: translateY(-2px);
+}

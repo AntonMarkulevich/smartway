@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="css/footer-unified.css">
   <link rel="stylesheet" href="css/site-header.css">
   <link rel="stylesheet" href="css/travel-policy.css">
+  <link rel="stylesheet" href="css/travel-policy-page.css">
+  <script src="js/travel-policy-page.js" defer></script>
 </head>
 <body class="komand-page komand-page--no-sidebar travel-policy-page">
   <div class="komand-layout">
@@ -21,7 +23,7 @@
         <div class="header__inner">
           <div class="header__left">
             <a href="1index.html" aria-label="Smartway — на главную">
-              <img src="img/header-logo.svg" alt="Smartway" class="header__logo">
+              <img src="img/header-logo.svg" alt="Smartway" class="header__logo" width="120" height="32" fetchpriority="high" loading="eager" decoding="async">
             </a>
             <div class="header__divider"></div>
             <span class="header__descriptor">Стандарт управления<br>командировками</span>
@@ -36,20 +38,20 @@
               <li><a href="1index.html#audience" class="header__link">Для кого <span class="header__chevron"></span></a></li>
               <li><a href="1index.html#capabilities" class="header__link">Возможности <span class="header__chevron"></span></a></li>
               <li><a href="1index.html#useful" class="header__link">Полезное <span class="header__chevron"></span></a></li>
-              <li><a href="1index.html#mice" class="header__link">MICE</a></li>
-              <li><a href="1index.html#tariffs" class="header__link">Тарифы</a></li>
+              <li><a href="mice.html" class="header__link">MICE</a></li>
+              <li><a href="rates.html" class="header__link">Тарифы</a></li>
               <li><a href="clients.html" class="header__link">Клиенты</a></li>
             </ul>
           </nav>
           <div class="header__actions">
             <a href="mailto:hello@smartway.today" class="header__icon-btn" aria-label="Написать">
-              <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail">
+              <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail" width="24" height="24" loading="eager" decoding="async">
             </a>
             <a href="tel:+78007751428" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
-              <img src="img/phone.svg" alt="">
+              <img src="img/phone.svg" alt="" width="20" height="20" loading="eager" decoding="async">
             </a>
             <a href="login.html" class="header__login">
-              <img src="img/header-icon-email.svg" alt=""> Войти
+              <img src="img/header-icon-email.svg" alt="" width="20" height="20" loading="eager" decoding="async"> Войти
             </a>
             <a href="https://smartway.today/" class="header__btn">Протестировать</a>
           </div>
@@ -62,16 +64,16 @@
               <li><a href="1index.html#audience" class="header__drawer-link">Для кого</a></li>
               <li><a href="1index.html#capabilities" class="header__drawer-link">Возможности</a></li>
               <li><a href="1index.html#useful" class="header__drawer-link">Полезное</a></li>
-              <li><a href="1index.html#mice" class="header__drawer-link">MICE</a></li>
-              <li><a href="1index.html#tariffs" class="header__drawer-link">Тарифы</a></li>
+              <li><a href="mice.html" class="header__drawer-link">MICE</a></li>
+              <li><a href="rates.html" class="header__drawer-link">Тарифы</a></li>
               <li><a href="clients.html" class="header__drawer-link">Клиенты</a></li>
             </ul>
             <div class="header__drawer-contacts" aria-label="Связаться">
               <a href="mailto:hello@smartway.today" class="header__icon-btn" aria-label="Написать">
-                <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail">
+                <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail" width="24" height="24" loading="eager" decoding="async">
               </a>
               <a href="tel:+78007751428" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
-                <img src="img/phone.svg" alt="">
+                <img src="img/phone.svg" alt="" width="20" height="20" loading="eager" decoding="async">
               </a>
             </div>
             <div class="header__drawer-cta">
@@ -100,12 +102,12 @@
               </a>
             </div>
             <div class="travel-policy-hero__visual">
-              <img src="img/travelpolicymain.png" class="travel-policy-hero__img" width="560" height="420" alt="Согласование поездки и проверка билета на соответствие travel-политике в Smartway" loading="eager" decoding="async">
+              <img src="img/travelpolicymain.png" class="travel-policy-hero__img" width="560" height="420" alt="Согласование поездки и проверка билета на соответствие travel-политике в Smartway" fetchpriority="high" loading="eager" decoding="async">
             </div>
           </div>
         </section>
 
-        <section class="travel-policy-costs" aria-labelledby="travel-policy-costs-title">
+        <section class="travel-policy-costs reveal" aria-labelledby="travel-policy-costs-title">
           <div class="travel-policy-costs__inner">
             <div class="travel-policy-costs__content">
               <h2 id="travel-policy-costs-title" class="travel-policy-costs__title">
@@ -121,7 +123,7 @@
           </div>
         </section>
 
-        <section class="travel-policy-tabs" aria-labelledby="travel-policy-tabs-heading">
+        <section class="travel-policy-tabs reveal" aria-labelledby="travel-policy-tabs-heading">
           <h2 id="travel-policy-tabs-heading" class="travel-policy-tabs__page-title">На что можно установить ограничения:</h2>
           <div class="travel-policy-tabs__bar-wrap">
             <div class="travel-policy-tabs__bar" role="tablist" aria-label="Тип услуги">
@@ -193,7 +195,7 @@
           </div>
         </section>
 
-        <section class="travel-policy-how" aria-labelledby="travel-policy-how-title">
+        <section class="travel-policy-how reveal" aria-labelledby="travel-policy-how-title">
           <div class="travel-policy-how__inner">
             <h2 id="travel-policy-how-title" class="travel-policy-how__title">Как это работает</h2>
             <div class="travel-policy-how__intro">
@@ -206,7 +208,7 @@
           </div>
         </section>
 
-        <section class="travel-policy-present" aria-labelledby="travel-policy-present-title">
+        <section class="travel-policy-present reveal" aria-labelledby="travel-policy-present-title">
           <div class="travel-policy-present__inner">
             <div class="travel-policy-present__col travel-policy-present__col--copy">
               <h2 id="travel-policy-present-title" class="travel-policy-present__title">
@@ -220,7 +222,7 @@
             </div>
             <div class="travel-policy-present__col travel-policy-present__col--form">
               <div class="travel-policy-present__card">
-                <form class="travel-policy-present__form" action="#" method="post">
+                <form class="travel-policy-present__form" action="" method="post">
                   <div class="travel-policy-present__field">
                     <label class="visually-hidden" for="tp-present-name">Имя и фамилия</label>
                     <input type="text" id="tp-present-name" name="name" class="travel-policy-present__input" required autocomplete="name" placeholder="Имя и фамилия*">
@@ -261,7 +263,7 @@
           </div>
         </section>
 
-        <section class="travel-policy-banner" aria-labelledby="travel-policy-banner-title">
+        <section class="travel-policy-banner reveal" aria-labelledby="travel-policy-banner-title">
           <div class="travel-policy-banner__outer">
             <div class="travel-policy-banner__card">
               <div class="travel-policy-banner__copy">
@@ -272,8 +274,8 @@
                 <h2 id="travel-policy-banner-title" class="travel-policy-banner__title">согласовывают траты на поездки в 2 клика</h2>
                 <a href="clients.html" class="travel-policy-banner__btn">Подробнее</a>
               </div>
-              <div class="travel-policy-banner__visual" aria-hidden="true">
-                <img src="img/palochkiheh.png" class="travel-policy-banner__chart" width="480" height="320" alt="">
+              <div class="travel-policy-banner__visual">
+                <img src="img/palochkiheh.png" class="travel-policy-banner__chart" width="480" height="320" alt="Сравнение: скорость согласования с Smartway и без" loading="lazy" decoding="async">
               </div>
             </div>
           </div>
@@ -321,19 +323,19 @@
               <div class="footer__col-body">
                 <h3 class="footer__heading">Сценарии</h3>
                 <ul class="footer__list">
-                  <li><a href="#">Для руководителя</a></li>
-                  <li><a href="#">Для бухгалтера</a></li>
-                  <li><a href="#">Для организатора командировок</a></li>
+                  <li><a href="superviser.html">Для руководителя</a></li>
+                  <li><a href="accountant.html">Для бухгалтера</a></li>
+                  <li><a href="travel-manager.html">Для тревел-менеджера</a></li>
                 </ul>
               </div>
             </div>
             <div class="footer__col footer__col--capabilities">
               <div class="footer__col-head">
                 <div class="footer__socials">
-                  <a href="#" class="footer__social footer__social--round" aria-label="ВКонтакте"><img src="img/footer-icon-vk.svg" alt="" width="20" height="20"></a>
-                  <a href="#" class="footer__social footer__social--round" aria-label="VC.ru"><img src="img/footer-icon-vc.svg" alt="" class="footer__social-img--vc" width="22" height="16"></a>
-                  <a href="#" class="footer__channel-pill">
-                    <img src="img/footer-icon-tg.svg" alt="" class="footer__channel-icon" width="18" height="18">
+                  <a href="https://smartway.today/" class="footer__social footer__social--round" rel="noopener noreferrer" aria-label="ВКонтакте"><img src="img/footer-icon-vk.svg" alt="" width="20" height="20" loading="lazy" decoding="async"></a>
+                  <a href="https://vc.ru/" class="footer__social footer__social--round" rel="noopener noreferrer" aria-label="VC.ru"><img src="img/footer-icon-vc.svg" alt="" class="footer__social-img--vc" width="22" height="16" loading="lazy" decoding="async"></a>
+                  <a href="https://smartway.today/" class="footer__channel-pill" rel="noopener noreferrer">
+                    <img src="img/footer-icon-tg.svg" alt="" class="footer__channel-icon" width="18" height="18" loading="lazy" decoding="async">
                     <span class="footer__channel-label">Канал «Командировки.Сегодня»</span>
                   </a>
                 </div>
@@ -341,14 +343,14 @@
               <div class="footer__col-body">
                 <h3 class="footer__heading">Возможности</h3>
                 <ul class="footer__list">
-                  <li><a href="#">Поиск авиабилетов</a></li>
-                  <li><a href="#">Поиск ж/д билетов</a></li>
-                  <li><a href="#">Поиск отелей</a></li>
-                  <li><a href="#">Такси</a></li>
-                  <li><a href="#">Интеграция с 1С</a></li>
-                  <li><a href="#">Согласование</a></li>
-                  <li><a href="#">Тревел-политики</a></li>
-                  <li><a href="#" class="footer__list-link--accent">Smartway Отпуск</a></li>
+                  <li><a href="aviaticket.html">Поиск авиабилетов</a></li>
+                  <li><a href="zhd-bileti.html">Поиск ж/д билетов</a></li>
+                  <li><a href="hotels.html">Поиск отелей</a></li>
+                  <li><a href="taxi.html">Такси</a></li>
+                  <li><a href="smartway1c.html">Интеграция с 1С</a></li>
+                  <li><a href="travel-coordination.html">Согласование</a></li>
+                  <li><a href="travel-policy.html">Тревел-политики</a></li>
+                  <li><a href="helpic.html" class="footer__list-link--accent">Smartway Отпуск</a></li>
                 </ul>
               </div>
             </div>
@@ -359,11 +361,11 @@
                 <ul class="footer__list">
                   <li><a href="faq.html">Вопрос-ответ</a></li>
                   <li><a href="blog.html">Блог</a></li>
-                  <li><a href="#">Такси в командировке</a></li>
-                  <li><a href="#">Бесплатная консультация</a></li>
-                  <li><a href="#">Оформление командировок</a></li>
-                  <li><a href="#">Реферальная программа Smartway</a></li>
-                  <li><a href="#">Аудит командировок</a></li>
+                  <li><a href="taxi.html">Такси в командировке</a></li>
+                  <li><a href="1index.html#consult">Бесплатная консультация</a></li>
+                  <li><a href="komandirovka.html">Оформление командировок</a></li>
+                  <li><a href="https://smartway.today/" rel="noopener noreferrer">Реферальная программа Smartway</a></li>
+                  <li><a href="download-docs.html">Аудит командировок</a></li>
                 </ul>
               </div>
             </div>
@@ -374,17 +376,17 @@
               <div class="footer__col-body">
                 <h3 class="footer__heading">О компании</h3>
                 <ul class="footer__list footer__list--compact">
-                  <li><a href="#">Общая информация</a></li>
-                  <li><a href="#">Работа в Smartway</a></li>
-                  <li><a href="#">Реквизиты</a></li>
+                  <li><a href="about.html">Общая информация</a></li>
+                  <li><a href="cariers.html">Работа в Smartway</a></li>
+                  <li><a href="rekvizity.html">Реквизиты</a></li>
                   <li><a href="offer.html">Оферта</a></li>
-                  <li><a href="#">Контакты</a></li>
-                  <li><a href="#">Условия доступа к личным поездкам</a></li>
-                  <li><a href="#">Пользовательское соглашение</a></li>
+                  <li><a href="contacts.html">Контакты</a></li>
+                  <li><a href="helpic.html">Условия доступа к личным поездкам</a></li>
+                  <li><a href="offer.html">Пользовательское соглашение</a></li>
                   <li><a href="confidence-page.html">Политика конфиденциальности</a></li>
-                  <li><a href="#">Правила использования ПЭП</a></li>
-                  <li><a href="#">Гарантия лучшей цены</a></li>
-                  <li><a href="#">Аккредитованная IT-компания</a></li>
+                  <li><a href="certificate.html">Правила использования ПЭП</a></li>
+                  <li><a href="rates.html">Гарантия лучшей цены</a></li>
+                  <li><a href="certificate.html">Аккредитованная IT-компания</a></li>
                 </ul>
               </div>
             </div>
@@ -396,7 +398,7 @@
               <span class="footer-newsletter__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#E4232C" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.35l-8 4.94-8-4.94V6l8 4.94L20 6zm0 12H4V9.06l8 4.94 8-4.94V18z"/></svg></span>
               <span class="footer-newsletter__text">Подпишитесь на рассылку полезных материалов Smartway</span>
             </p>
-            <form class="footer-newsletter__form" action="#" method="post">
+            <form class="footer-newsletter__form" action="" method="post">
               <label class="footer-newsletter__sr-only" for="footer-newsletter-email">Корпоративная почта</label>
               <input type="email" id="footer-newsletter-email" name="email" class="footer-newsletter__input" placeholder="Корпоративная почта" autocomplete="email" required>
               <button type="submit" class="footer-newsletter__submit">Подписаться</button>
@@ -405,54 +407,14 @@
         </section>
         <div class="footer__bottom">
           <div class="footer__bottom-inner">
-            <a href="#" class="footer__bottom-link">Защита персональных данных</a>
+            <a href="confidence-page.html" class="footer__bottom-link">Защита персональных данных</a>
             <a href="certificate.html" class="footer__bottom-link">Сертификат Транспортной Клиринговой Компании</a>
-            <a href="#" class="footer__bottom-link">Безопасное соединение SSL</a>
+            <a href="confidence-page.html" class="footer__bottom-link">Безопасное соединение SSL</a>
           </div>
         </div>
       </footer>
 </div>
   </div>
 
-  <script>
-    document.querySelectorAll('.header__drawer a, .header__drawer-login, .header__drawer-btn').forEach(function (a) {
-      a.addEventListener('click', function () {
-        var cb = document.getElementById('site-nav');
-        if (cb) cb.checked = false;
-      });
-    });
-
-    (function () {
-      var root = document.querySelector('.travel-policy-tabs');
-      if (!root) return;
-      var tabs = root.querySelectorAll('.travel-policy-tabs__tab');
-      var panels = root.querySelectorAll('.travel-policy-tabs__panel');
-      function activate(tab) {
-        var pid = tab.getAttribute('aria-controls');
-        tabs.forEach(function (t) {
-          var on = t === tab;
-          t.classList.toggle('is-active', on);
-          t.setAttribute('aria-selected', on ? 'true' : 'false');
-          if (on) t.removeAttribute('tabindex');
-          else t.setAttribute('tabindex', '-1');
-        });
-        panels.forEach(function (p) {
-          var on = p.getAttribute('id') === pid;
-          p.classList.toggle('is-active', on);
-          p.setAttribute('aria-hidden', on ? 'false' : 'true');
-        });
-      }
-      panels.forEach(function (p) {
-        p.removeAttribute('hidden');
-      });
-      var initial = root.querySelector('.travel-policy-tabs__tab.is-active');
-      if (initial) activate(initial);
-      tabs.forEach(function (tab) {
-        tab.addEventListener('click', function () {
-          activate(tab);
-        });
-      });
-    })();
-  </script>
 </body>
 </html>

@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smartway — Блок accountant (Figma node 244-3344)</title>
+  <meta name="description" content="Smartway для бухгалтера: интеграция с 1С, авансовые отчёты, закрывающие документы и бухучёт командировок в одном сервисе. Попробуйте бесплатно.">
+  <title>Smartway — Сервис для бухгалтера: учёт командировок и 1С</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/site-header.css">
   <link rel="stylesheet" href="css/1style.css">
-  <link rel="stylesheet" href="css/hr-manager-page.css">
+  <link rel="stylesheet" href="css/accountant-page.css">
 </head>
-<body>
+<body class="page-accountant">
   <header class="header">
     <input type="checkbox" id="site-nav" class="site-nav-input" aria-hidden="true">
     <div class="header__inner">
@@ -33,8 +34,8 @@
           <li><a href="1index.html#capabilities" class="header__link">Возможности <span class="header__chevron"></span></a></li>
           <li><a href="1index.html#useful" class="header__link">Полезное <span class="header__chevron"></span></a></li>
           <li><a href="1index.html#mice" class="header__link">MICE</a></li>
-          <li><a href="1index.html#tariffs" class="header__link">Тарифы</a></li>
-          <li><a href="1index.html#clients" class="header__link">Клиенты</a></li>
+          <li><a href="rates.html" class="header__link">Тарифы</a></li>
+          <li><a href="clients.html" class="header__link">Клиенты</a></li>
         </ul>
       </nav>
       <div class="header__actions">
@@ -59,8 +60,8 @@
           <li><a href="1index.html#capabilities" class="header__drawer-link">Возможности</a></li>
           <li><a href="1index.html#useful" class="header__drawer-link">Полезное</a></li>
           <li><a href="1index.html#mice" class="header__drawer-link">MICE</a></li>
-          <li><a href="1index.html#tariffs" class="header__drawer-link">Тарифы</a></li>
-          <li><a href="1index.html#clients" class="header__drawer-link">Клиенты</a></li>
+          <li><a href="rates.html" class="header__drawer-link">Тарифы</a></li>
+          <li><a href="clients.html" class="header__drawer-link">Клиенты</a></li>
         </ul>
         <div class="header__drawer-contacts" aria-label="Связаться">
           <a href="mailto:hello@smartway.today" class="header__icon-btn" aria-label="Написать">
@@ -99,12 +100,12 @@
         </div>
 
         <div class="accountant-hero-block__visual" aria-hidden="true">
-          <img src="img/accountantmain.png" alt="" class="accountant-hero-block__person" width="402" height="486" loading="eager">
+          <img src="img/accountantmain.png" alt="Бухгалтер за работой с сервисом Smartway" class="accountant-hero-block__person" width="402" height="486" loading="eager">
         </div>
       </div>
     </section>
 
-    <section class="accountant-tools" aria-label="Инструменты для общего бухучета">
+    <section class="accountant-tools reveal" aria-label="Инструменты для общего бухучета">
       <div class="accountant-tools__inner">
         <h2 class="accountant-tools__title">Инструменты для общего<br>бухучёта</h2>
 
@@ -294,8 +295,8 @@
       </div>
     </section>
 
-    <div class="integration-1c-topcta" aria-label="Протестировать инструменты">
-      <a href="#test" class="integration-1c-topcta__btn">
+    <div class="integration-1c-topcta reveal" aria-label="Протестировать инструменты">
+      <a href="#try" class="integration-1c-topcta__btn">
         <span class="integration-1c-topcta__icon" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6 14L14 6" stroke="#D44333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -306,7 +307,7 @@
       </a>
     </div>
 
-    <section class="integration-1c-block" aria-label="Интеграция с продуктами «1С»">
+    <section class="integration-1c-block reveal" aria-label="Интеграция с продуктами «1С»">
       <div class="integration-1c-block__inner">
         <h2 class="integration-1c-block__title">Интеграция с продуктами «1С»</h2>
 
@@ -324,14 +325,14 @@
           </div>
 
           <div class="integration-1c-block__media" aria-hidden="true">
-            <img src="img/hero-interface.webp" alt="" class="integration-1c-block__img" loading="lazy">
+            <img src="img/hero-interface.webp" alt="Интерфейс Smartway: интеграция с 1С" class="integration-1c-block__img" loading="lazy">
           </div>
           <a href="#try" class="integration-1c-block__btn integration-1c-block__btn--mobile btn">Подключить интеграцию</a>
         </div>
       </div>
     </section>
 
-    <section class="accountant-avans-block" aria-label="Заполните авансовый отчёт за 3 минуты">
+    <section class="accountant-avans-block reveal" aria-label="Заполните авансовый отчёт за 3 минуты">
       <div class="accountant-avans-block__inner">
         <h2 class="accountant-avans-block__title">
           Заполните авансовый<br>
@@ -416,7 +417,7 @@
       </div>
     </section>
 
-    <section class="docs-report-block" aria-label="Документы и отчётность">
+    <section class="docs-report-block reveal" aria-label="Документы и отчётность">
       <div class="docs-report-block__inner">
         <h2 class="docs-report-block__title">Документы и отчётность</h2>
 
@@ -454,7 +455,7 @@
               <img
                 class="docs-report-mini-card__icon-img"
                 src="img/cardslogos/Vector.png"
-                alt=""
+                alt="Иконка: Единый архив"
                 width="40"
                 height="40"
                 loading="lazy"
@@ -468,7 +469,7 @@
               <img
                 class="docs-report-mini-card__icon-img"
                 src="img/cardslogos/Vector-1.png"
-                alt=""
+                alt="Иконка: сроки закрывающих"
                 width="40"
                 height="40"
                 loading="lazy"
@@ -482,7 +483,7 @@
               <img
                 class="docs-report-mini-card__icon-img"
                 src="img/cardslogos/Group 2085656633.png"
-                alt=""
+                alt="Иконка: доставка оригиналов"
                 width="40"
                 height="40"
                 loading="lazy"
@@ -496,7 +497,7 @@
               <img
                 class="docs-report-mini-card__icon-img"
                 src="img/cardslogos/Group 2085656632.png"
-                alt=""
+                alt="Иконка: настройка форматов"
                 width="40"
                 height="40"
                 loading="lazy"
@@ -510,7 +511,7 @@
               <img
                 class="docs-report-mini-card__icon-img"
                 src="img/cardslogos/Group 2085656636.png"
-                alt=""
+                alt="Иконка: акты сверок"
                 width="40"
                 height="40"
                 loading="lazy"
@@ -524,7 +525,7 @@
               <img
                 class="docs-report-mini-card__icon-img"
                 src="img/cardslogos/Group 2085656635.png"
-                alt=""
+                alt="Иконка: периодичность документов"
                 width="40"
                 height="40"
                 loading="lazy"
@@ -539,7 +540,7 @@
       </div>
     </section>
 
-    <section class="payment-flex-block" aria-label="Прозрачная и гибкая оплата">
+    <section class="payment-flex-block reveal" aria-label="Прозрачная и гибкая оплата">
       <svg class="payment-flex-block__defs" aria-hidden="true" focusable="false" width="0" height="0">
         <defs>
           <clipPath id="payment-flex-card-notch" clipPathUnits="objectBoundingBox">
@@ -600,7 +601,7 @@
       </div>
     </section>
 
-    <section class="support247-block" aria-label="Поддержка 24/7">
+    <section class="support247-block reveal" aria-label="Поддержка 24/7">
       <div class="support247-block__inner">
         <div class="support247-block__card">
           <svg class="support247-block__squiggle" viewBox="0 0 900 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -631,7 +632,7 @@
       </div>
     </section>
 
-      <section class="tm-consult-cta" aria-labelledby="tm-consult-cta-title">
+      <section class="tm-consult-cta reveal" aria-labelledby="tm-consult-cta-title">
           <div class="tm-consult-cta__inner">
               <div class="tm-consult-cta__panel">
                   <div class="tm-consult-cta__layout">
@@ -739,7 +740,7 @@
           </div>
       </section>
 
-      <section class="companies-stat-block companies-stat-block--banner-row" aria-label="Компании бронируют командировки в Smartway">
+      <section class="companies-stat-block companies-stat-block--banner-row reveal" aria-label="Компании бронируют командировки в Smartway">
           <div class="companies-stat-block__inner">
               <p class="companies-stat-block__value">7&nbsp;600+</p>
               <p class="companies-stat-block__caption">компаний бронируют<br>командировки в Smartway</p>
@@ -747,7 +748,7 @@
       </section>
 
 
-      <section class="trust-strip-block" aria-label="Компании бронируют командировки в Smartway — среди клиентов">
+      <section class="trust-strip-block reveal" aria-label="Компании бронируют командировки в Smartway — среди клиентов">
           <div class="trust-strip-block__inner">
               <img
                       src="img/clients-logos.svg"
@@ -761,7 +762,7 @@
           </div>
       </section>
 
-      <section class="trust-credentials-block" aria-label="Официальный статус и партнёрства">
+      <section class="trust-credentials-block reveal" aria-label="Официальный статус и партнёрства">
       <div class="trust-credentials-block__inner">
         <div class="trust-credentials-block__grid">
           <article class="trust-credentials-block__card">
@@ -804,7 +805,7 @@
       </div>
     </section>
 
-    <section class="results-cases-block" aria-labelledby="results-cases-title">
+    <section class="results-cases-block reveal" aria-labelledby="results-cases-title">
       <div class="results-cases-block__inner">
         <h2 id="results-cases-title" class="results-cases-block__title">Результаты, которых мы достигли вместе</h2>
         <div class="results-cases-block__grid">
@@ -817,7 +818,7 @@
                 Данные автоматически попадают из Smartway в «1С», документы загружаются уже с проводками, авансовый отчёт заполняют
                 <span class="results-cases-card__hl">за 3–5 минут</span>.
               </p>
-              <a href="#" class="results-cases-card__link">
+              <a href="https://smartway.today/" class="results-cases-card__link" rel="noopener noreferrer">
                 Читать кейс
                 <span class="results-cases-card__link-icon" aria-hidden="true">↗</span>
               </a>
@@ -856,7 +857,7 @@
                 <span class="results-cases-card__hl">освободили 4 дня</span>
                 работы бухгалтеров в месяц.
               </p>
-              <a href="#" class="results-cases-card__link">
+              <a href="https://smartway.today/" class="results-cases-card__link" rel="noopener noreferrer">
                 Читать кейс
                 <span class="results-cases-card__link-icon" aria-hidden="true">↗</span>
               </a>
@@ -887,7 +888,7 @@
                 <span class="results-cases-card__hl">в 2 раза</span>
                 меньше времени на операции с билетами, когда синхронизировали Smartway и «1С».
               </p>
-              <a href="#" class="results-cases-card__link">
+              <a href="https://smartway.today/" class="results-cases-card__link" rel="noopener noreferrer">
                 Читать кейс
                 <span class="results-cases-card__link-icon" aria-hidden="true">↗</span>
               </a>
@@ -912,13 +913,13 @@
       </div>
     </section>
 
-    <section class="results-cases-cta-block" aria-label="Повторить результат">
+    <section class="results-cases-cta-block reveal" aria-label="Повторить результат">
       <div class="results-cases-cta-block__inner">
         <a href="#try" class="results-cases-cta-block__btn">Повторить результат</a>
       </div>
     </section>
 
-    <section class="accountant-useful-block" aria-labelledby="accountant-useful-title">
+    <section class="accountant-useful-block reveal" aria-labelledby="accountant-useful-title">
       <div class="accountant-useful-block__inner">
         <h2 id="accountant-useful-title" class="accountant-useful-block__title">Полезное для бухгалтеров</h2>
         <div class="accountant-useful-block__grid">
@@ -933,7 +934,7 @@
               <span class="accountant-useful-card__pill accountant-useful-card__pill--ink accountant-useful-card__pill--book">
                 в одной книге
               </span>
-              <a href="#" class="accountant-useful-card__action">Скачать бесплатно</a>
+              <a href="https://smartway.today/" class="accountant-useful-card__action" rel="noopener noreferrer">Скачать бесплатно</a>
             </div>
             <div class="accountant-useful-card__deco accountant-useful-card__deco--stack" aria-hidden="true">
               <svg width="200" height="160" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -956,7 +957,7 @@
                 </span>
               </h3>
               <p class="accountant-useful-card__lead">Участие бесплатное, нужно только зарегистрироваться.</p>
-              <a href="#" class="accountant-useful-card__action">Выбрать вебинар</a>
+              <a href="https://smartway.today/" class="accountant-useful-card__action" rel="noopener noreferrer">Выбрать вебинар</a>
             </div>
             <div class="accountant-useful-card__deco accountant-useful-card__deco--play" aria-hidden="true">
               <span class="accountant-useful-card__play">
@@ -970,7 +971,7 @@
       </div>
     </section>
 
-    <section class="smartway-compare-block" aria-labelledby="smartway-compare-title">
+    <section class="smartway-compare-block reveal" aria-labelledby="smartway-compare-title">
       <div class="smartway-compare-block__inner">
         <h2 id="smartway-compare-title" class="smartway-compare-block__title">Со Smartway проще</h2>
         <div class="smartway-compare-block__row">
@@ -1081,7 +1082,7 @@
       </div>
     </section>
 
-    <section class="delegate-heading-block" aria-labelledby="delegate-heading-title">
+    <section class="delegate-heading-block reveal" aria-labelledby="delegate-heading-title">
       <div class="delegate-heading-block__inner">
         <h2 id="delegate-heading-title" class="delegate-heading-block__title">
           Доверьте командировки нам и оставьте<br />
@@ -1101,7 +1102,7 @@
               <img
                 class="accountant-level-lead-block__illu-img"
                 src="img/accountform.png"
-                alt=""
+                alt="Форма заявки на демо-доступ к Smartway"
                 width="701"
                 height="589"
                 loading="lazy"
@@ -1205,7 +1206,7 @@
             <img
               class="accountant-level-lead-block__illu-img"
               src="img/accountform.png"
-              alt=""
+              alt="Форма заявки на демо-доступ к Smartway"
               width="701"
               height="589"
               loading="lazy"
@@ -1216,7 +1217,7 @@
       </div>
     </section>
 
-    <section class="faq-accordion-block faq-accordion-block--accountant" aria-labelledby="faq-accordion-heading">
+    <section class="faq-accordion-block faq-accordion-block--accountant reveal" aria-labelledby="faq-accordion-heading">
       <div class="faq-accordion-block__inner">
         <h2 id="faq-accordion-heading" class="faq-accordion-block__heading">Часто задаваемые вопросы</h2>
         <details class="faq-accordion__item">
@@ -1311,18 +1312,18 @@
     </section>
     
 
-    <section class="accountant-materials-block" aria-labelledby="accountant-materials-title">
+    <section class="accountant-materials-block reveal" aria-labelledby="accountant-materials-title">
       <div class="accountant-materials-block__inner">
         <h2 id="accountant-materials-title" class="accountant-materials-block__title">Интересные материалы по теме</h2>
         <div class="accountant-materials-block__grid">
           <article class="accountant-materials-card">
-            <a href="#" class="accountant-materials-card__link">
+            <a href="blog.html" class="accountant-materials-card__link">
               <div class="accountant-materials-card__thumb" aria-hidden="true"></div>
               <p class="accountant-materials-card__text">Руководство «Нюансы налогового учёта командировок 2025»</p>
             </a>
           </article>
           <article class="accountant-materials-card">
-            <a href="#" class="accountant-materials-card__link">
+            <a href="blog.html" class="accountant-materials-card__link">
               <div class="accountant-materials-card__thumb" aria-hidden="true"></div>
               <p class="accountant-materials-card__text">
                 Гайд для бухгалтеров «Как корректно оплачивать и учитывать командировки в 2025»
@@ -1330,13 +1331,13 @@
             </a>
           </article>
           <article class="accountant-materials-card">
-            <a href="#" class="accountant-materials-card__link">
+            <a href="blog.html" class="accountant-materials-card__link">
               <div class="accountant-materials-card__thumb" aria-hidden="true"></div>
               <p class="accountant-materials-card__text">Две книги для учёта командировок 2025 без штрафов и ошибок</p>
             </a>
           </article>
           <article class="accountant-materials-card">
-            <a href="#" class="accountant-materials-card__link">
+            <a href="blog.html" class="accountant-materials-card__link">
               <div class="accountant-materials-card__thumb" aria-hidden="true"></div>
               <p class="accountant-materials-card__text">
                 Командировочные расходы и суточные в 2026: возмещение, что входит, нормы, налог на прибыль
@@ -1364,7 +1365,7 @@
                               <p class="footer__contact footer__contact--strong"><a href="mailto:pr@smartway.today">pr@smartway.today</a></p>
                           </div>
                           <p class="footer__contact">
-                              <a href="#" class="footer__link-external">Для отелей по вопросам контрактинга<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
+                              <a href="contract-hotel.html" class="footer__link-external">Для отелей по вопросам контрактинга<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
                           </p>
                       </div>
                       <p class="footer__address">125124, г.&nbsp;Москва, 5-я&nbsp;ул.&nbsp;Ямского Поля, д.&nbsp;5, стр.1, пом.&nbsp;2/11</p>
@@ -1388,36 +1389,36 @@
                   <div class="footer__col-body">
                       <h3 class="footer__heading">Сценарии</h3>
                       <ul class="footer__list">
-                          <li><a href="#">Для руководителя</a></li>
-                          <li><a href="#">Для бухгалтера</a></li>
-                          <li><a href="#">Для организатора командировок</a></li>
+                          <li><a href="superviser.html">Для руководителя</a></li>
+                          <li><a href="accountant.html">Для бухгалтера</a></li>
+                          <li><a href="travel-manager.html">Для организатора командировок</a></li>
                       </ul>
                   </div>
                   <div class="footer__col-body">
                       <h3 class="footer__heading">Возможности</h3>
                       <ul class="footer__list">
-                          <li><a href="#">Поиск авиабилетов</a></li>
-                          <li><a href="#">Поиск ж/д билетов</a></li>
-                          <li><a href="#">Поиск отелей</a></li>
-                          <li><a href="#">Такси</a></li>
-                          <li><a href="#">Интеграция с 1С</a></li>
-                          <li><a href="#">Согласование</a></li>
-                          <li><a href="#">Тревел-политики</a></li>
-                          <li><a href="#" class="footer__list-link--accent">Smartway Отпуск</a></li>
+                          <li><a href="aviaticket.html">Поиск авиабилетов</a></li>
+                          <li><a href="zhd-bileti.html">Поиск ж/д билетов</a></li>
+                          <li><a href="hotels.html">Поиск отелей</a></li>
+                          <li><a href="taxi.html">Такси</a></li>
+                          <li><a href="smartway1c.html">Интеграция с 1С</a></li>
+                          <li><a href="travel-coordination.html">Согласование</a></li>
+                          <li><a href="travel-policy.html">Тревел-политики</a></li>
+                          <li><a href="helpic.html" class="footer__list-link--accent">Smartway Отпуск</a></li>
                       </ul>
                   </div>
               </div>
               <div class="footer__col footer__col--capabilities">
                   <div class="footer__col-head">
                       <div class="footer__socials">
-                          <a href="#" class="footer__social footer__social--round" aria-label="ВКонтакте"><img src="img/footer-icon-vk.svg" alt="" width="20" height="20"></a>
-                          <a href="#" class="footer__social footer__social--round" aria-label="VC.ru"><img src="img/footer-icon-vc.svg" alt="" class="footer__social-img--vc" width="22" height="16"></a>
+                          <a href="https://smartway.today/" class="footer__social footer__social--round" aria-label="ВКонтакте" rel="noopener noreferrer"><img src="img/footer-icon-vk.svg" alt="" width="20" height="20"></a>
+                          <a href="https://smartway.today/" class="footer__social footer__social--round" aria-label="VC.ru" rel="noopener noreferrer"><img src="img/footer-icon-vc.svg" alt="" class="footer__social-img--vc" width="22" height="16"></a>
 
                       </div>
                   </div>
 
                   <div class="footer__channel-wrap">
-                      <a href="#" class="footer__channel-pill">
+                      <a href="https://smartway.today/" class="footer__channel-pill" rel="noopener noreferrer">
                           <img src="img/footer-icon-tg.svg" alt="" class="footer__channel-icon" width="18" height="18">
                           <span class="footer__channel-label">Канал «Командировки.Сегодня»</span>
                       </a>
@@ -1428,13 +1429,13 @@
                   <div class="footer__col-body">
                       <h3 class="footer__heading">Полезное</h3>
                       <ul class="footer__list">
-                          <li><a href="#">Вопрос-ответ</a></li>
-                          <li><a href="#">Блог</a></li>
-                          <li><a href="#">Такси в командировке</a></li>
-                          <li><a href="#">Бесплатная консультация</a></li>
-                          <li><a href="#">Оформление командировок</a></li>
-                          <li><a href="#">Реферальная программа Smartway</a></li>
-                          <li><a href="#">Аудит командировок</a></li>
+                          <li><a href="faq.html">Вопрос-ответ</a></li>
+                          <li><a href="blog.html">Блог</a></li>
+                          <li><a href="taxi.html">Такси в командировке</a></li>
+                          <li><a href="1index.html#consult">Бесплатная консультация</a></li>
+                          <li><a href="komandirovka.html">Оформление командировок</a></li>
+                          <li><a href="https://smartway.today/" rel="noopener noreferrer">Реферальная программа Smartway</a></li>
+                          <li><a href="download-docs.html">Аудит командировок</a></li>
                       </ul>
                   </div>
               </div>
@@ -1446,16 +1447,16 @@
                       <h3 class="footer__heading">О компании</h3>
                       <ul class="footer__list footer__list--compact">
                           <li><a href="about.html">Общая информация</a></li>
-                          <li><a href="#">Работа в Smartway</a></li>
+                          <li><a href="cariers.html">Работа в Smartway</a></li>
                           <li><a href="rekvizity.html">Реквизиты</a></li>
-                          <li><a href="#">Оферта</a></li>
+                          <li><a href="offer.html">Оферта</a></li>
                           <li><a href="contacts.html">Контакты</a></li>
-                          <li><a href="#">Условия доступа к личным поездкам</a></li>
-                          <li><a href="#">Пользовательское соглашение</a></li>
-                          <li><a href="#">Политика конфиденциальности</a></li>
-                          <li><a href="#">Правила использования ПЭП</a></li>
-                          <li><a href="#">Гарантия лучшей цены</a></li>
-                          <li><a href="#">Аккредитованная IT-компания</a></li>
+                          <li><a href="helpic.html">Условия доступа к личным поездкам</a></li>
+                          <li><a href="offer.html">Пользовательское соглашение</a></li>
+                          <li><a href="confidence-page.html">Политика конфиденциальности</a></li>
+                          <li><a href="certificate.html">Правила использования ПЭП</a></li>
+                          <li><a href="rates.html">Гарантия лучшей цены</a></li>
+                          <li><a href="certificate.html">Аккредитованная IT-компания</a></li>
                       </ul>
                   </div>
               </div>
@@ -1476,12 +1477,13 @@
       </section>
       <div class="footer__bottom">
           <div class="footer__bottom-inner">
-              <a href="#" class="footer__bottom-link">Защита персональных данных</a>
-              <a href="#" class="footer__bottom-link">Сертификат Транспортной Клиринговой Компании</a>
-              <a href="#" class="footer__bottom-link">Безопасное соединение SSL</a>
+              <a href="confidence-page.html" class="footer__bottom-link">Защита персональных данных</a>
+              <a href="certificate.html" class="footer__bottom-link">Сертификат Транспортной Клиринговой Компании</a>
+              <a href="confidence-page.html" class="footer__bottom-link">Безопасное соединение SSL</a>
           </div>
       </div>
   </footer>
+  <script src="js/accountant-page.js" defer></script>
 </body>
 </html>
 

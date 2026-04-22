@@ -1,0 +1,80 @@
+/* zhd-bileti.html — аудит: overflow-x, H1 (desktop), reveal, ховеры */
+
+html:has(body.zhd-bileti-page),
+body.zhd-bileti-page {
+  overflow-x: hidden;
+}
+
+@media (min-width: 1024px) {
+  .zhd-bileti-page .zhd-hero__title {
+    font-size: 72px;
+    line-height: 70px;
+    letter-spacing: -3px;
+  }
+}
+
+body.zhd-bileti-page .reveal {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body.zhd-bileti-page .reveal--left {
+  transform: translate3d(-28px, 32px, 0);
+}
+
+body.zhd-bileti-page .reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.zhd-bileti-page .reveal,
+  body.zhd-bileti-page .reveal--left {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+body.zhd-bileti-page .komand-main a,
+body.zhd-bileti-page .komand-main button,
+body.zhd-bileti-page .footer a,
+body.zhd-bileti-page .footer button,
+body.zhd-bileti-page [role='button'] {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+body.zhd-bileti-page .komand-main .zhd-stats__card,
+body.zhd-bileti-page .komand-main .zhd-features__card,
+body.zhd-bileti-page .komand-main .zhd-report__card,
+body.zhd-bileti-page .komand-main .zhd-services-window__card,
+body.zhd-bileti-page .komand-main .zhd-services-window__mini,
+body.zhd-bileti-page .komand-main .zhd-connect__card,
+body.zhd-bileti-page .komand-main .zhd-lead-form__card {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.zhd-bileti-page .komand-main .zhd-stats__card:hover,
+  body.zhd-bileti-page .komand-main .zhd-features__card:hover,
+  body.zhd-bileti-page .komand-main .zhd-report__card:hover,
+  body.zhd-bileti-page .komand-main .zhd-services-window__card:hover,
+  body.zhd-bileti-page .komand-main .zhd-services-window__mini:hover,
+  body.zhd-bileti-page .komand-main .zhd-connect__card:hover,
+  body.zhd-bileti-page .komand-main .zhd-lead-form__card:hover {
+    transform: translateY(-2px);
+  }
+}

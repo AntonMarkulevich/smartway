@@ -2462,3 +2462,97 @@ a.hotels-more__card:focus-visible {
     height: 22px;
   }
 }
+
+/* ——— Аудит: горизонтальный скролл, H1 десктоп, scroll-reveal, ховеры ——— */
+body.hotels-page {
+  overflow-x: hidden;
+}
+
+@media (min-width: 1025px) {
+  .hotels-banner__title {
+    font-size: 72px;
+    line-height: 70px;
+    letter-spacing: -3px;
+    color: #3a3a3a;
+  }
+
+  .hotels-banner__title-rest {
+    color: #3a3a3a;
+  }
+}
+
+/* Scroll-reveal (см. также @keyframes fade_in_up / fade_in_left в 1style.css) */
+body.hotels-page .reveal {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body.hotels-page .reveal--left {
+  transform: translate3d(-28px, 32px, 0);
+}
+
+body.hotels-page .reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.hotels-page .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+body.hotels-page .komand-main a,
+body.hotels-page .komand-main button,
+body.hotels-page .komand-main [role='button'] {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+body.hotels-page .hotels-highlights__card,
+body.hotels-page .hotels-value__card,
+body.hotels-page .hotel-reviews-card,
+body.hotels-page .smartway-stats-card,
+body.hotels-page .hotels-more__card {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+body.hotels-page .hotels-highlights__card:hover,
+body.hotels-page .hotels-value__card:hover,
+body.hotels-page .hotel-reviews-card:hover,
+body.hotels-page .smartway-stats-card:hover {
+  transform: translateY(-2px);
+}
+
+body.hotels-page a.hotels-more__card:hover {
+  transform: translateY(-2px);
+}
+
+body.hotels-page .hotels-more__card--extra:hover {
+  transform: none;
+}
+
+body.hotels-page .footer a,
+body.hotels-page .footer button {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}

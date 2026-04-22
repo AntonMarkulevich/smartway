@@ -2,6 +2,16 @@
 
 .page-hr-manager {
   background: #f0f0f2;
+  overflow-x: hidden;
+}
+
+@media (min-width: 1025px) {
+  .hr-manager-hero__title {
+    font-size: 72px;
+    line-height: 70px;
+    letter-spacing: -3px;
+    color: #3a3a3a;
+  }
 }
 
 .page-hr-manager > main {
@@ -956,7 +966,7 @@
 
 /*
  * HR: «Делегируйте рутину…» — та же оболочка и карточки, что accountant-avans-block
- * в accountant-block-244-3344.html; сетка 3×2 + широкая карточка в третьем ряду.
+ * в accountant.html; сетка 3×2 + широкая карточка в третьем ряду.
  */
 .accountant-avans-block--hr-delegate .accountant-avans-block__grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2666,4 +2676,46 @@
   .page-hr-manager .tm-materials--hr-interesting .tm-materials-card__text {
     text-align: center;
   }
+}
+
+/* Аудит: плавные переходы, лёгкий подъём карточек */
+.page-hr-manager main a,
+.page-hr-manager main button,
+.page-hr-manager main [role='button'] {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.page-hr-manager .hr-manager-why__card,
+.page-hr-manager .accountant-avans-card,
+.page-hr-manager .tm-materials-card,
+.page-hr-manager .trust-credentials-block__card {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+.page-hr-manager .hr-manager-why__card:hover,
+.page-hr-manager .accountant-avans-card:hover,
+.page-hr-manager .tm-materials-card:hover,
+.page-hr-manager .trust-credentials-block__card:hover {
+  transform: translateY(-2px);
+}
+
+.page-hr-manager .footer a,
+.page-hr-manager .footer button {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
 }
