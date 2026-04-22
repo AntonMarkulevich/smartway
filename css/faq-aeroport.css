@@ -123,19 +123,79 @@ body.faq-aeroport-page .faqzp-telegram {
   margin: 0;
 }
 
+/* Мобилка: одна светлая карточка — заголовок, лид, иллюстрация снизу (макет) */
 @media (max-width: 959px) {
+  .faqap-top {
+    padding-inline: max(16px, 4vw);
+    gap: clamp(24px, 5vw, 40px);
+  }
+
   .faqap-hero__row {
     flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    background: #f0f0f0;
+    border-radius: clamp(26px, 6.5vw, 40px);
+    padding: clamp(20px, 5vw, 28px) clamp(18px, 4.5vw, 24px) clamp(18px, 4.5vw, 24px);
+    box-sizing: border-box;
+  }
+
+  .faqap-hero__card {
+    min-height: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .faqap-hero__card--text {
+    flex: none;
+    justify-content: flex-start;
+    min-height: 0;
+    padding: 0 0 clamp(14px, 3.5vw, 20px);
   }
 
   .faqap-hero__card--visual {
     flex: none;
-    order: -1;
-    min-height: 260px;
+    min-height: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .faqap-hero__card--text {
-    min-height: 0;
+  .faqap-hero__title {
+    margin: 0 0 clamp(10px, 2.5vw, 16px);
+    font-size: clamp(22px, 5.8vw, 28px);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    color: #000;
+  }
+
+  .faqap-hero__lead {
+    margin: 0;
+    max-width: none;
+    font-size: clamp(15px, 3.8vw, 17px);
+    font-weight: 400;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  .faqap-hero__figure {
+    max-width: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .faqap-hero__figure img {
+    width: 100%;
+    max-width: min(320px, 100%);
+    margin: 0 auto;
+  }
+
+  .faqap-answer {
+    font-weight: 400;
+    color: #444;
   }
 }
 
