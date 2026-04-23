@@ -626,11 +626,16 @@ body.aviaticket-page .komand-main {
 
 .aviaticket-pay__arrow {
   flex-shrink: 0;
-  margin-top: 0.15em;
-  font-size: 1.15em;
-  font-weight: 700;
-  line-height: 1.4;
-  color: #d44333;
+  margin-top: 0.12em;
+  line-height: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.aviaticket-pay__arrow .btn__arrow {
+  width: 18px;
+  height: 18px;
+  filter: invert(42%) sepia(75%) saturate(1800%) hue-rotate(340deg) brightness(0.95) contrast(1.05);
 }
 
 .aviaticket-pay__item-text {

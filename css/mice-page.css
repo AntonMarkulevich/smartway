@@ -648,8 +648,15 @@ html:has(body.page-mice) {
 }
 
 .mice-cases__link-arr {
-  font-size: 1.05em;
-  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.mice-cases__link .btn__arrow {
+  width: 16px;
+  height: 16px;
+  filter: invert(42%) sepia(75%) saturate(1800%) hue-rotate(340deg) brightness(0.95) contrast(1.05);
 }
 
 /* Партнёр: заголовок + карусель карточек */
@@ -1333,45 +1340,35 @@ html:has(body.page-mice) {
 }
 
 .mice-reviews__arrow {
-  position: relative;
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   box-sizing: border-box;
-  font-size: 0;
 }
 
-.mice-reviews__arrow::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-size: 23px;
-  line-height: 1;
-  font-weight: 700;
+.mice-reviews__arrow-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
 }
 
 .mice-reviews__arrow--prev {
   background: #d9d9d9;
   border: none;
-  color: #232f3d;
 }
 
-.mice-reviews__arrow--prev::before {
-  content: '←';
-  color: #232f3d;
+.mice-reviews__arrow--prev .mice-reviews__arrow-icon {
+  transform: scaleX(-1);
+  filter: brightness(0) saturate(100%);
 }
 
 .mice-reviews__arrow--next {
   background: #e32619;
-  color: #ffffff;
-}
-
-.mice-reviews__arrow--next::before {
-  content: '→';
-  color: #ffffff;
+  border: none;
 }
 
 .mice-reviews__viewport {

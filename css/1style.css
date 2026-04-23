@@ -63,12 +63,6 @@
   --stats-footnote-gap: 40px;
 }
 
-@media (min-width: 1025px) {
-  :root {
-    --container-padding-x: 80px;
-  }
-}
-
 @media (max-width: 767px) {
   :root {
     --container-padding-x: 20px;
@@ -168,6 +162,18 @@ main button,
 .reveal--visible {
   opacity: 1;
   transform: translate3d(0, 0, 0);
+}
+
+/* FAQ: scroll-reveal только по opacity. Transform на предке + transition у .faq__panel/.faq__answer
+   в одной композиции дают нестабильное раскрытие (анимация «с 5–го раза»). */
+.faq.reveal {
+  transform: none;
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.faq.reveal--visible {
+  transform: none;
+  opacity: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -277,6 +283,7 @@ main button,
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   height: 70px;
   padding: 0 32px;
   font-family: var(--font-main);
@@ -300,6 +307,89 @@ main button,
   color: #D44333;
   height: 68px;
   min-width: 301px;
+}
+
+/* Единая стрелка на кнопках — img/arrow.svg */
+.btn__arrow {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+}
+
+.btn--outline .btn__arrow {
+  filter: invert(32%) sepia(95%) saturate(2500%) hue-rotate(340deg) brightness(0.92) contrast(0.95);
+}
+
+/* Главная (1index): тёмные CTA и «инверт» MICE — только при наведении */
+body.page-1index .btn--primary:not(.mice__btn):hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  opacity: 1;
+}
+
+body.page-1index .btn--outline[href='#consult']:hover {
+  border-color: #1a1a1a;
+  color: #1a1a1a;
+}
+
+body.page-1index .btn--outline[href='#consult']:hover .btn__arrow {
+  filter: brightness(0);
+}
+
+body.page-1index .team-roles__btn:hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  opacity: 1;
+}
+
+body.page-1index .cta-form__submit:hover,
+body.page-1index .cta-form > .cta-form__inner .cta-form__submit:hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  opacity: 0.95;
+}
+
+body.page-1index .footer__btn:hover,
+body.page-1index a.footer__btn:hover,
+body.page-1index span.footer__btn:hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+/* Белый круг под иконкой: рисунок со светлой заливкой — инверт в тёмный glyph */
+.hotels-banner__btn-icon .btn__arrow,
+.hotels-cta__btn-icon .btn__arrow,
+.hotels-consult__btn-icon .btn__arrow,
+.integration-1c-topcta__icon .btn__arrow,
+.sup-hero__btn-icon .btn__arrow,
+.tm-hero-block__btn-icon .btn__arrow,
+.tm-proof-banner__btn-icon .btn__arrow,
+.tm-dark-cta__btn-icon .btn__arrow,
+.tm-consult-cta__btn-icon .btn__arrow,
+.accountant-hero-block__btn-icon .btn__arrow,
+.mice-hero__btn-icon .btn__arrow,
+.aviaticket-hero__btn-icon .btn__arrow,
+.aviaticket-split__btn-icon .btn__arrow,
+body.aviaticket-page .zhd-hero__btn-icon .btn__arrow,
+.zhd-hero__btn-icon .btn__arrow,
+.rates-personal-cta__btn-icon .btn__arrow,
+.page-rates .hotels-consult__btn-icon .btn__arrow,
+.consult-cta-block__btn-icon .btn__arrow {
+  filter: brightness(0);
+}
+
+.travel-policy-hero__btn-icon .btn__arrow {
+  filter: none;
+  width: 16px;
+  height: 16px;
+}
+
+.hotels-banner__btn-icon .btn__arrow {
+  width: 14px;
+  height: 14px;
 }
 
 @media (min-width: 769px) {
@@ -369,11 +459,57 @@ main button,
   z-index: 3;
 }
 
-.hero__image {
-  max-width: 100%;
+/* Двухслойная иллюстрация: серый прямоугольник (макет) + фон + персонаж сверху */
+.hero__illustration {
+  position: relative;
+  width: 100%;
+  min-height: 486px;
+  max-width: 720px;
+  margin-left: auto;
+  align-self: stretch;
+}
+
+/* Figma: 631×401, r 40, fill #EEEFF3 — под картинками */
+.hero__illustration-plate {
+  position: absolute;
+  right: 5%;
+  top: 44%;
+  transform: translateY(-50%);
+  z-index: 0;
+  width: min(631px, 100%);
+  max-width: 631px;
+  aspect-ratio: 631 / 401;
   height: auto;
-  object-fit: contain;
+  max-height: 401px;
+  border-radius: 40px;
+  background-color: #eeeff3;
+  pointer-events: none;
+}
+
+.hero__illustration-back {
+  max-height: 75%;
+  position: absolute;
+  right: 27%;
+  top: 38%;
+  transform: translateY(-50%);
+  z-index: 1;
   display: block;
+  object-fit: contain;
+  object-position: right center;
+  pointer-events: none;
+}
+
+.hero__illustration-person {
+  position: absolute;
+  right: 5%;
+  bottom: 15%;
+  z-index: 2;
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: 90%;
+  object-fit: contain;
+  object-position: right bottom;
 }
 
 .hero__trust {
@@ -542,7 +678,7 @@ main button,
 }
 
 .services__inner {
-  max-width: 1575px;
+  max-width: 1860px;
   width: 100%;
   margin: 0 auto;
 }
@@ -555,17 +691,19 @@ main button,
   letter-spacing: -4px;
   color: #3A3A3A;
   margin: 0 auto 34px;
-  max-width: 1362px;
+  max-width: min(100%, 1700px);
   text-align: center;
 }
 
 .services__grid {
   display: grid;
-  grid-template-columns: 432px 431px 431px 239px;
+  width: 100%;
+  /* Пропорции колонок как в макете (432:431:431:239), на всю ширину .services__inner */
+  grid-template-columns: minmax(0, 432fr) minmax(0, 431fr) minmax(0, 431fr) minmax(0, 239fr);
   /* «Короткие» строки бенто-сетки — 120px (десктоп); средняя полоса 249px */
   grid-template-rows: 120px 120px 120px 120px;
   gap: 14px;
-  justify-content: center;
+  box-sizing: border-box;
 }
 
 .services__card {
@@ -583,7 +721,7 @@ main button,
 
 .services__card-head {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 16px;
   width: 100%;
@@ -618,6 +756,16 @@ main button,
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
+  align-items: stretch;
+}
+
+/* Кластер фото: светлая плашка как у hero-иллюстрации (Figma) */
+.services__card--gruppovye-zaezdy .services__avatars {
+  border-radius: 40px;
+  padding: 6px 12px 6px 6px;
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .services__card--aeroekspressy {
@@ -736,7 +884,7 @@ main button,
   border-top-right-radius: 18px;
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 0;
-  padding: 18px 16px;
+  padding: 30px 40px;
   box-sizing: border-box;
 }
 
@@ -757,6 +905,7 @@ main button,
 }
 
 .services__transfer-car {
+  margin-top: -12px;
   grid-column: 2;
   grid-row: 2;
   min-width: 0;
@@ -856,10 +1005,10 @@ main button,
 
 .services__img--plane {
   position: absolute;
-  top: 0;
+  top: 15%;
   left: 4px;
-  height: 58px;
-  width: 58px;
+  width: 38px;
+  height: 38px;
 }
 
 .services__img--ticket-main {
@@ -881,14 +1030,33 @@ main button,
 
 .services__badge-icon {
   flex-shrink: 0;
-  width: 58px;
-  height: 58px;
   object-fit: contain;
+  display: block;
 }
 
-.services__card--transfery .services__badge-icon {
+.services__badge-icon--avtobusy {
+  width: 116px;
+  height: 58px;
+}
+
+.services__badge-icon--vizovaya-podderzhka {
+  width: 29px;
+  height: 21px;
+}
+
+.services__badge-icon--aeroekspressy {
+  width: 44px;
+  height: 28px;
+}
+
+.services__badge-icon--strahovanie {
   width: 58px;
   height: 58px;
+}
+
+.services__badge-icon--transfery {
+  width: 55px;
+  height: 30px;
 }
 
 .services__badge-icon--taxi {
@@ -910,12 +1078,22 @@ main button,
   height: 46px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #D2D6E0;
-  background: #d2d6e0;
 }
 
 .services__avatar:nth-child(n + 2) {
   margin-left: -8px;
+}
+
+.services__card--gruppovye-zaezdy .services__avatar:nth-child(1) {
+  background-color: #3a3a3a;
+}
+
+.services__card--gruppovye-zaezdy .services__avatar:nth-child(2) {
+  background-color: #d44333;
+}
+
+.services__card--gruppovye-zaezdy .services__avatar:nth-child(3) {
+  background-color: #b9c4d7;
 }
 
 .services__img--car {
@@ -983,7 +1161,7 @@ main button,
 }
 
 .steps__inner {
-  max-width: 1860px;
+  max-width: 2000px;
   width: 100%;
   margin: 0 auto;
   overflow-x: auto;
@@ -1007,8 +1185,7 @@ main button,
 
 .steps__grid {
   display: grid;
-  grid-template-columns: repeat(4, 428px);
-  grid-auto-rows: 423px;
+  grid-template-columns: repeat(4, 440px);
   gap: 15px;
   margin-bottom: 40px;
   width: max-content;
@@ -1022,9 +1199,8 @@ main button,
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  width: 428px;
-  height: 423px;
-  max-width: 428px;
+  height: 480px;
+  max-width: 440px;
   flex-shrink: 0;
   background-color: #ffffff;
   border-radius: 24px;
@@ -1037,8 +1213,8 @@ main button,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 54px;
+  height: 54px;
   background-color: #F2F3F5;
   border-radius: 12px;
   font-family: var(--font-main);
@@ -1056,6 +1232,8 @@ main button,
   color: var(--color-text-dark);
   margin: 0 0 16px;
   line-height: 1.25;
+  letter-spacing: -0.02em;
+  min-height: calc(1.25 * 3 * 1em);
 }
 
 .steps__img {
@@ -1075,11 +1253,7 @@ main button,
 }
 
 .steps__card-title--step-two {
-  font-size: 22px;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
   margin: 0 0 10px;
-  color: #333333;
 }
 
 .steps__step-two-visual {
@@ -1158,11 +1332,7 @@ main button,
 }
 
 .steps__card-title--step-three {
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
   margin: 0 0 10px;
-  color: #333333;
 }
 
 .steps__step-three-visual {
@@ -1229,17 +1399,14 @@ main button,
   filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.07));
 }
 
-/* Шаг 4 — аналитика, img/fourthStep */
+/* Шаг 4 — аналитика, img/fourthStep (макет 428×423) */
 .steps__card--step-four {
   overflow: visible;
+  flex-shrink: 0;
 }
 
 .steps__card-title--step-four {
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
   margin: 0 0 10px;
-  color: #333333;
 }
 
 .steps__step-four-visual {
@@ -1289,7 +1456,6 @@ main button,
   height: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 8px;
   z-index: 2;
 }
 
@@ -1355,48 +1521,30 @@ main button,
   padding: 18px 32px;
 }
 
-/* Шаг «одно окно» — та же сетка 428×423, композиция img/oneWindow */
-.steps__card--one-window {
-  --one-window-visual-scale: 0.82;
-  display: flex;
-  flex-direction: column;
-  padding: 16px 14px 10px;
-  gap: 4px;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+/* Шаг 1 — «одно окно», сетка и отступы как у шагов 2–4, композиция img/oneWindow */
+.steps__card--step-one {
+  overflow: visible;
+  --step-one-visual-scale: 0.82;
 }
 
-.steps__one-window-intro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-shrink: 0;
-  min-width: 0;
+.steps__card-title--step-one {
+  margin: 0 0 10px;
 }
 
-.steps__card--one-window .steps__number {
-  margin-bottom: 8px;
-}
-
-.steps__card-title--one-window {
-  line-height: 1.2;
-  margin: 0 0 4px;
-  max-width: none;
-  letter-spacing: -0.02em;
-}
-
-.steps__one-window {
+.steps__step-one-visual {
   flex: 1 1 auto;
   min-height: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin-top: 4px;
 }
 
-.steps__one-window-stage {
+.steps__step-one-stage {
   position: relative;
   width: 100%;
-  height: calc(232px * var(--one-window-visual-scale));
+  height: calc(232px * var(--step-one-visual-scale));
   flex-shrink: 0;
   margin: 0;
   padding-bottom: 0;
@@ -1406,16 +1554,16 @@ main button,
   overflow: visible;
 }
 
-.steps__one-window-scale {
+.steps__step-one-scale {
   position: relative;
   width: 100%;
   height: 232px;
   flex-shrink: 0;
-  transform: scale(var(--one-window-visual-scale));
+  transform: scale(var(--step-one-visual-scale));
   transform-origin: bottom center;
 }
 
-.steps__one-window-bg {
+.steps__step-one-bg {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -1427,7 +1575,7 @@ main button,
   pointer-events: none;
 }
 
-.steps__one-window-flight {
+.steps__step-one-flight {
   position: absolute;
   left: -2%;
   bottom: 42px;
@@ -1438,7 +1586,7 @@ main button,
   filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.08));
 }
 
-.steps__one-window-hotel {
+.steps__step-one-hotel {
   position: absolute;
   right: -6%;
   bottom: 54px;
@@ -1449,7 +1597,7 @@ main button,
   filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.1));
 }
 
-.steps__one-window-taxi {
+.steps__step-one-taxi {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -1511,18 +1659,12 @@ main button,
 
   .steps__card-title {
     font-size: clamp(20px, 5vw, 26px);
-    margin-bottom: 12px;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin: 0 0 12px;
     line-height: 1.2;
-  }
-
-  .steps__card-title--one-window {
-    font-size: clamp(18px, 4.8vw, 22px);
-  }
-
-  .steps__card-title--step-two,
-  .steps__card-title--step-three,
-  .steps__card-title--step-four {
-    font-size: clamp(17px, 4.5vw, 20px);
+    letter-spacing: -0.02em;
+    min-height: calc(1.2 * 3 * 1em);
   }
 
   .steps__actions {
@@ -1573,6 +1715,7 @@ main button,
 .team-card {
   box-sizing: border-box;
   position: relative;
+  max-height: 440px;
   overflow: hidden;
   min-height: 380px;
   padding: 48px 0 0 48px;
@@ -1650,7 +1793,7 @@ main button,
   width: auto;
   max-width: 42%;
   height: auto;
-  max-height: min(340px, 92%);
+  max-height: 100%;
   object-fit: contain;
   object-position: right bottom;
   margin-left: auto;
@@ -1667,6 +1810,7 @@ main button,
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 8px;
   width: 332px;
   height: 70px;
   border-radius: 999px;
@@ -2081,18 +2225,16 @@ main button,
 }
 
 .app-block__item::before {
-  content: '→';
+  content: '';
   position: absolute;
   left: 0;
   top: 0.12em;
-  font-size: 1.15em;
-  font-weight: 600;
-  line-height: 1;
-  color: #D13E27;
-  background: none;
-  width: auto;
-  height: auto;
-  clip-path: none;
+  width: 1.15em;
+  height: 1.15em;
+  max-width: 22px;
+  max-height: 22px;
+  background: url('../img/arrow.svg') no-repeat center / contain;
+  filter: invert(42%) sepia(75%) saturate(1800%) hue-rotate(340deg) brightness(0.95) contrast(1.05);
 }
 
 .app-block__stores {
@@ -2289,11 +2431,13 @@ main button,
 .mice__inner {
   max-width: 1860px;
   width: 100%;
+  min-width: 0;
   margin: 0 auto;
-  background-color: #1a1a1a;
+  background-color: #3A3A3A;
   border-radius: 40px;
   padding: clamp(40px, 5vw, 60px) clamp(36px, 4.5vw, 64px) clamp(44px, 5vw, 60px);
   color: #ffffff;
+  box-sizing: border-box;
 }
 
 .mice__header {
@@ -2351,13 +2495,24 @@ main button,
 }
 
 .mice__btn-arrow {
-  font-weight: 400;
-  font-size: 1.15em;
-  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
 }
 
 .mice__actions .mice__btn:hover {
   opacity: 0.92;
+}
+
+/* Главная: кнопка MICE — белая с оранжевым — только при наведении (после базовых .mice__actions) */
+body.page-1index .mice__actions .mice__btn:hover {
+  background-color: #ffffff;
+  color: #d44333;
+  opacity: 1;
+}
+
+body.page-1index .mice__actions .mice__btn:hover .btn__arrow {
+  filter: invert(32%) sepia(95%) saturate(2500%) hue-rotate(340deg) brightness(0.92) contrast(0.95);
 }
 
 .mice__link,
@@ -2374,9 +2529,9 @@ main button,
 }
 
 .mice__link-arrow {
-  font-weight: 400;
-  font-size: 1.1em;
-  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
 }
 
 .mice__link:hover {
@@ -2391,6 +2546,22 @@ main button,
   margin-top: clamp(40px, 4.5vw, 56px);
   align-items: stretch;
   justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Узкий контейнер: 2×2, без вылезания за padding */
+@media (max-width: 1199px) {
+  .mice__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+    grid-auto-rows: minmax(0, auto);
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    align-items: stretch;
+    justify-items: stretch;
+    justify-content: stretch;
+  }
 }
 
 .mice__card {
@@ -2400,7 +2571,9 @@ main button,
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-width: 0;
   min-height: 0;
+  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -2480,10 +2653,6 @@ main button,
     max-width: none;
   }
 
-  .mice__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .mice__card--photo {
     min-height: 280px;
   }
@@ -2542,10 +2711,11 @@ main button,
 
 .cases__caption {
   font-family: 'Golos Text', sans-serif;
-  font-size: 18px;
+  font-size: 22px;
+  line-height: 1.45;
   font-weight: 400;
   color: #3A3A3A;
-  margin: 16px 0 0;
+  margin: 60px 0 0;
   text-align: left;
 }
 
@@ -2588,6 +2758,7 @@ main button,
   letter-spacing: -1px;
   color: #3A3A3A;
   margin: 0;
+  flex: 0 0 auto;
 }
 
 .cases__card .text-accent {
@@ -2602,23 +2773,23 @@ main button,
 
 .cases__link {
   font-family: 'Golos Text', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 500;
   color: #777779;
   margin-top: 16px;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .cases__link:hover {
-  text-decoration: underline;
+  color: #D44333;
 }
 
 .cases__author {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: auto;
-  padding-top: 20px;
+  flex-shrink: 0;
 }
 
 .cases__avatar {
@@ -2649,6 +2820,19 @@ main button,
   font-size: 12px;
   font-weight: 400;
   color: #777779;
+}
+
+/* Десктоп: фиксированные 16px между «Читать кейс» и блоком с автором, нижняя тройка прижата к низу карточки */
+@media (min-width: 769px) {
+  .cases__text {
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  .cases__author {
+    margin-top: 0;
+    padding-top: 16px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -2694,9 +2878,9 @@ main button,
   }
 
   .cases__caption {
-    margin-top: 10px;
-    font-size: 16px;
-    line-height: 1.35;
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 1.4;
     font-weight: 400;
     color: #6b6b6b;
     max-width: 22em;
@@ -2821,7 +3005,7 @@ main button,
 .cta-form__title {
   font-family: 'Golos Text', sans-serif;
   font-weight: 600;
-  font-size: clamp(36px, 4.2vw, 66px);
+  font-size: 70px;
   line-height: 1.02;
   letter-spacing: -0.04em;
   color: #ffffff;
@@ -2830,8 +3014,8 @@ main button,
 
 .cta-form__text {
   font-family: 'Golos Text', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 28px;
+  font-weight: 600;
   line-height: 1.5;
   color: #ffffff;
   margin: 0;
@@ -2847,7 +3031,7 @@ main button,
   background-color: #ffffff;
   border-radius: 28px;
   padding: 40px 40px 36px;
-  max-width: 520px;
+  max-width: 600px;
   width: 100%;
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
@@ -5798,12 +5982,14 @@ main button,
   transform: translateY(-50%) rotate(45deg);
 }
 
-/* Плавное раскрытие: grid 0fr→1fr + синхронный сдвиг текста снизу */
+/* Плавное раскрытие: 0fr→1fr. Длительный ease-out — панель мягко выезжает из-под вопроса. */
 .faq__panel {
   width: 100%;
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.62s cubic-bezier(0.22, 1, 0.36, 1);
+  --faq-ease: cubic-bezier(0.25, 0.85, 0.3, 1);
+  --faq-dur: 0.75s;
+  transition: grid-template-rows var(--faq-dur) var(--faq-ease);
 }
 
 .faq__item[open] .faq__panel {
@@ -5813,8 +5999,6 @@ main button,
 .faq__panel-inner {
   min-height: 0;
   overflow: hidden;
-  transform: translateZ(0);
-  backface-visibility: hidden;
 }
 
 .faq__answer {
@@ -5824,12 +6008,13 @@ main button,
   font-size: 18px;
   line-height: 1.5;
   color: #606060;
-  text-align: center;
+  text-align: left;
   opacity: 0;
-  transform: translate3d(0, 1.15em, 0);
+  /* «Сверху»: лёгкое смещение вверх → текст выезжает вниз вместе с раскрытием */
+  transform: translate3d(0, -0.55em, 0);
   transition:
-    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.62s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity calc(var(--faq-dur) * 0.9) 0.05s var(--faq-ease),
+    transform var(--faq-dur) var(--faq-ease);
 }
 
 .faq__item[open] .faq__answer {
@@ -5840,6 +6025,10 @@ main button,
 @media (prefers-reduced-motion: reduce) {
   .faq__panel {
     transition: none;
+  }
+
+  .faq__item[open] .faq__panel {
+    grid-template-rows: 1fr;
   }
 
   .faq__answer {
@@ -6027,6 +6216,7 @@ main button,
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   width: 288px;
   max-width: 100%;
   height: 65px;
@@ -6599,15 +6789,15 @@ main button,
     padding-right: 64px;
   }
 
-  .services__card--strahovanie .services__badge-icon {
+  .services__card--strahovanie .services__badge-icon--strahovanie {
     position: absolute;
     right: 0;
     left: auto;
     top: 50%;
     margin-left: 0;
     transform: translateY(-50%);
-    width: 44px;
-    height: 44px;
+    width: 58px;
+    height: 58px;
     object-fit: contain;
   }
 
@@ -6684,15 +6874,35 @@ main button,
     letter-spacing: -0.4px;
   }
 
-  .services__badge-icon {
-    width: 48px;
-    height: 48px;
-    flex-shrink: 0;
+  .services__badge-icon--avtobusy {
+    width: 116px;
+    max-width: 100%;
+    height: 58px;
+  }
+
+  .services__badge-icon--vizovaya-podderzhka {
+    width: 29px;
+    height: 21px;
+  }
+
+  .services__badge-icon--aeroekspressy {
+    width: 44px;
+    height: 28px;
+  }
+
+  .services__badge-icon--strahovanie {
+    width: 58px;
+    height: 58px;
+  }
+
+  .services__badge-icon--transfery {
+    width: 55px;
+    height: 30px;
   }
 
   .services__badge-icon--taxi {
-    width: 52px;
-    height: 52px;
+    width: 58px;
+    height: 58px;
   }
 
   .services__media {
@@ -6713,8 +6923,8 @@ main button,
     top: 8px;
     right: 8px;
     left: auto;
-    width: 48px;
-    height: 48px;
+    width: 38px;
+    height: 38px;
     z-index: 2;
   }
 
@@ -6957,26 +7167,37 @@ main button,
   .hero__illustration {
     width: 100%;
     max-width: 292px;
-    background: #EEEFF3;
-    border-radius: 40px;
-    padding: 0;
     min-height: 320px;
     height: 320px;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
     overflow: hidden;
+    border-radius: 40px;
   }
 
-  .hero__image {
-    display: block;
+  .hero__illustration-plate {
     width: 100%;
-    max-width: none;
     height: 100%;
-    object-fit: contain;
-    object-position: center bottom;
-    transform: translateY(-14px) scale(1.5);
-    transform-origin: center bottom;
+    max-width: none;
+    top: 0;
+    right: 0;
+    transform: none;
+    border-radius: 40px;
+  }
+
+  .hero__illustration-back {
+    top: 50%;
+    right: 0;
+    max-height: 300px;
+    max-width: 100%;
+  }
+
+  .hero__illustration-person {
+    right: 4px;
+    bottom: 0;
+    max-width: 52%;
+    max-height: 100%;
   }
 
   .hero__trust {
@@ -7142,10 +7363,30 @@ main button,
     color: #393939;
   }
 
-  .services__badge-icon {
+  .services__badge-icon--avtobusy {
+    width: 116px;
+    max-width: 100%;
+    height: 58px;
+  }
+
+  .services__badge-icon--vizovaya-podderzhka {
+    width: 29px;
+    height: 21px;
+  }
+
+  .services__badge-icon--aeroekspressy {
     width: 44px;
-    height: 44px;
-    flex-shrink: 0;
+    height: 28px;
+  }
+
+  .services__badge-icon--strahovanie {
+    width: 58px;
+    height: 58px;
+  }
+
+  .services__badge-icon--transfery {
+    width: 55px;
+    height: 30px;
   }
 
   .services__badge-icon--taxi {
@@ -7161,10 +7402,6 @@ main button,
     background: #ffffff !important;
   }
 
-  .services__card--avtobusy .services__badge-icon {
-    width: 81px;
-    height: 38px;
-  }
 
   .services__card--vizovaya-podderzhka,
   .services__card--aeroekspressy,
@@ -7190,23 +7427,19 @@ main button,
     padding-right: 76px;
   }
 
-  .services__card--vizovaya-podderzhka .services__badge-icon {
+  .services__card--vizovaya-podderzhka .services__badge-icon--vizovaya-podderzhka {
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 29px;
-    height: 21px;
     object-fit: contain;
   }
 
-  .services__card--aeroekspressy .services__badge-icon {
+  .services__card--aeroekspressy .services__badge-icon--aeroekspressy {
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 44px;
-    height: 28px;
     object-fit: contain;
   }
 
@@ -7236,7 +7469,7 @@ main button,
     right: 0;
     left: auto;
     width: 38px;
-    height: 36px;
+    height: 38px;
   }
 
   .services__img--ticket-main {
@@ -7270,6 +7503,11 @@ main button,
     padding-right: 6px;
   }
 
+  .services__card--gruppovye-zaezdy .services__avatars {
+    border-radius: 28px;
+    padding: 4px 10px 4px 4px;
+  }
+
   .services__avatar {
     width: 40px;
     height: 41px;
@@ -7283,15 +7521,15 @@ main button,
     margin-left: -6px;
   }
 
-  .services__avatar:nth-child(1) {
+  .services__card--gruppovye-zaezdy .services__avatar:nth-child(1) {
     background-color: #3a3a3a;
   }
 
-  .services__avatar:nth-child(2) {
+  .services__card--gruppovye-zaezdy .services__avatar:nth-child(2) {
     background-color: #d44333;
   }
 
-  .services__avatar:nth-child(3) {
+  .services__card--gruppovye-zaezdy .services__avatar:nth-child(3) {
     background-color: #b9c4d7;
   }
 
@@ -7321,21 +7559,17 @@ main button,
     gap: 39px;
   }
 
-  .services__card--transfery .services__badge-icon {
-    width: 55px;
-    height: 30px;
+  .services__card--transfery .services__badge-icon--transfery {
     object-fit: contain;
   }
 
-  .services__card--strahovanie .services__badge-icon {
+  .services__card--strahovanie .services__badge-icon--strahovanie {
     position: absolute;
     right: 2px;
     left: auto;
     top: 50%;
     margin-left: 0;
     transform: translateY(-50%);
-    width: 44px;
-    height: 44px;
     object-fit: contain;
   }
 
@@ -7440,12 +7674,12 @@ main button,
 
   /* Steps mobile */
   .steps {
-    padding: 21px 10px 28px;
+    padding: 21px 12px 28px;
     background: #e0e2ea;
   }
 
   .steps__inner {
-    max-width: 355px;
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
   }
@@ -7457,7 +7691,7 @@ main button,
     letter-spacing: -1px;
     margin-bottom: 20px;
     text-align: center;
-    max-width: 363px;
+    max-width: 100%;
   }
 
   .steps__title-accent {
@@ -7485,39 +7719,23 @@ main button,
     background: #ffffff;
   }
 
-  .steps__card--one-window {
-    padding: 30px;
-    gap: 18px;
-    box-shadow: none;
+  /* Шаг 1 — та же сетка карточки, мобильная композиция */
+  .steps__card--step-one {
+    --step-one-visual-scale: 1;
   }
 
-  .steps__one-window-intro {
-    gap: 18px;
-  }
-
-  .steps__card-title--one-window {
-    line-height: 1.1;
-    margin: 0;
-    max-width: none;
-  }
-
-  /* Шаг 1 — точная мобильная композиция по макету */
-  .steps__card--one-window {
-    --one-window-visual-scale: 1;
-  }
-
-  .steps__one-window-stage {
+  .steps__step-one-stage {
     height: 188px;
     min-height: 188px;
     margin-top: 4px;
   }
 
-  .steps__one-window-scale {
+  .steps__step-one-scale {
     height: 188px;
     overflow: visible;
   }
 
-  .steps__one-window-bg {
+  .steps__step-one-bg {
     left: 22px;
     right: auto;
     transform: none;
@@ -7529,7 +7747,7 @@ main button,
     object-fit: contain;
   }
 
-  .steps__one-window-flight {
+  .steps__step-one-flight {
     left: 0;
     bottom: 78px;
     width: 162px;
@@ -7539,7 +7757,7 @@ main button,
     object-fit: contain;
   }
 
-  .steps__one-window-hotel {
+  .steps__step-one-hotel {
     right: 0;
     bottom: 46px;
     width: 126px;
@@ -7549,7 +7767,7 @@ main button,
     object-fit: contain;
   }
 
-  .steps__one-window-taxi {
+  .steps__step-one-taxi {
     left: 52px;
     right: auto;
     transform: none;
@@ -7573,14 +7791,12 @@ main button,
 
   .steps__card-title {
     font-size: 28px;
+    font-weight: 700;
+    color: var(--color-text-dark);
     line-height: 1.1;
     letter-spacing: -1px;
-  }
-
-  .steps__card-title--step-two {
-    font-size: 28px;
-    max-width: 260px;
-    margin-bottom: 18px;
+    margin: 0 0 18px;
+    min-height: calc(1.1 * 3 * 1em);
   }
 
   .steps__step-two-stage {
@@ -7609,12 +7825,6 @@ main button,
 
   .steps__step-two-layer--bg-mid {
     width: 92%;
-  }
-
-  .steps__card-title--step-three {
-    font-size: 28px;
-    max-width: 306px;
-    margin-bottom: 18px;
   }
 
   .steps__step-three-stage {
@@ -7658,12 +7868,6 @@ main button,
     bottom: auto;
     width: 230px;
     max-width: 230px;
-  }
-
-  .steps__card-title--step-four {
-    font-size: 28px;
-    max-width: 286px;
-    margin-bottom: 18px;
   }
 
   .steps__step-four-stage {
@@ -8246,7 +8450,6 @@ main button,
   }
 
   .app-block__item::before {
-    color: #d44333;
     top: 0.1em;
   }
 
@@ -8394,6 +8597,15 @@ main button,
     box-sizing: border-box;
   }
 
+  body.page-1index .mice__actions .mice__btn:hover {
+    background-color: #ffffff;
+    color: #d44333;
+  }
+
+  body.page-1index .mice__actions .mice__btn:hover .btn__arrow {
+    filter: invert(32%) sepia(95%) saturate(2500%) hue-rotate(340deg) brightness(0.92) contrast(0.95);
+  }
+
   .mice__link {
     justify-content: flex-start;
     font-size: 16px;
@@ -8466,8 +8678,8 @@ main button,
   }
 
   .cases__caption {
-    margin-top: 8px;
-    font-size: 15px;
+    margin-top: 12px;
+    font-size: 16px;
     line-height: 1.4;
   }
 
@@ -8787,12 +8999,14 @@ main button,
 }
 
 .integration-1c-block__list li::before {
-  content: '→';
+  content: '';
   position: absolute;
   left: 0;
   top: 0.2em;
-  color: #D44333;
-  font-weight: 700;
+  width: 16px;
+  height: 16px;
+  background: url('../img/arrow.svg') no-repeat center / contain;
+  filter: invert(42%) sepia(75%) saturate(1800%) hue-rotate(340deg) brightness(0.95) contrast(1.05);
 }
 
 .integration-1c-block__btn {
@@ -9650,8 +9864,15 @@ main button,
 }
 
 .sup-results-card__link-arr {
-  font-size: 1.05em;
-  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.sup-results-card__link .btn__arrow {
+  width: 16px;
+  height: 16px;
+  filter: invert(42%) sepia(75%) saturate(1800%) hue-rotate(340deg) brightness(0.95) contrast(1.05);
 }
 
 .sup-results-card__foot {
@@ -10979,8 +11200,15 @@ main button,
 }
 
 .results-cases-card__link-icon {
-  font-size: 1.1em;
-  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.results-cases-card__link .btn__arrow {
+  width: 16px;
+  height: 16px;
+  filter: invert(42%) sepia(75%) saturate(1800%) hue-rotate(340deg) brightness(0.95) contrast(1.05);
 }
 
 .results-cases-card__footer {
@@ -14831,4 +15059,21 @@ body.komand-page.komand-page--no-sidebar.page-smartway-1c .komand-main {
   line-height: 1.5;
   font-weight: 400;
   color: #3a3a3a;
+}
+
+/* Десктоп: контент на всю ширину вьюпорта, боковые отступы 80px (--container-padding-x) у секций/шапки/футера */
+@media (min-width: 1025px) {
+  :root {
+    --container-padding-x: 80px;
+  }
+
+  [class*='__inner'] {
+    max-width: none;
+    width: 100%;
+  }
+
+  .services__title,
+  .integrations__title {
+    max-width: 100%;
+  }
 }

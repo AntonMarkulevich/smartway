@@ -82,7 +82,7 @@
 .clients-page .clients__track {
   display: flex;
   align-items: center;
-  gap: 0;
+  column-gap: var(--clients-strip-gap);
   width: max-content;
   animation: clients-page-marquee 40s linear infinite;
   will-change: transform;
@@ -92,8 +92,7 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  padding-right: var(--clients-strip-gap);
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 .clients-page .clients__logo {
@@ -110,7 +109,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(calc(-50% - var(--clients-strip-gap) * 0.5));
   }
 }
 
@@ -491,6 +490,12 @@
 
 .client-card--cta .client-card__cta-btn:hover {
   background: #f5f5f5;
+}
+
+.client-card--cta .client-card__cta-btn .btn__arrow {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0);
 }
 
 /* ——— Аудит: горизонтальный скролл, анимации по скроллу, плавные ховеры ——— */

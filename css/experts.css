@@ -58,6 +58,18 @@
 .experts-hero__crumb-sep {
   color: #939599;
   user-select: none;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.experts-hero__crumb-sep .btn__arrow {
+  display: block;
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  filter: brightness(0);
+  opacity: 0.58;
 }
 
 .experts-hero__crumb-current {

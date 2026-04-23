@@ -333,6 +333,19 @@ body.komand-page {
 .komand-breadcrumb__sep {
   color: var(--komand-muted);
   font-weight: 300;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+  list-style: none;
+}
+
+.komand-breadcrumb__sep .btn__arrow {
+  display: block;
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  filter: brightness(0);
+  opacity: 0.52;
 }
 
 .komand-breadcrumb__current {

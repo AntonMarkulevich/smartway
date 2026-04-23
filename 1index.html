@@ -85,15 +85,17 @@
       <div class="hero__inner">
         <div class="hero__content">
           <h1 class="hero__title">Онлайн-сервис<br> для организации <br>командировок</h1>
-          <p class="hero__subtitle">Билеты, отели, закрывающие<br>и интеграция с 1С в одном окне</p>
+          <p class="hero__subtitle">Билеты, отели, закрывающие и интеграция с 1С в одном окне</p>
           <div class="hero__actions">
-            <a href="#consult" class="btn btn--primary">Попробовать бесплатно &rarr;</a>
+            <a href="#consult" class="btn btn--primary">Попробовать бесплатно <img src="img/arrow.svg" alt="" class="btn__arrow" width="20" height="20" decoding="async" aria-hidden="true"></a>
             <a href="#consult" class="btn btn--outline">Получить консультацию</a>
           </div>
         </div>
         <div class="hero__visual">
           <div class="hero__illustration">
-            <img src="img/hero-illustration.png" alt="Интерфейс Smartway: поиск билетов и бронирование" class="hero__image" fetchpriority="high" loading="eager" decoding="async">
+            <div class="hero__illustration-plate" aria-hidden="true"></div>
+            <img src="img/hero-back.png" alt="" class="hero__illustration-back" width="800" height="600" fetchpriority="high" loading="eager" decoding="async">
+            <img src="img/hero-person.png" alt="Интерфейс Smartway: поиск билетов и бронирование" class="hero__illustration-person" width="400" height="600" fetchpriority="high" loading="eager" decoding="async">
           </div>
           <div class="hero__trust">
             <img src="img/partner-skolkovo.png" alt="Резиденты технопарка «Сколково»" class="hero__trust-icon" width="229" height="37" loading="eager" decoding="async">
@@ -166,13 +168,13 @@
           <div class="services__card services__card--avtobusy">
             <div class="services__card-head">
               <h3 class="services__card-title">Авиа и Ж/Д билеты</h3>
-              <img src="img/services/buses.svg" alt="" class="services__badge-icon" loading="lazy" decoding="async">
+              <img src="img/services/buses.svg" alt="" class="services__badge-icon services__badge-icon--avtobusy" loading="lazy" decoding="async">
             </div>
           </div>
           <div class="services__card services__card--vizovaya-podderzhka">
             <div class="services__card-head">
               <h3 class="services__card-title">Визовая поддержка</h3>
-              <img src="img/services/visa-check.svg" alt="" class="services__badge-icon" loading="lazy" decoding="async">
+              <img src="img/services/visa-check.svg" alt="" class="services__badge-icon services__badge-icon--vizovaya-podderzhka" loading="lazy" decoding="async">
             </div>
           </div>
           <div class="services__card services__card--taxi">
@@ -189,7 +191,7 @@
           <div class="services__card services__card--aeroekspressy">
             <div class="services__card-head">
               <h3 class="services__card-title">Аэроэкспрессы</h3>
-              <img src="img/services/aero-ticket.svg" alt="" class="services__badge-icon" loading="lazy" decoding="async">
+              <img src="img/services/aero-ticket.svg" alt="" class="services__badge-icon services__badge-icon--aeroekspressy" loading="lazy" decoding="async">
             </div>
           </div>
           <div class="services__card services__card--gruppovye-zaezdy">
@@ -205,14 +207,14 @@
           <div class="services__card services__card--strahovanie">
             <div class="services__card-head">
               <h3 class="services__card-title">Страхование</h3>
-              <img src="img/services/insurance-heart.svg" alt="" class="services__badge-icon">
+              <img src="img/services/insurance-heart.svg" alt="" class="services__badge-icon services__badge-icon--strahovanie">
             </div>
           </div>
           <div class="services__card services__card--transfery">
             <div class="services__transfer-top">
               <div class="services__card-head">
                 <h3 class="services__card-title">Трансферы</h3>
-                <img src="img/services/transfer-arrows.svg" alt="" class="services__badge-icon" loading="lazy" decoding="async">
+                <img src="img/services/transfer-arrows.svg" alt="" class="services__badge-icon services__badge-icon--transfery" loading="lazy" decoding="async">
               </div>
             </div>
             <div class="services__transfer-vip">
@@ -248,18 +250,16 @@
       <div class="steps__inner">
         <h2 class="steps__title" id="steps-title">Управляйте командировками <span class="steps__title-accent">от заявки до отчетности</span></h2>
         <div class="steps__grid">
-          <article class="steps__card steps__card--one-window">
-            <div class="steps__one-window-intro">
-              <span class="steps__number">1</span>
-              <h3 class="steps__card-title steps__card-title--one-window">Оформляйте услуги для командировок в одном окне</h3>
-            </div>
-            <div class="steps__one-window" aria-hidden="true">
-              <div class="steps__one-window-stage">
-                <div class="steps__one-window-scale">
-                  <img src="img/oneWindow/Rectangle%20376714326.png" alt="" class="steps__one-window-bg" width="560" height="200" loading="lazy" decoding="async">
-                  <img src="img/oneWindow/Group%202085656548.png" alt="" class="steps__one-window-flight" width="320" height="auto" loading="lazy" decoding="async">
-                  <img src="img/oneWindow/Group%202085656549.png" alt="" class="steps__one-window-hotel" width="280" height="auto" loading="lazy" decoding="async">
-                  <img src="img/oneWindow/Tariff%20avia.png" alt="" class="steps__one-window-taxi" width="340" height="auto" loading="lazy" decoding="async">
+          <article class="steps__card steps__card--step-one">
+            <span class="steps__number">1</span>
+            <h3 class="steps__card-title steps__card-title--step-one">Оформляйте услуги для командировок в одном окне</h3>
+            <div class="steps__step-one-visual" aria-hidden="true">
+              <div class="steps__step-one-stage">
+                <div class="steps__step-one-scale">
+                  <img src="img/oneWindow/Rectangle%20376714326.png" alt="" class="steps__step-one-bg" width="560" height="200" loading="lazy" decoding="async">
+                  <img src="img/oneWindow/Group%202085656548.png" alt="" class="steps__step-one-flight" width="320" height="auto" loading="lazy" decoding="async">
+                  <img src="img/oneWindow/Group%202085656549.png" alt="" class="steps__step-one-hotel" width="280" height="auto" loading="lazy" decoding="async">
+                  <img src="img/oneWindow/Tariff%20avia.png" alt="" class="steps__step-one-taxi" width="340" height="auto" loading="lazy" decoding="async">
                 </div>
               </div>
             </div>
@@ -311,7 +311,7 @@
           </article>
         </div>
         <div class="steps__actions">
-          <a href="#consult" class="btn btn--primary">Попробовать бесплатно &rarr;</a>
+          <a href="#consult" class="btn btn--primary">Попробовать бесплатно <img src="img/arrow.svg" alt="" class="btn__arrow" width="20" height="20" decoding="async" aria-hidden="true"></a>
         </div>
       </div>
     </section>
@@ -334,7 +334,7 @@
               decoding="async"
             >
           </div>
-          <a href="#consult" class="btn btn--primary">Попробовать бесплатно &rarr;</a>
+          <a href="#consult" class="btn btn--primary">Попробовать бесплатно <img src="img/arrow.svg" alt="" class="btn__arrow" width="20" height="20" decoding="async" aria-hidden="true"></a>
         </div>
       </div>
     </section>
@@ -389,7 +389,7 @@
           </article>
         </div>
         <div class="team-roles__actions">
-          <a href="#consult" class="team-roles__btn">Попробовать бесплатно &rarr;</a>
+          <a href="#consult" class="team-roles__btn">Попробовать бесплатно <img src="img/arrow.svg" alt="" class="btn__arrow" width="20" height="20" decoding="async" aria-hidden="true"></a>
         </div>
       </div>
     </section>
@@ -427,7 +427,7 @@
             </article>
         </div>
         <div class="integrations__actions">
-          <a href="#consult" class="btn btn--primary">Получить консультацию &rarr;</a>
+          <a href="#consult" class="btn btn--primary">Получить консультацию <img src="img/arrow.svg" alt="" class="btn__arrow" width="20" height="20" decoding="async" aria-hidden="true"></a>
         </div>
       </div>
     </section>
@@ -474,8 +474,8 @@
           <div class="mice__intro">
             <p class="mice__text">Организуем корпоративы, конференции, тимбилдинг и другие форматы в России и за границей</p>
             <div class="mice__actions">
-              <a href="#consult" class="btn btn--primary mice__btn">Получить консультацию <span class="mice__btn-arrow" aria-hidden="true">→</span></a>
-              <a href="mice.html" class="mice__link">Подробнее о MICE в Smartway <span class="mice__link-arrow" aria-hidden="true">→</span></a>
+              <a href="#consult" class="btn btn--primary mice__btn">Получить консультацию <span class="mice__btn-arrow" aria-hidden="true"><img src="img/arrow.svg" alt="" class="btn__arrow" width="20" height="20" decoding="async"></span></a>
+              <a href="mice.html" class="mice__link">Подробнее о MICE в Smartway <span class="mice__link-arrow" aria-hidden="true"><img src="img/arrow.svg" alt="" class="btn__arrow" width="20" height="20" decoding="async"></span></a>
             </div>
           </div>
         </div>
@@ -513,11 +513,26 @@
           <p class="cases__caption">компаний организуют командировки</p>
         </div>
         <div class="cases__right">
+          
+          <article class="cases__card">
+            <div class="cases__logo-wrap">
+                <img src="img/cases-modulbank.svg" alt="Модульбанк" class="cases__logo" width="170" height="43" loading="lazy" decoding="async">
+            </div>
+            <p class="cases__text">Ускорили согласование поездок <span class="text-accent">с 24 часов до 10 минут</span> благодаря схемам согласования</p>
+            <a href="clients.html" class="cases__link">Читать кейс</a>
+            <div class="cases__author">
+                <img src="img/cases-gelpic.svg" alt="" class="cases__avatar" width="48" height="48" loading="lazy">
+                <div class="cases__author-info">
+                    <span class="cases__author-name">Анастасия Филимонова</span>
+                    <span class="cases__author-role">Руководитель Центра оценки персонала</span>
+                </div>
+            </div>
+        </article>
           <article class="cases__card">
             <div class="cases__logo-wrap">
               <img src="img/cases-dodo.png" alt="Dodo Brands" class="cases__logo" width="170" height="43" loading="lazy" decoding="async">
             </div>
-            <p class="cases__text">Доверили сотрудникам оформление поездок <strong>и освободили 50% времени</strong> организатора командировок</p>
+            <p class="cases__text">Доверили сотрудникам оформление поездок <span class="text-accent">и освободили 50% времени</span> организатора командировок</p>
             <a href="clients.html" class="cases__link">Читать кейс</a>
             <div class="cases__author">
               <img src="img/cases-avatar-1.svg" alt="" class="cases__avatar" width="47" height="47" loading="lazy">
@@ -527,20 +542,6 @@
               </div>
             </div>
           </article>
-            <article class="cases__card">
-                <div class="cases__logo-wrap">
-                    <img src="img/cases-modulbank.svg" alt="Модульбанк" class="cases__logo" width="170" height="43" loading="lazy" decoding="async">
-                </div>
-                <p class="cases__text">Ускорили согласование поездок <span class="text-accent">с 24 часов до 10 минут</span> благодаря схемам согласования</p>
-                <a href="clients.html" class="cases__link">Читать кейс</a>
-                <div class="cases__author">
-                    <img src="img/cases-gelpic.svg" alt="" class="cases__avatar" width="48" height="48" loading="lazy">
-                    <div class="cases__author-info">
-                        <span class="cases__author-name">Анастасия Филимонова</span>
-                        <span class="cases__author-role">Руководитель Центра оценки персонала</span>
-                    </div>
-                </div>
-            </article>
           <article class="cases__card">
             <div class="cases__logo-wrap">
               <img src="img/cases-gelpic.png" alt="Гелпик" class="cases__logo" width="170" height="43" loading="lazy" decoding="async">
@@ -709,7 +710,7 @@
           <p class="support-cta__text"><strong>Оставьте заявку —</strong> и мы персонально разберем вашу ситуацию
             за 15 минут на бесплатной консультации</p>
         </div>
-        <a href="#consult" class="support-cta__btn btn btn--primary">Попробовать бесплатно &rarr;</a>
+        <a href="#consult" class="support-cta__btn btn btn--primary">Попробовать бесплатно <img src="img/arrow.svg" alt="" class="btn__arrow" width="20" height="20" decoding="async" aria-hidden="true"></a>
       </div>
     </section>
   </main>
@@ -738,7 +739,7 @@
                 <p class="footer__contact footer__contact--strong"><a href="mailto:pr@smartway.today">pr@smartway.today</a></p>
               </div>
               <p class="footer__contact">
-                <a href="contract-hotel.html" class="footer__link-external">Для отелей по вопросам контрактинга<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
+                <a href="contract-hotel.html" class="footer__link-external">Для отелей по вопросам контрактинга<span class="footer__ext-icon" aria-hidden="true"><img src="img/arrow.svg" alt="" class="btn__arrow" width="14" height="14" decoding="async"></span></a>
               </p>
             </div>
             <p class="footer__address">121205, город&nbsp;Москва, Сколково, Бульвар Большой, дом&nbsp;42, стр.&nbsp;1, цок.&nbsp;этаж, пом.&nbsp;137 часть рм&nbsp;27</p>
@@ -801,7 +802,7 @@
           </div>
         </div>
         <div class="footer__col footer__col--about">
-          <a href="#consult" class="footer__btn">Записаться на консультацию<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
+          <a href="#consult" class="footer__btn">Записаться на консультацию<span class="footer__ext-icon" aria-hidden="true"><img src="img/arrow.svg" alt="" class="btn__arrow" width="14" height="14" decoding="async"></span></a>
           <div class="footer__col-body">
             <h3 class="footer__heading">О компании</h3>
             <ul class="footer__list footer__list--compact">

@@ -11,8 +11,11 @@
   <link rel="stylesheet" href="css/komandirovka.css">
   <link rel="stylesheet" href="css/footer-unified.css">
   <link rel="stylesheet" href="css/site-header.css">
-  <link rel="stylesheet" href="css/helpic.css">
+  
+  <script src="js/site-header.js" defer></script>
+<link rel="stylesheet" href="css/helpic.css">
   <link rel="stylesheet" href="css/clients-page.css">
+  <link rel="stylesheet" href="css/typography.css">
 </head>
 <body class="komand-page komand-page--no-sidebar clients-page">
   <div class="komand-layout">
@@ -34,9 +37,69 @@
           </label>
           <nav class="header__nav" aria-label="Основное меню">
             <ul class="header__menu">
-              <li><a href="1index.html#audience" class="header__link">Для кого <span class="header__chevron"></span></a></li>
-              <li><a href="1index.html#capabilities" class="header__link">Возможности <span class="header__chevron"></span></a></li>
-              <li><a href="1index.html#useful" class="header__link">Полезное <span class="header__chevron"></span></a></li>
+              <li class="header__menu-item header__menu-item--has-children">
+
+                <a href="1index.html#audience" class="header__link" aria-haspopup="true" aria-expanded="false">Для кого <span class="header__chevron" aria-hidden="true"></span></a>
+
+                <ul class="header__submenu" role="menu" aria-label="Для кого">
+
+                  <li role="none"><a href="superviser.html" class="header__submenu-link" role="menuitem">Руководителю</a></li>
+
+                  <li role="none"><a href="travel-manager.html" class="header__submenu-link" role="menuitem">Организатору<br> командировок</a></li>
+
+                  <li role="none"><a href="accountant.html" class="header__submenu-link" role="menuitem">Бухгалтеру</a></li>
+
+                  <li role="none"><a href="hr-manager.html" class="header__submenu-link" role="menuitem">HR-менеджеру</a></li>
+
+                </ul>
+
+              </li>
+              <li class="header__menu-item header__menu-item--has-children">
+
+                <a href="1index.html#capabilities" class="header__link" aria-haspopup="true" aria-expanded="false">Возможности <span class="header__chevron" aria-hidden="true"></span></a>
+
+                <ul class="header__submenu" role="menu" aria-label="Возможности">
+
+                  <li role="none"><a href="aviaticket.html" class="header__submenu-link" role="menuitem">Поиск авиабилетов</a></li>
+
+                  <li role="none"><a href="zhd-bileti.html" class="header__submenu-link" role="menuitem">Поиск ж/д билетов</a></li>
+
+                  <li role="none"><a href="hotels.html" class="header__submenu-link" role="menuitem">Поиск отелей</a></li>
+
+                  <li role="none"><a href="taxi.html" class="header__submenu-link" role="menuitem">Такси</a></li>
+
+                  <li role="none"><a href="smartway1c.html" class="header__submenu-link" role="menuitem">Интеграция с 1С</a></li>
+
+                  <li role="none"><a href="travel-coordination.html" class="header__submenu-link" role="menuitem">Согласование</a></li>
+
+                  <li role="none"><a href="travel-policy.html" class="header__submenu-link" role="menuitem">Тревел-политики</a></li>
+
+                  <li role="none"><a href="helpic.html" class="header__submenu-link" role="menuitem">Личные поездки</a></li>
+
+                </ul>
+
+              </li>
+              <li class="header__menu-item header__menu-item--has-children">
+
+                <a href="1index.html#useful" class="header__link" aria-haspopup="true" aria-expanded="false">Полезное <span class="header__chevron" aria-hidden="true"></span></a>
+
+                <ul class="header__submenu" role="menu" aria-label="Полезное">
+
+                  <li role="none"><a href="1index.html#consult" class="header__submenu-link" role="menuitem">Бесплатная консультация</a></li>
+
+                  <li role="none"><a href="blog.html" class="header__submenu-link" role="menuitem">Блог</a></li>
+
+                  <li role="none"><a href="https://smartway.today/" class="header__submenu-link" rel="noopener noreferrer" role="menuitem">Телеграм «Командировки.Сегодня»</a></li>
+
+                  <li role="none"><a href="https://smartway.today/" class="header__submenu-link" rel="noopener noreferrer" role="menuitem">Реферальная программа Smartway</a></li>
+
+                  <li role="none"><a href="download-docs.html" class="header__submenu-link" role="menuitem">Аудит командировок</a></li>
+
+                  <li role="none"><a href="contacts.html" class="header__submenu-link" role="menuitem">Контакты</a></li>
+
+                </ul>
+
+              </li>
               <li><a href="1index.html#mice" class="header__link">MICE</a></li>
               <li><a href="rates.html" class="header__link">Тарифы</a></li>
               <li><a href="clients.html" class="header__link" aria-current="page">Клиенты</a></li>
@@ -50,7 +113,7 @@
               <img src="img/phone.svg" alt="">
             </a>
             <a href="https://www.smartway.today" class="header__login">
-              <img src="img/header-icon-email.svg" alt=""> Войти
+              <img src="img/header-icon-email.svg" alt=""> <span class="header__login-text">Войти</span>
             </a>
             <a href="https://smartway.today/" class="header__btn">Протестировать</a>
           </div>
@@ -58,14 +121,56 @@
         <label for="site-nav" class="header__backdrop" aria-hidden="true"></label>
         <div class="header__drawer" aria-label="Меню">
           <div class="header__drawer-inner">
-            <label for="site-nav" class="header__drawer-close" aria-label="Закрыть">×</label>
-            <ul class="header__drawer-menu">
-              <li><a href="1index.html#audience" class="header__drawer-link">Для кого</a></li>
-              <li><a href="1index.html#capabilities" class="header__drawer-link">Возможности</a></li>
-              <li><a href="1index.html#useful" class="header__drawer-link">Полезное</a></li>
-              <li><a href="1index.html#mice" class="header__drawer-link">MICE</a></li>
-              <li><a href="rates.html" class="header__drawer-link">Тарифы</a></li>
-              <li><a href="clients.html" class="header__drawer-link">Клиенты</a></li>
+            <div class="header__drawer-top">
+              <label for="site-nav" class="header__drawer-close" aria-label="Закрыть">×</label>
+            <a href="1index.html" class="header__drawer-brand" aria-label="Smartway — на главную">
+                <img src="img/header-logo.svg" alt="Smartway" class="header__drawer-logo" width="120" height="32" loading="eager" decoding="async">
+              </a>
+              </div>
+
+            <ul class="header__drawer-menu" role="list">
+              <li class="header__drawer-item">
+                <details class="header__drawer-group" name="sw-drawer-nav">
+                  <summary class="header__drawer-summary">Для кого</summary>
+                  <ul class="header__drawer-submenu" role="list">
+                    <li><a href="superviser.html" class="header__drawer-sublink">Руководителю</a></li>
+                    <li><a href="travel-manager.html" class="header__drawer-sublink">Организатору<br> командировок</a></li>
+                    <li><a href="accountant.html" class="header__drawer-sublink">Бухгалтеру</a></li>
+                    <li><a href="hr-manager.html" class="header__drawer-sublink">HR-менеджеру</a></li>
+                  </ul>
+                </details>
+              </li>
+              <li class="header__drawer-item">
+                <details class="header__drawer-group" name="sw-drawer-nav">
+                  <summary class="header__drawer-summary">Возможности</summary>
+                  <ul class="header__drawer-submenu" role="list">
+                    <li><a href="aviaticket.html" class="header__drawer-sublink">Поиск авиабилетов</a></li>
+                    <li><a href="zhd-bileti.html" class="header__drawer-sublink">Поиск ж/д билетов</a></li>
+                    <li><a href="hotels.html" class="header__drawer-sublink">Поиск отелей</a></li>
+                    <li><a href="taxi.html" class="header__drawer-sublink">Такси</a></li>
+                    <li><a href="smartway1c.html" class="header__drawer-sublink">Интеграция с 1С</a></li>
+                    <li><a href="travel-coordination.html" class="header__drawer-sublink">Согласование</a></li>
+                    <li><a href="travel-policy.html" class="header__drawer-sublink">Тревел-политики</a></li>
+                    <li><a href="helpic.html" class="header__drawer-sublink">Личные поездки</a></li>
+                  </ul>
+                </details>
+              </li>
+              <li class="header__drawer-item">
+                <details class="header__drawer-group" name="sw-drawer-nav">
+                  <summary class="header__drawer-summary">Полезное</summary>
+                  <ul class="header__drawer-submenu" role="list">
+                    <li><a href="1index.html#consult" class="header__drawer-sublink">Бесплатная консультация</a></li>
+                    <li><a href="blog.html" class="header__drawer-sublink">Блог</a></li>
+                    <li><a href="https://smartway.today/" class="header__drawer-sublink" rel="noopener noreferrer">Телеграм «Командировки.Сегодня»</a></li>
+                    <li><a href="https://smartway.today/" class="header__drawer-sublink" rel="noopener noreferrer">Реферальная программа Smartway</a></li>
+                    <li><a href="download-docs.html" class="header__drawer-sublink">Аудит командировок</a></li>
+                    <li><a href="contacts.html" class="header__drawer-sublink">Контакты</a></li>
+                  </ul>
+                </details>
+              </li>
+              <li class="header__drawer-item"><a href="1index.html#mice" class="header__drawer-link header__drawer-link--leaf">MICE</a></li>
+              <li class="header__drawer-item"><a href="rates.html" class="header__drawer-link header__drawer-link--leaf">Тарифы</a></li>
+              <li class="header__drawer-item"><a href="clients.html" class="header__drawer-link header__drawer-link--leaf">Клиенты</a></li>
             </ul>
             <div class="header__drawer-contacts" aria-label="Связаться">
               <a href="mailto:hello@smartway.today" class="header__icon-btn" aria-label="Написать">
@@ -76,9 +181,9 @@
               </a>
             </div>
             <div class="header__drawer-cta">
-              <a href="https://www.smartway.today" class="header__drawer-login">Войти</a>
               <a href="https://smartway.today/" class="header__btn header__drawer-btn">Протестировать</a>
-            </div>
+              <a href="https://www.smartway.today" class="header__drawer-login">Войти</a>
+              </div>
           </div>
         </div>
       </header>
@@ -222,7 +327,7 @@
             </div>
             <h2 class="client-card__cta-title">Хотите такие же результаты?</h2>
             <p class="client-card__cta-text">Расскажем, как навести порядок в командировках и покажем сервис в работе</p>
-            <a href="1index.html#consult" class="client-card__cta-btn">Оставить заявку <span aria-hidden="true">→</span></a>
+            <a href="1index.html#consult" class="client-card__cta-btn">Оставить заявку <img src="img/arrow.svg" alt="" class="btn__arrow" width="20" height="20" decoding="async" aria-hidden="true" /></a>
           </article>
         </div>
       </main>
@@ -243,7 +348,7 @@
                     <p class="footer__contact footer__contact--strong"><a href="mailto:pr@smartway.today">pr@smartway.today</a></p>
                   </div>
                   <p class="footer__contact">
-                    <a href="contract-hotel.html" class="footer__link-external">Для отелей по вопросам контрактинга<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
+                    <a href="contract-hotel.html" class="footer__link-external">Для отелей по вопросам контрактинга<span class="footer__ext-icon" aria-hidden="true"><img src="img/arrow.svg" alt="" class="btn__arrow" width="14" height="14" decoding="async"></span></a>
                   </p>
                 </div>
                 <p class="footer__address">125124, г.&nbsp;Москва, 5-я&nbsp;ул.&nbsp;Ямского Поля, д.&nbsp;5, стр.1, пом.&nbsp;2/11</p>
@@ -315,7 +420,7 @@
             </div>
             <div class="footer__col footer__col--about">
               <div class="footer__col-head">
-                <a href="1index.html#consult" class="footer__btn">Записаться на консультацию<span class="footer__ext-icon" aria-hidden="true"> ↗</span></a>
+                <a href="1index.html#consult" class="footer__btn">Записаться на консультацию<span class="footer__ext-icon" aria-hidden="true"><img src="img/arrow.svg" alt="" class="btn__arrow" width="14" height="14" decoding="async"></span></a>
               </div>
               <div class="footer__col-body">
                 <h3 class="footer__heading">О компании</h3>

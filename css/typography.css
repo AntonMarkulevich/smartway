@@ -1,0 +1,253 @@
+/**
+ * Типографика (макет): Golos Text, mobile-first.
+ * H1: 32/34 @mobile → 44/44 @768 → 46/46 @1024 → 60/60 @1440 → 82/78 @1920
+ * H2: 28/30 @mobile → 36/36 @768 → 38/38 @1024 → 55/55 @1440 → 72/72 @1920
+ * H3: 20/22 @<1440, 22/24 @1440–1919, 32/34 @1920+
+ * Body: 16/20 → 18/22 (1440+) → 28/34 (1920+), main / body-text / .hero__subtitle
+ * Карточки: 14/18, 16/20@1440+, 20/26@1920+ — классы .type-card, .card-typo
+ * Подключайте этот файл последним среди CSS.
+ */
+
+body {
+  font-family: "Golos Text", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+/* Основной текст в контенте (Body из макета) */
+main,
+.body-text,
+article,
+.body-text p {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+h1,
+h1.hero__title,
+.hero__title,
+.h1 {
+  font-family: "Golos Text", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 34px;
+  letter-spacing: -1px;
+  margin: 0;
+  color: inherit;
+}
+
+h2,
+.h2 {
+  font-family: "Golos Text", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 30px;
+  letter-spacing: -1px;
+  margin: 0;
+  color: inherit;
+}
+
+h3,
+.h3 {
+  font-family: "Golos Text", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -0.5px;
+  margin: 0;
+  color: inherit;
+}
+
+h4,
+h5,
+h6 {
+  font-family: "Golos Text", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+/* Подзаголовки hero/лид: как «Body» в сетке */
+.hero__subtitle,
+.lead,
+.lead-text {
+  font-family: "Golos Text", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  margin: 0;
+  color: inherit;
+}
+
+/* Текст в карточках (Card text) */
+.type-card,
+.card-typo,
+p.type-card {
+  font-family: "Golos Text", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+@media (min-width: 768px) {
+  h1,
+  h1.hero__title,
+  .hero__title,
+  .h1 {
+    font-size: 44px;
+    line-height: 44px;
+    letter-spacing: -1.5px;
+  }
+
+  h2,
+  .h2 {
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: -1px;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1,
+  h1.hero__title,
+  .hero__title,
+  .h1 {
+    font-size: 46px;
+    line-height: 46px;
+    letter-spacing: -1.5px;
+  }
+
+  h2,
+  .h2 {
+    font-size: 38px;
+    line-height: 38px;
+    letter-spacing: -1.5px;
+  }
+}
+
+@media (min-width: 1440px) {
+  h1,
+  h1.hero__title,
+  .hero__title,
+  .h1 {
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -2px;
+  }
+
+  h2,
+  .h2 {
+    font-size: 55px;
+    line-height: 55px;
+    letter-spacing: -2px;
+  }
+
+  h3,
+  .h3 {
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+  }
+
+  main,
+  .body-text,
+  article,
+  .hero__subtitle,
+  .lead,
+  .lead-text {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .type-card,
+  .card-typo,
+  p.type-card {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: 1920px) {
+  h1,
+  h1.hero__title,
+  .hero__title,
+  .h1 {
+    font-size: 82px;
+    line-height: 78px;
+    letter-spacing: -2.5px;
+  }
+
+  h2,
+  .h2 {
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: -2.5px;
+  }
+
+  h3,
+  .h3 {
+    font-size: 32px;
+    line-height: 34px;
+    letter-spacing: -1px;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: 32px;
+    line-height: 34px;
+    letter-spacing: -1px;
+  }
+
+  main,
+  .body-text,
+  article,
+  .hero__subtitle,
+  .lead,
+  .lead-text {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .type-card,
+  .card-typo,
+  p.type-card {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+/* Главная: hero на планшете (769–1024) — размеры как на макете, поверх общей сетки H1 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero h1.hero__title,
+  .hero .hero__title {
+    font-size: clamp(34px, 4.2vw, 42px);
+    line-height: 1.12;
+    letter-spacing: -1.2px;
+  }
+
+  .hero .hero__subtitle {
+    font-size: clamp(17px, 2vw, 20px);
+    line-height: 1.45;
+    letter-spacing: -0.35px;
+    max-width: 36em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

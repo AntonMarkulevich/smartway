@@ -400,6 +400,7 @@ a.footer__channel-pill:active {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 6px;
   margin-bottom: 24px;
   box-sizing: border-box;
   text-align: center;
