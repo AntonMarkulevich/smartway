@@ -416,6 +416,321 @@ span.footer__btn {
   opacity: 0.9;
 }
 
+@media (min-width: 1201px) {
+  .footer__main {
+    min-height: 657px;
+    padding: 80px var(--container-padding-x) 75px;
+    box-sizing: border-box;
+  }
+
+  .footer__inner {
+    --footer-layout-base: 1756;
+    position: relative;
+    display: block;
+    max-width: none;
+    min-height: 502px;
+  }
+
+  .footer__col {
+    gap: 30px;
+  }
+
+  .footer__col--info {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 340px;
+    gap: 31px;
+  }
+
+  .footer__col--scenarios {
+    position: absolute;
+    left: calc(383 / var(--footer-layout-base) * 100%);
+    top: 0;
+    display: block;
+    width: calc(586 / var(--footer-layout-base) * 100%);
+    min-height: 401px;
+  }
+
+  .footer__col--scenarios > .footer__col-head {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 277px;
+  }
+
+  .footer__col--scenarios > .footer__col-body:nth-of-type(2) {
+    position: absolute;
+    left: 0;
+    top: 69px;
+    width: 277px;
+  }
+
+  .footer__col--scenarios > .footer__col-body:nth-of-type(3) {
+    position: absolute;
+    left: calc(341 / 586 * 100%);
+    top: 69px;
+    width: 245px;
+  }
+
+  .footer__col--capabilities {
+    position: absolute;
+    left: calc(724 / var(--footer-layout-base) * 100%);
+    top: 5px;
+    width: 378px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 7px;
+    overflow: visible;
+  }
+
+  .footer__col--capabilities > .footer__col-head {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .footer__col--capabilities .footer__socials {
+    gap: 6px;
+  }
+
+  .footer__col--capabilities .footer__channel-wrap {
+    flex: 0 0 297px;
+  }
+
+  .footer__col--useful {
+    position: absolute;
+    left: calc(1041 / var(--footer-layout-base) * 100%);
+    top: 69px;
+    width: 328px;
+    gap: 0;
+  }
+
+  .footer__col--useful > .footer__col-head {
+    display: none;
+  }
+
+  .footer__col--about {
+    position: absolute;
+    right: 0;
+    top: 4px;
+    width: 368px;
+    gap: 30px;
+  }
+
+  .footer__logo {
+    width: 236px;
+    margin-bottom: 0;
+  }
+
+  .footer__contacts,
+  .footer__legal {
+    font-family: 'Mont', 'Golos Text', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+
+  .footer__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    margin: 0 0 17px;
+    color: #ffffff;
+  }
+
+  .footer__contacts p,
+  .footer__legal p {
+    margin: 0;
+  }
+
+  .footer__contact a,
+  .footer__contact span,
+  .footer__link-external,
+  .footer__muted-label,
+  .footer__address {
+    color: #ffffff;
+  }
+
+  .footer__press {
+    margin-top: 0;
+  }
+
+  .footer__muted-label {
+    margin: 0;
+    font-family: 'Mont', 'Golos Text', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+
+  .footer__link-external {
+    display: inline-flex;
+    max-width: 320px;
+    align-items: flex-start;
+    gap: 4px;
+    line-height: 20px;
+  }
+
+  .footer__address {
+    max-width: 255px;
+    margin: 0 0 36px;
+    font-family: 'Mont', 'Golos Text', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+
+  .footer__legal {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    margin: 0;
+    color: #8c8c8c;
+  }
+
+  .footer__legal-inn {
+    color: #fafafa !important;
+  }
+
+  .footer__badges {
+    min-height: 46px;
+    gap: 23px;
+    margin: 0;
+  }
+
+  .footer__badge-pill {
+    width: 98px;
+    height: 33px;
+    padding: 0 8px;
+    border-radius: 10px;
+    background-color: #979797;
+  }
+
+  .footer__badge--in-pill {
+    max-height: 46px;
+  }
+
+  .footer__badge {
+    height: 30px;
+  }
+
+  .footer__badge-pill .footer__badge {
+    height: auto;
+    max-height: 46px;
+  }
+
+  .footer__social--round {
+    width: 34px;
+    height: 34px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .footer__social--round:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    opacity: 0.88;
+  }
+
+  .footer__social--round img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer__social-img--vc {
+    width: 36px !important;
+    max-height: 27px;
+    filter: none;
+  }
+
+  .footer__channel-pill {
+    width: 297px;
+    min-height: 34px;
+    padding: 6px 10px 6px 13px;
+    gap: 7px;
+    border-radius: 1000px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-family: 'Mont', 'Golos Text', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+
+  .footer__channel-pill:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+  }
+
+  .footer__channel-label,
+  a.footer__channel-pill,
+  a.footer__channel-pill:visited,
+  a.footer__channel-pill:hover,
+  a.footer__channel-pill:active {
+    color: #ffffff;
+  }
+
+  .footer__channel-icon {
+    width: 15px;
+    height: 15px;
+  }
+
+  .footer__heading {
+    margin: 0 0 12px;
+    font-family: 'Mont', 'Golos Text', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 25px;
+    color: #ffffff;
+  }
+
+  .footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .footer__list li {
+    margin-bottom: 0;
+  }
+
+  .footer__list a,
+  .footer__list span {
+    font-family: 'Mont', 'Golos Text', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #8c8c8c;
+  }
+
+  .footer__col--useful .footer__list,
+  .footer__col--about .footer__list {
+    gap: 13px;
+  }
+
+  .footer__col--useful .footer__list a,
+  .footer__col--about .footer__list a {
+    line-height: 18px;
+  }
+
+  .footer__btn,
+  .footer__col--about > .footer__btn {
+    width: 368px;
+    min-height: 34px;
+    margin-bottom: 0;
+    padding: 5px 20px 6px;
+    border-radius: 30px;
+    font-family: 'Mont', 'Golos Text', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.5px;
+  }
+
+  .footer-newsletter,
+  .footer__bottom {
+    display: none;
+  }
+}
+
 .footer__bottom {
   background-color: #FFFFFF;
   min-height: 50px;

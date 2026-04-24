@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/site-header.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@26.9.1/build/css/intlTelInput.css">
   <link rel="stylesheet" href="css/1style.css">
+  <link rel="stylesheet" href="css/forms-unified.css">
   <script src="js/1index-main.js" defer></script>
 </head>
 <body class="page-1index">
@@ -29,25 +30,59 @@
         <span class="header__burger-line"></span>
         <span class="header__burger-line"></span>
       </label>
+      <div class="header__center">
       <nav class="header__nav" aria-label="Основное меню">
         <ul class="header__menu">
-          <li><a href="#audience" class="header__link">Для кого <span class="header__chevron"></span></a></li>
-          <li><a href="#capabilities" class="header__link">Возможности <span class="header__chevron"></span></a></li>
-          <li><a href="#useful" class="header__link">Полезное <span class="header__chevron"></span></a></li>
+          <li class="header__menu-item header__menu-item--has-children">
+            <a href="#audience" class="header__link" aria-haspopup="true" aria-expanded="false">Для кого <span class="header__chevron" aria-hidden="true"><span class="header__chevron-icon header__chevron-icon--up"></span><span class="header__chevron-icon header__chevron-icon--down"></span></span></a>
+            <ul class="header__submenu" role="menu" aria-label="Для кого">
+              <li role="none"><a href="superviser.html" class="header__submenu-link" role="menuitem">Руководителю</a></li>
+              <li role="none"><a href="travel-manager.html" class="header__submenu-link" role="menuitem">Организатору<br> командировок</a></li>
+              <li role="none"><a href="accountant.html" class="header__submenu-link" role="menuitem">Бухгалтеру</a></li>
+              <li role="none"><a href="hr-manager.html" class="header__submenu-link" role="menuitem">HR-менеджеру</a></li>
+            </ul>
+          </li>
+          <li class="header__menu-item header__menu-item--has-children">
+            <a href="#capabilities" class="header__link" aria-haspopup="true" aria-expanded="false">Возможности <span class="header__chevron" aria-hidden="true"><span class="header__chevron-icon header__chevron-icon--up"></span><span class="header__chevron-icon header__chevron-icon--down"></span></span></a>
+            <ul class="header__submenu" role="menu" aria-label="Возможности">
+              <li role="none"><a href="aviaticket.html" class="header__submenu-link" role="menuitem">Поиск авиабилетов</a></li>
+              <li role="none"><a href="zhd-bileti.html" class="header__submenu-link" role="menuitem">Поиск ж/д билетов</a></li>
+              <li role="none"><a href="hotels.html" class="header__submenu-link" role="menuitem">Поиск отелей</a></li>
+              <li role="none"><a href="taxi.html" class="header__submenu-link" role="menuitem">Такси</a></li>
+              <li role="none"><a href="smartway1c.html" class="header__submenu-link" role="menuitem">Интеграция с 1С</a></li>
+              <li role="none"><a href="travel-coordination.html" class="header__submenu-link" role="menuitem">Согласование</a></li>
+              <li role="none"><a href="travel-policy.html" class="header__submenu-link" role="menuitem">Тревел-политики</a></li>
+              <li role="none"><a href="helpic.html" class="header__submenu-link" role="menuitem">Личные поездки</a></li>
+            </ul>
+          </li>
+          <li class="header__menu-item header__menu-item--has-children">
+            <a href="#useful" class="header__link" aria-haspopup="true" aria-expanded="false">Полезное <span class="header__chevron" aria-hidden="true"><span class="header__chevron-icon header__chevron-icon--up"></span><span class="header__chevron-icon header__chevron-icon--down"></span></span></a>
+            <ul class="header__submenu" role="menu" aria-label="Полезное">
+              <li role="none"><a href="#consult" class="header__submenu-link" role="menuitem">Бесплатная консультация</a></li>
+              <li role="none"><a href="blog.html" class="header__submenu-link" role="menuitem">Блог</a></li>
+              <li role="none"><a href="https://smartway.today/" class="header__submenu-link" rel="noopener noreferrer" role="menuitem">Телеграм «Командировки.Сегодня»</a></li>
+              <li role="none"><a href="https://smartway.today/" class="header__submenu-link" rel="noopener noreferrer" role="menuitem">Реферальная программа Smartway</a></li>
+              <li role="none"><a href="download-docs.html" class="header__submenu-link" role="menuitem">Аудит командировок</a></li>
+              <li role="none"><a href="contacts.html" class="header__submenu-link" role="menuitem">Контакты</a></li>
+            </ul>
+          </li>
           <li><a href="#mice" class="header__link">MICE</a></li>
           <li><a href="rates.html" class="header__link">Тарифы</a></li>
           <li><a href="clients.html" class="header__link">Клиенты</a></li>
         </ul>
       </nav>
-      <div class="header__actions">
+      <div class="header__icon-actions" aria-label="Связаться">
         <a href="mailto:hello@smartway.today" class="header__icon-btn" aria-label="Написать">
           <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail" width="24" height="24" loading="eager" decoding="async">
         </a>
         <a href="tel:+78007751428" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
           <img src="img/phone.svg" alt="" width="20" height="20" loading="eager" decoding="async">
         </a>
+      </div>
+      </div>
+      <div class="header__cta">
         <a href="https://www.smartway.today" class="header__login">
-          <img src="img/header-icon-email.svg" alt="" width="20" height="20" loading="eager" decoding="async"> Войти
+          <img src="img/header-icon-email.svg" alt="" width="20" height="20" loading="eager" decoding="async"> <span class="header__login-text">Войти</span>
         </a>
         <a href="https://smartway.today/" class="header__btn">Протестировать</a>
       </div>
@@ -55,7 +90,12 @@
     <label for="site-nav" class="header__backdrop" aria-hidden="true"></label>
     <div class="header__drawer" aria-label="Меню">
       <div class="header__drawer-inner">
-        <label for="site-nav" class="header__drawer-close" aria-label="Закрыть">×</label>
+        <div class="header__drawer-top">
+          <a href="1index.html" class="header__drawer-brand" aria-label="Smartway — на главную">
+            <img src="img/header-logo.svg" alt="Smartway" class="header__drawer-logo" width="120" height="32" fetchpriority="high" loading="eager" decoding="async">
+          </a>
+          <label for="site-nav" class="header__drawer-close" aria-label="Закрыть">×</label>
+        </div>
         <ul class="header__drawer-menu">
           <li><a href="#audience" class="header__drawer-link">Для кого</a></li>
           <li><a href="#capabilities" class="header__drawer-link">Возможности</a></li>

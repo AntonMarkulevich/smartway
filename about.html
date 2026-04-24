@@ -31,11 +31,12 @@
         <span class="header__burger-line"></span>
         <span class="header__burger-line"></span>
       </label>
+      <div class="header__center">
       <nav class="header__nav" aria-label="Основное меню">
         <ul class="header__menu">
           <li class="header__menu-item header__menu-item--has-children">
 
-            <a href="1index.html#audience" class="header__link" aria-haspopup="true" aria-expanded="false">Для кого <span class="header__chevron" aria-hidden="true"></span></a>
+            <a href="1index.html#audience" class="header__link" aria-haspopup="true" aria-expanded="false">Для кого <span class="header__chevron" aria-hidden="true"><span class="header__chevron-icon header__chevron-icon--up"></span><span class="header__chevron-icon header__chevron-icon--down"></span></span></a>
 
             <ul class="header__submenu" role="menu" aria-label="Для кого">
 
@@ -52,7 +53,7 @@
           </li>
           <li class="header__menu-item header__menu-item--has-children">
 
-            <a href="1index.html#capabilities" class="header__link" aria-haspopup="true" aria-expanded="false">Возможности <span class="header__chevron" aria-hidden="true"></span></a>
+            <a href="1index.html#capabilities" class="header__link" aria-haspopup="true" aria-expanded="false">Возможности <span class="header__chevron" aria-hidden="true"><span class="header__chevron-icon header__chevron-icon--up"></span><span class="header__chevron-icon header__chevron-icon--down"></span></span></a>
 
             <ul class="header__submenu" role="menu" aria-label="Возможности">
 
@@ -77,7 +78,7 @@
           </li>
           <li class="header__menu-item header__menu-item--has-children">
 
-            <a href="1index.html#useful" class="header__link" aria-haspopup="true" aria-expanded="false">Полезное <span class="header__chevron" aria-hidden="true"></span></a>
+            <a href="1index.html#useful" class="header__link" aria-haspopup="true" aria-expanded="false">Полезное <span class="header__chevron" aria-hidden="true"><span class="header__chevron-icon header__chevron-icon--up"></span><span class="header__chevron-icon header__chevron-icon--down"></span></span></a>
 
             <ul class="header__submenu" role="menu" aria-label="Полезное">
 
@@ -101,13 +102,16 @@
           <li><a href="clients.html" class="header__link">Клиенты</a></li>
         </ul>
       </nav>
-      <div class="header__actions">
+      <div class="header__icon-actions" aria-label="Связаться">
         <a href="mailto:hello@smartway.today" class="header__icon-btn" aria-label="Написать">
           <img src="img/header-icon-phone.svg" alt="" class="header__icon header__icon--mail">
         </a>
         <a href="tel:+78007751428" class="header__icon-btn header__icon-btn--phone" aria-label="Позвонить">
           <img src="img/phone.svg" alt="">
         </a>
+      </div>
+      </div>
+      <div class="header__cta">
         <a href="https://www.smartway.today" class="header__login">
           <img src="img/header-icon-email.svg" alt=""> <span class="header__login-text">Войти</span>
         </a>
@@ -190,7 +194,7 @@
         <div class="about-hero__layout">
           <div class="about-hero__copy">
             <h1 id="about-hero-title" class="about-hero__title">
-              Делаем<br />командировки<br />удобными
+              Делаем командировки удобными
             </h1>
             <div class="about-hero__icons-slot" aria-hidden="true">
               <span class="about-hero__icon-circle about-hero__icon-circle--1"></span>
@@ -212,10 +216,7 @@
         </div>
         <div class="about-pitch__copy">
           <p class="about-pitch__text">
-            <span class="about-pitch__accent">Smartway</span>&nbsp;— ведущий сервис на рынке бизнес-тревел. Мы помогаем сделать организацию командировок в компании быстрой, удобной и современной.
-          </p>
-          <p class="about-pitch__text">
-            <span class="about-pitch__accent">90% рутинных задач</span> выполняют технологии, а наши клиенты экономят время и деньги.
+            <span class="about-pitch__accent">Smartway</span>&nbsp;— ведущий сервис на рынке бизнес-тревел. Мы помогаем сделать организацию командировок в компании быстрой, удобной и&nbsp;современной.<br><br><span class="about-pitch__accent">90% рутинных задач</span>&nbsp;выполняют технологии, а&nbsp;наши клиенты экономят время и&nbsp;деньги.
           </p>
         </div>
       </div>
@@ -246,15 +247,14 @@
         </li>
         <li class="about-stats__card about-stats__card--dark">
           <p class="about-stats__value">45&nbsp;млрд</p>
-          <p class="about-stats__label">рублей оборот группы компаний за 2023 год</p>
+          <p class="about-stats__label">рублей оборот группы компаний за&nbsp;2023&nbsp;год</p>
         </li>
       </ul>
     </section>
 
     <section class="about-timeline reveal reveal--left" aria-labelledby="about-timeline-title">
       <h2 id="about-timeline-title" class="about-timeline__title">
-        <span class="about-timeline__title-accent">Как мы меняли</span><br />
-        рынок бизнес-тревел
+        <span class="about-timeline__title-accent">Как мы меняли&nbsp;</span>рынок бизнес-тревел
       </h2>
       <div class="about-timeline__layout">
         <div class="about-timeline__timeline">
@@ -289,7 +289,7 @@
             </li>
             <li class="about-timeline__item">
               <p class="about-timeline__year">2023</p>
-              <p class="about-timeline__text">Smartway заключает крупные сделки на рынке бизнес-тревел. Компания приобретает поставщика MICE и бизнес-тревел услуг ATH и бизнес-тревел агентство Travelmart. Появляется новый продукт&nbsp;— платформа для турагентств Smartagent. Оборот группы компаний Smartway Travel Group составил 45&nbsp;млрд рублей. Онлайн-сервис Smartway&nbsp;— лидер рынка бизнес-тревел в России.</p>
+              <p class="about-timeline__text">Smartway заключает крупные сделки на рынке бизнес-тревел. Компания приобретает поставщика MICE и бизнес-тревел услуг ATH и бизнес-тревел агентство Travelmart. Появляется новый продукт&nbsp;— платформа для турагентств Smartagent.<br><br>Оборот группы компаний Smartway Travel Group составил 45&nbsp;млрд рублей.<br><br>Онлайн-сервис Smartway&nbsp;— лидер рынка бизнес-тревел в России.</p>
             </li>
             <li class="about-timeline__item">
               <p class="about-timeline__year">2024</p>

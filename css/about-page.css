@@ -10,10 +10,10 @@
   box-sizing: border-box;
 }
 
-/* Герой: слева заголовок + слот под круги, справа слот под иллюстрацию */
+/* Герой — Figma 1214:10736: слева заголовок ~777px + полоска иконок, справа композиция с перекрытием */
 .about-hero {
   background: #ffffff;
-  padding: clamp(40px, 6vw, 88px) 0;
+  padding: clamp(28px, 4vw, 48px) 0 clamp(40px, 6vw, 72px);
   margin: 0;
   box-sizing: border-box;
 }
@@ -21,37 +21,44 @@
 .about-hero__inner {
   width: 100%;
   margin: 0;
-  padding: 0 clamp(8px, 1.4vw, 18px);
+  padding: 0;
   box-sizing: border-box;
 }
 
 .about-hero__layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.28fr);
-  gap: clamp(10px, 1.6vw, 22px);
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 1.12fr);
+  column-gap: clamp(16px, 3vw, 40px);
+  align-items: start;
 }
 
 .about-hero__copy {
   min-width: 0;
-  text-align: center;
+  max-width: none;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+  padding-top: clamp(24px, 6vw, 96px);
+  justify-self: start;
 }
 
 .about-hero__title {
-  margin: 0 0 clamp(20px, 3.5vw, 40px);
+  margin: 0 0 clamp(36px, 5vw, 48px);
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: clamp(32px, 6.5vw, 72px);
-  line-height: 1.08;
+  font-size: clamp(36px, 7.2vw, 82px);
+  line-height: 0.96;
   letter-spacing: -3px;
   color: #3c3c3c;
-  text-align: inherit;
+  text-align: left;
+  max-width: none;
 }
 
 @media (min-width: 901px) {
   .about-hero__title {
-    font-size: 72px;
-    line-height: 70px;
+    font-size: 82px;
+    line-height: 78px;
+    letter-spacing: -3.5px;
   }
 }
 
@@ -59,13 +66,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: nowrap;
 }
 
 .about-hero__icon-circle {
-  width: clamp(56px, 12vw, 72px);
-  height: clamp(56px, 12vw, 72px);
+  width: clamp(52px, 10vw, 66px);
+  height: clamp(52px, 10vw, 66px);
   border-radius: 50%;
   border: 3px solid #ffffff;
   box-sizing: border-box;
@@ -95,43 +102,61 @@
 
 .about-hero__visual {
   width: 100%;
-  min-height: clamp(280px, 52vw, 520px);
-  aspect-ratio: 16 / 10;
-  max-height: min(560px, 72vh);
-  border-radius: clamp(18px, 2.5vw, 28px);
+  max-width: min(1220px, 100%);
+  min-height: clamp(320px, 38vw, 700px);
+  margin-top: clamp(8px, 2vw, 28px);
+  margin-left: auto;
+  margin-right: auto;
+  justify-self: center;
+  border-radius: 0;
   box-sizing: border-box;
-  overflow: hidden;
-  justify-self: stretch;
-  background: #ffffff;
+  overflow: visible;
+  background: transparent;
 }
 
 .about-hero__visual img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: min(720px, 88vh);
   object-fit: contain;
-  object-position: center bottom;
+  object-position: center center;
+  transform: scale(1.06);
+  transform-origin: center center;
 }
 
 @media (max-width: 900px) {
   .about-hero__layout {
     grid-template-columns: 1fr;
-    gap: clamp(16px, 4vw, 24px);
+    gap: clamp(20px, 4vw, 28px);
   }
 
   .about-hero__visual {
     order: 2;
+    width: 100%;
     max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    aspect-ratio: 1 / 1.05;
-    min-height: min(72vw, 420px);
+    min-height: min(68vw, 420px);
     max-height: none;
+    margin-left: 0;
+    margin-top: 0;
+    justify-self: center;
   }
 
   .about-hero__copy {
     order: 1;
+    max-width: none;
     text-align: center;
+    padding-top: 0;
+  }
+
+  .about-hero__title {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(28px, 8.2vw, 40px);
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+    margin-bottom: clamp(16px, 4vw, 24px);
   }
 
   .about-hero__icons-slot {
@@ -140,45 +165,42 @@
 
   .about-hero__visual img {
     object-position: center center;
-  }
-
-  .about-hero__title {
-    font-size: clamp(28px, 8.2vw, 40px);
-    line-height: 1.06;
-    letter-spacing: -0.04em;
-    margin-bottom: clamp(16px, 4vw, 24px);
+    max-height: none;
+    transform: none;
   }
 }
 
 /* Блок «ведущий сервис»: серая карточка, слева иллюстрация, справа текст */
 .about-pitch {
-  margin-top: clamp(20px, 3.5vw, 36px);
-  background: #f2f4f7;
-  border-radius: clamp(20px, 2.5vw, 28px);
+  margin-top: clamp(48px, 5vw, 72px);
+  min-height: 728px;
+  background: #f0f1f5;
+  border-radius: 53px;
   box-sizing: border-box;
   overflow: hidden;
 }
 
 .about-pitch__inner {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: clamp(16px, 2.2vw, 32px);
+  grid-template-columns: minmax(0, 1193px) minmax(0, 993px);
+  gap: 95px;
   align-items: center;
-  padding: clamp(44px, 6vw, 72px) clamp(28px, 4vw, 52px);
+  min-height: 728px;
+  padding: 0;
   box-sizing: border-box;
 }
 
 .about-pitch__visual {
   min-width: 0;
   width: 100%;
-  max-width: min(850px, 100%);
-  max-height: 477px;
-  aspect-ratio: 850 / 477;
-  border-radius: clamp(16px, 2vw, 24px);
-  overflow: hidden;
+  max-width: 1193px;
+  max-height: 657px;
+  aspect-ratio: 895 / 493;
+  border-radius: 0;
+  overflow: visible;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .about-pitch__visual:empty {
@@ -192,36 +214,62 @@
   max-width: 100%;
   max-height: 100%;
   height: auto;
-  border-radius: clamp(16px, 2vw, 24px);
+  border-radius: 0;
   object-fit: contain;
-  object-position: center;
+  object-position: left center;
 }
 
 .about-pitch__copy {
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: clamp(22px, 3vw, 30px);
+  max-width: 993px;
+  padding-right: clamp(40px, 4vw, 80px);
 }
 
 .about-pitch__text {
   margin: 0;
   font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-size: clamp(19px, 1.65vw, 24px);
-  font-weight: 400;
-  line-height: 1.48;
-  color: #222222;
+  font-size: 43px;
+  font-weight: 500;
+  line-height: 60px;
+  letter-spacing: -1.33px;
+  color: #3a3a3a;
 }
 
 .about-pitch__accent {
-  font-weight: 700;
-  color: #eb4c3d;
+  font-weight: inherit;
+  color: #d44333;
+}
+
+@media (max-width: 1400px) {
+  .about-pitch {
+    min-height: clamp(520px, 52vw, 728px);
+    border-radius: clamp(36px, 3.8vw, 53px);
+  }
+
+  .about-pitch__inner {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: clamp(36px, 5vw, 95px);
+    min-height: clamp(520px, 52vw, 728px);
+  }
+
+  .about-pitch__text {
+    font-size: clamp(30px, 3.1vw, 43px);
+    line-height: 1.4;
+    letter-spacing: -1px;
+  }
 }
 
 @media (max-width: 900px) {
+  .about-pitch {
+    min-height: 0;
+  }
+
   .about-pitch__inner {
     grid-template-columns: 1fr;
     padding: clamp(36px, 6vw, 52px) clamp(22px, 4vw, 36px);
+    min-height: 0;
   }
 
   .about-pitch__visual {
@@ -231,23 +279,42 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  .about-pitch__copy {
+    max-width: none;
+    padding-right: 0;
+  }
+
+  .about-pitch__text {
+    font-size: clamp(22px, 5vw, 32px);
+    line-height: 1.35;
+    letter-spacing: -0.7px;
+  }
 }
 
-/* Блок «Smartway в цифрах» */
+/* Блок «Smartway в цифрах» — Figma node 1214:10790 */
 .about-stats {
   margin-top: clamp(28px, 4vw, 44px);
   box-sizing: border-box;
+  background: #ffffff;
 }
 
 .about-stats__title {
-  margin: 0 0 clamp(28px, 4vw, 48px);
+  margin: 0 0 clamp(32px, 4vw, 40px);
   font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-weight: 700;
-  font-size: clamp(28px, 3.5vw, 42px);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: #1a1a1a;
+  font-weight: 600;
+  font-size: clamp(32px, 5vw, 72px);
+  line-height: 0.9;
+  letter-spacing: -4px;
+  color: #3a3a3a;
   text-align: center;
+}
+
+@media (min-width: 901px) {
+  .about-stats__title {
+    font-size: 72px;
+    line-height: 65px;
+  }
 }
 
 .about-stats__grid {
@@ -256,15 +323,15 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(14px, 2vw, 20px);
+  gap: 20px;
 }
 
 .about-stats__card {
   margin: 0;
-  padding: clamp(22px, 3.2vw, 32px) clamp(20px, 2.8vw, 28px);
-  border-radius: clamp(18px, 2.2vw, 26px);
+  padding: 30px 34px;
+  border-radius: 30px;
   box-sizing: border-box;
-  min-height: clamp(120px, 14vw, 150px);
+  min-height: 227px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -272,40 +339,62 @@
 }
 
 .about-stats__card--light {
-  background: #EAEAED;
-  color: #1a1a1a;
+  background: #eaeaed;
+  color: #3a3a3a;
 }
 
 .about-stats__card--dark {
-  background: #2d2d2d;
+  background: #3a3a3a;
   color: #ffffff;
 }
 
 .about-stats__card--accent {
-  background: #d94032;
+  background: #d44333;
   color: #ffffff;
 }
 
 .about-stats__value {
-  margin: 0 0 clamp(10px, 1.4vw, 14px);
+  margin: 0 0 clamp(28px, 3.5vw, 43px);
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: clamp(28px, 3.2vw, 44px);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-size: clamp(36px, 5vw, 66px);
+  line-height: 1;
+  letter-spacing: -4px;
+}
+
+@media (min-width: 901px) {
+  .about-stats__value {
+    font-size: 66px;
+    line-height: 66px;
+  }
 }
 
 .about-stats__label {
   margin: 0;
   font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-weight: 400;
-  font-size: clamp(15px, 1.35vw, 17px);
-  line-height: 1.35;
-  max-width: 22ch;
+  font-weight: 500;
+  font-size: clamp(17px, 2vw, 26px);
+  line-height: 1.12;
+  letter-spacing: -0.5px;
+  max-width: none;
 }
 
-.about-stats__card--light .about-stats__label {
-  color: #333333;
+@media (min-width: 901px) {
+  .about-stats__label {
+    line-height: 29px;
+  }
+}
+
+.about-stats__card--light .about-stats__label,
+.about-stats__card--light .about-stats__value {
+  color: #3a3a3a;
+}
+
+.about-stats__card--dark .about-stats__label,
+.about-stats__card--dark .about-stats__value,
+.about-stats__card--accent .about-stats__label,
+.about-stats__card--accent .about-stats__value {
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -344,6 +433,12 @@
     grid-column: 1 / -1;
     grid-row: 4;
   }
+
+  .about-stats__card {
+    min-height: 0;
+    padding: clamp(22px, 4vw, 30px) clamp(20px, 3.5vw, 34px);
+    border-radius: clamp(22px, 4vw, 30px);
+  }
 }
 
 @media (max-width: 480px) {
@@ -359,116 +454,126 @@
 
 /* История / таймлайн и оборот компании */
 .about-timeline {
-  margin-top: clamp(28px, 4vw, 44px);
+  --about-timeline-red: #d44333;
+  --about-timeline-text: #3a3a3a;
+  --about-timeline-line: #000000;
+  --about-timeline-bar: #eaedf3;
+  margin-top: clamp(48px, 5vw, 72px);
   background: #ffffff;
-  border-radius: clamp(20px, 2.5vw, 28px);
-  padding: clamp(40px, 5vw, 64px) clamp(22px, 3.5vw, 40px);
+  border-radius: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 .about-timeline__title {
-  margin: 0 0 clamp(32px, 4.5vw, 52px);
-  max-width: 44ch;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 0 53px;
+  max-width: 1025px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-weight: 700;
-  font-size: clamp(26px, 3.2vw, 40px);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: #1a1a1a;
-  text-align: center;
+  font-weight: 600;
+  font-size: clamp(40px, 5vw, 96px);
+  line-height: 87px;
+  letter-spacing: -1.33px;
+  color: var(--about-timeline-text);
+  text-align: left;
 }
 
 .about-timeline__title-accent {
-  color: #d94032;
+  color: var(--about-timeline-red);
 }
 
 .about-timeline__layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
-  gap: clamp(24px, 3.5vw, 44px);
+  grid-template-columns: minmax(0, 859px) minmax(0, 645px);
+  gap: 0;
   align-items: start;
+  width: min(100%, 1611px);
 }
 
 .about-timeline__list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 39px 0 0;
 }
 
 .about-timeline__item + .about-timeline__item {
-  margin-top: clamp(20px, 2.6vw, 30px);
+  margin-top: 67px;
 }
 
 .about-timeline__year {
   margin: 0 0 8px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: clamp(17px, 1.5vw, 20px);
-  line-height: 1.2;
-  color: #d94032;
+  font-size: 43px;
+  line-height: 45px;
+  letter-spacing: -1.33px;
+  color: var(--about-timeline-red);
 }
 
 .about-timeline__text {
   margin: 0;
   font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-weight: 400;
-  font-size: clamp(15px, 1.25vw, 17px);
-  line-height: 1.5;
-  color: #1a1a1a;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 39px;
+  letter-spacing: -0.67px;
+  color: var(--about-timeline-text);
 }
 
 .about-timeline__chart {
   position: relative;
-  padding-left: clamp(22px, 2.8vw, 36px);
-  border-left: 1px solid #d5d5d8;
+  padding-top: 39px;
+  padding-left: 0;
+  border-left: 1px solid var(--about-timeline-line);
   box-sizing: border-box;
+  min-height: 2213px;
 }
 
 .about-timeline__chart::before {
   content: '';
   position: absolute;
-  left: -5px;
+  left: 0;
   top: 0;
-  width: 10px;
-  height: 10px;
+  width: 47px;
+  height: 47px;
   border-radius: 50%;
-  background: #d94032;
-  box-shadow: 0 0 0 3px #ffffff;
+  background: var(--about-timeline-red);
+  box-shadow: none;
+  transform: translate(-50%, 0);
 }
 
 .about-timeline__arrow {
   display: block;
-  width: min(58%, 260px);
+  width: min(100%, 491px);
   max-width: 100%;
   height: auto;
-  max-height: min(340px, 42vw);
+  max-height: 260px;
+  margin: 27px 0 0 80px;
   object-fit: contain;
-  object-position: right center;
+  object-position: left center;
 }
 
 .about-timeline__chart-title {
-  margin: 0 0 clamp(12px, 1.8vw, 18px);
+  margin: 0 0 0 31px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-weight: 700;
-  font-size: clamp(18px, 1.6vw, 22px);
-  line-height: 1.2;
-  color: #1a1a1a;
+  font-weight: 500;
+  font-size: 43px;
+  line-height: 88px;
+  letter-spacing: -1.33px;
+  color: var(--about-timeline-text);
 }
 
 .about-timeline__bars {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 8px 0 0;
+  padding: 0 0 0 31px;
 }
 
 .about-timeline__bar-row {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
-  margin-bottom: clamp(14px, 1.8vw, 20px);
+  gap: 0;
+  margin-bottom: 67px;
 }
 
 .about-timeline__bar-row:last-child {
@@ -478,37 +583,83 @@
 .about-timeline__bar-value {
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: clamp(15px, 1.35vw, 18px);
-  line-height: 1.2;
-  color: #1a1a1a;
+  font-size: 43px;
+  line-height: 88px;
+  letter-spacing: -1.33px;
+  color: var(--about-timeline-text);
 }
 
 .about-timeline__bar-value--accent {
-  color: #d94032;
+  color: var(--about-timeline-red);
 }
 
 .about-timeline__bar-track {
   display: block;
-  width: 100%;
-  height: 48px;
-  border-radius: 999px;
+  width: min(100%, 508px);
+  height: 76px;
+  border-radius: 27px;
+  background: transparent;
 }
 
 .about-timeline__bar-fill {
   display: block;
   height: 100%;
-  border-radius: 999px;
-  background: #cfd1d6;
-  width: calc(8% + (var(--billions) / 45) * 92%);
+  border-radius: inherit;
+  background: var(--about-timeline-bar);
+  width: var(--about-timeline-bar-width, calc((var(--billions) / 45) * 100%));
   min-width: 0;
   transition: width 0.4s ease;
 }
 
 .about-timeline__bar-fill--accent {
-  background: #d94032;
+  background: var(--about-timeline-red);
+}
+
+.about-timeline__bar-row:nth-child(1) {
+  --about-timeline-bar-width: 6.3%;
+}
+
+.about-timeline__bar-row:nth-child(2) {
+  --about-timeline-bar-width: 12.6%;
+}
+
+.about-timeline__bar-row:nth-child(3) {
+  --about-timeline-bar-width: 38.6%;
+}
+
+.about-timeline__bar-row:nth-child(4) {
+  --about-timeline-bar-width: 46.2%;
+}
+
+.about-timeline__bar-row:nth-child(5) {
+  --about-timeline-bar-width: 63.5%;
+}
+
+.about-timeline__bar-row:nth-child(6) {
+  --about-timeline-bar-width: 91.9%;
+}
+
+.about-timeline__bar-row:nth-child(7) {
+  --about-timeline-bar-width: 100%;
+}
+
+@media (min-width: 1025px) {
+  .about-timeline {
+    margin-left: calc(-1 * var(--container-padding-x));
+    margin-right: calc(-1 * var(--container-padding-x));
+    padding-left: 107px;
+    padding-right: 107px;
+  }
 }
 
 @media (max-width: 960px) {
+  .about-timeline {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   /* 9 общих строк: 2016–2017 = заголовок + стрелка; 2018–2024 = 7 строк оборота (subgrid) */
   .about-timeline__layout {
     grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
@@ -533,6 +684,7 @@
     grid-column: 1;
     grid-row: 1 / -1;
     row-gap: 0;
+    padding-top: 0;
   }
 
   .about-timeline__item + .about-timeline__item {
@@ -542,6 +694,10 @@
   .about-timeline__title {
     max-width: none;
     text-align: left;
+    margin-bottom: clamp(32px, 4.5vw, 52px);
+    font-size: clamp(34px, 7vw, 56px);
+    line-height: 0.94;
+    letter-spacing: -1px;
   }
 
   .about-timeline__chart {
@@ -558,6 +714,7 @@
     padding-right: 0;
     box-sizing: border-box;
     min-width: 0;
+    min-height: 0;
     align-self: stretch;
   }
 
@@ -566,6 +723,9 @@
     right: auto;
     top: 0;
     transform: none;
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0 0 3px #ffffff;
   }
 
   .about-timeline__chart-title {
@@ -574,6 +734,8 @@
     align-self: start;
     text-align: left;
     font-size: clamp(17px, 4.2vw, 22px);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
     margin: 0 0 clamp(6px, 1.5vw, 10px);
   }
 
@@ -596,6 +758,7 @@
     grid-row: 3 / span 7;
     grid-column: 1;
     row-gap: 0;
+    padding: 0;
   }
 
   .about-timeline__bar-row {
@@ -637,6 +800,18 @@
     width: calc(10% + (var(--billions) / 45) * 90%);
     min-width: 12px;
     transition: width 0.4s ease;
+  }
+
+  .about-timeline__year {
+    font-size: clamp(17px, 4.2vw, 22px);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  .about-timeline__text {
+    font-size: clamp(15px, 3.8vw, 18px);
+    line-height: 1.45;
+    letter-spacing: -0.02em;
   }
 }
 
@@ -729,21 +904,21 @@
 
 /* Наша команда */
 .about-team {
-  margin-top: clamp(28px, 4vw, 44px);
-  padding: clamp(40px, 5vw, 64px) clamp(16px, 3vw, 40px);
+  margin-top: 80px;
+  padding: 0;
   background: #ffffff;
-  border-radius: clamp(20px, 2.5vw, 28px);
+  border-radius: 0;
   box-sizing: border-box;
 }
 
 .about-team__title {
-  margin: 0 0 clamp(32px, 4vw, 48px);
+  margin: 0 0 40px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: clamp(28px, 3.5vw, 42px);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: #1a1a1a;
+  font-size: clamp(40px, 4.8vw, 72px);
+  line-height: 65px;
+  letter-spacing: -4px;
+  color: #3a3a3a;
   text-align: center;
 }
 
@@ -753,31 +928,33 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: clamp(16px, 2.2vw, 28px) clamp(14px, 2vw, 22px);
+  gap: 40px 30px;
 }
 
 .about-team__card {
   margin: 0;
   min-width: 0;
+  min-height: 466px;
 }
 
 .about-team__photo {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center top;
-  border-radius: clamp(14px, 1.8vw, 22px);
+  border-radius: 27px;
   background: #e8eaee;
 }
 
 .about-team__name {
-  margin: clamp(12px, 1.6vw, 16px) 0 6px;
+  margin: 32px 0 20px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-weight: 700;
-  font-size: clamp(15px, 1.25vw, 17px);
-  line-height: 1.25;
-  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 30px;
+  letter-spacing: -1px;
+  color: #3a3a3a;
   text-align: left;
 }
 
@@ -785,15 +962,39 @@
   margin: 0;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 400;
-  font-size: clamp(13px, 1.1vw, 15px);
-  line-height: 1.35;
-  color: #666666;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  color: #78797b;
   text-align: left;
+  max-width: 215px;
 }
 
 @media (max-width: 1100px) {
+  .about-team {
+    margin-top: clamp(48px, 6vw, 80px);
+  }
+
+  .about-team__title {
+    margin-bottom: clamp(28px, 4vw, 40px);
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 0.9;
+  }
+
   .about-team__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(30px, 4vw, 40px) clamp(20px, 3vw, 30px);
+  }
+
+  .about-team__card {
+    min-height: 0;
+  }
+
+  .about-team__name {
+    margin-top: clamp(20px, 3vw, 32px);
+    margin-bottom: clamp(12px, 2vw, 20px);
+    font-size: clamp(24px, 3vw, 32px);
+    line-height: 1;
   }
 }
 
@@ -807,6 +1008,28 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: clamp(18px, 4vw, 24px);
   }
+
+  .about-team__title {
+    font-size: clamp(30px, 8vw, 44px);
+    line-height: 1;
+    letter-spacing: -1.5px;
+  }
+
+  .about-team__photo {
+    border-radius: clamp(18px, 5vw, 27px);
+  }
+
+  .about-team__name {
+    font-size: clamp(20px, 5vw, 26px);
+    line-height: 1.05;
+    letter-spacing: -0.7px;
+  }
+
+  .about-team__role {
+    font-size: clamp(14px, 3.6vw, 18px);
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
 }
 
 @media (max-width: 380px) {
@@ -817,21 +1040,21 @@
 
 /* О нас пишут (логотипы СМИ) */
 .about-press {
-  margin-top: clamp(28px, 4vw, 44px);
-  padding: clamp(40px, 5vw, 64px) clamp(16px, 3vw, 40px);
+  margin-top: 80px;
+  padding: 0;
   background: #ffffff;
-  border-radius: clamp(20px, 2.5vw, 28px);
+  border-radius: 0;
   box-sizing: border-box;
 }
 
 .about-press__title {
-  margin: 0 0 clamp(28px, 4vw, 40px);
+  margin: 0 0 40px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: clamp(28px, 3.5vw, 42px);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: #1a1a1a;
+  font-size: clamp(40px, 4.8vw, 72px);
+  line-height: 65px;
+  letter-spacing: -4px;
+  color: #3a3a3a;
   text-align: center;
 }
 
@@ -839,10 +1062,11 @@
   list-style: none;
   margin: 0 auto;
   padding: 0;
-  max-width: 960px;
+  width: 100%;
+  max-width: none;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(14px, 2vw, 20px);
+  gap: 20px;
 }
 
 .about-press__item {
@@ -854,35 +1078,89 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: clamp(88px, 12vw, 112px);
-  padding: clamp(18px, 3vw, 28px) clamp(16px, 2.5vw, 24px);
-  background: #f0f0f2;
-  border-radius: clamp(12px, 1.5vw, 16px);
+  min-height: 144px;
+  padding: 40px;
+  background: #f0f1f5;
+  border-radius: 30px;
   box-sizing: border-box;
 }
 
 .about-press__logo {
   display: block;
   width: 100%;
-  max-width: 200px;
+  max-width: 492px;
   height: auto;
-  max-height: clamp(36px, 5vw, 52px);
+  max-height: 101px;
   object-fit: contain;
   object-position: center;
 }
 
-@media (max-width: 768px) {
+.about-press__item:nth-child(1) .about-press__logo {
+  max-width: 492px;
+  max-height: 72px;
+}
+
+.about-press__item:nth-child(2) .about-press__logo {
+  max-width: 278px;
+  max-height: 84px;
+}
+
+.about-press__item:nth-child(3) .about-press__logo {
+  max-width: 281px;
+  max-height: 101px;
+}
+
+.about-press__item:nth-child(4) .about-press__logo {
+  max-width: 166px;
+  max-height: 59px;
+}
+
+.about-press__item:nth-child(5) .about-press__logo {
+  max-width: 241px;
+  max-height: 68px;
+}
+
+.about-press__item:nth-child(6) .about-press__logo {
+  max-width: 216px;
+  max-height: 64px;
+}
+
+@media (max-width: 1200px) {
   .about-press {
-    padding: clamp(28px, 5vw, 44px) clamp(14px, 4vw, 22px);
+    margin-top: clamp(48px, 6vw, 80px);
   }
 
   .about-press__title {
-    text-align: left;
+    margin-bottom: clamp(28px, 4vw, 40px);
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 0.9;
+  }
+
+  .about-press__card {
+    min-height: clamp(112px, 12vw, 144px);
+    padding: clamp(26px, 3.5vw, 40px);
+  }
+
+  .about-press__logo {
+    max-height: clamp(52px, 8vw, 101px);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-press {
+    padding: 0;
+  }
+
+  .about-press__title {
+    text-align: center;
     margin-bottom: clamp(18px, 4vw, 28px);
+    font-size: clamp(30px, 8vw, 44px);
+    line-height: 1;
+    letter-spacing: -1.5px;
   }
 
   .about-press__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: none;
     margin: 0;
     gap: clamp(12px, 3.2vw, 16px);
@@ -891,7 +1169,7 @@
   .about-press__card {
     min-height: clamp(96px, 26vw, 128px);
     padding: clamp(20px, 4.5vw, 28px) clamp(18px, 4vw, 24px);
-    border-radius: clamp(12px, 3vw, 16px);
+    border-radius: clamp(18px, 5vw, 26px);
   }
 
   .about-press__logo {
@@ -899,28 +1177,46 @@
   }
 }
 
+@media (max-width: 480px) {
+  .about-press__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Контакты для СМИ */
 .about-media-contact {
-  margin-top: clamp(28px, 4vw, 44px);
-  padding: clamp(28px, 4vw, 40px) clamp(22px, 3.5vw, 40px);
-  background: #f0f2f5;
-  border-radius: clamp(20px, 2.5vw, 28px);
+  margin-top: 80px;
+  padding: 0;
+  min-height: 586px;
+  background: transparent;
+  border-radius: 0;
   box-sizing: border-box;
 }
 
 .about-media-contact__inner {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(32px, 5vw, 56px);
+  position: relative;
+  min-height: 586px;
+  box-sizing: border-box;
+}
+
+.about-media-contact__inner::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 12px;
+  height: 528px;
+  border-radius: 40px;
+  background: #eaedf3;
 }
 
 .about-media-contact__visual {
-  flex: 0 1 auto;
-  min-width: 0;
-  width: min(586px, 100%);
-  max-width: 586px;
+  position: absolute;
+  left: calc(114 / 1756 * 100%);
+  top: 0;
+  z-index: 1;
+  width: 586px;
+  max-width: 34%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -945,38 +1241,43 @@
 }
 
 .about-media-contact__copy {
-  flex: 0 1 auto;
+  position: absolute;
+  left: calc(860 / 1756 * 100%);
+  top: 176px;
+  z-index: 1;
+  width: min(706px, calc(100% - (860 / 1756 * 100%) - 80px));
   min-width: 0;
-  max-width: 40ch;
+  max-width: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(10px, 1.5vw, 14px);
-  text-align: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 94px;
+  text-align: left;
 }
 
 .about-media-contact__title {
   margin: 0;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: clamp(48px, 2.8vw, 72px);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: #1a1a1a;
-  text-align: center;
+  font-size: clamp(48px, 4.8vw, 72px);
+  line-height: 65px;
+  letter-spacing: -4px;
+  color: #3a3a3a;
+  text-align: left;
 }
 
 .about-media-contact__email {
   margin: 0;
   font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-size: clamp(24px, 1.6vw, 32px);
-  line-height: 1.35;
+  font-size: 32px;
+  line-height: 35px;
 }
 
 .about-media-contact__link {
-  color: #d94032;
-  font-weight: 600;
+  color: #d44333;
+  font-weight: 700;
+  letter-spacing: -1px;
   text-decoration: none;
 }
 
@@ -990,7 +1291,7 @@
 }
 
 .about-media-contact__btn {
-  display: inline-flex;
+  display: none;
   align-items: center;
   justify-content: center;
   margin-top: clamp(4px, 1.2vw, 8px);
@@ -1018,18 +1319,29 @@
 
 @media (max-width: 768px) {
   .about-media-contact {
+    margin-top: clamp(48px, 8vw, 80px);
+    min-height: 0;
     padding: clamp(30px, 7vw, 44px) clamp(18px, 5vw, 28px);
+    background: #eaedf3;
     border-radius: clamp(28px, 9vw, 52px);
   }
 
   .about-media-contact__inner {
+    min-height: 0;
+    display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     gap: 0;
   }
 
+  .about-media-contact__inner::before {
+    content: none;
+  }
+
   .about-media-contact__copy {
+    position: static;
     order: -1;
+    width: 100%;
     align-items: center;
     justify-content: flex-start;
     text-align: center;
@@ -1039,8 +1351,9 @@
 
   .about-media-contact__title {
     text-align: center;
-    font-size: clamp(22px, 5.5vw, 32px);
-    line-height: 1.2;
+    font-size: clamp(30px, 8vw, 44px);
+    line-height: 1;
+    letter-spacing: -1.5px;
   }
 
   .about-media-contact__email {
@@ -1049,8 +1362,8 @@
   }
 
   .about-media-contact__link {
-    color: #1a1a1a;
-    font-weight: 400;
+    color: #d44333;
+    font-weight: 700;
   }
 
   .about-media-contact__btn {
@@ -1063,10 +1376,11 @@
 
   .about-media-contact__visual,
   .about-media-contact__visual:empty {
+    position: static;
     order: 0;
     align-self: center;
     width: 100%;
-    max-width: min(280px, 78vw);
+    max-width: min(360px, 86vw);
     margin-top: clamp(28px, 8vw, 48px);
   }
 
@@ -1078,46 +1392,46 @@
 
 /* Пресс-центр */
 .about-press-center {
-  margin-top: clamp(28px, 4vw, 44px);
+  margin-top: 80px;
   box-sizing: border-box;
 }
 
 .about-press-center__title {
-  margin: 0 0 clamp(28px, 4vw, 40px);
+  margin: 0 0 40px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: clamp(28px, 3.5vw, 42px);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: #1a1a1a;
+  font-size: clamp(40px, 4.8vw, 72px);
+  line-height: 70px;
+  letter-spacing: -3px;
+  color: #3a3a3a;
   text-align: center;
 }
 
 .about-press-center__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(14px, 2vw, 20px);
+  gap: 20px;
   align-items: stretch;
 }
 
 .about-press-center__card {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: clamp(240px, 32vw, 320px);
-  padding: clamp(28px, 4vw, 40px) clamp(24px, 3.5vw, 36px);
-  padding-right: clamp(36%, 42vw, 46%);
-  border-radius: clamp(22px, 2.5vw, 30px);
+  display: grid;
+  grid-template-columns: minmax(0, 471px) minmax(180px, 299px);
+  column-gap: 0;
+  min-height: 498px;
+  padding: 80px;
+  border-radius: 40px;
   box-sizing: border-box;
   overflow: hidden;
 }
 
 .about-press-center__card--brand {
-  background: #d64333;
+  background: #d44333;
 }
 
 .about-press-center__card--logo-kit {
-  background: #3d3d3d;
+  background: #3a3a3a;
 }
 
 .about-press-center__content {
@@ -1126,40 +1440,49 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 28ch;
+  grid-column: 1;
+  width: 471px;
+  max-width: 100%;
+  padding-top: 5px;
 }
 
 .about-press-center__card-title {
-  margin: 0 0 clamp(12px, 1.8vw, 16px);
+  margin: 0 0 20px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: clamp(20px, 2.2vw, 26px);
-  line-height: 1.2;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: -0.5px;
   color: #ffffff;
   text-align: left;
 }
 
 .about-press-center__card-text {
-  margin: 0 0 clamp(22px, 3vw, 28px);
+  margin: 0 0 60px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-weight: 400;
-  font-size: clamp(14px, 1.25vw, 17px);
-  line-height: 1.45;
-  color: rgba(255, 255, 255, 0.92);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: -0.5px;
+  color: #ffffff;
   text-align: left;
+  max-width: 403px;
 }
 
 .about-press-center__btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 26px;
-  border-radius: 999px;
+  width: 366px;
+  min-height: 93px;
+  padding: 20px 50px;
+  border-radius: 65px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-weight: 600;
-  font-size: clamp(14px, 1.15vw, 16px);
-  line-height: 1.2;
-  color: #3d3d3d;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 16px;
+  letter-spacing: -0.5px;
+  color: #3a3a3a;
   background: #ffffff;
   text-decoration: none;
   box-sizing: border-box;
@@ -1177,48 +1500,98 @@
 
 .about-press-center__decor {
   position: absolute;
-  right: 75px;
-  bottom: -20px;
+  right: 20px;
+  bottom: -88px;
   z-index: 0;
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
-  width: min(48%, 220px);
-  max-height: 55%;
+  justify-content: center;
+  width: 299px;
+  height: 498px;
   pointer-events: none;
 }
 
 .about-press-center__decor2 {
   position: absolute;
-  right: clamp(12px, 4vw, 56px);
-  bottom: clamp(8px, 2vw, 14px);
+  right: 20px;
+  bottom: 66px;
   z-index: 0;
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
-  width: min(34%, 150px);
-  max-height: 42%;
+  justify-content: center;
+  width: 299px;
+  height: 137px;
   pointer-events: none;
 }
 
 .about-press-center__decor-img,
 .about-press-center__decor img {
   display: block;
-  width: 100%;
+  width: 183px;
   height: auto;
-  max-height: clamp(120px, 22vw, 200px);
   object-fit: contain;
-  object-position: right bottom;
+  object-position: center bottom;
 }
 
 .about-press-center__decor2 .about-press-center__decor-img,
 .about-press-center__decor2 img {
-  max-height: clamp(72px, 12vw, 118px);
+  width: 137px;
+  max-height: 137px;
+}
+
+@media (max-width: 1200px) {
+  .about-press-center {
+    margin-top: clamp(48px, 6vw, 80px);
+  }
+
+  .about-press-center__title {
+    margin-bottom: clamp(28px, 4vw, 40px);
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 0.97;
+  }
+
+  .about-press-center__card {
+    grid-template-columns: minmax(0, 1fr) minmax(120px, 32%);
+    min-height: clamp(380px, 42vw, 498px);
+    padding: clamp(40px, 6vw, 80px);
+  }
+
+  .about-press-center__content {
+    width: auto;
+  }
+
+  .about-press-center__card-title {
+    font-size: clamp(26px, 3.2vw, 32px);
+    line-height: 1.1;
+  }
+
+  .about-press-center__card-text {
+    font-size: clamp(17px, 2vw, 20px);
+    line-height: 1.35;
+  }
+
+  .about-press-center__btn {
+    width: min(100%, 366px);
+    min-height: clamp(64px, 8vw, 93px);
+  }
+
+  .about-press-center__decor {
+    right: clamp(10px, 2vw, 20px);
+    width: clamp(180px, 28vw, 299px);
+  }
+
+  .about-press-center__decor-img,
+  .about-press-center__decor img {
+    width: clamp(120px, 19vw, 183px);
+  }
 }
 
 @media (max-width: 768px) {
   .about-press-center__title {
     margin-bottom: clamp(20px, 4.5vw, 32px);
+    font-size: clamp(30px, 8vw, 44px);
+    line-height: 1;
+    letter-spacing: -1.5px;
   }
 
   .about-press-center__grid {
@@ -1305,25 +1678,33 @@
 
 /* Присоединяйтесь к команде (CTA) */
 .about-careers-cta {
-  margin-top: clamp(28px, 4vw, 44px);
-  padding: clamp(36px, 5vw, 56px) clamp(24px, 4vw, 48px);
-  background: #f0f2f5;
-  border-radius: clamp(24px, 3vw, 32px);
+  margin-top: 80px;
+  min-height: 623px;
+  padding: 0 80px;
+  background: #edeff4;
+  border-radius: 40px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .about-careers-cta__inner {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 815px) minmax(0, 701px);
+  align-items: start;
   justify-content: space-between;
-  gap: clamp(24px, 4vw, 48px);
+  gap: clamp(40px, 6vw, 124px);
+  min-height: 623px;
+  box-sizing: border-box;
 }
 
 .about-careers-cta__copy {
-  flex: 1 1 auto;
+  position: relative;
+  z-index: 1;
   min-width: 0;
-  max-width: 36ch;
+  width: 815px;
+  max-width: 100%;
+  padding-top: 102px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1331,36 +1712,40 @@
 }
 
 .about-careers-cta__title {
-  margin: 0 0 clamp(14px, 2vw, 20px);
+  margin: 0 0 20px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: clamp(28px, 3.6vw, 48px);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  color: #1a1a1a;
+  font-size: 72px;
+  line-height: 70px;
+  letter-spacing: -3px;
+  color: #3a3a3a;
 }
 
 .about-careers-cta__lead {
-  margin: 0 0 clamp(22px, 3vw, 32px);
+  margin: 0 0 60px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 400;
-  font-size: clamp(16px, 1.45vw, 20px);
-  line-height: 1.45;
-  color: #5c5c5c;
+  font-size: 20px;
+  line-height: 35px;
+  letter-spacing: -1px;
+  color: #3a3a3a;
 }
 
 .about-careers-cta__btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 28px;
-  border-radius: 999px;
+  width: 462px;
+  min-height: 93px;
+  padding: 20px 65px;
+  border-radius: 65px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-weight: 600;
-  font-size: clamp(15px, 1.2vw, 17px);
-  line-height: 1.2;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 16px;
+  letter-spacing: -0.5px;
   color: #ffffff;
-  background: #d94032;
+  background: #d44333;
   text-decoration: none;
   box-sizing: border-box;
   transition: background 0.2s ease, transform 0.15s ease;
@@ -1376,10 +1761,12 @@
 }
 
 .about-careers-cta__visual {
-  flex: 0 1 46%;
+  position: relative;
+  z-index: 0;
   min-width: 0;
-  width: 100%;
-  max-width: min(520px, 48%);
+  width: 701px;
+  max-width: 100%;
+  margin-top: 34px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1396,20 +1783,56 @@
   display: block;
   width: 100%;
   height: auto;
-  max-width: 520px;
+  max-width: 701px;
+  max-height: 555px;
   object-fit: contain;
   object-position: center;
 }
 
+@media (max-width: 1400px) {
+  .about-careers-cta {
+    min-height: clamp(500px, 44vw, 623px);
+    padding: 0 clamp(40px, 5vw, 80px);
+  }
+
+  .about-careers-cta__inner {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    min-height: clamp(500px, 44vw, 623px);
+    gap: clamp(28px, 4vw, 64px);
+  }
+
+  .about-careers-cta__copy {
+    width: auto;
+    padding-top: clamp(64px, 7vw, 102px);
+  }
+
+  .about-careers-cta__title {
+    font-size: clamp(48px, 5.2vw, 72px);
+    line-height: 0.98;
+  }
+
+  .about-careers-cta__lead {
+    margin-bottom: clamp(36px, 4.5vw, 60px);
+  }
+
+  .about-careers-cta__btn {
+    width: min(100%, 462px);
+    min-height: clamp(68px, 7vw, 93px);
+  }
+}
+
 @media (max-width: 800px) {
   .about-careers-cta {
+    min-height: 0;
     padding: clamp(24px, 6vw, 32px) clamp(18px, 5vw, 28px);
     border-radius: clamp(28px, 6vw, 40px);
   }
 
   .about-careers-cta__inner {
+    display: flex;
     flex-direction: column;
     align-items: stretch;
+    min-height: 0;
     gap: clamp(20px, 5vw, 28px);
   }
 
@@ -1418,6 +1841,7 @@
     align-items: flex-start;
     text-align: left;
     width: 100%;
+    padding-top: 0;
   }
 
   .about-careers-cta__title {
@@ -1437,9 +1861,11 @@
     align-self: center;
     width: min(85%, 300px);
     max-width: 100%;
+    min-height: auto;
     justify-content: center;
     padding: clamp(14px, 3.6vw, 17px) clamp(24px, 7vw, 40px);
     font-size: clamp(15px, 3.6vw, 17px);
+    line-height: 1.2;
   }
 
   .about-careers-cta__visual,

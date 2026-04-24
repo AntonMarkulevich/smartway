@@ -1,7 +1,8 @@
 /* Общий хедер (как 1index.html). Подключать после шрифтов Golos Text. */
 /* Отступ под фиксированную шапку (padding + высота .header__inner) */
 :root {
-  --site-header-offset: 132px;
+  /* Figma 244:3345: 35 + 105 (inner) + 35 padding */
+  --site-header-offset: 175px;
   --container-padding-x: 30px;
 }
 
@@ -20,7 +21,7 @@
 /* При ширине < 1395px меню и CTA не помещаются в одну строку с макетными отступами — показываем бургер */
 @media (max-width: 1394px) {
   :root {
-    --site-header-offset: 118px;
+    --site-header-offset: 168px;
   }
 }
 
@@ -39,35 +40,39 @@ body {
   padding-top: var(--site-header-offset);
 }
 
-/* ===== Header (1:1 по макету Figma node 44:15148) ===== */
+/* ===== Header (Figma node 244:3345 — «Переезд на Wordpress») ===== */
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  box-sizing: border-box;
+  position: relative;
   z-index: 1000;
-  padding: 15px var(--container-padding-x) 0;
-  /* совпадает с фоном страницы (body), в т.ч. на белых лендингах */
-  background-color: transparent;
-}
-
-@media (min-width: 1025px) {
-  .header {
-    padding: 15px min(80px, var(--container-padding-x)) 0;
-  }
+  padding: 0;
+  background: transparent;
 }
 
 .header__inner {
-  min-height: 100px;
-  background: #F5F7F9;
-  border-radius: 130px;
+  position: fixed;
+  top: 35px;
+  left: var(--container-padding-x);
+  right: auto;
+  width: calc(100% - 2 * var(--container-padding-x));
+  max-width: calc(100% - 2 * var(--container-padding-x));
+  min-width: 0;
+  min-height: 105px;
+  background: #f5f7f9;
+  border-radius: 100px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 38px 0 38px;
+  padding: 25px 36px;
   box-sizing: border-box;
+}
+
+@media (min-width: 1025px) {
+  .header__inner {
+    left: min(80px, var(--container-padding-x));
+    right: auto;
+    width: calc(100% - 2 * min(80px, var(--container-padding-x)));
+    max-width: calc(100% - 2 * min(80px, var(--container-padding-x))) !important;
+  }
 }
 
 /* — Левый блок (логотип, разделитель, дескриптор) — */
@@ -88,7 +93,6 @@ body {
   width: 3px;
   height: 29px;
   background: #000000;
-  opacity: 0.3;
   flex-shrink: 0;
 }
 
@@ -102,38 +106,63 @@ body {
   flex-shrink: 0;
 }
 
-/* — Центральное меню (белые таблетки по макету) — */
-.header__nav {
+/* — Центр: меню + иконки подряд; CTA отдельно у правого края — */
+.header__center {
   display: flex;
   flex: 1 1 auto;
+  align-items: center;
   justify-content: center;
+  gap: 8px;
   min-width: 0;
+}
+
+.header__nav {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: flex-start;
+  min-width: 0;
+}
+
+.header__icon-actions {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+}
+
+.header__cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  margin-left: auto;
 }
 
 .header__menu {
   display: flex;
-  gap: 4px;
+  gap: 8px;
   list-style: none;
   margin: 0;
   padding: 0;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .header__link {
   height: 55px;
-  background: #FFFFFF;
-  border-radius: 30px;
-  padding: 0 18px;
+  background: #ffffff;
+  border-radius: 100px;
+  padding: 0 27px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 4px;
   text-decoration: none;
-  color: #3A3A3A;
+  color: #3a3a3a;
   font-family: 'Golos Text', sans-serif;
   font-weight: 500;
   font-size: 16px;
+  line-height: 25px;
   letter-spacing: -0.5px;
   white-space: nowrap;
   flex-shrink: 0;
@@ -146,15 +175,6 @@ body {
 /* Шеврон — только у выпадающего пункта «Для кого» */
 .header__menu > li:not(.header__menu-item--has-children) .header__chevron {
   display: none;
-}
-
-/* — Правый блок (иконки, Войти, кнопка) — */
-.header__actions {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
-  margin-left: 16px;
 }
 
 .header__icon-btn {
@@ -199,7 +219,7 @@ body {
   font-size: 17px;
   letter-spacing: -0.5px;
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0;
   flex-shrink: 0;
   transition: color 0.2s ease;
 }
@@ -287,15 +307,15 @@ body {
     margin-right: auto;
   }
 
-  /* Центральное меню в drawer */
-  .header__nav {
+  /* Центральное меню и иконки — в drawer */
+  .header__center {
     order: 2;
-    display: none;
+    display: none !important;
   }
 
-  .header__actions {
+  .header__cta {
     order: 3;
-    margin-left: 0;
+    display: none !important;
   }
 
   .header__burger {
@@ -354,14 +374,17 @@ body {
 
   .header__drawer-top {
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-    margin-bottom: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
   }
 
   .header__drawer-close {
-    align-self: flex-end;
+    order: 2;
+    flex-shrink: 0;
+    align-self: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -374,17 +397,19 @@ body {
   }
 
   .header__drawer-brand {
+    order: 1;
     display: flex;
     align-items: center;
     text-decoration: none;
-    width: 100%;
+    flex: 1 1 auto;
     min-width: 0;
+    width: auto;
   }
 
   .header__drawer-logo {
     display: block;
     width: auto;
-    max-width: 88%;
+    max-width: 100%;
     max-height: 32px;
     height: auto;
     object-fit: contain;
@@ -446,10 +471,6 @@ body {
 
 /* Планшет: в баре только логотип + бургер; кнопки — в drawer */
 @media (max-width: 1394px) and (min-width: 481px) {
-  .header__actions {
-    display: none !important;
-  }
-
   .header .header__drawer-contacts {
     display: flex;
     align-items: center;
@@ -464,22 +485,23 @@ body {
 
 @media (max-width: 480px) {
   .header {
-    padding: 21px var(--container-padding-x) 0;
+    padding: 0;
     background-color: transparent;
   }
 
   /* Мобильная шапка: в баре только логотип и бургер; действия — в drawer */
-  .header__actions {
-    display: none !important;
-  }
-
   .header .header__drawer-contacts {
     display: none !important;
   }
 
   .header__inner {
-    width: 100%;
-    max-width: none;
+    position: fixed;
+    top: 21px;
+    left: var(--container-padding-x);
+    right: auto;
+    width: calc(100% - 2 * var(--container-padding-x));
+    max-width: calc(100% - 2 * var(--container-padding-x));
+    min-width: 0;
     height: 78px;
     padding: 19px 24px;
     margin: 0 auto;
@@ -549,7 +571,8 @@ label.header__burger {
 /* Общий хедер (как 1index.html). Подключать после шрифтов Golos Text. */
 /* Отступ под фиксированную шапку (padding + высота .header__inner) */
 :root {
-  --site-header-offset: 132px;
+  /* Figma 244:3345: 35 + 105 (inner) + 35 padding */
+  --site-header-offset: 175px;
   --container-padding-x: 30px;
 }
 
@@ -568,7 +591,7 @@ label.header__burger {
 /* При ширине < 1395px меню и CTA не помещаются в одну строку с макетными отступами — показываем бургер */
 @media (max-width: 1394px) {
   :root {
-    --site-header-offset: 118px;
+    --site-header-offset: 168px;
   }
 }
 
@@ -581,6 +604,7 @@ label.header__burger {
 html {
   scroll-padding-top: var(--site-header-offset);
   overflow-x: hidden;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -588,35 +612,39 @@ body {
   overflow-x: hidden;
 }
 
-/* ===== Header (1:1 по макету Figma node 44:15148) ===== */
+/* ===== Header (Figma node 244:3345 — «Переезд на Wordpress») ===== */
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  box-sizing: border-box;
+  position: relative;
   z-index: 1000;
-  padding: 15px var(--container-padding-x) 0;
-  /* совпадает с фоном страницы (body), в т.ч. на белых лендингах */
-  background-color: transparent;
-}
-
-@media (min-width: 1025px) {
-  .header {
-    padding: 15px min(80px, var(--container-padding-x)) 0;
-  }
+  padding: 0;
+  background: transparent;
 }
 
 .header__inner {
-  min-height: 100px;
-  background: #F5F7F9;
-  border-radius: 130px;
+  position: fixed;
+  top: 35px;
+  left: var(--container-padding-x);
+  right: auto;
+  width: calc(100% - 2 * var(--container-padding-x));
+  max-width: calc(100% - 2 * var(--container-padding-x));
+  min-width: 0;
+  min-height: 105px;
+  background: #f5f7f9;
+  border-radius: 100px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 50px 0 50px;
+  padding: 25px 36px;
   box-sizing: border-box;
+}
+
+@media (min-width: 1025px) {
+  .header__inner {
+    left: min(80px, var(--container-padding-x));
+    right: auto;
+    width: calc(100% - 2 * min(80px, var(--container-padding-x)));
+    max-width: calc(100% - 2 * min(80px, var(--container-padding-x)));
+  }
 }
 
 /* — Левый блок (логотип, разделитель, дескриптор) — */
@@ -637,7 +665,6 @@ body {
   width: 3px;
   height: 29px;
   background: #000000;
-  opacity: 0.3;
   flex-shrink: 0;
 }
 
@@ -651,29 +678,14 @@ body {
   flex-shrink: 0;
 }
 
-/* — Центральное меню (белые таблетки по макету) — */
-.header__nav {
-  display: flex;
-  flex: 1 1 auto;
-  justify-content: center;
-  min-width: 0;
-}
-
-/* Перекрывает ниже идущий дубль `.header__nav { display: flex }`. */
-@media (max-width: 1394px) {
-  .header__nav {
-    display: none;
-  }
-}
-
 .header__menu {
   display: flex;
-  gap: 5px;
+  gap: 8px;
   list-style: none;
   margin: 0;
   padding: 0;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .header__menu-item {
@@ -685,46 +697,71 @@ body {
 
 .header__link {
   height: 55px;
-  background: #FFFFFF;
-  border-radius: 30px;
-  padding: 0 24px;
+  background: #ffffff;
+  border-radius: 100px;
+  padding: 0 27px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 4px;
   text-decoration: none;
-  color: #3A3A3A;
+  color: #3a3a3a;
   font-family: 'Golos Text', sans-serif;
   font-weight: 500;
   font-size: 16px;
+  line-height: 25px;
   letter-spacing: -0.5px;
   white-space: nowrap;
   flex-shrink: 0;
 }
 
 .header__link:hover {
-  background-color: #EEEFF3;
+  background-color: #eeeff3;
 }
 
-/* Треугольник-индикатор; при наведении поворачивается вверх, как в макете */
+/* Два шеврона (↑↓): по умолчанию акцент на «вниз», при hover/focus — на «вверх» + выпадающий список */
 .header__menu-item--has-children .header__chevron {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  margin: 0 0 0 4px;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.header__menu-item--has-children .header__chevron-icon {
+  display: block;
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 5px 4.5px 0 4.5px;
-  border-color: currentColor transparent transparent transparent;
-  margin: 0 0 0 2px;
   flex-shrink: 0;
-  transform: rotate(0deg);
-  transform-origin: 50% 40%;
-  vertical-align: middle;
-  transition: transform 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.header__menu-item--has-children:hover .header__chevron,
-.header__menu-item--has-children:focus-within .header__chevron {
-  transform: rotate(180deg);
+.header__menu-item--has-children .header__chevron-icon--up {
+  border-width: 0 4px 4px 4px;
+  border-color: transparent transparent currentColor transparent;
+  opacity: 0.4;
+  transform: translateY(0.5px);
+}
+
+.header__menu-item--has-children .header__chevron-icon--down {
+  border-width: 4px 4px 0 4px;
+  border-color: currentColor transparent transparent transparent;
+  opacity: 1;
+  transform: translateY(-0.5px);
+}
+
+.header__menu-item--has-children:hover .header__chevron-icon--up,
+.header__menu-item--has-children:focus-within .header__chevron-icon--up {
+  opacity: 1;
+}
+
+.header__menu-item--has-children:hover .header__chevron-icon--down,
+.header__menu-item--has-children:focus-within .header__chevron-icon--down {
+  opacity: 0.4;
 }
 
 .header__menu-item--has-children:hover .header__link,
@@ -811,15 +848,6 @@ body {
   background: #f1f3f7;
 }
 
-/* — Правый блок (иконки, Войти, кнопка) — */
-.header__actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
-  margin-left: 25px;
-}
-
 .header__icon-btn {
   width: 55px;
   height: 55px;
@@ -862,7 +890,7 @@ body {
   font-size: 17px;
   letter-spacing: -0.5px;
   text-decoration: none;
-  margin: 0 16px;
+  margin: 0;
   flex-shrink: 0;
   transition: color 0.2s ease;
 }
@@ -950,13 +978,12 @@ body {
     margin-right: auto;
   }
 
-  .header__nav {
+  .header__center {
     order: 2;
   }
 
-  .header__actions {
+  .header__cta {
     order: 3;
-    margin-left: 0;
   }
 
   .header__burger {
@@ -1026,14 +1053,17 @@ body {
 
   .header__drawer-top {
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-    margin-bottom: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
   }
 
   .header__drawer-close {
-    align-self: flex-end;
+    order: 2;
+    flex-shrink: 0;
+    align-self: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1046,17 +1076,19 @@ body {
   }
 
   .header__drawer-brand {
+    order: 1;
     display: flex;
     align-items: center;
     text-decoration: none;
-    width: 100%;
+    flex: 1 1 auto;
     min-width: 0;
+    width: auto;
   }
 
   .header__drawer-logo {
     display: block;
     width: auto;
-    max-width: 88%;
+    max-width: 100%;
     max-height: 32px;
     height: auto;
     object-fit: contain;
@@ -1235,10 +1267,6 @@ body {
 
 /* Планшет: в баре только логотип + бургер; кнопки — в drawer */
 @media (max-width: 1394px) and (min-width: 481px) {
-  .header__actions {
-    display: none !important;
-  }
-
   .header .header__drawer-contacts {
     display: flex;
     align-items: center;
@@ -1253,15 +1281,11 @@ body {
 
 @media (max-width: 480px) {
   .header {
-    padding: 21px var(--container-padding-x) 0;
+    padding: 0;
     background-color: transparent;
   }
 
   /* Мобильная шапка: в баре только логотип и бургер; действия — в drawer */
-  .header__actions {
-    display: none !important;
-  }
-
   .header .header__drawer-bottom {
     display: flex;
     flex-direction: column;
@@ -1277,8 +1301,13 @@ body {
   }
 
   .header__inner {
-    width: 100%;
-    max-width: none;
+    position: fixed;
+    top: 21px;
+    left: var(--container-padding-x);
+    right: auto;
+    width: calc(100% - 2 * var(--container-padding-x));
+    max-width: calc(100% - 2 * var(--container-padding-x));
+    min-width: 0;
     height: 78px;
     padding: 19px 24px;
     margin: 0 auto;
@@ -1342,14 +1371,17 @@ body {
   .header__drawer-top {
     flex-shrink: 0;
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-    margin-bottom: 4px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 8px;
   }
 
   .header__drawer-close {
-    align-self: flex-end;
+    order: 2;
+    flex-shrink: 0;
+    align-self: center;
     font-size: 24px;
     line-height: 1;
     padding: 2px 4px;
@@ -1358,14 +1390,16 @@ body {
   }
 
   .header__drawer-brand {
-    width: 100%;
+    order: 1;
+    flex: 1 1 auto;
     min-width: 0;
+    width: auto;
   }
 
   .header__drawer-logo {
     display: block;
     width: auto;
-    max-width: 84%;
+    max-width: 100%;
     max-height: 28px;
     height: auto;
     object-fit: contain;

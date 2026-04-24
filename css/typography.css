@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Типографика (макет): Golos Text, mobile-first.
  * H1: 32/34 @mobile → 44/44 @768 → 46/46 @1024 → 60/60 @1440 → 82/78 @1920
  * H2: 28/30 @mobile → 36/36 @768 → 38/38 @1024 → 55/55 @1440 → 72/72 @1920
@@ -6,7 +6,10 @@
  * Body: 16/20 → 18/22 (1440+) → 28/34 (1920+), main / body-text / .hero__subtitle
  * Карточки: 14/18, 16/20@1440+, 20/26@1920+ — классы .type-card, .card-typo
  * Подключайте этот файл последним среди CSS.
+ * Лид-формы: @import forms-unified.css (Figma 255:2607) идёт сразу ниже.
  */
+
+@import url("forms-unified.css");
 
 body {
   font-family: "Golos Text", -apple-system, BlinkMacSystemFont, sans-serif;
