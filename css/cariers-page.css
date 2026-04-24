@@ -24,7 +24,7 @@
 /* Герой: текст слева, справа — медиа 850×477 */
 .cariers-hero {
   background: #ffffff;
-  padding: clamp(40px, 6vw, 80px) var(--container-padding-x) clamp(48px, 7vw, 96px);
+  padding: 0 107px;
   box-sizing: border-box;
 }
 
@@ -32,23 +32,27 @@
   width: 100%;
   max-width: none;
   margin: 0;
+  min-height: 731px;
   box-sizing: border-box;
 }
 
 /* Две равные колонки: текст слева от центра, картинка начинается от вертикали центра блока */
 .cariers-hero__layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(28px, 4vw, 56px);
+  grid-template-columns: minmax(0, 820px) minmax(0, 1133px);
+  gap: 147px;
   align-items: center;
+  min-height: 731px;
 }
 
 .cariers-hero__copy {
   min-width: 0;
+  width: 820px;
+  max-width: 100%;
 }
 
 .cariers-hero__badge {
-  display: inline-flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -66,48 +70,51 @@
 }
 
 .cariers-hero__title {
-  margin: 0 0 clamp(16px, 2vw, 22px);
-  max-width: 12em;
+  margin: 0 0 27px;
+  width: 957px;
+  max-width: calc(100vw - 214px);
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: clamp(36px, 4.2vw, 56px);
-  line-height: 1.12;
-  letter-spacing: -0.02em;
-  color: #1a1a1a;
+  font-size: 96px;
+  line-height: 93px;
+  letter-spacing: -3.33px;
+  color: #3c3c3c;
 }
 
 @media (min-width: 769px) {
   .cariers-hero__title {
-    font-size: 72px;
-    line-height: 70px;
-    letter-spacing: -2.5px;
+    font-size: 96px;
+    line-height: 93px;
+    letter-spacing: -3.33px;
     color: #3c3c3c;
   }
 }
 
 .cariers-hero__lead {
-  margin: 0 0 clamp(28px, 4vw, 36px);
-  max-width: 36rem;
+  margin: 0 0 80px;
+  max-width: 575px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 400;
-  font-size: clamp(16px, 1.65vw, 18px);
-  line-height: 1.5;
-  color: #666666;
+  font-size: 27px;
+  line-height: 36px;
+  color: #3c3c3c;
 }
 
 .cariers-hero__cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 56px;
-  padding: 14px 32px;
-  border-radius: 999px;
-  background: #d84333;
+  width: 521px;
+  min-height: 124px;
+  padding: 27px 87px;
+  border-radius: 1000px;
+  background: #d44333;
   color: #ffffff;
   font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-weight: 600;
-  font-size: clamp(15px, 1.4vw, 17px);
-  line-height: 1.2;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 22px;
+  letter-spacing: -0.67px;
   text-decoration: none;
   box-sizing: border-box;
   transition: background 0.2s ease, transform 0.1s ease;
@@ -130,12 +137,12 @@
 /* Слот под медиа: пропорции 850×477 (на широком экране колонка до 850px) */
 .cariers-hero__visual {
   width: 100%;
-  max-width: 850px;
+  max-width: 1133px;
   aspect-ratio: 850 / 477;
   height: auto;
   justify-self: start;
-  border-radius: clamp(18px, 2.5vw, 28px);
-  background: #f0f0f0;
+  border-radius: 0;
+  background: transparent;
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -151,8 +158,21 @@
 }
 
 @media (max-width: 1100px) {
+  .cariers-hero {
+    padding-left: var(--container-padding-x);
+    padding-right: var(--container-padding-x);
+    padding-top: clamp(40px, 6vw, 80px);
+    padding-bottom: clamp(48px, 7vw, 96px);
+  }
+
+  .cariers-hero__inner,
+  .cariers-hero__layout {
+    min-height: 0;
+  }
+
   .cariers-hero__layout {
     grid-template-columns: 1fr;
+    gap: clamp(28px, 4vw, 56px);
   }
 
   .cariers-hero__visual {
@@ -163,13 +183,18 @@
 
   .cariers-hero__copy {
     order: 1;
+    width: 100%;
   }
 }
 
 @media (max-width: 768px) {
   .cariers-hero {
-    padding-top: clamp(28px, 6vw, 40px);
-    padding-bottom: clamp(36px, 7vw, 48px);
+    min-height: 616px;
+    padding: 21px 10px;
+  }
+
+  .cariers-hero__layout {
+    gap: 28px;
   }
 
   .cariers-hero__copy {
@@ -180,8 +205,16 @@
   }
 
   .cariers-hero__badge {
-    margin-bottom: clamp(14px, 3.5vw, 20px);
-    padding: clamp(10px, 2.5vw, 12px) clamp(18px, 5vw, 24px);
+    display: flex;
+    width: min(311px, 100%);
+    min-height: 69px;
+    margin: 0 0 28px;
+    padding: 19px 20px;
+    border-radius: 20px;
+    background: #e0e2ea;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -0.5px;
   }
 
   .cariers-hero__title,
@@ -191,80 +224,109 @@
   }
 
   .cariers-hero__title {
+    width: min(323px, 100%);
+    max-width: 100%;
+    margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
+    font-size: 32px;
+    line-height: 35px;
+    letter-spacing: 0;
+    color: #3a3a3a;
   }
 
   .cariers-hero__lead {
+    width: min(367px, calc(100vw - 8px));
+    max-width: none;
+    margin-bottom: 28px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 18px;
+    line-height: 27px;
+    color: #3a3a3a;
   }
 
   .cariers-hero__cta {
-    width: min(85%, 320px);
+    width: 229px;
+    min-height: 61px;
     max-width: 100%;
+    padding: 0 24px;
+    border-radius: 65px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.15px;
+    letter-spacing: -0.5px;
     box-sizing: border-box;
   }
 
   .cariers-hero__visual {
     margin-inline: auto;
-    max-width: 100%;
-    border-radius: clamp(14px, 3.5vw, 22px);
+    width: 100%;
+    max-width: 355px;
+    aspect-ratio: 355 / 199;
+    border-radius: 0;
   }
 }
 
 /* Блок «Растем даже в кризисы»: светлый голубой фон, столбчатая диаграмма 850×477 от центра */
 .cariers-growth {
-  padding: clamp(40px, 6vw, 88px) var(--container-padding-x) clamp(48px, 7vw, 96px);
-  background: #e8f2fb;
+  min-height: 731px;
+  padding: 107px 107px 0;
+  background: #e2efff;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .cariers-growth__inner {
   width: 100%;
   max-width: none;
   margin: 0;
+  min-height: 624px;
   box-sizing: border-box;
 }
 
 .cariers-growth__layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(28px, 4vw, 56px);
-  align-items: center;
+  grid-template-columns: minmax(0, 615fr) minmax(0, 920fr);
+  gap: min(184px, 7.85%);
+  align-items: start;
+  min-height: 624px;
 }
 
 .cariers-growth__copy {
   min-width: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 .cariers-growth__title {
-  margin: 0 0 clamp(16px, 2vw, 22px);
+  margin: 0 0 27px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: clamp(28px, 3.4vw, 44px);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: #1a1a1a;
+  font-size: 96px;
+  line-height: 93px;
+  letter-spacing: -3.33px;
+  color: #3c3c3c;
 }
 
 .cariers-growth__text {
   margin: 0;
-  max-width: 38rem;
+  max-width: 575px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 400;
-  font-size: clamp(16px, 1.65vw, 18px);
-  line-height: 1.55;
-  color: #5a5a5a;
+  font-size: 27px;
+  line-height: 36px;
+  color: #3c3c3c;
 }
 
 .cariers-growth__visual {
   width: 100%;
-  max-width: 850px;
-  aspect-ratio: 850 / 477;
+  max-width: 1227px;
+  aspect-ratio: 920 / 468;
   height: auto;
   justify-self: start;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .cariers-growth-chart {
@@ -274,88 +336,167 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: clamp(16px, 3vw, 36px) clamp(20px, 3.5vw, 48px) clamp(12px, 2vw, 24px);
+  padding: 0 43px 0;
   box-sizing: border-box;
+  transform: translateY(-136px);
 }
 
 .cariers-growth-chart__plot {
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
-  gap: clamp(10px, 2vw, 28px);
-  flex: 1;
-  min-height: clamp(160px, 28vw, 280px);
-  max-height: 320px;
+  justify-content: flex-start;
+  gap: 3.73%;
+  flex: 0 0 auto;
+  width: min(100%, 1077px);
+  min-height: 737px;
+  max-height: none;
 }
 
 .cariers-growth-chart__col {
-  flex: 1;
+  flex: 0 0 19.65%;
   min-width: 0;
+  max-width: 212px;
+  height: 737px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  gap: clamp(10px, 1.5vw, 14px);
+  gap: 0;
 }
 
 .cariers-growth-chart__bar {
   width: 100%;
-  max-width: min(140px, 22vw);
-  border-radius: 10px 10px 6px 6px;
+  border-radius: 0;
   flex-shrink: 0;
 }
 
 .cariers-growth-chart__bar--plain {
   background: #ffffff;
-  box-shadow:
-    0 4px 6px rgba(17, 42, 75, 0.06),
-    0 10px 24px rgba(17, 42, 75, 0.1);
+  box-shadow: none;
 }
 
 .cariers-growth-chart__bar--accent {
-  background: #e34a32;
-  box-shadow:
-    0 6px 14px rgba(227, 74, 50, 0.35),
-    0 16px 36px rgba(17, 42, 75, 0.12);
+  background: #d84b3b;
+  box-shadow: none;
 }
 
 .cariers-growth-chart__bar--2019 {
-  height: clamp(52px, 11vw, 88px);
+  height: 111px;
 }
 
 .cariers-growth-chart__bar--2020 {
-  height: clamp(72px, 14vw, 118px);
+  height: 159px;
 }
 
 .cariers-growth-chart__bar--2021 {
-  height: clamp(96px, 17vw, 152px);
+  height: 328px;
 }
 
 .cariers-growth-chart__bar--2022 {
-  height: clamp(150px, 26vw, 268px);
+  height: 595px;
 }
 
 .cariers-growth-chart__year {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: clamp(14px, 1.35vw, 17px);
-  line-height: 1.2;
+  font-size: 33px;
+  line-height: 1;
   color: #1a1a1a;
+  text-align: center;
+}
+
+.cariers-growth-chart__col:last-child .cariers-growth-chart__year {
+  color: #ffffff;
 }
 
 @media (max-width: 1100px) {
+  .cariers-growth {
+    min-height: 0;
+    padding: clamp(40px, 6vw, 80px) var(--container-padding-x) clamp(48px, 7vw, 96px);
+  }
+
+  .cariers-growth__inner,
+  .cariers-growth__layout {
+    min-height: 0;
+  }
+
   .cariers-growth__layout {
     grid-template-columns: 1fr;
+    gap: clamp(28px, 4vw, 56px);
   }
 
   .cariers-growth__visual {
     justify-self: stretch;
     max-width: min(850px, 100%);
+    aspect-ratio: 850 / 477;
     order: 2;
+    overflow: visible;
   }
 
   .cariers-growth__copy {
     order: 1;
+    width: 100%;
+  }
+
+  .cariers-growth__title {
+    font-size: clamp(34px, 7vw, 56px);
+    line-height: 1;
+    letter-spacing: -1.5px;
+  }
+
+  .cariers-growth__text {
+    font-size: clamp(16px, 2.2vw, 20px);
+    line-height: 1.45;
+  }
+
+  .cariers-growth-chart {
+    transform: none;
+    padding: clamp(16px, 3vw, 36px) clamp(20px, 3.5vw, 48px) clamp(12px, 2vw, 24px);
+  }
+
+  .cariers-growth-chart__plot {
+    justify-content: space-between;
+    gap: clamp(10px, 2vw, 28px);
+    min-height: clamp(160px, 28vw, 280px);
+    max-height: 320px;
+  }
+
+  .cariers-growth-chart__col {
+    flex: 1;
+    height: auto;
+    position: static;
+    gap: clamp(10px, 1.5vw, 14px);
+  }
+
+  .cariers-growth-chart__bar {
+    max-width: min(140px, 22vw);
+  }
+
+  .cariers-growth-chart__bar--2019 {
+    height: clamp(52px, 11vw, 88px);
+  }
+
+  .cariers-growth-chart__bar--2020 {
+    height: clamp(72px, 14vw, 118px);
+  }
+
+  .cariers-growth-chart__bar--2021 {
+    height: clamp(96px, 17vw, 152px);
+  }
+
+  .cariers-growth-chart__bar--2022 {
+    height: clamp(150px, 26vw, 268px);
+  }
+
+  .cariers-growth-chart__year {
+    position: static;
+    font-size: clamp(14px, 1.35vw, 17px);
+    line-height: 1.2;
   }
 }
 
@@ -1268,6 +1409,383 @@
 
 .page-cariers .cariers-strip--muted {
   background: #f5f5f7;
+}
+
+@media (min-width: 1101px) {
+  .cariers-hero__layout {
+    grid-template-columns: minmax(0, 615fr) minmax(0, 850fr);
+    gap: min(147px, 6.25%);
+  }
+
+  .cariers-hero__copy {
+    width: 100%;
+  }
+
+  .cariers-hero__visual {
+    max-width: 1133px;
+  }
+
+  .cariers-growth__layout {
+    grid-template-columns: minmax(0, 615fr) minmax(0, 920fr);
+    gap: min(184px, 7.85%);
+  }
+
+  .cariers-growth-chart {
+    padding-inline: clamp(18px, 2.25vw, 43px);
+  }
+
+  .cariers-growth-chart__col {
+    max-width: 212px;
+  }
+
+  .cariers-values {
+    min-height: 575px;
+    padding: 107px 107px 107px;
+  }
+
+  .cariers-values__heading,
+  .cariers-benefits__heading,
+  .cariers-offices__heading,
+  .cariers-hr-team__title,
+  .cariers-contact__title {
+    font-size: 96px;
+    line-height: 93px;
+    letter-spacing: -3.33px;
+    color: #3c3c3c;
+  }
+
+  .cariers-values__heading {
+    max-width: none;
+    margin-bottom: 27px;
+  }
+
+  .cariers-values__lead {
+    display: none;
+  }
+
+  .cariers-values__grid {
+    grid-template-columns: 502fr 478fr 559fr;
+    gap: 55px;
+  }
+
+  .cariers-values__num {
+    margin-bottom: 20px;
+    font-size: 27px;
+    line-height: 36px;
+    letter-spacing: 0;
+    color: #d44333;
+  }
+
+  .cariers-values__name {
+    margin-bottom: 28px;
+    font-size: 43px;
+    line-height: 36px;
+    letter-spacing: 0;
+    color: #3c3c3c;
+  }
+
+  .cariers-values__text {
+    max-width: 596px;
+    font-size: 27px;
+    line-height: 36px;
+    color: #3c3c3c;
+  }
+
+  .cariers-offices {
+    min-height: 1077px;
+    padding: 107px;
+    background: #ffffff;
+  }
+
+  .cariers-offices__heading {
+    margin-bottom: 53px;
+  }
+
+  .cariers-offices__grid {
+    grid-template-columns: minmax(0, 860fr) minmax(0, 860fr);
+    column-gap: min(233px, 9.95%);
+    row-gap: 77px;
+    align-items: start;
+  }
+
+  .cariers-offices__head {
+    align-items: center;
+    gap: 33px;
+    min-height: 135px;
+  }
+
+  .cariers-offices__icon-wrap {
+    width: 127px;
+    height: 127px;
+    border-radius: 50%;
+  }
+
+  .cariers-offices__icon-wrap--msk {
+    background: #d4ebfa;
+  }
+
+  .cariers-offices__icon-wrap--penza {
+    background: #fde8d9;
+  }
+
+  .cariers-offices__navicon {
+    width: 72px;
+    height: 72px;
+    filter: brightness(0) saturate(100%) invert(21%) sepia(0%) saturate(0%) hue-rotate(210deg) brightness(96%) contrast(87%);
+    transform: translate(7px, -13px);
+  }
+
+  .cariers-offices__city {
+    margin-bottom: 20px;
+    font-size: 43px;
+    line-height: 36px;
+    letter-spacing: 0;
+    color: #3c3c3c;
+  }
+
+  .cariers-offices__addr {
+    font-size: 27px;
+    line-height: 36px;
+    color: #3c3c3c;
+  }
+
+  .cariers-offices__media {
+    width: min(100%, 771px);
+    aspect-ratio: 578 / 365;
+    border-radius: 39px;
+  }
+
+  .cariers-benefits {
+    padding: 43px 107px 43px;
+    background: #ffffff;
+  }
+
+  .cariers-benefits__shell {
+    min-height: 952px;
+    gap: 53px;
+    padding: 111px 107px 116px 184px;
+    border-radius: 53px;
+    background: #fceed9;
+  }
+
+  .cariers-benefits__heading {
+    max-width: 957px;
+  }
+
+  .cariers-benefits__grid {
+    grid-template-columns: minmax(0, 729fr) minmax(0, 607fr);
+    gap: 110px;
+    max-width: 1892px;
+  }
+
+  .cariers-benefits__list {
+    gap: 53px;
+  }
+
+  .cariers-benefits__item {
+    gap: 13px;
+  }
+
+  .cariers-benefits__icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .cariers-benefits__text {
+    font-size: 27px;
+    line-height: 36px;
+    color: #3c3c3c;
+  }
+
+  .cariers-contact {
+    min-height: 1573px;
+    padding: 107px;
+    background: #ffffff;
+  }
+
+  .cariers-contact__shell {
+    min-height: 1360px;
+    padding: 111px 107px 123px 184px;
+    border-radius: 53px;
+    background: #e2efff;
+  }
+
+  .cariers-contact__intro {
+    margin-bottom: 53px;
+    text-align: center;
+  }
+
+  .cariers-contact__title {
+    margin-bottom: 27px;
+  }
+
+  .cariers-contact__hh {
+    font-size: 43px;
+    line-height: 36px;
+  }
+
+  .cariers-contact__hh-link {
+    color: #d44333;
+  }
+
+  .cariers-contact__form {
+    width: 1019px;
+    max-width: min(100%, 1019px);
+    min-height: 897px;
+    padding: 87px 102px;
+    border-radius: 53px;
+    box-shadow: none;
+  }
+
+  .cariers-contact__field {
+    margin-bottom: 20px;
+  }
+
+  .cariers-contact__input {
+    height: 77px;
+    padding-inline: 50px;
+    border-radius: 91px;
+    background: #ffffff;
+    font-size: 27px;
+    line-height: 29px;
+  }
+
+  .cariers-contact__consent {
+    align-items: center;
+    gap: 33px;
+    margin: 47px 0 67px;
+  }
+
+  .cariers-contact__switch {
+    width: 105px;
+    height: 51px;
+  }
+
+  .cariers-contact__switch::after {
+    width: 45px;
+    height: 45px;
+    top: 3px;
+    left: 4px;
+  }
+
+  .cariers-contact__checkbox:checked + .cariers-contact__switch::after {
+    transform: translateX(52px);
+  }
+
+  .cariers-contact__consent-label,
+  .cariers-contact__legal {
+    font-size: 21px;
+    line-height: 1.2;
+    color: #4f4f4f;
+  }
+
+  .cariers-contact__submit {
+    min-height: 77px;
+    border-radius: 7px;
+    font-size: 27px;
+    line-height: 29px;
+  }
+
+  .cariers-contact__legal {
+    max-width: 668px;
+    margin: 28px auto 0;
+  }
+
+  .cariers-hr-team {
+    min-height: 951px;
+    padding: 107px 107px 107px;
+  }
+
+  .cariers-hr-team__title {
+    margin-bottom: 53px;
+  }
+
+  .cariers-hr-team__subtitle {
+    margin-bottom: 53px;
+    font-size: 43px;
+    line-height: 36px;
+    color: #3c3c3c;
+  }
+
+  .cariers-hr-team__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 53px;
+  }
+
+  .cariers-hr-team__card {
+    gap: 17px;
+  }
+
+  .cariers-hr-team__avatar {
+    width: 125px;
+    height: 125px;
+  }
+
+  .cariers-hr-team__name {
+    font-size: 43px;
+    line-height: 40px;
+    letter-spacing: -1.33px;
+    color: #3a3a3a;
+  }
+
+  .cariers-hr-team__role {
+    font-size: 24px;
+    line-height: 27px;
+    letter-spacing: -1.33px;
+    color: #78797b;
+  }
+
+  .cariers-vacancy-list {
+    padding: 0 107px 107px;
+  }
+
+  .cariers-vacancy-list__list {
+    border-top-color: #8c8c8c;
+  }
+
+  .cariers-vacancy-list__item {
+    border-bottom-color: #8c8c8c;
+  }
+
+  .cariers-vacancy-list__row {
+    max-width: 1381px;
+    min-height: 212px;
+    gap: 59px;
+    padding: 53px 0;
+  }
+
+  .cariers-vacancy-list__mark img {
+    width: 159px;
+    height: 159px;
+    border-radius: 27px;
+  }
+
+  .cariers-vacancy-list__body {
+    gap: 15px;
+  }
+
+  .cariers-vacancy-list__title {
+    font-size: 43px;
+    line-height: 36px;
+    color: #3c3c3c;
+  }
+
+  .cariers-vacancy-list__loc {
+    font-size: 24px;
+    line-height: 27px;
+    letter-spacing: -1.33px;
+    color: #78797b;
+  }
+
+  .cariers-vacancy-list__chev {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .cariers-vacancy-list__chev-svg {
+    width: 29px;
+    height: 60px;
+  }
 }
 
 /* Аудит: плавные ховеры, лёгкий подъём карточек, доп. страховка от горизонтального скролла */
