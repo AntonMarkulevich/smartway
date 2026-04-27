@@ -59,6 +59,143 @@
     });
   }
 
+  var casesSlider = document.getElementById('mice-cases-viewport');
+  var casesPrev = document.getElementById('mice-cases-prev');
+  var casesNext = document.getElementById('mice-cases-next');
+  if (casesSlider && casesPrev && casesNext) {
+    var casesGap = 12;
+
+    function casesSliderStep() {
+      var c = casesSlider.querySelector('.mice-cases__card');
+      if (!c) return casesSlider.clientWidth;
+      return c.getBoundingClientRect().width + casesGap;
+    }
+
+    function casesUpdateNav() {
+      var el = casesSlider;
+      var maxL = el.scrollWidth - el.clientWidth;
+      var l = el.scrollLeft;
+      casesPrev.disabled = l <= 1;
+      casesNext.disabled = l >= maxL - 1;
+    }
+
+    function casesScrollBy(delta) {
+      var smooth =
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches ===
+        false;
+      casesSlider.scrollBy({
+        left: delta,
+        behavior: smooth ? 'smooth' : 'auto',
+      });
+    }
+
+    casesPrev.addEventListener('click', function () {
+      if (casesPrev.disabled) return;
+      casesScrollBy(-casesSliderStep());
+    });
+    casesNext.addEventListener('click', function () {
+      if (casesNext.disabled) return;
+      casesScrollBy(casesSliderStep());
+    });
+    casesSlider.addEventListener('scroll', casesUpdateNav, { passive: true });
+    window.addEventListener('resize', casesUpdateNav, { passive: true });
+    casesUpdateNav();
+  }
+
+  var partnerSlider = document.getElementById('mice-partner-viewport');
+  var partnerPrev = document.getElementById('mice-partner-prev');
+  var partnerNext = document.getElementById('mice-partner-next');
+  if (partnerSlider && partnerPrev && partnerNext) {
+    function partnerSliderStep() {
+      var firstSlide = partnerSlider.querySelector('.mice-partner__card, .mice-partner__cta');
+      if (!firstSlide) return partnerSlider.clientWidth;
+      var track = partnerSlider.querySelector('.mice-partner__track');
+      var gap = 0;
+      if (track) {
+        gap = parseFloat(window.getComputedStyle(track).columnGap || window.getComputedStyle(track).gap) || 0;
+      }
+      return firstSlide.getBoundingClientRect().width + gap;
+    }
+
+    function partnerUpdateNav() {
+      var maxLeft = partnerSlider.scrollWidth - partnerSlider.clientWidth;
+      var left = partnerSlider.scrollLeft;
+      partnerPrev.disabled = left <= 1;
+      partnerNext.disabled = left >= maxLeft - 1;
+    }
+
+    function partnerScrollBy(delta) {
+      var smooth = window.matchMedia('(prefers-reduced-motion: reduce)').matches === false;
+      partnerSlider.scrollBy({
+        left: delta,
+        behavior: smooth ? 'smooth' : 'auto',
+      });
+    }
+
+    partnerPrev.addEventListener('click', function () {
+      if (partnerPrev.disabled) return;
+      partnerScrollBy(-partnerSliderStep());
+    });
+    partnerNext.addEventListener('click', function () {
+      if (partnerNext.disabled) return;
+      partnerScrollBy(partnerSliderStep());
+    });
+    partnerSlider.addEventListener('scroll', partnerUpdateNav, { passive: true });
+    window.addEventListener('resize', partnerUpdateNav, { passive: true });
+    partnerUpdateNav();
+  }
+
+  var reviewsSlider = document.getElementById('mice-reviews-viewport');
+  var reviewsPrev = document.getElementById('mice-reviews-prev');
+  var reviewsNext = document.getElementById('mice-reviews-next');
+  if (reviewsSlider && reviewsPrev && reviewsNext) {
+    function reviewsSliderStep() {
+      var firstSlide = reviewsSlider.querySelector('.mice-reviews__card');
+      if (!firstSlide) return reviewsSlider.clientWidth;
+      var track = reviewsSlider.querySelector('.mice-reviews__track');
+      var gap = 0;
+      if (track) {
+        gap =
+          parseFloat(
+            window.getComputedStyle(track).columnGap ||
+              window.getComputedStyle(track).gap
+          ) || 0;
+      }
+      return firstSlide.getBoundingClientRect().width + gap;
+    }
+
+    function reviewsUpdateNav() {
+      var maxLeft = reviewsSlider.scrollWidth - reviewsSlider.clientWidth;
+      var left = reviewsSlider.scrollLeft;
+      reviewsPrev.disabled = left <= 1;
+      reviewsNext.disabled = left >= maxLeft - 1;
+    }
+
+    function reviewsScrollBy(delta) {
+      var smooth =
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches ===
+        false;
+      reviewsSlider.scrollBy({
+        left: delta,
+        behavior: smooth ? 'smooth' : 'auto',
+      });
+    }
+
+    reviewsPrev.addEventListener('click', function () {
+      if (reviewsPrev.disabled) return;
+      reviewsScrollBy(-reviewsSliderStep());
+    });
+    reviewsNext.addEventListener('click', function () {
+      if (reviewsNext.disabled) return;
+      reviewsScrollBy(reviewsSliderStep());
+    });
+    reviewsSlider.addEventListener('scroll', reviewsUpdateNav, {
+      passive: true,
+    });
+    window.addEventListener('resize', reviewsUpdateNav, { passive: true });
+    reviewsUpdateNav();
+  }
+
   if (!('IntersectionObserver' in window)) {
     document.querySelectorAll('body.page-mice .reveal').forEach(function (el) {
       el.classList.add('reveal--visible');
