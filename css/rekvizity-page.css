@@ -119,3 +119,204 @@ body.page-rekvizity .card {
     transform: translateY(-2px);
   }
 }
+
+/* Реквизиты: синхронизация с макетом Figma (node 1214:6557) */
+.page-rekvizity {
+  background: #e0e2ea;
+}
+
+.page-rekvizity .rekvizity-block {
+  margin-top: 40px;
+}
+
+.page-rekvizity .rekvizity-block__panel {
+  max-width: 1760px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: none;
+}
+
+.page-rekvizity .rekvizity-block__title,
+.page-rekvizity .rekvizity-block__docs-title,
+.page-rekvizity .rekvizity-block__info,
+.page-rekvizity .rekvizity-doc__caption {
+  color: #3a3a3a;
+}
+
+.page-rekvizity .rekvizity-block__docs {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.page-rekvizity .rekvizity-doc__img-wrap {
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+}
+
+.page-rekvizity .rekvizity-doc__img {
+  display: block;
+  width: 100%;
+  max-height: none;
+  aspect-ratio: 472 / 667;
+  object-fit: cover;
+  background: transparent;
+}
+
+.page-rekvizity .rekvizity-doc__caption {
+  font-size: 20px;
+  line-height: 27px;
+}
+
+@media (min-width: 1025px) {
+  .page-rekvizity .rekvizity-block {
+    margin-top: 80px;
+  }
+
+  .page-rekvizity .rekvizity-block__panel {
+    padding: 80px;
+    border-radius: 40px;
+  }
+
+  .page-rekvizity .rekvizity-block__title {
+    margin: 0 0 21px;
+    font-size: 32px;
+    line-height: 70px;
+    letter-spacing: -1px;
+  }
+
+  .page-rekvizity .rekvizity-block__info {
+    max-width: 1350px;
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  .page-rekvizity .rekvizity-block__company,
+  .page-rekvizity .rekvizity-block__line,
+  .page-rekvizity .rekvizity-block__legal {
+    margin: 0;
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  .page-rekvizity .rekvizity-block__legal {
+    margin-top: 27px;
+  }
+
+  .page-rekvizity .rekvizity-block__docs {
+    margin-top: 21px;
+  }
+
+  .page-rekvizity .rekvizity-block__docs-title {
+    margin: 0 0 21px;
+    font-size: 32px;
+    line-height: 51px;
+    letter-spacing: -1px;
+  }
+
+  .page-rekvizity .rekvizity-block__docs-grid {
+    grid-template-columns: repeat(3, minmax(0, 500px));
+    gap: 28px;
+  }
+
+  .page-rekvizity .rekvizity-doc__caption {
+    margin-top: 22px;
+  }
+}
+
+@media (max-width: 1184px) {
+  .page-rekvizity .rekvizity-block__panel {
+    padding: 56px 40px;
+    border-radius: 30px;
+  }
+
+  .page-rekvizity .rekvizity-block__title {
+    margin: 0 0 24px;
+    font-size: 32px;
+    line-height: 35px;
+    letter-spacing: -1px;
+    text-align: left;
+  }
+
+  .page-rekvizity .rekvizity-block__info,
+  .page-rekvizity .rekvizity-block__company,
+  .page-rekvizity .rekvizity-block__line,
+  .page-rekvizity .rekvizity-block__legal {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.5px;
+    text-align: left;
+  }
+
+  .page-rekvizity .rekvizity-block__docs {
+    margin-top: 24px;
+  }
+
+  .page-rekvizity .rekvizity-block__docs-title {
+    margin: 0 0 24px;
+    font-size: 32px;
+    line-height: 35px;
+    letter-spacing: -1px;
+    text-align: left;
+  }
+
+  .page-rekvizity .rekvizity-block__docs-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    max-width: none;
+  }
+
+  .page-rekvizity .rekvizity-doc__caption {
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .rekvizity-main {
+    padding: 24px 10px 48px;
+  }
+  .page-rekvizity .rekvizity-block {
+    margin-top: 40px;
+  }
+
+  .page-rekvizity .rekvizity-block__panel {
+    padding: 40px;
+    border-radius: 30px;
+  }
+
+  .page-rekvizity .rekvizity-block__title {
+    margin: 0 0 40px;
+    letter-spacing: -0.5px;
+  }
+
+  .page-rekvizity .rekvizity-block__docs {
+    margin-top: 26px;
+  }
+
+  .page-rekvizity .rekvizity-block__docs-title {
+    margin: 0 0 40px;
+    line-height: 29px;
+  }
+}
+
+@media (max-width: 650px) {
+  .page-rekvizity .rekvizity-block__docs-grid {
+    grid-template-columns: 1fr;
+    max-width: 249px;
+    margin: 0;
+    justify-items: start;
+  }
+
+  .page-rekvizity .rekvizity-doc {
+    width: 100%;
+    margin: 0;
+  }
+  .page-rekvizity .rekvizity-doc__caption {
+    font-size: 18px;
+  }
+}
