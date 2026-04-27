@@ -313,6 +313,29 @@ a.contacts-card:focus-visible {
   color: #3a3a3a;
 }
 
+.page-contacts .rekvizity-doc__caption {
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.page-contacts .rekvizity-doc__img-wrap {
+  background: transparent;
+}
+
+.page-contacts .rekvizity-doc {
+  max-width: 480px;
+}
+
+.page-contacts .rekvizity-doc__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  aspect-ratio: 472 / 667;
+  object-fit: cover;
+  background: transparent;
+}
+
 @media (min-width: 1025px) {
   .page-contacts .rekvizity-block {
     margin-top: 80px;
@@ -360,7 +383,7 @@ a.contacts-card:focus-visible {
   }
 
   .page-contacts .rekvizity-block__docs-grid {
-    grid-template-columns: repeat(3, minmax(0, 472px));
+    grid-template-columns: repeat(3, minmax(0, 430px));
     gap: 40px;
   }
 
@@ -371,11 +394,6 @@ a.contacts-card:focus-visible {
     border: 0;
   }
 
-  .page-contacts .rekvizity-doc__img {
-    max-height: none;
-    background: transparent;
-  }
-
   .page-contacts .rekvizity-doc__caption {
     margin-top: 22px;
     font-size: 20px;
@@ -383,11 +401,70 @@ a.contacts-card:focus-visible {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1184px) {
   .contacts-landing__cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .contacts-card--social {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 24px;
+    min-height: 170px !important;
+  }
+
+  .contacts-card {
+    min-height: 260px;
+    padding: 32px;
+    border-radius: 30px;
+  }
+
+  .contacts-card__label,
+  .contacts-card__value {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.5px;
+  }
+
+  .contacts-card--social .contacts-card__label {
+    margin: 0;
+    flex: 0 1 260px;
+  }
+
+  .contacts-card__social-inner {
+    flex: 1 1 auto;
+    align-items: flex-end;
+    gap: 12px;
+    width: auto;
+    margin-top: 0;
+  }
+
+  .contacts-card__channel-pill {
+    min-height: 36px;
+    padding: 0 14px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    align-self: flex-end;
+    margin-left: auto;
+    max-width: 420px;
+  }
+
+  .page-contacts .rekvizity-block__info {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.5px;
+  }
+
+  .page-contacts .rekvizity-block__docs-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: none;
+  }
+}
+
+@media (max-width: 900px) {
   .contacts-card {
     min-height: 0;
   }
@@ -420,8 +497,7 @@ a.contacts-card:focus-visible {
   }
 
   .contacts-main {
-    padding-top: 24px;
-    padding-bottom: 48px;
+    padding: 24px 10px 48px;
   }
 
   .page-contacts .rekvizity-block {
@@ -476,17 +552,49 @@ a.contacts-card:focus-visible {
   }
 
   .page-contacts .rekvizity-block__docs-grid {
-    grid-template-columns: 1fr;
     gap: 20px;
-    max-width: 249px;
     margin: 0;
   }
 
   .page-contacts .rekvizity-doc__caption {
     margin-top: 16px;
-    font-size: 18px;
-    line-height: 23px;
+    font-size: 20px;
+    line-height: 27px;
     text-align: left;
+  }
+}
+
+@media (max-width: 650px) {
+  .contacts-landing__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .contacts-card--social {
+    grid-column: auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 14px;
+  }
+
+  .contacts-card--social .contacts-card__label {
+    flex: none;
+  }
+
+  .contacts-card__social-inner {
+    width: 100%;
+    align-items: stretch;
+    margin-top: auto;
+  }
+
+  .contacts-card__channel-pill {
+    align-self: flex-start;
+    margin-left: 0;
+  }
+
+  .page-contacts .rekvizity-block__docs-grid {
+    grid-template-columns: 1fr;
+    max-width: 249px;
   }
 }
 
