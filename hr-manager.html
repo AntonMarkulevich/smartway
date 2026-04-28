@@ -201,15 +201,7 @@
             <p class="hr-manager-hero__subtitle">Всё для поездок в одном окне</p>
             <a class="hr-manager-hero__cta" href="https://smartway.today/">
               <span class="hr-manager-hero__cta-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M5 12h12m0 0l-4-4m4 4l-4 4"
-                    stroke="#2a2a2a"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                <img class="hr-manager-hero__cta-arrow" src="img/arrow.svg" alt="" width="20" height="20" loading="eager" decoding="async">
               </span>
               <span class="hr-manager-hero__cta-label">Попробовать бесплатно</span>
             </a>
@@ -239,25 +231,75 @@
             Бронируйте так, как привыкли в вашей компании
           </p>
         </header>
-        <div class="hr-manager-tickets__card">
-          <div class="hr-manager-tickets__card-layout">
-            <div class="hr-manager-tickets__copy">
-              <h3 class="hr-manager-tickets__title">Сотрудники покупают сами в рамках лимитов</h3>
-              <p class="hr-manager-tickets__text">
-                Компания настраивает тревел-политики&nbsp;— сотрудники покупают билеты или бронируют отели в рамках лимитов на стоимость или класс поездок.
-              </p>
-              <a class="hr-manager-tickets__cta" href="https://smartway.today/">Узнать подробнее</a>
-            </div>
-            <div class="hr-manager-tickets__visual">
-              <img
-                class="hr-manager-tickets__img"
-                src="img/hrblock1.png"
-                alt="Интерфейс Smartway: настройка тревел-политики и контроль лимитов при бронировании"
-                width="1122"
-                height="639"
-                loading="lazy"
-                decoding="async"
-              />
+        <div class="hr-manager-tickets__slider" data-hr-tickets-slider>
+          <div class="hr-manager-tickets__viewport">
+            <div class="hr-manager-tickets__track">
+              <article class="hr-manager-tickets__card hr-manager-tickets__slide" aria-label="Слайд 1 из 3">
+                <div class="hr-manager-tickets__card-layout">
+                  <div class="hr-manager-tickets__copy">
+                    <h3 class="hr-manager-tickets__title">Сотрудники покупают сами в рамках лимитов</h3>
+                    <p class="hr-manager-tickets__text">
+                      Компания настраивает тревел-политики&nbsp;— сотрудники покупают билеты или бронируют отели в&nbsp;рамках лимитов на&nbsp;стоимость или класс поездок.
+                    </p>
+                    <a class="hr-manager-tickets__cta" href="https://smartway.today/">Узнать подробнее</a>
+                  </div>
+                  <div class="hr-manager-tickets__visual">
+                    <img
+                      class="hr-manager-tickets__img"
+                      src="img/hr-manager-slider-1.png"
+                      alt="Интерфейс Smartway: настройка тревел-политики и контроль лимитов при бронировании"
+                      width="1122"
+                      height="639"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+              </article>
+              <article class="hr-manager-tickets__card hr-manager-tickets__slide" aria-label="Слайд 2 из 3">
+                <div class="hr-manager-tickets__card-layout">
+                  <div class="hr-manager-tickets__copy">
+                    <h3 class="hr-manager-tickets__title">Сотрудники бронируют услуги, но не покупают</h3>
+                    <p class="hr-manager-tickets__text">
+                      Вы даете доступ сотрудникам&nbsp;— они сами выбирают билеты и отели. Руководитель подтверждает оплату.
+                    </p>
+                    <a class="hr-manager-tickets__cta" href="https://smartway.today/">Узнать подробнее</a>
+                  </div>
+                  <div class="hr-manager-tickets__visual">
+                    <img
+                      class="hr-manager-tickets__img"
+                      src="img/hr-manager-slider-2.png"
+                      alt="Интерфейс Smartway: бронирование билетов и отелей с подтверждением оплаты"
+                      width="1122"
+                      height="639"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+              </article>
+              <article class="hr-manager-tickets__card hr-manager-tickets__slide hr-manager-tickets__slide--text" aria-label="Слайд 3 из 3">
+                <div class="hr-manager-tickets__card-layout">
+                  <div class="hr-manager-tickets__copy">
+                    <h3 class="hr-manager-tickets__title">Администратор бронирует поездки для всех сотрудников</h3>
+                    <p class="hr-manager-tickets__text">
+                      Доступ к системе есть только у&nbsp;тревел-менеджера или другого ответственного за поездки. Он&nbsp;выбирает и оплачивает услуги для сотрудников.
+                    </p>
+                    <a class="hr-manager-tickets__cta" href="https://smartway.today/">Узнать подробнее</a>
+                  </div>
+                  <div class="hr-manager-tickets__visual">
+                    <img
+                      class="hr-manager-tickets__img hr-manager-tickets__img--admin"
+                      src="img/hr-manager-slider-3.png"
+                      alt="Интерфейс Smartway: согласование поездок и фактических расходов"
+                      width="913"
+                      height="340"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </div>
@@ -266,13 +308,13 @@
 
     <section class="hr-manager-why reveal reveal--left" aria-labelledby="hr-manager-why-heading">
       <div class="hr-manager-why__inner">
-        <h2 id="hr-manager-why-heading" class="hr-manager-why__heading">Почему HR-менеджеры выбирают Smartway</h2>
+        <h2 id="hr-manager-why-heading" class="hr-manager-why__heading">  ему HR-менеджеры выбирают Smartway</h2>
         <ul class="hr-manager-why__list">
           <li class="hr-manager-why__item">
             <article class="hr-manager-why__card">
               <span class="hr-manager-why__dot" aria-hidden="true">
                 <svg class="hr-manager-why__dot-icon hr-manager-why__dot-icon--check" width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false">
-                  <circle cx="16" cy="16" r="9.5" stroke="#ffffff" stroke-width="1.75" fill="none"/>
+                  <circle cx="16" cy="16" r="9.5" stroke="#ffffff" stroke-width="1.75" f  ill="none"/>
                   <path
                     d="M11 16.2 14.8 20 22 12.5"
                     stroke="#ffffff"
@@ -366,7 +408,6 @@
                   Специалисты на связи круглосуточно и без выходных. Если возникает вопрос или проблема — напишите в чат или позвоните.
                 </p>
               </div>
-              <div class="accountant-avans-card__wide-visual">
                 <img
                   src="img/hrphone.png"
                   class="accountant-avans-card__wide-img"
@@ -376,7 +417,6 @@
                   loading="lazy"
                   decoding="async"
                 >
-              </div>
             </div>
           </article>
 
@@ -502,8 +542,8 @@
         <ul class="hr-manager-team-benefits__grid" role="list">
           <li class="hr-manager-team-benefits__item">
             <span class="hr-manager-team-benefits__check" aria-hidden="true">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.5 7.5 5.5 10.5 11.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 3.72 4.42 7 11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </span>
             <div class="hr-manager-team-benefits__body">
@@ -513,8 +553,8 @@
           </li>
           <li class="hr-manager-team-benefits__item">
             <span class="hr-manager-team-benefits__check" aria-hidden="true">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.5 7.5 5.5 10.5 11.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 3.72 4.42 7 11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </span>
             <div class="hr-manager-team-benefits__body">
@@ -524,8 +564,8 @@
           </li>
           <li class="hr-manager-team-benefits__item">
             <span class="hr-manager-team-benefits__check" aria-hidden="true">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.5 7.5 5.5 10.5 11.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 3.72 4.42 7 11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </span>
             <div class="hr-manager-team-benefits__body">
@@ -535,8 +575,8 @@
           </li>
           <li class="hr-manager-team-benefits__item">
             <span class="hr-manager-team-benefits__check" aria-hidden="true">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.5 7.5 5.5 10.5 11.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 3.72 4.42 7 11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </span>
             <div class="hr-manager-team-benefits__body">
@@ -546,8 +586,8 @@
           </li>
           <li class="hr-manager-team-benefits__item">
             <span class="hr-manager-team-benefits__check" aria-hidden="true">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.5 7.5 5.5 10.5 11.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 3.72 4.42 7 11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </span>
             <div class="hr-manager-team-benefits__body">
@@ -557,8 +597,8 @@
           </li>
           <li class="hr-manager-team-benefits__item">
             <span class="hr-manager-team-benefits__check" aria-hidden="true">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.5 7.5 5.5 10.5 11.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 3.72 4.42 7 11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </span>
             <div class="hr-manager-team-benefits__body">
@@ -621,8 +661,8 @@
                     class="tm-consult-cta__call-img"
                     src="img/hero-call.png"
                     alt="Консультант Smartway на видеосвязи"
-                    width="320"
-                    height="400"
+                    width="505"
+                    height="517"
                     loading="lazy"
                     decoding="async"
                   />
@@ -753,7 +793,7 @@
               </div>
             </div>
             <div class="hr-manager-experts-banner__visual">
-              <img src="img/hrphoneblock2.png" alt="Пост в телеграм-канале «Командировки. Сегодня» в приложении Smartway" width="300" height="575" loading="lazy" decoding="async">
+              <img src="img/hrphoneblock2.png" alt="Пост в телеграм-канале «Командировки. Сегодня» в приложении Smartway" width="906" height="720" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
@@ -766,7 +806,7 @@
           <div class="tm-try-free-cta__layout tm-try-free-cta__layout--hr">
             <div class="tm-try-free-cta__left">
               <h2 id="tm-try-free-cta-title" class="tm-try-free-cta__title">
-                <span class="tm-try-free-cta__title-text tm-try-free-cta__title-text--desktop">Попробуйте Smartway бесплатно</span>
+                <span class="tm-try-free-cta__title-text tm-try-free-cta__title-text--desktop">Выведите организацию командировок на новый уровень</span>
                 <span class="tm-try-free-cta__title-text tm-try-free-cta__title-text--mobile">Выведите организацию командировок на новый уровень</span>
               </h2>
               <p class="tm-try-free-cta__lead">
@@ -797,7 +837,7 @@
                     name="company"
                     required
                     autocomplete="organization"
-                    placeholder="Название компании"
+                    placeholder="Название компании*"
                   />
                 </div>
                 <div class="tm-try-free-cta__field tm-try-free-cta__field--dropdown">

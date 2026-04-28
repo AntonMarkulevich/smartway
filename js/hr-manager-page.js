@@ -36,6 +36,50 @@
     });
   });
 
+  document.querySelectorAll('[data-hr-tickets-slider]').forEach(function (slider) {
+    var track = slider.querySelector('.hr-manager-tickets__track');
+    var slides = Array.prototype.slice.call(slider.querySelectorAll('.hr-manager-tickets__slide'));
+    var viewport = slider.querySelector('.hr-manager-tickets__viewport');
+    var offset = 0;
+
+    if (!track || !viewport || slides.length < 2) return;
+
+    var wheelSpeed = 2.4;
+
+    function getMaxOffset() {
+      return Math.max(0, track.scrollWidth - viewport.clientWidth);
+    }
+
+    function render() {
+      track.style.transform = 'translateX(' + offset * -1 + 'px)';
+    }
+
+    viewport.addEventListener(
+      'wheel',
+      function (e) {
+        var maxOffset = getMaxOffset();
+        var delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+        var nextOffset = Math.max(0, Math.min(maxOffset, offset + delta * wheelSpeed));
+        var canMoveForward = delta > 0 && offset < maxOffset;
+        var canMoveBackward = delta < 0 && offset > 0;
+
+        if (!canMoveForward && !canMoveBackward) return;
+
+        e.preventDefault();
+        offset = nextOffset;
+        window.requestAnimationFrame(render);
+      },
+      { passive: false }
+    );
+
+    window.addEventListener('resize', function () {
+      offset = Math.min(offset, getMaxOffset());
+      render();
+    });
+
+    render();
+  });
+
   if (!('IntersectionObserver' in window)) {
     document.querySelectorAll('body.page-hr-manager .reveal').forEach(function (el) {
       el.classList.add('reveal--visible');

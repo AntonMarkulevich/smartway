@@ -4769,7 +4769,6 @@ main button,
 }
 
 .tm-consult-cta__inner {
-  max-width: 1180px;
   margin: 0 auto;
 }
 
@@ -10667,7 +10666,6 @@ main button,
 /* ——— Полоса логотипов клиентов (на всю ширину) ——— */
 .trust-strip-block {
   width: 100%;
-  max-width: 100vw;
   margin: 0;
   padding: 22px var(--container-padding-x);
   box-sizing: border-box;
@@ -10675,7 +10673,6 @@ main button,
 }
 
 .trust-strip-block__inner {
-  max-width: 1180px;
   margin: 0 auto;
 }
 
@@ -10712,7 +10709,6 @@ main button,
 /* ——— Карточки: 1С, Сколково, Минцифры ——— */
 .trust-credentials-block {
   width: 100%;
-  max-width: 100vw;
   margin: 0;
   padding: 40px var(--container-padding-x) 48px;
   box-sizing: border-box;
