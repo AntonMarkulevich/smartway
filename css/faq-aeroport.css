@@ -2,15 +2,59 @@
 
 body.faq-aeroport-page .komand-breadcrumb {
   font-family: "Golos Text", "Manrope", system-ui, sans-serif;
-  font-size: clamp(15px, 2.2vw, 20px);
+  font-size: 20px;
   font-weight: 400;
-  line-height: 1.45;
+  line-height: 29px;
   letter-spacing: -0.025em;
+  color: #000;
+  margin: 0;
+  padding: 0 clamp(16px, 4.17vw, 80px);
+  max-width: none;
+  box-sizing: border-box;
+}
+
+body.faq-aeroport-page .komand-breadcrumb__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2em;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 29px;
+  color: #000;
+  max-width: 695px;
+}
+
+body.faq-aeroport-page .komand-breadcrumb__sep {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+body.faq-aeroport-page .komand-breadcrumb__sep .btn__arrow {
+  width: 14px;
+  height: 14px;
 }
 
 body.faq-aeroport-page .komand-breadcrumb a,
 body.faq-aeroport-page .komand-breadcrumb__current {
   color: #000;
+}
+
+body.faq-aeroport-page .komand-layout__segment--bottom {
+  padding-top: 40px;
+}
+
+body.faq-aeroport-page .komand-main {
+  margin: 0;
+  max-width: none;
+  width: 100%;
+  padding: 0 0 80px;
+  box-sizing: border-box;
 }
 
 body.faq-aeroport-page .faqzp-telegram {
@@ -23,7 +67,7 @@ body.faq-aeroport-page .faqzp-telegram {
   flex-direction: column;
   gap: 40px;
   margin: 0 0 8px;
-  padding: 0 clamp(20px, 5vw, 80px);
+  padding: 0 clamp(17px, 4.17vw, 80px);
   box-sizing: border-box;
 }
 
@@ -35,7 +79,7 @@ body.faq-aeroport-page .faqzp-telegram {
 .faqap-hero__row {
   display: flex;
   flex-direction: row;
-  align-items: stretch;
+  align-items: flex-start;
   gap: 19px;
   margin: 0 auto;
 }
@@ -44,30 +88,31 @@ body.faq-aeroport-page .faqzp-telegram {
   background: #e0e2ea;
   border-radius: clamp(36px, 8vw, 58px);
   box-sizing: border-box;
-  min-height: clamp(300px, 48vw, 487px);
+  min-height: clamp(350px, 55vw, 588px);
 }
 
 .faqap-hero__card--text {
-  flex: 1 1 60%;
+  flex: 1 1 56%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(36px, 7vw, 92px) clamp(28px, 6vw, 92px);
+  padding: clamp(28px, 5.6vw, 78px) clamp(24px, 5.5vw, 86px)
+    clamp(24px, 4.2vw, 64px);
   min-width: 0;
 }
 
 .faqap-hero__card--visual {
-  flex: 0 0 clamp(240px, 31.5%, 534px);
+  flex: 0 0 clamp(280px, 34%, 640px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(32px, 5vw, 48px) clamp(24px, 4vw, 40px);
+  padding: clamp(24px, 4.2vw, 42px) clamp(20px, 3.8vw, 34px);
 }
 
 .faqap-hero__title {
   margin: 0 0 clamp(14px, 2vw, 28px);
   font-family: "Golos Text", "Manrope", system-ui, sans-serif;
-  font-size: clamp(30px, 6.5vw, 72px);
+  font-size: clamp(30px, 5.5vw, 72px);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.014em;
@@ -94,7 +139,7 @@ body.faq-aeroport-page .faqzp-telegram {
 .faqap-hero__figure {
   margin: 0;
   width: 100%;
-  max-width: 344px;
+  max-width: 440px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,8 +168,49 @@ body.faq-aeroport-page .faqzp-telegram {
   margin: 0;
 }
 
-/* Мобилка: одна светлая карточка — заголовок, лид, иллюстрация снизу (макет) */
-@media (max-width: 959px) {
+@media (max-width: 767px) {
+  body.faq-aeroport-page .komand-breadcrumb,
+  body.faq-aeroport-page .komand-breadcrumb__list,
+  body.faq-aeroport-page .komand-breadcrumb__list a,
+  body.faq-aeroport-page .komand-breadcrumb__current {
+    color: #3A3A3A70;
+    font-size: clamp(12px, 3.8vw, 18px);
+  }
+  body.faq-aeroport-page .komand-breadcrumb {
+    margin-top: 15px;
+  }
+  .faqap-answer {
+    color: #3A3A3A70;
+  }
+}
+/* Мобилка: одна светлая кар Хточка — заголовок, лид, иллюстрация снизу (макет) */
+@media (max-width: 710px) {
+  .faqap-hero__title br {
+    display: none;
+  }
+
+  body.faq-aeroport-page .komand-breadcrumb {
+    font-size: clamp(12px, 3.8vw, 18px);
+    line-height: 1.35;
+    padding-inline: max(16px, 4vw);
+    color: #3A3A3A70 !important;
+  }
+
+  body.faq-aeroport-page .komand-breadcrumb__list {
+    flex-wrap: wrap;
+    line-height: 1.35;
+    max-width: 695px;
+  }
+
+  body.faq-aeroport-page .komand-breadcrumb__list a,
+  body.faq-aeroport-page .komand-breadcrumb__current {
+    white-space: nowrap;
+  }
+
+  body.faq-aeroport-page .komand-layout__segment--bottom {
+    padding-top: 24px;
+  }
+
   .faqap-top {
     padding-inline: max(16px, 4vw);
     gap: clamp(24px, 5vw, 40px);
@@ -135,8 +221,8 @@ body.faq-aeroport-page .faqzp-telegram {
     align-items: stretch;
     gap: 0;
     margin: 0;
-    background: #f0f0f0;
-    border-radius: clamp(26px, 6.5vw, 40px);
+    background: #E0E2EA;
+    border-radius: 58px;
     padding: clamp(20px, 5vw, 28px) clamp(18px, 4.5vw, 24px) clamp(18px, 4.5vw, 24px);
     box-sizing: border-box;
   }
@@ -189,29 +275,26 @@ body.faq-aeroport-page .faqzp-telegram {
 
   .faqap-hero__figure img {
     width: 100%;
-    max-width: min(320px, 100%);
+    max-width: min(270px, 100%);
     margin: 0 auto;
   }
 
   .faqap-answer {
     font-weight: 400;
-    color: #444;
   }
 }
 
 /* ——— Контент статьи, Figma 1218:38012 ——— */
 .faqap-content {
-  padding: clamp(40px, 8vw, 60px) clamp(20px, 5vw, 80px) 15px;
+  padding: 0 clamp(16px, 4.17vw, 80px);
   margin: 0;
   box-sizing: border-box;
 }
 
 .faqap-content__inner {
-  max-width: 1360px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: clamp(48px, 10vw, 76px);
+  gap: 76px;
   font-family: "Golos Text", "Manrope", system-ui, sans-serif;
   color: #3a3a3a;
 }
@@ -224,17 +307,18 @@ body.faq-aeroport-page .faqzp-telegram {
 
 .faqap-block__title {
   margin: 0;
-  font-size: clamp(26px, 3.5vw, 32px);
+  font-size: 32px;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 70px;
   letter-spacing: -0.03125em;
   color: #3a3a3a;
 }
 
 .faqap-block__body {
-  font-size: clamp(17px, 1.9vw, 20px);
+  max-width: 1431px;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 35px;
 }
 
 .faqap-block__body > p {
@@ -288,16 +372,18 @@ body.faq-aeroport-page .faqzp-telegram {
 
 .faqap-author {
   margin: 0;
-  padding: 0 clamp(20px, 5vw, 80px);
+  padding: 0 clamp(17px, 4.17vw, 80px);
   box-sizing: border-box;
 }
 
 .faqap-feature {
   display: grid;
-  grid-template-columns: minmax(260px, min(100%, 566px)) 1fr;
-  gap: clamp(32px, 5vw, 60px);
-  align-items: center;
-  width: 100%;
+  grid-template-columns: minmax(260px, 543px) minmax(320px, 693px);
+  column-gap: clamp(24px, 4vw, 62px);
+  align-items: end;
+  width: 1300px;
+  min-height: 750px;
+  max-width: 100%;
 }
 
 .faqap-feature__media {
@@ -312,9 +398,11 @@ body.faq-aeroport-page .faqzp-telegram {
 
 .faqap-feature__media::after {
   content: "";
-  width: 3px;
+  border-radius: 999px;
+  width: 5px;
   flex-shrink: 0;
   align-self: stretch;
+  margin-block: 7.5%;
   background: #d44333;
 }
 
@@ -324,7 +412,7 @@ body.faq-aeroport-page .faqzp-telegram {
   min-width: 0;
   width: 100%;
   max-width: 543px;
-  aspect-ratio: 543 / 752;
+  aspect-ratio: 543 / 750;
   background: #0f0f0f;
 }
 
@@ -338,25 +426,28 @@ body.faq-aeroport-page .faqzp-telegram {
 }
 
 .faqap-feature__text {
+  width: 100%;
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: clamp(28px, 6vw, 48px);
-  justify-content: center;
+  justify-content: space-between;
+  min-height: clamp(360px, 38vw, 497px);
+  gap: 24px;
 }
 
 .faqap-feature__headline {
   margin: 0;
-  font-size: clamp(32px, 7vw, 72px);
+  font-size: clamp(40px, 4.9vw, 72px);
   font-weight: 700;
-  line-height: 1.26;
+  line-height: 1.12;
   letter-spacing: -0.014em;
   color: #3a3a3a;
 }
 
 .faqap-feature__byline {
   margin: 0;
-  font-size: clamp(17px, 1.9vw, 20px);
+  max-width: 414px;
+  font-size: clamp(17px, 1.35vw, 20px);
   font-weight: 400;
   line-height: 1.75;
   color: #3a3a3a;
@@ -364,13 +455,46 @@ body.faq-aeroport-page .faqzp-telegram {
 
 @media (max-width: 959px) {
   .faqap-feature {
+    grid-template-columns: minmax(250px, 0.9fr) minmax(300px, 1.1fr);
+    width: 100%;
+    min-height: 0;
+  }
+
+  .faqap-feature__video {
+    max-width: min(100%, 470px);
+  }
+}
+
+@media (max-width: 767px) {
+  .faqap-content {
+    padding-inline: max(16px, 4vw);
+  }
+
+  .faqap-content__inner {
+    gap: clamp(44px, 9vw, 60px);
+  }
+
+  .faqap-block__title {
+    font-size: clamp(26px, 5.8vw, 32px);
+    line-height: 1.2;
+  }
+
+  .faqap-block__body {
+    max-width: none;
+    font-size: clamp(17px, 4vw, 20px);
+    line-height: 1.6;
+  }
+
+  .faqap-feature {
     grid-template-columns: 1fr;
+    width: 100%;
+    column-gap: 0;
+    row-gap: 28px;
   }
 
    .faqap-feature__media {
     display: block;
     padding-bottom: 20px;
-    border-bottom: 3px solid #d44333;
   }
 
   .faqap-feature__media::after {
@@ -382,5 +506,23 @@ body.faq-aeroport-page .faqzp-telegram {
     max-width: min(100%, 543px);
     margin-inline: auto;
     aspect-ratio: 543 / 752;
+  }
+
+  .faqap-feature__text {
+    width: 100%;
+    min-height: 0;
+    gap: 18px;
+    justify-content: flex-start;
+  }
+
+  .faqap-feature__headline {
+    font-size: clamp(38px, 10vw, 56px);
+    line-height: 1.12;
+  }
+
+  .faqap-feature__byline {
+    max-width: none;
+    font-size: clamp(17px, 4vw, 20px);
+    line-height: 1.6;
   }
 }
