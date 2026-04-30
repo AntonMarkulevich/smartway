@@ -5,9 +5,9 @@ html:has(body.page-rates) {
 }
 
 .page-rates {
-  --rates-accent: #d64b36;
-  --rates-card-bg: #f4f6f8;
-  --rates-text-muted: #6b6b6b;
+  --rates-accent: #d44333;
+  --rates-card-bg: #f2f3f6;
+  --rates-text-muted: #3a3a3a;
   background: #ffffff;
   overflow-x: hidden;
 }
@@ -18,25 +18,26 @@ html:has(body.page-rates) {
 }
 
 .rates-tariffs {
-  padding: 48px var(--container-padding-x) 72px;
+  min-height: 914px;
+  padding: 80px var(--container-padding-x);
   box-sizing: border-box;
 }
 
 .rates-tariffs__inner {
-  max-width: 1180px;
+  max-width: 1760px;
   margin: 0 auto;
 }
 
 .rates-tariffs__head {
   text-align: center;
-  margin-bottom: 40px;
-  max-width: 52rem;
+  margin-bottom: 20px;
+  max-width: 721px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .rates-tariffs__title {
-  margin: 0 0 14px;
+  margin: 0 0 20px;
   font-family: var(--font-main);
   font-weight: 700;
   font-size: clamp(30px, 4vw, 40px);
@@ -57,17 +58,21 @@ html:has(body.page-rates) {
 
 .rates-tariffs__subtitle {
   margin: 0;
+  max-width: 518px;
+  margin-left: auto;
+  margin-right: auto;
   font-family: var(--font-main);
   font-weight: 400;
-  font-size: clamp(15px, 1.9vw, 17px);
-  line-height: 1.5;
-  color: var(--rates-text-muted);
+  font-size: 20px;
+  line-height: 27px;
+  color: #3a3a3a;
 }
 
 .rates-tariffs__grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(3, 463px);
+  gap: 30px;
+  justify-content: center;
   align-items: stretch;
 }
 
@@ -75,24 +80,31 @@ html:has(body.page-rates) {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  padding: 28px 26px 26px;
+  width: 463px;
+  min-height: 549px;
+  padding: 40px;
   background: var(--rates-card-bg);
-  border-radius: 24px;
+  border-radius: 30px;
   box-sizing: border-box;
 }
 
 .rates-card__badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   align-self: flex-start;
-  margin-bottom: 18px;
-  padding: 7px 12px;
+  min-width: 185px;
+  min-height: 38px;
+  margin-bottom: 22px;
+  padding: 4px 19px 5px;
   font-family: var(--font-main);
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  border-radius: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: -0.5px;
+  text-transform: none;
+  border-radius: 50px;
+  box-sizing: border-box;
 }
 
 .rates-card__badge--dark {
@@ -102,17 +114,26 @@ html:has(body.page-rates) {
 
 .rates-card__badge--muted {
   color: #3a3a3a;
-  background: #e8eaee;
+  background: rgba(58, 58, 58, 0.09);
+}
+
+.rates-card:nth-child(1) .rates-card__badge,
+.rates-card:nth-child(2) .rates-card__badge {
+  text-transform: uppercase;
+}
+
+.rates-card:nth-child(3) .rates-card__badge {
+  min-width: 259px;
 }
 
 .rates-card__price {
-  margin: 0 0 12px;
+  margin: 0 0 22px;
   font-family: var(--font-main);
   font-weight: 700;
-  font-size: clamp(18px, 2.2vw, 22px);
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-  color: #1a1a1a;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: -0.5px;
+  color: #3a3a3a;
 }
 
 .rates-card__price--accent {
@@ -120,19 +141,21 @@ html:has(body.page-rates) {
 }
 
 .rates-card__desc {
-  margin: 0 0 20px;
+  margin: 0 0 22px;
   font-family: var(--font-main);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--rates-text-muted);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: -0.5px;
+  color: #3a3a3a;
 }
 
 .rates-card__divider {
   height: 0;
-  margin: 0 0 18px;
+  width: 333px;
+  margin: 0 0 21px;
   border: 0;
-  border-top: 1px solid #dce0e6;
+  border-top: 1px solid rgba(0, 0, 0, 0.27);
 }
 
 .rates-card__list {
@@ -140,10 +163,11 @@ html:has(body.page-rates) {
   padding: 0;
   list-style: none;
   font-family: var(--font-main);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #1a1a1a;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: -0.5px;
+  color: #3a3a3a;
 }
 
 .rates-card__list li + li {
@@ -157,7 +181,7 @@ html:has(body.page-rates) {
   width: 100%;
   margin-top: auto;
   flex-shrink: 0;
-  padding-top: 8px;
+  padding-top: 22px;
 }
 
 .rates-card__btn {
@@ -165,16 +189,18 @@ html:has(body.page-rates) {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 15px 20px;
+  min-height: 91px;
+  padding: 24px 20px;
   font-family: var(--font-main);
-  font-weight: 600;
-  font-size: 15px;
-  line-height: 1.2;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: -0.5px;
   text-align: center;
   text-decoration: none;
   color: #ffffff;
   background: var(--rates-accent);
-  border-radius: 999px;
+  border-radius: 50px;
   box-sizing: border-box;
   transition:
     color 0.2s ease,
@@ -196,26 +222,41 @@ html:has(body.page-rates) {
 }
 
 .rates-card__fineprint {
-  margin: 22px 0 0;
+  margin: 21px 0 0;
   font-family: var(--font-main);
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.45;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.5px;
   text-align: center;
-  color: #8f8f8f;
+  color: #3a3a3a;
 }
 
 /* Резерв под двустрочную сноску в 1-й и 2-й карточках — кнопки на одной линии */
 .rates-card__fineprint--spacer {
-  margin-top: 22px;
-  min-height: calc(2 * 1.45 * 12px);
+  margin-top: 21px;
+  min-height: 57px;
   margin-bottom: 0;
   visibility: hidden;
   user-select: none;
   pointer-events: none;
 }
 
+@media (max-width: 1600px) and (min-width: 961px) {
+  .rates-tariffs__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .rates-card {
+    width: auto;
+  }
+}
+
 @media (max-width: 960px) {
+  .rates-tariffs {
+    min-height: 0;
+  }
+
   .rates-tariffs__grid {
     grid-template-columns: 1fr;
     max-width: 440px;
@@ -224,6 +265,15 @@ html:has(body.page-rates) {
 
   .rates-tariffs__head {
     margin-bottom: 32px;
+  }
+
+  .rates-card {
+    width: 100%;
+    min-height: 0;
+  }
+
+  .rates-card__divider {
+    width: 100%;
   }
 }
 
@@ -240,25 +290,26 @@ html:has(body.page-rates) {
 
 /* ——— Секция: заголовок + карточки + тёмный CTA ——— */
 .rates-tariff-suite {
-  padding: 48px var(--container-padding-x) 64px;
+  padding: 24px var(--container-padding-x) 64px;
   background: #ffffff;
   box-sizing: border-box;
 }
 
 .rates-tariff-suite__inner {
-  max-width: 1180px;
+  max-width: 1760px;
   margin: 0 auto;
 }
 
 .rates-tariff-suite__title {
-  margin: 0 0 44px;
+  margin: 0 auto 40px;
+  max-width: 1248px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: clamp(28px, 3.8vw, 44px);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  font-size: 72px;
+  line-height: 70px;
+  letter-spacing: -3px;
   text-align: center;
-  color: #1a1a1a;
+  color: #3a3a3a;
 }
 
 .rates-tariff-suite__title--stack-mobile .rates-tariff-suite__title-line {
@@ -266,37 +317,92 @@ html:has(body.page-rates) {
 }
 
 .page-rates .rates-tariff-suite__cards.payment-flex-block {
-  padding: 0 0 40px;
+  padding: 0;
   background: transparent;
 }
 
 .page-rates .rates-tariff-suite__cards .payment-flex-block__inner {
-  max-width: none;
-  margin: 0;
+  max-width: 936px;
+  margin: 0 auto;
+}
+
+.page-rates .payment-flex-block--rates-tariff-perks .payment-flex-block__grid {
+  grid-template-columns: repeat(3, 292px);
+  gap: 30px;
+  align-items: stretch;
+}
+
+.page-rates .payment-flex-block--rates-tariff-perks .payment-flex-card--superviser {
+  width: 292px;
+  height: 280px;
+  min-height: 280px;
+  position: relative;
+}
+
+.page-rates .payment-flex-block--rates-tariff-perks .payment-flex-card__icon {
+  top: 0;
+  width: 87px;
+  height: 87px;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.page-rates .payment-flex-block--rates-tariff-perks .payment-flex-card__icon img {
+  display: block;
+  width: 87px;
+  height: 87px;
 }
 
 /* Карточки с вырезом — как payment-flex-block в superviser.html */
 .page-rates .payment-flex-block--rates-tariff-perks .payment-flex-card__body--superviser {
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: flex-start !important;
   text-align: center !important;
-  padding: 80px 22px 28px !important;
-  min-height: 168px;
+  width: 292px;
+  min-height: 213px;
+  margin-top: 67px;
+  padding: 77px 30px 24px !important;
+  background: #f0f1f5;
+  box-sizing: border-box;
 }
 
 .page-rates .payment-flex-card__rates-text {
   margin: 0;
-  max-width: 17rem;
+  max-width: 234px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.4;
-  color: #2a2a2a;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: -0.5px;
+  color: #3a3a3a;
 }
 
-@media (max-width: 1024px) {
+.rates-personal-cta {
+  margin-top: 40px;
+}
+
+@media (max-width: 1024px) and (min-width: 601px) {
+  .rates-tariff-suite__title {
+    font-size: clamp(38px, 6vw, 56px);
+    line-height: 1.08;
+  }
+
+  .page-rates .payment-flex-block--rates-tariff-perks .payment-flex-block__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .page-rates .payment-flex-block--rates-tariff-perks .payment-flex-card--superviser {
+    width: auto;
+  }
+
+  .page-rates .payment-flex-block--rates-tariff-perks .payment-flex-card__body--superviser {
+    width: auto;
+  }
+
   .page-rates .payment-flex-card__rates-text {
-    max-width: 20rem;
+    max-width: 234px;
   }
 }
 
@@ -308,15 +414,24 @@ html:has(body.page-rates) {
 
   .rates-tariff-suite__title {
     margin-bottom: 32px;
+    font-size: clamp(26px, 7vw, 34px);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
   }
 
   .page-rates .rates-tariff-suite__cards.payment-flex-block {
     padding-bottom: 32px;
   }
 
+  .page-rates .payment-flex-block--rates-tariff-perks .payment-flex-block__grid {
+    grid-template-columns: 1fr;
+    max-width: 292px;
+    margin: 0 auto;
+  }
+
   .page-rates .payment-flex-block--rates-tariff-perks .payment-flex-card__body--superviser {
-    min-height: 148px;
-    padding: 76px 18px 24px !important;
+    min-height: 213px;
+    padding: 77px 30px 24px !important;
   }
 }
 
@@ -409,8 +524,107 @@ html:has(body.page-rates) {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: #d64531;
+  background: #d44333;
   flex-shrink: 0;
+}
+
+/* Кнопка CTA: прозрачная плашка, круг со стрелкой #d44333 (Figma 1214:7851, Ellipse 411) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .page-rates .rates-personal-cta__btn {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+  }
+
+  .page-rates .rates-personal-cta__btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .page-rates .rates-personal-cta__btn-icon {
+    background: #d44333;
+  }
+
+  .page-rates .rates-personal-cta__btn-icon .btn__arrow {
+    filter: brightness(0) invert(1);
+  }
+}
+
+/* «Персональный подбор тарифа» — десктоп (Figma 1214:7844) */
+@media (min-width: 1025px) {
+  .page-rates .rates-personal-cta__banner {
+    max-width: 1677px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 80px;
+    border-radius: 25px;
+    background: #3a3a3a;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px 48px;
+    flex-wrap: nowrap;
+  }
+
+  .page-rates .rates-personal-cta__copy {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 676px;
+  }
+
+  .page-rates .rates-personal-cta__headline {
+    margin: 0 0 20px;
+    font-size: 72px;
+    line-height: 70px;
+    letter-spacing: -3px;
+  }
+
+  .page-rates .rates-personal-cta__text {
+    max-width: 676px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+  }
+
+  .page-rates .rates-personal-cta__btn {
+    flex-shrink: 0;
+    width: 341px;
+    max-width: 100%;
+    min-height: 93px;
+    padding: 20px 20px 20px 35px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 65px;
+    background: transparent;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+  }
+
+  .page-rates .rates-personal-cta__btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .page-rates .rates-personal-cta__btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+  }
+
+  .page-rates .rates-personal-cta__btn-icon {
+    width: 58px;
+    height: 58px;
+    background: #d44333;
+  }
+
+  .page-rates .rates-personal-cta__btn-icon .btn__arrow {
+    width: 17px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+  }
 }
 
 @media (max-width: 900px) {
@@ -458,7 +672,7 @@ html:has(body.page-rates) {
     align-items: center;
     text-align: center;
     padding: clamp(28px, 7vw, 36px) clamp(20px, 5vw, 26px) clamp(28px, 7vw, 34px);
-    background: #333333;
+    background: #3a3a3a;
     border-radius: clamp(40px, 11vw, 50px);
     gap: clamp(20px, 5vw, 26px);
   }
@@ -519,9 +733,16 @@ html:has(body.page-rates) {
     margin: 0;
     min-height: 52px;
     padding: 10px 10px 10px clamp(22px, 5.5vw, 28px);
+    border: 1px solid #ffffff;
     border-radius: 999px;
+    background: transparent;
     font-size: clamp(15px, 4vw, 16px);
     font-weight: 600;
+    color: #ffffff;
+  }
+
+  .page-rates .rates-personal-cta__btn:hover {
+    background: rgba(255, 255, 255, 0.08);
   }
 
   .page-rates .rates-personal-cta__btn-label {
@@ -533,32 +754,36 @@ html:has(body.page-rates) {
   .page-rates .rates-personal-cta__btn-icon {
     width: 40px;
     height: 40px;
-    background: #d64531;
+    background: #d44333;
+  }
+
+  .page-rates .rates-personal-cta__btn-icon .btn__arrow {
+    filter: brightness(0) invert(1);
   }
 }
 
 /* ——— Блок «Поездки за 15 минут» (перенесён со страницы супервайзера) ——— */
 
 .page-rates .sup-trips-hub {
-  padding: 56px var(--container-padding-x) 64px;
+  padding: 80px var(--container-padding-x) 96px;
   box-sizing: border-box;
   background: #fff;
 }
 
 .page-rates .sup-trips-hub__inner {
-  max-width: 1180px;
+  max-width: 1766px;
   margin: 0 auto;
 }
 
-.page-rates .sup-trips-hub__title { 
-  margin: 0 0 40px;
+.page-rates .sup-trips-hub__title {
+  margin: 0 0 48px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: clamp(24px, 3.5vw, 40px);
-  line-height: 1.18;
-  letter-spacing: -0.02em;
+  font-size: 72px;
+  line-height: 70px;
+  letter-spacing: -3px;
   text-align: center;
-  color: #3A3A3A;
+  color: #3a3a3a;
 }
 
 .page-rates .sup-trips-hub__accent {
@@ -582,8 +807,8 @@ html:has(body.page-rates) {
 
 .page-rates .sup-trips-hub__card {
   margin: 0;
-  padding: 24px 22px 26px;
-  background: #e8eaef;
+  padding: 50px 80px;
+  background: #f0f1f5;
   border-radius: 49px;
   box-sizing: border-box;
   min-height: 0;
@@ -599,21 +824,32 @@ html:has(body.page-rates) {
   flex: 1 1 auto;
 }
 
+
 .page-rates .sup-trips-hub__card--travel {
   flex: 0 0 auto;
+  padding: 80px;
 }
 
 .page-rates .sup-trips-hub__card-head {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 18px;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.page-rates .sup-trips-hub__card--travel .sup-trips-hub__dot,
+.page-rates .sup-trips-hub__card--docs .sup-trips-hub__dot {
+  width: 76px;
+  height: 76px;
+}
+
+.page-rates .sup-trips-hub__card--mgmt .sup-trips-hub__dot {
+  width: 58px;
+  height: 58px;
 }
 
 .page-rates .sup-trips-hub__dot {
   flex-shrink: 0;
-  width: 14px;
-  height: 14px;
   border-radius: 50%;
   background: var(--color-accent);
 }
@@ -622,15 +858,15 @@ html:has(body.page-rates) {
   margin: 0;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: clamp(18px, 2.2vw, 22px);
-  line-height: 1.2;
+  font-size: 45px;
+  line-height: 1.12;
   color: var(--color-accent);
 }
 
 .page-rates .sup-trips-hub__tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 10px;
+  gap: 12px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -638,15 +874,15 @@ html:has(body.page-rates) {
 
 .page-rates .sup-trips-hub__tag {
   margin: 0;
-  padding: 9px 14px;
+  padding: 12px 22px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 400;
-  font-size: 13px;
-  line-height: 1.3;
-  color: #1a1a1a;
+  font-size: 20px;
+  line-height: 22px;
+  color: #3a3a3a;
   background: #ffffff;
-  border: 1px solid #cfd2d8;
-  border-radius: 999px;
+  border: 1px solid #8c8c8c;
+  border-radius: 47px;
   box-sizing: border-box;
 }
 
@@ -656,14 +892,36 @@ html:has(body.page-rates) {
   padding: 0;
   overflow: hidden;
   border-radius: 49px;
-  aspect-ratio: 2.15 / 1;
-  min-height: 180px;
-  max-height: 320px;
-  background-color: #2f2f2f;
-  background-image: url('../img/rateblock.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;
+  background: #f0f1f5;
+}
+
+.page-rates .sup-trips-hub__card--rates-visual {
+  aspect-ratio: 871 / 353;
+}
+
+.page-rates .sup-trips-hub__card--rates-visual .sup-trips-hub__visual-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 1280px) and (min-width: 901px) {
+  .page-rates .sup-trips-hub__title {
+    font-size: clamp(40px, 4.2vw + 24px, 72px);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+  }
+
+  .page-rates .sup-trips-hub__card-title {
+    font-size: clamp(28px, 2.2vw + 18px, 45px);
+  }
+
+  .page-rates .sup-trips-hub__tag {
+    font-size: clamp(15px, 0.9vw + 14px, 20px);
+    line-height: 1.2;
+  }
 }
 
 @media (max-width: 900px) {
@@ -673,6 +931,31 @@ html:has(body.page-rates) {
 
   .page-rates .sup-trips-hub__title {
     margin-bottom: 28px;
+    font-size: clamp(24px, 6.5vw, 36px);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+  }
+
+  .page-rates .sup-trips-hub__card-head {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .page-rates .sup-trips-hub__card--travel .sup-trips-hub__dot,
+  .page-rates .sup-trips-hub__card--docs .sup-trips-hub__dot,
+  .page-rates .sup-trips-hub__card--mgmt .sup-trips-hub__dot {
+    width: 14px;
+    height: 14px;
+  }
+
+  .page-rates .sup-trips-hub__card-title {
+    font-size: clamp(18px, 4.2vw, 22px);
+    line-height: 1.2;
+  }
+
+  .page-rates .sup-trips-hub__tag {
+    font-size: 13px;
+    line-height: 1.3;
   }
 
   .page-rates .sup-trips-hub__grid {
@@ -692,6 +975,7 @@ html:has(body.page-rates) {
 
   .page-rates .sup-trips-hub__card--visual {
     order: 2;
+    padding: 0;
     aspect-ratio: 1.85 / 1;
     max-height: 280px;
     min-height: 200px;
@@ -708,7 +992,7 @@ html:has(body.page-rates) {
   }
 
   .page-rates .sup-trips-hub__card {
-    background: #f2f4f7;
+    background: #f0f1f5;
     border-radius: clamp(24px, 6vw, 32px);
     padding: clamp(20px, 5vw, 24px) clamp(16px, 4vw, 20px);
   }
@@ -1013,22 +1297,35 @@ html:has(body.page-rates) {
 
 @media (min-width: 901px) {
   .page-rates .tm-consult-cta--hr .tm-consult-cta__panel {
-    padding: clamp(28px, 4vw, 44px);
-    border-radius: clamp(36px, 4vw, 48px);
+    padding: 81px 80px 84px 66px;
+    border-radius: 40px;
+    background: #eaedf3;
   }
 
   .page-rates .tm-consult-cta--hr .tm-consult-cta__badge--hr {
-    align-self: center;
-    margin: 0 auto clamp(20px, 3vw, 28px);
+    align-self: flex-start;
+    width: 505px;
+    margin: 0 0 34px;
     border: none;
     padding: 0;
   }
 
   .page-rates .tm-consult-cta--hr .tm-consult-cta__badge-frame {
-    padding: 10px 18px;
-    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 95px;
+    padding: 20px;
+    border-radius: 40px;
     background: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    box-shadow: none;
+    font-family: 'Golos Text', var(--font-main), sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    letter-spacing: -0.5px;
+    text-transform: none;
+    color: #3a3a3a;
   }
 
   .page-rates .tm-consult-cta--hr .tm-consult-cta__badge-line {
@@ -1041,42 +1338,127 @@ html:has(body.page-rates) {
 
   .page-rates .tm-consult-cta--hr .tm-consult-cta__layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr);
+    grid-template-columns: 505px minmax(0, 1fr);
     grid-template-rows: auto auto;
-    gap: clamp(22px, 3.5vw, 32px) clamp(28px, 4vw, 48px);
+    column-gap: 44px;
+    row-gap: 52px;
     align-items: start;
   }
 
   .page-rates .tm-consult-cta--hr .tm-consult-cta__visual--hr {
     grid-column: 1;
     grid-row: 1 / -1;
-    align-self: center;
-    justify-self: center;
+    align-self: start;
+    justify-self: start;
     align-items: center;
     width: 100%;
-    max-width: min(100%, 340px);
+    max-width: 505px;
     margin: 0;
   }
 
   .page-rates .tm-consult-cta--hr .tm-consult-cta__content--hr {
     grid-column: 2;
     grid-row: 1;
+    max-width: 1224px;
+    transform: translateY(-129px);
+  }
+
+  .page-rates .tm-consult-cta--hr .tm-consult-cta__call {
+    max-width: 505px;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .page-rates .tm-consult-cta--hr .tm-consult-cta__call-media {
+    width: 505px;
+    height: 517px;
+    overflow: hidden;
+    background: transparent;
+  }
+
+  .page-rates .tm-consult-cta--hr .tm-consult-cta__call-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  .page-rates .tm-consult-cta--hr .tm-consult-cta__call-bar {
+    display: none;
+  }
+
+  .page-rates .tm-consult-cta--hr .tm-consult-cta__title {
+    margin: 0 0 20px;
+    max-width: 1224px;
+    font-size: 72px;
+    line-height: 70px;
+    letter-spacing: -2.5px;
+    color: #3a3a3a;
+  }
+
+  .page-rates .tm-consult-cta--hr .tm-consult-cta__lead {
+    margin: 0 0 28px 16px;
+    max-width: none;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.69;
+    color: #3a3a3a;
+  }
+
+  .page-rates .tm-consult-cta--hr .tm-consult-cta__lead strong {
+    font-weight: 400;
+  }
+
+  .page-rates .tm-consult-cta--hr .tm-consult-cta__list {
+    gap: 10px;
+    margin: 0 0 0 16px;
+    max-width: 1037px;
+  }
+
+  .page-rates .tm-consult-cta--hr .tm-consult-cta__item {
+    gap: 20px;
+    min-height: 45px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.49;
+    color: #3a3a3a;
+  }
+
+  .page-rates .tm-consult-cta--hr .tm-consult-cta__item-text {
+    padding-top: 3px;
+  }
+
+  .page-rates .tm-consult-cta--hr .tm-consult-cta__q {
+    width: 45px;
+    height: 45px;
+    margin-top: 0;
+    background: #3a3a3a;
+    font-size: 24px;
+    line-height: 1;
+    color: #ffffff;
   }
 
   .page-rates .tm-consult-cta--hr .tm-consult-cta__btn--hr {
     grid-column: 2;
     grid-row: 2;
     justify-self: start;
-    width: auto;
-    min-width: min(100%, 300px);
-    max-width: 100%;
+    width: 341px;
+    min-width: 0;
+    max-width: 341px;
+    min-height: 93px;
     margin: 0;
-    margin-top: 0;
-    justify-content: center;
+    margin-top: -129px;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    padding: 14px 26px;
-    border-radius: 50px;
+    gap: 24px;
+    padding: 17px 20px 17px 35px;
+    border-radius: 65px;
+    background: #d44333;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 16.15px;
+    letter-spacing: -0.5px;
   }
 
   .page-rates .tm-consult-cta--hr .tm-consult-cta__btn-label {
@@ -1084,8 +1466,14 @@ html:has(body.page-rates) {
     flex: none;
   }
 
-  .page-rates .tm-consult-cta--hr .tm-consult-cta__list {
-    margin-bottom: 0;
+  .page-rates .tm-consult-cta--hr .tm-consult-cta__btn-icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .page-rates .tm-consult-cta--hr .tm-consult-cta__btn-icon img {
+    width: 18px;
+    height: 16px;
   }
 }
 
@@ -1284,9 +1672,7 @@ html:has(body.page-rates) {
 
 .page-rates .about-stats__grid {
   list-style: none;
-  margin: 0 auto;
   padding: 0;
-  max-width: 1180px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(14px, 2vw, 20px);
@@ -1389,7 +1775,7 @@ html:has(body.page-rates) {
   }
 }
 
-/* ===== Бесплатный доступ: красный блок с формой (rates.html) ===== */
+/* ===== Бесплатный доступ — макет Figma node 1214:8104 ===== */
 
 .page-rates .rates-free-access {
   padding: 32px var(--container-padding-x) 64px;
@@ -1398,7 +1784,7 @@ html:has(body.page-rates) {
 }
 
 .page-rates .rates-free-access__inner {
-  max-width: 1180px;
+  max-width: 1760px;
   margin: 0 auto;
 }
 
@@ -1406,72 +1792,72 @@ html:has(body.page-rates) {
   position: relative;
   overflow: hidden;
   z-index: 0;
-  background: #e34a32;
-  border-radius: 49px;
-  padding: clamp(40px, 6vw, 72px) clamp(36px, 5vw, 64px);
   box-sizing: border-box;
+  border-radius: 40px;
+  background: #d44333;
+  padding: clamp(48px, 14vw, 206px) 80px 80px;
 }
 
-/* Декор vector-line — как .reg-hero__red на registration-page.css */
+/* Декор: как светлый вектор в макете (#f5f7f9 ~20% opacity) */
 .page-rates .rates-free-access__shell::before {
   content: '';
   position: absolute;
+  left: 0;
   top: 0;
   bottom: 0;
-  width: 60%;
+  width: min(62%, 62rem);
   z-index: 0;
   background-image: url('../img/vector-line2.png');
   background-repeat: no-repeat;
-  background-size: auto min(72%, 22rem);
-  opacity: 0.42;
+  background-position: left 55% bottom 28%;
+  background-size: auto min(78%, 28rem);
+  opacity: 0.2;
   pointer-events: none;
 }
-
-.page-rates .rates-free-access__shell::before {
-  left: 0;
-  background-position: center 94%;
-}
-
 
 .page-rates .rates-free-access__layout {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-  gap: clamp(32px, 4vw, 52px);
-  align-items: center;
+  grid-template-columns: minmax(0, 766fr) minmax(0, 764fr);
+  gap: 73px;
+  align-items: start;
+  max-width: 1603px;
+  margin: 0 auto;
 }
 
 .page-rates .rates-free-access__copy {
   min-width: 0;
+  padding-top: 0;
 }
 
 .page-rates .rates-free-access__title {
-  margin: 0 0 clamp(14px, 2vw, 20px);
+  margin: 0 0 40px;
+  max-width: 688px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: clamp(28px, 3.5vw, 42px);
-  line-height: 1.12;
-  letter-spacing: -0.02em;
+  font-size: clamp(32px, 4.2vw, 72px);
+  line-height: 0.97;
+  letter-spacing: -3px;
   color: #ffffff;
 }
 
 .page-rates .rates-free-access__lead {
   margin: 0;
-  max-width: 34rem;
+  max-width: 480px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 400;
-  font-size: clamp(15px, 1.6vw, 18px);
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.95);
+  font-size: clamp(17px, 1.25vw, 20px);
+  line-height: 1.35;
+  color: #ffffff;
 }
 
 .page-rates .rates-free-access__form {
   background: #ffffff;
-  border-radius: 28px;
-  padding: clamp(28px, 4vw, 40px) clamp(24px, 3vw, 36px) clamp(22px, 3vw, 32px);
+  border-radius: 40px;
   box-sizing: border-box;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  padding: 48px clamp(32px, 5.5vw, 86px) 44px;
+  box-shadow: none;
 }
 
 .page-rates .rates-free-access__sr-only {
@@ -1488,37 +1874,43 @@ html:has(body.page-rates) {
 
 .page-rates .rates-free-access__field {
   position: relative;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
+}
+
+.page-rates .rates-free-access__field:last-of-type {
+  margin-bottom: 0;
 }
 
 .page-rates .rates-free-access__input {
   width: 100%;
-  height: 52px;
-  padding: 0 20px;
+  height: 58px;
+  padding: 0 22px;
   box-sizing: border-box;
-  border: 1px solid #dedede;
-  border-radius: 999px;
+  border: 1px solid #bbbbbb;
+  border-radius: 42px;
   font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-size: 15px;
+  font-size: 20px;
+  line-height: 22px;
   color: #333333;
-  background: #ffffff;
+  background: #d9d9d9;
   outline: none;
-  transition: border-color 0.15s ease;
+  transition: border-color 0.15s ease, background 0.15s ease;
 }
 
 .page-rates .rates-free-access__input::placeholder {
-  color: #b0b0b0;
+  color: #bbbbbb;
 }
 
 .page-rates .rates-free-access__input:focus {
-  border-color: #c4c4c4;
+  border-color: #9a9a9a;
+  background: #e4e4e4;
 }
 
 .page-rates .rates-free-access__consent {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  margin: 4px 0 18px;
+  gap: 25px;
+  margin: 22px 0 24px;
   cursor: pointer;
   position: relative;
 }
@@ -1537,67 +1929,73 @@ html:has(body.page-rates) {
 
 .page-rates .rates-free-access__switch {
   flex-shrink: 0;
-  width: 44px;
-  height: 24px;
+  width: 79px;
+  height: 38px;
   border-radius: 999px;
-  background: #c4c4c4;
+  border: 1px solid #c1c1c1;
+  background: #f0f1f5;
   position: relative;
-  margin-top: 2px;
+  margin-top: 1px;
+  box-sizing: border-box;
   transition: background 0.2s ease;
 }
 
 .page-rates .rates-free-access__switch::after {
   content: '';
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: #ffffff;
-  top: 2px;
+  background: #4f4f4f;
+  top: 50%;
   left: 2px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  transform: translateY(-50%);
   transition: transform 0.2s ease;
+  box-shadow: none;
 }
 
 .page-rates .rates-free-access__checkbox:checked + .rates-free-access__switch {
-  background: #9a9a9a;
+  background: #e8e9ed;
 }
 
 .page-rates .rates-free-access__checkbox:checked + .rates-free-access__switch::after {
-  transform: translateX(20px);
+  transform: translate(41px, -50%);
 }
 
 .page-rates .rates-free-access__checkbox:focus-visible + .rates-free-access__switch {
-  outline: 2px solid #ffffff;
+  outline: 2px solid #d44333;
   outline-offset: 2px;
 }
 
 .page-rates .rates-free-access__consent-label {
+  flex: 1;
+  min-width: 0;
   font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-size: 13px;
-  line-height: 1.45;
-  color: #666666;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #4f4f4f;
 }
 
 .page-rates .rates-free-access__submit {
   width: 100%;
-  min-height: 56px;
-  padding: 14px 20px;
-  border: none;
-  border-radius: 999px;
-  background: #e34a32;
+  min-height: 58px;
+  height: 58px;
+  padding: 17px 24px;
+  box-sizing: border-box;
+  border: 1px solid #bbbbbb;
+  border-radius: 42px;
+  background: #d44333;
   color: #ffffff;
   font-family: 'Golos Text', var(--font-main), sans-serif;
   font-weight: 700;
-  font-size: 15px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
+  font-size: 20px;
+  line-height: 22px;
   cursor: pointer;
   transition: background 0.2s ease, transform 0.1s ease;
 }
 
 .page-rates .rates-free-access__submit:hover {
-  background: #d63f28;
+  background: #c73b2b;
 }
 
 .page-rates .rates-free-access__submit:active {
@@ -1605,11 +2003,12 @@ html:has(body.page-rates) {
 }
 
 .page-rates .rates-free-access__legal {
-  margin: 14px 0 0;
+  margin: 22px 0 0;
+  padding: 0 clamp(12px, 3vw, 20px);
   font-family: 'Golos Text', var(--font-main), sans-serif;
-  font-size: 11px;
-  line-height: 1.45;
-  color: #888888;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #4f4f4f;
   text-align: center;
 }
 
@@ -1625,14 +2024,50 @@ html:has(body.page-rates) {
 
 @media (max-width: 900px) {
   .page-rates .rates-free-access__shell {
-    border-radius: 40px;
-    padding: clamp(32px, 6vw, 48px) clamp(24px, 4vw, 36px);
+    padding: clamp(40px, 10vw, 80px) clamp(20px, 4vw, 32px) clamp(36px, 8vw, 56px);
+  }
+
+  .page-rates .rates-free-access__shell::before {
+    width: 100%;
+    background-position: center bottom 20%;
+    opacity: 0.18;
   }
 
   .page-rates .rates-free-access__layout {
     grid-template-columns: 1fr;
-    gap: 28px;
-    align-items: stretch;
+    gap: 32px;
+    max-width: none;
+  }
+
+  .page-rates .rates-free-access__title {
+    margin-bottom: clamp(20px, 4vw, 40px);
+    max-width: none;
+    letter-spacing: -0.04em;
+  }
+
+  .page-rates .rates-free-access__lead {
+    max-width: 42rem;
+  }
+
+  .page-rates .rates-free-access__form {
+    padding: clamp(28px, 5vw, 40px) clamp(20px, 4vw, 32px) clamp(28px, 5vw, 36px);
+  }
+
+  .page-rates .rates-free-access__input {
+    font-size: 17px;
+  }
+
+  .page-rates .rates-free-access__submit {
+    font-size: 17px;
+  }
+
+  .page-rates .rates-free-access__consent-label {
+    font-size: 15px;
+  }
+
+  .page-rates .rates-free-access__legal {
+    font-size: 15px;
+    text-align: left;
   }
 }
 
@@ -1646,13 +2081,13 @@ html:has(body.page-rates) {
   }
 
   .page-rates .rates-free-access__form {
-    border-radius: 22px;
+    border-radius: 28px;
     padding: 24px 18px 22px;
   }
 
   .page-rates .rates-free-access__legal {
-    font-size: 10px;
-    text-align: left;
+    font-size: 14px;
+    padding: 0;
   }
 }
 

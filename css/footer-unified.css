@@ -484,9 +484,24 @@ span.footer__btn {
     overflow: visible;
   }
 
+  .footer__col--capabilities > .footer__capabilities-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 7px;
+    width: 378px;
+    margin: 0;
+  }
+
   .footer__col--capabilities > .footer__col-head {
     display: flex;
     align-items: center;
+    gap: 6px;
+  }
+
+  .footer__col--capabilities .footer__social-icons {
+    order: 1;
     gap: 6px;
   }
 
@@ -494,8 +509,20 @@ span.footer__btn {
     gap: 6px;
   }
 
+  .footer__col--capabilities > .footer__capabilities-top > .footer__channel-pill {
+    order: 2;
+    flex: 0 0 297px;
+  }
+
   .footer__col--capabilities .footer__channel-wrap {
     flex: 0 0 297px;
+  }
+
+  .footer__col--capabilities > .footer__col-body {
+    position: absolute;
+    left: 0;
+    top: 64px;
+    width: 245px;
   }
 
   .footer__col--useful {
@@ -817,8 +844,23 @@ span.footer__btn {
     display: contents;
   }
 
+  .footer__col--capabilities > .footer__capabilities-top {
+    display: contents;
+  }
+
   .footer__col--capabilities > .footer__col-head {
     display: contents;
+  }
+
+  .footer__col--capabilities .footer__social-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    order: 5;
+    width: auto;
+    max-width: none;
+    margin: 0;
   }
 
   .footer__col--capabilities .footer__socials {
@@ -830,6 +872,16 @@ span.footer__btn {
     width: auto;
     max-width: none;
     margin: 0;
+  }
+
+  .footer__col--capabilities > .footer__capabilities-top > .footer__channel-pill {
+    order: 3;
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+    margin: 0;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.12);
   }
 
   /* order на самой ссылке не работает: flex-элемент — обёртка .footer__channel-wrap */
